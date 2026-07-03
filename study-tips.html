@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Técnicas de Estudio</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></a>
+      <a href="subjects.html" class="nav-item"><span class="nav-icon">📚</span><span class="nav-label">Asignaturas</span></a>
+      <div class="nav-section-label">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label">Banco de Exámenes</span></a>
+      <div class="nav-section-label">Mi Progreso</div>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item active"><span class="nav-icon">💡</span><span class="nav-label">Técnicas de Estudio</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title">💡 Técnicas de Estudio</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+
+      <!-- Hero Banner -->
+      <div class="hero-section mb-xl">
+        <div style="position:relative;z-index:1;">
+          <p style="font-size:13px;color:var(--color-gold);margin-bottom:4px;">Para el estudiante que no estudia en casa</p>
+          <h1>Técnicas que sí funcionan 🧠</h1>
+          <p style="color:var(--text-secondary);max-width:600px;line-height:1.6;margin-top:var(--space-md);">
+            Tu hijo nunca ha estudiado en casa. No pasa nada — estas técnicas están diseñadas específicamente
+            para estudiantes perezosos que necesitan rendir en el DIA sin agotarse.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pomodoro Timer -->
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);">⏰ Temporizador Pomodoro</h2>
+        <div class="grid-2 gap-xl">
+          <div>
+            <p style="color:var(--text-secondary);margin-bottom:var(--space-lg);font-size:14px;">
+              La técnica más eficaz para quien no está habituado a estudiar. 25 minutos de concentración total + 5 de descanso.
+              El cerebro asimila mejor en sesiones cortas e intensas.
+            </p>
+            <div id="pomodoroTimer" style="text-align:center;">
+              <div id="pomodoroDisplay" style="font-family:var(--font-mono);font-size:72px;font-weight:900;color:var(--color-gold);line-height:1;">25:00</div>
+              <div id="pomodoroMode" style="font-size:14px;color:var(--text-muted);margin:var(--space-sm) 0;">🍅 Sesión de estudio</div>
+              <div class="progress-bar thick" style="margin-bottom:var(--space-lg);">
+                <div id="pomodoroBar" class="progress-fill" style="width:0%;background:var(--color-gold);"></div>
+              </div>
+              <div class="flex gap-md justify-center flex-wrap">
+                <button id="pomodoroStart" onclick="pomodoroControl('start')" class="btn btn-primary btn-lg">▶ Iniciar</button>
+                <button onclick="pomodoroControl('pause')" class="btn btn-secondary">⏸ Pausa</button>
+                <button onclick="pomodoroControl('reset')" class="btn btn-secondary">🔄 Reset</button>
+              </div>
+              <div class="flex gap-md justify-center" style="margin-top:var(--space-md);">
+                <button onclick="setPomodoroMode('study')" class="difficulty-btn selected easy" style="flex:0;">🍅 25 min</button>
+                <button onclick="setPomodoroMode('short')" class="difficulty-btn" style="flex:0;">☕ 5 min</button>
+                <button onclick="setPomodoroMode('long')" class="difficulty-btn" style="flex:0;">🌴 15 min</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col gap-md">
+            <div class="tip-card">
+              <div class="tip-icon">1️⃣</div>
+              <div>
+                <div class="tip-title">Cómo usar el Pomodoro</div>
+                <div class="tip-text">Pon el teléfono en modo avión. Cierra todo excepto el material de estudio. 25 minutos sin interrupciones. NINGUNA.</div>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">2️⃣</div>
+              <div>
+                <div class="tip-title">¿Qué estudiar en 25 minutos?</div>
+                <div class="tip-text">UNA sola cosa: un operador, un tema, un tipo de texto. No más. La especificidad vence a la amplitud.</div>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">3️⃣</div>
+              <div>
+                <div class="tip-title">El descanso es obligatorio</div>
+                <div class="tip-text">Durante los 5 minutos, NO estudies. Estira, bebe agua, mira por la ventana. El cerebro consolida durante el descanso.</div>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">4️⃣</div>
+              <div>
+                <div class="tip-title">4 pomodoros = descanso largo</div>
+                <div class="tip-text">Tras 4 sesiones de 25 min, 15-20 min de descanso. Total: 2 horas de estudio efectivo en ~2h30. Es suficiente para el DIA.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8-Week Study Plan -->
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);">📅 Plan de 8 Semanas — DIA Valencia</h2>
+        <div class="highlight-box" style="margin-bottom:var(--space-lg);">
+          💡 Este plan asume que el examen de Alemán es el primero (normalmente el primer lunes). Ajusta las fechas según el calendario oficial del DSV.
+        </div>
+        <div class="grid-2 gap-md">
+          <div class="card" style="border-left:3px solid var(--color-mathe);">
+            <div class="badge badge-blue" style="margin-bottom:var(--space-sm);">Semanas 1-2</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">📐 Matemáticas — Base</div>
+            <div style="font-size:13px;color:var(--text-muted);">Repasar Análisis (derivadas, integrales). Hacer 2 exámenes de práctica. Identificar puntos débiles.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-deutsch);">
+            <div class="badge badge-blue" style="margin-bottom:var(--space-sm);">Semanas 1-2</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">🇩🇪 Alemán — Operadores</div>
+            <div style="font-size:13px;color:var(--text-muted);">Memorizar los 5 operadores clave. Practicar estructura Einleitung-Hauptteil-Schluss. Una Textanalyse por semana.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-mathe);">
+            <div class="badge badge-warning" style="margin-bottom:var(--space-sm);">Semanas 3-4</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">📐 Matemáticas — Geometría</div>
+            <div style="font-size:13px;color:var(--text-muted);">Vectores y planos. Producto escalar y vectorial. Posición relativa. 2 exámenes simulacro.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-deutsch);">
+            <div class="badge badge-warning" style="margin-bottom:var(--space-sm);">Semanas 3-4</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">🇩🇪 Alemán — Literatura</div>
+            <div style="font-size:13px;color:var(--text-muted);">Leer las Pflichtlektüren del DSV. Aprender contexto histórico de cada obra. Recursos estilísticos.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-englisch);">
+            <div class="badge badge-gold" style="margin-bottom:var(--space-sm);">Semanas 5-6</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">🇬🇧 Inglés + Español</div>
+            <div style="font-size:13px;color:var(--text-muted);">Essays en inglés (1 por semana). Comentarios de texto en español. Revisión de vocabulario académico.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-philosophie);">
+            <div class="badge badge-gold" style="margin-bottom:var(--space-sm);">Semanas 5-6</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">🧠 Filosofía — Oral</div>
+            <div style="font-size:13px;color:var(--text-muted);">Memorizar los 8 conceptos clave. Practicar respuestas orales en voz alta. Simular preguntas del tribunal.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-gold);">
+            <div class="badge badge-success" style="margin-bottom:var(--space-sm);">Semanas 7-8</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">🏁 Simulacros finales</div>
+            <div style="font-size:13px;color:var(--text-muted);">Un simulacro completo de cada asignatura. Revisar errores cometidos. Descanso obligatorio el día antes.</div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--color-success);">
+            <div class="badge badge-success" style="margin-bottom:var(--space-sm);">Semana 8</div>
+            <div style="font-weight:700;margin-bottom:var(--space-sm);">✅ La noche antes</div>
+            <div style="font-size:13px;color:var(--text-muted);">NO estudies más de 1 hora. Repasa solo los operadores clave. Duerme 8 horas. Desayuna bien.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Techniques Grid -->
+      <div class="mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);">🧪 Técnicas de Memorización</h2>
+        <div class="grid-3 gap-lg">
+          <div class="card">
+            <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🔁</div>
+            <h3 style="text-align:center;margin-bottom:var(--space-md);">Repetición Espaciada</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">
+              Estudia hoy → Repasa mañana → Repasa en 3 días → Repasa en 7 días → Repasa en 14 días.
+              El material se consolida en la memoria a largo plazo con cada revisión.
+            </p>
+            <div class="highlight-box" style="margin-top:var(--space-md);font-size:12px;">
+              💡 En AbiturDSV: haz los mismos exámenes en días distintos. Los errores te guiarán.
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🗣️</div>
+            <h3 style="text-align:center;margin-bottom:var(--space-md);">Feynman Simplificado</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">
+              Explica en voz alta lo que acabas de estudiar como si se lo explicaras a alguien de 10 años.
+              Si no puedes explicarlo con palabras simples, no lo has entendido todavía.
+            </p>
+            <div class="highlight-box" style="margin-top:var(--space-md);font-size:12px;">
+              💡 Grábate con el teléfono y escúchate. ¿Suena convincente? ¿Hay lagunas?
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">✍️</div>
+            <h3 style="text-align:center;margin-bottom:var(--space-md);">Active Recall</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">
+              No releas — pregúntate. Tapa el libro y escribe todo lo que recuerdas de un tema.
+              Comprueba errores. Repite. Este método es 3x más eficaz que releer apuntes.
+            </p>
+            <div class="highlight-box" style="margin-top:var(--space-md);font-size:12px;">
+              💡 En AbiturDSV: usa el modo de examen de práctica sin mirar el temario primero.
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🎯</div>
+            <h3 style="text-align:center;margin-bottom:var(--space-md);">Principio de Pareto (80/20)</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">
+              El 20% del temario aparece en el 80% de las preguntas del examen.
+              Identifica ese 20% en cada asignatura y domínalo perfectamente antes de expandir.
+            </p>
+            <div class="highlight-box" style="margin-top:var(--space-md);font-size:12px;">
+              💡 Para Alemán: operadores + estructura. Para Mathe: Análisis básica. Para Filosofía: Kant + Nietzsche.
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🗺️</div>
+            <h3 style="text-align:center;margin-bottom:var(--space-md);">Mapas Mentales</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">
+              Dibuja el concepto central en el medio. Ramifica conceptos relacionados.
+              El cerebro recuerda mejor mediante imágenes visuales que texto lineal.
+            </p>
+            <div class="highlight-box" style="margin-top:var(--space-md);font-size:12px;">
+              💡 Dibuja a mano, no uses aplicaciones. El proceso manual ya es aprendizaje.
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🏃</div>
+            <h3 style="text-align:center;margin-bottom:var(--space-md);">Estudio en Movimiento</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">
+              Recita operadores y fórmulas mientras caminas. El movimiento activa la memoria.
+              Escucha las explicaciones en audio (graba tus propias notas en voz alta).
+            </p>
+            <div class="highlight-box" style="margin-top:var(--space-md);font-size:12px;">
+              💡 Las integrales básicas y los operadores de Deutsch se aprenden en 10 min paseando.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day Before & Morning of Exam -->
+      <div class="grid-2 gap-xl mb-xl">
+        <div class="card" style="border:1px solid rgba(245,200,66,0.2);">
+          <h3 style="margin-bottom:var(--space-lg);">🌙 La noche antes del examen</h3>
+          <div class="flex-col gap-sm">
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Repasa SOLO los operadores y estructuras clave (máx. 1 hora)</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Prepara el material: bolígrafos, calculadora (TI-Nspire o equivalente), carnet</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Duerme al menos 8 horas. El sueño consolida lo estudiado</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-error);font-weight:700;">❌</span>
+              <div style="font-size:14px;">NO estudies temario nuevo la noche antes. El cerebro no puede asimilar</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-error);font-weight:700;">❌</span>
+              <div style="font-size:14px;">NO te quedes hasta las 2am estudiando. Contraproducente</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-error);font-weight:700;">❌</span>
+              <div style="font-size:14px;">NO uses redes sociales 1 hora antes de dormir</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="border:1px solid rgba(34,197,94,0.2);">
+          <h3 style="margin-bottom:var(--space-lg);">☀️ La mañana del examen</h3>
+          <div class="flex-col gap-sm">
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Desayuna bien: hidratos complejos (avena, tostadas) + proteína. Evita azúcar rápido</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Lee los operadores del examen ANTES de empezar a escribir</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Lee el texto COMPLETO antes de escribir una sola palabra</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-success);font-weight:700;">✅</span>
+              <div style="font-size:14px;">Reserva 10-15 min al final para revisar ortografía y coherencia</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-warning);font-weight:700;">⚠️</span>
+              <div style="font-size:14px;">Si te bloqueas, salta a la siguiente parte y vuelve. No te atasques 20 min en lo mismo</div>
+            </div>
+            <div class="flex gap-md items-start">
+              <span style="color:var(--color-info);font-weight:700;">💡</span>
+              <div style="font-size:14px;">En Mathe: escribe SIEMPRE los pasos intermedios aunque el resultado sea incorrecto. Los pasos dan puntos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="card text-center" style="background:rgba(245,200,66,0.05);border-color:rgba(245,200,66,0.2);">
+        <div style="font-size:48px;margin-bottom:var(--space-md);">🚀</div>
+        <h2 style="margin-bottom:var(--space-md);">¿Listo para empezar?</h2>
+        <p style="color:var(--text-muted);margin-bottom:var(--space-xl);">
+          La mejor técnica de estudio es la consistencia. 30 minutos al día durante 8 semanas
+          supera a 8 horas el día antes. ¡Empieza ahora con un examen de práctica!
+        </p>
+        <div class="flex gap-md justify-center flex-wrap">
+          <a href="exam-generator.html" class="btn btn-primary btn-lg">⚡ Hacer examen ahora</a>
+          <a href="subjects.html" class="btn btn-secondary btn-lg">📚 Ver temario</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span class="icon">🏠</span><span class="label">Inicio</span></a>
+    <a href="subjects.html" class="mobile-nav-item"><span class="icon">📚</span><span class="label">Materias</span></a>
+    <a href="exam-generator.html" class="mobile-nav-item"><span class="icon">⚡</span><span class="label">Examen</span></a>
+    <a href="progress.html" class="mobile-nav-item"><span class="icon">📊</span><span class="label">Progreso</span></a>
+    <a href="study-tips.html" class="mobile-nav-item active"><span class="icon">💡</span><span class="label">Tips</span></a>
+  </nav>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script>
+// ── Pomodoro Timer ────────────────────────────────────────────
+let pomTimer = null;
+let pomSeconds = 25 * 60;
+let pomTotal = 25 * 60;
+let pomMode = 'study'; // study, short, long
+let pomSession = 0;
+
+const MODES = {
+  study: { secs: 25*60, label: '🍅 Sesión de estudio', color: '#F5C842' },
+  short: { secs: 5*60,  label: '☕ Descanso corto',   color: '#27AE60' },
+  long:  { secs: 15*60, label: '🌴 Descanso largo',   color: '#3498DB' },
+};
+
+function updatePomDisplay() {
+  const m = Math.floor(pomSeconds / 60).toString().padStart(2, '0');
+  const s = (pomSeconds % 60).toString().padStart(2, '0');
+  document.getElementById('pomodoroDisplay').textContent = `${m}:${s}`;
+  const pct = 100 - (pomSeconds / pomTotal * 100);
+  document.getElementById('pomodoroBar').style.width = pct + '%';
+  document.getElementById('pomodoroBar').style.background = MODES[pomMode].color;
+}
+
+function setPomodoroMode(mode) {
+  pomodoroControl('pause');
+  pomMode = mode;
+  pomSeconds = MODES[mode].secs;
+  pomTotal = MODES[mode].secs;
+  document.getElementById('pomodoroMode').textContent = MODES[mode].label;
+  document.querySelectorAll('#pomodoroTimer .difficulty-btn').forEach(b => b.classList.remove('selected','easy'));
+  event?.target?.classList.add('selected','easy');
+  updatePomDisplay();
+}
+
+function pomodoroControl(action) {
+  if (action === 'start') {
+    if (pomTimer) return;
+    pomTimer = setInterval(() => {
+      pomSeconds--;
+      updatePomDisplay();
+      if (pomSeconds <= 0) {
+        clearInterval(pomTimer); pomTimer = null;
+        pomSession++;
+        // Auto-switch
+        if (pomMode === 'study') {
+          const nextMode = pomSession % 4 === 0 ? 'long' : 'short';
+          App.showToast(`🍅 ¡Sesión completada! Tómate un descanso ${nextMode === 'long' ? 'largo' : 'corto'}.`, 'success', 5000);
+          setTimeout(() => setPomodoroMode(nextMode), 500);
+        } else {
+          App.showToast('☕ ¡Descanso terminado! A estudiar.', 'info', 4000);
+          setTimeout(() => setPomodoroMode('study'), 500);
+        }
+      }
+    }, 1000);
+    document.getElementById('pomodoroStart').textContent = '▶ Corriendo...';
+    document.getElementById('pomodoroStart').disabled = true;
+  } else if (action === 'pause') {
+    if (pomTimer) { clearInterval(pomTimer); pomTimer = null; }
+    document.getElementById('pomodoroStart').textContent = '▶ Iniciar';
+    document.getElementById('pomodoroStart').disabled = false;
+  } else if (action === 'reset') {
+    if (pomTimer) { clearInterval(pomTimer); pomTimer = null; }
+    pomSeconds = pomTotal;
+    updatePomDisplay();
+    document.getElementById('pomodoroStart').textContent = '▶ Iniciar';
+    document.getElementById('pomodoroStart').disabled = false;
+  }
+}
+
+updatePomDisplay();
+</script>
+</body>
+</html>

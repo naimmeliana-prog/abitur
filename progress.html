@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Mi Progreso</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label" data-i18n="nav.dashboard">Inicio</span></a>
+      <a href="subjects.html" class="nav-item"><span class="nav-icon">📚</span><span class="nav-label" data-i18n="nav.subjects">Asignaturas</span></a>
+      <div class="nav-section-label">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label">Banco de Exámenes</span></a>
+      <div class="nav-section-label">Mi Progreso</div>
+      <a href="progress.html" class="nav-item active"><span class="nav-icon">📊</span><span class="nav-label" data-i18n="nav.progress">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Técnicas de Estudio</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title" data-i18n="nav.progress">Mi Progreso</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+
+      <!-- ── Level Card ─────────────────────────────────────── -->
+      <div class="level-progress-section mb-xl">
+        <div class="level-info">
+          <div class="current-level">
+            <div class="level-number" id="progLevelNum">1</div>
+            <div>
+              <div class="level-name" id="progLevelName">Schüler</div>
+              <div class="level-xp" id="progXP">0 XP total</div>
+            </div>
+          </div>
+          <div class="next-level">
+            <div class="next-level-name" id="progNextName">→ Lernender</div>
+            <div class="next-level-xp" id="progNextXP">100 XP restantes</div>
+          </div>
+        </div>
+        <div class="progress-bar thick">
+          <div class="progress-fill" id="progBar" style="width:0%;transition:width 1s ease;"></div>
+        </div>
+      </div>
+
+      <!-- ── Stats Row ──────────────────────────────────────── -->
+      <div class="grid-4 mb-xl">
+        <div class="quick-stat"><div class="quick-stat-icon gold">🔥</div><div><div class="quick-stat-value text-gradient-gold" id="pStatStreak">0</div><div class="quick-stat-label">Racha actual</div></div></div>
+        <div class="quick-stat"><div class="quick-stat-icon success">📝</div><div><div class="quick-stat-value" id="pStatExams" style="color:var(--color-success)">0</div><div class="quick-stat-label">Exámenes hechos</div></div></div>
+        <div class="quick-stat"><div class="quick-stat-icon blue">⏱️</div><div><div class="quick-stat-value" id="pStatTime" style="color:var(--color-info)">0h</div><div class="quick-stat-label">Tiempo total</div></div></div>
+        <div class="quick-stat"><div class="quick-stat-icon purple">⭐</div><div><div class="quick-stat-value" id="pStatBest" style="color:var(--color-philosophie)">—</div><div class="quick-stat-label">Mejor nota</div></div></div>
+      </div>
+
+      <div class="grid-2 gap-xl mb-xl">
+
+        <!-- Radar Chart -->
+        <div class="card">
+          <h3 class="section-title mb-md">Rendimiento por asignatura</h3>
+          <canvas id="radarChart" height="250"></canvas>
+        </div>
+
+        <!-- History Chart -->
+        <div class="card">
+          <h3 class="section-title mb-md">Evolución de notas</h3>
+          <canvas id="historyChart" height="250"></canvas>
+        </div>
+
+      </div>
+
+      <!-- ── Achievements ───────────────────────────────────── -->
+      <div class="card mb-xl">
+        <h3 class="section-title mb-lg" data-i18n="progress.achievements">Logros</h3>
+        <div id="achievementsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:var(--space-lg);">
+        </div>
+      </div>
+
+      <!-- ── Level Roadmap ──────────────────────────────────── -->
+      <div class="card mb-xl">
+        <h3 class="section-title mb-lg">🗺️ Mapa de niveles</h3>
+        <div id="levelRoadmap" style="display:flex;gap:var(--space-sm);overflow-x:auto;padding-bottom:var(--space-sm);">
+        </div>
+      </div>
+
+      <!-- ── History ────────────────────────────────────────── -->
+      <div class="card">
+        <div class="section-header">
+          <h3 class="section-title" data-i18n="progress.history">Historial de exámenes</h3>
+          <button onclick="clearHistory()" class="btn btn-secondary btn-sm" style="color:var(--color-error);">🗑️ Borrar</button>
+        </div>
+        <div class="table-wrapper" style="margin-top:var(--space-md);">
+          <table class="data-table" id="historyTable">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Asignatura</th>
+                <th>Modo</th>
+                <th>Nota</th>
+                <th>Tiempo</th>
+                <th>Resultado</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span class="icon">🏠</span><span class="label">Inicio</span></a>
+    <a href="subjects.html" class="mobile-nav-item"><span class="icon">📚</span><span class="label">Materias</span></a>
+    <a href="exam-generator.html" class="mobile-nav-item"><span class="icon">⚡</span><span class="label">Examen</span></a>
+    <a href="progress.html" class="mobile-nav-item active"><span class="icon">📊</span><span class="label">Progreso</span></a>
+    <a href="study-tips.html" class="mobile-nav-item"><span class="icon">💡</span><span class="label">Tips</span></a>
+  </nav>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script>
+const subjectMeta = {
+  deutsch:     { name:'Alemán',      nameDE:'Deutsch',     icon:'🇩🇪', color:'#E74C8B' },
+  englisch:    { name:'Inglés',      nameDE:'Englisch',    icon:'🇬🇧', color:'#27AE60' },
+  mathe:       { name:'Matemáticas', nameDE:'Mathematik',  icon:'📐', color:'#3498DB' },
+  espanol:     { name:'Español',     nameDE:'Español',     icon:'🇪🇸', color:'#E67E22' },
+  philosophie: { name:'Filosofía',   nameDE:'Philosophie', icon:'🧠', color:'#9B59B6' },
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const data = Progress.getData();
+  const levelInfo = Progress.getLevelInfo(data.xp);
+  const lang = App.currentLang;
+
+  // Level info
+  document.getElementById('progLevelNum').textContent = levelInfo.level;
+  document.getElementById('progLevelName').textContent = levelInfo.name;
+  document.getElementById('progXP').textContent = `${data.xp} XP total`;
+  document.getElementById('progNextName').textContent = levelInfo.nextLevel
+    ? `→ ${levelInfo.nextLevel.name}`
+    : '¡Nivel máximo! 🎓';
+  document.getElementById('progNextXP').textContent = levelInfo.nextLevel
+    ? `${levelInfo.xpNeeded - levelInfo.xpInLevel} XP restantes`
+    : '';
+
+  setTimeout(() => {
+    document.getElementById('progBar').style.width = levelInfo.progress + '%';
+  }, 300);
+
+  // Stats
+  document.getElementById('pStatStreak').textContent = data.streak || 0;
+  document.getElementById('pStatExams').textContent = data.totalExams || 0;
+  document.getElementById('pStatTime').textContent = Math.floor((data.totalTime || 0) / 3600) + 'h';
+  const best = Math.max(...(data.history || []).map(h => h.percentage), 0);
+  document.getElementById('pStatBest').textContent = best > 0 ? best + '%' : '—';
+
+  // Radar chart
+  const subjectIds = Object.keys(subjectMeta);
+  const radarData = subjectIds.map(s => data.subjectStats?.[s]?.avgScore || 0);
+  const radarLabels = subjectIds.map(s => lang === 'de' ? subjectMeta[s].nameDE : subjectMeta[s].name);
+
+  new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: {
+      labels: radarLabels,
+      datasets: [{
+        label: 'Nota media %',
+        data: radarData,
+        backgroundColor: 'rgba(245,200,66,0.15)',
+        borderColor: '#F5C842',
+        pointBackgroundColor: '#F5C842',
+        pointRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        r: {
+          min: 0, max: 100,
+          ticks: { stepSize: 20, color: '#6B7A99', backdropColor: 'transparent' },
+          grid: { color: 'rgba(255,255,255,0.06)' },
+          pointLabels: { color: '#A8B4CC', font: { size: 12 } }
+        }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // History chart (last 10 exams)
+  const hist = (data.history || []).slice(0, 10).reverse();
+  if (hist.length > 0) {
+    new Chart(document.getElementById('historyChart'), {
+      type: 'line',
+      data: {
+        labels: hist.map(h => new Date(h.date).toLocaleDateString('es-ES', {day:'2-digit',month:'short'})),
+        datasets: [{
+          label: 'Nota %',
+          data: hist.map(h => h.percentage),
+          borderColor: '#F5C842',
+          backgroundColor: 'rgba(245,200,66,0.1)',
+          fill: true,
+          tension: 0.4,
+          pointBackgroundColor: hist.map(h => h.percentage >= 70 ? '#22C55E' : h.percentage >= 50 ? '#F5A623' : '#EF4444'),
+          pointRadius: 5,
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { min: 0, max: 100, ticks: { color: '#6B7A99' }, grid: { color: 'rgba(255,255,255,0.06)' } },
+          x: { ticks: { color: '#6B7A99' }, grid: { display: false } }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+  }
+
+  // Achievements
+  const achGrid = document.getElementById('achievementsGrid');
+  Progress.ACHIEVEMENTS.forEach(a => {
+    const unlocked = (data.achievements || []).includes(a.id);
+    const name = lang === 'de' ? a.nameDE : a.name;
+    achGrid.innerHTML += `
+      <div class="achievement">
+        <div class="achievement-icon ${unlocked ? 'unlocked' : 'locked'}" data-tooltip="${unlocked ? name : '🔒 Bloqueado'}">
+          ${a.icon}
+          ${unlocked ? '<div style="position:absolute;top:-4px;right:-4px;width:14px;height:14px;background:var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;">✓</div>' : ''}
+        </div>
+        <div class="achievement-name">${name}</div>
+        <div style="font-size:10px;color:var(--color-gold);">+${a.xp} XP</div>
+      </div>`;
+  });
+
+  // Level roadmap
+  const roadmap = document.getElementById('levelRoadmap');
+  Progress.LEVELS.forEach(lv => {
+    const isUnlocked = levelInfo.level >= lv.level;
+    const isCurrent = levelInfo.level === lv.level;
+    roadmap.innerHTML += `
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:80px;opacity:${isUnlocked?1:0.4};">
+        <div style="width:48px;height:48px;border-radius:50%;background:${isCurrent?'var(--gradient-gold)':'var(--bg-4)'};display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:${isCurrent?'var(--shadow-gold)':'none'};border:${isCurrent?'2px solid var(--color-gold)':'2px solid var(--glass-border)'};">
+          ${isUnlocked ? lv.icon : '🔒'}
+        </div>
+        <div style="font-size:11px;font-weight:${isCurrent?700:400};color:${isCurrent?'var(--color-gold)':'var(--text-muted)'};text-align:center;">Nv.${lv.level}</div>
+        <div style="font-size:10px;color:var(--text-muted);text-align:center;white-space:nowrap;">${lv.name}</div>
+      </div>
+      ${lv.level < 10 ? '<div style="width:24px;height:2px;background:var(--glass-border);margin-top:24px;flex-shrink:0;"></div>' : ''}`;
+  });
+
+  // History table
+  const tbody = document.getElementById('historyBody');
+  const allHist = (data.history || []);
+  if (allHist.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:var(--space-xl);">No hay historial todavía. ¡Haz tu primer examen!</td></tr>';
+  } else {
+    allHist.forEach(h => {
+      const sm = subjectMeta[h.subject] || { name: h.subject, icon: '📝' };
+      const grade = Progress.getGrade(h.percentage);
+      tbody.innerHTML += `
+        <tr>
+          <td>${new Date(h.date).toLocaleDateString('es-ES')}</td>
+          <td>${sm.icon} ${lang === 'de' ? sm.nameDE : sm.name}</td>
+          <td>${h.mode === 'simulacro' ? '⏱️ Simulacro' : '📖 Práctica'}</td>
+          <td><span class="badge badge-${h.percentage>=70?'success':h.percentage>=50?'warning':'error'}">${h.percentage}%</span></td>
+          <td>${h.time ? ExamEngine?.formatTime?.(h.time) || (Math.floor(h.time/60) + 'min') : '—'}</td>
+          <td><span class="score-grade ${grade.css}" style="padding:2px 8px;font-size:11px;">${lang==='de'?grade.textDE:grade.text}</span></td>
+        </tr>`;
+    });
+  }
+});
+
+function clearHistory() {
+  if (!confirm('¿Borrar todo el historial? Esta acción no se puede deshacer.')) return;
+  const data = Progress.getData();
+  data.history = [];
+  Progress.saveData(data);
+  window.location.reload();
+}
+</script>
+</body>
+</html>

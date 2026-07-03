@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Admin Panel</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- ── Admin Login Gate ──────────────────────────────────────── -->
+<div id="adminGate" style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg-0);padding:var(--space-lg);">
+  <div class="auth-card" style="max-width:420px;">
+    <div class="text-center mb-xl">
+      <div style="font-size:48px;margin-bottom:var(--space-md);">🔐</div>
+      <h2 style="font-size:22px;font-weight:800;">Panel de Administración</h2>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:var(--space-sm);">Acceso restringido — Introduce la contraseña de administrador</p>
+      <div class="admin-badge" style="margin:var(--space-md) auto;display:inline-flex;">🔒 ADMIN ONLY</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Contraseña de administrador</label>
+      <div class="relative">
+        <input id="adminPassInput" type="password" class="form-input" placeholder="Contraseña admin..." onkeydown="if(event.key==='Enter')checkAdminPass()">
+        <button type="button" class="toggle-password" data-target="adminPassInput" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-muted);">👁️</button>
+      </div>
+    </div>
+    <div id="adminPassError" style="display:none;color:var(--color-error);font-size:13px;margin-top:var(--space-sm);"></div>
+    <button class="btn btn-primary btn-full" style="margin-top:var(--space-lg);" onclick="checkAdminPass()">🔓 Acceder</button>
+    <div class="divider"></div>
+    <a href="index.html" class="btn btn-secondary btn-full">← Volver al inicio</a>
+  </div>
+</div>
+
+<!-- ── Admin Panel (hidden until authenticated) ──────────────── -->
+<div id="adminPanel" class="hidden">
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Admin Panel</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item active"><span class="nav-icon">🔧</span><span class="nav-label">Panel Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <button onclick="lockAdmin()" class="btn btn-danger btn-full btn-sm">🔒 Bloquear</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title">🔧 Panel de Administración</span>
+      </div>
+      <div class="header-right">
+        <div class="admin-badge">🔒 ADMIN</div>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+
+      <!-- Stats Overview -->
+      <div class="grid-4 mb-xl">
+        <div class="quick-stat">
+          <div class="quick-stat-icon gold">👥</div>
+          <div><div class="quick-stat-value text-gradient-gold" id="adminUserCount">0</div><div class="quick-stat-label">Usuarios registrados</div></div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon success">📝</div>
+          <div><div class="quick-stat-value" id="adminQuestionCount" style="color:var(--color-success)">0</div><div class="quick-stat-label">Preguntas en banco</div></div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon blue">📚</div>
+          <div><div class="quick-stat-value" style="color:var(--color-info)">5</div><div class="quick-stat-label">Asignaturas activas</div></div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon purple">📅</div>
+          <div><div class="quick-stat-value" id="adminLastUpdate" style="color:var(--color-philosophie);font-size:14px;">—</div><div class="quick-stat-label">Última actualización</div></div>
+        </div>
+      </div>
+
+      <div class="grid-2 gap-xl mb-xl">
+
+        <!-- Add Question -->
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-lg);">➕ Añadir pregunta manual</h3>
+          <form id="addQuestionForm" class="flex-col gap-md">
+            <div class="form-group">
+              <label class="form-label">Asignatura</label>
+              <select id="qSubject" class="form-select">
+                <option value="deutsch">🇩🇪 Alemán (Deutsch)</option>
+                <option value="englisch">🇬🇧 Inglés (Englisch)</option>
+                <option value="mathe">📐 Matemáticas (Mathematik)</option>
+                <option value="espanol">🇪🇸 Español</option>
+                <option value="philosophie">🧠 Filosofía (Philosophie)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dificultad</label>
+              <select id="qDifficulty" class="form-select">
+                <option value="easy">Fácil</option>
+                <option value="medium">Medio</option>
+                <option value="hard">Difícil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tema (Topic)</label>
+              <input type="text" id="qTopic" class="form-input" placeholder="Ej: Analysis — Extrema">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Año / Fuente</label>
+              <input type="text" id="qYear" class="form-input" placeholder="Ej: Bayern 2024 / IQB / Tipo DIA">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Pregunta (Español)</label>
+              <textarea id="qTextES" class="form-textarea" placeholder="Texto de la pregunta en español..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Pregunta (Deutsch)</label>
+              <textarea id="qTextDE" class="form-textarea" placeholder="Fragetext auf Deutsch..."></textarea>
+            </div>
+            <div id="optionsContainer" class="flex-col gap-sm">
+              <label class="form-label">Opciones (4 respuestas)</label>
+              <div class="flex gap-sm items-center">
+                <span class="badge badge-gold">A</span>
+                <input type="text" class="form-input opt-es" placeholder="Opción A (español)">
+              </div>
+              <div class="flex gap-sm items-center">
+                <span class="badge badge-blue">B</span>
+                <input type="text" class="form-input opt-es" placeholder="Opción B (español)">
+              </div>
+              <div class="flex gap-sm items-center">
+                <span class="badge badge-success">C</span>
+                <input type="text" class="form-input opt-es" placeholder="Opción C (español)">
+              </div>
+              <div class="flex gap-sm items-center">
+                <span class="badge">D</span>
+                <input type="text" class="form-input opt-es" placeholder="Opción D (español)">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Respuesta correcta</label>
+              <select id="qCorrect" class="form-select">
+                <option value="0">A</option>
+                <option value="1">B</option>
+                <option value="2">C</option>
+                <option value="3">D</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Explicación</label>
+              <textarea id="qExplanation" class="form-textarea" placeholder="Explicación de la respuesta correcta..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Consejo (Tip)</label>
+              <input type="text" id="qTip" class="form-input" placeholder="Consejo rápido para el alumno...">
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">💾 Guardar pregunta</button>
+          </form>
+        </div>
+
+        <!-- Right column: Resources + Import -->
+        <div class="flex-col gap-lg">
+
+          <!-- Add Resource/Link -->
+          <div class="card">
+            <h3 style="margin-bottom:var(--space-lg);">🔗 Añadir recurso externo</h3>
+            <form id="addResourceForm" class="flex-col gap-md">
+              <div class="form-group">
+                <label class="form-label">Asignatura</label>
+                <select id="rSubject" class="form-select">
+                  <option value="all">Todas</option>
+                  <option value="deutsch">Alemán</option>
+                  <option value="englisch">Inglés</option>
+                  <option value="mathe">Matemáticas</option>
+                  <option value="espanol">Español</option>
+                  <option value="philosophie">Filosofía</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nombre del recurso</label>
+                <input type="text" id="rName" class="form-input" placeholder="Ej: Examen Bayern 2024 PDF">
+              </div>
+              <div class="form-group">
+                <label class="form-label">URL</label>
+                <input type="url" id="rUrl" class="form-input" placeholder="https://...">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Descripción</label>
+                <input type="text" id="rDesc" class="form-input" placeholder="Breve descripción del recurso">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Tipo</label>
+                <select id="rType" class="form-select">
+                  <option value="official">Oficial (IQB, KMK)</option>
+                  <option value="practice">Práctica (Abiturloesung, etc.)</option>
+                  <option value="reference">Referencia</option>
+                  <option value="video">Vídeo</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">🔗 Guardar recurso</button>
+            </form>
+          </div>
+
+          <!-- Import JSON -->
+          <div class="card">
+            <h3 style="margin-bottom:var(--space-md);">📥 Importar preguntas (JSON)</h3>
+            <p style="font-size:13px;color:var(--text-muted);margin-bottom:var(--space-md);">
+              Sube un archivo JSON con el formato de preguntas AbiturDSV para importar en bloque.
+            </p>
+            <div class="drop-zone" id="dropZone" onclick="document.getElementById('jsonFileInput').click()">
+              <div style="font-size:36px;margin-bottom:var(--space-sm);">📁</div>
+              <div style="font-weight:600;">Arrastra un archivo JSON aquí</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">o haz clic para seleccionar</div>
+            </div>
+            <input type="file" id="jsonFileInput" accept=".json" style="display:none;" onchange="importJSON(this)">
+            <div id="importResult" style="margin-top:var(--space-md);"></div>
+          </div>
+
+          <!-- Auto-update Sources -->
+          <div class="card">
+            <h3 style="margin-bottom:var(--space-md);">🔄 Fuentes de actualización DIA</h3>
+            <div class="flex-col gap-sm" style="font-size:13px;">
+              <div class="flex items-center justify-between">
+                <div>📊 IQB Aufgabenpool</div>
+                <a href="https://www.iqb.hu-berlin.de" target="_blank" class="btn btn-secondary btn-sm">Visitar →</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>📐 Abiturloesung.de (Mathe)</div>
+                <a href="https://www.abiturloesung.de" target="_blank" class="btn btn-secondary btn-sm">Visitar →</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>📚 Knowunity España (Español)</div>
+                <a href="https://knowunity.es" target="_blank" class="btn btn-secondary btn-sm">Visitar →</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>🏛️ Berliner Bildungsserver</div>
+                <a href="https://bildungsserver.berlin-brandenburg.de" target="_blank" class="btn btn-secondary btn-sm">Visitar →</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>🌍 Deutscher Bildungsserver</div>
+                <a href="https://www.bildungsserver.de" target="_blank" class="btn btn-secondary btn-sm">Visitar →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Custom Questions Bank Preview -->
+      <div class="card mb-xl">
+        <div class="section-header">
+          <h3 class="section-title">🗂️ Preguntas añadidas manualmente</h3>
+          <button onclick="exportCustomQuestions()" class="btn btn-secondary btn-sm">📤 Exportar JSON</button>
+        </div>
+        <div class="table-wrapper" style="margin-top:var(--space-md);">
+          <table class="data-table">
+            <thead>
+              <tr><th>Asignatura</th><th>Dificultad</th><th>Tema</th><th>Año</th><th>Pregunta</th><th>Acciones</th></tr>
+            </thead>
+            <tbody id="customQuestionsTable">
+              <tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:var(--space-xl);">No hay preguntas personalizadas todavía</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Change Admin Password -->
+      <div class="admin-section">
+        <h3 style="margin-bottom:var(--space-md);">🔐 Cambiar contraseña de administrador</h3>
+        <div class="flex gap-md" style="flex-wrap:wrap;">
+          <input type="password" id="newAdminPass" class="form-input" placeholder="Nueva contraseña admin" style="max-width:300px;">
+          <button onclick="changeAdminPass()" class="btn btn-primary">Cambiar contraseña</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/exam-engine.js"></script>
+
+<script>
+const ADMIN_PASS_KEY = 'abitur_admin_pass';
+const CUSTOM_QUESTIONS_KEY = 'abitur_custom_questions';
+const DEFAULT_ADMIN_PASS = 'DSVAdmin2025!';
+
+function getAdminPass() {
+  return localStorage.getItem(ADMIN_PASS_KEY) || DEFAULT_ADMIN_PASS;
+}
+
+function checkAdminPass() {
+  const input = document.getElementById('adminPassInput').value;
+  if (input === getAdminPass()) {
+    document.getElementById('adminGate').style.display = 'none';
+    document.getElementById('adminPanel').classList.remove('hidden');
+    sessionStorage.setItem('admin_auth', '1');
+    initAdminPanel();
+  } else {
+    document.getElementById('adminPassError').textContent = '❌ Contraseña incorrecta';
+    document.getElementById('adminPassError').style.display = 'block';
+    document.getElementById('adminPassInput').value = '';
+  }
+}
+
+function lockAdmin() {
+  sessionStorage.removeItem('admin_auth');
+  window.location.reload();
+}
+
+function changeAdminPass() {
+  const newPass = document.getElementById('newAdminPass').value;
+  if (!newPass || newPass.length < 6) {
+    App.showToast('La contraseña debe tener al menos 6 caracteres', 'warning');
+    return;
+  }
+  localStorage.setItem(ADMIN_PASS_KEY, newPass);
+  App.showToast('✅ Contraseña cambiada correctamente', 'success');
+  document.getElementById('newAdminPass').value = '';
+}
+
+function getCustomQuestions() {
+  try {
+    return JSON.parse(localStorage.getItem(CUSTOM_QUESTIONS_KEY) || '[]');
+  } catch { return []; }
+}
+
+function saveCustomQuestions(qs) {
+  localStorage.setItem(CUSTOM_QUESTIONS_KEY, JSON.stringify(qs));
+}
+
+function initAdminPanel() {
+  App.setupSidebar();
+  App.setupLangSwitcher();
+  App.applyTranslations();
+
+  // Stats
+  const users = JSON.parse(localStorage.getItem('abitur_users') || '{}');
+  document.getElementById('adminUserCount').textContent = Object.keys(users).length;
+  const customQs = getCustomQuestions();
+  document.getElementById('adminQuestionCount').textContent = customQs.length;
+  document.getElementById('adminLastUpdate').textContent = new Date().toLocaleDateString('es-ES');
+
+  renderCustomQuestionsTable();
+}
+
+function renderCustomQuestionsTable() {
+  const qs = getCustomQuestions();
+  const tbody = document.getElementById('customQuestionsTable');
+  const subjNames = { deutsch:'Alemán', englisch:'Inglés', mathe:'Matemáticas', espanol:'Español', philosophie:'Filosofía' };
+  if (qs.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:var(--space-xl);">No hay preguntas personalizadas todavía</td></tr>';
+    return;
+  }
+  tbody.innerHTML = qs.map((q, i) => `
+    <tr>
+      <td>${subjNames[q.subjectId] || q.subjectId}</td>
+      <td><span class="badge badge-${q.difficulty==='easy'?'success':q.difficulty==='medium'?'warning':'error'}">${q.difficulty}</span></td>
+      <td>${q.topic || '—'}</td>
+      <td>${q.year || '—'}</td>
+      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${q.question?.es || ''}</td>
+      <td><button onclick="deleteQuestion(${i})" class="btn btn-sm" style="color:var(--color-error);background:rgba(239,68,68,0.1);">🗑️</button></td>
+    </tr>`).join('');
+}
+
+function deleteQuestion(idx) {
+  const qs = getCustomQuestions();
+  qs.splice(idx, 1);
+  saveCustomQuestions(qs);
+  renderCustomQuestionsTable();
+  App.showToast('Pregunta eliminada', 'info');
+}
+
+document.getElementById('addQuestionForm')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const opts = [...document.querySelectorAll('.opt-es')].map(inp => inp.value.trim());
+  if (opts.some(o => !o)) { App.showToast('Rellena todas las opciones', 'warning'); return; }
+
+  const q = {
+    id: 'custom_' + Date.now(),
+    subjectId: document.getElementById('qSubject').value,
+    difficulty: document.getElementById('qDifficulty').value,
+    topic: document.getElementById('qTopic').value,
+    year: document.getElementById('qYear').value || 'Manual',
+    type: 'multiple_choice',
+    question: {
+      es: document.getElementById('qTextES').value,
+      de: document.getElementById('qTextDE').value || document.getElementById('qTextES').value,
+    },
+    options: opts.map(o => ({ es: o, de: o })),
+    correct: parseInt(document.getElementById('qCorrect').value),
+    explanation: { es: document.getElementById('qExplanation').value, de: document.getElementById('qExplanation').value },
+    tip: { es: document.getElementById('qTip').value, de: document.getElementById('qTip').value },
+    isCustom: true,
+  };
+
+  const qs = getCustomQuestions();
+  qs.push(q);
+  saveCustomQuestions(qs);
+  document.getElementById('addQuestionForm').reset();
+  document.getElementById('adminQuestionCount').textContent = qs.length;
+  renderCustomQuestionsTable();
+  App.showToast('✅ Pregunta añadida correctamente', 'success');
+});
+
+document.getElementById('addResourceForm')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const resources = JSON.parse(localStorage.getItem('abitur_custom_resources') || '[]');
+  resources.push({
+    subject: document.getElementById('rSubject').value,
+    name: document.getElementById('rName').value,
+    url: document.getElementById('rUrl').value,
+    desc: document.getElementById('rDesc').value,
+    type: document.getElementById('rType').value,
+    addedAt: Date.now(),
+  });
+  localStorage.setItem('abitur_custom_resources', JSON.stringify(resources));
+  document.getElementById('addResourceForm').reset();
+  App.showToast('✅ Recurso añadido', 'success');
+});
+
+// Drag & drop for JSON import
+const dropZone = document.getElementById('dropZone');
+dropZone?.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone?.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone?.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropZone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) processJSONFile(file);
+});
+
+function importJSON(input) {
+  const file = input.files[0];
+  if (file) processJSONFile(file);
+}
+
+function processJSONFile(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result);
+      const qs = Array.isArray(data) ? data : (data.questions || []);
+      const existing = getCustomQuestions();
+      const merged = [...existing, ...qs.map(q => ({ ...q, isCustom: true, id: 'import_' + Date.now() + '_' + Math.random() }))];
+      saveCustomQuestions(merged);
+      document.getElementById('importResult').innerHTML =
+        `<div class="notification-banner success">✅ Importadas ${qs.length} preguntas correctamente</div>`;
+      renderCustomQuestionsTable();
+      App.showToast(`✅ ${qs.length} preguntas importadas`, 'success');
+    } catch (err) {
+      document.getElementById('importResult').innerHTML =
+        `<div class="notification-banner" style="border-color:var(--color-error);">❌ Error al leer el JSON: ${err.message}</div>`;
+    }
+  };
+  reader.readAsText(file);
+}
+
+function exportCustomQuestions() {
+  const qs = getCustomQuestions();
+  if (qs.length === 0) { App.showToast('No hay preguntas para exportar', 'warning'); return; }
+  const blob = new Blob([JSON.stringify(qs, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `AbiturDSV_CustomQuestions_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+}
+
+// Toggle password
+document.querySelectorAll('.toggle-password').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const input = document.getElementById(btn.dataset.target);
+    if (!input) return;
+    input.type = input.type === 'password' ? 'text' : 'password';
+    btn.textContent = input.type === 'password' ? '👁️' : '🙈';
+  });
+});
+
+// Auto-check session
+document.addEventListener('DOMContentLoaded', () => {
+  if (sessionStorage.getItem('admin_auth') === '1') {
+    document.getElementById('adminGate').style.display = 'none';
+    document.getElementById('adminPanel').classList.remove('hidden');
+    initAdminPanel();
+  }
+  document.getElementById('adminPassInput')?.focus();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Iniciar Sesión</title>
+  <meta name="description" content="Plataforma de preparación para el Deutsches Internationales Abitur (DIA) — Deutsche Schule Valencia (DSV)">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="auth-container" id="authCard">
+  <!-- Language switcher on auth page -->
+  <div style="position:absolute; top:20px; right:20px; z-index:10;">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+  </div>
+
+  <!-- LOGIN CARD -->
+  <div id="loginCard" class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-icon">🎓</div>
+      <h1 style="font-size:22px; font-weight:800; margin-bottom:4px;">AbiturDSV</h1>
+      <p style="font-size:13px; color:var(--text-muted);">Deutsche Schule Valencia</p>
+    </div>
+
+    <h2 style="font-size:20px; font-weight:700; margin-bottom:var(--space-xl);" data-i18n="auth.welcome-back">Bienvenido de nuevo</h2>
+
+    <form id="loginForm" class="flex-col gap-md">
+      <div class="form-group">
+        <label class="form-label" data-i18n="auth.username">Usuario</label>
+        <input id="loginUsername" type="text" class="form-input" placeholder="Tu nombre de usuario" autocomplete="username" data-i18n="auth.username">
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="auth.password">Contraseña</label>
+        <div class="relative">
+          <input id="loginPassword" type="password" class="form-input" placeholder="Tu contraseña" autocomplete="current-password" style="padding-right:44px;">
+          <button type="button" class="toggle-password" data-target="loginPassword" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-muted);">👁️</button>
+        </div>
+      </div>
+
+      <div id="loginError" class="form-error" style="display:none;color:var(--color-error);font-size:13px;padding:8px 12px;background:rgba(239,68,68,0.1);border-radius:var(--radius-sm);border:1px solid rgba(239,68,68,0.3);"></div>
+
+      <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top:var(--space-sm);" data-i18n="auth.login">Iniciar sesión</button>
+    </form>
+
+    <div class="divider"></div>
+
+    <p style="text-align:center;font-size:13px;color:var(--text-muted);">
+      <span data-i18n="auth.no-account">¿No tienes cuenta?</span>
+      <button id="showRegister" style="background:none;border:none;color:var(--color-gold);font-weight:600;cursor:pointer;font-size:13px;margin-left:4px;" data-i18n="auth.register">Registrarse</button>
+    </p>
+
+    <!-- Demo hint -->
+    <div class="info-box" style="margin-top:var(--space-md);">
+      <p style="font-size:12px;color:var(--text-muted);">💡 <strong>Primera vez:</strong> Crea una cuenta con tu nombre de usuario y contraseña. No necesitas email.</p>
+    </div>
+  </div>
+
+  <!-- REGISTER CARD -->
+  <div id="registerCard" class="auth-card" style="display:none;">
+    <div class="auth-logo">
+      <div class="auth-logo-icon">🎓</div>
+      <h1 style="font-size:22px; font-weight:800; margin-bottom:4px;">AbiturDSV</h1>
+      <p style="font-size:13px; color:var(--text-muted);">Deutsche Schule Valencia</p>
+    </div>
+
+    <h2 style="font-size:20px; font-weight:700; margin-bottom:var(--space-xl);" data-i18n="auth.create-account">Crear cuenta</h2>
+
+    <form id="registerForm" class="flex-col gap-md">
+      <div class="form-group">
+        <label class="form-label" data-i18n="auth.username">Usuario</label>
+        <input id="regUsername" type="text" class="form-input" placeholder="Elige un nombre de usuario (mín. 3 letras)" autocomplete="username">
+        <span style="font-size:11px;color:var(--text-muted);margin-top:2px;">Solo letras, números y guiones. Mín. 3 caracteres.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="auth.password">Contraseña</label>
+        <div class="relative">
+          <input id="regPassword" type="password" class="form-input" placeholder="Mínimo 6 caracteres" autocomplete="new-password" style="padding-right:44px;">
+          <button type="button" class="toggle-password" data-target="regPassword" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-muted);">👁️</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirmar contraseña</label>
+        <div class="relative">
+          <input id="regConfirm" type="password" class="form-input" placeholder="Repite tu contraseña" autocomplete="new-password" style="padding-right:44px;">
+          <button type="button" class="toggle-password" data-target="regConfirm" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-muted);">👁️</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="auth.email">Email (opcional)</label>
+        <input id="regEmail" type="email" class="form-input" placeholder="Para recuperar tu cuenta" autocomplete="email">
+      </div>
+
+      <div id="registerError" class="form-error" style="display:none;color:var(--color-error);font-size:13px;padding:8px 12px;background:rgba(239,68,68,0.1);border-radius:var(--radius-sm);border:1px solid rgba(239,68,68,0.3);"></div>
+
+      <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top:var(--space-sm);" data-i18n="auth.create-account">Crear cuenta</button>
+    </form>
+
+    <div class="divider"></div>
+
+    <p style="text-align:center;font-size:13px;color:var(--text-muted);">
+      <span data-i18n="auth.have-account">¿Ya tienes cuenta?</span>
+      <button id="showLogin" style="background:none;border:none;color:var(--color-gold);font-weight:600;cursor:pointer;font-size:13px;margin-left:4px;" data-i18n="auth.login">Iniciar sesión</button>
+    </p>
+  </div>
+</div>
+
+<!-- Stars background decoration -->
+<canvas id="starsCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;"></canvas>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script>
+// Stars animation
+const canvas = document.getElementById('starsCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const stars = Array.from({length: 80}, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  r: Math.random() * 1.5 + 0.3,
+  o: Math.random() * 0.6 + 0.2,
+  speed: Math.random() * 0.3 + 0.1
+}));
+function animStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(s => {
+    s.o += Math.sin(Date.now() * s.speed * 0.001) * 0.01;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(245,200,66,${Math.max(0.1, Math.min(0.8, s.o))})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(animStars);
+}
+animStars();
+</script>
+</body>
+</html>

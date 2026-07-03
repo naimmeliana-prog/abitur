@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Dashboard</title>
+  <meta name="description" content="Tu centro de preparación para el DIA — Deutsche Schule Valencia">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ═══ SIDEBAR ═══════════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text">
+        <span class="brand">AbiturDSV</span>
+        <span class="sub">Deutsche Schule Valencia</span>
+      </div>
+    </a>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+
+      <a href="index.html" class="nav-item active">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label" data-i18n="nav.dashboard">Inicio</span>
+      </a>
+
+      <a href="subjects.html" class="nav-item">
+        <span class="nav-icon">📚</span>
+        <span class="nav-label" data-i18n="nav.subjects">Asignaturas</span>
+      </a>
+
+      <div class="nav-section-label">Exámenes</div>
+
+      <a href="exam-generator.html" class="nav-item">
+        <span class="nav-icon">⚡</span>
+        <span class="nav-label" data-i18n="nav.exam-gen">Generar Examen</span>
+      </a>
+
+      <a href="exam-bank.html" class="nav-item">
+        <span class="nav-icon">🗂️</span>
+        <span class="nav-label" data-i18n="nav.exam-bank">Banco de Exámenes</span>
+        <span class="nav-badge">NEW</span>
+      </a>
+
+      <div class="nav-section-label">Mi Progreso</div>
+
+      <a href="progress.html" class="nav-item">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label" data-i18n="nav.progress">Mi Progreso</span>
+      </a>
+
+      <a href="study-tips.html" class="nav-item">
+        <span class="nav-icon">💡</span>
+        <span class="nav-label" data-i18n="nav.study-tips">Técnicas de Estudio</span>
+      </a>
+
+      <div class="nav-section-label">Admin</div>
+
+      <a href="admin.html" class="nav-item">
+        <span class="nav-icon">🔧</span>
+        <span class="nav-label" data-i18n="nav.admin">Admin</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar">
+          <span class="user-avatar-text">U</span>
+        </div>
+        <div class="user-info">
+          <div class="user-name user-name-display">Usuario</div>
+          <div class="user-level user-level-display">Nivel 1 — Schüler</div>
+        </div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;" data-i18n="nav.logout">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <!-- Sidebar overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ═══ MAIN CONTENT ═══════════════════════════════════════ -->
+  <main class="main-content">
+
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title" id="pageTitle">Dashboard</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <div class="streak-display" id="streakBadge">
+          <span class="flame-icon">🔥</span>
+          <span id="streakCount">0</span>
+          <span data-i18n="dashboard.streak">días seguidos</span>
+        </div>
+        <a href="progress.html" class="header-btn" title="Mi Progreso">📊</a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+      <!-- ── Hero Section ─────────────────────────────────── -->
+      <section class="hero-section mb-xl page-enter">
+        <div class="flex items-center justify-between gap-md" style="position:relative;z-index:1;">
+          <div>
+            <p style="font-size:13px;color:var(--text-muted);margin-bottom:4px;letter-spacing:0.5px;">DIA — Deutsche Schule Valencia • Región 5</p>
+            <h1 style="margin-bottom:var(--space-sm);">
+              <span data-i18n="dashboard.welcome">Bienvenido,</span>
+              <span class="text-gradient-gold user-name-display" style="display:inline;"> </span>
+              <span> 👋</span>
+            </h1>
+            <p style="font-size:16px;color:var(--text-secondary);max-width:500px;" data-i18n="dashboard.subtitle">Prepárate para tu Abitur en el DSV</p>
+
+            <div class="flex gap-sm" style="margin-top:var(--space-lg);flex-wrap:wrap;">
+              <a href="exam-generator.html" class="btn btn-primary" data-i18n="dashboard.continue">Continuar estudiando</a>
+              <a href="subjects.html" class="btn btn-secondary">📚 <span data-i18n="nav.subjects">Asignaturas</span></a>
+            </div>
+          </div>
+
+          <!-- Level Progress Ring -->
+          <div class="progress-circle-container" style="width:140px;height:140px;" id="dashProgressRing">
+            <svg width="140" height="140">
+              <circle cx="70" cy="70" r="60" fill="none" stroke="var(--bg-4)" stroke-width="10"/>
+              <circle id="progressCircle" cx="70" cy="70" r="60" fill="none" stroke="url(#goldGrad)" stroke-width="10"
+                stroke-dasharray="377" stroke-dashoffset="377" class="progress-ring-circle" transform="rotate(-90 70 70)"/>
+              <defs>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F5C842"/>
+                  <stop offset="100%" stop-color="#C9A000"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="progress-circle-text">
+              <div class="progress-circle-value text-gradient-gold" id="dashLevelNum">1</div>
+              <div class="progress-circle-label" id="dashLevelName">Schüler</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- XP Bar -->
+        <div style="margin-top:var(--space-lg);position:relative;z-index:1;">
+          <div class="flex justify-between" style="margin-bottom:6px;font-size:12px;color:var(--text-muted);">
+            <span id="dashXPCurrent">0 XP</span>
+            <span id="dashXPNext">100 XP para nivel 2</span>
+          </div>
+          <div class="progress-bar thick">
+            <div class="progress-fill" id="dashXPBar" style="width:0%"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Quick Stats ────────────────────────────────────── -->
+      <div class="grid-4 mb-xl" id="quickStats">
+        <div class="quick-stat">
+          <div class="quick-stat-icon gold">⚡</div>
+          <div>
+            <div class="quick-stat-value text-gradient-gold" id="statExams">0</div>
+            <div class="quick-stat-label" data-i18n="dashboard.exams-done">Exámenes completados</div>
+          </div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon success">📈</div>
+          <div>
+            <div class="quick-stat-value" id="statAvg" style="color:var(--color-success)">—</div>
+            <div class="quick-stat-label" data-i18n="dashboard.avg-score">Nota media</div>
+          </div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon blue">⏱️</div>
+          <div>
+            <div class="quick-stat-value" id="statHours" style="color:var(--color-info)">0h</div>
+            <div class="quick-stat-label" data-i18n="dashboard.hours">Horas de estudio</div>
+          </div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon purple">🏆</div>
+          <div>
+            <div class="quick-stat-value" id="statAchievements" style="color:var(--color-philosophie)">0</div>
+            <div class="quick-stat-label">Logros</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 5 Subjects Quick Access ────────────────────────── -->
+      <section class="mb-xl">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="dashboard.quick-access">Acceso rápido</h2>
+          <a href="subjects.html" class="btn btn-secondary btn-sm">Ver todo →</a>
+        </div>
+
+        <div class="grid-5" id="subjectCards">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ── Bottom Row: Recent Activity + New Material ─────── -->
+      <div class="grid-2 mb-xl">
+
+        <!-- Recent Activity -->
+        <div class="card">
+          <h3 class="section-title mb-md" data-i18n="dashboard.recent">Actividad reciente</h3>
+          <div id="recentActivity">
+            <div class="empty-state">
+              <div class="empty-state-icon">📝</div>
+              <p>¡Haz tu primer examen para ver tu historial aquí!</p>
+              <a href="exam-generator.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-md);">Empezar ahora</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subject Progress -->
+        <div class="card">
+          <h3 class="section-title mb-md">Progreso por asignatura</h3>
+          <div id="subjectProgress" class="flex-col gap-md">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── New Material Banner ────────────────────────────── -->
+      <div class="notification-banner" id="newMaterialBanner">
+        <span style="font-size:20px;">🔔</span>
+        <div>
+          <div style="font-weight:700;font-size:14px;" data-i18n="dashboard.new-material">¡Nuevo material disponible!</div>
+          <div style="font-size:12px;color:var(--text-muted);">Fuentes DIA actualizadas: IQB Pool, Bildungsserver, Knowunity España</div>
+        </div>
+        <a href="exam-bank.html" class="btn btn-outline-gold btn-sm" style="margin-left:auto;">Ver →</a>
+      </div>
+
+      <!-- ── Study Schedule ─────────────────────────────────── -->
+      <div class="card" style="margin-top:var(--space-xl);">
+        <div class="section-header">
+          <h3 class="section-title">📅 Plan de estudio recomendado</h3>
+          <a href="study-tips.html" class="btn btn-secondary btn-sm">Técnicas →</a>
+        </div>
+        <div class="grid-2 gap-md" style="margin-top:var(--space-md);">
+          <div class="tip-card">
+            <div class="tip-icon">⏰</div>
+            <div>
+              <div class="tip-title">Pomodoro DIA</div>
+              <div class="tip-text">25 min estudio + 5 min pausa. Ideal para quien no está acostumbrado. <a href="study-tips.html" style="color:var(--color-gold);">Empezar →</a></div>
+            </div>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">📆</div>
+            <div>
+              <div class="tip-title">8 semanas antes</div>
+              <div class="tip-text">Plan de estudio personalizado por semanas. Matemáticas: 3h/semana, Deutsch: 2h/semana. <a href="study-tips.html" style="color:var(--color-gold);">Ver plan →</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-content -->
+  </main>
+
+  <!-- ═══ MOBILE BOTTOM NAV ═══════════════════════════════════ -->
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item active">
+      <span class="icon">🏠</span>
+      <span class="label">Inicio</span>
+    </a>
+    <a href="subjects.html" class="mobile-nav-item">
+      <span class="icon">📚</span>
+      <span class="label">Materias</span>
+    </a>
+    <a href="exam-generator.html" class="mobile-nav-item">
+      <span class="icon">⚡</span>
+      <span class="label">Examen</span>
+    </a>
+    <a href="progress.html" class="mobile-nav-item">
+      <span class="icon">📊</span>
+      <span class="label">Progreso</span>
+    </a>
+    <a href="study-tips.html" class="mobile-nav-item">
+      <span class="icon">💡</span>
+      <span class="label">Tips</span>
+    </a>
+  </nav>
+</div>
+
+<!-- Level Up Overlay -->
+<div class="level-up-overlay" id="levelUpOverlay" style="display:none;pointer-events:none;" onclick="this.style.display='none'">
+  <div class="level-up-card">
+    <div class="level-up-icon" id="levelUpIcon">🎓</div>
+    <h2 style="font-size:28px;margin:var(--space-md) 0;color:var(--color-gold);">¡Nivel <span id="levelUpNumber">2</span>!</h2>
+    <p style="font-size:18px;color:var(--text-secondary);" id="levelUpName">Lernender</p>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const user = Auth.getCurrentUser();
+  if (!user) { window.location.href = 'auth.html'; return; }
+
+  const data = Progress.getData();
+  const levelInfo = Progress.getLevelInfo(data.xp);
+
+  // Update hero
+  document.querySelectorAll('.user-name-display').forEach(el => el.textContent = user.username);
+  document.getElementById('dashLevelNum').textContent = levelInfo.level;
+  document.getElementById('dashLevelName').textContent = levelInfo.name;
+
+  // XP bar
+  const pct = levelInfo.progress;
+  setTimeout(() => {
+    document.getElementById('dashXPBar').style.width = pct + '%';
+    document.getElementById('progressCircle').style.strokeDashoffset = 377 - (377 * pct / 100);
+  }, 300);
+  document.getElementById('dashXPCurrent').textContent = data.xp + ' XP';
+  document.getElementById('dashXPNext').textContent = levelInfo.nextLevel
+    ? `${levelInfo.xpNeeded - levelInfo.xpInLevel} XP para nivel ${levelInfo.level + 1}`
+    : '¡Nivel máximo!';
+
+  // Quick stats
+  document.getElementById('statExams').textContent = data.totalExams || 0;
+  const avgScores = Object.values(data.subjectStats || {}).filter(s => s.exams > 0).map(s => s.avgScore);
+  document.getElementById('statAvg').textContent = avgScores.length
+    ? Math.round(avgScores.reduce((a,b) => a+b, 0) / avgScores.length) + '%'
+    : '—';
+  const hours = Math.floor((data.totalTime || 0) / 3600);
+  document.getElementById('statHours').textContent = hours + 'h';
+  document.getElementById('statAchievements').textContent = (data.achievements || []).length;
+
+  // Streak
+  document.getElementById('streakCount').textContent = data.streak || 0;
+
+  // Subject cards
+  const subjects = [
+    { id:'deutsch',     name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
+    { id:'englisch',    name:'Inglés',     nameDE:'Englisch',    icon:'🇬🇧', color:'englisch' },
+    { id:'mathe',       name:'Matemáticas',nameDE:'Mathematik',  icon:'📐', color:'mathe' },
+    { id:'espanol',     name:'Español',    nameDE:'Español',     icon:'🇪🇸', color:'espanol' },
+    { id:'philosophie', name:'Filosofía',  nameDE:'Philosophie', icon:'🧠', color:'philosophie' },
+  ];
+
+  const lang = App.currentLang;
+  const subjectGrid = document.getElementById('subjectCards');
+  subjects.forEach(s => {
+    const stats = data.subjectStats?.[s.id] || { exams: 0, avgScore: 0 };
+    subjectGrid.innerHTML += `
+      <a href="subjects.html?s=${s.id}" class="subject-card-full ${s.color} card-glow card-glow-${s.color}" style="text-decoration:none;">
+        <div class="subject-header">
+          <div class="subject-icon ${s.color}">${s.icon}</div>
+        </div>
+        <div class="subject-title">${lang === 'de' ? s.nameDE : s.name}</div>
+        <div class="subject-stats">
+          <div class="subject-stat-item">
+            <div class="subject-stat-number">${stats.exams}</div>
+            <div class="subject-stat-label">Exámenes</div>
+          </div>
+          <div class="subject-stat-item">
+            <div class="subject-stat-number">${stats.avgScore || '—'}${stats.exams ? '%' : ''}</div>
+            <div class="subject-stat-label">Media</div>
+          </div>
+        </div>
+        <div class="progress-bar thin" style="margin-top:var(--space-md);">
+          <div class="progress-fill ${s.color}" style="width:${stats.avgScore || 0}%"></div>
+        </div>
+      </a>`;
+  });
+
+  // Subject progress bars (right column)
+  const progDiv = document.getElementById('subjectProgress');
+  subjects.forEach(s => {
+    const stats = data.subjectStats?.[s.id] || { exams: 0, avgScore: 0 };
+    progDiv.innerHTML += `
+      <div>
+        <div class="flex justify-between" style="margin-bottom:4px;font-size:13px;">
+          <span>${s.icon} ${lang === 'de' ? s.nameDE : s.name}</span>
+          <span style="color:var(--text-muted)">${stats.avgScore || 0}%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill ${s.color}" style="width:${stats.avgScore || 0}%"></div>
+        </div>
+      </div>`;
+  });
+
+  // Recent activity
+  const history = (data.history || []).slice(0, 5);
+  if (history.length > 0) {
+    const actDiv = document.getElementById('recentActivity');
+    actDiv.innerHTML = history.map(h => {
+      const grade = Progress.getGrade(h.percentage);
+      const subj = subjects.find(s => s.id === h.subject);
+      return `<div class="schedule-item">
+        <div class="schedule-date">
+          <div class="schedule-day">${new Date(h.date).getDate()}</div>
+          <div class="schedule-month">${new Date(h.date).toLocaleString('es', {month:'short'})}</div>
+        </div>
+        <div class="schedule-content flex-col gap-xs">
+          <div class="schedule-title">${subj?.icon || '📝'} ${subj ? (lang==='de'?subj.nameDE:subj.name) : h.subject}</div>
+          <div class="flex gap-sm items-center">
+            <span class="badge badge-${h.percentage>=70?'success':h.percentage>=50?'warning':'error'}">${h.percentage}%</span>
+            <span style="font-size:12px;color:var(--text-muted)">${h.mode === 'simulacro' ? '⏱️ Simulacro' : '📖 Práctica'}</span>
+          </div>
+        </div>
+        <div style="margin-left:auto;font-size:22px;">${h.percentage>=90?'⭐':h.percentage>=70?'👍':h.percentage>=50?'📈':'💪'}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // Level up overlay
+  document.getElementById('levelUpOverlay').addEventListener('click', function() {
+    this.style.display = 'none';
+  });
+
+  App.setupAccordions();
+});
+</script>
+</body>
+</html>

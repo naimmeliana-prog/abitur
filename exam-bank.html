@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Banco de Exámenes</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></a>
+      <a href="subjects.html" class="nav-item"><span class="nav-icon">📚</span><span class="nav-label">Asignaturas</span></a>
+      <div class="nav-section-label">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item active"><span class="nav-icon">🗂️</span><span class="nav-label">Banco de Exámenes</span></a>
+      <div class="nav-section-label">Mi Progreso</div>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Técnicas de Estudio</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title">🗂️ Banco de Exámenes</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+
+      <!-- Search + Filters -->
+      <div class="card mb-xl">
+        <div class="flex gap-md flex-wrap items-center">
+          <input type="text" id="bankSearch" class="form-input" placeholder="🔍 Buscar por tema, año, palabra clave..." style="flex:1;min-width:200px;" oninput="filterBank()">
+          <select id="bankSubject" class="form-select" style="max-width:180px;" onchange="filterBank()">
+            <option value="">Todas las asignaturas</option>
+            <option value="deutsch">🇩🇪 Alemán</option>
+            <option value="englisch">🇬🇧 Inglés</option>
+            <option value="mathe">📐 Matemáticas</option>
+            <option value="espanol">🇪🇸 Español</option>
+            <option value="philosophie">🧠 Filosofía</option>
+          </select>
+          <select id="bankDiff" class="form-select" style="max-width:140px;" onchange="filterBank()">
+            <option value="">Todas las dificultades</option>
+            <option value="easy">Fácil</option>
+            <option value="medium">Medio</option>
+            <option value="hard">Difícil</option>
+          </select>
+          <button onclick="resetFilters()" class="btn btn-secondary btn-sm">Limpiar</button>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="grid-4 mb-xl" id="bankStats">
+        <div class="quick-stat">
+          <div class="quick-stat-icon gold">❓</div>
+          <div><div class="quick-stat-value text-gradient-gold" id="bankTotalQ">0</div><div class="quick-stat-label">Preguntas totales</div></div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon success">✅</div>
+          <div><div class="quick-stat-value" id="bankEasyQ" style="color:var(--color-success)">0</div><div class="quick-stat-label">Fáciles</div></div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon blue">⚡</div>
+          <div><div class="quick-stat-value" id="bankMediumQ" style="color:var(--color-info)">0</div><div class="quick-stat-label">Medias</div></div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-icon purple">🔥</div>
+          <div><div class="quick-stat-value" id="bankHardQ" style="color:var(--color-error)">0</div><div class="quick-stat-label">Difíciles</div></div>
+        </div>
+      </div>
+
+      <!-- Questions List -->
+      <div id="bankContainer">
+        <div class="text-center" style="padding:var(--space-3xl);">
+          <div class="spinner" style="width:32px;height:32px;border-width:3px;display:inline-block;"></div>
+          <div style="margin-top:var(--space-md);color:var(--text-muted);">Cargando banco de preguntas...</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span class="icon">🏠</span><span class="label">Inicio</span></a>
+    <a href="subjects.html" class="mobile-nav-item"><span class="icon">📚</span><span class="label">Materias</span></a>
+    <a href="exam-generator.html" class="mobile-nav-item"><span class="icon">⚡</span><span class="label">Examen</span></a>
+    <a href="progress.html" class="mobile-nav-item"><span class="icon">📊</span><span class="label">Progreso</span></a>
+    <a href="study-tips.html" class="mobile-nav-item"><span class="icon">💡</span><span class="label">Tips</span></a>
+  </nav>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/exam-engine.js"></script>
+<script>
+const subjectMeta = {
+  deutsch:     { name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
+  englisch:    { name:'Inglés',     nameDE:'Englisch',    icon:'🇬🇧', color:'englisch' },
+  mathe:       { name:'Matemáticas',nameDE:'Mathematik',  icon:'📐', color:'mathe' },
+  espanol:     { name:'Español',    nameDE:'Español',     icon:'🇪🇸', color:'espanol' },
+  philosophie: { name:'Filosofía',  nameDE:'Philosophie', icon:'🧠', color:'philosophie' },
+};
+
+const FILES = {
+  deutsch: 'deutsch.json', englisch: 'englisch.json',
+  mathe: 'mathematik.json', espanol: 'espanol.json', philosophie: 'philosophie.json'
+};
+
+let allQuestions = [];
+
+async function loadAll() {
+  const langs = ['deutsch','englisch','mathe','espanol','philosophie'];
+  const results = await Promise.all(langs.map(async id => {
+    try {
+      const r = await fetch(`data/${FILES[id]}`);
+      const d = await r.json();
+      return (d.questions || []).map(q => ({ ...q, subjectId: id }));
+    } catch { return []; }
+  }));
+
+  // Also load custom questions from admin
+  const custom = JSON.parse(localStorage.getItem('abitur_custom_questions') || '[]');
+
+  allQuestions = [...results.flat(), ...custom];
+  updateStats();
+  renderBank(allQuestions);
+}
+
+function updateStats() {
+  document.getElementById('bankTotalQ').textContent = allQuestions.length;
+  document.getElementById('bankEasyQ').textContent = allQuestions.filter(q => q.difficulty === 'easy').length;
+  document.getElementById('bankMediumQ').textContent = allQuestions.filter(q => q.difficulty === 'medium').length;
+  document.getElementById('bankHardQ').textContent = allQuestions.filter(q => q.difficulty === 'hard').length;
+}
+
+function filterBank() {
+  const search = document.getElementById('bankSearch').value.toLowerCase();
+  const subject = document.getElementById('bankSubject').value;
+  const diff = document.getElementById('bankDiff').value;
+  const lang = App.currentLang;
+
+  const filtered = allQuestions.filter(q => {
+    const matchSubject = !subject || q.subjectId === subject;
+    const matchDiff = !diff || q.difficulty === diff;
+    const qText = (q.question?.[lang] || q.question?.es || '').toLowerCase();
+    const topicText = (q.topic || '').toLowerCase();
+    const matchSearch = !search || qText.includes(search) || topicText.includes(search);
+    return matchSubject && matchDiff && matchSearch;
+  });
+
+  renderBank(filtered);
+}
+
+function resetFilters() {
+  document.getElementById('bankSearch').value = '';
+  document.getElementById('bankSubject').value = '';
+  document.getElementById('bankDiff').value = '';
+  renderBank(allQuestions);
+}
+
+function renderBank(questions) {
+  const lang = App.currentLang;
+  const container = document.getElementById('bankContainer');
+
+  if (questions.length === 0) {
+    container.innerHTML = `<div class="card text-center"><div class="empty-state"><div class="empty-state-icon">🔍</div><p>No se encontraron preguntas con esos filtros.</p><button onclick="resetFilters()" class="btn btn-primary btn-sm" style="margin-top:var(--space-md);">Limpiar filtros</button></div></div>`;
+    return;
+  }
+
+  // Group by subject
+  const bySubject = {};
+  questions.forEach(q => {
+    if (!bySubject[q.subjectId]) bySubject[q.subjectId] = [];
+    bySubject[q.subjectId].push(q);
+  });
+
+  container.innerHTML = Object.entries(bySubject).map(([sid, qs]) => {
+    const meta = subjectMeta[sid] || { name: sid, icon: '📝', color: '' };
+    return `
+      <div class="card mb-lg">
+        <div class="flex items-center gap-md mb-lg">
+          <div class="subject-icon ${meta.color}" style="width:40px;height:40px;font-size:20px;">${meta.icon}</div>
+          <h3 style="font-size:18px;">${lang === 'de' ? meta.nameDE : meta.name}</h3>
+          <span class="badge badge-gold" style="margin-left:auto;">${qs.length} preguntas</span>
+        </div>
+        <div class="flex-col gap-md">
+          ${qs.map((q, qi) => {
+            const qText = q.question?.[lang] || q.question?.es || '';
+            const isCustom = q.isCustom;
+            return `
+              <div style="border:1px solid var(--glass-border);border-radius:var(--radius-md);overflow:hidden;">
+                <div style="padding:var(--space-md) var(--space-lg);cursor:pointer;display:flex;gap:var(--space-md);align-items:center;"
+                  onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
+                  <span class="badge badge-${q.difficulty==='easy'?'success':q.difficulty==='medium'?'warning':'error'}">${q.difficulty}</span>
+                  ${q.topic ? `<span class="badge badge-blue">${q.topic}</span>` : ''}
+                  ${isCustom ? `<span class="badge" style="background:rgba(155,89,182,0.2);color:var(--color-philosophie);">✏️ Custom</span>` : ''}
+                  <div style="flex:1;font-size:14px;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${qText}</div>
+                  <span style="color:var(--text-muted);font-size:11px;">▼</span>
+                </div>
+                <div style="display:none;padding:0 var(--space-lg) var(--space-lg);border-top:1px solid var(--glass-border);">
+                  <div style="padding-top:var(--space-md);">
+                    <div class="question-text" style="font-size:15px;">${qText}</div>
+                    <div class="answer-options" style="margin-top:var(--space-md);">
+                      ${(q.options||[]).map((opt, oi) => {
+                        const optText = typeof opt === 'object' ? (opt[lang] || opt.es) : opt;
+                        const isCorrect = oi === q.correct;
+                        return `<div class="answer-option ${isCorrect?'correct':''}" style="cursor:default;">
+                          <div class="answer-letter">${String.fromCharCode(65+oi)}</div>
+                          <div>${optText}</div>
+                          ${isCorrect ? '<div style="margin-left:auto;color:var(--color-success);">✓</div>' : ''}
+                        </div>`;
+                      }).join('')}
+                    </div>
+                    ${q.explanation ? `<div class="answer-feedback show correct-feedback" style="margin-top:var(--space-md);">
+                      <strong>Explicación:</strong> ${q.explanation[lang] || q.explanation.es}
+                      ${q.tip ? `<br><br>💡 <em>${q.tip[lang] || q.tip.es}</em>` : ''}
+                    </div>` : ''}
+                  </div>
+                </div>
+              </div>`;
+          }).join('')}
+        </div>
+        <div style="margin-top:var(--space-md);">
+          <a href="exam-generator.html?s=${sid}" class="btn btn-secondary btn-sm">⚡ Generar examen de ${lang==='de'?meta.nameDE:meta.name}</a>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+document.addEventListener('DOMContentLoaded', loadAll);
+</script>
+</body>
+</html>

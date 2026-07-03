@@ -1,0 +1,128 @@
+{
+  "subject": "espanol",
+  "displayName": { "es": "Español (Spanisch)", "de": "Spanisch" },
+  "icon": "🇪🇸",
+  "examType": "written_or_oral",
+  "duration": 240,
+  "source": "DIA — formato nativo específico para España / Knowunity España / DSV Región 5",
+  "dia_info": {
+    "es": "El examen de Español en el DIA de Valencia está diseñado bajo formato nativo específico para España. Al ser nativos hispanohablantes en su mayoría, el nivel de exigencia es muy alto. Incluye: comentario de texto de prensa actual, análisis literario e historia contemporánea. Recurso principal: Knowunity España (alumnos de colegios alemanes de la Región 5).",
+    "de": "Die Spanisch-DIA-Prüfung in Valencia ist im spezifischen Formato für Spanien gestaltet. Da die meisten Schüler Muttersprachler sind, ist das Anforderungsniveau sehr hoch. Hauptquelle: Knowunity España."
+  },
+  "taskTypes": [
+    {
+      "id": "comentario",
+      "name": { "es": "Comentario de texto", "de": "Textkommentar" },
+      "desc": { "es": "Análisis de un texto periodístico o de ensayo actual. Comprensión, estructura, intención del autor, recursos lingüísticos y valoración crítica.", "de": "Analyse eines journalistischen oder aktuellen Essays. Verständnis, Struktur, Autorenabsicht, sprachliche Mittel, kritische Bewertung." },
+      "structure": ["1. Resumen del contenido", "2. Análisis formal (estructura, tipos de texto)", "3. Análisis de la intención del autor", "4. Recursos lingüísticos y estilísticos", "5. Valoración personal razonada"]
+    },
+    {
+      "id": "analisis_literario",
+      "name": { "es": "Análisis literario", "de": "Literarische Analyse" },
+      "desc": { "es": "Análisis de fragmento de novela, poema o obra dramática de la literatura española e hispanoamericana.", "de": "Analyse eines Roman-, Gedicht- oder Dramenausschnitts der spanischen und hispanischen Literatur." },
+      "movements": ["Generación del 98 (Unamuno, Baroja, Valle-Inclán, Machado)", "Novecentismo (Ortega, Miró, Pérez de Ayala)", "Generación del 27 (Lorca, Guillén, Salinas, Alberti, Cernuda, Aleixandre)", "Posguerra (Cela, Delibes, Matute)", "Boom latinoamericano (García Márquez, Vargas Llosa, Cortázar, Borges)", "Literatura contemporánea española"]
+    },
+    {
+      "id": "disertacion",
+      "name": { "es": "Disertación / Redacción argumentativa", "de": "Erörterung / Argumentativer Aufsatz" },
+      "desc": { "es": "Redactar un texto argumentativo sobre un tema de actualidad social, política o cultural. Requiere tesis, argumentos, contraargumentos y conclusión.", "de": "Argumentativen Text zu einem aktuellen sozialen, politischen oder kulturellen Thema verfassen." }
+    }
+  ],
+  "literary_devices_es": [
+    { "name": "Metáfora", "example": "'La vida es sueño' (Calderón)" },
+    { "name": "Hipérbaton", "example": "Alteración del orden sintáctico normal" },
+    { "name": "Encabalgamiento", "example": "Continuación de la frase en el verso siguiente" },
+    { "name": "Aliteración", "example": "Repetición de sonidos: 'En el silencio solo se escuchaba / un susurro de abejas'" },
+    { "name": "Anáfora", "example": "Repetición al inicio: 'Temprano levantó la muerte el vuelo...' (Miguel Hernández)" },
+    { "name": "Sinestesia", "example": "Mezcla de sentidos: 'Verde que te quiero verde' (Lorca)" },
+    { "name": "Ironía", "example": "Lo contrario de lo que se dice con intención crítica" },
+    { "name": "Eufemismo", "example": "'Pasar a mejor vida' por 'morir'" },
+    { "name": "Oxímoron", "example": "'Música callada' (San Juan de la Cruz)" },
+    { "name": "Personificación", "example": "'La luna vino a la fragua' (Lorca)" },
+    { "name": "Paralelismo", "example": "Estructuras sintácticas paralelas en versos consecutivos" },
+    { "name": "Polisíndeton", "example": "Uso abundante de conjunciones: 'y el viento y el agua y la tierra'" }
+  ],
+  "key_authors": [
+    { "author": "Federico García Lorca", "works": ["La casa de Bernarda Alba", "Bodas de sangre", "Romancero Gitano", "Poeta en Nueva York"], "period": "Generación del 27", "themes": ["Tragedia", "Libertad vs represión", "Muerte", "Andalucismo"] },
+    { "author": "Miguel de Cervantes", "works": ["Don Quijote de la Mancha"], "period": "Siglo de Oro", "themes": ["Idealismo vs realidad", "Identidad", "Locura y cordura"] },
+    { "author": "Antonio Machado", "works": ["Campos de Castilla", "Soledades"], "period": "Generación del 98", "themes": ["Castilla", "Tiempo", "Muerte", "España"] },
+    { "author": "Gabriel García Márquez", "works": ["Cien años de soledad", "El amor en los tiempos del cólera"], "period": "Boom latinoamericano", "themes": ["Realismo mágico", "Tiempo cíclico", "Soledad", "Memoria"] },
+    { "author": "Miguel Hernández", "works": ["El rayo que no cesa", "Vientos del pueblo"], "period": "Generación del 27 / Guerra Civil", "themes": ["Amor", "Muerte", "Guerra", "Pueblo"] },
+    { "author": "Camilo José Cela", "works": ["La familia de Pascual Duarte", "La colmena"], "period": "Posguerra — Tremendismo", "themes": ["Violencia", "Miseria", "España posguerra"] }
+  ],
+  "trap_questions": [
+    {
+      "trap": { "es": "Confundir un comentario de texto con un resumen", "de": "Textkommentar mit Zusammenfassung verwechseln" },
+      "avoid": { "es": "El comentario NO es un resumen. Requiere análisis formal (¿cómo está escrito?) + análisis de contenido (¿qué dice?) + valoración crítica (¿qué opinas?). Sin los tres, la nota baja drásticamente.", "de": "Kommentar ist KEINE Zusammenfassung. Formale Analyse + Inhaltsanalyse + kritische Stellungnahme. Ohne alle drei sinkt die Note stark." }
+    },
+    {
+      "trap": { "es": "No contextualizar al autor en su movimiento literario y época", "de": "Autor nicht in Literaturströmung und Epoche einordnen" },
+      "avoid": { "es": "En el análisis literario, menciona SIEMPRE: autor, obra, movimiento (Generación del 27, Boom, etc.) y contexto histórico. La contextualización suma puntos clave.", "de": "Bei der Literaturanalyse IMMER erwähnen: Autor, Werk, Strömung (Generación del 27, Boom usw.) und historischer Kontext." }
+    },
+    {
+      "trap": { "es": "Usar lenguaje coloquial o informal en la redacción", "de": "Umgangssprache in der Redacción verwenden" },
+      "avoid": { "es": "El registro debe ser formal-culto. Evita contracciones, expresiones coloquiales, y argot. Al ser hablante nativo, el examinador espera riqueza léxica y sintaxis elaborada.", "de": "Das Register muss formal-gehoben sein. Keine Umgangssprache, keine Slang-Ausdrücke. Als Muttersprachler erwartet der Prüfer lexikalischen Reichtum und elaborierte Syntax." }
+    },
+    {
+      "trap": { "es": "Olvidar identificar el tipo de texto periodístico (editorial, columna, noticia...)", "de": "Typ des Pressetextes (Leitartikel, Kolumne, Nachricht...) nicht identifizieren" },
+      "avoid": { "es": "El tipo de texto determina la intención comunicativa y los recursos. Editorial = opinión institucional. Columna = opinión personal. Noticia = información objetiva. Identifícalo en el primer párrafo del comentario.", "de": "Der Texttyp bestimmt die kommunikative Absicht und Mittel. Leitartikel = institutionelle Meinung. Kolumne = persönliche Meinung. Nachricht = objektive Information. Im ersten Absatz identifizieren." }
+    }
+  ],
+  "resources": [
+    { "name": "Knowunity España", "url": "https://knowunity.es", "desc": { "es": "Exámenes y resúmenes compartidos por alumnos de colegios alemanes de la Región 5", "de": "Von Schülern deutscher Schulen der Region 5 geteilte Prüfungen und Zusammenfassungen" }, "type": "practice" },
+    { "name": "Cervantes Virtual", "url": "https://www.cervantesvirtual.com", "desc": { "es": "Textos completos de literatura española clásica y contemporánea", "de": "Vollständige Texte spanischer klassischer und zeitgenössischer Literatur" }, "type": "reference" }
+  ],
+  "questions": [
+    {
+      "id": "es_001",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Comentario de texto — Tipos de texto",
+      "question": { "es": "Un texto periodístico que expresa la opinión del periódico como institución sobre un asunto de actualidad se denomina:", "de": "Ein Zeitungstext, der die Meinung der Zeitung als Institution zu einem aktuellen Thema ausdrückt, heißt:" },
+      "options": [
+        { "es": "Columna de opinión", "de": "Meinungskolumne" },
+        { "es": "Editorial o artículo de fondo", "de": "Leitartikel" },
+        { "es": "Reportaje", "de": "Reportage" },
+        { "es": "Crónica", "de": "Chronik" }
+      ],
+      "correct": 1,
+      "explanation": { "es": "El editorial (Leitartikel) es la voz institucional del medio. La columna es la opinión PERSONAL de un columnista (con nombre). El reportaje narra hechos con investigación. La crónica cuenta eventos en orden temporal.", "de": "Der Leitartikel ist die institutionelle Stimme des Mediums. Kolumne = persönliche Meinung des Kolumnisten (mit Namen). Reportage = recherchierte Tatsachen. Chronik = zeitliche Ereignisabfolge." },
+      "tip": { "es": "Para identificar el tipo de texto en el examen: ¿tiene nombre de autor? (columna) ¿es la posición del medio? (editorial) ¿narra hechos? (reportaje/crónica)", "de": "Zur Textsortenbestimmung: Autorname? (Kolumne) Medienposition? (Leitartikel) Ereignisse erzählt? (Reportage/Chronik)" }
+    },
+    {
+      "id": "es_002",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literatura — Generación del 27",
+      "question": { "es": "El verso 'Verde que te quiero verde. / Verde viento. Verdes ramas.' de Lorca es un ejemplo de:", "de": "Der Vers 'Verde que te quiero verde. / Verde viento. Verdes ramas.' von Lorca ist ein Beispiel für:" },
+      "options": [
+        { "es": "Hipérbole y metáfora pura", "de": "Hyperbel und reine Metapher" },
+        { "es": "Sinestesia y paralelismo con función simbólica del color verde", "de": "Synästhesie und Parallelismus mit symbolischer Funktion der Farbe Grün" },
+        { "es": "Aliteración y polisíndeton", "de": "Alliteration und Polysyndeton" },
+        { "es": "Eufemismo e ironía romántica", "de": "Euphemismus und romantische Ironie" }
+      ],
+      "correct": 1,
+      "explanation": { "es": "El 'verde' lorquiano mezcla sentidos (sinestesia: querer con color, viento con color), usa paralelismo estructural y funciona como símbolo de vida/muerte/deseo en el Romance Sonámbulo. La aliteración de 'verde/viento/verdes' es secundaria, no el recurso principal.", "de": "Das lorquianische 'verde' vermischt Sinne (Synästhesie: Wollen + Farbe, Wind + Farbe), nutzt strukturellen Parallelismus und funktioniert als Symbol für Leben/Tod/Begehren im Romance Sonámbulo." },
+      "tip": { "es": "En Lorca: el verde simboliza la vida y la muerte simultáneamente (destino trágico). El análisis simbólico + recurso literario = máxima nota.", "de": "Bei Lorca: Grün symbolisiert Leben und Tod gleichzeitig (tragisches Schicksal). Symbolanalyse + Stilmittel = Bestnote." }
+    },
+    {
+      "id": "es_003",
+      "year": "Tipo DIA España",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Redacción argumentativa",
+      "question": { "es": "En una redacción argumentativa sobre 'el uso de las redes sociales entre jóvenes', ¿cuál es la estructura correcta?", "de": "In einer Argumentationsredacción über 'die Nutzung sozialer Netzwerke unter Jugendlichen', welche Struktur ist korrekt?" },
+      "options": [
+        { "es": "Narrar anécdotas → Listar ventajas → Conclusión optimista", "de": "Anekdoten erzählen → Vorteile auflisten → Optimistisches Fazit" },
+        { "es": "Introducción con tesis → Argumentos a favor → Contraargumentos → Refutación → Conclusión", "de": "Einleitung mit These → Pro-Argumente → Gegenargumente → Widerlegung → Schluss" },
+        { "es": "Definición de redes sociales → Historia de internet → Datos estadísticos → Fin", "de": "Definition sozialer Netzwerke → Geschichte des Internets → Statistiken → Ende" },
+        { "es": "El orden es libre siempre que haya argumentos", "de": "Die Reihenfolge ist frei, solange Argumente vorhanden sind" }
+      ],
+      "correct": 1,
+      "explanation": { "es": "La redacción argumentativa sigue siempre: Introducción (tesis clara) → Desarrollo (argumentos pro + contraargumentos rebatidos) → Conclusión (reafirmación de tesis). La ausencia de contraargumentos hace la argumentación débil e incompleta.", "de": "Argumentationsredacción: Einleitung (klare These) → Hauptteil (Pro-Argumente + widerlegte Gegenargumente) → Schluss (Tese bekräftigen). Ohne Gegenargumente ist die Argumentation schwach." },
+      "tip": { "es": "Un buen contraargumento REFUTADO vale más que 3 argumentos sin desarrollar. El examinador valora la capacidad de rebatir con lógica.", "de": "Ein gutes widerlegtes Gegenargument ist mehr wert als 3 unentwickelte Argumente. Der Prüfer schätzt logisches Widerlegen." }
+    }
+  ]
+}

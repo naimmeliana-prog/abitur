@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Asignaturas</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></a>
+      <a href="subjects.html" class="nav-item active"><span class="nav-icon">📚</span><span class="nav-label">Asignaturas</span></a>
+      <div class="nav-section-label">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label">Banco de Exámenes</span></a>
+      <div class="nav-section-label">Mi Progreso</div>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Técnicas de Estudio</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title">Asignaturas DIA</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+
+      <!-- Subject Selector Tabs -->
+      <div class="flex gap-sm mb-xl" style="flex-wrap:wrap;" id="subjectTabs">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Subject Detail Panel -->
+      <div id="subjectPanel">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span class="icon">🏠</span><span class="label">Inicio</span></a>
+    <a href="subjects.html" class="mobile-nav-item active"><span class="icon">📚</span><span class="label">Materias</span></a>
+    <a href="exam-generator.html" class="mobile-nav-item"><span class="icon">⚡</span><span class="label">Examen</span></a>
+    <a href="progress.html" class="mobile-nav-item"><span class="icon">📊</span><span class="label">Progreso</span></a>
+    <a href="study-tips.html" class="mobile-nav-item"><span class="icon">💡</span><span class="label">Tips</span></a>
+  </nav>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/exam-engine.js"></script>
+
+<script>
+const SUBJECTS_META = [
+  { id:'deutsch',     name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch',     file:'deutsch.json' },
+  { id:'englisch',    name:'Inglés',     nameDE:'Englisch',    icon:'🇬🇧', color:'englisch',    file:'englisch.json' },
+  { id:'mathe',       name:'Matemáticas',nameDE:'Mathematik',  icon:'📐', color:'mathe',       file:'mathematik.json' },
+  { id:'espanol',     name:'Español',    nameDE:'Español',     icon:'🇪🇸', color:'espanol',     file:'espanol.json' },
+  { id:'philosophie', name:'Filosofía',  nameDE:'Philosophie', icon:'🧠', color:'philosophie', file:'philosophie.json' },
+];
+
+let currentSubject = null;
+let subjectData = null;
+
+function renderTabs() {
+  const lang = App.currentLang;
+  const tabs = document.getElementById('subjectTabs');
+  tabs.innerHTML = SUBJECTS_META.map(s => `
+    <button class="difficulty-btn ${currentSubject?.id === s.id ? 'selected easy' : ''}"
+      style="min-width:100px;"
+      onclick="selectSubject('${s.id}')">
+      ${s.icon} ${lang === 'de' ? s.nameDE : s.name}
+    </button>`).join('');
+}
+
+async function selectSubject(id) {
+  const meta = SUBJECTS_META.find(s => s.id === id);
+  if (!meta) return;
+  currentSubject = meta;
+  renderTabs();
+
+  // Load data
+  document.getElementById('subjectPanel').innerHTML = `<div class="text-center" style="padding:var(--space-3xl)"><div class="spinner" style="width:32px;height:32px;border-width:3px;"></div></div>`;
+  try {
+    const res = await fetch(`data/${meta.file}`);
+    subjectData = await res.json();
+  } catch (e) {
+    document.getElementById('subjectPanel').innerHTML = `<div class="card text-center"><p style="color:var(--color-error)">Error cargando datos. Asegúrate de abrir la aplicación desde un servidor local.</p></div>`;
+    return;
+  }
+
+  renderSubjectPanel();
+}
+
+function renderSubjectPanel() {
+  if (!subjectData || !currentSubject) return;
+  const lang = App.currentLang;
+  const meta = currentSubject;
+  const data = subjectData;
+
+  const diaInfo = data.dia_info?.[lang] || data.dia_info?.es || '';
+
+  let html = `
+    <!-- Header -->
+    <div class="hero-section mb-xl" style="padding:var(--space-xl);">
+      <div class="flex items-center gap-lg flex-wrap">
+        <div class="subject-icon ${meta.color}" style="width:64px;height:64px;font-size:32px;">${meta.icon}</div>
+        <div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">DIA — Deutsche Schule Valencia</div>
+          <h1 style="font-size:24px;font-weight:900;">${lang === 'de' ? data.displayName?.de : data.displayName?.es}</h1>
+          <div class="flex gap-sm flex-wrap" style="margin-top:var(--space-sm);">
+            <span class="badge badge-gold">${data.examType === 'written' ? '✍️ Escrito' : data.examType === 'oral' ? '🎤 Oral' : '✍️/🎤'}</span>
+            <span class="badge badge-blue">⏱️ ${data.duration ? data.duration + ' min' : '—'}</span>
+            <span class="badge" style="background:rgba(255,255,255,0.06);">📋 ${data.source || 'DIA'}</span>
+          </div>
+        </div>
+        <div style="margin-left:auto;">
+          <a href="exam-generator.html?s=${meta.id}" class="btn btn-primary">⚡ Practicar examen</a>
+        </div>
+      </div>
+
+      ${diaInfo ? `<div class="highlight-box" style="margin-top:var(--space-lg);">${diaInfo}</div>` : ''}
+    </div>
+
+    <!-- Tabs within subject -->
+    <div style="display:flex;gap:var(--space-sm);margin-bottom:var(--space-xl);flex-wrap:wrap;" id="subjectInnerTabs">
+      <button class="difficulty-btn selected easy" onclick="showTab('info', this)">📋 Info</button>
+      ${data.taskTypes ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 Tipos de tarea</button>` : ''}
+      ${data.topics ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 Temario</button>` : ''}
+      ${data.trap_questions ? `<button class="difficulty-btn" onclick="showTab('traps', this)">⚠️ Trampas</button>` : ''}
+      ${data.questions ? `<button class="difficulty-btn" onclick="showTab('questions', this)">❓ Preguntas tipo</button>` : ''}
+      ${data.resources ? `<button class="difficulty-btn" onclick="showTab('resources', this)">🔗 Recursos</button>` : ''}
+    </div>
+
+    <!-- Tab content -->
+    <div id="subjectTabContent">
+      ${renderInfoTab(data, lang)}
+    </div>`;
+
+  document.getElementById('subjectPanel').innerHTML = html;
+}
+
+function showTab(tab, btn) {
+  document.querySelectorAll('#subjectInnerTabs .difficulty-btn').forEach(b => b.classList.remove('selected','easy'));
+  btn.classList.add('selected','easy');
+  const lang = App.currentLang;
+  const data = subjectData;
+  const container = document.getElementById('subjectTabContent');
+  switch(tab) {
+    case 'info':      container.innerHTML = renderInfoTab(data, lang); break;
+    case 'tasks':     container.innerHTML = renderTasksTab(data, lang); break;
+    case 'topics':    container.innerHTML = renderTopicsTab(data, lang); break;
+    case 'traps':     container.innerHTML = renderTrapsTab(data, lang); break;
+    case 'questions': container.innerHTML = renderQuestionsTab(data, lang); break;
+    case 'resources': container.innerHTML = renderResourcesTab(data, lang); break;
+  }
+}
+
+function renderInfoTab(data, lang) {
+  const keyOps = data.keyOperators || data.skills || [];
+  const devices = data.rhetorical_devices || data.rhetorical_devices_en || data.literary_devices_es || [];
+  const concepts = data.key_concepts || [];
+  const techniques = data.oral_techniques || data.exam_tips || [];
+
+  return `<div class="grid-2 gap-xl">
+    <div class="flex-col gap-lg">
+      ${keyOps.length ? `
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-md);">🔑 Operadores / Habilidades clave</h3>
+          <div class="flex-col gap-md">
+            ${keyOps.slice(0,8).map(o => `
+              <div style="border-left:2px solid var(--color-gold);padding-left:var(--space-md);">
+                <div style="font-weight:700;font-size:14px;color:var(--color-gold);">${o.op || o.id || o.name}</div>
+                <div style="font-size:13px;color:var(--text-secondary);margin-top:2px;">${o.meaning?.[lang] || o.meaning?.es || o.desc?.[lang] || ''}</div>
+                ${o.trap ? `<div class="warning-box" style="margin-top:6px;font-size:12px;">⚠️ ${o.trap?.[lang] || o.trap?.es}</div>` : ''}
+              </div>`).join('')}
+          </div>
+        </div>` : ''}
+
+      ${data.exam_structure ? `
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-md);">📋 Estructura del examen</h3>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">${data.exam_structure?.[lang] || data.exam_structure?.es}</p>
+        </div>` : ''}
+
+      ${data.exam_format ? `
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-md);">🎤 Formato del examen oral</h3>
+          <div class="flex-col gap-md">
+            <div><strong>Duración:</strong> ${data.exam_format?.[lang]?.duration || data.exam_format?.es?.duration}</div>
+            <div><strong>Estructura:</strong> ${data.exam_format?.[lang]?.structure || data.exam_format?.es?.structure}</div>
+            <div class="highlight-box">💡 ${data.exam_format?.[lang]?.tip || data.exam_format?.es?.tip}</div>
+          </div>
+        </div>` : ''}
+    </div>
+
+    <div class="flex-col gap-lg">
+      ${devices.length ? `
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-md);">🎭 Recursos estilísticos</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);">
+            ${devices.slice(0,12).map(d => `
+              <div style="padding:var(--space-sm);background:var(--glass-bg);border-radius:var(--radius-sm);border:1px solid var(--glass-border);">
+                <div style="font-weight:700;font-size:13px;">${d.name}</div>
+                ${d.es ? `<div style="font-size:11px;color:var(--text-muted);">${d.es}</div>` : ''}
+                ${d.example ? `<div style="font-size:11px;color:var(--color-gold);font-style:italic;margin-top:2px;">"${d.example}"</div>` : ''}
+              </div>`).join('')}
+          </div>
+        </div>` : ''}
+
+      ${concepts.length ? `
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-md);">💡 Conceptos clave</h3>
+          <div class="flex-col gap-sm">
+            ${concepts.map(c => `
+              <div style="padding:var(--space-sm) var(--space-md);background:var(--glass-bg);border-radius:var(--radius-sm);border:1px solid var(--glass-border);">
+                <div style="font-weight:700;font-size:13px;color:var(--color-gold);">${c.concept}</div>
+                <div style="font-size:12px;color:var(--text-muted);">${c[lang] || c.es}</div>
+              </div>`).join('')}
+          </div>
+        </div>` : ''}
+
+      ${techniques.length ? `
+        <div class="card">
+          <h3 style="margin-bottom:var(--space-md);">✅ Consejos para el examen</h3>
+          <div class="flex-col gap-sm">
+            ${(Array.isArray(techniques) ? techniques : []).map(t =>
+              `<div class="tip-card" style="padding:var(--space-sm) var(--space-md);">
+                <span style="font-size:16px;">✅</span>
+                <div style="font-size:13px;">${typeof t === 'string' ? t : (t[lang] || t.es)}</div>
+              </div>`).join('')}
+          </div>
+        </div>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderTasksTab(data, lang) {
+  const tasks = data.taskTypes || data.text_types || [];
+  return `<div class="grid-2 gap-lg">
+    ${tasks.map(t => `
+      <div class="card">
+        <div class="flex items-center justify-between mb-md">
+          <h4 style="font-size:16px;">${t.name?.[lang] || t.name?.es || t.name}</h4>
+          ${t.weight ? `<span class="badge badge-gold">${t.weight}</span>` : ''}
+        </div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">${t.desc?.[lang] || t.desc?.es || t.desc || ''}</p>
+        ${t.structure ? `<div style="font-size:12px;color:var(--text-muted);"><strong>Estructura:</strong> ${t.structure}</div>` : ''}
+        ${t.register ? `<div style="font-size:12px;color:var(--text-muted);margin-top:4px;"><strong>Registro:</strong> ${t.register}</div>` : ''}
+        ${t.operators?.length ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">OPERADORES</div><div class="flex gap-xs flex-wrap">${t.operators.map(o => `<span class="badge badge-blue">${o}</span>`).join('')}</div></div>` : ''}
+      </div>`).join('')}
+  </div>`;
+}
+
+function renderTopicsTab(data, lang) {
+  const topics = data.topics || data.topics_by_semester || [];
+  return `<div class="flex-col gap-lg">
+    ${topics.map(t => `
+      <div class="card">
+        <h4 style="font-size:16px;margin-bottom:var(--space-md);">
+          ${t.semester ? `<span class="badge badge-gold" style="margin-right:8px;">Semestre ${t.semester}</span>` : ''}
+          ${t.name?.[lang] || t.name?.es || t.topic?.[lang] || t.topic?.es || t.name || ''}
+        </h4>
+        ${t.philosophers ? `<div style="margin-bottom:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">FILÓSOFOS</div><div class="flex gap-xs flex-wrap">${t.philosophers.map(p=>`<span class="badge">${p}</span>`).join('')}</div></div>` : ''}
+        ${t.subtopics ? `<div class="grid-2 gap-md">
+          ${t.subtopics.map(s => `<div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+            <div style="font-weight:700;font-size:13px;margin-bottom:6px;">${s.name}</div>
+            ${s.items?.map(i => `<div style="font-size:12px;color:var(--text-muted);">• ${i}</div>`).join('')}
+          </div>`).join('')}
+        </div>` : ''}
+        ${t.key_questions ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">PREGUNTAS CLAVE</div>${t.key_questions.map(q=>`<div style="padding:8px 12px;background:rgba(245,200,66,0.05);border-left:2px solid var(--color-gold);margin-bottom:4px;font-size:13px;">${q[lang] || q.es}</div>`).join('')}</div>` : ''}
+      </div>`).join('')}
+  </div>`;
+}
+
+function renderTrapsTab(data, lang) {
+  const traps = data.trap_questions || [];
+  return `<div class="flex-col gap-md">
+    ${traps.map((t, i) => `
+      <div class="card" style="border-left:3px solid var(--color-warning);">
+        <div class="flex gap-md">
+          <span style="font-size:28px;flex-shrink:0;">⚠️</span>
+          <div style="flex:1;">
+            <div style="font-weight:700;color:var(--color-warning);margin-bottom:8px;">Trampa #${i+1}: ${t.trap?.[lang] || t.trap?.es}</div>
+            <div style="font-size:14px;color:var(--text-secondary);padding:var(--space-md);background:rgba(34,197,94,0.05);border-radius:var(--radius-sm);border:1px solid rgba(34,197,94,0.2);">
+              ✅ <strong>Cómo evitarla:</strong> ${t.avoid?.[lang] || t.avoid?.es}
+            </div>
+          </div>
+        </div>
+      </div>`).join('')}
+    ${traps.length === 0 ? '<div class="card text-center"><p>No hay trampas registradas para esta asignatura todavía.</p></div>' : ''}
+  </div>`;
+}
+
+function renderQuestionsTab(data, lang) {
+  const questions = data.questions || [];
+  return `<div class="flex-col gap-lg">
+    ${questions.map((q, qi) => `
+      <div class="question-card">
+        <div class="flex gap-sm items-center mb-md flex-wrap">
+          ${q.topic ? `<span class="badge badge-blue">${q.topic}</span>` : ''}
+          ${q.year ? `<span class="badge badge-gold">${q.year}</span>` : ''}
+          <span class="badge badge-${q.difficulty==='easy'?'success':q.difficulty==='medium'?'warning':'error'}">${q.difficulty}</span>
+        </div>
+        <div class="question-text">${q.question?.[lang] || q.question?.es}</div>
+        <div class="answer-options">
+          ${(q.options||[]).map((opt, oi) => {
+            const optText = typeof opt === 'object' ? (opt[lang] || opt.es) : opt;
+            const isCorrect = oi === q.correct;
+            return `<div class="answer-option ${isCorrect ? 'correct' : ''}" style="cursor:default;">
+              <div class="answer-letter">${String.fromCharCode(65+oi)}</div>
+              <div>${optText}</div>
+              ${isCorrect ? '<div style="margin-left:auto;color:var(--color-success);">✓</div>' : ''}
+            </div>`;
+          }).join('')}
+        </div>
+        ${q.explanation ? `<div class="answer-feedback show correct-feedback">
+          <strong>Explicación:</strong> ${q.explanation[lang] || q.explanation.es}
+          ${q.tip ? `<br><br>💡 <em>${q.tip[lang] || q.tip.es}</em>` : ''}
+        </div>` : ''}
+      </div>`).join('')}
+    ${questions.length === 0 ? '<div class="card text-center"><p>No hay preguntas registradas.</p></div>' : ''}
+    <div class="text-center" style="margin-top:var(--space-md);">
+      <a href="exam-generator.html?s=${currentSubject?.id}" class="btn btn-primary">⚡ Generar examen de esta asignatura</a>
+    </div>
+  </div>`;
+}
+
+function renderResourcesTab(data, lang) {
+  const resources = data.resources || [];
+  const typeColors = { official: 'badge-gold', practice: 'badge-success', reference: 'badge-blue', video: 'badge-warning' };
+  return `<div class="grid-2 gap-md">
+    ${resources.map(r => `
+      <a href="${r.url}" target="_blank" class="card" style="text-decoration:none;display:block;transition:transform var(--ease-normal);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <div class="flex items-center gap-md mb-md">
+          <div style="font-size:28px;">${r.type === 'official' ? '📋' : r.type === 'video' ? '🎬' : r.type === 'reference' ? '📖' : '✏️'}</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;">${r.name}</div>
+            <span class="badge ${typeColors[r.type] || ''}" style="font-size:10px;">${r.type}</span>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:var(--space-sm);">${r.desc?.[lang] || r.desc?.es || r.desc}</p>
+        <div style="font-size:12px;color:var(--color-gold);">${r.url} ↗</div>
+      </a>`).join('')}
+    ${resources.length === 0 ? '<div class="card"><p style="color:var(--text-muted)">No hay recursos registrados.</p></div>' : ''}
+  </div>`;
+}
+
+// ── Init ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  renderTabs();
+
+  // URL param ?s=subjectId
+  const params = new URLSearchParams(window.location.search);
+  const s = params.get('s');
+  if (s && SUBJECTS_META.find(sub => sub.id === s)) {
+    selectSubject(s);
+  } else {
+    selectSubject('deutsch'); // Default
+  }
+});
+</script>
+</body>
+</html>

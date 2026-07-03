@@ -1,0 +1,141 @@
+{
+  "subject": "philosophie",
+  "displayName": { "es": "Filosofía (Philosophie)", "de": "Philosophie" },
+  "icon": "🧠",
+  "examType": "oral",
+  "duration": 20,
+  "source": "DIA — Examen oral / Portal de Educación de Berlín (Berliner Bildungsserver) / DSV semestres 11.1-12.2",
+  "dia_info": {
+    "es": "En el DIA de Valencia, Filosofía es normalmente la 4ª o 5ª asignatura en modalidad ORAL (Prüfung o Kolloquium, 20 minutos). Los profesores confeccionan las preguntas basadas en los semestres 11.1-12.2. El mejor simulacro: portal de educación de Berlín (Berliner Bildungsserver) — exámenes orales de Philosophie. NO hay examen escrito unificado para esta asignatura en el DIA.",
+    "de": "In Valencia ist Philosophie im DIA normalerweise das 4. oder 5. Prüfungsfach als MÜNDLICHE Prüfung (20 Minuten). Lehrer erstellen die Fragen aus den Semestern 11.1-12.2. Bestes Simulacrum: Berliner Bildungsserver — mündliche Philosophieprüfungen."
+  },
+  "exam_format": {
+    "es": {
+      "duration": "20 minutos (10 min preparación + 10 min presentación y preguntas del tribunal)",
+      "structure": "1) El alumno recibe un texto o pregunta estímulo (5-10 líneas), 2) Prepara 10 min, 3) Presenta su análisis/tesis 5-7 min, 4) El tribunal hace preguntas de profundización 3-5 min",
+      "tip": "El tribunal siempre hace al menos UNA pregunta inesperada para ver si entiendes o has memorizado. Responde desde la comprensión, no desde el texto aprendido."
+    },
+    "de": {
+      "duration": "20 Minuten (10 Min Vorbereitung + 10 Min Präsentation und Fragen der Prüfungskommission)",
+      "structure": "1) Schüler erhält Stimulus-Text/-Frage (5-10 Zeilen), 2) 10 Min Vorbereitung, 3) Präsentation 5-7 Min, 4) Kommission stellt 3-5 Min Vertiefungsfragen",
+      "tip": "Die Kommission stellt IMMER mindestens EINE unerwartete Frage, um zu sehen, ob du verstehst oder auswendig gelernt hast."
+    }
+  },
+  "topics_by_semester": [
+    {
+      "semester": "11.1",
+      "topic": { "es": "Epistemología — ¿Qué podemos conocer?", "de": "Erkenntnistheorie — Was können wir wissen?" },
+      "philosophers": ["Platón (Alegoría de la caverna)", "Descartes (Duda metódica, Cogito ergo sum)", "Kant (Crítica de la razón pura — síntesis)", "Hume (Escepticismo, asociación de ideas)"],
+      "key_questions": [
+        { "es": "¿Cuál es la diferencia entre conocimiento y opinión en Platón?", "de": "Was ist der Unterschied zwischen Wissen und Meinung bei Platon?" },
+        { "es": "¿Por qué Descartes no puede dudar del Cogito?", "de": "Warum kann Descartes das Cogito nicht bezweifeln?" },
+        { "es": "¿Qué son los juicios sintéticos a priori en Kant?", "de": "Was sind synthetische Urteile a priori bei Kant?" }
+      ]
+    },
+    {
+      "semester": "11.2",
+      "topic": { "es": "Ética y Moral — ¿Cómo debemos actuar?", "de": "Ethik und Moral — Wie sollen wir handeln?" },
+      "philosophers": ["Kant (Imperativo categórico)", "Mill (Utilitarismo)", "Aristóteles (Eudaimonia, Ética a Nicómaco)", "Rawls (Teoría de la Justicia)"],
+      "key_questions": [
+        { "es": "¿En qué consiste el imperativo categórico de Kant? Formula la 1ª formulación.", "de": "Worin besteht Kants kategorischer Imperativ? Formuliere die 1. Formel." },
+        { "es": "¿Qué diferencia hay entre la ética kantiana y el utilitarismo?", "de": "Was ist der Unterschied zwischen Kants Ethik und dem Utilitarismus?" },
+        { "es": "¿Qué es la eudaimonia según Aristóteles?", "de": "Was ist Eudaimonie bei Aristoteles?" }
+      ]
+    },
+    {
+      "semester": "12.1",
+      "topic": { "es": "Filosofía Política — ¿Cómo debe organizarse la sociedad?", "de": "Politische Philosophie — Wie soll die Gesellschaft organisiert sein?" },
+      "philosophers": ["Hobbes (Contrato social, Leviatán)", "Locke (Estado liberal)", "Rousseau (Voluntad general)", "Rawls (Velo de la ignorancia)", "Marx (Materialismo histórico, alienación)"],
+      "key_questions": [
+        { "es": "¿Por qué Hobbes considera necesario el Estado absoluto?", "de": "Warum hält Hobbes den absoluten Staat für notwendig?" },
+        { "es": "¿En qué consiste el 'velo de la ignorancia' de Rawls?", "de": "Was ist der 'Schleier des Nichtwissens' bei Rawls?" },
+        { "es": "¿Cómo define Marx el concepto de alienación?", "de": "Wie definiert Marx den Begriff der Entfremdung?" }
+      ]
+    },
+    {
+      "semester": "12.2",
+      "topic": { "es": "Filosofía de la mente y contemporánea — ¿Qué somos?", "de": "Philosophie des Geistes und zeitgenössische Philosophie — Was sind wir?" },
+      "philosophers": ["Nietzsche (Voluntad de poder, Übermensch, nihilismo)", "Sartre (Existencialismo)", "Wittgenstein (Juegos de lenguaje)", "Turing/Dennett (Filosofía de la mente, IA)"],
+      "key_questions": [
+        { "es": "¿Qué significa la frase 'Dios ha muerto' (Nietzsche)?", "de": "Was bedeutet Nietzches Aussage 'Gott ist tot'?" },
+        { "es": "¿En qué consiste el existencialismo de Sartre? 'La existencia precede a la esencia'", "de": "Was ist Sartres Existentialismus? 'Die Existenz geht der Essenz voraus'" },
+        { "es": "¿Puede una máquina pensar? El test de Turing.", "de": "Kann eine Maschine denken? Der Turing-Test." }
+      ]
+    }
+  ],
+  "key_concepts": [
+    { "concept": "A priori / A posteriori", "es": "Conocimiento independiente/dependiente de la experiencia", "de": "Erkenntnis unabhängig/abhängig von Erfahrung" },
+    { "concept": "Imperativo categórico", "es": "Actúa solo según máximas que puedas universalizar (Kant)", "de": "Handle nur nach Maximen, die du universalisieren könntest (Kant)" },
+    { "concept": "Eudaimonia", "es": "Felicidad como realización plena de las capacidades humanas (Aristóteles)", "de": "Glück als vollständige Verwirklichung menschlicher Fähigkeiten (Aristoteles)" },
+    { "concept": "Contrato social", "es": "Pacto fundador del Estado entre individuos para superar el estado de naturaleza", "de": "Gründungsvertrag des Staates zwischen Individuen zur Überwindung des Naturzustands" },
+    { "concept": "Voluntad de poder", "es": "Principio nietzscheano de autoafirmación y superación (no dominación)", "de": "Nietzscheanisches Prinzip der Selbstbehauptung und Überwindung (nicht Dominanz)" },
+    { "concept": "Cogito ergo sum", "es": "'Pienso, luego existo' — certeza indudable de Descartes", "de": "'Ich denke, also bin ich' — unzweifelhafte Gewissheit Descartes'" },
+    { "concept": "Nihilismo", "es": "Negación de valores absolutos, Dios y verdades trascendentes (Nietzsche)", "de": "Verneinung absoluter Werte, Gottes und transzendenter Wahrheiten (Nietzsche)" },
+    { "concept": "Alienación (Marx)", "es": "El trabajador se separa del producto de su trabajo y de su esencia humana", "de": "Der Arbeiter entfremdet sich vom Produkt seiner Arbeit und seinem menschlichen Wesen" }
+  ],
+  "trap_questions": [
+    {
+      "trap": { "es": "Confundir el imperativo categórico con el hipotético", "de": "Kategorischen mit hypothetischem Imperativ verwechseln" },
+      "avoid": { "es": "Imperativo hipotético: 'Si quieres X, haz Y' (condicional). Categórico: 'Haz X' (incondicionalmente, válido para todos siempre). Kant solo considera MORAL el categórico.", "de": "Hypothetischer Imperativ: 'Wenn du X willst, tu Y' (bedingt). Kategorischer: 'Tu X' (unbedingt, für alle gültig). Kant sieht nur den kategorischen als MORALISCH an." }
+    },
+    {
+      "trap": { "es": "'Voluntad de poder' de Nietzsche como voluntad de dominar a otros", "de": "'Wille zur Macht' bei Nietzsche als Wille, andere zu dominieren" },
+      "avoid": { "es": "La Voluntad de poder NO es querer gobernar ni dominar políticamente. Es el impulso de superación de uno mismo, de crear valores propios, de vivir plenamente. La malinterpretación nazi fue precisamente esa.", "de": "Wille zur Macht ist NICHT der Wunsch zu herrschen oder politisch zu dominieren. Es ist der Trieb zur Selbstüberwindung, zur Schaffung eigener Werte. Die Nazi-Fehldeutung war genau das." }
+    },
+    {
+      "trap": { "es": "Pensar que el existencialismo de Sartre es pesimista", "de": "Sartres Existentialismus als pessimistisch missverstehen" },
+      "avoid": { "es": "Sartre ve la libertad radical ('estamos condenados a ser libres') como una RESPONSABILIDAD y una oportunidad de crear sentido, no como un peso negativo. El existencialismo es una filosofía del compromiso.", "de": "Sartre sieht radikale Freiheit ('wir sind zur Freiheit verurteilt') als VERANTWORTUNG und Möglichkeit zur Sinngebung, nicht als negativen Druck. Existentialismus ist eine Philosophie des Engagements." }
+    },
+    {
+      "trap": { "es": "No distinguir entre ética normativa, metaética y ética aplicada", "de": "Normative Ethik, Metaethik und angewandte Ethik nicht unterscheiden" },
+      "avoid": { "es": "Ética normativa: ¿qué debemos hacer? (Kant, Mill). Metaética: ¿qué significa 'bueno'? (Moore, Ayer). Ética aplicada: casos concretos (bioética, ética ambiental). Si el examinador pregunta por una, no mezcles con otra.", "de": "Normative Ethik: Was sollen wir tun? (Kant, Mill). Metaethik: Was bedeutet 'gut'? (Moore, Ayer). Angewandte Ethik: konkrete Fälle (Bioethik, Umweltethik). Nicht mischen, wenn nach einer gefragt wird." }
+    }
+  ],
+  "oral_techniques": [
+    { "es": "Empieza siempre definiendo el concepto clave del texto/pregunta", "de": "Beginne immer mit der Definition des Schlüsselbegriffs im Text/der Frage" },
+    { "es": "Estructura tu respuesta: 1) Tesis, 2) Argumento filosófico con autor, 3) Ejemplo concreto, 4) Conclusión", "de": "Strukturiere deine Antwort: 1) These, 2) Philosophisches Argument mit Autor, 3) Konkretes Beispiel, 4) Schluss" },
+    { "es": "Si no sabes algo, razona en voz alta. El tribunal valora el proceso de pensamiento, no solo la respuesta correcta", "de": "Falls du etwas nicht weißt, denke laut. Die Kommission bewertet den Denkprozess, nicht nur die richtige Antwort" },
+    { "es": "Usa vocabulario técnico filosófico: 'epistemológico', 'ontológico', 'deontológico', 'teleológico'", "de": "Philosophisches Fachvokabular verwenden: 'epistemologisch', 'ontologisch', 'deontologisch', 'teleologisch'" },
+    { "es": "Relaciona siempre el concepto con actualidad: el tribunal aprecia que puedas aplicar la filosofía a temas contemporáneos", "de": "Konzept immer mit Aktualität verknüpfen: die Kommission schätzt, wenn du Philosophie auf aktuelle Themen anwenden kannst" }
+  ],
+  "resources": [
+    { "name": "Berliner Bildungsserver — Philosophie", "url": "https://bildungsserver.berlin-brandenburg.de", "desc": { "es": "El simulacro más fiel para Philosophie oral DIA — exámenes del Gymnasium de Berlín", "de": "Treueste Simulation für mündliche Philosophie-DIA-Prüfung — Berliner Gymnasium-Prüfungen" }, "type": "official" },
+    { "name": "Philosophie.de", "url": "https://www.philosophie.de", "desc": { "es": "Glosario filosófico y resúmenes por corriente", "de": "Philosophie-Glossar und Zusammenfassungen nach Strömung" }, "type": "reference" }
+  ],
+  "questions": [
+    {
+      "id": "ph_001",
+      "year": "Tipo DIA Oral",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Ética — Kant",
+      "question": { "es": "Según Kant, una acción es moralmente correcta cuando:", "de": "Nach Kant ist eine Handlung moralisch richtig, wenn:" },
+      "options": [
+        { "es": "Produce la mayor felicidad para el mayor número de personas", "de": "Sie das größte Glück für die größte Anzahl von Menschen erzeugt" },
+        { "es": "La máxima que la guía puede convertirse en ley universal sin contradicción", "de": "Die ihr zugrunde liegende Maxime ohne Widerspruch zum allgemeinen Gesetz werden kann" },
+        { "es": "Es aprobada por la mayoría de la sociedad", "de": "Sie von der Mehrheit der Gesellschaft gebilligt wird" },
+        { "es": "Conduce a la eudaimonia (florecimiento humano)", "de": "Sie zur Eudaimonie (menschliche Entfaltung) führt" }
+      ],
+      "correct": 1,
+      "explanation": { "es": "Esta es la 1ª formulación del Imperativo Categórico: 'Actúa solo según aquella máxima por la cual puedas querer al mismo tiempo que se convierta en ley universal.' La opción A es el utilitarismo de Mill/Bentham. La D es la ética de la virtud de Aristóteles.", "de": "Dies ist die 1. Formel des Kategorischen Imperativs: 'Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde.' Option A = Utilitarismus (Mill/Bentham). D = Aristoteles' Tugendethik." },
+      "tip": { "es": "Las 3 formulaciones del Imperativo Categórico: 1) Universalizabilidad, 2) Humanidad como fin (no como medio), 3) Reino de los fines. ¡El tribunal puede preguntar por cualquiera!", "de": "Die 3 Formeln des Kategorischen Imperativs: 1) Universalisierbarkeit, 2) Menschheit als Zweck (nie als Mittel), 3) Reich der Zwecke. Die Kommission kann nach jeder fragen!" }
+    },
+    {
+      "id": "ph_002",
+      "year": "Tipo Berlín",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Epistemología — Platón vs Descartes",
+      "question": { "es": "¿Cuál es la diferencia fundamental entre el método de Platón y el de Descartes para alcanzar el conocimiento verdadero?", "de": "Was ist der fundamentale Unterschied zwischen Platons und Descartes' Methode zur Erlangung wahren Wissens?" },
+      "options": [
+        { "es": "Platón confía en los sentidos; Descartes en la razón pura", "de": "Platon vertraut den Sinnen; Descartes der reinen Vernunft" },
+        { "es": "Platón parte de la reminiscencia del mundo de las Ideas; Descartes parte de la duda metódica hasta llegar al cogito como certeza indudable", "de": "Platon geht von der Wiedererinnerung an die Ideenwelt aus; Descartes vom methodischen Zweifel bis zum Cogito als unzweifelhafter Gewissheit" },
+        { "es": "Ambos usan el método empírico experimental", "de": "Beide verwenden die empirische experimentelle Methode" },
+        { "es": "No hay diferencia: ambos son racionalistas puros que niegan los sentidos", "de": "Kein Unterschied: beide sind reine Rationalisten, die die Sinne ablehnen" }
+      ],
+      "correct": 1,
+      "explanation": { "es": "Platón: el alma ya conoció las Ideas perfectas antes de nacer (reminiscencia/anámnesis). El conocimiento es recordar lo que ya sabíamos. Descartes: parte de cero (duda metódica), destruye todo lo que puede dudar y encuentra una certeza indudable: el Cogito. Ambos son racionalistas pero con metodologías opuestas en su punto de partida.", "de": "Platon: Die Seele kannte die Ideen schon vor der Geburt (Anamnese/Reminiszenz). Erkenntnis = Wiedererinnerung. Descartes: Startet bei null (methodischer Zweifel), zerstört alles Bezweifelbare und findet unzweifelhafte Gewissheit im Cogito. Beide Rationalisten, aber gegensätzliche Ausgangspunkte." },
+      "tip": { "es": "Para el tribunal oral: conecta con actualidad — ¿qué diría Platón sobre la IA? ¿Descartes sobre la realidad virtual? Esto impresiona al examinador.", "de": "Für die mündliche Prüfung: mit Aktualität verbinden — Was würde Platon über KI sagen? Descartes über virtuelle Realität? Das beeindruckt den Prüfer." }
+    }
+  ]
+}

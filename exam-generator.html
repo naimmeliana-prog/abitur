@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Generar Examen</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR (same pattern) -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text">
+        <span class="brand">AbiturDSV</span>
+        <span class="sub">Deutsche Schule Valencia</span>
+      </div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label" data-i18n="nav.dashboard">Inicio</span></a>
+      <a href="subjects.html" class="nav-item"><span class="nav-icon">📚</span><span class="nav-label" data-i18n="nav.subjects">Asignaturas</span></a>
+      <div class="nav-section-label">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item active"><span class="nav-icon">⚡</span><span class="nav-label" data-i18n="nav.exam-gen">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label" data-i18n="nav.exam-bank">Banco de Exámenes</span></a>
+      <div class="nav-section-label">Mi Progreso</div>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label" data-i18n="nav.progress">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label" data-i18n="nav.study-tips">Técnicas de Estudio</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info">
+          <div class="user-name user-name-display">Usuario</div>
+          <div class="user-level user-level-display">Nivel 1</div>
+        </div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title" data-i18n="exam.generate">Generar Examen</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- ═══ CONFIGURATOR ════════════════════════════════════ -->
+      <div id="configPanel" class="page-enter">
+
+        <div class="grid-2 gap-xl">
+
+          <!-- LEFT: Settings -->
+          <div class="flex-col gap-lg">
+
+            <!-- Step 1: Subjects -->
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);">1️⃣ <span data-i18n="nav.subjects">Asignaturas</span></h3>
+              <p style="font-size:13px;color:var(--text-muted);margin-bottom:var(--space-md);">Selecciona una o varias asignaturas</p>
+              <div id="subjectSelector" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);">
+                <!-- Rendered by JS -->
+              </div>
+            </div>
+
+            <!-- Step 2: Difficulty -->
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);">2️⃣ <span data-i18n="exam.difficulty">Dificultad</span></h3>
+              <div class="difficulty-selector">
+                <button class="difficulty-btn easy selected" data-diff="easy" data-i18n="exam.easy">Fácil</button>
+                <button class="difficulty-btn medium" data-diff="medium" data-i18n="exam.medium">Medio</button>
+                <button class="difficulty-btn hard" data-diff="hard" data-i18n="exam.hard">Difícil</button>
+                <button class="difficulty-btn" data-diff="all" style="flex:0.7;font-size:11px;">Todos</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Questions -->
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);">3️⃣ Número de preguntas</h3>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-sm);">
+                <button class="difficulty-btn selected" data-count="5">5</button>
+                <button class="difficulty-btn" data-count="10">10</button>
+                <button class="difficulty-btn" data-count="15">15</button>
+                <button class="difficulty-btn" data-count="20">20</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Mode selection + Start -->
+          <div class="flex-col gap-lg">
+
+            <!-- Mode -->
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-lg);">4️⃣ Modo de examen</h3>
+
+              <div id="modeSelector" class="flex-col gap-md">
+
+                <div class="mode-card selected" data-mode="practice" onclick="selectMode('practice')" style="border:2px solid var(--color-gold);border-radius:var(--radius-lg);padding:var(--space-lg);cursor:pointer;transition:all var(--ease-fast);">
+                  <div class="flex items-center gap-md">
+                    <span style="font-size:32px;">📖</span>
+                    <div>
+                      <div style="font-size:16px;font-weight:700;" data-i18n="exam.practice-mode">Modo Práctica</div>
+                      <div style="font-size:13px;color:var(--text-muted);">Sin temporizador. Ve a tu ritmo. Feedback inmediato.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mode-card" data-mode="simulacro" onclick="selectMode('simulacro')" style="border:2px solid var(--glass-border);border-radius:var(--radius-lg);padding:var(--space-lg);cursor:pointer;transition:all var(--ease-fast);">
+                  <div class="flex items-center gap-md">
+                    <span style="font-size:32px;">⏱️</span>
+                    <div>
+                      <div style="font-size:16px;font-weight:700;" data-i18n="exam.simulation-mode">Modo Simulacro</div>
+                      <div style="font-size:13px;color:var(--text-muted);">Con temporizador oficial DIA. Condiciones reales.</div>
+                    </div>
+                  </div>
+                  <div class="badge badge-warning" style="margin-top:var(--space-sm);font-size:11px;">⏱️ Tiempo real del DIA</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PDF Option -->
+            <div class="card card-sm flex items-center gap-md">
+              <label class="switch">
+                <input type="checkbox" id="pdfOnComplete" checked>
+                <span class="switch-slider"></span>
+              </label>
+              <div>
+                <div style="font-size:14px;font-weight:600;">Generar PDF al completar</div>
+                <div style="font-size:12px;color:var(--text-muted);">Descarga un examen imprimible con correcciones</div>
+              </div>
+            </div>
+
+            <!-- Summary + Start -->
+            <div class="card" style="background:rgba(245,200,66,0.05);border-color:rgba(245,200,66,0.2);">
+              <h4 style="margin-bottom:var(--space-md);">📋 Resumen</h4>
+              <div id="examSummary" class="flex-col gap-sm" style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-lg);">
+                <div>📚 <span id="sumSubjects">Ninguna asignatura</span></div>
+                <div>🎯 <span id="sumDifficulty">Fácil</span></div>
+                <div>📝 <span id="sumQuestions">5 preguntas</span></div>
+                <div>🕐 <span id="sumMode">Modo Práctica</span></div>
+              </div>
+              <button id="startExamBtn" class="btn btn-primary btn-full btn-lg" onclick="startExam()">
+                ⚡ <span data-i18n="exam.start">Comenzar</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tip box -->
+        <div class="highlight-box" style="margin-top:var(--space-xl);">
+          <strong>💡 Consejo DIA:</strong> Los exámenes de Matemáticas son los más diferentes entre Práctica y Simulacro.
+          Empieza con Práctica para aprender los patrones, luego cambia a Simulacro para simular condiciones reales (sin calculadora en Parte A).
+        </div>
+
+      </div>
+
+      <!-- ═══ EXAM IN PROGRESS ═════════════════════════════════ -->
+      <div id="examPanel" class="hidden">
+
+        <!-- Exam Header -->
+        <div class="flex items-center justify-between mb-lg" style="flex-wrap:wrap;gap:var(--space-md);">
+          <div>
+            <div id="examTitle" style="font-size:18px;font-weight:700;"></div>
+            <div id="examMeta" style="font-size:13px;color:var(--text-muted);"></div>
+          </div>
+          <div class="flex items-center gap-md">
+            <div class="exam-timer hidden" id="examTimerDisplay">--:--</div>
+            <button onclick="confirmSubmit()" class="btn btn-primary" data-i18n="exam.submit">Entregar</button>
+          </div>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="flex items-center gap-md mb-lg">
+          <div class="progress-bar" style="flex:1;">
+            <div class="progress-fill" id="examProgress" style="width:0%"></div>
+          </div>
+          <span id="examProgressText" style="font-size:13px;color:var(--text-muted);white-space:nowrap;">0/0</span>
+        </div>
+
+        <!-- Questions container -->
+        <div id="questionsContainer"></div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between gap-md" style="margin-top:var(--space-xl);">
+          <button id="prevBtn" class="btn btn-secondary" onclick="prevQuestion()" data-i18n="exam.prev">← Anterior</button>
+          <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()" data-i18n="exam.next">Siguiente →</button>
+        </div>
+
+      </div>
+
+      <!-- ═══ RESULTS ══════════════════════════════════════════ -->
+      <div id="resultsPanel" class="hidden">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span class="icon">🏠</span><span class="label">Inicio</span></a>
+    <a href="subjects.html" class="mobile-nav-item"><span class="icon">📚</span><span class="label">Materias</span></a>
+    <a href="exam-generator.html" class="mobile-nav-item active"><span class="icon">⚡</span><span class="label">Examen</span></a>
+    <a href="progress.html" class="mobile-nav-item"><span class="icon">📊</span><span class="label">Progreso</span></a>
+    <a href="study-tips.html" class="mobile-nav-item"><span class="icon">💡</span><span class="label">Tips</span></a>
+  </nav>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/exam-engine.js"></script>
+<script src="js/pdf-generator.js"></script>
+<script>
+// ── State ─────────────────────────────────────────────────────
+let selectedSubjects = [];
+let selectedDifficulty = 'easy';
+let selectedCount = 5;
+let selectedMode = 'practice';
+
+const subjects = [
+  { id:'deutsch',     name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
+  { id:'englisch',    name:'Inglés',     nameDE:'Englisch',    icon:'🇬🇧', color:'englisch' },
+  { id:'mathe',       name:'Matemáticas',nameDE:'Mathematik',  icon:'📐', color:'mathe' },
+  { id:'espanol',     name:'Español',    nameDE:'Español',     icon:'🇪🇸', color:'espanol' },
+  { id:'philosophie', name:'Filosofía',  nameDE:'Philosophie', icon:'🧠', color:'philosophie' },
+];
+
+// ── Render subject selector ───────────────────────────────────
+function renderSubjectSelector() {
+  const lang = App.currentLang;
+  const container = document.getElementById('subjectSelector');
+  container.innerHTML = subjects.map(s => `
+    <div class="difficulty-btn ${selectedSubjects.includes(s.id) ? 'selected easy' : ''}"
+      style="display:flex;align-items:center;gap:8px;justify-content:center;padding:12px;font-size:13px;"
+      onclick="toggleSubject('${s.id}', this)">
+      <span>${s.icon}</span>
+      <span>${lang === 'de' ? s.nameDE : s.name}</span>
+    </div>`).join('');
+}
+
+function toggleSubject(id, el) {
+  if (selectedSubjects.includes(id)) {
+    selectedSubjects = selectedSubjects.filter(s => s !== id);
+    el.classList.remove('selected', 'easy');
+  } else {
+    selectedSubjects.push(id);
+    el.classList.add('selected', 'easy');
+  }
+  updateSummary();
+}
+
+function selectMode(mode) {
+  selectedMode = mode;
+  document.querySelectorAll('.mode-card').forEach(c => {
+    const isSelected = c.dataset.mode === mode;
+    c.style.borderColor = isSelected ? 'var(--color-gold)' : 'var(--glass-border)';
+    c.style.background = isSelected ? 'rgba(245,200,66,0.05)' : '';
+  });
+  updateSummary();
+}
+
+// ── Difficulty buttons ────────────────────────────────────────
+document.querySelectorAll('[data-diff]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-diff]').forEach(b => b.classList.remove('selected','easy','medium','hard'));
+    btn.classList.add('selected', btn.dataset.diff === 'all' ? 'easy' : btn.dataset.diff);
+    selectedDifficulty = btn.dataset.diff;
+    updateSummary();
+  });
+});
+
+// ── Count buttons ─────────────────────────────────────────────
+document.querySelectorAll('[data-count]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-count]').forEach(b => b.classList.remove('selected','easy'));
+    btn.classList.add('selected','easy');
+    selectedCount = parseInt(btn.dataset.count);
+    updateSummary();
+  });
+});
+
+function updateSummary() {
+  const lang = App.currentLang;
+  const subjNames = selectedSubjects.map(id => subjects.find(s => s.id === id))
+    .filter(Boolean).map(s => lang === 'de' ? s.nameDE : s.name);
+  document.getElementById('sumSubjects').textContent = subjNames.length ? subjNames.join(', ') : 'Ninguna';
+  document.getElementById('sumDifficulty').textContent = selectedDifficulty;
+  document.getElementById('sumQuestions').textContent = `${selectedCount} preguntas`;
+  document.getElementById('sumMode').textContent = selectedMode === 'simulacro' ? '⏱️ Simulacro' : '📖 Práctica';
+}
+
+// ── Start Exam ────────────────────────────────────────────────
+async function startExam() {
+  if (selectedSubjects.length === 0) {
+    App.showToast('Selecciona al menos una asignatura', 'warning');
+    return;
+  }
+
+  const btn = document.getElementById('startExamBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Cargando...';
+
+  // Load data
+  await ExamEngine.preloadAll();
+
+  const exam = ExamEngine.buildExam({
+    subjects: selectedSubjects,
+    difficulty: selectedDifficulty,
+    mode: selectedMode,
+    questionCount: selectedCount,
+  });
+
+  if (!exam.questions.length) {
+    App.showToast('No hay preguntas disponibles para esa combinación', 'error');
+    btn.disabled = false;
+    btn.innerHTML = '⚡ Comenzar';
+    return;
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = '⚡ Comenzar';
+
+  // Show exam panel
+  document.getElementById('configPanel').classList.add('hidden');
+  document.getElementById('examPanel').classList.remove('hidden');
+
+  renderExam(exam);
+}
+
+// ── Render Exam ───────────────────────────────────────────────
+function renderExam(exam) {
+  const lang = App.currentLang;
+  const subj = exam.subjects.map(s => subjects.find(x => x.id === s)).filter(Boolean);
+  document.getElementById('examTitle').textContent = subj.map(s => `${s.icon} ${lang === 'de' ? s.nameDE : s.name}`).join(' + ');
+  document.getElementById('examMeta').textContent = `${exam.totalQuestions} preguntas • ${exam.difficulty} • ${exam.mode === 'simulacro' ? '⏱️ Con temporizador' : '📖 Sin temporizador'}`;
+
+  // Timer
+  if (exam.mode === 'simulacro' && exam.timeLimit) {
+    const timerEl = document.getElementById('examTimerDisplay');
+    timerEl.classList.remove('hidden');
+    ExamEngine.startTimer(
+      (secs) => {
+        timerEl.textContent = ExamEngine.formatTime(secs);
+        if (secs <= 600) timerEl.classList.add('warning');
+        if (secs <= 120) { timerEl.classList.remove('warning'); timerEl.classList.add('danger'); }
+      },
+      () => {
+        App.showToast('⏰ ¡Tiempo agotado! Entregando examen...', 'warning');
+        submitExam();
+      }
+    );
+  }
+
+  renderQuestion(0);
+}
+
+function renderQuestion(idx) {
+  const exam = ExamEngine.currentExam;
+  if (!exam) return;
+  const lang = App.currentLang;
+  const q = exam.questions[idx];
+  const total = exam.totalQuestions;
+  const answered = Object.keys(ExamEngine.answers).length;
+  ExamEngine.currentQuestion = idx;
+
+  document.getElementById('examProgress').style.width = `${(idx / total) * 100}%`;
+  document.getElementById('examProgressText').textContent = `${idx + 1}/${total}`;
+  document.getElementById('prevBtn').disabled = idx === 0;
+  document.getElementById('nextBtn').textContent = idx === total - 1 ? '📤 Entregar' : 'Siguiente →';
+
+  const qText = q.question?.[lang] || q.question?.es || '';
+  const isAnswered = ExamEngine.answers[idx] !== undefined;
+  const isPractice = exam.mode === 'practice';
+
+  const optionsHTML = (q.options || []).map((opt, oi) => {
+    const optText = typeof opt === 'object' ? (opt[lang] || opt.es) : opt;
+    const letter = String.fromCharCode(65 + oi);
+    let cls = '';
+    if (isAnswered) {
+      if (oi === q.correct) cls = 'correct';
+      else if (oi === ExamEngine.answers[idx]) cls = 'wrong';
+    } else if (!isAnswered) {
+      cls = '';
+    }
+    return `<div class="answer-option ${cls}" onclick="selectAnswer(${idx}, ${oi}, this)">
+      <div class="answer-letter">${letter}</div>
+      <div>${optText}</div>
+    </div>`;
+  }).join('');
+
+  let feedbackHTML = '';
+  if (isAnswered && isPractice) {
+    const isCorrect = ExamEngine.isCorrect(idx);
+    const explanation = q.explanation?.[lang] || q.explanation?.es || '';
+    const tip = q.tip?.[lang] || q.tip?.es || '';
+    feedbackHTML = `
+      <div class="answer-feedback show ${isCorrect ? 'correct-feedback' : 'wrong-feedback'}">
+        ${isCorrect ? '✅ <strong>¡Correcto!</strong>' : '❌ <strong>Incorrecto.</strong>'}
+        ${explanation ? `<br><br><strong>Explicación:</strong> ${explanation}` : ''}
+        ${tip ? `<br><br>💡 <strong>Consejo:</strong> <em>${tip}</em>` : ''}
+      </div>`;
+  }
+
+  const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
+  const yearBadge = q.year ? `<span class="badge badge-gold">${q.year}</span>` : '';
+
+  document.getElementById('questionsContainer').innerHTML = `
+    <div class="question-card page-enter">
+      <div class="question-number flex gap-sm items-center" style="margin-bottom:var(--space-sm);">
+        ${topicBadge} ${yearBadge}
+      </div>
+      <div class="question-text">${qText}</div>
+      <div class="answer-options">${optionsHTML}</div>
+      ${feedbackHTML}
+    </div>`;
+}
+
+function selectAnswer(qIdx, optIdx, el) {
+  if (ExamEngine.answers[qIdx] !== undefined) return; // Already answered
+  ExamEngine.answer(qIdx, optIdx);
+
+  const exam = ExamEngine.currentExam;
+  if (exam.mode === 'practice') {
+    // In practice mode, show feedback immediately
+    renderQuestion(qIdx);
+    // Auto advance after 2s if correct
+    if (ExamEngine.isCorrect(qIdx) && qIdx < exam.totalQuestions - 1) {
+      setTimeout(() => nextQuestion(), 1800);
+    }
+  } else {
+    // In simulacro, just mark selected
+    document.querySelectorAll('.answer-option').forEach((opt, i) => {
+      opt.classList.toggle('selected', i === optIdx);
+    });
+  }
+}
+
+function prevQuestion() {
+  if (ExamEngine.currentQuestion > 0) renderQuestion(ExamEngine.currentQuestion - 1);
+}
+
+function nextQuestion() {
+  const exam = ExamEngine.currentExam;
+  if (ExamEngine.currentQuestion < exam.totalQuestions - 1) {
+    renderQuestion(ExamEngine.currentQuestion + 1);
+  } else {
+    confirmSubmit();
+  }
+}
+
+function confirmSubmit() {
+  const exam = ExamEngine.currentExam;
+  const answered = Object.keys(ExamEngine.answers).length;
+  const total = exam.totalQuestions;
+  if (answered < total) {
+    if (!confirm(`Tienes ${total - answered} pregunta(s) sin responder. ¿Entregar igualmente?`)) return;
+  }
+  submitExam();
+}
+
+function submitExam() {
+  ExamEngine.stopTimer();
+  const score = ExamEngine.submit();
+  if (!score) return;
+  showResults(score);
+}
+
+function showResults(score) {
+  document.getElementById('examPanel').classList.add('hidden');
+  const resultsDiv = document.getElementById('resultsPanel');
+  resultsDiv.classList.remove('hidden');
+
+  const lang = App.currentLang;
+  const grade = Progress.getGrade(score.percentage);
+  const points = Progress.getPoints(score.percentage);
+  const exam = ExamEngine.currentExam;
+
+  // Confetti for good scores
+  if (score.percentage >= 70) App.launchConfetti();
+
+  resultsDiv.innerHTML = `
+    <div class="card text-center page-enter" style="max-width:600px;margin:0 auto;">
+      <div style="font-size:60px;margin-bottom:var(--space-md);">
+        ${score.percentage >= 90 ? '🏆' : score.percentage >= 70 ? '🎉' : score.percentage >= 50 ? '💪' : '📚'}
+      </div>
+
+      <div class="score-display text-gradient-gold">${score.percentage}%</div>
+      <div class="score-grade ${grade.css}" style="margin:var(--space-md) auto;display:inline-block;">
+        ${lang === 'de' ? grade.textDE : grade.text}
+      </div>
+
+      <div class="grid-3 gap-md" style="margin:var(--space-xl) 0;">
+        <div class="card card-sm text-center">
+          <div style="font-size:24px;font-weight:800;color:var(--color-success);">${score.correct}</div>
+          <div style="font-size:11px;color:var(--text-muted);" data-i18n="exam.correct">Correctas</div>
+        </div>
+        <div class="card card-sm text-center">
+          <div style="font-size:24px;font-weight:800;color:var(--color-error);">${score.wrong}</div>
+          <div style="font-size:11px;color:var(--text-muted);" data-i18n="exam.wrong">Incorrectas</div>
+        </div>
+        <div class="card card-sm text-center">
+          <div style="font-size:24px;font-weight:800;color:var(--color-gold);">${points}/15</div>
+          <div style="font-size:11px;color:var(--text-muted);">Punkte DIA</div>
+        </div>
+      </div>
+
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:var(--space-xl);">
+        ⏱️ Tiempo: ${ExamEngine.formatTime(score.timeUsed)} |
+        📝 ${score.total} preguntas
+      </div>
+
+      <div class="flex gap-md justify-center flex-wrap">
+        <button onclick="window.location.reload()" class="btn btn-secondary">
+          🔄 Nuevo examen
+        </button>
+        <button onclick="downloadPDF()" class="btn btn-primary">
+          📄 <span data-i18n="exam.print-pdf">PDF / Imprimir</span>
+        </button>
+        <a href="progress.html" class="btn btn-outline-gold">
+          📊 Ver progreso
+        </a>
+      </div>
+
+      ${score.percentage < 70 ? `
+        <div class="warning-box" style="margin-top:var(--space-xl);text-align:left;">
+          <strong>💡 Consejo:</strong> Repasa los temas en los que fallaste antes del siguiente intento.
+          <a href="subjects.html" style="color:var(--color-gold);">Ver temario →</a>
+        </div>` : ''}
+    </div>`;
+
+  App.applyTranslations();
+}
+
+function downloadPDF() {
+  const exam = ExamEngine.currentExam;
+  const score = ExamEngine.calculateScore();
+  PDFGenerator.generate(exam, ExamEngine.answers, score);
+}
+
+// ── Init ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  renderSubjectSelector();
+  updateSummary();
+
+  // Check URL params for pre-selected subject
+  const params = new URLSearchParams(window.location.search);
+  const s = params.get('s');
+  if (s && subjects.find(sub => sub.id === s)) {
+    selectedSubjects = [s];
+    renderSubjectSelector();
+    updateSummary();
+  }
+});
+</script>
+</body>
+</html>
