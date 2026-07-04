@@ -361,6 +361,7 @@ body {
   flex: 1;
   margin-left: var(--sidebar-width);
   min-height: 100vh;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   transition: margin-left var(--ease-normal);
