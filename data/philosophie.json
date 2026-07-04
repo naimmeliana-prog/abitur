@@ -25,6 +25,10 @@
     {
       "semester": "11.1",
       "topic": { "es": "Epistemología — ¿Qué podemos conocer?", "de": "Erkenntnistheorie — Was können wir wissen?" },
+      "summary": {
+        "es": "Estudia el origen y los límites del conocimiento humano. René Descartes (Racionalismo) busca una base indudable a través de la duda metódica y concluye en el 'Cogito ergo sum' (Pienso, luego existo) como primera certeza. David Hume (Empirismo) afirma que todo conocimiento proviene de la experiencia y critica el concepto de causalidad. Immanuel Kant realiza una síntesis (Idealismo Trascendental), argumentando que conocemos las cosas no como son en sí mismas (noúmeno), sino como se nos aparecen (fenómeno), a través de nuestras formas a priori de la sensibilidad (espacio/tiempo) y categorías del entendimiento.",
+        "de": "Untersucht den Ursprung und die Grenzen menschlicher Erkenntnis. René Descartes (Rationalismus) sucht ein unbezweifelbares Fundament durch methodischen Zweifel und findet es im 'Cogito ergo sum'. David Hume (Empirismus) argumentiert, dass alle Erkenntnis auf Erfahrung beruht, und kritisiert das Kausalitätsprinzip. Immanuel Kant schafft eine Synthese (Transzendentaler Idealismus): Wir erkennen die Dinge nicht, wie sie an sich sind (Noumenon), sondern wie sie uns erscheinen (Phänomen), geordnet durch Raum, Zeit und die Kategorien des Verstandes."
+      },
       "philosophers": ["Platón (Alegoría de la caverna)", "Descartes (Duda metódica, Cogito ergo sum)", "Kant (Crítica de la razón pura — síntesis)", "Hume (Escepticismo, asociación de ideas)"],
       "key_questions": [
         { "es": "¿Cuál es la diferencia entre conocimiento y opinión en Platón?", "de": "Was ist der Unterschied zwischen Wissen und Meinung bei Platon?" },
@@ -35,6 +39,10 @@
     {
       "semester": "11.2",
       "topic": { "es": "Ética y Moral — ¿Cómo debemos actuar?", "de": "Ethik und Moral — Wie sollen wir handeln?" },
+      "summary": {
+        "es": "Busca fundamentar las normas de la conducta humana. Immanuel Kant (Ética Deontológica/del Deber) postula que una acción es moralmente buena únicamente si se realiza por deber. Su regla de oro es el Imperativo Categórico: actúa solo según máximas que puedas querer que se conviertan en ley universal. John Stuart Mill (Utilitarismo) defiende una ética consecuencialista basada en el Principio de Utilidad: la mejor acción es aquella que maximiza la felicidad o el placer para el mayor número de personas. Aristóteles (Ética de la Virtud) define el fin supremo como la Eudaimonía (felicidad/autorrealización), alcanzada mediante el término medio de las virtudes.",
+        "de": "Sucht nach Begründungen für menschliches Handeln. Immanuel Kant (Deontologische Ethik) betont die Pflicht: Eine Handlung ist nur dann moralisch gut, wenn sie aus Pflicht geschieht. Sein Kernprinzip ist der Kategorische Imperativ: Handle nur nach derjenigen Maxime, von der du wollen kannst, dass sie ein allgemeines Gesetz werde. John Stuart Mill (Utilitarismus) vertritt eine konsequentialistische Ethik: Gut ist, was das größte Glück für die größte Zahl von Menschen bringt. Aristoteles (Tugendethik) sieht die Eudaimonie (Glückseligkeit) als höchstes Ziel, zu erreichen durch die goldene Mitte der Tugenden."
+      },
       "philosophers": ["Kant (Imperativo categórico)", "Mill (Utilitarismo)", "Aristóteles (Eudaimonia, Ética a Nicómaco)", "Rawls (Teoría de la Justicia)"],
       "key_questions": [
         { "es": "¿En qué consiste el imperativo categórico de Kant? Formula la 1ª formulación.", "de": "Worin besteht Kants kategorischer Imperativ? Formuliere die 1. Formel." },
@@ -45,6 +53,10 @@
     {
       "semester": "12.1",
       "topic": { "es": "Filosofía Política — ¿Cómo debe organizarse la sociedad?", "de": "Politische Philosophie — Wie soll die Gesellschaft organisiert sein?" },
+      "summary": {
+        "es": "Analiza la legitimidad del poder del Estado. Thomas Hobbes afirma que en el estado de naturaleza (guerra de todos contra todos), la vida es solitaria y corta; por ello, los hombres firman un contrato para ceder su libertad a un soberano absoluto (Leviatán) a cambio de seguridad. John Locke propone un contrato liberal para proteger los derechos naturales (vida, libertad, propiedad). Jean-Jacques Rousseau argumenta que el ser humano nace libre y la sociedad lo encadena, sugiriendo un pacto basado en la Voluntad General. John Rawls propone la justicia como equidad a través del 'velo de la ignorancia' en una posición original justa.",
+        "de": "Fragt nach der Legitimität staatlicher Herrschaft. Thomas Hobbes postuliert im Naturzustand einen Krieg aller gegen alle; der Staat (Leviathan) wird durch Gesellschaftsvertrag zur Friedenssicherung absolut legitimiert. John Locke begründet den liberalen Staat zum Schutz von Leben, Freiheit und Eigentum. Jean-Jacques Rousseau sieht den Menschen von Natur aus frei und schlägt einen Vertrag vor, der auf dem Gemeinwillen (volonté générale) basiert. John Rawls entwirft Gerechtigkeit als Fairness hinter dem 'Schleier des Nichtwissens'."
+      },
       "philosophers": ["Hobbes (Contrato social, Leviatán)", "Locke (Estado liberal)", "Rousseau (Voluntad general)", "Rawls (Velo de la ignorancia)", "Marx (Materialismo histórico, alienación)"],
       "key_questions": [
         { "es": "¿Por qué Hobbes considera necesario el Estado absoluto?", "de": "Warum hält Hobbes den absoluten Staat für notwendig?" },
@@ -55,6 +67,10 @@
     {
       "semester": "12.2",
       "topic": { "es": "Filosofía de la mente y contemporánea — ¿Qué somos?", "de": "Philosophie des Geistes und zeitgenössische Philosophie — Was sind wir?" },
+      "summary": {
+        "es": "Aborda el ser humano en el mundo moderno. Friedrich Nietzsche critica la metafísica platónico-cristiana, proclama la 'muerte de Dios' (pérdida de valores absolutos), introduce la voluntad de poder y propone el Übermensch (el creador de nuevos valores terrenales). Jean-Paul Sartre (Existencialismo) proclama que 'la existencia precede a la esencia': nacemos vacíos de propósito y somos radicalmente libres y responsables de construirnos a nosotros mismos mediante nuestras elecciones, sin justificaciones absolutas.",
+        "de": "Behandelt den Menschen in der Moderne. Friedrich Nietzsche kritisiert die platonisch-christliche Metaphysik, verkündet den 'Tod Gottes' (Verlust absoluter Werte) und fordert den Übermensch als Schöpfer eigener, irdischer Werte. Jean-Paul Sartre (Existenzialismus) erklärt: 'Die Existenz geht der Essenz voraus' — der Mensch existiert zuerst, begegnet sich in der Welt und definiert sich erst danach durch seine freien Handlungen und Wahlen."
+      },
       "philosophers": ["Nietzsche (Voluntad de poder, Übermensch, nihilismo)", "Sartre (Existencialismo)", "Wittgenstein (Juegos de lenguaje)", "Turing/Dennett (Filosofía de la mente, IA)"],
       "key_questions": [
         { "es": "¿Qué significa la frase 'Dios ha muerto' (Nietzsche)?", "de": "Was bedeutet Nietzches Aussage 'Gott ist tot'?" },

@@ -80,25 +80,43 @@
               </div>
             </div>
 
-            <!-- Step 2: Difficulty -->
+            <!-- Step 1.5: Generation Type -->
             <div class="card">
-              <h3 style="margin-bottom:var(--space-md);">2️⃣ <span data-i18n="exam.difficulty">Dificultad</span></h3>
-              <div class="difficulty-selector">
-                <button class="difficulty-btn easy selected" data-diff="easy" data-i18n="exam.easy">Fácil</button>
-                <button class="difficulty-btn medium" data-diff="medium" data-i18n="exam.medium">Medio</button>
-                <button class="difficulty-btn hard" data-diff="hard" data-i18n="exam.hard">Difícil</button>
-                <button class="difficulty-btn" data-diff="all" style="flex:0.7;font-size:11px;">Todos</button>
+              <h3 style="margin-bottom:var(--space-md);">⚙️ Tipo de Generación</h3>
+              <div class="flex gap-sm" style="margin-bottom:var(--space-md);">
+                <button class="difficulty-btn selected easy" id="typeRandomBtn" onclick="setGenType('random')" style="flex:1;">🎲 Aleatorio</button>
+                <button class="difficulty-btn" id="typeOfficialBtn" onclick="setGenType('official')" style="flex:1;">📜 Examen Oficial</button>
+              </div>
+
+              <!-- Official Exam Select Wrapper (hidden by default) -->
+              <div id="officialExamWrapper" class="hidden">
+                <label class="form-label" style="margin-bottom:var(--space-sm);display:block;font-size:13px;color:var(--text-muted);">Selecciona un examen real de años anteriores:</label>
+                <select id="officialExamSelect" class="form-select" onchange="updateSummary()" style="width:100%;"></select>
               </div>
             </div>
 
-            <!-- Step 3: Questions -->
-            <div class="card">
-              <h3 style="margin-bottom:var(--space-md);">3️⃣ Número de preguntas</h3>
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-sm);">
-                <button class="difficulty-btn selected" data-count="5">5</button>
-                <button class="difficulty-btn" data-count="10">10</button>
-                <button class="difficulty-btn" data-count="15">15</button>
-                <button class="difficulty-btn" data-count="20">20</button>
+            <!-- Random Settings Wrapper (hidden when official exam is chosen) -->
+            <div id="randomSettingsWrapper" class="flex-col gap-lg">
+              <!-- Step 2: Difficulty -->
+              <div class="card">
+                <h3 style="margin-bottom:var(--space-md);">2️⃣ <span data-i18n="exam.difficulty">Dificultad</span></h3>
+                <div class="difficulty-selector">
+                  <button class="difficulty-btn easy selected" data-diff="easy" data-i18n="exam.easy">Fácil</button>
+                  <button class="difficulty-btn medium" data-diff="medium" data-i18n="exam.medium">Medio</button>
+                  <button class="difficulty-btn hard" data-diff="hard" data-i18n="exam.hard">Difícil</button>
+                  <button class="difficulty-btn" data-diff="all" style="flex:0.7;font-size:11px;">Todos</button>
+                </div>
+              </div>
+
+              <!-- Step 3: Questions -->
+              <div class="card">
+                <h3 style="margin-bottom:var(--space-md);">3️⃣ Número de preguntas</h3>
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-sm);">
+                  <button class="difficulty-btn selected" data-count="5">5</button>
+                  <button class="difficulty-btn" data-count="10">10</button>
+                  <button class="difficulty-btn" data-count="15">15</button>
+                  <button class="difficulty-btn" data-count="20">20</button>
+                </div>
               </div>
             </div>
 
@@ -236,6 +254,7 @@ let selectedSubjects = [];
 let selectedDifficulty = 'easy';
 let selectedCount = 5;
 let selectedMode = 'practice';
+let selectedGenType = 'random'; // random or official
 
 const subjects = [
   { id:'deutsch',     name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
@@ -258,15 +277,69 @@ function renderSubjectSelector() {
     </div>`).join('');
 }
 
-function toggleSubject(id, el) {
-  if (selectedSubjects.includes(id)) {
-    selectedSubjects = selectedSubjects.filter(s => s !== id);
-    el.classList.remove('selected', 'easy');
-  } else {
-    selectedSubjects.push(id);
+async function toggleSubject(id, el) {
+  if (selectedGenType === 'official') {
+    // For official exams, only one subject at a time is supported to keep it simple and clean
+    selectedSubjects = [id];
+    document.querySelectorAll('#subjectSelector .difficulty-btn').forEach(b => b.classList.remove('selected', 'easy'));
     el.classList.add('selected', 'easy');
+  } else {
+    if (selectedSubjects.includes(id)) {
+      selectedSubjects = selectedSubjects.filter(s => s !== id);
+      el.classList.remove('selected', 'easy');
+    } else {
+      selectedSubjects.push(id);
+      el.classList.add('selected', 'easy');
+    }
   }
+  
+  await loadOfficialExamsList();
   updateSummary();
+}
+
+function setGenType(type) {
+  selectedGenType = type;
+  document.getElementById('typeRandomBtn').classList.toggle('selected', type === 'random');
+  document.getElementById('typeRandomBtn').classList.toggle('easy', type === 'random');
+  document.getElementById('typeOfficialBtn').classList.toggle('selected', type === 'official');
+  document.getElementById('typeOfficialBtn').classList.toggle('easy', type === 'official');
+
+  document.getElementById('officialExamWrapper').classList.toggle('hidden', type !== 'official');
+  document.getElementById('randomSettingsWrapper').classList.toggle('hidden', type === 'official');
+
+  if (type === 'official' && selectedSubjects.length > 1) {
+    // Keep only the first selected subject
+    selectedSubjects = [selectedSubjects[0]];
+    renderSubjectSelector();
+  }
+
+  loadOfficialExamsList();
+  updateSummary();
+}
+
+async function loadOfficialExamsList() {
+  const select = document.getElementById('officialExamSelect');
+  if (selectedSubjects.length === 0) {
+    select.innerHTML = '<option value="">Selecciona una asignatura primero</option>';
+    return;
+  }
+
+  select.innerHTML = '<option value="">Cargando exámenes...</option>';
+  
+  // Ensure the data of the first selected subject is loaded
+  const subjectId = selectedSubjects[0];
+  const data = await ExamEngine.loadSubjectData(subjectId);
+
+  const exams = data?.official_exams || [];
+  if (exams.length === 0) {
+    select.innerHTML = '<option value="">No hay exámenes oficiales cargados en este momento</option>';
+    return;
+  }
+
+  const lang = App.currentLang;
+  select.innerHTML = exams.map(e => `
+    <option value="${e.id}">${e.name} (${e.year})</option>
+  `).join('');
 }
 
 function selectMode(mode) {
@@ -303,9 +376,19 @@ function updateSummary() {
   const lang = App.currentLang;
   const subjNames = selectedSubjects.map(id => subjects.find(s => s.id === id))
     .filter(Boolean).map(s => lang === 'de' ? s.nameDE : s.name);
+  
   document.getElementById('sumSubjects').textContent = subjNames.length ? subjNames.join(', ') : 'Ninguna';
-  document.getElementById('sumDifficulty').textContent = selectedDifficulty;
-  document.getElementById('sumQuestions').textContent = `${selectedCount} preguntas`;
+  
+  if (selectedGenType === 'official') {
+    const select = document.getElementById('officialExamSelect');
+    const examName = select.options[select.selectedIndex]?.text || 'Ninguno seleccionado';
+    document.getElementById('sumDifficulty').textContent = 'Examen Oficial';
+    document.getElementById('sumQuestions').textContent = examName;
+  } else {
+    document.getElementById('sumDifficulty').textContent = selectedDifficulty;
+    document.getElementById('sumQuestions').textContent = `${selectedCount} preguntas`;
+  }
+  
   document.getElementById('sumMode').textContent = selectedMode === 'simulacro' ? '⏱️ Simulacro' : '📖 Práctica';
 }
 
@@ -323,12 +406,26 @@ async function startExam() {
   // Load data
   await ExamEngine.preloadAll();
 
-  const exam = ExamEngine.buildExam({
+  let buildParams = {
     subjects: selectedSubjects,
-    difficulty: selectedDifficulty,
     mode: selectedMode,
-    questionCount: selectedCount,
-  });
+  };
+
+  if (selectedGenType === 'official') {
+    const examSelect = document.getElementById('officialExamSelect');
+    if (!examSelect.value) {
+      App.showToast('Selecciona un examen oficial válido', 'warning');
+      btn.disabled = false;
+      btn.innerHTML = '⚡ Comenzar';
+      return;
+    }
+    buildParams.officialExamId = examSelect.value;
+  } else {
+    buildParams.difficulty = selectedDifficulty;
+    buildParams.questionCount = selectedCount;
+  }
+
+  const exam = ExamEngine.buildExam(buildParams);
 
   if (!exam.questions.length) {
     App.showToast('No hay preguntas disponibles para esa combinación', 'error');

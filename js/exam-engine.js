@@ -14,7 +14,34 @@ const ExamEngine = {
   timerSeconds: 0,
 
   // ── Build exam from data ──────────────────────────────────────
-  buildExam({ subjects, difficulty, mode, years, questionCount }) {
+  buildExam({ subjects, difficulty, mode, years, questionCount, officialExamId }) {
+    if (officialExamId) {
+      const subjectId = subjects[0];
+      const data = ExamEngine.getSubjectData(subjectId);
+      const officialExam = data?.official_exams?.find(e => e.id === officialExamId);
+      if (officialExam) {
+        const questions = officialExam.questions.map(q => ({ ...q, subjectId }));
+        const exam = {
+          id: Date.now(),
+          name: officialExam.name,
+          mode,
+          subjects,
+          difficulty: 'all',
+          questions: questions,
+          totalQuestions: questions.length,
+          timeLimit: mode === 'simulacro' ? this.calcTimeLimit(subjects) : null,
+          createdAt: new Date().toISOString(),
+          year: officialExam.year || 'Oficial',
+          isOfficial: true,
+        };
+        this.currentExam = exam;
+        this.currentQuestion = 0;
+        this.answers = {};
+        this.startTime = Date.now();
+        return exam;
+      }
+    }
+
     const allQuestions = [];
 
     subjects.forEach(subjectId => {
@@ -43,6 +70,7 @@ const ExamEngine = {
       totalQuestions: selected.length,
       timeLimit: mode === 'simulacro' ? this.calcTimeLimit(subjects) : null,
       createdAt: new Date().toISOString(),
+      isOfficial: false,
     };
 
     this.currentExam = exam;

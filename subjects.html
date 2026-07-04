@@ -287,19 +287,47 @@ function renderTasksTab(data, lang) {
 function renderTopicsTab(data, lang) {
   const topics = data.topics || data.topics_by_semester || [];
   return `<div class="flex-col gap-lg">
-    ${topics.map(t => `
+    ${topics.map((t, ti) => `
       <div class="card">
         <h4 style="font-size:16px;margin-bottom:var(--space-md);">
           ${t.semester ? `<span class="badge badge-gold" style="margin-right:8px;">Semestre ${t.semester}</span>` : ''}
           ${t.name?.[lang] || t.name?.es || t.topic?.[lang] || t.topic?.es || t.name || ''}
         </h4>
+        
+        ${t.summary ? `
+          <div style="margin-bottom:var(--space-md);">
+            <button class="btn btn-secondary btn-sm" onclick="const el = this.nextElementSibling; el.style.display = el.style.display === 'none' ? 'block' : 'none';" style="font-size:12px;padding:6px 12px;">
+              📖 Ver resumen del semestre
+            </button>
+            <div style="display:none;margin-top:var(--space-sm);padding:var(--space-md);background:rgba(245,200,66,0.03);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);line-height:1.6;">
+              ${t.summary?.[lang] || t.summary?.es}
+            </div>
+          </div>` : ''}
+
         ${t.philosophers ? `<div style="margin-bottom:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">FILÓSOFOS</div><div class="flex gap-xs flex-wrap">${t.philosophers.map(p=>`<span class="badge">${p}</span>`).join('')}</div></div>` : ''}
+        
         ${t.subtopics ? `<div class="grid-2 gap-md">
-          ${t.subtopics.map(s => `<div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
-            <div style="font-weight:700;font-size:13px;margin-bottom:6px;">${s.name}</div>
-            ${s.items?.map(i => `<div style="font-size:12px;color:var(--text-muted);">• ${i}</div>`).join('')}
-          </div>`).join('')}
+          ${t.subtopics.map((s, si) => {
+            const summaryText = s.summary?.[lang] || s.summary?.es || '';
+            const uniqueId = `subtopic_${ti}_${si}`;
+            return `<div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="font-weight:700;font-size:13px;margin-bottom:6px;">${s.name}</div>
+                ${s.items?.map(i => `<div style="font-size:12px;color:var(--text-muted);">• ${i}</div>`).join('')}
+              </div>
+              ${summaryText ? `
+                <div style="margin-top:var(--space-md);">
+                  <button class="btn btn-secondary btn-sm btn-full" onclick="document.getElementById('${uniqueId}').style.display = document.getElementById('${uniqueId}').style.display === 'none' ? 'block' : 'none'" style="font-size:11px;padding:6px;">
+                    📖 Ver resumen didáctico
+                  </button>
+                  <div id="${uniqueId}" style="display:none;margin-top:var(--space-sm);padding:var(--space-sm);background:rgba(245,200,66,0.03);border-left:2px solid var(--color-gold);border-radius:var(--radius-sm);font-size:12px;color:var(--text-secondary);line-height:1.5;">
+                    ${summaryText}
+                  </div>
+                </div>` : ''}
+            </div>`;
+          }).join('')}
         </div>` : ''}
+        
         ${t.key_questions ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">PREGUNTAS CLAVE</div>${t.key_questions.map(q=>`<div style="padding:8px 12px;background:rgba(245,200,66,0.05);border-left:2px solid var(--color-gold);margin-bottom:4px;font-size:13px;">${q[lang] || q.es}</div>`).join('')}</div>` : ''}
       </div>`).join('')}
   </div>`;

@@ -28,30 +28,90 @@
       "id": "analysis",
       "name": { "es": "Análisis (Cálculo)", "de": "Analysis" },
       "subtopics": [
-        { "name": "Funciones y sus propiedades", "items": ["Dominio", "Monotonía", "Extremos", "Wendepunkte", "Symmetrie", "Verhalten für x→±∞"] },
-        { "name": "Diferenciación", "items": ["Regla de la cadena (Kettenregel)", "Regla del producto (Produktregel)", "Regla del cociente", "Derivada de funciones trigonométricas, exponenciales, logarítmicas"] },
-        { "name": "Integración", "items": ["Integral definida e indefinida", "Método de sustitución", "Área entre curvas", "Volumen de revolución", "Teorema fundamental del cálculo"] },
-        { "name": "Modelización", "items": ["Funciones de coste/beneficio", "Crecimiento/decrecimiento exponencial", "Ecuaciones diferenciales básicas"] }
+        {
+          "name": "Funciones y sus propiedades",
+          "items": ["Dominio", "Monotonía", "Extremos", "Wendepunkte", "Symmetrie", "Verhalten für x→±∞"],
+          "summary": {
+            "es": "Estudia el comportamiento de f(x). 1) Symmetrie: f(-x)=f(x) es simetría par (Achsensymmetrie). f(-x)=-f(x) es simetría impar (Punktsymmetrie). 2) Extremos: resolver f'(x)=0. Si f''(x)<0 es máximo, f''(x)>0 es mínimo. 3) Wendepunkt (inflexión): resolver f''(x)=0 y verificar f'''(x)≠0. 4) Límites: analizar el comportamiento cuando x tiende a infinito (comportamiento asintótico).",
+            "de": "Untersuchung von f(x). 1) Symmetrie: f(-x)=f(x) -> achsensymmetrisch zur y-Achse. f(-x)=-f(x) -> punktsymmetrisch zum Ursprung. 2) Extrema: f'(x)=0 lösen. f''(x)<0 -> Maximum, f''(x)>0 -> Minimum. 3) Wendepunkte: f''(x)=0 lösen, f'''(x)≠0 prüfen. 4) Grenzwertverhalten: Verhalten von f(x) für x gegen unendlich bestimmen."
+          }
+        },
+        {
+          "name": "Diferenciación",
+          "items": ["Regla de la cadena (Kettenregel)", "Regla del producto (Produktregel)", "Regla del cociente", "Derivada de funciones trigonométricas, exponenciales, logarítmicas"],
+          "summary": {
+            "es": "Reglas clave: 1) Producto: (u·v)' = u'·v + u·v'. 2) Cociente: (u/v)' = (u'·v - u·v') / v². 3) Cadena (Kettenregel): [f(g(x))]' = f'(g(x)) · g'(x) (derivada externa por interna). Muy frecuente con funciones exponenciales f(x)=e^(kx) → f'(x)=k·e^(kx).",
+            "de": "Wichtige Ableitungsregeln: 1) Produktregel: (u·v)' = u'·v + u·v'. 2) Quotientenregel: (u/v)' = (u'·v - u·v') / v². 3) Kettenregel: [f(g(x))]' = f'(g(x)) · g'(x) (äußere Ableitung mal innere Ableitung). Besonders wichtig bei Exponentialfunktionen."
+          }
+        },
+        {
+          "name": "Integración",
+          "items": ["Integral definida e indefinida", "Método de sustitución", "Área entre curvas", "Volumen de revolución", "Teorema fundamental del cálculo"],
+          "summary": {
+            "es": "1) Teorema fundamental: ∫[a,b] f(x)dx = F(b) - F(a). 2) Área entre dos curvas f(x) y g(x): ∫[a,b] |f(x) - g(x)| dx. Recuerda hallar primero los puntos de corte (resolviendo f(x)=g(x)) para dividir los intervalos de integración. 3) Volumen de revolución alrededor del eje x: V = π · ∫[a,b] [f(x)]² dx.",
+            "de": "1) Hauptsatz der Differential- und Integralrechnung: ∫[a,b] f(x)dx = F(b) - F(a). 2) Fläche zwischen zwei Kurven f(x) und g(x): ∫[a,b] |f(x) - g(x)| dx. Schnittpunkte f(x)=g(x) als Integrationsgrenzen bestimmen. 3) Rotationsvolumen um die x-Achse: V = π · ∫[a,b] [f(x)]² dx."
+          }
+        },
+        {
+          "name": "Modelización",
+          "items": ["Funciones de coste/beneficio", "Crecimiento/decrecimiento exponencial", "Ecuaciones diferenciales básicas"],
+          "summary": {
+            "es": "Uso práctico de funciones. El crecimiento exponencial se modela con f(t) = f(0) · e^(kt). El crecimiento limitado se modela con f(t) = S - (S - f(0))e^(-kt), donde S es el límite de saturación (Sättigungsgrenze).",
+            "de": "Anwendung von Funktionen. Exponentielles Wachstum: f(t) = f(0) · e^(kt). Begrenztes Wachstum: f(t) = S - (S - f(0))e^(-kt), wobei S die Sättigungsgrenze darstellt."
+          }
+        }
       ]
     },
     {
       "id": "geometrie",
       "name": { "es": "Geometría Analítica / Álgebra Lineal", "de": "Analytische Geometrie / Lineare Algebra" },
       "subtopics": [
-        { "name": "Vectores en 3D", "items": ["Suma, resta, producto escalar", "Producto vectorial (Kreuzprodukt)", "Magnitud y normalización"] },
-        { "name": "Rectas y planos", "items": ["Ecuación paramétrica de la recta", "Ecuaciones del plano (Normalenform, Parameterform, Koordinatenform)", "Posición relativa recta-plano, plano-plano"] },
-        { "name": "Distancias y ángulos", "items": ["Distancia punto-recta", "Distancia punto-plano", "Ángulo entre vectores", "Ángulo entre planos"] },
-        { "name": "Matrices", "items": ["Operaciones con matrices", "Determinante", "Matriz inversa", "Sistemas lineales (Gauß-Verfahren)"] }
+        {
+          "name": "Vectores en 3D",
+          "items": ["Suma, resta, producto escalar", "Producto vectorial (Kreuzprodukt)", "Magnitud y normalización"],
+          "summary": {
+            "es": "1) Producto escalar: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃. Si a⃗ · b⃗ = 0, los vectores son perpendiculares (orthogonal). 2) Producto vectorial (Kreuzprodukt): a⃗ × b⃗ = vector perpendicular a ambos, de longitud igual al área del paralelogramo formado por ellos. Su fórmula es (a₂b₃-a₃b₂, a₃b₁-a₁b₃, a₁b₂-a₂b₁).",
+            "de": "1) Skalarprodukt: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃. Wenn a⃗ · b⃗ = 0, sind die Vektoren orthogonal. 2) Kreuzprodukt (Vektorprodukt): a⃗ × b⃗ liefert einen Vektor, der orthogonal zu beiden Ausgangsvektoren steht. Seine Länge entspricht dem Flächeninhalt des aufgespannten Parallelogramms."
+          }
+        },
+        {
+          "name": "Rectas y planos",
+          "items": ["Ecuación paramétrica de la recta", "Ecuaciones del plano (Normalenform, Parameterform, Koordinatenform)", "Posición relativa recta-plano, plano-plano"],
+          "summary": {
+            "es": "1) Ecuación del plano en forma normal: (x⃗ - p⃗) · n⃗ = 0. En forma cartesiana: ax + by + cz = d, donde n⃗ = (a, b, c) es el vector normal. 2) Posición relativa: para intersectar recta y plano, introduce las coordenadas de la recta (x, y, z) en la ecuación cartesiana del plano y despeja el parámetro r.",
+            "de": "1) Ebenengleichung in Normalenform: (x⃗ - p⃗) · n⃗ = 0. Koordinatenform: ax + by + cz = d, wobei n⃗ = (a, b, c) der Normalenvektor ist. 2) Lagebeziehung: Zur Bestimmung des Schnittpunkts von Gerade und Ebene wird die Geradengleichung komponentenweise in die Koordinatengleichung der Ebene eingesetzt."
+          }
+        },
+        {
+          "name": "Distancias y ángulos",
+          "items": ["Distancia punto-recta", "Distancia punto-plano", "Ángulo entre vectores", "Ángulo entre planos"],
+          "summary": {
+            "es": "1) Ángulo φ entre vectores: cos(φ) = |a⃗ · b⃗| / (|a⃗|·|b⃗|). 2) Distancia punto P a plano E: usa la fórmula de la forma normal de Hesse (HNF): d = |(p⃗ - q⃗) · n₀⃗|, donde n₀⃗ es el vector normal unitario (magnitud 1).",
+            "de": "1) Winkel φ zwischen Vektoren: cos(φ) = |a⃗ · b⃗| / (|a⃗|·|b⃗|). 2) Abstand Punkt P zu Ebene E: Berechnung mit der Hesseschen Normalenform (HNF): d = |(p⃗ - q⃗) · n₀⃗|, wobei n₀⃗ der normierte Normalenvektor ist."
+          }
+        }
       ]
     },
     {
       "id": "stochastik",
       "name": { "es": "Estocástica (Probabilidad y Estadística)", "de": "Stochastik" },
       "subtopics": [
-        { "name": "Probabilidad", "items": ["Espacio muestral, sucesos", "Reglas de probabilidad", "Probabilidad condicionada (bedingte Wahrscheinlichkeit)", "Teorema de Bayes"] },
-        { "name": "Distribuciones", "items": ["Distribución binomial B(n;p)", "Distribución normal N(μ;σ)", "Estandarización z-score"] },
-        { "name": "Tests estadísticos", "items": ["Hypothesentest (test de hipótesis)", "Fehler 1. Art / 2. Art", "Signifikanzniveau", "Ablehnungsbereich"] },
-        { "name": "Estadística descriptiva", "items": ["Media, mediana, moda", "Varianza, desviación típica", "Diagramas: Boxplot, Histogramm"] }
+        {
+          "name": "Probabilidad",
+          "items": ["Espacio muestral, sucesos", "Reglas de probabilidad", "Probabilidad condicionada (bedingte Wahrscheinlichkeit)", "Teorema de Bayes"],
+          "summary": {
+            "es": "1) Probabilidad condicionada: P(A|B) = P(A ∩ B) / P(B) (probabilidad de A dado que ha ocurrido B). 2) Teorema de Bayes: P(A|B) = [P(B|A) · P(A)] / P(B). Muy útil para pruebas médicas y diagnóstico inverso.",
+            "de": "1) Bedingte Wahrscheinlichkeit: P(A|B) = P(A ∩ B) / P(B) (Wahrscheinlichkeit von A unter der Bedingung B). 2) Satz von Bayes: P(A|B) = [P(B|A) · P(A)] / P(B). Unverzichtbar für die Berechnung umgekehrter Wahrscheinlichkeiten."
+          }
+        },
+        {
+          "name": "Distribuciones",
+          "items": ["Distribución binomial B(n;p)", "Distribución normal N(μ;σ)", "Estandarización z-score"],
+          "summary": {
+            "es": "1) Bernoulli: P(X=k) = (n/k) · p^k · (1-p)^(n-k). Describe éxitos en n intentos independientes. 2) Distribución normal (Campana de Gauss): se estandariza con z = (X - μ) / σ para poder usar la tabla de distribución normal estándar Φ(z).",
+            "de": "1) Binomialverteilung (Bernoulli-Kette): P(X=k) = (n über k) · p^k · (1-p)^(n-k). 2) Normalverteilung: Stetige Verteilung, definiert durch Erwartungswert μ und Standardabweichung σ. Transformation in Standardnormalverteilung mit z = (X - μ) / σ."
+          }
+        }
       ]
     }
   ],
@@ -204,6 +264,87 @@
       "correct": 0,
       "explanation": { "es": "Aplicamos el Teorema de Bayes. P(Chica) = 0.6. P(Fútbol|Chica) = 0.7. P(Fútbol|Chico) = 0.5. Probabilidad total de fútbol: P(F) = 0.6·0.7 + 0.4·0.5 = 0.42 + 0.20 = 0.62. P(Chica|Fútbol) = (0.6·0.7) / 0.62 = 0.42 / 0.62 ≈ 0.677 = 67.7%.", "de": "Satz von Bayes: P(M|F) = P(F|M)·P(M) / P(F) = 0.7·0.6 / (0.6·0.7 + 0.4·0.5) = 0.42 / 0.62 ≈ 67.7%." },
       "tip": { "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.", "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen." }
+    }
+  ],
+  "official_exams": [
+    {
+      "id": "mathe_nrw_2023",
+      "name": "Zentralabitur NRW 2023 — Mathematik GK (Completo)",
+      "year": "2023",
+      "questions": [
+        {
+          "id": "ma_nrw_23_01",
+          "topic": "Analysis — Ableitung",
+          "difficulty": "medium",
+          "question": {
+            "es": "Dada la función f(x) = x · e^(-x). ¿En qué punto la pendiente de la tangente es horizontal?",
+            "de": "Gegeben ist die Funktion f(x) = x · e^(-x). An welcher Stelle hat die Tangente eine waagerechte Steigung?"
+          },
+          "options": [
+            { "es": "x = 0", "de": "x = 0" },
+            { "es": "x = 1", "de": "x = 1" },
+            { "es": "x = -1", "de": "x = -1" },
+            { "es": "No tiene pendiente horizontal", "de": "Es gibt keine waagerechte Steigung" }
+          ],
+          "correct": 1,
+          "explanation": {
+            "es": "Para pendiente horizontal buscamos f'(x) = 0. Aplicando la regla del producto: f'(x) = 1·e^(-x) + x·(-e^(-x)) = (1-x)e^(-x). Como e^(-x) > 0 para todo x, la única solución para (1-x)e^(-x) = 0 es x = 1.",
+            "de": "Waagerechte Steigung bedeutet f'(x) = 0. Produktregel: f'(x) = e^(-x) - x·e^(-x) = (1-x)e^(-x). Da e^(-x) nie null ist, muss 1-x = 0 sein, also x = 1."
+          },
+          "tip": {
+            "es": "La función exponencial e^x o e^(-x) nunca se anula. Por tanto, al igualar la derivada a 0, solo nos centramos en el factor polinómico.",
+            "de": "Die e-Funktion e^(-x) wird niemals null. Setzt man f'(x) = 0, betrachtet man nur den Klammerausdruck."
+          }
+        },
+        {
+          "id": "ma_nrw_23_02",
+          "topic": "Geometrie — Lagebeziehung",
+          "difficulty": "medium",
+          "question": {
+            "es": "¿Cuál es la posición relativa de la recta g: x⃗ = (1,0,2) + r·(1,-2,3) y el plano E: 2x - y + 3z = 6?",
+            "de": "Wie ist die Lagebeziehung der Geraden g: x⃗ = (1,0,2) + r·(1,-2,3) und der Ebene E: 2x - y + 3z = 6?"
+          },
+          "options": [
+            { "es": "La recta es paralela al plano", "de": "Die Gerade ist parallel zur Ebene" },
+            { "es": "La recta corta al plano en un punto", "de": "Die Gerade schneidet die Ebene in einem Punkt" },
+            { "es": "La recta está contenida en el plano", "de": "Die Gerade liegt in der Ebene" },
+            { "es": "Son perpendiculares", "de": "Sie sind orthogonal" }
+          ],
+          "correct": 1,
+          "explanation": {
+            "es": "Sustituimos las coordenadas de la recta (1+r, -2r, 2+3r) en la ecuación del plano: 2(1+r) - (-2r) + 3(2+3r) = 6 → 2 + 2r + 2r + 6 + 9r = 6 → 13r + 8 = 6 → 13r = -2 → r = -2/13. Al dar un único valor de r, la recta corta al plano en un único punto.",
+            "de": "Setze die Geradengleichung in die Ebene ein: 2(1+r) - (-2r) + 3(2+3r) = 6. Dies führt zu 13r + 8 = 6, also einer eindeutigen Lösung r = -2/13. Die Gerade schneidet die Ebene in einem Punkt."
+          },
+          "tip": {
+            "es": "Si al sustituir la recta en el plano obtienes una contradicción (ej. 8 = 6), son paralelas. Si obtienes una identidad (ej. 6 = 6), la recta está contenida.",
+            "de": "Eindeutige Lösung für r -> Schnittpunkt. Widerspruch (z.B. 8=6) -> parallel. Identität (z.B. 6=6) -> Gerade liegt in der Ebene."
+          }
+        },
+        {
+          "id": "ma_nrw_23_03",
+          "topic": "Stochastik — Erwartungswert",
+          "difficulty": "easy",
+          "question": {
+            "es": "Se lanza un dado de 6 caras. Si sale un número par, se ganan 2€. Si sale impar, se pierde 1€. ¿Cuál es la esperanza matemática (Erwartungswert) del juego?",
+            "de": "Ein Würfel wird geworfen. Bei geraden Zahlen gewinnt man 2€, bei ungeraden verliert man 1€. Was ist der Erwartungswert E(X)?"
+          },
+          "options": [
+            { "es": "E(X) = 0.50 €", "de": "E(X) = 0.50 €" },
+            { "es": "E(X) = 1.00 €", "de": "E(X) = 1.00 €" },
+            { "es": "E(X) = 0.00 €", "de": "E(X) = 0.00 €" },
+            { "es": "E(X) = -0.50 €", "de": "E(X) = -0.50 €" }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Los resultados posibles son ganar 2€ (probabilidad 0.5) y ganar -1€ (probabilidad 0.5). El valor esperado E(X) = 2 · 0.5 + (-1) · 0.5 = 1 - 0.5 = 0.50€.",
+            "de": "Mögliche Ausgänge: +2€ (p = 0.5) und -1€ (p = 0.5). E(X) = 2 · 0.5 + (-1) · 0.5 = 0.50€."
+          },
+          "tip": {
+            "es": "Un juego es justo (fair) si su valor esperado E(X) es 0. En este caso, el juego es favorable para el jugador.",
+            "de": "Ein Spiel heißt fair, wenn der Erwartungswert E(X) = 0 ist."
+          }
+        }
+      ]
     }
   ]
 }
