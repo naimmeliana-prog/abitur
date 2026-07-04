@@ -81,7 +81,9 @@
     { "name": "Abiturloesung.de", "url": "https://www.abiturloesung.de", "desc": { "es": "Exámenes reales de Bayern/BW resueltos en vídeo y PDF — mismo nivel DIA", "de": "Echte Prüfungen Bayern/BW mit Video- und PDF-Lösungen — DIA-Niveau" }, "type": "practice" },
     { "name": "Mathehoch13.de", "url": "https://mathehoch13.de", "desc": { "es": "Videolösungen gratuitas para todos los temas del Abitur", "de": "Kostenlose Videolösungen für alle Abiturthemen" }, "type": "practice" },
     { "name": "IQB Portal", "url": "https://www.iqb.hu-berlin.de", "desc": { "es": "Aufgabenpool oficial para Mathematik DIA", "de": "Offizieller IQB-Aufgabenpool für Mathematik" }, "type": "official" },
-    { "name": "Serlo.org", "url": "https://serlo.org", "desc": { "es": "Explicaciones y ejercicios gratuitos por tema", "de": "Kostenlose Erklärungen und Übungen nach Thema" }, "type": "practice" }
+    { "name": "Serlo.org", "url": "https://serlo.org", "desc": { "es": "Explicaciones y ejercicios gratuitos por tema y cálculo interactivo", "de": "Kostenlose Erklärungen und Übungen nach Thema" }, "type": "practice" },
+    { "name": "Abi.de", "url": "https://abi.de", "desc": { "es": "Portal oficial con guías de estudio y exámenes de preparación para el Abitur", "de": "Offizielles Portal mit Studienführern und Vorbereitungsprüfungen für das Abitur" }, "type": "reference" },
+    { "name": "Schlaukopf.de — Oberstufe", "url": "https://www.schlaukopf.de", "desc": { "es": "Ejercicios interactivos y tests rápidos estructurados por asignatura y nivel de Gymnasium", "de": "Interaktive Übungen und Schnelltests nach Fach und Gymnasialstufe gegliedert" }, "type": "practice" }
   ],
   "questions": [
     {
@@ -168,6 +170,40 @@
       "correct": 1,
       "explanation": { "es": "1000 = 500·e^(0,02t) → 2 = e^(0,02t) → ln(2) = 0,02t → t = ln(2)/0,02 ≈ 0,6931/0,02 ≈ 34,66 años. 2000 + 35 ≈ 2035.", "de": "1000=500·e^(0,02t) → 2=e^(0,02t) → ln(2)=0,02t → t=ln(2)/0,02≈34,66 Jahre. 2000+35≈2035." },
       "tip": { "es": "Estrategia: 1) Despejar la exponencial, 2) Aplicar logaritmo a ambos lados, 3) Despejar t. El 'tiempo de duplicación' de e^(kt) siempre es ln(2)/k.", "de": "Strategie: 1) Exponential freistellen, 2) Logarithmus auf beide Seiten, 3) t ausrechnen. 'Verdopplungszeit' = ln(2)/k." }
+    },
+    {
+      "id": "ma_006",
+      "year": "Tipo NRW 2023",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Geometrie — Vektoren",
+      "question": { "es": "Dados los vectores a⃗ = (1, 2, 0) y b⃗ = (0, 1, 3). ¿Cuál de los siguientes vectores es ortogonal a ambos?", "de": "Gegeben sind die Vektoren a⃗ = (1, 2, 0) und b⃗ = (0, 1, 3). Welcher Vektor ist zu beiden orthogonal?" },
+      "options": [
+        { "es": "n⃗ = (6, -3, 1)", "de": "n⃗ = (6, -3, 1)" },
+        { "es": "n⃗ = (2, -1, 3)", "de": "n⃗ = (2, -1, 3)" },
+        { "es": "n⃗ = (1, 1, 1)", "de": "n⃗ = (1, 1, 1)" },
+        { "es": "n⃗ = (-6, 3, -1)", "de": "n⃗ = (-6, 3, -1)" }
+      ],
+      "correct": 0,
+      "explanation": { "es": "Para hallar un vector ortogonal a dos vectores dados, calculamos su producto vectorial (Kreuzprodukt): a⃗ × b⃗ = (2·3 - 0·1, 0·0 - 1·3, 1·1 - 2·0) = (6, -3, 1). Por tanto, n⃗ = (6, -3, 1) es ortogonal.", "de": "Der Kreuzprodukt zweier Vektoren ergibt einen orthogonalen Vektor: a⃗ × b⃗ = (2·3 - 0·1, 0·0 - 1·3, 1·1 - 2·0) = (6, -3, 1)." },
+      "tip": { "es": "Recuerda: El producto escalar de dos vectores ortogonales debe ser 0. Puedes comprobarlo rápidamente: a⃗ · n⃗ = 1·6 + 2·(-3) + 0·1 = 0.", "de": "Das Skalarprodukt orthogonaler Vektoren ist 0. Überprüfung: a⃗ · n⃗ = 1·6 + 2·(-3) + 0·1 = 0." }
+    },
+    {
+      "id": "ma_007",
+      "year": "Tipo NRW 2022",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Stochastik — Wahrscheinlichkeit",
+      "question": { "es": "En un colegio, el 60% de los alumnos son chicas. El 70% de las chicas y el 50% de los chicos juegan al fútbol. Si se elige un alumno al azar y juega al fútbol, ¿cuál es la probabilidad de que sea chica?", "de": "60% der Schüler sind Mädchen. 70% der Mädchen und 50% der Jungen spielen Fußball. Ein zufälliger Fußballspieler wird gewählt. Wahrscheinlichkeit, dass es ein Mädchen ist?" },
+      "options": [
+        { "es": "P ≈ 67.7%", "de": "P ≈ 67.7%" },
+        { "es": "P ≈ 60.0%", "de": "P ≈ 60.0%" },
+        { "es": "P ≈ 42.0%", "de": "P ≈ 42.0%" },
+        { "es": "P ≈ 50.0%", "de": "P ≈ 50.0%" }
+      ],
+      "correct": 0,
+      "explanation": { "es": "Aplicamos el Teorema de Bayes. P(Chica) = 0.6. P(Fútbol|Chica) = 0.7. P(Fútbol|Chico) = 0.5. Probabilidad total de fútbol: P(F) = 0.6·0.7 + 0.4·0.5 = 0.42 + 0.20 = 0.62. P(Chica|Fútbol) = (0.6·0.7) / 0.62 = 0.42 / 0.62 ≈ 0.677 = 67.7%.", "de": "Satz von Bayes: P(M|F) = P(F|M)·P(M) / P(F) = 0.7·0.6 / (0.6·0.7 + 0.4·0.5) = 0.42 / 0.62 ≈ 67.7%." },
+      "tip": { "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.", "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen." }
     }
   ]
 }
