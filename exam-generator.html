@@ -198,7 +198,12 @@
         <div class="flex items-center justify-between mb-lg" style="flex-wrap:wrap;gap:var(--space-md);">
           <div>
             <div id="examTitle" style="font-size:18px;font-weight:700;"></div>
-            <div id="examMeta" style="font-size:13px;color:var(--text-muted);"></div>
+            <div id="examMeta" style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:4px;">
+              <span id="examMetaText"></span>
+              <button class="btn btn-outline-gold btn-sm hidden" id="viewModeToggleBtn" onclick="toggleViewMode()" style="padding:4px 8px;font-size:11px;cursor:pointer;border-radius:var(--radius-sm);">
+                📋 Ver examen completo
+              </button>
+            </div>
           </div>
           <div class="flex items-center gap-md">
             <div class="exam-timer hidden" id="examTimerDisplay">--:--</div>
@@ -255,6 +260,7 @@ let selectedDifficulty = 'easy';
 let selectedCount = 5;
 let selectedMode = 'practice';
 let selectedGenType = 'random'; // random or official
+let examViewMode = 'single'; // single or continuous
 
 const subjects = [
   { id:'deutsch',     name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
@@ -449,7 +455,20 @@ function renderExam(exam) {
   const lang = App.currentLang;
   const subj = exam.subjects.map(s => subjects.find(x => x.id === s)).filter(Boolean);
   document.getElementById('examTitle').textContent = subj.map(s => `${s.icon} ${lang === 'de' ? s.nameDE : s.name}`).join(' + ');
-  document.getElementById('examMeta').textContent = `${exam.totalQuestions} preguntas • ${exam.difficulty} • ${exam.mode === 'simulacro' ? '⏱️ Con temporizador' : '📖 Sin temporizador'}`;
+  
+  // Set meta text
+  document.getElementById('examMetaText').textContent = `${exam.totalQuestions} preguntas • ${exam.difficulty} • ${exam.mode === 'simulacro' ? '⏱️ Con temporizador' : '📖 Sin temporizador'}`;
+  
+  // Reset view mode
+  examViewMode = 'single';
+  const toggleBtn = document.getElementById('viewModeToggleBtn');
+  if (toggleBtn) {
+    toggleBtn.innerHTML = '📋 Ver examen completo';
+    toggleBtn.classList.remove('hidden');
+  }
+  
+  const navWrapper = document.getElementById('prevBtn').parentNode;
+  if (navWrapper) navWrapper.classList.remove('hidden');
 
   // Timer
   if (exam.mode === 'simulacro' && exam.timeLimit) {
@@ -652,6 +671,148 @@ function downloadPDF() {
   const exam = ExamEngine.currentExam;
   const score = ExamEngine.calculateScore();
   PDFGenerator.generate(exam, ExamEngine.answers, score);
+}
+
+function toggleViewMode() {
+  const exam = ExamEngine.currentExam;
+  if (!exam) return;
+  examViewMode = examViewMode === 'single' ? 'continuous' : 'single';
+  const btn = document.getElementById('viewModeToggleBtn');
+  const navWrapper = document.getElementById('prevBtn').parentNode;
+  
+  if (examViewMode === 'continuous') {
+    btn.innerHTML = '📇 Ver de una en una';
+    if (navWrapper) navWrapper.classList.add('hidden');
+    renderContinuousExam();
+  } else {
+    btn.innerHTML = '📋 Ver examen completo';
+    if (navWrapper) navWrapper.classList.remove('hidden');
+    renderQuestion(ExamEngine.currentQuestion || 0);
+  }
+}
+
+function renderContinuousExam() {
+  const exam = ExamEngine.currentExam;
+  if (!exam) return;
+  const lang = App.currentLang;
+  const total = exam.totalQuestions;
+  
+  // Update progress to 100% since they can see all
+  document.getElementById('examProgress').style.width = '100%';
+  document.getElementById('examProgressText').textContent = `${Object.keys(ExamEngine.answers).length}/${total}`;
+
+  let html = `<div class="flex-col gap-lg">`;
+  
+  exam.questions.forEach((q, idx) => {
+    const qText = q.question?.[lang] || q.question?.es || '';
+    const isAnswered = ExamEngine.answers[idx] !== undefined;
+    const isPractice = exam.mode === 'practice';
+    
+    const optionsHTML = (q.options || []).map((opt, oi) => {
+      const optText = typeof opt === 'object' ? (opt[lang] || opt.es) : opt;
+      const letter = String.fromCharCode(65 + oi);
+      let cls = '';
+      if (isAnswered) {
+        if (oi === q.correct) cls = 'correct';
+        else if (oi === ExamEngine.answers[idx]) cls = 'wrong';
+      } else {
+        cls = '';
+      }
+      return `<div class="answer-option ${cls}" onclick="selectAnswerContinuous(${idx}, ${oi}, this)">
+        <div class="answer-letter">${letter}</div>
+        <div>${optText}</div>
+      </div>`;
+    }).join('');
+
+    let feedbackHTML = '';
+    if (isAnswered && isPractice) {
+      const isCorrect = ExamEngine.isCorrect(idx);
+      const explanation = q.explanation?.[lang] || q.explanation?.es || '';
+      const tip = q.tip?.[lang] || q.tip?.es || '';
+      feedbackHTML = `
+        <div class="answer-feedback show ${isCorrect ? 'correct-feedback' : 'wrong-feedback'}" style="margin-top:var(--space-md);">
+          ${isCorrect ? '✅ <strong>¡Correcto!</strong>' : '❌ <strong>Incorrecto.</strong>'}
+          ${explanation ? `<br><br><strong>Explicación:</strong> ${explanation}` : ''}
+          ${tip ? `<br><br>💡 <strong>Consejo:</strong> <em>${tip}</em>` : ''}
+        </div>`;
+    }
+
+    const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
+    const yearBadge = q.year ? `<span class="badge badge-gold">${q.year}</span>` : '';
+
+    html += `
+      <div class="question-card" style="margin-bottom:var(--space-md);" id="q-card-${idx}">
+        <div class="question-number flex gap-sm items-center" style="margin-bottom:var(--space-sm);">
+          <span class="badge badge-success">Pregunta ${idx + 1} de ${total}</span>
+          ${topicBadge} ${yearBadge}
+        </div>
+        <div class="question-text">${qText}</div>
+        <div class="answer-options" id="q-options-${idx}">${optionsHTML}</div>
+        <div id="q-feedback-${idx}">${feedbackHTML}</div>
+      </div>`;
+  });
+
+  // Continuous submit button at bottom
+  html += `
+    <div class="card text-center" style="margin-top:var(--space-lg);background:rgba(255,255,255,0.01);">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:var(--space-md);">Has respondido <span id="continuousAnsweredCount">${Object.keys(ExamEngine.answers).length}</span> de ${total} preguntas.</p>
+      <button onclick="confirmSubmit()" class="btn btn-primary btn-lg">
+        📤 Finalizar y entregar examen
+      </button>
+    </div>
+  </div>`;
+
+  document.getElementById('questionsContainer').innerHTML = html;
+}
+
+function selectAnswerContinuous(qIdx, optIdx, el) {
+  if (ExamEngine.answers[qIdx] !== undefined) return; // Already answered
+  ExamEngine.answer(qIdx, optIdx);
+
+  const exam = ExamEngine.currentExam;
+  const total = exam.totalQuestions;
+  
+  // Update counter at the bottom
+  const countEl = document.getElementById('continuousAnsweredCount');
+  if (countEl) countEl.textContent = Object.keys(ExamEngine.answers).length;
+  document.getElementById('examProgressText').textContent = `${Object.keys(ExamEngine.answers).length}/${total}`;
+
+  if (exam.mode === 'practice') {
+    // Show immediate feedback for this question in the continuous list
+    const cardOptions = document.getElementById(`q-options-${qIdx}`);
+    const q = exam.questions[qIdx];
+    
+    // Redraw options for this card to show correct/wrong
+    cardOptions.innerHTML = (q.options || []).map((opt, oi) => {
+      const optText = typeof opt === 'object' ? (opt[App.currentLang] || opt.es) : opt;
+      const letter = String.fromCharCode(65 + oi);
+      let cls = '';
+      if (oi === q.correct) cls = 'correct';
+      else if (oi === optIdx) cls = 'wrong';
+      return `<div class="answer-option ${cls}">
+        <div class="answer-letter">${letter}</div>
+        <div>${optText}</div>
+      </div>`;
+    }).join('');
+
+    // Draw feedback block for this card
+    const isCorrect = ExamEngine.isCorrect(qIdx);
+    const explanation = q.explanation?.[App.currentLang] || q.explanation?.es || '';
+    const tip = q.tip?.[App.currentLang] || q.tip?.es || '';
+    
+    document.getElementById(`q-feedback-${qIdx}`).innerHTML = `
+      <div class="answer-feedback show ${isCorrect ? 'correct-feedback' : 'wrong-feedback'}" style="margin-top:var(--space-md);">
+        ${isCorrect ? '✅ <strong>¡Correcto!</strong>' : '❌ <strong>Incorrecto.</strong>'}
+        ${explanation ? `<br><br><strong>Explicación:</strong> ${explanation}` : ''}
+        ${tip ? `<br><br>💡 <strong>Consejo:</strong> <em>${tip}</em>` : ''}
+      </div>`;
+  } else {
+    // In simulacro mode, just mark the selected option
+    const parent = el.parentNode;
+    parent.querySelectorAll('.answer-option').forEach((opt, i) => {
+      opt.classList.toggle('selected', i === optIdx);
+    });
+  }
 }
 
 // ── Init ──────────────────────────────────────────────────────
