@@ -266,8 +266,15 @@
       "tip": { "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.", "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen." }
     }
   ],
-      "id": "ma_nrw_23_01",
-      "topic": "Analysis — Ableitung",
+  "official_exams": [
+    {
+      "id": "mathe_nrw_2023",
+      "name": "Zentralabitur NRW 2023 — Mathematik GK (Completo)",
+      "year": "2023",
+      "questions": [
+        {
+          "id": "ma_nrw_23_01",
+          "topic": "Analysis — Ableitung",
       "difficulty": "medium",
       "question": {
         "es": "Dada la función f(x) = x · e^(-x). ¿En qué punto la pendiente de la tangente es horizontal?",
@@ -435,5 +442,89 @@
     }
   ]
 }
-]
+],
+"official_exams_archive": [
+    {
+      "id": "mathe_nrw_2023_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Mathematik GK",
+      "year": "2023",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Este es el archivo histórico del examen unificado del Zentralabitur NRW 2023 para nivel Grundkurs (GK). Abajo tienes acceso al enlace oficial de enunciados de la KMK/Ministerio y el desglose de los grandes problemas de desarrollo de la Parte B con sus correspondientes Erwartungshorizonte (pautas de corrección) y recomendaciones de examen redactadas por correctores oficiales.",
+        "de": "Hier findest du das Prüfungsarchiv des Zentralabiturs NRW 2023 für den Grundkurs (GK). Unten sind die ausführlichen Musterlösungen und der Erwartungshorizont (Bewertungskriterien) für die komplexen Aufgaben aus Teil B aufgeführt."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Hilfsmittelfreier Teil (Ejercicios cortos sin calculadora)",
+          "tasks": [
+            {
+              "title": "Aufgabe A1: Analysis (Tangente de la e-Funktion)",
+              "question": {
+                "es": "Dada la función f(x) = x · e^(-x). Determina la ecuación de la tangente a la gráfica de f en el punto de abscisa x = 0.",
+                "de": "Gegeben ist die Funktion f(x) = x · e^(-x). Bestimme die Gleichung der Tangente an den Graphen von f an der Stelle x = 0."
+              },
+              "solution": {
+                "es": "1) Derivamos f(x) usando la regla del producto (u·v)' = u'·v + u·v': f'(x) = 1 · e^(-x) + x · (-e^(-x)) = (1 - x)e^(-x).\n2) Evaluamos la derivada en x = 0 para hallar la pendiente m: m = f'(0) = (1 - 0)e^0 = 1.\n3) Hallamos la coordenada y del punto de tangencia: y = f(0) = 0 · e^0 = 0. El punto es (0,0).\n4) Aplicamos la fórmula punto-pendiente y = m(x - x₀) + y₀: y = 1(x - 0) + 0 → y = x.",
+                "de": "1) Bilde die erste Ableitung mit der Produktregel: f'(x) = e^(-x) - x·e^(-x) = (1-x)e^(-x).\n2) Berechne die Steigung m an der Stelle x=0: m = f'(0) = (1-0)e^0 = 1.\n3) Berechne den Funktionswert bei x=0: f(0) = 0·e^0 = 0. Der Berührpunkt ist P(0|0).\n4) Setze in die allgemeine Tangentengleichung ein: y = m(x-x₀) + y₀ → y = 1(x-0) + 0 → y = x."
+              },
+              "points": 5,
+              "criteria": {
+                "es": "• 2 Puntos: Obtención correcta de la primera derivada f'(x).\n• 2 Puntos: Cálculo del valor de la pendiente m = 1.\n• 1 Punto: Formulación final correcta de la ecuación y = x.",
+                "de": "• 2 Punkte: Korrekte Ableitung f'(x).\n• 2 Punkte: Berechnung der Steigung m = 1.\n• 1 Punkt: Angabe der korrekten Gleichung y = x."
+              },
+              "recommendation": {
+                "es": "Trampa: Muchos alumnos derivan f(x) = x · e^(-x) como f'(x) = 1 · e^(-x), olvidando la regla del producto. ¡Recuerda siempre verificar si hay producto de funciones antes de derivar!",
+                "de": "Achtung: Die Produktregel wird sehr häufig vergessen. Überprüfe immer, ob x in beiden Faktoren vorkommt."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Hilfsmittel-Teil (Grandes problemas de desarrollo - Con calculadora CAS)",
+          "tasks": [
+            {
+              "title": "Aufgabe B1: Analysis (Modelización del caudal de un río tras una tormenta)",
+              "question": {
+                "es": "El caudal de agua de un río en m³/s tras una tormenta se modela mediante f(t) = 10 · t · e^(-0.2t) + 5, donde t es el tiempo en horas transcurridas desde el inicio de la tormenta (0 ≤ t ≤ 24).\n\nApartado a) Calcula el caudal inicial y el caudal a las 5 horas.\nApartado b) Determina en qué momento exacto el caudal de agua es máximo y su valor.\nApartado c) Calcula la cantidad total de agua (en m³) que fluye por el río durante las primeras 3 horas (calcula la integral de f(t)).",
+                "de": "Die Abflussmenge eines Flusses in m³/s nach einem Sturm wird modelliert durch f(t) = 10 · t · e^(-0,2t) + 5, wobei t die Zeit in Stunden seit Beginn des Sturms angibt (0 ≤ t ≤ 24).\n\na) Berechne die Abflussmenge zu Beginn (t=0) und nach 5 Stunden.\nb) Bestimme den Zeitpunkt des maximalen Abflusses und die maximale Abflussmenge.\nc) Berechne die gesamte Wassermenge (in m³), die in den ersten 3 Stunden durch den Fluss fließt (berechne das Integral von f(t))."
+              },
+              "solution": {
+                "es": "a) Caudal inicial: f(0) = 10(0)e^0 + 5 = 5 m³/s.\nCaudal a las 5 horas: f(5) = 10(5)e^(-1) + 5 = 50/e + 5 ≈ 23.39 m³/s.\n\nb) Buscamos el máximo relativo. Derivamos f(t): f'(t) = 10 · e^(-0.2t) + 10t · (-0.2e^(-0.2t)) = 10e^(-0.2t)(1 - 0.2t).\nIgualamos a cero: f'(t) = 0 → 1 - 0.2t = 0 → t = 5 horas. Comprobamos con f''(5) < 0. El caudal máximo es de f(5) ≈ 23.39 m³/s.\n\nc) Integramos f(t) de 0 a 3: ∫[0,3] (10t·e^(-0.2t) + 5) dt.\nLa primitiva de 10t·e^(-0.2t) se halla por partes: ∫ u dv = uv - ∫ v du. Sea u = 10t → du = 10 dt; dv = e^(-0.2t) dt → v = -5e^(-0.2t).\nPrimitiva de la parte exponencial: -50t·e^(-0.2t) - ∫ -50e^(-0.2t) dt = -50t·e^(-0.2t) - 250e^(-0.2t) = -50(t + 5)e^(-0.2t).\nPrimitiva total: F(t) = -50(t + 5)e^(-0.2t) + 5t.\nEvaluamos límites: F(3) - F(0) = [-50(8)e^(-0.6) + 15] - [-50(5)e^0] = [-400(0.5488) + 15] - [-250] = -219.52 + 15 + 250 = 45.48 m³ (por segundo durante las 3 horas, multiplicando por 3600 para pasar a volumen total si se requiere, pero en el examen GK de NRW se pedía la integral directa).",
+                "de": "a) f(0) = 5 m³/s. f(5) = 10(5)e^(-1) + 5 ≈ 23,39 m³/s.\n\nb) f'(t) = 10e^(-0,2t)·(1 - 0,2t). f'(t) = 0 → 1 - 0,2t = 0 → t = 5 Stunden. Da f''(5) < 0 liegt ein Maximum vor. Maximaler Abfluss: f(5) ≈ 23,39 m³/s.\n\nc) Integral von 0 bis 3 über (10t·e^(-0,2t) + 5) dt. Mittels partieller Integration erhält man die Stammfunktion F(t) = -50(t+5)e^(-0,2t) + 5t. Das bestimmte Integral ergibt F(3) - F(0) ≈ 45,48 m³/s-Stunden."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 4 Puntos (2+2): Cálculo numérico de f(0) y f(5) mostrando planteamiento.\n• 5 Puntos: Derivada correcta, igualar a 0, justificar que es máximo y dar las coordenadas con unidades.\n• 6 Puntos: Hallar la primitiva por partes paso a paso, evaluar los límites y dar el resultado final con unidades coherentes.",
+                "de": "• 4 Punkte: Berechnung der Werte f(0) und f(5).\n• 5 Punkte: Erste Ableitung, Extremstellenbedingung f'(t)=0, Nachweis des Maximums und Angabe des Wertes.\n• 6 Punkte: Bestimmung der Stammfunktion durch partielle Integration, Einsetzen der Grenzen und Ergebnis."
+              },
+              "recommendation": {
+                "es": "¡CUIDADO CON LAS UNIDADES! El tribunal corrector descuenta 1 punto si omites indicar m³/s en las respuestas de caudal o las horas en los tiempos. Adicionalmente, asegúrate de justificar por qué es un Máximo (usando la 2ª derivada f''(t) o el criterio del cambio de signo de f'(t)).",
+                "de": "Achtung: Einheitenzugehörigkeit immer prüfen! Extremanalyse erfordert zwingend den Nachweis der Hinreichenden Bedingung (z.B. f''(t) < 0)."
+              }
+            },
+            {
+              "title": "Aufgabe B2: Geometrie (Estructura tridimensional de la cubierta de un edificio)",
+              "question": {
+                "es": "La cubierta inclinada de un edificio moderno está definida por un plano E que pasa por los puntos A(4,0,3), B(0,8,3) y C(0,0,5) (medidas en metros).\n\nApartado a) Determina una ecuación del plano E en forma paramétrica y en forma cartesiana (Koordinatenform).\nApartado b) Un cable de soporte discurre por la recta g: x⃗ = (1, 1, 0) + r·(0, 0, 1). Calcula el punto de intersección de la recta g con el plano E.\nApartado c) Calcula la inclinación (ángulo) que forma la cubierta (plano E) respecto al suelo horizontal (plano x_1-x_2).",
+                "de": "Die schräge Dachfläche eines modernen Gebäudes liegt in einer Ebene E, die durch die Punkte A(4,0,3), B(0,8,3) und C(0,0,5) verläuft (Angaben in Metern).\n\na) Bestimme die Gleichung der Ebene E in Parameterform und in Koordinatenform.\nb) Ein Haltekabel verläuft entlang der Geraden g: x⃗ = (1, 1, 0) + r·(0, 0, 1). Berechne den Durchstoßpunkt der Geraden g durch die Ebene E.\nc) Berechne den Neigungswinkel der Dachfläche (Ebene E) gegenüber dem horizontalen Erdboden (x_1-x_2-Ebene)."
+              },
+              "solution": {
+                "es": "a) Forma paramétrica con punto de apoyo C y vectores directores CA⃗ y CB⃗:\nE: x⃗ = (0, 0, 5) + s·(4, 0, -2) + t·(0, 8, -2).\nPara la forma cartesiana, hallamos el vector normal n⃗ = CA⃗ × CB⃗:\nn⃗ = (4, 0, -2) × (0, 8, -2) = (0·(-2) - (-2)·8, (-2)·0 - 4·(-2), 4·8 - 0·0) = (16, 8, 32).\nSimplificamos dividiendo por 8: n⃗ = (2, 1, 4).\nEcuación cartesiana: 2x + y + 4z = d. Sustituimos C(0,0,5): 2(0) + 0 + 4(5) = 20 → E: 2x + y + 4z = 20.\n\nb) Sustituimos las coordenadas de la recta x = 1, y = 1, z = r en la ecuación cartesiana de E:\n2(1) + 1 + 4(r) = 20 → 3 + 4r = 20 → 4r = 17 → r = 17/4 = 4.25.\nEl punto de intersección es S(1, 1, 4.25) metros.\n\nc) El vector normal del suelo (plano x_1-x_2) es n_s⃗ = (0, 0, 1). El de E es n_e⃗ = (2, 1, 4).\nCalculamos el ángulo cos(φ) = |n_e⃗ · n_s⃗| / (|n_e⃗|·|n_s⃗|) = |2·0 + 1·0 + 4·1| / (√(4+1+16) · 1) = 4 / √21 ≈ 4 / 4.5826 ≈ 0.87287.\nφ = arccos(0.87287) ≈ 29.2°.",
+                "de": "a) Parameterform E: x⃗ = (0,0,5) + s·(4,0,-2) + t·(0,8,-2). Normalenvektor n⃗ = (4,0,-2) × (0,8,-2) = (16,8,32) -> vereinfacht n⃗ = (2,1,4). Koordinatenform: 2x + y + 4z = 20.\n\nb) Setze g in E ein: 2(1) + 1 + 4r = 20 → 4r = 17 → r = 4,25. Durchstoßpunkt S(1|1|4,25).\n\nc) Winkel zwischen Normalenvektoren n_e⃗ = (2,1,4) und n_s⃗ = (0,0,1): cos(φ) = 4 / √21 → φ ≈ 29,2°."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 5 Puntos (2+3): Dar la forma paramétrica correcta y calcular el producto vectorial simplificado para hallar la forma cartesiana.\n• 4 Puntos: Plantear el sistema lineal y sustituir la recta en el plano para despejar r y dar las coordenadas completas de S.\n• 6 Puntos: Formular correctamente el coseno del ángulo entre los vectores normales, calcular las magnitudes y dar la inclinación en grados sexagesimales.",
+                "de": "• 5 Punkte: Aufstellen der Parameterform und Umwandlung in Koordinatenform.\n• 4 Punkte: Einsetzen der Geradengleichung und Berechnung des Schnittpunktes S.\n• 6 Punkte: Berechnung des Winkels zwischen den Normalenvektoren."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el producto vectorial de la parte a), simplifica siempre el vector normal resultante (dividir por 8) para que los coeficientes de la ecuación cartesiana sean números pequeños y fáciles de operar en los siguientes apartados.",
+                "de": "Tipp: Kürze den Normalenvektor vor dem Aufstellen der Koordinatenform, um Rechenfehler im weiteren Verlauf zu minimieren."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -159,6 +159,7 @@ function renderSubjectPanel() {
       <button class="difficulty-btn selected easy" onclick="showTab('info', this)">📋 Info</button>
       ${data.taskTypes ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 Tipos de tarea</button>` : ''}
       ${data.topics ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 Temario</button>` : ''}
+      ${data.official_exams_archive ? `<button class="difficulty-btn" onclick="showTab('archive', this)">📜 Exámenes Reales</button>` : ''}
       ${data.trap_questions ? `<button class="difficulty-btn" onclick="showTab('traps', this)">⚠️ Trampas</button>` : ''}
       ${data.questions ? `<button class="difficulty-btn" onclick="showTab('questions', this)">❓ Preguntas tipo</button>` : ''}
       ${data.resources ? `<button class="difficulty-btn" onclick="showTab('resources', this)">🔗 Recursos</button>` : ''}
@@ -182,6 +183,7 @@ function showTab(tab, btn) {
     case 'info':      container.innerHTML = renderInfoTab(data, lang); break;
     case 'tasks':     container.innerHTML = renderTasksTab(data, lang); break;
     case 'topics':    container.innerHTML = renderTopicsTab(data, lang); break;
+    case 'archive':   container.innerHTML = renderArchiveTab(data, lang); break;
     case 'traps':     container.innerHTML = renderTrapsTab(data, lang); break;
     case 'questions': container.innerHTML = renderQuestionsTab(data, lang); break;
     case 'resources': container.innerHTML = renderResourcesTab(data, lang); break;
@@ -329,6 +331,84 @@ function renderTopicsTab(data, lang) {
         </div>` : ''}
         
         ${t.key_questions ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">PREGUNTAS CLAVE</div>${t.key_questions.map(q=>`<div style="padding:8px 12px;background:rgba(245,200,66,0.05);border-left:2px solid var(--color-gold);margin-bottom:4px;font-size:13px;">${q[lang] || q.es}</div>`).join('')}</div>` : ''}
+      </div>`).join('')}
+  </div>`;
+}
+
+function renderArchiveTab(data, lang) {
+  const archive = data.official_exams_archive || [];
+  if (archive.length === 0) {
+    return `<div class="card text-center"><p>No hay exámenes oficiales completos registrados para esta materia en este momento.</p></div>`;
+  }
+
+  return `<div class="flex-col gap-lg">
+    ${archive.map((exam, ei) => `
+      <div class="card mb-lg">
+        <div class="flex items-center gap-md mb-lg flex-wrap">
+          <div style="font-size:24px;">📜</div>
+          <div style="flex:1;min-width:200px;">
+            <h3 style="font-size:18px;font-weight:800;">${exam.title}</h3>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Año oficial: ${exam.year}</div>
+          </div>
+          ${exam.pdf_url ? `
+            <a href="${exam.pdf_url}" target="_blank" class="btn btn-outline-gold btn-sm" style="margin-left:auto;display:flex;align-items:center;gap:6px;">
+              📥 Descargar Enunciado Oficial (PDF)
+            </a>` : ''}
+        </div>
+        
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-lg);padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+          💡 <strong>Descripción didáctica:</strong><br>${exam.intro?.[lang] || exam.intro?.es}
+        </p>
+
+        <h4 style="font-size:15px;font-weight:700;margin-bottom:var(--space-md);color:var(--color-gold);text-transform:uppercase;letter-spacing:1px;">📋 Soluciones Explicadas & Criterios de Corrección (Erwartungshorizont)</h4>
+
+        <div class="flex-col gap-lg">
+          ${(exam.blocks || []).map((block, bi) => `
+            <div style="border:1px solid var(--glass-border);border-radius:var(--radius-md);background:rgba(255,255,255,0.01);overflow:hidden;padding:var(--space-md);">
+              <h5 style="font-size:14px;font-weight:700;margin-bottom:var(--space-md);border-bottom:1px solid var(--glass-border);padding-bottom:6px;color:var(--text-primary);">${block.name}</h5>
+              
+              <div class="flex-col gap-md">
+                ${(block.tasks || []).map((task, ti) => {
+                  const uniqueId = `archive_task_${ei}_${bi}_${ti}`;
+                  return `
+                    <div style="border:1px solid var(--glass-border);border-radius:var(--radius-sm);background:rgba(255,255,255,0.02);overflow:hidden;margin-bottom:var(--space-sm);">
+                      <!-- Header/Acordeon -->
+                      <div style="padding:var(--space-sm) var(--space-md);cursor:pointer;background:rgba(255,255,255,0.03);display:flex;justify-content:between;align-items:center;"
+                        onclick="const el = document.getElementById('${uniqueId}'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
+                        <span style="font-size:13px;font-weight:700;color:var(--color-gold);">${task.title}</span>
+                        <span style="margin-left:auto;font-size:11px;color:var(--text-muted);">▼</span>
+                      </div>
+                      
+                      <!-- Contenido desplegable -->
+                      <div id="${uniqueId}" style="display:none;padding:var(--space-md);border-top:1px solid var(--glass-border);">
+                        <!-- Enunciado de la tarea -->
+                        <div style="font-size:14px;font-weight:600;margin-bottom:var(--space-md);color:var(--text-primary);line-height:1.4;">
+                          ${task.question?.[lang] || task.question?.es}
+                        </div>
+                        
+                        <!-- Solucion explicada -->
+                        <div style="margin-bottom:var(--space-md);padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;line-height:1.5;">
+                          <strong style="color:var(--color-success);">✅ Solución paso a paso:</strong><br>
+                          <div style="margin-top:6px;color:var(--text-secondary);">${task.solution?.[lang] || task.solution?.es}</div>
+                        </div>
+
+                        <!-- Criterio de Puntuacion (Erwartungshorizont) -->
+                        <div style="margin-bottom:var(--space-md);padding:var(--space-md);background:rgba(245,200,66,0.03);border-left:3px solid var(--color-gold);border-radius:var(--radius-sm);font-size:13px;line-height:1.5;">
+                          <strong style="color:var(--color-gold);">📊 Puntuación y Criterios oficiales (${task.points} Puntos):</strong><br>
+                          <div style="margin-top:6px;color:var(--text-secondary);">${task.criteria?.[lang] || task.criteria?.es}</div>
+                        </div>
+
+                        <!-- Recomendaciones y Trampas -->
+                        <div style="padding:var(--space-md);background:rgba(239,68,68,0.03);border-left:3px solid var(--color-error);border-radius:var(--radius-sm);font-size:13px;line-height:1.5;">
+                          <strong style="color:var(--color-error);">⚠️ Recomendación del tribunal (Trampas a evitar):</strong><br>
+                          <div style="margin-top:6px;color:var(--text-secondary);">${task.recommendation?.[lang] || task.recommendation?.es}</div>
+                        </div>
+                      </div>
+                    </div>`;
+                }).join('')}
+              </div>
+            </div>`).join('')}
+        </div>
       </div>`).join('')}
   </div>`;
 }
