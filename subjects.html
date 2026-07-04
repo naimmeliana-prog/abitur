@@ -114,7 +114,7 @@ async function selectSubject(id) {
   // Load data
   document.getElementById('subjectPanel').innerHTML = `<div class="text-center" style="padding:var(--space-3xl)"><div class="spinner" style="width:32px;height:32px;border-width:3px;"></div></div>`;
   try {
-    const res = await fetch(`data/${meta.file}`);
+    const res = await fetch(`data/${meta.file}?t=${Date.now()}`);
     subjectData = await res.json();
   } catch (e) {
     document.getElementById('subjectPanel').innerHTML = `<div class="card text-center"><p style="color:var(--color-error)">Error cargando datos. Asegúrate de abrir la aplicación desde un servidor local.</p></div>`;
