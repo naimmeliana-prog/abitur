@@ -182,7 +182,7 @@ const ExamEngine = {
   async loadSubjectData(subjectId) {
     if (this.subjectDataCache[subjectId]) return this.subjectDataCache[subjectId];
     try {
-      const res = await fetch(`data/${subjectId}.json`);
+      const res = await fetch(`data/${subjectId}.json?t=${Date.now()}`);
       const data = await res.json();
       this.subjectDataCache[subjectId] = data;
       return data;
