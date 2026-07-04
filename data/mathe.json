@@ -266,85 +266,172 @@
       "tip": { "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.", "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen." }
     }
   ],
-  "official_exams": [
+      "id": "ma_nrw_23_01",
+      "topic": "Analysis — Ableitung",
+      "difficulty": "medium",
+      "question": {
+        "es": "Dada la función f(x) = x · e^(-x). ¿En qué punto la pendiente de la tangente es horizontal?",
+        "de": "Gegeben ist die Funktion f(x) = x · e^(-x). An welcher Stelle hat die Tangente eine waagerechte Steigung?"
+      },
+      "options": [
+        { "es": "x = 0", "de": "x = 0" },
+        { "es": "x = 1", "de": "x = 1" },
+        { "es": "x = -1", "de": "x = -1" },
+        { "es": "No tiene pendiente horizontal", "de": "Es gibt keine waagerechte Steigung" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Para pendiente horizontal buscamos f'(x) = 0. Aplicando la regla del producto: f'(x) = 1·e^(-x) + x·(-e^(-x)) = (1-x)e^(-x). Como e^(-x) > 0 para todo x, la única solución para (1-x)e^(-x) = 0 es x = 1.",
+        "de": "Waagerechte Steigung bedeutet f'(x) = 0. Produktregel: f'(x) = e^(-x) - x·e^(-x) = (1-x)e^(-x). Da e^(-x) nie null ist, muss 1-x = 0 sein, also x = 1."
+      },
+      "tip": {
+        "es": "La función exponencial e^x o e^(-x) nunca se anula. Por tanto, al igualar la derivada a 0, solo nos centramos en el factor polinómico.",
+        "de": "Die e-Funktion e^(-x) wird niemals null. Setzt man f'(x) = 0, betrachtet man nur den Klammerausdruck."
+      }
+    },
     {
-      "id": "mathe_nrw_2023",
-      "name": "Zentralabitur NRW 2023 — Mathematik GK (Completo)",
-      "year": "2023",
-      "questions": [
-        {
-          "id": "ma_nrw_23_01",
-          "topic": "Analysis — Ableitung",
-          "difficulty": "medium",
-          "question": {
-            "es": "Dada la función f(x) = x · e^(-x). ¿En qué punto la pendiente de la tangente es horizontal?",
-            "de": "Gegeben ist die Funktion f(x) = x · e^(-x). An welcher Stelle hat die Tangente eine waagerechte Steigung?"
-          },
-          "options": [
-            { "es": "x = 0", "de": "x = 0" },
-            { "es": "x = 1", "de": "x = 1" },
-            { "es": "x = -1", "de": "x = -1" },
-            { "es": "No tiene pendiente horizontal", "de": "Es gibt keine waagerechte Steigung" }
-          ],
-          "correct": 1,
-          "explanation": {
-            "es": "Para pendiente horizontal buscamos f'(x) = 0. Aplicando la regla del producto: f'(x) = 1·e^(-x) + x·(-e^(-x)) = (1-x)e^(-x). Como e^(-x) > 0 para todo x, la única solución para (1-x)e^(-x) = 0 es x = 1.",
-            "de": "Waagerechte Steigung bedeutet f'(x) = 0. Produktregel: f'(x) = e^(-x) - x·e^(-x) = (1-x)e^(-x). Da e^(-x) nie null ist, muss 1-x = 0 sein, also x = 1."
-          },
-          "tip": {
-            "es": "La función exponencial e^x o e^(-x) nunca se anula. Por tanto, al igualar la derivada a 0, solo nos centramos en el factor polinómico.",
-            "de": "Die e-Funktion e^(-x) wird niemals null. Setzt man f'(x) = 0, betrachtet man nur den Klammerausdruck."
-          }
-        },
-        {
-          "id": "ma_nrw_23_02",
-          "topic": "Geometrie — Lagebeziehung",
-          "difficulty": "medium",
-          "question": {
-            "es": "¿Cuál es la posición relativa de la recta g: x⃗ = (1,0,2) + r·(1,-2,3) y el plano E: 2x - y + 3z = 6?",
-            "de": "Wie ist die Lagebeziehung der Geraden g: x⃗ = (1,0,2) + r·(1,-2,3) und der Ebene E: 2x - y + 3z = 6?"
-          },
-          "options": [
-            { "es": "La recta es paralela al plano", "de": "Die Gerade ist parallel zur Ebene" },
-            { "es": "La recta corta al plano en un punto", "de": "Die Gerade schneidet die Ebene in einem Punkt" },
-            { "es": "La recta está contenida en el plano", "de": "Die Gerade liegt in der Ebene" },
-            { "es": "Son perpendiculares", "de": "Sie sind orthogonal" }
-          ],
-          "correct": 1,
-          "explanation": {
-            "es": "Sustituimos las coordenadas de la recta (1+r, -2r, 2+3r) en la ecuación del plano: 2(1+r) - (-2r) + 3(2+3r) = 6 → 2 + 2r + 2r + 6 + 9r = 6 → 13r + 8 = 6 → 13r = -2 → r = -2/13. Al dar un único valor de r, la recta corta al plano en un único punto.",
-            "de": "Setze die Geradengleichung in die Ebene ein: 2(1+r) - (-2r) + 3(2+3r) = 6. Dies führt zu 13r + 8 = 6, also einer eindeutigen Lösung r = -2/13. Die Gerade schneidet die Ebene in einem Punkt."
-          },
-          "tip": {
-            "es": "Si al sustituir la recta en el plano obtienes una contradicción (ej. 8 = 6), son paralelas. Si obtienes una identidad (ej. 6 = 6), la recta está contenida.",
-            "de": "Eindeutige Lösung für r -> Schnittpunkt. Widerspruch (z.B. 8=6) -> parallel. Identität (z.B. 6=6) -> Gerade liegt in der Ebene."
-          }
-        },
-        {
-          "id": "ma_nrw_23_03",
-          "topic": "Stochastik — Erwartungswert",
-          "difficulty": "easy",
-          "question": {
-            "es": "Se lanza un dado de 6 caras. Si sale un número par, se ganan 2€. Si sale impar, se pierde 1€. ¿Cuál es la esperanza matemática (Erwartungswert) del juego?",
-            "de": "Ein Würfel wird geworfen. Bei geraden Zahlen gewinnt man 2€, bei ungeraden verliert man 1€. Was ist der Erwartungswert E(X)?"
-          },
-          "options": [
-            { "es": "E(X) = 0.50 €", "de": "E(X) = 0.50 €" },
-            { "es": "E(X) = 1.00 €", "de": "E(X) = 1.00 €" },
-            { "es": "E(X) = 0.00 €", "de": "E(X) = 0.00 €" },
-            { "es": "E(X) = -0.50 €", "de": "E(X) = -0.50 €" }
-          ],
-          "correct": 0,
-          "explanation": {
-            "es": "Los resultados posibles son ganar 2€ (probabilidad 0.5) y ganar -1€ (probabilidad 0.5). El valor esperado E(X) = 2 · 0.5 + (-1) · 0.5 = 1 - 0.5 = 0.50€.",
-            "de": "Mögliche Ausgänge: +2€ (p = 0.5) und -1€ (p = 0.5). E(X) = 2 · 0.5 + (-1) · 0.5 = 0.50€."
-          },
-          "tip": {
-            "es": "Un juego es justo (fair) si su valor esperado E(X) es 0. En este caso, el juego es favorable para el jugador.",
-            "de": "Ein Spiel heißt fair, wenn der Erwartungswert E(X) = 0 ist."
-          }
-        }
-      ]
+      "id": "ma_nrw_23_02",
+      "topic": "Geometrie — Lagebeziehung",
+      "difficulty": "medium",
+      "question": {
+        "es": "¿Cuál es la posición relativa de la recta g: x⃗ = (1,0,2) + r·(1,-2,3) y el plano E: 2x - y + 3z = 6?",
+        "de": "Wie ist die Lagebeziehung der Geraden g: x⃗ = (1,0,2) + r·(1,-2,3) und der Ebene E: 2x - y + 3z = 6?"
+      },
+      "options": [
+        { "es": "La recta es paralela al plano", "de": "Die Gerade ist parallel zur Ebene" },
+        { "es": "La recta corta al plano en un punto", "de": "Die Gerade schneidet die Ebene in einem Punkt" },
+        { "es": "La recta está contenida en el plano", "de": "Die Gerade liegt in der Ebene" },
+        { "es": "Son perpendiculares", "de": "Sie sind orthogonal" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Sustituimos las coordenadas de la recta (1+r, -2r, 2+3r) en la ecuación del plano: 2(1+r) - (-2r) + 3(2+3r) = 6 → 2 + 2r + 2r + 6 + 9r = 6 → 13r + 8 = 6 → 13r = -2 → r = -2/13. Al dar un único valor de r, la recta corta al plano en un único punto.",
+        "de": "Setze die Geradengleichung in die Ebene ein: 2(1+r) - (-2r) + 3(2+3r) = 6. Dies führt zu 13r + 8 = 6, also einer eindeutigen Lösung r = -2/13. Die Gerade schneidet die Ebene in einem Punkt."
+      },
+      "tip": {
+        "es": "Si al sustituir la recta en el plano obtienes una contradicción (ej. 8 = 6), son paralelas. Si obtienes una identidad (ej. 6 = 6), la recta está contenida.",
+        "de": "Eindeutige Lösung für r -> Schnittpunkt. Widerspruch (z.B. 8=6) -> parallel. Identität (z.B. 6=6) -> Gerade liegt in der Ebene."
+      }
+    },
+    {
+      "id": "ma_nrw_23_03",
+      "topic": "Stochastik — Erwartungswert",
+      "difficulty": "easy",
+      "question": {
+        "es": "Se lanza un dado de 6 caras. Si sale un número par, se ganan 2€. Si sale impar, se pierde 1€. ¿Cuál es la esperanza matemática (Erwartungswert) del juego?",
+        "de": "Ein Würfel wird geworfen. Bei geraden Zahlen gewinnt man 2€, bei ungeraden verliert man 1€. Was ist der Erwartungswert E(X)?"
+      },
+      "options": [
+        { "es": "E(X) = 0.50 €", "de": "E(X) = 0.50 €" },
+        { "es": "E(X) = 1.00 €", "de": "E(X) = 1.00 €" },
+        { "es": "E(X) = 0.00 €", "de": "E(X) = 0.00 €" },
+        { "es": "E(X) = -0.50 €", "de": "E(X) = -0.50 €" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los resultados posibles son ganar 2€ (probabilidad 0.5) y ganar -1€ (probabilidad 0.5). El valor esperado E(X) = 2 · 0.5 + (-1) · 0.5 = 1 - 0.5 = 0.50€.",
+        "de": "Mögliche Ausgänge: +2€ (p = 0.5) und -1€ (p = 0.5). E(X) = 2 · 0.5 + (-1) · 0.5 = 0.50€."
+      },
+      "tip": {
+        "es": "Un juego es justo (fair) si su valor esperado E(X) es 0. En este caso, el juego es favorable para el jugador.",
+        "de": "Ein Spiel heißt fair, wenn der Erwartungswert E(X) = 0 ist."
+      }
+    },
+    {
+      "id": "ma_nrw_23_04",
+      "topic": "Analysis — Extrempunkte",
+      "difficulty": "medium",
+      "question": {
+        "es": "Dada la familia de funciones f_k(x) = x^2 - k·x (donde k es un parámetro real). ¿Para qué valor de k la función tiene su punto mínimo en x = 3?",
+        "de": "Gegeben ist die Funktionsschar f_k(x) = x^2 - k·x. Für welchen Wert von k liegt die Minimalstelle bei x = 3?"
+      },
+      "options": [
+        { "es": "k = 6", "de": "k = 6" },
+        { "es": "k = 3", "de": "k = 3" },
+        { "es": "k = -3", "de": "k = -3" },
+        { "es": "k = -6", "de": "k = -6" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Derivamos la función respecto a x: f_k'(x) = 2x - k. Para que haya un mínimo en x = 3, la derivada en esa posición debe ser cero: f_k'(3) = 0 → 2(3) - k = 0 → 6 - k = 0 → k = 6. Comprobamos con la segunda derivada: f_k''(x) = 2 > 0 (siempre es un mínimo).",
+        "de": "Bilde die Ableitung nach x: f_k'(x) = 2x - k. Bedingung für Extremstelle: f_k'(3) = 0 → 2(3) - k = 0 → k = 6. Zweite Ableitung f_k''(x) = 2 > 0 bestätigt das Minimum."
+      },
+      "tip": {
+        "es": "En problemas con familias de funciones (Kurvenscharen), el parámetro k se trata como si fuera un número fijo durante la derivación.",
+        "de": "Bei einer Funktionsschar wird der Parameter k beim Ableiten wie eine konstante Zahl behandelt."
+      }
+    },
+    {
+      "id": "ma_nrw_23_05",
+      "topic": "Geometrie — Abstand",
+      "difficulty": "easy",
+      "question": {
+        "es": "¿Cuál es la distancia mínima del punto P(3, 4, 5) al plano E con ecuación de coordenadas E: x_3 = 2?",
+        "de": "Wie groß ist der Abstand des Punktes P(3, 4, 5) zur Ebene E: x_3 = 2?"
+      },
+      "options": [
+        { "es": "d = 3", "de": "d = 3" },
+        { "es": "d = 5", "de": "d = 5" },
+        { "es": "d = 2", "de": "d = 2" },
+        { "es": "d = 1", "de": "d = 1" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La ecuación E: x_3 = 2 describe un plano horizontal paralelo al plano x_1-x_2 a una altura constante de z = 2. La distancia del punto P(3,4,5) al plano es simplemente la diferencia entre su coordenada z y la del plano: d = |5 - 2| = 3.",
+        "de": "Die Ebene x_3 = 2 verläuft parallel zur x_1-x_2-Ebene bei z = 2. Der Abstand des Punktes P(3,4,5) zur Ebene ist der absolute Unterschied der z-Koordinaten: d = |5 - 2| = 3."
+      },
+      "tip": {
+        "es": "Si la ecuación de un plano solo tiene una coordenada (como x_3 = d), no necesitas aplicar fórmulas complejas de distancias, simplemente resta el valor de la coordenada del punto.",
+        "de": "Wenn eine Ebene parallel zu einer Koordinatenebene ist (nur eine Koordinate in der Gleichung), reicht eine einfache Subtraktion."
+      }
+    },
+    {
+      "id": "ma_nrw_23_06",
+      "topic": "Stochastik — Binomialverteilung",
+      "difficulty": "medium",
+      "question": {
+        "es": "En un experimento de Bernoulli con probabilidad de éxito p = 0.5 y n = 4 ensayos independientes, ¿cuál es la probabilidad de obtener exactamente k = 3 éxitos?",
+        "de": "Bei einer Bernoulli-Kette mit Erfolgswahrscheinlichkeit p = 0,5 und n = 4 Versuchen, wie groß ist die Wahrscheinlichkeit für genau k = 3 Erfolge?"
+      },
+      "options": [
+        { "es": "P = 25.0%", "de": "P = 25,0%" },
+        { "es": "P = 31.25%", "de": "P = 31,25%" },
+        { "es": "P = 37.5%", "de": "P = 37,5%" },
+        { "es": "P = 12.5%", "de": "P = 12,5%" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Aplicamos la fórmula de la distribución binomial P(X=k) = (n sobre k) · p^k · (1-p)^(n-k). Para n=4, k=3, p=0.5: P(X=3) = (4 sobre 3) · 0.5^3 · 0.5^1 = 4 · 0.125 · 0.5 = 4 · 0.0625 = 0.25 = 25.0%.",
+        "de": "Berechnung mit der Formel für die Binomialverteilung: P(X=3) = (4 über 3) · 0,5^3 · 0,5^1 = 4 · 0,125 · 0,5 = 0,25 = 25%."
+      },
+      "tip": {
+        "es": "El coeficiente binomial (4 sobre 3) es igual a 4. Significa que hay 4 caminos en el diagrama de árbol que contienen exactamente 3 éxitos.",
+        "de": "Der Binomialkoeffizient (4 über 3) ist 4. Es gibt also 4 Pfade im Baumdiagramm mit genau 3 Erfolgen."
+      }
+    },
+    {
+      "id": "ma_nrw_23_07",
+      "topic": "Analysis — Integración",
+      "difficulty": "medium",
+      "question": {
+        "es": "¿Cuál es el valor de la integral definida ∫ de 0 a 2 de (3x^2 - 2x) dx?",
+        "de": "Wie lautet der Wert des bestimmten Integrals von 0 bis 2 über (3x^2 - 2x) dx?"
+      },
+      "options": [
+        { "es": "4", "de": "4" },
+        { "es": "6", "de": "6" },
+        { "es": "8", "de": "8" },
+        { "es": "2", "de": "2" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "1) Hallamos una primitiva F(x) de f(x) = 3x^2 - 2x: F(x) = x^3 - x^2. 2) Evaluamos los límites: F(2) = 2^3 - 2^2 = 8 - 4 = 4. F(0) = 0. 3) Restamos: F(2) - F(0) = 4 - 0 = 4.",
+        "de": "1) Stammfunktion F(x) von 3x^2 - 2x bestimmen: F(x) = x^3 - x^2. 2) Grenzen einsetzen: F(2) = 2^3 - 2^2 = 4. F(0) = 0. 3) Differenz berechnen: F(2) - F(0) = 4."
+      },
+      "tip": {
+        "es": "Recuerda sumar 1 al exponente y dividir por el mismo número al integrar potencias: la primitiva de 3x^2 es 3 · x^3 / 3 = x^3.",
+        "de": "Beim Integrieren von Potenzfunktionen wird der Exponent um 1 erhöht und durch den neuen Exponenten dividiert."
+      }
     }
   ]
 }
