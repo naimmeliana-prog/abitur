@@ -1221,10 +1221,14 @@ h6 { font-size: 12px; font-weight: 600; }
 .rounded-full { border-radius: var(--radius-full); }
 
 /* ─── Responsive ────────────────────────────────────────────── */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-5 { grid-template-columns: repeat(3, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .grid-5 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
