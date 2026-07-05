@@ -7,6 +7,44 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .operator-badge {
+      position: relative;
+      cursor: help;
+    }
+    .operator-badge::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%) translateY(5px);
+      background: rgba(30, 30, 40, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--color-gold);
+      color: var(--text-primary);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      font-size: 12px;
+      white-space: normal;
+      width: 250px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      box-shadow: var(--shadow-lg);
+      pointer-events: none;
+      line-height: 1.5;
+      text-align: left;
+      font-weight: normal;
+      text-transform: none;
+    }
+    .operator-badge:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
 </head>
 <body>
 <div class="app-shell">
@@ -159,8 +197,8 @@ function renderSubjectPanel() {
     <!-- Tabs within subject -->
     <div style="display:flex;gap:var(--space-sm);margin-bottom:var(--space-xl);flex-wrap:wrap;" id="subjectInnerTabs">
       <button class="difficulty-btn selected easy" onclick="showTab('info', this)">📋 Info</button>
-      ${data.taskTypes ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 Tipos de tarea</button>` : ''}
-      ${data.topics ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 Temario</button>` : ''}
+      ${(data.taskTypes || data.text_types) ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 Tipos de tarea</button>` : ''}
+      ${(data.topics || data.topics_by_semester || data.curriculum_topics || data.literary_epochs || data.contemporary_history) ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 Temario</button>` : ''}
       ${data.official_exams_archive ? `<button class="difficulty-btn" onclick="showTab('archive', this)">📜 Exámenes Reales</button>` : ''}
       ${data.trap_questions ? `<button class="difficulty-btn" onclick="showTab('traps', this)">⚠️ Trampas</button>` : ''}
       ${data.questions ? `<button class="difficulty-btn" onclick="showTab('questions', this)">❓ Preguntas tipo</button>` : ''}
@@ -271,6 +309,52 @@ function renderInfoTab(data, lang) {
   </div>`;
 }
 
+
+const OPERATORS_GLOSSARY = {
+  'Analysieren':           { es: 'Descomponer en partes, examinar recursos y su efecto — sin valorar.', de: 'In Einzelteile zerlegen, Mittel und deren Wirkung untersuchen.' },
+  'Untersuchen':           { es: 'Explorar metódicamente las características de un texto o fenómeno.', de: 'Systematisch Merkmale eines Textes/Phänomens herausarbeiten.' },
+  'Charakterisieren':      { es: 'Describir rasgos de un personaje o concepto con citas textuales.', de: 'Eigenschaften einer Figur/eines Textes belegt beschreiben.' },
+  'Beschreiben':           { es: 'Reproducir lo que se percibe de forma objetiva, sin interpretar.', de: 'Sachlich wiedergeben, was wahrgenommen wird — keine Deutung.' },
+  'Interpretieren':        { es: 'Explicar el sentido profundo de un texto en relación con su contexto.', de: 'Tiefere Bedeutung unter Einbezug des Kontextes erschließen.' },
+  'Deuten':                { es: 'Dar sentido a un símbolo o imagen desde una perspectiva argumentada.', de: 'Bedeutung aus begründeter eigener Perspektive erklären.' },
+  'Erläutern':             { es: 'Explicar en detalle con ejemplos concretos para facilitar la comprensión.', de: 'Mit konkreten Beispielen verständlich machen.' },
+  'Einordnen':             { es: 'Situar el texto en su contexto histórico, literario o filosófico.', de: 'In historischen/literarischen/philosophischen Kontext einbetten.' },
+  'Erörtern':              { es: 'Debatir argumentos a favor y en contra de una tesis con conclusión propia.', de: 'Pro- und Contra-Argumente abwägen, eigene Position vertreten.' },
+  'Argumentieren':         { es: 'Exponer razones sólidas para defender una postura de forma lógica.', de: 'Schlüssige Begründungen für einen Standpunkt liefern.' },
+  'Bewerten':              { es: 'Emitir un juicio valorativo fundamentado sobre un texto, persona o hecho.', de: 'Begründetes Urteil über Text, Person oder Geschehen abgeben.' },
+  'Diskutieren':           { es: 'Examinar distintas perspectivas con argumentos a favor y en contra.', de: 'Verschiedene Perspektiven mit Pro- und Contra-Argumenten beleuchten.' },
+  'Stellung nehmen':       { es: 'Adoptar una postura personal clara y razonada frente a una afirmación.', de: 'Eigene begründete Meinung zu einer Aussage äußern.' },
+  'Verfassen':             { es: 'Escribir un texto propio con el formato, registro y estructura adecuados.', de: 'Eigenen Text im passenden Register und Format verfassen.' },
+  'Vergleichen':           { es: 'Contrastar dos o más elementos señalando similitudes y diferencias.', de: 'Zwei oder mehr Elemente gegenüberstellen — Gemeinsamkeiten und Unterschiede.' },
+  'Outline':               { es: 'Resumir las ideas principales de forma estructurada y objetiva en inglés.', de: 'Hauptgedanken strukturiert und sachlich zusammenfassen.' },
+  'Analyse':               { es: 'Examinar recursos retóricos y su efecto en el lector.', de: 'Rhetorische Mittel und ihre Wirkung auf den Leser untersuchen.' },
+  'Comment on':            { es: 'Expresar y justificar una opinión personal sobre un texto o afirmación.', de: 'Persönliche Meinung zu einem Text ausdrücken und begründen.' },
+  'Examine':               { es: 'Investigar a fondo las implicaciones o aspectos de un tema.', de: 'Auswirkungen oder Aspekte eines Themas gründlich untersuchen.' },
+  'Explain':               { es: 'Dejar claros los motivos, causas o el funcionamiento de algo.', de: 'Gründe, Ursachen oder Funktionsweise verdeutlichen.' },
+  'Evaluate':              { es: 'Valorar hasta qué punto algo es efectivo o acertado con criterios.', de: 'Beurteilen, wie effektiv etwas ist, mit Begründung.' },
+  'Discuss':               { es: 'Explorar distintos puntos de vista sobre un tema de forma equilibrada.', de: 'Verschiedene Standpunkte zu einem Thema ausgewogen beleuchten.' },
+  'Resumir':               { es: 'Sintetizar las ideas esenciales del texto con palabras propias y objetividad.', de: 'Wesentliche Gedanken mit eigenen Worten sachlich wiedergeben.' },
+  'Analizar / Explicar':   { es: 'Descomponer la estructura, identificar el género y señalar los recursos lingüísticos.', de: 'Struktur, Textsorte und Sprachmittel herausarbeiten.' },
+  'Contextualizar':        { es: 'Relacionar el texto con su época, movimiento literario y la trayectoria del autor.', de: 'Werk in historische Epoche, Strömung und Autorbiografie einbetten.' },
+  'Disertar / Argumentar': { es: 'Desarrollar una postura propia con argumentos, ejemplos y contraargumentos.', de: 'Eigene Position mit Argumenten, Beispielen und Gegenargumenten.' },
+  'Angaben':               { es: 'Indicar solo el dato pedido, sin más. El operador más corto.', de: 'Nur den gefragten Wert nennen — ohne Erklärung.' },
+  'Angeben':               { es: 'Indicar solo el dato pedido, sin más. El operador más corto.', de: 'Nur den gefragten Wert nennen — ohne Erklärung.' },
+  'Aufzählen':             { es: 'Listar de forma ordenada y completa, sin conectores ni explicaciones.', de: 'Vollständige, geordnete Liste ohne Verbindungswörter.' },
+  'Berechnen':             { es: 'Efectuar un cálculo numérico mostrando el proceso paso a paso.', de: 'Numerische Rechnung mit vollständigem Rechenweg.' },
+  'Zeigen':                { es: 'Demostrar con un razonamiento matemático riguroso.', de: 'Mit streng mathematischer Argumentation beweisen.' },
+  'Herleiten':             { es: 'Derivar un resultado a partir de principios conocidos, mostrando cada paso.', de: 'Ergebnis aus bekannten Grundsätzen schrittweise ableiten.' },
+  'Skizzieren':            { es: 'Hacer un bosquejo o representación gráfica esquemática y rápida.', de: 'Schematische, schnelle grafische Darstellung anfertigen.' },
+  'Zeichnen':              { es: 'Trazar con precisión y exactitud (escala, etiquetas y ejes correctos).', de: 'Präzise grafische Darstellung mit Maßstab, Beschriftung und Achsen.' },
+  'Begründen':             { es: 'Justificar con argumentos matemáticos claros el porqué de un resultado.', de: 'Ergebnis klar mathematisch begründen.' },
+  'Modellieren':           { es: 'Traducir una situación real a un modelo matemático justificando simplificaciones.', de: 'Reale Situation in ein mathematisches Modell übersetzen.' },
+};
+
+function getOpTooltip(opName, lang) {
+  const entry = OPERATORS_GLOSSARY[opName];
+  if (!entry) return '';
+  return lang === 'de' ? (entry.de || entry.es) : (entry.es || entry.de);
+}
+
 function renderTasksTab(data, lang) {
   const tasks = data.taskTypes || data.text_types || [];
   return `<div class="grid-2 gap-lg">
@@ -283,59 +367,108 @@ function renderTasksTab(data, lang) {
         <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">${t.desc?.[lang] || t.desc?.es || t.desc || ''}</p>
         ${t.structure ? `<div style="font-size:12px;color:var(--text-muted);"><strong>Estructura:</strong> ${t.structure}</div>` : ''}
         ${t.register ? `<div style="font-size:12px;color:var(--text-muted);margin-top:4px;"><strong>Registro:</strong> ${t.register}</div>` : ''}
-        ${t.operators?.length ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">OPERADORES</div><div class="flex gap-xs flex-wrap">${t.operators.map(o => `<span class="badge badge-blue">${o}</span>`).join('')}</div></div>` : ''}
+        ${t.operators?.length ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">OPERADORES <span style="font-size:10px;opacity:0.5;">(pasa el cursor para ver la definición)</span></div><div class="flex gap-xs flex-wrap">${t.operators.map(o => {
+          const tip = getOpTooltip(o, lang);
+          return `<span class="badge badge-blue operator-badge"${tip ? ` data-tooltip="${tip.replace(/"/g,'&quot;')}"` : ''}>${o}</span>`;
+        }).join('')}</div></div>` : ''}
       </div>`).join('')}
   </div>`;
 }
+
 
 function renderTopicsTab(data, lang) {
-  const topics = data.topics || data.topics_by_semester || [];
-  return `<div class="flex-col gap-lg">
-    ${topics.map((t, ti) => `
-      <div class="card">
-        <h4 style="font-size:16px;margin-bottom:var(--space-md);">
-          ${t.semester ? `<span class="badge badge-gold" style="margin-right:8px;">Semestre ${t.semester}</span>` : ''}
-          ${t.name?.[lang] || t.name?.es || t.topic?.[lang] || t.topic?.es || t.name || ''}
-        </h4>
-        
-        ${t.summary ? `
-          <div style="margin-bottom:var(--space-md);">
-            <button class="btn btn-secondary btn-sm" onclick="const el = this.nextElementSibling; el.style.display = el.style.display === 'none' ? 'block' : 'none';" style="font-size:12px;padding:6px 12px;">
-              📖 Ver resumen del semestre
-            </button>
-            <div style="display:none;margin-top:var(--space-sm);padding:var(--space-md);background:rgba(245,200,66,0.03);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);line-height:1.6;">
-              ${t.summary?.[lang] || t.summary?.es}
-            </div>
-          </div>` : ''}
+  const stdTopics   = data.topics || data.topics_by_semester || [];
+  const currTopics  = data.curriculum_topics || [];
+  const litEpochs   = data.literary_epochs || [];
+  const contHistory = data.contemporary_history || [];
+  const keyAuthors  = data.key_authors || [];
 
-        ${t.philosophers ? `<div style="margin-bottom:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">FILÓSOFOS</div><div class="flex gap-xs flex-wrap">${t.philosophers.map(p=>`<span class="badge">${p}</span>`).join('')}</div></div>` : ''}
-        
-        ${t.subtopics ? `<div class="grid-2 gap-md">
-          ${t.subtopics.map((s, si) => {
-            const summaryText = s.summary?.[lang] || s.summary?.es || '';
-            const uniqueId = `subtopic_${ti}_${si}`;
-            return `<div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);display:flex;flex-direction:column;justify-content:space-between;">
-              <div>
-                <div style="font-weight:700;font-size:13px;margin-bottom:6px;">${s.name}</div>
-                ${s.items?.map(i => `<div style="font-size:12px;color:var(--text-muted);">• ${i}</div>`).join('')}
-              </div>
-              ${summaryText ? `
-                <div style="margin-top:var(--space-md);">
-                  <button class="btn btn-secondary btn-sm btn-full" onclick="document.getElementById('${uniqueId}').style.display = document.getElementById('${uniqueId}').style.display === 'none' ? 'block' : 'none'" style="font-size:11px;padding:6px;">
-                    📖 Ver resumen didáctico
-                  </button>
-                  <div id="${uniqueId}" style="display:none;margin-top:var(--space-sm);padding:var(--space-sm);background:rgba(245,200,66,0.03);border-left:2px solid var(--color-gold);border-radius:var(--radius-sm);font-size:12px;color:var(--text-secondary);line-height:1.5;">
-                    ${summaryText}
-                  </div>
-                </div>` : ''}
-            </div>`;
-          }).join('')}
-        </div>` : ''}
-        
-        ${t.key_questions ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">PREGUNTAS CLAVE</div>${t.key_questions.map(q=>`<div style="padding:8px 12px;background:rgba(245,200,66,0.05);border-left:2px solid var(--color-gold);margin-bottom:4px;font-size:13px;">${q[lang] || q.es}</div>`).join('')}</div>` : ''}
-      </div>`).join('')}
-  </div>`;
+  let html = '<div class="flex-col gap-lg">';
+
+  // ── Standard: topics / topics_by_semester (Filosofía, Mathe) ─────
+  stdTopics.forEach((t, ti) => {
+    html += `<div class="card">
+      <h4 style="font-size:16px;margin-bottom:var(--space-md);">
+        ${t.semester ? `<span class="badge badge-gold" style="margin-right:8px;">Semestre ${t.semester}</span>` : ''}
+        ${t.name?.[lang] || t.name?.es || t.topic?.[lang] || t.topic?.es || t.name || ''}
+      </h4>
+      ${t.summary ? `<div style="margin-bottom:var(--space-md);">
+        <button class="btn btn-secondary btn-sm" onclick="const el=this.nextElementSibling;el.style.display=el.style.display==='none'?'block':'none';" style="font-size:12px;padding:6px 12px;">📖 Ver resumen</button>
+        <div style="display:none;margin-top:var(--space-sm);padding:var(--space-md);background:rgba(245,200,66,0.03);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);line-height:1.6;">${t.summary?.[lang] || t.summary?.es}</div>
+      </div>` : ''}
+      ${t.philosophers ? `<div style="margin-bottom:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">FILÓSOFOS CLAVE</div><div class="flex gap-xs flex-wrap">${t.philosophers.map(p => `<span class="badge">${p}</span>`).join('')}</div></div>` : ''}
+      ${t.subtopics ? `<div class="grid-2 gap-md">${t.subtopics.map((s, si) => {
+        const st = s.summary?.[lang] || s.summary?.es || '';
+        const uid = 'st_' + ti + '_' + si;
+        return `<div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;">${s.name}</div>
+          ${s.items?.map(i => `<div style="font-size:12px;color:var(--text-muted);">• ${i}</div>`).join('') || ''}
+          ${st ? `<div style="margin-top:8px;"><button class="btn btn-secondary btn-sm btn-full" onclick="const e=document.getElementById('${uid}');e.style.display=e.style.display==='none'?'block':'none';" style="font-size:11px;padding:5px;">📖 Ver resumen</button><div id="${uid}" style="display:none;margin-top:6px;padding:10px;background:rgba(245,200,66,0.03);border-left:2px solid var(--color-gold);border-radius:6px;font-size:12px;color:var(--text-secondary);line-height:1.5;">${st}</div></div>` : ''}
+        </div>`;
+      }).join('')}</div>` : ''}
+      ${t.key_questions ? `<div style="margin-top:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">PREGUNTAS CLAVE</div>${t.key_questions.map(q => `<div style="padding:8px 12px;background:rgba(245,200,66,0.05);border-left:2px solid var(--color-gold);margin-bottom:4px;font-size:13px;">${q[lang] || q.es}</div>`).join('')}</div>` : ''}
+    </div>`;
+  });
+
+  // ── Inglés: curriculum_topics ─────────────────────────────────────
+  if (currTopics.length > 0) {
+    html += `<div class="card" style="border-color:rgba(100,180,255,0.25);"><h3 style="font-size:18px;font-weight:800;color:var(--color-gold);">🇬🇧 Temario DIA — Inglés (Curriculum Topics)</h3></div>`;
+    currTopics.forEach((t, ti) => {
+      html += `<div class="card">
+        <h4 style="font-size:15px;font-weight:700;margin-bottom:var(--space-md);">${t.name || ''}</h4>
+        ${t.focus_areas?.length ? `<div style="margin-bottom:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">ÁREAS DE ENFOQUE</div>${t.focus_areas.map(a => `<div style="padding:6px 10px;background:var(--glass-bg);border-radius:4px;border-left:2px solid rgba(245,200,66,0.4);font-size:12px;color:var(--text-secondary);margin-bottom:3px;">${a}</div>`).join('')}</div>` : ''}
+        ${t.summary ? `<div><button class="btn btn-secondary btn-sm" onclick="const el=this.nextElementSibling;el.style.display=el.style.display==='none'?'block':'none';" style="font-size:12px;padding:6px 12px;">📖 Ver resumen del tema</button><div style="display:none;margin-top:var(--space-sm);padding:var(--space-md);background:rgba(245,200,66,0.03);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);line-height:1.6;">${t.summary?.[lang] || t.summary?.es || ''}</div></div>` : ''}
+      </div>`;
+    });
+  }
+
+  // ── Alemán: literary_epochs ───────────────────────────────────────
+  if (litEpochs.length > 0) {
+    html += `<div class="card" style="border-color:rgba(255,180,60,0.25);"><h3 style="font-size:18px;font-weight:800;color:var(--color-gold);">🇩🇪 Épocas Literarias — Deutsch</h3></div>`;
+    litEpochs.forEach((e, ei) => {
+      html += `<div class="card">
+        <div class="flex items-center gap-md flex-wrap" style="margin-bottom:var(--space-md);">
+          <h4 style="font-size:15px;font-weight:700;flex:1;">${e.name}</h4>
+          ${e.key_works?.length ? `<span class="badge badge-blue" style="font-size:10px;">${e.key_works.length} obras clave</span>` : ''}
+        </div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.5;">${e.characteristics?.[lang] || e.characteristics?.es || ''}</p>
+        ${e.focus_themes ? `<div style="margin-bottom:var(--space-md);padding:10px 14px;background:rgba(245,200,66,0.04);border-left:3px solid var(--color-gold);border-radius:var(--radius-sm);font-size:12px;color:var(--text-secondary);line-height:1.5;"><strong>Temas clave:</strong> ${e.focus_themes?.[lang] || e.focus_themes?.es || ''}</div>` : ''}
+        ${e.key_works?.length ? `<div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">OBRAS CLAVE</div><div class="flex gap-xs flex-wrap">${e.key_works.map(w => `<span class="badge" style="font-size:11px;">${w}</span>`).join('')}</div></div>` : ''}
+      </div>`;
+    });
+  }
+
+  // ── Español: contemporary_history ────────────────────────────────
+  if (contHistory.length > 0) {
+    html += `<div class="card" style="border-color:rgba(255,80,80,0.2);"><h3 style="font-size:18px;font-weight:800;color:var(--color-gold);">🇪🇸 Historia Contemporánea — Español</h3></div>`;
+    contHistory.forEach((h) => {
+      html += `<div class="card">
+        <h4 style="font-size:15px;font-weight:700;margin-bottom:var(--space-md);">${h.period}</h4>
+        ${h.events?.length ? `<div style="margin-bottom:var(--space-md);"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">EVENTOS CLAVE</div>${h.events.map(ev => `<div style="padding:5px 10px;background:var(--glass-bg);border-left:2px solid rgba(245,200,66,0.3);border-radius:3px;font-size:12px;color:var(--text-secondary);margin-bottom:3px;">• ${ev}</div>`).join('')}</div>` : ''}
+        ${h.summary ? `<div><button class="btn btn-secondary btn-sm" onclick="const el=this.nextElementSibling;el.style.display=el.style.display==='none'?'block':'none';" style="font-size:12px;padding:6px 12px;">📖 Ver desarrollo</button><div style="display:none;margin-top:var(--space-sm);padding:var(--space-md);background:rgba(245,200,66,0.03);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);line-height:1.6;">${h.summary?.[lang] || h.summary?.es || ''}</div></div>` : ''}
+      </div>`;
+    });
+  }
+
+  // ── Español: key_authors ─────────────────────────────────────────
+  if (keyAuthors.length > 0) {
+    html += `<div class="card" style="border-color:rgba(150,100,255,0.2);"><h3 style="font-size:18px;font-weight:800;color:var(--color-gold);">✍️ Autores Clave — Español</h3></div>`;
+    keyAuthors.forEach(a => {
+      html += `<div class="card">
+        <div class="flex items-center gap-md flex-wrap" style="margin-bottom:var(--space-sm);">
+          <h4 style="font-size:15px;font-weight:700;flex:1;">${a.author}</h4>
+          <span class="badge badge-gold" style="font-size:10px;">${a.period}</span>
+        </div>
+        ${a.works?.length ? `<div style="margin-bottom:8px;"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">OBRAS</div><div class="flex gap-xs flex-wrap">${a.works.map(w => `<span class="badge" style="font-size:11px;">${w}</span>`).join('')}</div></div>` : ''}
+        ${a.themes?.length ? `<div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">TEMAS</div><div class="flex gap-xs flex-wrap">${a.themes.map(th => `<span class="badge" style="font-size:11px;background:rgba(100,200,255,0.1);">${th}</span>`).join('')}</div></div>` : ''}
+      </div>`;
+    });
+  }
+
+  html += '</div>';
+  return html;
 }
+
 
 function renderArchiveTab(data, lang) {
   const archive = data.official_exams_archive || [];

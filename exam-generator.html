@@ -337,17 +337,23 @@ async function loadOfficialExamsList() {
   const subjectId = selectedSubjects[0];
   const data = await ExamEngine.loadSubjectData(subjectId);
 
-  const exams = data?.official_exams || [];
-  if (exams.length === 0) {
+  // Merge both sources
+  const testExams    = (data?.official_exams || []).map(e => ({ ...e, _type: 'test' }));
+  const archiveExams = (data?.official_exams_archive || []).map(e => ({ ...e, _type: 'essay' }));
+  const allExams = [...testExams, ...archiveExams];
+
+  if (allExams.length === 0) {
     select.innerHTML = '<option value="">No hay exámenes oficiales cargados en este momento</option>';
     return;
   }
 
   const lang = App.currentLang;
-  select.innerHTML = exams.map(e => `
-    <option value="${e.id}">${e.title || e.name || 'Examen'} (${e.year})</option>
-  `).join('');
+  const typeLabel = { test: '📝 Test', essay: '✍️ Desarrollo' };
+  select.innerHTML = allExams.map(e =>
+    `<option value="${e.id}">[${typeLabel[e._type]}] ${e.title || e.name || 'Examen'} (${e.year})</option>`
+  ).join('');
 }
+
 
 function selectMode(mode) {
   selectedMode = mode;
@@ -497,7 +503,6 @@ function renderQuestion(idx) {
   const lang = App.currentLang;
   const q = exam.questions[idx];
   const total = exam.totalQuestions;
-  const answered = Object.keys(ExamEngine.answers).length;
   ExamEngine.currentQuestion = idx;
 
   document.getElementById('examProgress').style.width = `${(idx / total) * 100}%`;
@@ -505,6 +510,69 @@ function renderQuestion(idx) {
   document.getElementById('prevBtn').disabled = idx === 0;
   document.getElementById('nextBtn').textContent = idx === total - 1 ? '📤 Entregar' : 'Siguiente →';
 
+  const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
+  const yearBadge  = q.year  ? `<span class="badge badge-gold">${q.year}</span>` : '';
+
+  // ── ESSAY question ────────────────────────────────────────────────
+  if (q.isEssay) {
+    const qText        = q.question?.[lang] || q.question?.es || '';
+    const solutionText = q.solution?.[lang] || q.solution?.es || '';
+    const criteriaText = q.criteria?.[lang] || q.criteria?.es || '';
+    const recoText     = q.recommendation?.[lang] || q.recommendation?.es || '';
+    const maxPts       = q.points || 0;
+    const savedScore   = ExamEngine.essayScores?.[idx];
+    const uid          = `essay_sol_${idx}`;
+
+    document.getElementById('questionsContainer').innerHTML = `
+      <div class="question-card page-enter">
+        <div class="flex gap-sm items-center flex-wrap" style="margin-bottom:var(--space-sm);">
+          ${topicBadge}
+          <span class="badge" style="background:rgba(245,200,66,0.15);color:var(--color-gold);">✍️ Desarrollo — ${maxPts} puntos</span>
+        </div>
+
+        <div class="question-text" style="line-height:1.6;white-space:pre-line;">${qText}</div>
+
+        <div style="margin-top:var(--space-lg);">
+          <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:6px;">✏️ Tu borrador (no se evalúa — solo para practicar)</label>
+          <textarea id="essay_draft_${idx}" placeholder="Escribe aquí tu respuesta borrador..."
+            style="width:100%;min-height:150px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);color:var(--text-primary);padding:12px;font-size:13px;line-height:1.6;resize:vertical;font-family:inherit;"></textarea>
+        </div>
+
+        <div style="margin-top:var(--space-md);display:flex;gap:var(--space-sm);flex-wrap:wrap;align-items:center;">
+          <button onclick="const el=document.getElementById('${uid}');el.style.display=el.style.display==='none'?'block':'none';"
+            class="btn btn-secondary btn-sm" style="font-size:12px;">
+            💡 Ver solución modelo y criterios
+          </button>
+          ${maxPts > 0 ? `
+          <div style="display:flex;align-items:center;gap:8px;margin-left:auto;">
+            <label style="font-size:12px;color:var(--text-muted);">Tu puntuación:</label>
+            <input type="number" id="essay_score_${idx}" min="0" max="${maxPts}" value="${savedScore !== undefined ? savedScore : ''}"
+              placeholder="0-${maxPts}"
+              onchange="if(ExamEngine.essayScores===undefined)ExamEngine.essayScores={};ExamEngine.essayScores[${idx}]=Math.min(${maxPts},Math.max(0,parseInt(this.value)||0));"
+              style="width:70px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--text-primary);padding:6px 8px;font-size:13px;text-align:center;">
+            <span style="font-size:12px;color:var(--text-muted);">/ ${maxPts}</span>
+          </div>` : ''}
+        </div>
+
+        <div id="${uid}" style="display:none;margin-top:var(--space-md);">
+          ${solutionText ? `<div style="padding:var(--space-md);background:rgba(34,197,94,0.04);border-left:3px solid var(--color-success);border-radius:var(--radius-md);margin-bottom:var(--space-md);">
+            <div style="font-size:11px;color:var(--color-success);font-weight:700;margin-bottom:6px;">✅ SOLUCIÓN MODELO</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;white-space:pre-line;">${solutionText}</div>
+          </div>` : ''}
+          ${criteriaText ? `<div style="padding:var(--space-md);background:rgba(245,200,66,0.04);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);margin-bottom:var(--space-md);">
+            <div style="font-size:11px;color:var(--color-gold);font-weight:700;margin-bottom:6px;">📋 CRITERIOS DE CORRECCIÓN (Erwartungshorizont)</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;white-space:pre-line;">${criteriaText}</div>
+          </div>` : ''}
+          ${recoText ? `<div style="padding:var(--space-md);background:rgba(100,150,255,0.04);border-left:3px solid rgba(100,150,255,0.5);border-radius:var(--radius-md);">
+            <div style="font-size:11px;color:rgba(120,170,255,0.9);font-weight:700;margin-bottom:6px;">💬 RECOMENDACIÓN DEL CORRECTOR</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;">${recoText}</div>
+          </div>` : ''}
+        </div>
+      </div>`;
+    return;
+  }
+
+  // ── MULTIPLE-CHOICE question ──────────────────────────────────────
   const qText = q.question?.[lang] || q.question?.es || '';
   const isAnswered = ExamEngine.answers[idx] !== undefined;
   const isPractice = exam.mode === 'practice';
@@ -516,8 +584,6 @@ function renderQuestion(idx) {
     if (isAnswered) {
       if (oi === q.correct) cls = 'correct';
       else if (oi === ExamEngine.answers[idx]) cls = 'wrong';
-    } else if (!isAnswered) {
-      cls = '';
     }
     return `<div class="answer-option ${cls}" onclick="selectAnswer(${idx}, ${oi}, this)">
       <div class="answer-letter">${letter}</div>
@@ -538,9 +604,6 @@ function renderQuestion(idx) {
       </div>`;
   }
 
-  const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
-  const yearBadge = q.year ? `<span class="badge badge-gold">${q.year}</span>` : '';
-
   document.getElementById('questionsContainer').innerHTML = `
     <div class="question-card page-enter">
       <div class="question-number flex gap-sm items-center" style="margin-bottom:var(--space-sm);">
@@ -551,6 +614,7 @@ function renderQuestion(idx) {
       ${feedbackHTML}
     </div>`;
 }
+
 
 function selectAnswer(qIdx, optIdx, el) {
   if (ExamEngine.answers[qIdx] !== undefined) return; // Already answered
@@ -587,20 +651,46 @@ function nextQuestion() {
 
 function confirmSubmit() {
   const exam = ExamEngine.currentExam;
-  const answered = Object.keys(ExamEngine.answers).length;
-  const total = exam.totalQuestions;
-  if (answered < total) {
-    if (!confirm(`Tienes ${total - answered} pregunta(s) sin responder. ¿Entregar igualmente?`)) return;
+  const hasEssays = exam.questions.some(q => q.isEssay);
+  if (hasEssays) {
+    // For essay exams, check self-assessment scores are filled
+    const scored = Object.keys(ExamEngine.essayScores || {}).length;
+    const total  = exam.totalQuestions;
+    if (scored < total) {
+      if (!confirm(`Has puntuado ${scored} de ${total} tarea(s). ¿Entregar igualmente?`)) return;
+    }
+  } else {
+    const answered = Object.keys(ExamEngine.answers).length;
+    const total = exam.totalQuestions;
+    if (answered < total) {
+      if (!confirm(`Tienes ${total - answered} pregunta(s) sin responder. ¿Entregar igualmente?`)) return;
+    }
   }
   submitExam();
 }
 
 function submitExam() {
   ExamEngine.stopTimer();
+  const exam = ExamEngine.currentExam;
+  const hasEssays = exam.questions.some(q => q.isEssay);
+
+  if (hasEssays) {
+    // Essay exam: calculate score from self-assessment
+    const totalPoints = exam.totalPoints || exam.questions.reduce((s, q) => s + (q.points || 0), 0);
+    const earnedPoints = Object.values(ExamEngine.essayScores || {}).reduce((s, v) => s + v, 0);
+    const percentage = totalPoints > 0 ? Math.round((earnedPoints / totalPoints) * 100) : 0;
+    const timeUsed = Math.floor((Date.now() - ExamEngine.startTime) / 1000);
+    const score = { correct: earnedPoints, wrong: 0, total: totalPoints, percentage, timeUsed, isEssay: true };
+    ExamEngine.stopTimer();
+    showResults(score);
+    return;
+  }
+
   const score = ExamEngine.submit();
   if (!score) return;
   showResults(score);
 }
+
 
 function showResults(score) {
   document.getElementById('examPanel').classList.add('hidden');
@@ -628,12 +718,12 @@ function showResults(score) {
 
       <div class="grid-3 gap-md" style="margin:var(--space-xl) 0;">
         <div class="card card-sm text-center">
-          <div style="font-size:24px;font-weight:800;color:var(--color-success);">${score.correct}</div>
-          <div style="font-size:11px;color:var(--text-muted);" data-i18n="exam.correct">Correctas</div>
+          <div style="font-size:24px;font-weight:800;color:var(--color-success);">${score.isEssay ? score.correct + 'pts' : score.correct}</div>
+          <div style="font-size:11px;color:var(--text-muted);">${score.isEssay ? 'Puntos obtenidos' : 'Correctas'}</div>
         </div>
         <div class="card card-sm text-center">
-          <div style="font-size:24px;font-weight:800;color:var(--color-error);">${score.wrong}</div>
-          <div style="font-size:11px;color:var(--text-muted);" data-i18n="exam.wrong">Incorrectas</div>
+          <div style="font-size:24px;font-weight:800;color:${score.isEssay ? 'var(--color-gold)' : 'var(--color-error)'};">${score.isEssay ? score.total + 'pts' : score.wrong}</div>
+          <div style="font-size:11px;color:var(--text-muted);">${score.isEssay ? 'Puntos totales' : 'Incorrectas'}</div>
         </div>
         <div class="card card-sm text-center">
           <div style="font-size:24px;font-weight:800;color:var(--color-gold);">${points}/15</div>
@@ -643,7 +733,7 @@ function showResults(score) {
 
       <div style="font-size:13px;color:var(--text-muted);margin-bottom:var(--space-xl);">
         ⏱️ Tiempo: ${ExamEngine.formatTime(score.timeUsed)} |
-        📝 ${score.total} preguntas
+        ${score.isEssay ? `✍️ ${exam.totalQuestions} tareas de desarrollo` : `📝 ${score.total} preguntas`}
       </div>
 
       <div class="flex gap-md justify-center flex-wrap">

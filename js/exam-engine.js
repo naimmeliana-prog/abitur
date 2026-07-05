@@ -18,29 +18,64 @@ const ExamEngine = {
     if (officialExamId) {
       const subjectId = subjects[0];
       const data = ExamEngine.getSubjectData(subjectId);
-      const officialExam = (data?.official_exams || []).find(e => e.id === officialExamId);
+
+      // Search in both official_exams and official_exams_archive
+      const officialExam =
+        (data?.official_exams || []).find(e => e.id === officialExamId) ||
+        (data?.official_exams_archive || []).find(e => e.id === officialExamId);
+
       if (officialExam) {
-        const questions = (officialExam.questions || []).map(q => ({ ...q, subjectId }));
+        let questions;
+
+        // Type A: multiple-choice (official_exams with questions array)
+        if (officialExam.questions) {
+          questions = officialExam.questions.map(q => ({ ...q, subjectId, isEssay: false }));
+        }
+        // Type B: development exam (official_exams_archive with blocks)
+        else if (officialExam.blocks) {
+          questions = [];
+          officialExam.blocks.forEach(block => {
+            (block.tasks || []).forEach(task => {
+              questions.push({
+                id: task.title,
+                subjectId,
+                isEssay: true,
+                topic: block.name,
+                question: task.question,
+                solution: task.solution,
+                criteria: task.criteria,
+                recommendation: task.recommendation,
+                points: task.points || 0,
+              });
+            });
+          });
+        } else {
+          questions = [];
+        }
+
         const exam = {
           id: Date.now(),
           name: officialExam.title || officialExam.name || 'Examen Oficial',
           mode,
           subjects,
           difficulty: 'all',
-          questions: questions,
+          questions,
           totalQuestions: questions.length,
           timeLimit: mode === 'simulacro' ? this.calcTimeLimit(subjects) : null,
           createdAt: new Date().toISOString(),
           year: officialExam.year || 'Oficial',
           isOfficial: true,
+          totalPoints: questions.reduce((acc, q) => acc + (q.points || 0), 0),
         };
         this.currentExam = exam;
         this.currentQuestion = 0;
         this.answers = {};
+        this.essayScores = {};
         this.startTime = Date.now();
         return exam;
       }
     }
+
 
     const allQuestions = [];
 

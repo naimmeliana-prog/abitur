@@ -21,6 +21,22 @@
       "tip": "Die Kommission stellt IMMER mindestens EINE unerwartete Frage, um zu sehen, ob du verstehst oder auswendig gelernt hast."
     }
   },
+  "taskTypes": [
+    {
+      "id": "vortrag",
+      "name": { "es": "Presentación oral (Vortrag)", "de": "Vortrag / Präsentation" },
+      "desc": { "es": "Presentar de forma estructurada el análisis de un fragmento de texto o estímulo filosófico durante 5-7 minutos. Debe incluir: reconstrucción del argumento, tesis central del autor y comparación conceptual.", "de": "Strukturierte Präsentation der Analyse eines philosophischen Textausschnitts (5-7 Minuten) mit Rekonstruktion der Argumentation und Vergleich." },
+      "structure": "1. Exposición del tema y tesis central → 2. Reconstrucción lógica del argumento → 3. Comparación conceptual con otro autor → 4. Conclusión / Valoración inicial",
+      "operators": ["Analysieren", "Vergleichen"]
+    },
+    {
+      "id": "kolloquium",
+      "name": { "es": "Coloquio (Kolloquium)", "de": "Kolloquium / Prüfungsgespräch" },
+      "desc": { "es": "Responder a las preguntas del tribunal (3-5 minutos) que conectan el fragmento analizado con otros filósofos y temáticas de los 4 semestres del DIA.", "de": "Beantwortung von Vertiefungsfragen der Prüfungskommission (3-5 Minuten), die den Text auf andere Epochen und Denker beziehen." },
+      "structure": "Respuestas fluidas en alemán utilizando terminología filosófica precisa, demostrando visión de conjunto de la materia.",
+      "operators": ["Erörtern", "Stellung nehmen"]
+    }
+  ],
   "keyOperators": [
     { "op": "Analysieren", "meaning": { "es": "Describir el fragmento de texto filosófico, reconstruyendo de forma objetiva la estructura de sus argumentos y la tesis central del autor.", "de": "Einen philosophischen Text analysieren und den argumentativen Aufbau sowie die Hauptthese des Autors sachlich rekonstruieren." }, "trap": { "es": "Trampa: Empezar a criticar las ideas del filósofo en la fase de análisis. Primero debes demostrar que comprendes objetivamente qué dice el autor.", "de": "Falle: Bereits in der Analysephase die Thesen kritisieren. Zuerst muss eine objektive Rekonstruktion erfolgen." } },
     { "op": "Vergleichen", "meaning": { "es": "Contrastar las tesis del texto propuesto con las de otro filósofo estudiado en los semestres del DIA, señalando similitudes y diferencias esenciales.", "de": "Die Thesen des Textes mit einer anderen philosophischen Position kontrastieren und Gemeinsamkeiten sowie Unterschiede aufzeigen." }, "trap": { "es": "Trampa: Exponer las teorías de ambos autores por separado sin enlazarlas dinámicamente mediante puntos de comparación específicos.", "de": "Falle: Beide Positionen isoliert nacheinander darstellen, statt sie kriterienorientiert zu vergleichen." } },
