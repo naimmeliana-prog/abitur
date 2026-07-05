@@ -1,6 +1,9 @@
 {
   "subject": "deutsch",
-  "displayName": { "es": "Alemán (Deutsch)", "de": "Deutsch" },
+  "displayName": {
+    "es": "Alemán (Deutsch)",
+    "de": "Deutsch"
+  },
   "icon": "🇩🇪",
   "examType": "written",
   "duration": 300,
@@ -12,39 +15,133 @@
   "taskTypes": [
     {
       "id": "textanalyse",
-      "name": { "es": "Análisis de texto (Textanalyse)", "de": "Textanalyse" },
-      "desc": { "es": "Analizar textos literarios (prosa, poesía, drama) o pragmáticos.", "de": "Literarische oder pragmatische Texte analysieren." },
+      "name": {
+        "es": "Análisis de texto (Textanalyse)",
+        "de": "Textanalyse"
+      },
+      "desc": {
+        "es": "Analizar textos literarios (prosa, poesía, drama) o pragmáticos.",
+        "de": "Literarische oder pragmatische Texte analysieren."
+      },
       "weight": "40%",
-      "operators": ["Analysieren", "Untersuchen", "Charakterisieren", "Beschreiben"]
+      "operators": [
+        "Analysieren",
+        "Untersuchen",
+        "Charakterisieren",
+        "Beschreiben"
+      ]
     },
     {
       "id": "interpretation",
-      "name": { "es": "Interpretación literaria (Interpretation)", "de": "Interpretation" },
-      "desc": { "es": "Interpretar el significado profundo de un texto, relacionarlo con su contexto histórico/literario.", "de": "Tiefere Bedeutung eines Textes erschließen, historisch/literarisch einbetten." },
+      "name": {
+        "es": "Interpretación literaria (Interpretation)",
+        "de": "Interpretation"
+      },
+      "desc": {
+        "es": "Interpretar el significado profundo de un texto, relacionarlo con su contexto histórico/literario.",
+        "de": "Tiefere Bedeutung eines Textes erschließen, historisch/literarisch einbetten."
+      },
       "weight": "30%",
-      "operators": ["Interpretieren", "Deuten", "Erläutern", "Einordnen"]
+      "operators": [
+        "Interpretieren",
+        "Deuten",
+        "Erläutern",
+        "Einordnen"
+      ]
     },
     {
       "id": "eroerterung",
-      "name": { "es": "Disertación (Erörterung)", "de": "Erörterung" },
-      "desc": { "es": "Argumentar a favor y en contra de una tesis. Textgebundene o freie Erörterung.", "de": "Pro und Kontra einer These argumentieren." },
+      "name": {
+        "es": "Disertación (Erörterung)",
+        "de": "Erörterung"
+      },
+      "desc": {
+        "es": "Argumentar a favor y en contra de una tesis. Textgebundene o freie Erörterung.",
+        "de": "Pro und Kontra einer These argumentieren."
+      },
       "weight": "20%",
-      "operators": ["Erörtern", "Argumentieren", "Bewerten", "Diskutieren", "Stellung nehmen"]
+      "operators": [
+        "Erörtern",
+        "Argumentieren",
+        "Bewerten",
+        "Diskutieren",
+        "Stellung nehmen"
+      ]
     },
     {
       "id": "materialgestuetzt",
-      "name": { "es": "Escritura basada en material (Materialgestütztes Schreiben)", "de": "Materialgestütztes Schreiben" },
-      "desc": { "es": "Redactar un texto informativo o argumentativo basándose en materiales dados.", "de": "Informierenden oder argumentierenden Text auf Basis von Materialien verfassen." },
+      "name": {
+        "es": "Escritura basada en material (Materialgestütztes Schreiben)",
+        "de": "Materialgestütztes Schreiben"
+      },
+      "desc": {
+        "es": "Redactar un texto informativo o argumentativo basándose en materiales dados.",
+        "de": "Informierenden oder argumentierenden Text auf Basis von Materialien verfassen."
+      },
       "weight": "10%",
-      "operators": ["Verfassen", "Schreiben", "Gestalten"]
+      "operators": [
+        "Verfassen",
+        "Schreiben",
+        "Gestalten"
+      ]
     }
   ],
   "keyOperators": [
-    { "op": "Analysieren", "meaning": { "es": "Descomponer el texto en sus partes y examinarlas. No interpretar, solo describir y nombrar.", "de": "Text in Teile zerlegen und untersuchen. Nicht interpretieren, nur beschreiben." }, "trap": { "es": "Trampa: no confundir con interpretar. El análisis es descriptivo, no valorativo.", "de": "Falle: nicht mit Interpretieren verwechseln. Analyse ist deskriptiv." } },
-    { "op": "Interpretieren", "meaning": { "es": "Explicar el significado, la intención del autor y el efecto en el lector. Requiere argumentación.", "de": "Bedeutung, Autorenabsicht und Leserwirkung erklären. Braucht Argumentation." }, "trap": { "es": "Trampa: sin citar el texto, la interpretación queda sin fundamento.", "de": "Falle: Ohne Textzitate bleibt die Interpretation unbelegt." } },
-    { "op": "Erörtern", "meaning": { "es": "Presentar argumentos a favor y en contra de una tesis de forma estructurada.", "de": "Argumente für und gegen eine These strukturiert darstellen." }, "trap": { "es": "Trampa: olvidar la posición personal al final (Fazit).", "de": "Falle: eigene Position am Ende (Fazit) vergessen." } },
-    { "op": "Charakterisieren", "meaning": { "es": "Describir las características de un personaje, texto o concepto citando el texto.", "de": "Eigenschaften einer Figur, eines Textes oder Begriffs mit Belegen beschreiben." }, "trap": { "es": "Trampa: no añadir valoración personal, solo descripción.", "de": "Falle: keine eigene Wertung, nur Beschreibung." } },
-    { "op": "Verfassen", "meaning": { "es": "Escribir un texto propio (editorial, comentario, ensayo) con estructura y registro adecuados.", "de": "Eigenen Text (Leitartikel, Kommentar, Essay) mit passendem Register verfassen." }, "trap": { "es": "Trampa: olvidar el registro (formal/coloquial) adecuado al tipo de texto.", "de": "Falle: falsches Register für die Textsorte wählen." } }
+    {
+      "op": "Analysieren",
+      "meaning": {
+        "es": "Descomponer el texto en sus partes y examinarlas. No interpretar, solo describir y nombrar.",
+        "de": "Text in Teile zerlegen und untersuchen. Nicht interpretieren, nur beschreiben."
+      },
+      "trap": {
+        "es": "Trampa: no confundir con interpretar. El análisis es descriptivo, no valorativo.",
+        "de": "Falle: nicht mit Interpretieren verwechseln. Analyse ist deskriptiv."
+      }
+    },
+    {
+      "op": "Interpretieren",
+      "meaning": {
+        "es": "Explicar el significado, la intención del autor y el efecto en el lector. Requiere argumentación.",
+        "de": "Bedeutung, Autorenabsicht und Leserwirkung erklären. Braucht Argumentation."
+      },
+      "trap": {
+        "es": "Trampa: sin citar el texto, la interpretación queda sin fundamento.",
+        "de": "Falle: Ohne Textzitate bleibt die Interpretation unbelegt."
+      }
+    },
+    {
+      "op": "Erörtern",
+      "meaning": {
+        "es": "Presentar argumentos a favor y en contra de una tesis de forma estructurada.",
+        "de": "Argumente für und gegen eine These strukturiert darstellen."
+      },
+      "trap": {
+        "es": "Trampa: olvidar la posición personal al final (Fazit).",
+        "de": "Falle: eigene Position am Ende (Fazit) vergessen."
+      }
+    },
+    {
+      "op": "Charakterisieren",
+      "meaning": {
+        "es": "Describir las características de un personaje, texto o concepto citando el texto.",
+        "de": "Eigenschaften einer Figur, eines Textes oder Begriffs mit Belegen beschreiben."
+      },
+      "trap": {
+        "es": "Trampa: no añadir valoración personal, solo descripción.",
+        "de": "Falle: keine eigene Wertung, nur Beschreibung."
+      }
+    },
+    {
+      "op": "Verfassen",
+      "meaning": {
+        "es": "Escribir un texto propio (editorial, comentario, ensayo) con estructura y registro adecuados.",
+        "de": "Eigenen Text (Leitartikel, Kommentar, Essay) mit passendem Register verfassen."
+      },
+      "trap": {
+        "es": "Trampa: olvidar el registro (formal/coloquial) adecuado al tipo de texto.",
+        "de": "Falle: falsches Register für die Textsorte wählen."
+      }
+    }
   ],
   "literary_epochs": [
     {
@@ -53,7 +150,10 @@
         "es": "Búsqueda de armonía, humanismo, equilibrio entre deber e inclinación (Neigung). Retorno a modelos de la Antigüedad Clásica. Concepto de 'Schöne Seele' (alma bella). Formato dramático formal (verso blanco / Blankvers).",
         "de": "Streben nach Harmonie, Humanität und Ausgewogenheit. Orientierung an der antiken Klassik. Idee der 'schönen Seele'. Streng geformte Dramen (Blankvers)."
       },
-      "key_works": ["Goethe: Iphigenie auf Tauris, Faust I", "Schiller: Maria Stuart, Wilhelm Tell"],
+      "key_works": [
+        "Goethe: Iphigenie auf Tauris, Faust I",
+        "Schiller: Maria Stuart, Wilhelm Tell"
+      ],
       "focus_themes": {
         "es": "Educación moral del ser humano, autolimitación, ideal de la humanidad noble y pura.",
         "de": "Erziehung des Menschen zur Humanität, Selbstbegrenzung, Versöhnung von Pflicht und Neigung."
@@ -65,7 +165,10 @@
         "es": "Rechazo del racionalismo ilustrado y de la industrialización. Enfoque en el subconsciente, los sueños, la fantasía y la ironía romántica. Los motivos centrales son el viaje (Wanderlust), la noche, la ventana y el anhelo infinito (Sehnsucht).",
         "de": "Gegenbewegung zur Aufklärung und Industrialisierung. Fokus auf Gefühl, Traum, Fantasie und das Unbewusste. Leitmotive: Sehnsucht, blaue Blume, Wandern, Nacht."
       },
-      "key_works": ["Eichendorff: Aus dem Leben eines Taugenichts, Gedichte", "E.T.A. Hoffmann: Der Sandmann, Das Fräulein von Scuderi"],
+      "key_works": [
+        "Eichendorff: Aus dem Leben eines Taugenichts, Gedichte",
+        "E.T.A. Hoffmann: Der Sandmann, Das Fräulein von Scuderi"
+      ],
       "focus_themes": {
         "es": "Fusión del arte y la vida (Universalpoesie), la naturaleza mística frente a la fría técnica.",
         "de": "Progressive Universalpoesie, Sehnsucht nach dem Unendlichen, das Schaurige und Unheimliche."
@@ -77,7 +180,12 @@
         "es": "Refleja el horror de la Primera Guerra Mundial, la deshumanización urbana y el miedo a la pérdida del yo (Ich-Zerfall). Estilo subjetivo, uso de metáforas violentas, colores intensos y ruptura del orden gramatical tradicional.",
         "de": "Ausdruck des Schreckens des Ersten Weltkriegs, der Entfremdung in der Großstadt und des drohenden Ich-Zerfalls. Ästhetik des Hässlichen, Farbsymbolik."
       },
-      "key_works": ["Heym: Der Gott der Stadt", "Kafka: Die Verwandlung", "Trakl: Grodek, Gedichte", "Sternheim: Die Hose"],
+      "key_works": [
+        "Heym: Der Gott der Stadt",
+        "Kafka: Die Verwandlung",
+        "Trakl: Grodek, Gedichte",
+        "Sternheim: Die Hose"
+      ],
       "focus_themes": {
         "es": "Apocalipsis urbano, alienación de la sociedad industrial, rebelión contra la autoridad paterna.",
         "de": "Großstadtlyrik, Apokalypse, Kriegserfahrung, Vater-Sohn-Konflikt, Kritik am Bürgertum."
@@ -89,7 +197,10 @@
         "es": "Refleja la destrucción material y moral de Alemania tras el nacionalsocialismo. Lenguaje sobrio y directo sin adornos (Kahlschlagliteratur / lenguaje de tala).",
         "de": "Auseinandersetzung mit Krieg, Zerstörung, Heimkehr und Schuld. Kahlschlag der Sprache (nüchtern, schnörkellos, realitätsnah)."
       },
-      "key_works": ["Wolfgang Borchert: Draußen vor der Tür, An diesem Dienstag", "Heinrich Böll: Wanderer, kommst du nach Spa..."],
+      "key_works": [
+        "Wolfgang Borchert: Draußen vor der Tür, An diesem Dienstag",
+        "Heinrich Böll: Wanderer, kommst du nach Spa..."
+      ],
       "focus_themes": {
         "es": "El trauma de la guerra, la culpa colectiva, la soledad del retornado (Heimkehrer).",
         "de": "Trauma der Heimkehrer, Schuldfrage, existenzielle Orientierungslosigkeit in Ruinen."
@@ -101,7 +212,11 @@
         "es": "Diversidad temática e híbridos genéricos. Enfoque en la globalización, la identidad digital, la migración y la memoria histórica tras la reunificación de Alemania.",
         "de": "Pluralismus der Stile und Themen. Beschäftigung mit Globalisierung, Digitalisierung, Migration und der Wendezeit."
       },
-      "key_works": ["Bernhard Schlink: Der Vorleser", "Juli Zeh: Corpus Delicti, Unterleuten", "Wolfgang Herrndorf: Tschick"],
+      "key_works": [
+        "Bernhard Schlink: Der Vorleser",
+        "Juli Zeh: Corpus Delicti, Unterleuten",
+        "Wolfgang Herrndorf: Tschick"
+      ],
       "focus_themes": {
         "es": "El control biopolítico del Estado, la memoria del Holocausto, crisis de identidad individual en el siglo XXI.",
         "de": "Vergangenheitsbewältigung, Naturwissenschaft und Ethik, Gesellschaftskritik, Dystopie."
@@ -109,21 +224,78 @@
     }
   ],
   "pflichtlektüren": {
-    "note": { "es": "Las lecturas obligatorias cambian cada 2 años para la Región 5. Consultar siempre la circular oficial del DSV.", "de": "Pflichtlektüren wechseln alle 2 Jahre für Region 5." },
-    "categories": ["Erzählende Prosa (novela/cuento)", "Lyrik (poesía)", "Drama (teatro)"],
-    "typical_authors": ["Goethe", "Schiller", "Kleist", "Büchner", "Kafka", "Brecht", "Frisch", "Dürrenmatt", "Zeh"]
+    "note": {
+      "es": "Las lecturas obligatorias cambian cada 2 años para la Región 5. Consultar siempre la circular oficial del DSV.",
+      "de": "Pflichtlektüren wechseln alle 2 Jahre für Region 5."
+    },
+    "categories": [
+      "Erzählende Prosa (novela/cuento)",
+      "Lyrik (poesía)",
+      "Drama (teatro)"
+    ],
+    "typical_authors": [
+      "Goethe",
+      "Schiller",
+      "Kleist",
+      "Büchner",
+      "Kafka",
+      "Brecht",
+      "Frisch",
+      "Dürrenmatt",
+      "Zeh"
+    ]
   },
   "rhetorical_devices": [
-    { "name": "Metapher", "es": "Metáfora", "example": "'Das Leben ist ein Spiel'" },
-    { "name": "Personifikation", "es": "Personificación", "example": "'Der Wind flüstert'" },
-    { "name": "Alliteration", "es": "Aliteración", "example": "'Mit Mühe und Macht'" },
-    { "name": "Anapher", "es": "Anáfora", "example": "Repetición al inicio de varios versos" },
-    { "name": "Klimax", "es": "Clímax/Gradación ascendente", "example": "'Ich kam, sah, siegte'" },
-    { "name": "Antithese", "es": "Antítesis", "example": "'Klein, aber fein'" },
-    { "name": "Ironie", "es": "Ironía", "example": "Lo contrario de lo que se dice" },
-    { "name": "Parallelismus", "es": "Paralelismo", "example": "Estructuras sintácticas paralelas" },
-    { "name": "Hyperbel", "es": "Hipérbole", "example": "'Ich habe dir das schon tausendmal gesagt'" },
-    { "name": "Euphemismus", "es": "Eufemismo", "example": "'Entschlafen' statt 'sterben'" }
+    {
+      "name": "Metapher",
+      "es": "Metáfora",
+      "example": "'Das Leben ist ein Spiel'"
+    },
+    {
+      "name": "Personifikation",
+      "es": "Personificación",
+      "example": "'Der Wind flüstert'"
+    },
+    {
+      "name": "Alliteration",
+      "es": "Aliteración",
+      "example": "'Mit Mühe und Macht'"
+    },
+    {
+      "name": "Anapher",
+      "es": "Anáfora",
+      "example": "Repetición al inicio de varios versos"
+    },
+    {
+      "name": "Klimax",
+      "es": "Clímax/Gradación ascendente",
+      "example": "'Ich kam, sah, siegte'"
+    },
+    {
+      "name": "Antithese",
+      "es": "Antítesis",
+      "example": "'Klein, aber fein'"
+    },
+    {
+      "name": "Ironie",
+      "es": "Ironía",
+      "example": "Lo contrario de lo que se dice"
+    },
+    {
+      "name": "Parallelismus",
+      "es": "Paralelismo",
+      "example": "Estructuras sintácticas paralelas"
+    },
+    {
+      "name": "Hyperbel",
+      "es": "Hipérbole",
+      "example": "'Ich habe dir das schon tausendmal gesagt'"
+    },
+    {
+      "name": "Euphemismus",
+      "es": "Eufemismo",
+      "example": "'Entschlafen' statt 'sterben'"
+    }
   ],
   "exam_structure": {
     "es": "El examen presenta 1 texto (literario o pragmático) y pide 3 partes: 1) Analyse/Beschreibung, 2) Interpretation/Erörterung, 3) Stellungnahme o Materialgestütztes Schreiben. Total: 300 minutos.",
@@ -131,32 +303,92 @@
   },
   "trap_questions": [
     {
-      "trap": { "es": "Escribir el análisis como un resumen del texto", "de": "Analyse als Inhaltsangabe schreiben" },
-      "avoid": { "es": "El análisis NO es un resumen. Debes nombrar los recursos estilísticos y su efecto, no contar lo que pasa.", "de": "Analyse ist keine Inhaltsangabe. Stilmittel benennen und ihre Wirkung erklären." }
+      "trap": {
+        "es": "Escribir el análisis como un resumen del texto",
+        "de": "Analyse als Inhaltsangabe schreiben"
+      },
+      "avoid": {
+        "es": "El análisis NO es un resumen. Debes nombrar los recursos estilísticos y su efecto, no contar lo que pasa.",
+        "de": "Analyse ist keine Inhaltsangabe. Stilmittel benennen und ihre Wirkung erklären."
+      }
     },
     {
-      "trap": { "es": "No citar el texto al interpretar", "de": "Beim Interpretieren den Text nicht zitieren" },
-      "avoid": { "es": "SIEMPRE cita con número de línea: 'Wie in Zeile 12 zu sehen ist...'", "de": "IMMER mit Zeilennummer belegen: 'Wie in Zeile 12 zu sehen ist...'" }
+      "trap": {
+        "es": "No citar el texto al interpretar",
+        "de": "Beim Interpretieren den Text nicht zitieren"
+      },
+      "avoid": {
+        "es": "SIEMPRE cita con número de línea: 'Wie in Zeile 12 zu sehen ist...'",
+        "de": "IMMER mit Zeilennummer belegen: 'Wie in Zeile 12 zu sehen ist...'"
+      }
     },
     {
-      "trap": { "es": "Confundir una Erörterung con una Analyse", "de": "Erörterung mit Analyse verwechseln" },
-      "avoid": { "es": "Erörterung = argumentación pro/contra con tesis propia. Analyse = descripción objetiva del texto.", "de": "Erörterung = Pro/Contra-Argumentation. Analyse = objektive Textbeschreibung." }
+      "trap": {
+        "es": "Confundir una Erörterung con una Analyse",
+        "de": "Erörterung mit Analyse verwechseln"
+      },
+      "avoid": {
+        "es": "Erörterung = argumentación pro/contra con tesis propia. Analyse = descripción objetiva del texto.",
+        "de": "Erörterung = Pro/Contra-Argumentation. Analyse = objektive Textbeschreibung."
+      }
     },
     {
-      "trap": { "es": "Usar vocabulario demasiado informal", "de": "Zu umgangssprachliches Vokabular verwenden" },
-      "avoid": { "es": "El registro siempre debe ser formal y elevado. Evita: 'Das ist irgendwie komisch', usa: 'Dies erscheint merkwürdig'", "de": "Register immer formal und gehoben. Vermeiden: 'irgendwie komisch', besser: 'erscheint merkwürdig'" }
+      "trap": {
+        "es": "Usar vocabulario demasiado informal",
+        "de": "Zu umgangssprachliches Vokabular verwenden"
+      },
+      "avoid": {
+        "es": "El registro siempre debe ser formal y elevado. Evita: 'Das ist irgendwie komisch', usa: 'Dies erscheint merkwürdig'",
+        "de": "Register immer formal und gehoben. Vermeiden: 'irgendwie komisch', besser: 'erscheint merkwürdig'"
+      }
     }
   ],
   "exam_tips": [
-    { "es": "Lee el texto COMPLETO antes de empezar. Subráya los recursos estilísticos directamente.", "de": "Text KOMPLETT lesen, bevor du anfängst. Stilmittel direkt unterstreichen." },
-    { "es": "Estructura fija: Einleitung (intro) → Hauptteil (desarrollo) → Schluss (conclusión).", "de": "Feste Struktur: Einleitung → Hauptteil → Schluss." },
-    { "es": "Usa conectores: 'Darüber hinaus', 'Im Gegensatz dazu', 'Zusammenfassend lässt sich sagen...'", "de": "Konnektoren verwenden: 'Darüber hinaus', 'Im Gegensatz dazu', 'Zusammenfassend...'" },
-    { "es": "El 'Erwartungshorizont' (criterio de corrección) siempre valora: estructura, argumentación, citas y expresión lingüística.", "de": "Der Erwartungshorizont bewertet immer: Struktur, Argumentation, Zitate und Sprachausdruck." }
+    {
+      "es": "Lee el texto COMPLETO antes de empezar. Subráya los recursos estilísticos directamente.",
+      "de": "Text KOMPLETT lesen, bevor du anfängst. Stilmittel direkt unterstreichen."
+    },
+    {
+      "es": "Estructura fija: Einleitung (intro) → Hauptteil (desarrollo) → Schluss (conclusión).",
+      "de": "Feste Struktur: Einleitung → Hauptteil → Schluss."
+    },
+    {
+      "es": "Usa conectores: 'Darüber hinaus', 'Im Gegensatz dazu', 'Zusammenfassend lässt sich sagen...'",
+      "de": "Konnektoren verwenden: 'Darüber hinaus', 'Im Gegensatz dazu', 'Zusammenfassend...'"
+    },
+    {
+      "es": "El 'Erwartungshorizont' (criterio de corrección) siempre valora: estructura, argumentación, citas y expresión lingüística.",
+      "de": "Der Erwartungshorizont bewertet immer: Struktur, Argumentation, Zitate und Sprachausdruck."
+    }
   ],
   "resources": [
-    { "name": "IQB Aufgabenpool", "url": "https://www.iqb.hu-berlin.de", "desc": { "es": "Pool oficial de exámenes DIA para Deutsch", "de": "Offizieller DIA-Aufgabenpool für Deutsch" }, "type": "official" },
-    { "name": "FragDenStaat Archiv", "url": "https://fragdenstaat.de", "desc": { "es": "Archivo de exámenes de Gymnasium nivel avanzado (Leistungskurs)", "de": "Archiv von Gymnasium-Prüfungen Leistungskurs-Niveau" }, "type": "practice" },
-    { "name": "Bildungsserver Berlin", "url": "https://bildungsserver.berlin-brandenburg.de", "desc": { "es": "Prüfungsaufgaben y correcciones de Berlín", "de": "Prüfungsaufgaben und Erwartungshorizonte aus Berlin" }, "type": "practice" }
+    {
+      "name": "IQB Aufgabenpool",
+      "url": "https://www.iqb.hu-berlin.de",
+      "desc": {
+        "es": "Pool oficial de exámenes DIA para Deutsch",
+        "de": "Offizieller DIA-Aufgabenpool für Deutsch"
+      },
+      "type": "official"
+    },
+    {
+      "name": "FragDenStaat Archiv",
+      "url": "https://fragdenstaat.de",
+      "desc": {
+        "es": "Archivo de exámenes de Gymnasium nivel avanzado (Leistungskurs)",
+        "de": "Archiv von Gymnasium-Prüfungen Leistungskurs-Niveau"
+      },
+      "type": "practice"
+    },
+    {
+      "name": "Bildungsserver Berlin",
+      "url": "https://bildungsserver.berlin-brandenburg.de",
+      "desc": {
+        "es": "Prüfungsaufgaben y correcciones de Berlín",
+        "de": "Prüfungsaufgaben und Erwartungshorizonte aus Berlin"
+      },
+      "type": "practice"
+    }
   ],
   "questions": [
     {
@@ -165,16 +397,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Operatoren",
-      "question": { "es": "El operador 'Erörtern' en un examen de Deutsch DIA exige principalmente:", "de": "Der Operator 'Erörtern' im Deutsch-DIA verlangt hauptsächlich:" },
+      "question": {
+        "es": "El operador 'Erörtern' en un examen de Deutsch DIA exige principalmente:",
+        "de": "Der Operator 'Erörtern' im Deutsch-DIA verlangt hauptsächlich:"
+      },
       "options": [
-        { "es": "Resumir el contenido del texto en tus propias palabras", "de": "Den Textinhalt in eigenen Worten zusammenfassen" },
-        { "es": "Presentar argumentos a favor y en contra de una tesis con posición personal", "de": "Pro- und Contra-Argumente zu einer These mit eigener Stellungnahme" },
-        { "es": "Describir los recursos estilísticos del texto", "de": "Die Stilmittel des Textes beschreiben" },
-        { "es": "Traducir el texto a otro idioma", "de": "Den Text in eine andere Sprache übersetzen" }
+        {
+          "es": "Resumir el contenido del texto en tus propias palabras",
+          "de": "Den Textinhalt in eigenen Worten zusammenfassen"
+        },
+        {
+          "es": "Presentar argumentos a favor y en contra de una tesis con posición personal",
+          "de": "Pro- und Contra-Argumente zu einer These mit eigener Stellungnahme"
+        },
+        {
+          "es": "Describir los recursos estilísticos del texto",
+          "de": "Die Stilmittel des Textes beschreiben"
+        },
+        {
+          "es": "Traducir el texto a otro idioma",
+          "de": "Den Text in eine andere Sprache übersetzen"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "La Erörterung es la forma argumentativa por excelencia. Requiere una tesis, argumentos pro/contra con ejemplos, y una conclusión personal (Fazit). El error más común es convertirla en un análisis descriptivo.", "de": "Die Erörterung ist die argumentative Hauptform. Sie braucht eine These, Pro/Contra-Argumente mit Beispielen und ein persönliches Fazit. Häufiger Fehler: Sie in eine deskriptive Analyse umzuwandeln." },
-      "tip": { "es": "Recuerda: Erörtern = debatir, no describir. SIEMPRE acaba con tu posición.", "de": "Denk daran: Erörtern = debattieren, nicht beschreiben. IMMER mit eigener Position enden." }
+      "explanation": {
+        "es": "La Erörterung es la forma argumentativa por excelencia. Requiere una tesis, argumentos pro/contra con ejemplos, y una conclusión personal (Fazit). El error más común es convertirla en un análisis descriptivo.",
+        "de": "Die Erörterung ist die argumentative Hauptform. Sie braucht eine These, Pro/Contra-Argumente mit Beispielen und ein persönliches Fazit. Häufiger Fehler: Sie in eine deskriptive Analyse umzuwandeln."
+      },
+      "tip": {
+        "es": "Recuerda: Erörtern = debatir, no describir. SIEMPRE acaba con tu posición.",
+        "de": "Denk daran: Erörtern = debattieren, nicht beschreiben. IMMER mit eigener Position enden."
+      }
     },
     {
       "id": "de_002",
@@ -182,16 +435,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Stilmittel",
-      "question": { "es": "En el verso 'Der Tod ist ein Meister aus Deutschland' (Celan, Todesfuge), el principal recurso retórico es:", "de": "Im Vers 'Der Tod ist ein Meister aus Deutschland' (Celan, Todesfuge) ist das Hauptstilmittel:" },
+      "question": {
+        "es": "En el verso 'Der Tod ist ein Meister aus Deutschland' (Celan, Todesfuge), el principal recurso retórico es:",
+        "de": "Im Vers 'Der Tod ist ein Meister aus Deutschland' (Celan, Todesfuge) ist das Hauptstilmittel:"
+      },
       "options": [
-        { "es": "Aliteración — repetición de sonidos iniciales", "de": "Alliteration — Wiederholung von Anfangslautern" },
-        { "es": "Personificación + Metapher — la muerte como maestro artesano", "de": "Personifikation + Metapher — der Tod als Handwerksmeister" },
-        { "es": "Hipérbole — exageración del rol de Alemania", "de": "Hyperbel — Übertreibung der Rolle Deutschlands" },
-        { "es": "Eufemismo — suavizar el concepto de muerte", "de": "Euphemismus — der Todsbegriff wird abgemildert" }
+        {
+          "es": "Aliteración — repetición de sonidos iniciales",
+          "de": "Alliteration — Wiederholung von Anfangslautern"
+        },
+        {
+          "es": "Personificación + Metapher — la muerte como maestro artesano",
+          "de": "Personifikation + Metapher — der Tod als Handwerksmeister"
+        },
+        {
+          "es": "Hipérbole — exageración del rol de Alemania",
+          "de": "Hyperbel — Übertreibung der Rolle Deutschlands"
+        },
+        {
+          "es": "Eufemismo — suavizar el concepto de muerte",
+          "de": "Euphemismus — der Todsbegriff wird abgemildert"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "Celan personifica la muerte como un 'maestro' (Meister = maestro artesano/músico), creando una metáfora macabra sobre el Holocausto. La palabra 'Meister' tiene también connotación musical (director), relacionada con el contrapunto del poema.", "de": "Celan personifiziert den Tod als 'Meister' (Handwerker/Dirigent) — eine makabre Metapher über den Holocaust. 'Meister' hat auch musikalische Konnotation (Dirigent), passend zum kontrapunktischen Aufbau des Gedichts." },
-      "tip": { "es": "En Celan: siempre busca la capa histórica (Shoah) bajo la capa literaria. Múltiples lecturas = más puntos.", "de": "Bei Celan: immer die historische Schicht (Shoah) unter der literarischen suchen. Mehrere Deutungsebenen = mehr Punkte." }
+      "explanation": {
+        "es": "Celan personifica la muerte como un 'maestro' (Meister = maestro artesano/músico), creando una metáfora macabra sobre el Holocausto. La palabra 'Meister' tiene también connotación musical (director), relacionada con el contrapunto del poema.",
+        "de": "Celan personifiziert den Tod als 'Meister' (Handwerker/Dirigent) — eine makabre Metapher über den Holocaust. 'Meister' hat auch musikalische Konnotation (Dirigent), passend zum kontrapunktischen Aufbau des Gedichts."
+      },
+      "tip": {
+        "es": "En Celan: siempre busca la capa histórica (Shoah) bajo la capa literaria. Múltiples lecturas = más puntos.",
+        "de": "Bei Celan: immer die historische Schicht (Shoah) unter der literarischen suchen. Mehrere Deutungsebenen = mehr Punkte."
+      }
     },
     {
       "id": "de_003",
@@ -199,16 +473,37 @@
       "difficulty": "easy",
       "type": "multiple_choice",
       "topic": "Textanalyse",
-      "question": { "es": "Al escribir una Textanalyse en el examen de Deutsch, ¿cuál es el orden correcto de las partes?", "de": "Beim Schreiben einer Textanalyse im Deutsch-Abitur: Welche Reihenfolge der Teile ist korrekt?" },
+      "question": {
+        "es": "Al escribir una Textanalyse en el examen de Deutsch, ¿cuál es el orden correcto de las partes?",
+        "de": "Beim Schreiben einer Textanalyse im Deutsch-Abitur: Welche Reihenfolge der Teile ist korrekt?"
+      },
       "options": [
-        { "es": "Hauptteil → Einleitung → Schluss", "de": "Hauptteil → Einleitung → Schluss" },
-        { "es": "Einleitung → Hauptteil → Schluss", "de": "Einleitung → Hauptteil → Schluss" },
-        { "es": "Schluss → Einleitung → Hauptteil", "de": "Schluss → Einleitung → Hauptteil" },
-        { "es": "El orden es libre, lo importante es el contenido", "de": "Die Reihenfolge ist frei, nur der Inhalt zählt" }
+        {
+          "es": "Hauptteil → Einleitung → Schluss",
+          "de": "Hauptteil → Einleitung → Schluss"
+        },
+        {
+          "es": "Einleitung → Hauptteil → Schluss",
+          "de": "Einleitung → Hauptteil → Schluss"
+        },
+        {
+          "es": "Schluss → Einleitung → Hauptteil",
+          "de": "Schluss → Einleitung → Hauptteil"
+        },
+        {
+          "es": "El orden es libre, lo importante es el contenido",
+          "de": "Die Reihenfolge ist frei, nur der Inhalt zählt"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "La estructura Einleitung→Hauptteil→Schluss es OBLIGATORIA. La Einleitung presenta título, autor, año, género y tesis central. El Hauptteil analiza con ejemplos. El Schluss resume y valora.", "de": "Die Struktur Einleitung→Hauptteil→Schluss ist PFLICHT. Die Einleitung nennt Titel, Autor, Jahr, Gattung und Kernthese. Der Hauptteil analysiert mit Belegen. Der Schluss fasst zusammen und bewertet." },
-      "tip": { "es": "La Einleitung debe tener: autor + título + año + gattung + tema + tesis. Todo en 3-5 frases.", "de": "Die Einleitung braucht: Autor + Titel + Jahr + Gattung + Thema + These. Alles in 3-5 Sätzen." }
+      "explanation": {
+        "es": "La estructura Einleitung→Hauptteil→Schluss es OBLIGATORIA. La Einleitung presenta título, autor, año, género y tesis central. El Hauptteil analiza con ejemplos. El Schluss resume y valora.",
+        "de": "Die Struktur Einleitung→Hauptteil→Schluss ist PFLICHT. Die Einleitung nennt Titel, Autor, Jahr, Gattung und Kernthese. Der Hauptteil analysiert mit Belegen. Der Schluss fasst zusammen und bewertet."
+      },
+      "tip": {
+        "es": "La Einleitung debe tener: autor + título + año + gattung + tema + tesis. Todo en 3-5 frases.",
+        "de": "Die Einleitung braucht: Autor + Titel + Jahr + Gattung + Thema + These. Alles in 3-5 Sätzen."
+      }
     },
     {
       "id": "de_004",
@@ -216,16 +511,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Erörterung",
-      "question": { "es": "En una 'Textgebundene Erörterung', ¿qué significa que sea 'textgebunden'?", "de": "Was bedeutet 'textgebunden' bei einer Textgebundenen Erörterung?" },
+      "question": {
+        "es": "En una 'Textgebundene Erörterung', ¿qué significa que sea 'textgebunden'?",
+        "de": "Was bedeutet 'textgebunden' bei einer Textgebundenen Erörterung?"
+      },
       "options": [
-        { "es": "Que solo puedes usar argumentos del texto dado, sin opinión propia", "de": "Dass du nur Argumente aus dem Text verwenden darfst, ohne eigene Meinung" },
-        { "es": "Que debes referenciar el texto dado en tu argumentación, pero puedes añadir argumentos propios", "de": "Dass du den gegebenen Text in deiner Argumentation einbeziehen musst, aber eigene Argumente ergänzen kannst" },
-        { "es": "Que es una erörterung basada únicamente en textos literarios", "de": "Dass es eine Erörterung ausschließlich über literarische Texte ist" },
-        { "es": "Que el texto dado debe resumirse en la introducción", "de": "Dass der gegebene Text in der Einleitung zusammengefasst werden muss" }
+        {
+          "es": "Que solo puedes usar argumentos del texto dado, sin opinión propia",
+          "de": "Dass du nur Argumente aus dem Text verwenden darfst, ohne eigene Meinung"
+        },
+        {
+          "es": "Que debes referenciar el texto dado en tu argumentación, pero puedes añadir argumentos propios",
+          "de": "Dass du den gegebenen Text in deiner Argumentation einbeziehen musst, aber eigene Argumente ergänzen kannst"
+        },
+        {
+          "es": "Que es una erörterung basada únicamente en textos literarios",
+          "de": "Dass es eine Erörterung ausschließlich über literarische Texte ist"
+        },
+        {
+          "es": "Que el texto dado debe resumirse en la introducción",
+          "de": "Dass der gegebene Text in der Einleitung zusammengefasst werden muss"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "Textgebunden = el texto es el punto de partida. Debes referenciarlo, citar de él, pero PUEDES y DEBES añadir argumentos propios y ejemplos externos. El error trampa es limitarse solo al texto.", "de": "Textgebunden = der Text ist der Ausgangspunkt. Du musst ihn einbeziehen und zitieren, aber KANNST und SOLLST eigene Argumente und externe Beispiele ergänzen. Falle: sich nur auf den Text beschränken." },
-      "tip": { "es": "Estructura: Einleitung con tesis → Argumento del texto → Tu argumento propio → Gegenargument → Abwägung → Fazit.", "de": "Struktur: Einleitung mit These → Textargument → eigenes Argument → Gegenargument → Abwägung → Fazit." }
+      "explanation": {
+        "es": "Textgebunden = el texto es el punto de partida. Debes referenciarlo, citar de él, pero PUEDES y DEBES añadir argumentos propios y ejemplos externos. El error trampa es limitarse solo al texto.",
+        "de": "Textgebunden = der Text ist der Ausgangspunkt. Du musst ihn einbeziehen und zitieren, aber KANNST und SOLLST eigene Argumente und externe Beispiele ergänzen. Falle: sich nur auf den Text beschränken."
+      },
+      "tip": {
+        "es": "Estructura: Einleitung con tesis → Argumento del texto → Tu argumento propio → Gegenargument → Abwägung → Fazit.",
+        "de": "Struktur: Einleitung mit These → Textargument → eigenes Argument → Gegenargument → Abwägung → Fazit."
+      }
     },
     {
       "id": "de_005",
@@ -233,16 +549,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Lyrik",
-      "question": { "es": "¿Cuál de estos términos NO pertenece al análisis de Lyrik (poesía)?", "de": "Welcher Begriff gehört NICHT zur Lyrikanalyse?" },
+      "question": {
+        "es": "¿Cuál de estos términos NO pertenece al análisis de Lyrik (poesía)?",
+        "de": "Welcher Begriff gehört NICHT zur Lyrikanalyse?"
+      },
       "options": [
-        { "es": "Metrum (métrica)", "de": "Metrum" },
-        { "es": "Reimschema (esquema de rima)", "de": "Reimschema" },
-        { "es": "Figurenkonstellation (constelación de personajes)", "de": "Figurenkonstellation" },
-        { "es": "Kadenz (cadencia)", "de": "Kadenz" }
+        {
+          "es": "Metrum (métrica)",
+          "de": "Metrum"
+        },
+        {
+          "es": "Reimschema (esquema de rima)",
+          "de": "Reimschema"
+        },
+        {
+          "es": "Figurenkonstellation (constelación de personajes)",
+          "de": "Figurenkonstellation"
+        },
+        {
+          "es": "Kadenz (cadencia)",
+          "de": "Kadenz"
+        }
       ],
       "correct": 2,
-      "explanation": { "es": "La 'Figurenkonstellation' (relación entre personajes) es un concepto del análisis dramático o narrativo, no del lírico. Para poesía: Metrum, Reimschema, Kadenz, Zäsur, Enjambement, Strophenform.", "de": "'Figurenkonstellation' ist ein Begriff der Dramen- oder Erzähltextanalyse, nicht der Lyrik. Für Lyrik: Metrum, Reimschema, Kadenz, Zäsur, Enjambement, Strophenform." },
-      "tip": { "es": "Memoriza los términos por género: Lyrik (Metrum, Reim, Kadenz) vs Drama (Figurenkonstellation, Akt, Szene) vs Prosa (Erzählperspektive, Erzählhaltung, Zeitraffung).", "de": "Begriffe nach Gattung merken: Lyrik vs Drama vs Prosa." }
+      "explanation": {
+        "es": "La 'Figurenkonstellation' (relación entre personajes) es un concepto del análisis dramático o narrativo, no del lírico. Para poesía: Metrum, Reimschema, Kadenz, Zäsur, Enjambement, Strophenform.",
+        "de": "'Figurenkonstellation' ist ein Begriff der Dramen- oder Erzähltextanalyse, nicht der Lyrik. Für Lyrik: Metrum, Reimschema, Kadenz, Zäsur, Enjambement, Strophenform."
+      },
+      "tip": {
+        "es": "Memoriza los términos por género: Lyrik (Metrum, Reim, Kadenz) vs Drama (Figurenkonstellation, Akt, Szene) vs Prosa (Erzählperspektive, Erzählhaltung, Zeitraffung).",
+        "de": "Begriffe nach Gattung merken: Lyrik vs Drama vs Prosa."
+      }
     }
   ],
   "official_exams_archive": [
@@ -501,6 +838,88 @@
               "recommendation": {
                 "es": "Recomendación: Para esta Erörterung, utiliza el concepto sociolingüístico alemán de 'Kodewechsel' (Code-Switching) para argumentar que los jóvenes no han olvidado escribir, sino que alternan voluntariamente de código según la situación.",
                 "de": "Tipp: Nutze Fachbegriffe wie 'Registerkompetenz' oder 'Code-Switching', um die sprachwissenschaftliche Tiefe der Erörterung zu steigern."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deutsch_dia_2023_eroetrterung",
+      "title": "DIA Abitur Deutsch 2023 — Erörterung & Textanalyse",
+      "year": "2023",
+      "source": "Basado en currículo DIA/ZfA — Contenido de práctica curado",
+      "intro": {
+        "es": "Examen de Alemán formato DIA. Parte A: análisis de texto periodístico sobre IA en educación. Parte B: Erörterung con postura personal.",
+        "de": "DIA-Prüfung Deutsch. Teil A: Analyse eines Zeitungsartikels zur KI im Bildungswesen. Teil B: Erörterung mit Stellungnahme."
+      },
+      "blocks": [
+        {
+          "name": "Teil A — Textanalyse",
+          "tasks": [
+            {
+              "title": "Aufgabe 1a: Inhaltliche Wiedergabe",
+              "question": {
+                "es": "Resume el contenido central del artículo 'Künstliche Intelligenz im Klassenzimmer' (párrafos 1-4): tesis del autor y tres argumentos principales.",
+                "de": "Gib den Inhalt des Artikels 'Künstliche Intelligenz im Klassenzimmer' (Abs. 1–4) wieder. Benenne die Hauptthese und drei Argumente."
+              },
+              "solution": {
+                "es": "ESTRUCTURA:\n1. TESIS: La IA puede ser herramienta de apoyo si se usa críticamente.\n2. Arg 1: Personalización del aprendizaje (párr. 1-2).\n3. Arg 2: Riesgo de dependencia tecnológica (párr. 3).\n4. Arg 3: Necesidad de formación docente (párr. 4).\nRespuesta objetiva, sin valoración personal.",
+                "de": "STRUKTUR:\n1. THESE: KI kann sinnvoll eingesetzt werden, wenn kritisch genutzt.\n2. Arg 1: Personalisiertes Lernen (Abs. 1–2).\n3. Arg 2: Technologieabhängigkeit (Abs. 3).\n4. Arg 3: Lehrerfortbildung (Abs. 4).\nKeine eigene Wertung."
+              },
+              "points": 10,
+              "criteria": {
+                "es": "• 4 Puntos: Tesis y 3 argumentos correctos.\n• 4 Puntos: Lenguaje objetivo sin opinión.\n• 2 Puntos: Conectores y estructura cohesiva.",
+                "de": "• 4 Punkte: These und 3 Argumente.\n• 4 Punkte: Sachliche Sprache.\n• 2 Punkte: Konnektoren und Struktur."
+              },
+              "recommendation": {
+                "es": "No añadas tu opinión. Usa 'Der Autor argumentiert, dass...'",
+                "de": "Keine eigene Meinung. Formulierungen wie 'Der Autor argumentiert...' verwenden."
+              }
+            },
+            {
+              "title": "Aufgabe 1b: Sprachanalyse",
+              "question": {
+                "es": "Analiza tres recursos lingüísticos/retóricos del texto (con cita). Explica su función argumentativa.",
+                "de": "Analysiere drei sprachlich-rhetorische Mittel mit Textbeleg. Erkläre ihre argumentative Funktion."
+              },
+              "solution": {
+                "es": "1. METÁFORA ('Die KI ist ein Werkzeug') → humaniza el debate, reduce el temor.\n2. PREGUNTA RETÓRICA ('Wer trägt die Verantwortung?') → involucra al lector.\n3. ESTADÍSTICA ('62% der Schüler...') → credibilidad científica (logos).\nEstructura: recurso → función → valoración.",
+                "de": "1. METAPHER ('Die KI ist ein Werkzeug') → nimmt Angst, rationalisiert.\n2. RHETORISCHE FRAGE ('Wer trägt die Verantwortung?') → Lesereinbezug.\n3. STATISTIK ('62% der Schüler...') → Logos-Appell.\nStruktur: Mittel → Funktion → Wirkung."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 5 Puntos por recurso: cita + nombre + función.\n• 2 Puntos extra: valoración global coherente.",
+                "de": "• 5 Punkte pro Mittel: Beleg + Name + Funktion.\n• 2 Punkte: Gesamtbewertung."
+              },
+              "recommendation": {
+                "es": "Cita siempre entre comillas. No basta nombrar el recurso — explica POR QUÉ el autor lo usa.",
+                "de": "Immer Anführungszeichen. Das Mittel benennen reicht nicht — die Funktion muss erklärt werden."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B — Erörterung",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Erörterung — KI macht Lehrer überflüssig?",
+              "question": {
+                "es": "Escribe una Erörterung (400-500 palabras) sobre: 'Künstliche Intelligenz macht Lehrer überflüssig.' Pro y contra, con postura personal.",
+                "de": "Verfasse eine Erörterung (400–500 Wörter) zur These: 'Künstliche Intelligenz macht Lehrer überflüssig.' Pro- und Contra-Argumente, eigene Stellungnahme."
+              },
+              "solution": {
+                "es": "EINLEITUNG: Contextualiza la IA en educación. Pregunta central.\n\nPRO: 1) Aprendizaje personalizado 24/7. 2) Reducción de costes.\n\nCONTRA: 1) Educación implica valores y empatía — imposible para IA. 2) La IA reproduce sesgos. 3) El docente como referente social es irreemplazable.\n\nSCHLUSS: La IA es complemento, no sustituto.",
+                "de": "EINLEITUNG: KI im Bildungskontext; Leitfrage.\n\nPRO: 1) Personalisiertes Lernen. 2) Kostensenkung.\n\nCONTRA: 1) Werte, Empathie — für KI unmöglich. 2) Trainingsbiases. 3) Lehrer als Vorbild.\n\nSCHLUSS: KI als Ergänzung, nicht Ersatz."
+              },
+              "points": 25,
+              "criteria": {
+                "es": "• 8 Puntos: Estructura (Einleitung, Hauptteil ≥4 argumentos, Schluss).\n• 8 Puntos: Calidad argumentativa.\n• 5 Puntos: Alemán (registro, léxico, sintaxis).\n• 4 Puntos: Stellungnahme clara y fundamentada.",
+                "de": "• 8 Punkte: Aufbau.\n• 8 Punkte: Argumentationsqualität.\n• 5 Punkte: Deutschkenntnisse.\n• 4 Punkte: Klare Stellungnahme."
+              },
+              "recommendation": {
+                "es": "Usa conectores explícitos: 'Einerseits', 'Andererseits', 'Dennoch', 'Abschließend'. La postura final debe ser inequívoca.",
+                "de": "Konnektoren: 'Einerseits', 'Andererseits', 'Dennoch'. Stellungnahme muss eindeutig sein."
               }
             }
           ]

@@ -1,6 +1,9 @@
 {
   "subject": "englisch",
-  "displayName": { "es": "Inglés (Englisch)", "de": "Englisch" },
+  "displayName": {
+    "es": "Inglés (Englisch)",
+    "de": "Englisch"
+  },
   "icon": "🇬🇧",
   "examType": "written_or_oral",
   "duration": 240,
@@ -12,34 +15,93 @@
   "skills": [
     {
       "id": "reading",
-      "name": { "es": "Comprensión lectora (Reading Comprehension)", "de": "Leseverstehen" },
-      "desc": { "es": "Analizar uno o dos textos no literarios (editorial, article, speech). Responder preguntas de comprensión, análisis de intención, recursos retóricos en inglés.", "de": "Einen oder zwei nicht-literarische Texte analysieren. Verständnisfragen, Absicht, rhetorische Mittel auf Englisch." },
-      "operators": ["Outline", "Analyse", "Comment on", "Examine", "Explain", "Evaluate", "Discuss"]
+      "name": {
+        "es": "Comprensión lectora (Reading Comprehension)",
+        "de": "Leseverstehen"
+      },
+      "desc": {
+        "es": "Analizar uno o dos textos no literarios (editorial, article, speech). Responder preguntas de comprensión, análisis de intención, recursos retóricos en inglés.",
+        "de": "Einen oder zwei nicht-literarische Texte analysieren. Verständnisfragen, Absicht, rhetorische Mittel auf Englisch."
+      },
+      "operators": [
+        "Outline",
+        "Analyse",
+        "Comment on",
+        "Examine",
+        "Explain",
+        "Evaluate",
+        "Discuss"
+      ]
     },
     {
       "id": "mediation",
-      "name": { "es": "Mediación (Mediation)", "de": "Mediation / Sprachmittlung" },
-      "desc": { "es": "Transferir información de un texto alemán al inglés (o viceversa) adaptando el registro y el destinatario. No es traducción literal — es reformulación cultural.", "de": "Information von einem deutschen Text ins Englische übertragen (oder umgekehrt), Register und Adressaten anpassen. Keine wörtliche Übersetzung — kulturelle Reformulierung." },
-      "tip": { "es": "En Mediation: adapta el registro al destinatario. Un email a un amigo ≠ un informe al director. NUNCA traduzcas literalmente.", "de": "Bei Mediation: Register dem Adressaten anpassen. E-Mail an Freund ≠ Bericht an Chef. NIE wörtlich übersetzen." }
+      "name": {
+        "es": "Mediación (Mediation)",
+        "de": "Mediation / Sprachmittlung"
+      },
+      "desc": {
+        "es": "Transferir información de un texto alemán al inglés (o viceversa) adaptando el registro y el destinatario. No es traducción literal — es reformulación cultural.",
+        "de": "Information von einem deutschen Text ins Englische übertragen (oder umgekehrt), Register und Adressaten anpassen. Keine wörtliche Übersetzung — kulturelle Reformulierung."
+      },
+      "tip": {
+        "es": "En Mediation: adapta el registro al destinatario. Un email a un amigo ≠ un informe al director. NUNCA traduzcas literalmente.",
+        "de": "Bei Mediation: Register dem Adressaten anpassen. E-Mail an Freund ≠ Bericht an Chef. NIE wörtlich übersetzen."
+      }
     },
     {
       "id": "writing",
-      "name": { "es": "Escritura (Composition / Writing Task)", "de": "Schreiben / Aufsatz" },
-      "desc": { "es": "Redactar un texto propio: argumentative essay, letter, speech, article, comment. Se evalúa contenido, estructura, rango léxico y corrección gramatical.", "de": "Eigenen Text verfassen: argumentativer Aufsatz, Brief, Rede, Artikel, Kommentar. Bewertung: Inhalt, Struktur, Wortschatz, Grammatik." }
+      "name": {
+        "es": "Escritura (Composition / Writing Task)",
+        "de": "Schreiben / Aufsatz"
+      },
+      "desc": {
+        "es": "Redactar un texto propio: argumentative essay, letter, speech, article, comment. Se evalúa contenido, estructura, rango léxico y corrección gramatical.",
+        "de": "Eigenen Text verfassen: argumentativer Aufsatz, Brief, Rede, Artikel, Kommentar. Bewertung: Inhalt, Struktur, Wortschatz, Grammatik."
+      }
     },
     {
       "id": "listening",
-      "name": { "es": "Comprensión auditiva (Listening)", "de": "Hörverstehen" },
-      "desc": { "es": "En la modalidad oral del examen. Escuchar un texto de 2-4 minutos y responder preguntas.", "de": "Im mündlichen Prüfungsformat. Hörtext 2-4 Minuten und Fragen beantworten." }
+      "name": {
+        "es": "Comprensión auditiva (Listening)",
+        "de": "Hörverstehen"
+      },
+      "desc": {
+        "es": "En la modalidad oral del examen. Escuchar un texto de 2-4 minutos y responder preguntas.",
+        "de": "Im mündlichen Prüfungsformat. Hörtext 2-4 Minuten und Fragen beantworten."
+      }
     }
   ],
   "text_types": [
-    { "name": "Argumentative Essay", "structure": "Hook → Thesis → Body (3 paras: Argument + Evidence + Explanation) → Counterargument → Conclusion", "register": "Formal academic" },
-    { "name": "Opinion Essay", "structure": "Introduction → Your view + 2-3 reasons → Brief counterargument → Conclusion restate thesis", "register": "Formal to semi-formal" },
-    { "name": "Speech / Address", "structure": "Greeting → Hook (rhetorical question/quote) → 2-3 main points → Call to action → Closing", "register": "Formal, persuasive, use rhetorical devices" },
-    { "name": "Letter / Email", "structure": "Salutation → Reason for writing → Main content → Closing remarks → Sign-off", "register": "Depends: formal (Dear Mr./Ms.) or informal (Hi/Hey)" },
-    { "name": "News Article", "structure": "Headline → Lead (5 Ws) → Body (inverted pyramid) → Quotes → Background", "register": "Neutral, factual" },
-    { "name": "Comment / Blog Post", "structure": "Attention-grabbing title → Personal stance → Arguments + Examples → Conclusion with call to action", "register": "Semi-formal to informal" }
+    {
+      "name": "Argumentative Essay",
+      "structure": "Hook → Thesis → Body (3 paras: Argument + Evidence + Explanation) → Counterargument → Conclusion",
+      "register": "Formal academic"
+    },
+    {
+      "name": "Opinion Essay",
+      "structure": "Introduction → Your view + 2-3 reasons → Brief counterargument → Conclusion restate thesis",
+      "register": "Formal to semi-formal"
+    },
+    {
+      "name": "Speech / Address",
+      "structure": "Greeting → Hook (rhetorical question/quote) → 2-3 main points → Call to action → Closing",
+      "register": "Formal, persuasive, use rhetorical devices"
+    },
+    {
+      "name": "Letter / Email",
+      "structure": "Salutation → Reason for writing → Main content → Closing remarks → Sign-off",
+      "register": "Depends: formal (Dear Mr./Ms.) or informal (Hi/Hey)"
+    },
+    {
+      "name": "News Article",
+      "structure": "Headline → Lead (5 Ws) → Body (inverted pyramid) → Quotes → Background",
+      "register": "Neutral, factual"
+    },
+    {
+      "name": "Comment / Blog Post",
+      "structure": "Attention-grabbing title → Personal stance → Arguments + Examples → Conclusion with call to action",
+      "register": "Semi-formal to informal"
+    }
   ],
   "curriculum_topics": [
     {
@@ -92,42 +154,135 @@
     }
   ],
   "academic_vocabulary": {
-    "linking_ideas": ["Furthermore", "Moreover", "In addition", "Nevertheless", "However", "Despite this", "Consequently", "Therefore", "As a result", "In contrast"],
-    "expressing_opinion": ["It is argued that", "It could be claimed that", "From my perspective", "I would contend that", "Evidence suggests that"],
-    "analyzing_text": ["The author implies", "This is illustrated by", "The tone shifts to", "The use of [device] conveys", "The intended audience is"],
-    "concluding": ["To sum up", "In conclusion", "Taking everything into consideration", "Ultimately", "All things considered"]
+    "linking_ideas": [
+      "Furthermore",
+      "Moreover",
+      "In addition",
+      "Nevertheless",
+      "However",
+      "Despite this",
+      "Consequently",
+      "Therefore",
+      "As a result",
+      "In contrast"
+    ],
+    "expressing_opinion": [
+      "It is argued that",
+      "It could be claimed that",
+      "From my perspective",
+      "I would contend that",
+      "Evidence suggests that"
+    ],
+    "analyzing_text": [
+      "The author implies",
+      "This is illustrated by",
+      "The tone shifts to",
+      "The use of [device] conveys",
+      "The intended audience is"
+    ],
+    "concluding": [
+      "To sum up",
+      "In conclusion",
+      "Taking everything into consideration",
+      "Ultimately",
+      "All things considered"
+    ]
   },
   "rhetorical_devices_en": [
-    { "name": "Alliteration", "example": "'Peter Piper picked a peck'" },
-    { "name": "Anaphora", "example": "'I have a dream... I have a dream...' (MLK)" },
-    { "name": "Rhetorical Question", "example": "'Is this the kind of society we want?'" },
-    { "name": "Metaphor", "example": "'Life is a journey'" },
-    { "name": "Irony/Sarcasm", "example": "Saying the opposite of what is meant" },
-    { "name": "Tricolon", "example": "'Government of the people, by the people, for the people'" },
-    { "name": "Hyperbole", "example": "'I've told you a million times'" },
-    { "name": "Euphemism", "example": "'Collateral damage' instead of 'civilian deaths'" }
+    {
+      "name": "Alliteration",
+      "example": "'Peter Piper picked a peck'"
+    },
+    {
+      "name": "Anaphora",
+      "example": "'I have a dream... I have a dream...' (MLK)"
+    },
+    {
+      "name": "Rhetorical Question",
+      "example": "'Is this the kind of society we want?'"
+    },
+    {
+      "name": "Metaphor",
+      "example": "'Life is a journey'"
+    },
+    {
+      "name": "Irony/Sarcasm",
+      "example": "Saying the opposite of what is meant"
+    },
+    {
+      "name": "Tricolon",
+      "example": "'Government of the people, by the people, for the people'"
+    },
+    {
+      "name": "Hyperbole",
+      "example": "'I've told you a million times'"
+    },
+    {
+      "name": "Euphemism",
+      "example": "'Collateral damage' instead of 'civilian deaths'"
+    }
   ],
   "trap_questions": [
     {
-      "trap": { "es": "'Outline' significa resumir el contenido punto por punto", "de": "'Outline' heißt, Inhalt Punkt für Punkt zusammenfassen" },
-      "avoid": { "es": "Outline = estructura ordenada de los puntos principales del texto, con brevedad. NO es análisis ni interpretación. Error frecuente: hacer un análisis cuando te piden un outline.", "de": "Outline = geordnete Übersicht der Hauptpunkte, kurz. KEINE Analyse oder Interpretation. Fehler: Analyse statt Outline schreiben." }
+      "trap": {
+        "es": "'Outline' significa resumir el contenido punto por punto",
+        "de": "'Outline' heißt, Inhalt Punkt für Punkt zusammenfassen"
+      },
+      "avoid": {
+        "es": "Outline = estructura ordenada de los puntos principales del texto, con brevedad. NO es análisis ni interpretación. Error frecuente: hacer un análisis cuando te piden un outline.",
+        "de": "Outline = geordnete Übersicht der Hauptpunkte, kurz. KEINE Analyse oder Interpretation. Fehler: Analyse statt Outline schreiben."
+      }
     },
     {
-      "trap": { "es": "En Mediation, traducir el texto literalmente", "de": "Bei Mediation den Text wörtlich übersetzen" },
-      "avoid": { "es": "Mediation NO es traducción. Debes reformular, adaptar el tono al destinatario (ej: si escribes a un amigo, usa lenguaje informal) y omitir detalles irrelevantes.", "de": "Mediation ist KEINE Übersetzung. Reformulieren, Ton dem Adressaten anpassen, irrelevante Details weglassen." }
+      "trap": {
+        "es": "En Mediation, traducir el texto literalmente",
+        "de": "Bei Mediation den Text wörtlich übersetzen"
+      },
+      "avoid": {
+        "es": "Mediation NO es traducción. Debes reformular, adaptar el tono al destinatario (ej: si escribes a un amigo, usa lenguaje informal) y omitir detalles irrelevantes.",
+        "de": "Mediation ist KEINE Übersetzung. Reformulieren, Ton dem Adressaten anpassen, irrelevante Details weglassen."
+      }
     },
     {
-      "trap": { "es": "Usar el mismo vocabulario básico repetidamente en el essay", "de": "Im Essay immer dasselbe einfache Vokabular verwenden" },
-      "avoid": { "es": "El rango léxico (Lexical Range) es uno de los 4 criterios de evaluación. Usa sinónimos: bueno→beneficial/advantageous, malo→detrimental/harmful, pensar→consider/contemplate.", "de": "Lexikalische Bandbreite ist eines der 4 Bewertungskriterien. Synonyme verwenden: good→beneficial, bad→detrimental, think→consider/contemplate." }
+      "trap": {
+        "es": "Usar el mismo vocabulario básico repetidamente en el essay",
+        "de": "Im Essay immer dasselbe einfache Vokabular verwenden"
+      },
+      "avoid": {
+        "es": "El rango léxico (Lexical Range) es uno de los 4 criterios de evaluación. Usa sinónimos: bueno→beneficial/advantageous, malo→detrimental/harmful, pensar→consider/contemplate.",
+        "de": "Lexikalische Bandbreite ist eines der 4 Bewertungskriterien. Synonyme verwenden: good→beneficial, bad→detrimental, think→consider/contemplate."
+      }
     },
     {
-      "trap": { "es": "No ajustar el registro del essay según el tipo de texto", "de": "Register im Aufsatz nicht an Textsorte anpassen" },
-      "avoid": { "es": "Un speech tiene vocativos ('Ladies and gentlemen'), un article tiene titular, un email informal tiene 'Hi'. El examinador espera marcas del género textual.", "de": "Speech hat Anreden ('Ladies and gentlemen'), Artikel hat Überschrift, informelle E-Mail hat 'Hi'. Prüfer erwartet Textsortenmerkmale." }
+      "trap": {
+        "es": "No ajustar el registro del essay según el tipo de texto",
+        "de": "Register im Aufsatz nicht an Textsorte anpassen"
+      },
+      "avoid": {
+        "es": "Un speech tiene vocativos ('Ladies and gentlemen'), un article tiene titular, un email informal tiene 'Hi'. El examinador espera marcas del género textual.",
+        "de": "Speech hat Anreden ('Ladies and gentlemen'), Artikel hat Überschrift, informelle E-Mail hat 'Hi'. Prüfer erwartet Textsortenmerkmale."
+      }
     }
   ],
   "resources": [
-    { "name": "Deutscher Bildungsserver — Fremdsprachen", "url": "https://www.bildungsserver.de", "desc": { "es": "Exámenes unificados de los últimos 3 años para colegios alemanes en el extranjero (inglés)", "de": "Vereinheitlichte Prüfungen der letzten 3 Jahre für Deutsche Auslandsschulen (Englisch)" }, "type": "official" },
-    { "name": "IQB Aufgabenpool — Englisch", "url": "https://www.iqb.hu-berlin.de", "desc": { "es": "Pool oficial de tareas DIA para Inglés", "de": "Offizieller DIA-Aufgabenpool für Englisch" }, "type": "official" }
+    {
+      "name": "Deutscher Bildungsserver — Fremdsprachen",
+      "url": "https://www.bildungsserver.de",
+      "desc": {
+        "es": "Exámenes unificados de los últimos 3 años para colegios alemanes en el extranjero (inglés)",
+        "de": "Vereinheitlichte Prüfungen der letzten 3 Jahre für Deutsche Auslandsschulen (Englisch)"
+      },
+      "type": "official"
+    },
+    {
+      "name": "IQB Aufgabenpool — Englisch",
+      "url": "https://www.iqb.hu-berlin.de",
+      "desc": {
+        "es": "Pool oficial de tareas DIA para Inglés",
+        "de": "Offizieller DIA-Aufgabenpool für Englisch"
+      },
+      "type": "official"
+    }
   ],
   "questions": [
     {
@@ -136,16 +291,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Reading Comprehension — Operators",
-      "question": { "es": "In a DIA English exam, if the task says 'Analyse the author's use of rhetorical devices', you should:", "de": "Wenn die Aufgabe lautet 'Analyse the author's use of rhetorical devices', solltest du:" },
+      "question": {
+        "es": "In a DIA English exam, if the task says 'Analyse the author's use of rhetorical devices', you should:",
+        "de": "Wenn die Aufgabe lautet 'Analyse the author's use of rhetorical devices', solltest du:"
+      },
       "options": [
-        { "es": "Simply list all rhetorical devices you find in the text", "de": "Alle Stilmittel im Text einfach auflisten" },
-        { "es": "Identify each device, name it, quote it, and explain its intended EFFECT on the reader", "de": "Jedes Stilmittel benennen, zitieren und seine WIRKUNG auf den Leser erklären" },
-        { "es": "Summarise the text and mention one or two devices briefly", "de": "Den Text zusammenfassen und ein oder zwei Mittel kurz erwähnen" },
-        { "es": "Translate the most important sentences containing rhetorical devices", "de": "Die wichtigsten Sätze mit Stilmitteln übersetzen" }
+        {
+          "es": "Simply list all rhetorical devices you find in the text",
+          "de": "Alle Stilmittel im Text einfach auflisten"
+        },
+        {
+          "es": "Identify each device, name it, quote it, and explain its intended EFFECT on the reader",
+          "de": "Jedes Stilmittel benennen, zitieren und seine WIRKUNG auf den Leser erklären"
+        },
+        {
+          "es": "Summarise the text and mention one or two devices briefly",
+          "de": "Den Text zusammenfassen und ein oder zwei Mittel kurz erwähnen"
+        },
+        {
+          "es": "Translate the most important sentences containing rhetorical devices",
+          "de": "Die wichtigsten Sätze mit Stilmitteln übersetzen"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "Analyse = Name + Quote + Effect. La fórmula es: 'The author uses [device], as seen in '[quote]' (l. X), which creates the effect of [effect] on the reader.' SIN el efecto, la respuesta está incompleta.", "de": "Analyse = Name + Zitat + Wirkung. Formel: 'The author uses [device], as in '[Zitat]' (Z.X), which creates the effect of [Wirkung].' Ohne Wirkung ist die Antwort unvollständig." },
-      "tip": { "es": "Fórmula infalible: [Device Name] + [Quote with line number] + [Effect on reader]. Repetir para cada recurso.", "de": "Unfehlbare Formel: [Stilmittel] + [Zitat mit Zeilennummer] + [Wirkung auf Leser]. Für jedes Mittel wiederholen." }
+      "explanation": {
+        "es": "Analyse = Name + Quote + Effect. La fórmula es: 'The author uses [device], as seen in '[quote]' (l. X), which creates the effect of [effect] on the reader.' SIN el efecto, la respuesta está incompleta.",
+        "de": "Analyse = Name + Zitat + Wirkung. Formel: 'The author uses [device], as in '[Zitat]' (Z.X), which creates the effect of [Wirkung].' Ohne Wirkung ist die Antwort unvollständig."
+      },
+      "tip": {
+        "es": "Fórmula infalible: [Device Name] + [Quote with line number] + [Effect on reader]. Repetir para cada recurso.",
+        "de": "Unfehlbare Formel: [Stilmittel] + [Zitat mit Zeilennummer] + [Wirkung auf Leser]. Für jedes Mittel wiederholen."
+      }
     },
     {
       "id": "en_002",
@@ -153,16 +329,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Writing — Argumentative Essay",
-      "question": { "es": "Which opening sentence is MOST effective for an argumentative essay on social media's impact on teenagers?", "de": "Welcher Eröffnungssatz ist am EFFEKTIVSTEN für einen argumentativen Essay über Social Media und Teenager?" },
+      "question": {
+        "es": "Which opening sentence is MOST effective for an argumentative essay on social media's impact on teenagers?",
+        "de": "Welcher Eröffnungssatz ist am EFFEKTIVSTEN für einen argumentativen Essay über Social Media und Teenager?"
+      },
       "options": [
-        { "es": "'In this essay, I will write about social media and teenagers.'", "de": "'In this essay, I will write about social media and teenagers.'" },
-        { "es": "'Social media is good and bad for teenagers.'", "de": "'Social media is good and bad for teenagers.'" },
-        { "es": "'With 97% of teenagers using social media daily, the question is no longer whether it affects them, but how deeply.'", "de": "'With 97% of teenagers using social media daily, the question is no longer whether it affects them, but how deeply.'" },
-        { "es": "'I think social media has some advantages and some disadvantages.'", "de": "'I think social media has some advantages and some disadvantages.'" }
+        {
+          "es": "'In this essay, I will write about social media and teenagers.'",
+          "de": "'In this essay, I will write about social media and teenagers.'"
+        },
+        {
+          "es": "'Social media is good and bad for teenagers.'",
+          "de": "'Social media is good and bad for teenagers.'"
+        },
+        {
+          "es": "'With 97% of teenagers using social media daily, the question is no longer whether it affects them, but how deeply.'",
+          "de": "'With 97% of teenagers using social media daily, the question is no longer whether it affects them, but how deeply.'"
+        },
+        {
+          "es": "'I think social media has some advantages and some disadvantages.'",
+          "de": "'I think social media has some advantages and some disadvantages.'"
+        }
       ],
       "correct": 2,
-      "explanation": { "es": "La opción C usa una estadística impactante (hook) y termina con una thesis statement clara y provocadora. Las opciones A y D son demasiado genéricas. La B no toma posición. Un buen hook puede ser: estadística, cita, pregunta retórica, o anécdota.", "de": "Option C nutzt eine eindrucksvolle Statistik (Hook) und endet mit einer klaren, provokativen These. A und D sind zu generisch. B bezieht keine Stellung. Guter Hook: Statistik, Zitat, rhetorische Frage oder Anekdote." },
-      "tip": { "es": "NUNCA empieces con 'In this essay, I will...' Es el opening más aburrido posible. El examinador lo ha visto 500 veces.", "de": "NIE mit 'In this essay, I will...' beginnen. Es ist der langweiligste Einstieg überhaupt. Der Prüfer hat ihn 500 Mal gelesen." }
+      "explanation": {
+        "es": "La opción C usa una estadística impactante (hook) y termina con una thesis statement clara y provocadora. Las opciones A y D son demasiado genéricas. La B no toma posición. Un buen hook puede ser: estadística, cita, pregunta retórica, o anécdota.",
+        "de": "Option C nutzt eine eindrucksvolle Statistik (Hook) und endet mit einer klaren, provokativen These. A und D sind zu generisch. B bezieht keine Stellung. Guter Hook: Statistik, Zitat, rhetorische Frage oder Anekdote."
+      },
+      "tip": {
+        "es": "NUNCA empieces con 'In this essay, I will...' Es el opening más aburrido posible. El examinador lo ha visto 500 veces.",
+        "de": "NIE mit 'In this essay, I will...' beginnen. Es ist der langweiligste Einstieg überhaupt. Der Prüfer hat ihn 500 Mal gelesen."
+      }
     },
     {
       "id": "en_003",
@@ -170,16 +367,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Mediation",
-      "question": { "es": "You need to mediate this German text into English for your British pen pal: 'Die Klimakrise erfordert sofortige Maßnahmen aller Länder.' The BEST mediation is:", "de": "Du sollst diesen Text auf Englisch für deinen britischen Brieffreund vermitteln. Die BESTE Mediation ist:" },
+      "question": {
+        "es": "You need to mediate this German text into English for your British pen pal: 'Die Klimakrise erfordert sofortige Maßnahmen aller Länder.' The BEST mediation is:",
+        "de": "Du sollst diesen Text auf Englisch für deinen britischen Brieffreund vermitteln. Die BESTE Mediation ist:"
+      },
       "options": [
-        { "es": "'The climate crisis requires immediate measures from all countries.' (word-for-word translation)", "de": "'The climate crisis requires immediate measures from all countries.' (wörtliche Übersetzung)" },
-        { "es": "'Basically, Germany says climate stuff is important and needs fixing.'", "de": "'Basically, Germany says climate stuff is important and needs fixing.'" },
-        { "es": "'The article argues that the climate crisis calls for urgent, collective action from every nation — something that affects us in the UK too.'", "de": "'The article argues that the climate crisis calls for urgent, collective action from every nation — something that affects us in the UK too.'" },
-        { "es": "'Die Klimakrise ist ein sehr wichtiges Thema.'", "de": "'Die Klimakrise ist ein sehr wichtiges Thema.'" }
+        {
+          "es": "'The climate crisis requires immediate measures from all countries.' (word-for-word translation)",
+          "de": "'The climate crisis requires immediate measures from all countries.' (wörtliche Übersetzung)"
+        },
+        {
+          "es": "'Basically, Germany says climate stuff is important and needs fixing.'",
+          "de": "'Basically, Germany says climate stuff is important and needs fixing.'"
+        },
+        {
+          "es": "'The article argues that the climate crisis calls for urgent, collective action from every nation — something that affects us in the UK too.'",
+          "de": "'The article argues that the climate crisis calls for urgent, collective action from every nation — something that affects us in the UK too.'"
+        },
+        {
+          "es": "'Die Klimakrise ist ein sehr wichtiges Thema.'",
+          "de": "'Die Klimakrise ist ein sehr wichtiges Thema.'"
+        }
       ],
       "correct": 2,
-      "explanation": { "es": "La opción C adapta el mensaje al destinatario (pen pal en UK), usa vocabulario apropiado, hace la información relevante para el receptor y no traduce literalmente. La A es traducción literal (no mediation). La B es demasiado informal. La D está en alemán.", "de": "Option C passt die Botschaft dem Adressaten an (Brieffreund in UK), verwendet passendes Vokabular und macht den Inhalt relevant. A ist wörtliche Übersetzung (keine Mediation). B zu informell. D auf Deutsch." },
-      "tip": { "es": "Mediation mantra: ¿Quién es el receptor? ¿Qué necesita saber? ¿Qué registro le corresponde? Responde estas 3 preguntas ANTES de escribir.", "de": "Mediation-Mantra: Wer ist der Empfänger? Was muss er wissen? Welches Register passt? Diese 3 Fragen VOR dem Schreiben beantworten." }
+      "explanation": {
+        "es": "La opción C adapta el mensaje al destinatario (pen pal en UK), usa vocabulario apropiado, hace la información relevante para el receptor y no traduce literalmente. La A es traducción literal (no mediation). La B es demasiado informal. La D está en alemán.",
+        "de": "Option C passt die Botschaft dem Adressaten an (Brieffreund in UK), verwendet passendes Vokabular und macht den Inhalt relevant. A ist wörtliche Übersetzung (keine Mediation). B zu informell. D auf Deutsch."
+      },
+      "tip": {
+        "es": "Mediation mantra: ¿Quién es el receptor? ¿Qué necesita saber? ¿Qué registro le corresponde? Responde estas 3 preguntas ANTES de escribir.",
+        "de": "Mediation-Mantra: Wer ist der Empfänger? Was muss er wissen? Welches Register passt? Diese 3 Fragen VOR dem Schreiben beantworten."
+      }
     }
   ],
   "official_exams_archive": [
@@ -261,7 +479,7 @@
                 "es": "• 10 Puntos: Adaptar correctamente el registro formal/semi-formal al contexto del blog escolar y al destinatario internacional joven.\n• 10 Puntos: Extraer y sintetizar de forma correcta los puntos informativos esenciales del texto original en alemán sin copiar literalmente.\n• 10 Puntos: Fluidez expresiva y corrección lingüística al redactar en inglés.",
                 "de": "• 10 Punkte: Adressatengerechte Gestaltung und passendes Register (Blogpost).\n• 10 Punkte: Korrekte Auswahl und Reduktion der wesentlichen Informationen aus dem deutschen Ausgangstext.\n• 10 Punkte: Sprachliche Richtigkeit und Natürlichkeit des Englischen."
               },
-               "recommendation": {
+              "recommendation": {
                 "es": "Recomendación: En Mediation, NUNCA traduzcas literalmente oraciones completas. El examinador restará puntos si detecta traducciones literales de modismos o estructuras gramaticales alemanas. Debes expresar el significado con estructuras nativas en inglés.",
                 "de": "Achtung: Keine direkte Übersetzung! Es geht um die sinngemäße Übertragung der relevanten Aspekte in flüssigem Englisch."
               }
@@ -433,6 +651,93 @@
               "recommendation": {
                 "es": "Recomendación: En la mediación escrita informal, no traduzcas literalmente palabras compuestas alemanas complejas como 'Radschnellverbindungen'. Es mucho mejor explicar el concepto de forma natural: 'express cycle tracks/routes for commuters'.",
                 "de": "Tipp: Vermeide wörtliche Übersetzungen deutscher Komposita. Beschreibe stattdessen den Zweck ('express cycle routes for commuters')."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "englisch_dia_2023_media_society",
+      "title": "DIA Abitur Englisch 2023 — Media & Society",
+      "year": "2023",
+      "source": "Basado en currículo DIA/ZfA — Contenido de práctica curado",
+      "intro": {
+        "es": "Examen de Inglés formato DIA. Texto sobre redes sociales y democracia. Tareas: Outline, análisis retórico y Comment argumentado.",
+        "de": "DIA-Prüfung Englisch. Text über soziale Medien und Demokratie. Aufgaben: Outline, Analyse, Kommentar."
+      },
+      "blocks": [
+        {
+          "name": "Task 1 — Outline",
+          "tasks": [
+            {
+              "title": "Task 1: Outline the main argument",
+              "question": {
+                "es": "Outline the author's central argument and three supporting points in 'Social Media: Democracy's Friend or Foe?' (approx. 150 words).",
+                "de": "Fasse die Hauptthese und drei zentrale Argumente des Artikels zusammen (ca. 150 Wörter)."
+              },
+              "solution": {
+                "es": "Central argument: Social media poses a systemic threat to democracy through misinformation, polarization and algorithmic manipulation.\n\nMain points:\n1. Echo chambers reinforced by algorithms limit diverse viewpoints (para. 2–3).\n2. Viral misinformation outpaces fact-checking (para. 4).\n3. Regulatory frameworks have failed to keep pace (para. 5–6).\n\nNOTA: Objetivo, sin opinión propia. Usa reported speech.",
+                "de": "Hauptthese: Trotz demokratischen Potenzials bedrohen soziale Medien die Demokratie.\n\nHauptpunkte:\n1. Echokammern durch Algorithmen (Abs. 2–3).\n2. Desinformation übertrifft Faktenchecks (Abs. 4).\n3. Regulierung hält nicht Schritt (Abs. 5–6).\n\nHINWEIS: Objektiv, keine eigene Meinung."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 6 Puntos: Tesis y 3 argumentos correctos.\n• 5 Puntos: Lenguaje objetivo (no 'I think').\n• 4 Puntos: Claridad dentro del límite de palabras.",
+                "de": "• 6 Punkte: These und 3 Argumente.\n• 5 Punkte: Objektive Sprache.\n• 4 Punkte: Klarheit im Wortlimit."
+              },
+              "recommendation": {
+                "es": "Usa 'The author argues that...', 'According to the text...'. NUNCA primera persona.",
+                "de": "Formulierungen: 'The author argues...', 'According to...'. Niemals Ich-Perspektive."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Task 2 — Analysis",
+          "tasks": [
+            {
+              "title": "Task 2: Analyse language and rhetoric",
+              "question": {
+                "es": "Analyse THREE rhetorical/linguistic devices used by the author. Quote the text and explain the effect on the reader.",
+                "de": "Analysiere DREI rhetorische/sprachliche Mittel mit Textbeleg. Erkläre die Wirkung auf den Leser."
+              },
+              "solution": {
+                "es": "1. EMOTIVE LANGUAGE: 'democracy is bleeding out' — metaphor creating urgency. Effect: reader sees issue as emergency.\n2. RHETORICAL QUESTION: 'How many more elections...' — implicates reader, suggests inaction is morally wrong.\n3. STATISTICS: '73% of users...' — logos appeal, scientific authority.\n\nStructure: DEVICE + QUOTE + EFFECT ON READER",
+                "de": "1. METAPHER: 'democracy is bleeding out' — Dringlichkeit, Krise.\n2. RHETORISCHE FRAGE: 'How many more elections...' — Lesereinbezug, moralische Verantwortung.\n3. STATISTIK: '73% of users...' — Logos-Appell.\n\nStruktur: MITTEL + ZITAT + WIRKUNG"
+              },
+              "points": 20,
+              "criteria": {
+                "es": "• 6 Puntos por dispositivo: nombre + cita + efecto en el lector.\n• 2 Puntos: valoración global de la estrategia persuasiva.",
+                "de": "• 6 Punkte pro Mittel: Name + Zitat + Wirkung.\n• 2 Punkte: Gesamtbewertung."
+              },
+              "recommendation": {
+                "es": "La pregunta es CÓMO afecta al lector — ese matiz diferencia una respuesta básica de una excelente.",
+                "de": "Die Wirkung auf den Leser ist entscheidend — nicht nur das Mittel benennen."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Task 3 — Comment",
+          "tasks": [
+            {
+              "title": "Task 3: Comment on social media regulation",
+              "question": {
+                "es": "Write a comment (300-350 words) for an English newspaper: 'Should governments regulate social media to protect democracy?' Express and justify YOUR opinion.",
+                "de": "Schreibe einen Kommentar (300–350 Wörter): 'Sollten Regierungen soziale Medien regulieren?' Klare eigene Position."
+              },
+              "solution": {
+                "es": "STRUCTURE:\nHOOK: impactante stat or rhetorical question.\nBODY:\n- P1: Main argument for regulation (algorithmic transparency).\n- P2: Counter-argument acknowledged (free speech, censorship risk).\n- P3: Refutation + reinforced position.\nCONCLUSION: Call to action or reflection.\n\nREGISTER: Formal. Use 'one could argue', 'the evidence suggests'.",
+                "de": "STRUKTUR:\nEINSTIEG: Statistik oder rhetorische Frage.\nHAUPTTEIL:\n- A1: Regulierung (algorithmische Transparenz).\n- A2: Gegenargument (Meinungsfreiheit).\n- A3: Widerlegung + eigene Position.\nSCHLUSS: Handlungsaufruf.\n\nREGISTER: Formal. 'One could argue', 'the evidence suggests'."
+              },
+              "points": 25,
+              "criteria": {
+                "es": "• 8 Puntos: Estructura (hook, argumentos, conclusión).\n• 8 Puntos: Calidad argumentativa.\n• 9 Puntos: Inglés (registro, léxico, gramática, cuhesión).",
+                "de": "• 8 Punkte: Aufbau.\n• 8 Punkte: Argumentationsqualität.\n• 9 Punkte: Englischkenntnisse."
+              },
+              "recommendation": {
+                "es": "El Comment necesita UNA postura clara. Reconoce el contraargumento pero refútalo. Evita 'on one hand / on the other hand' sin conclusión.",
+                "de": "Klare Position. Gegenargument anerkennen, aber widerlegen. Nicht enden mit 'on the other hand'."
               }
             }
           ]

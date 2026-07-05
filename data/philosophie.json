@@ -1,6 +1,9 @@
 {
   "subject": "philosophie",
-  "displayName": { "es": "Filosofía (Philosophie)", "de": "Philosophie" },
+  "displayName": {
+    "es": "Filosofía (Philosophie)",
+    "de": "Philosophie"
+  },
   "icon": "🧠",
   "examType": "oral",
   "duration": 20,
@@ -24,30 +27,124 @@
   "taskTypes": [
     {
       "id": "vortrag",
-      "name": { "es": "Presentación oral (Vortrag)", "de": "Vortrag / Präsentation" },
-      "desc": { "es": "Presentar de forma estructurada el análisis de un fragmento de texto o estímulo filosófico durante 5-7 minutos. Debe incluir: reconstrucción del argumento, tesis central del autor y comparación conceptual.", "de": "Strukturierte Präsentation der Analyse eines philosophischen Textausschnitts (5-7 Minuten) mit Rekonstruktion der Argumentation und Vergleich." },
+      "name": {
+        "es": "Presentación oral (Vortrag)",
+        "de": "Vortrag / Präsentation"
+      },
+      "desc": {
+        "es": "Presentar de forma estructurada el análisis de un fragmento de texto o estímulo filosófico durante 5-7 minutos. Debe incluir: reconstrucción del argumento, tesis central del autor y comparación conceptual.",
+        "de": "Strukturierte Präsentation der Analyse eines philosophischen Textausschnitts (5-7 Minuten) mit Rekonstruktion der Argumentation und Vergleich."
+      },
       "structure": "1. Exposición del tema y tesis central → 2. Reconstrucción lógica del argumento → 3. Comparación conceptual con otro autor → 4. Conclusión / Valoración inicial",
-      "operators": ["Analysieren", "Vergleichen"]
+      "operators": [
+        "Analysieren",
+        "Vergleichen"
+      ]
     },
     {
       "id": "kolloquium",
-      "name": { "es": "Coloquio (Kolloquium)", "de": "Kolloquium / Prüfungsgespräch" },
-      "desc": { "es": "Responder a las preguntas del tribunal (3-5 minutos) que conectan el fragmento analizado con otros filósofos y temáticas de los 4 semestres del DIA.", "de": "Beantwortung von Vertiefungsfragen der Prüfungskommission (3-5 Minuten), die den Text auf andere Epochen und Denker beziehen." },
+      "name": {
+        "es": "Coloquio (Kolloquium)",
+        "de": "Kolloquium / Prüfungsgespräch"
+      },
+      "desc": {
+        "es": "Responder a las preguntas del tribunal (3-5 minutos) que conectan el fragmento analizado con otros filósofos y temáticas de los 4 semestres del DIA.",
+        "de": "Beantwortung von Vertiefungsfragen der Prüfungskommission (3-5 Minuten), die den Text auf andere Epochen und Denker beziehen."
+      },
       "structure": "Respuestas fluidas en alemán utilizando terminología filosófica precisa, demostrando visión de conjunto de la materia.",
-      "operators": ["Erörtern", "Stellung nehmen"]
+      "operators": [
+        "Erörtern",
+        "Stellung nehmen"
+      ]
     }
   ],
   "keyOperators": [
-    { "op": "Analysieren", "meaning": { "es": "Describir el fragmento de texto filosófico, reconstruyendo de forma objetiva la estructura de sus argumentos y la tesis central del autor.", "de": "Einen philosophischen Text analysieren und den argumentativen Aufbau sowie die Hauptthese des Autors sachlich rekonstruieren." }, "trap": { "es": "Trampa: Empezar a criticar las ideas del filósofo en la fase de análisis. Primero debes demostrar que comprendes objetivamente qué dice el autor.", "de": "Falle: Bereits in der Analysephase die Thesen kritisieren. Zuerst muss eine objektive Rekonstruktion erfolgen." } },
-    { "op": "Vergleichen", "meaning": { "es": "Contrastar las tesis del texto propuesto con las de otro filósofo estudiado en los semestres del DIA, señalando similitudes y diferencias esenciales.", "de": "Die Thesen des Textes mit einer anderen philosophischen Position kontrastieren und Gemeinsamkeiten sowie Unterschiede aufzeigen." }, "trap": { "es": "Trampa: Exponer las teorías de ambos autores por separado sin enlazarlas dinámicamente mediante puntos de comparación específicos.", "de": "Falle: Beide Positionen isoliert nacheinander darstellen, statt sie kriterienorientiert zu vergleichen." } },
-    { "op": "Erörtern", "meaning": { "es": "Debatir críticamente una tesis filosófica pesando argumentos a favor y en contra, evaluando sus premisas lógicas y consecuencias éticas o políticas.", "de": "Eine philosophische These kritisch diskutieren, Pro- und Contra-Argumente abwägen und die logische Konsistenz prüfen." }, "trap": { "es": "Trampa: Olvidar tomar una posición personal justificada y firme al final de la argumentación.", "de": "Falle: Am Ende keine eigene, philosophisch begründete Stellungnahme abzugeben." } },
-    { "op": "Stellung nehmen", "meaning": { "es": "Tomar partido argumentadamente respecto a una afirmación filosófica o dilema ético actual desde un punto de vista fundamentado.", "de": "Ausgehend von philosophischen Argumenten eine eigene begründete Meinung zu einem Sachverhalt oder Dilemma äußern." }, "trap": { "es": "Trampa: Dar una opinión meramente subjetiva o informal sin usar el vocabulario ni los conceptos éticos de los autores estudiados.", "de": "Falle: Eine rein subjektive Alltagsmeinung äußern, statt philosophisch-terminologisch zu begründen." } }
+    {
+      "op": "Analysieren",
+      "meaning": {
+        "es": "Describir el fragmento de texto filosófico, reconstruyendo de forma objetiva la estructura de sus argumentos y la tesis central del autor.",
+        "de": "Einen philosophischen Text analysieren und den argumentativen Aufbau sowie die Hauptthese des Autors sachlich rekonstruieren."
+      },
+      "trap": {
+        "es": "Trampa: Empezar a criticar las ideas del filósofo en la fase de análisis. Primero debes demostrar que comprendes objetivamente qué dice el autor.",
+        "de": "Falle: Bereits in der Analysephase die Thesen kritisieren. Zuerst muss eine objektive Rekonstruktion erfolgen."
+      }
+    },
+    {
+      "op": "Vergleichen",
+      "meaning": {
+        "es": "Contrastar las tesis del texto propuesto con las de otro filósofo estudiado en los semestres del DIA, señalando similitudes y diferencias esenciales.",
+        "de": "Die Thesen des Textes mit einer anderen philosophischen Position kontrastieren und Gemeinsamkeiten sowie Unterschiede aufzeigen."
+      },
+      "trap": {
+        "es": "Trampa: Exponer las teorías de ambos autores por separado sin enlazarlas dinámicamente mediante puntos de comparación específicos.",
+        "de": "Falle: Beide Positionen isoliert nacheinander darstellen, statt sie kriterienorientiert zu vergleichen."
+      }
+    },
+    {
+      "op": "Erörtern",
+      "meaning": {
+        "es": "Debatir críticamente una tesis filosófica pesando argumentos a favor y en contra, evaluando sus premisas lógicas y consecuencias éticas o políticas.",
+        "de": "Eine philosophische These kritisch diskutieren, Pro- und Contra-Argumente abwägen und die logische Konsistenz prüfen."
+      },
+      "trap": {
+        "es": "Trampa: Olvidar tomar una posición personal justificada y firme al final de la argumentación.",
+        "de": "Falle: Am Ende keine eigene, philosophisch begründete Stellungnahme abzugeben."
+      }
+    },
+    {
+      "op": "Stellung nehmen",
+      "meaning": {
+        "es": "Tomar partido argumentadamente respecto a una afirmación filosófica o dilema ético actual desde un punto de vista fundamentado.",
+        "de": "Ausgehend von philosophischen Argumenten eine eigene begründete Meinung zu einem Sachverhalt oder Dilemma äußern."
+      },
+      "trap": {
+        "es": "Trampa: Dar una opinión meramente subjetiva o informal sin usar el vocabulario ni los conceptos éticos de los autores estudiados.",
+        "de": "Falle: Eine rein subjektive Alltagsmeinung äußern, statt philosophisch-terminologisch zu begründen."
+      }
+    }
   ],
   "key_concepts": [
-    { "concept": "Eudaimonía", "es": "Felicidad o autorrealización como el fin supremo del ser humano, alcanzada mediante la virtud y el término medio (Aristóteles).", "de": "Glückseligkeit als höchstes menschliches Ziel, zu erreichen durch ein tugendhaftes Leben der goldenen Mitte (Aristoteles)." },
-    { "concept": "Kategorischer Imperativ", "es": "Ley moral formal universal de Kant: actúa de modo que la máxima de tu acción pueda convertirse en ley universal.", "de": "Universelles Moralgesetz nach Kant: Handle nur nach Maximen, die sich verallgemeinern lassen." },
-    { "concept": "Naturzustand", "es": "Hipótesis filosófica sobre la vida del ser humano antes del Estado (Hobbes: caos; Locke: derechos desprotegidos; Rousseau: bondad natural).", "de": "Gedankliches Modell des menschlichen Lebens vor der staatlichen Ordnung (Hobbes, Locke, Rousseau)." },
-    { "concept": "Schleier des Nichtwissens", "es": "Concepto de Rawls: decidir las reglas de justicia de una sociedad sin saber qué posición social o características individuales ocuparemos.", "de": "Rawls' Konzept: Entscheidung über Gerechtigkeitsprinzipien ohne Wissen über die eigene spätere gesellschaftliche Rolle." }
+    {
+      "concept": "A priori / A posteriori",
+      "es": "Conocimiento independiente/dependiente de la experiencia",
+      "de": "Erkenntnis unabhängig/abhängig von Erfahrung"
+    },
+    {
+      "concept": "Imperativo categórico",
+      "es": "Actúa solo según máximas que puedas universalizar (Kant)",
+      "de": "Handle nur nach Maximen, die du universalisieren könntest (Kant)"
+    },
+    {
+      "concept": "Eudaimonia",
+      "es": "Felicidad como realización plena de las capacidades humanas (Aristóteles)",
+      "de": "Glück als vollständige Verwirklichung menschlicher Fähigkeiten (Aristoteles)"
+    },
+    {
+      "concept": "Contrato social",
+      "es": "Pacto fundador del Estado entre individuos para superar el estado de naturaleza",
+      "de": "Gründungsvertrag des Staates zwischen Individuen zur Überwindung des Naturzustands"
+    },
+    {
+      "concept": "Voluntad de poder",
+      "es": "Principio nietzscheano de autoafirmación y superación (no dominación)",
+      "de": "Nietzscheanisches Prinzip der Selbstbehauptung und Überwindung (nicht Dominanz)"
+    },
+    {
+      "concept": "Cogito ergo sum",
+      "es": "'Pienso, luego existo' — certeza indudable de Descartes",
+      "de": "'Ich denke, also bin ich' — unzweifelhafte Gewissheit Descartes'"
+    },
+    {
+      "concept": "Nihilismo",
+      "es": "Negación de valores absolutos, Dios y verdades trascendentes (Nietzsche)",
+      "de": "Verneinung absoluter Werte, Gottes und transzendenter Wahrheiten (Nietzsche)"
+    },
+    {
+      "concept": "Alienación (Marx)",
+      "es": "El trabajador se separa del producto de su trabajo y de su esencia humana",
+      "de": "Der Arbeiter entfremdet sich vom Produkt seiner Arbeit und seinem menschlichen Wesen"
+    }
   ],
   "exam_tips": [
     "En la preparación de 10 minutos, haz un esquema claro en papel con la tesis y 3 argumentos clave. Te servirá de guía visual durante tu exposición oral.",
@@ -58,99 +155,213 @@
   "topics_by_semester": [
     {
       "semester": "11.1",
-      "topic": { "es": "Epistemología — ¿Qué podemos conocer?", "de": "Erkenntnistheorie — Was können wir wissen?" },
+      "topic": {
+        "es": "Epistemología — ¿Qué podemos conocer?",
+        "de": "Erkenntnistheorie — Was können wir wissen?"
+      },
       "summary": {
         "es": "Estudia el origen y los límites del conocimiento humano. René Descartes (Racionalismo) busca una base indudable a través de la duda metódica y concluye en el 'Cogito ergo sum' (Pienso, luego existo) como primera certeza. David Hume (Empirismo) afirma que todo conocimiento proviene de la experiencia y critica el concepto de causalidad. Immanuel Kant realiza una síntesis (Idealismo Trascendental), argumentando que conocemos las cosas no como son en sí mismas (noúmeno), sino como se nos aparecen (fenómeno), a través de nuestras formas a priori de la sensibilidad (espacio/tiempo) y categorías del entendimiento.",
         "de": "Untersucht den Ursprung und die Grenzen menschlicher Erkenntnis. René Descartes (Rationalismus) sucht ein unbezweifelbares Fundament durch methodischen Zweifel und findet es im 'Cogito ergo sum'. David Hume (Empirismus) argumentiert, dass alle Erkenntnis auf Erfahrung beruht, und kritisiert das Kausalitätsprinzip. Immanuel Kant schafft eine Synthese (Transzendentaler Idealismus): Wir erkennen die Dinge nicht, wie sie an sich sind (Noumenon), sondern wie sie uns erscheinen (Phänomen), geordnet durch Raum, Zeit und die Kategorien des Verstandes."
       },
-      "philosophers": ["Platón (Alegoría de la caverna)", "Descartes (Duda metódica, Cogito ergo sum)", "Kant (Crítica de la razón pura — síntesis)", "Hume (Escepticismo, asociación de ideas)"],
+      "philosophers": [
+        "Platón (Alegoría de la caverna)",
+        "Descartes (Duda metódica, Cogito ergo sum)",
+        "Kant (Crítica de la razón pura — síntesis)",
+        "Hume (Escepticismo, asociación de ideas)"
+      ],
       "key_questions": [
-        { "es": "¿Cuál es la diferencia entre conocimiento y opinión en Platón?", "de": "Was ist der Unterschied zwischen Wissen und Meinung bei Platon?" },
-        { "es": "¿Por qué Descartes no puede dudar del Cogito?", "de": "Warum kann Descartes das Cogito nicht bezweifeln?" },
-        { "es": "¿Qué son los juicios sintéticos a priori en Kant?", "de": "Was sind synthetische Urteile a priori bei Kant?" }
+        {
+          "es": "¿Cuál es la diferencia entre conocimiento y opinión en Platón?",
+          "de": "Was ist der Unterschied zwischen Wissen und Meinung bei Platon?"
+        },
+        {
+          "es": "¿Por qué Descartes no puede dudar del Cogito?",
+          "de": "Warum kann Descartes das Cogito nicht bezweifeln?"
+        },
+        {
+          "es": "¿Qué son los juicios sintéticos a priori en Kant?",
+          "de": "Was sind synthetische Urteile a priori bei Kant?"
+        }
       ]
     },
     {
       "semester": "11.2",
-      "topic": { "es": "Ética y Moral — ¿Cómo debemos actuar?", "de": "Ethik und Moral — Wie sollen wir handeln?" },
+      "topic": {
+        "es": "Ética y Moral — ¿Cómo debemos actuar?",
+        "de": "Ethik und Moral — Wie sollen wir handeln?"
+      },
       "summary": {
         "es": "Busca fundamentar las normas de la conducta humana. Immanuel Kant (Ética Deontológica/del Deber) postula que una acción es moralmente buena únicamente si se realiza por deber. Su regla de oro es el Imperativo Categórico: actúa solo según máximas que puedas querer que se conviertan en ley universal. John Stuart Mill (Utilitarismo) defiende una ética consecuencialista basada en el Principio de Utilidad: la mejor acción es aquella que maximiza la felicidad o el placer para el mayor número de personas. Aristóteles (Ética de la Virtud) define el fin supremo como la Eudaimonía (felicidad/autorrealización), alcanzada mediante el término medio de las virtudes.",
         "de": "Sucht nach Begründungen für menschliches Handeln. Immanuel Kant (Deontologische Ethik) betont die Pflicht: Eine Handlung ist nur dann moralisch gut, wenn sie aus Pflicht geschieht. Sein Kernprinzip ist der Kategorische Imperativ: Handle nur nach derjenigen Maxime, von der du wollen kannst, dass sie ein allgemeines Gesetz werde. John Stuart Mill (Utilitarismus) vertritt eine konsequentialistische Ethik: Gut ist, was das größte Glück für die größte Zahl von Menschen bringt. Aristoteles (Tugendethik) sieht die Eudaimonie (Glückseligkeit) als höchstes Ziel, zu erreichen durch die goldene Mitte der Tugenden."
       },
-      "philosophers": ["Kant (Imperativo categórico)", "Mill (Utilitarismo)", "Aristóteles (Eudaimonia, Ética a Nicómaco)", "Rawls (Teoría de la Justicia)"],
+      "philosophers": [
+        "Kant (Imperativo categórico)",
+        "Mill (Utilitarismo)",
+        "Aristóteles (Eudaimonia, Ética a Nicómaco)",
+        "Rawls (Teoría de la Justicia)"
+      ],
       "key_questions": [
-        { "es": "¿En qué consiste el imperativo categórico de Kant? Formula la 1ª formulación.", "de": "Worin besteht Kants kategorischer Imperativ? Formuliere die 1. Formel." },
-        { "es": "¿Qué diferencia hay entre la ética kantiana y el utilitarismo?", "de": "Was ist der Unterschied zwischen Kants Ethik und dem Utilitarismus?" },
-        { "es": "¿Qué es la eudaimonia según Aristóteles?", "de": "Was ist Eudaimonie bei Aristoteles?" }
+        {
+          "es": "¿En qué consiste el imperativo categórico de Kant? Formula la 1ª formulación.",
+          "de": "Worin besteht Kants kategorischer Imperativ? Formuliere die 1. Formel."
+        },
+        {
+          "es": "¿Qué diferencia hay entre la ética kantiana y el utilitarismo?",
+          "de": "Was ist der Unterschied zwischen Kants Ethik und dem Utilitarismus?"
+        },
+        {
+          "es": "¿Qué es la eudaimonia según Aristóteles?",
+          "de": "Was ist Eudaimonie bei Aristoteles?"
+        }
       ]
     },
     {
       "semester": "12.1",
-      "topic": { "es": "Filosofía Política — ¿Cómo debe organizarse la sociedad?", "de": "Politische Philosophie — Wie soll die Gesellschaft organisiert sein?" },
+      "topic": {
+        "es": "Filosofía Política — ¿Cómo debe organizarse la sociedad?",
+        "de": "Politische Philosophie — Wie soll die Gesellschaft organisiert sein?"
+      },
       "summary": {
         "es": "Analiza la legitimidad del poder del Estado. Thomas Hobbes afirma que en el estado de naturaleza (guerra de todos contra todos), la vida es solitaria y corta; por ello, los hombres firman un contrato para ceder su libertad a un soberano absoluto (Leviatán) a cambio de seguridad. John Locke propone un contrato liberal para proteger los derechos naturales (vida, libertad, propiedad). Jean-Jacques Rousseau argumenta que el ser humano nace libre y la sociedad lo encadena, sugiriendo un pacto basado en la Voluntad General. John Rawls propone la justicia como equidad a través del 'velo de la ignorancia' en una posición original justa.",
         "de": "Fragt nach der Legitimität staatlicher Herrschaft. Thomas Hobbes postuliert im Naturzustand einen Krieg aller gegen alle; der Staat (Leviathan) wird durch Gesellschaftsvertrag zur Friedenssicherung absolut legitimiert. John Locke begründet den liberalen Staat zum Schutz von Leben, Freiheit und Eigentum. Jean-Jacques Rousseau sieht den Menschen von Natur aus frei und schlägt einen Vertrag vor, der auf dem Gemeinwillen (volonté générale) basiert. John Rawls entwirft Gerechtigkeit als Fairness hinter dem 'Schleier des Nichtwissens'."
       },
-      "philosophers": ["Hobbes (Contrato social, Leviatán)", "Locke (Estado liberal)", "Rousseau (Voluntad general)", "Rawls (Velo de la ignorancia)", "Marx (Materialismo histórico, alienación)"],
+      "philosophers": [
+        "Hobbes (Contrato social, Leviatán)",
+        "Locke (Estado liberal)",
+        "Rousseau (Voluntad general)",
+        "Rawls (Velo de la ignorancia)",
+        "Marx (Materialismo histórico, alienación)"
+      ],
       "key_questions": [
-        { "es": "¿Por qué Hobbes considera necesario el Estado absoluto?", "de": "Warum hält Hobbes den absoluten Staat für notwendig?" },
-        { "es": "¿En qué consiste el 'velo de la ignorancia' de Rawls?", "de": "Was ist der 'Schleier des Nichtwissens' bei Rawls?" },
-        { "es": "¿Cómo define Marx el concepto de alienación?", "de": "Wie definiert Marx den Begriff der Entfremdung?" }
+        {
+          "es": "¿Por qué Hobbes considera necesario el Estado absoluto?",
+          "de": "Warum hält Hobbes den absoluten Staat für notwendig?"
+        },
+        {
+          "es": "¿En qué consiste el 'velo de la ignorancia' de Rawls?",
+          "de": "Was ist der 'Schleier des Nichtwissens' bei Rawls?"
+        },
+        {
+          "es": "¿Cómo define Marx el concepto de alienación?",
+          "de": "Wie definiert Marx den Begriff der Entfremdung?"
+        }
       ]
     },
     {
       "semester": "12.2",
-      "topic": { "es": "Filosofía de la mente y contemporánea — ¿Qué somos?", "de": "Philosophie des Geistes und zeitgenössische Philosophie — Was sind wir?" },
+      "topic": {
+        "es": "Filosofía de la mente y contemporánea — ¿Qué somos?",
+        "de": "Philosophie des Geistes und zeitgenössische Philosophie — Was sind wir?"
+      },
       "summary": {
         "es": "Aborda el ser humano en el mundo moderno. Friedrich Nietzsche critica la metafísica platónico-cristiana, proclama la 'muerte de Dios' (pérdida de valores absolutos), introduce la voluntad de poder y propone el Übermensch (el creador de nuevos valores terrenales). Jean-Paul Sartre (Existencialismo) proclama que 'la existencia precede a la esencia': nacemos vacíos de propósito y somos radicalmente libres y responsables de construirnos a nosotros mismos mediante nuestras elecciones, sin justificaciones absolutas.",
         "de": "Behandelt den Menschen in der Moderne. Friedrich Nietzsche kritisiert die platonisch-christliche Metaphysik, verkündet den 'Tod Gottes' (Verlust absoluter Werte) und fordert den Übermensch als Schöpfer eigener, irdischer Werte. Jean-Paul Sartre (Existenzialismus) erklärt: 'Die Existenz geht der Essenz voraus' — der Mensch existiert zuerst, begegnet sich in der Welt und definiert sich erst danach durch seine freien Handlungen und Wahlen."
       },
-      "philosophers": ["Nietzsche (Voluntad de poder, Übermensch, nihilismo)", "Sartre (Existencialismo)", "Wittgenstein (Juegos de lenguaje)", "Turing/Dennett (Filosofía de la mente, IA)"],
+      "philosophers": [
+        "Nietzsche (Voluntad de poder, Übermensch, nihilismo)",
+        "Sartre (Existencialismo)",
+        "Wittgenstein (Juegos de lenguaje)",
+        "Turing/Dennett (Filosofía de la mente, IA)"
+      ],
       "key_questions": [
-        { "es": "¿Qué significa la frase 'Dios ha muerto' (Nietzsche)?", "de": "Was bedeutet Nietzches Aussage 'Gott ist tot'?" },
-        { "es": "¿En qué consiste el existencialismo de Sartre? 'La existencia precede a la esencia'", "de": "Was ist Sartres Existentialismus? 'Die Existenz geht der Essenz voraus'" },
-        { "es": "¿Puede una máquina pensar? El test de Turing.", "de": "Kann eine Maschine denken? Der Turing-Test." }
+        {
+          "es": "¿Qué significa la frase 'Dios ha muerto' (Nietzsche)?",
+          "de": "Was bedeutet Nietzches Aussage 'Gott ist tot'?"
+        },
+        {
+          "es": "¿En qué consiste el existencialismo de Sartre? 'La existencia precede a la esencia'",
+          "de": "Was ist Sartres Existentialismus? 'Die Existenz geht der Essenz voraus'"
+        },
+        {
+          "es": "¿Puede una máquina pensar? El test de Turing.",
+          "de": "Kann eine Maschine denken? Der Turing-Test."
+        }
       ]
     }
   ],
-  "key_concepts": [
-    { "concept": "A priori / A posteriori", "es": "Conocimiento independiente/dependiente de la experiencia", "de": "Erkenntnis unabhängig/abhängig von Erfahrung" },
-    { "concept": "Imperativo categórico", "es": "Actúa solo según máximas que puedas universalizar (Kant)", "de": "Handle nur nach Maximen, die du universalisieren könntest (Kant)" },
-    { "concept": "Eudaimonia", "es": "Felicidad como realización plena de las capacidades humanas (Aristóteles)", "de": "Glück als vollständige Verwirklichung menschlicher Fähigkeiten (Aristoteles)" },
-    { "concept": "Contrato social", "es": "Pacto fundador del Estado entre individuos para superar el estado de naturaleza", "de": "Gründungsvertrag des Staates zwischen Individuen zur Überwindung des Naturzustands" },
-    { "concept": "Voluntad de poder", "es": "Principio nietzscheano de autoafirmación y superación (no dominación)", "de": "Nietzscheanisches Prinzip der Selbstbehauptung und Überwindung (nicht Dominanz)" },
-    { "concept": "Cogito ergo sum", "es": "'Pienso, luego existo' — certeza indudable de Descartes", "de": "'Ich denke, also bin ich' — unzweifelhafte Gewissheit Descartes'" },
-    { "concept": "Nihilismo", "es": "Negación de valores absolutos, Dios y verdades trascendentes (Nietzsche)", "de": "Verneinung absoluter Werte, Gottes und transzendenter Wahrheiten (Nietzsche)" },
-    { "concept": "Alienación (Marx)", "es": "El trabajador se separa del producto de su trabajo y de su esencia humana", "de": "Der Arbeiter entfremdet sich vom Produkt seiner Arbeit und seinem menschlichen Wesen" }
-  ],
   "trap_questions": [
     {
-      "trap": { "es": "Confundir el imperativo categórico con el hipotético", "de": "Kategorischen mit hypothetischem Imperativ verwechseln" },
-      "avoid": { "es": "Imperativo hipotético: 'Si quieres X, haz Y' (condicional). Categórico: 'Haz X' (incondicionalmente, válido para todos siempre). Kant solo considera MORAL el categórico.", "de": "Hypothetischer Imperativ: 'Wenn du X willst, tu Y' (bedingt). Kategorischer: 'Tu X' (unbedingt, für alle gültig). Kant sieht nur den kategorischen als MORALISCH an." }
+      "trap": {
+        "es": "Confundir el imperativo categórico con el hipotético",
+        "de": "Kategorischen mit hypothetischem Imperativ verwechseln"
+      },
+      "avoid": {
+        "es": "Imperativo hipotético: 'Si quieres X, haz Y' (condicional). Categórico: 'Haz X' (incondicionalmente, válido para todos siempre). Kant solo considera MORAL el categórico.",
+        "de": "Hypothetischer Imperativ: 'Wenn du X willst, tu Y' (bedingt). Kategorischer: 'Tu X' (unbedingt, für alle gültig). Kant sieht nur den kategorischen als MORALISCH an."
+      }
     },
     {
-      "trap": { "es": "'Voluntad de poder' de Nietzsche como voluntad de dominar a otros", "de": "'Wille zur Macht' bei Nietzsche als Wille, andere zu dominieren" },
-      "avoid": { "es": "La Voluntad de poder NO es querer gobernar ni dominar políticamente. Es el impulso de superación de uno mismo, de crear valores propios, de vivir plenamente. La malinterpretación nazi fue precisamente esa.", "de": "Wille zur Macht ist NICHT der Wunsch zu herrschen oder politisch zu dominieren. Es ist der Trieb zur Selbstüberwindung, zur Schaffung eigener Werte. Die Nazi-Fehldeutung war genau das." }
+      "trap": {
+        "es": "'Voluntad de poder' de Nietzsche como voluntad de dominar a otros",
+        "de": "'Wille zur Macht' bei Nietzsche als Wille, andere zu dominieren"
+      },
+      "avoid": {
+        "es": "La Voluntad de poder NO es querer gobernar ni dominar políticamente. Es el impulso de superación de uno mismo, de crear valores propios, de vivir plenamente. La malinterpretación nazi fue precisamente esa.",
+        "de": "Wille zur Macht ist NICHT der Wunsch zu herrschen oder politisch zu dominieren. Es ist der Trieb zur Selbstüberwindung, zur Schaffung eigener Werte. Die Nazi-Fehldeutung war genau das."
+      }
     },
     {
-      "trap": { "es": "Pensar que el existencialismo de Sartre es pesimista", "de": "Sartres Existentialismus als pessimistisch missverstehen" },
-      "avoid": { "es": "Sartre ve la libertad radical ('estamos condenados a ser libres') como una RESPONSABILIDAD y una oportunidad de crear sentido, no como un peso negativo. El existencialismo es una filosofía del compromiso.", "de": "Sartre sieht radikale Freiheit ('wir sind zur Freiheit verurteilt') als VERANTWORTUNG und Möglichkeit zur Sinngebung, nicht als negativen Druck. Existentialismus ist eine Philosophie des Engagements." }
+      "trap": {
+        "es": "Pensar que el existencialismo de Sartre es pesimista",
+        "de": "Sartres Existentialismus als pessimistisch missverstehen"
+      },
+      "avoid": {
+        "es": "Sartre ve la libertad radical ('estamos condenados a ser libres') como una RESPONSABILIDAD y una oportunidad de crear sentido, no como un peso negativo. El existencialismo es una filosofía del compromiso.",
+        "de": "Sartre sieht radikale Freiheit ('wir sind zur Freiheit verurteilt') als VERANTWORTUNG und Möglichkeit zur Sinngebung, nicht als negativen Druck. Existentialismus ist eine Philosophie des Engagements."
+      }
     },
     {
-      "trap": { "es": "No distinguir entre ética normativa, metaética y ética aplicada", "de": "Normative Ethik, Metaethik und angewandte Ethik nicht unterscheiden" },
-      "avoid": { "es": "Ética normativa: ¿qué debemos hacer? (Kant, Mill). Metaética: ¿qué significa 'bueno'? (Moore, Ayer). Ética aplicada: casos concretos (bioética, ética ambiental). Si el examinador pregunta por una, no mezcles con otra.", "de": "Normative Ethik: Was sollen wir tun? (Kant, Mill). Metaethik: Was bedeutet 'gut'? (Moore, Ayer). Angewandte Ethik: konkrete Fälle (Bioethik, Umweltethik). Nicht mischen, wenn nach einer gefragt wird." }
+      "trap": {
+        "es": "No distinguir entre ética normativa, metaética y ética aplicada",
+        "de": "Normative Ethik, Metaethik und angewandte Ethik nicht unterscheiden"
+      },
+      "avoid": {
+        "es": "Ética normativa: ¿qué debemos hacer? (Kant, Mill). Metaética: ¿qué significa 'bueno'? (Moore, Ayer). Ética aplicada: casos concretos (bioética, ética ambiental). Si el examinador pregunta por una, no mezcles con otra.",
+        "de": "Normative Ethik: Was sollen wir tun? (Kant, Mill). Metaethik: Was bedeutet 'gut'? (Moore, Ayer). Angewandte Ethik: konkrete Fälle (Bioethik, Umweltethik). Nicht mischen, wenn nach einer gefragt wird."
+      }
     }
   ],
   "oral_techniques": [
-    { "es": "Empieza siempre definiendo el concepto clave del texto/pregunta", "de": "Beginne immer mit der Definition des Schlüsselbegriffs im Text/der Frage" },
-    { "es": "Estructura tu respuesta: 1) Tesis, 2) Argumento filosófico con autor, 3) Ejemplo concreto, 4) Conclusión", "de": "Strukturiere deine Antwort: 1) These, 2) Philosophisches Argument mit Autor, 3) Konkretes Beispiel, 4) Schluss" },
-    { "es": "Si no sabes algo, razona en voz alta. El tribunal valora el proceso de pensamiento, no solo la respuesta correcta", "de": "Falls du etwas nicht weißt, denke laut. Die Kommission bewertet den Denkprozess, nicht nur die richtige Antwort" },
-    { "es": "Usa vocabulario técnico filosófico: 'epistemológico', 'ontológico', 'deontológico', 'teleológico'", "de": "Philosophisches Fachvokabular verwenden: 'epistemologisch', 'ontologisch', 'deontologisch', 'teleologisch'" },
-    { "es": "Relaciona siempre el concepto con actualidad: el tribunal aprecia que puedas aplicar la filosofía a temas contemporáneos", "de": "Konzept immer mit Aktualität verknüpfen: die Kommission schätzt, wenn du Philosophie auf aktuelle Themen anwenden kannst" }
+    {
+      "es": "Empieza siempre definiendo el concepto clave del texto/pregunta",
+      "de": "Beginne immer mit der Definition des Schlüsselbegriffs im Text/der Frage"
+    },
+    {
+      "es": "Estructura tu respuesta: 1) Tesis, 2) Argumento filosófico con autor, 3) Ejemplo concreto, 4) Conclusión",
+      "de": "Strukturiere deine Antwort: 1) These, 2) Philosophisches Argument mit Autor, 3) Konkretes Beispiel, 4) Schluss"
+    },
+    {
+      "es": "Si no sabes algo, razona en voz alta. El tribunal valora el proceso de pensamiento, no solo la respuesta correcta",
+      "de": "Falls du etwas nicht weißt, denke laut. Die Kommission bewertet den Denkprozess, nicht nur die richtige Antwort"
+    },
+    {
+      "es": "Usa vocabulario técnico filosófico: 'epistemológico', 'ontológico', 'deontológico', 'teleológico'",
+      "de": "Philosophisches Fachvokabular verwenden: 'epistemologisch', 'ontologisch', 'deontologisch', 'teleologisch'"
+    },
+    {
+      "es": "Relaciona siempre el concepto con actualidad: el tribunal aprecia que puedas aplicar la filosofía a temas contemporáneos",
+      "de": "Konzept immer mit Aktualität verknüpfen: die Kommission schätzt, wenn du Philosophie auf aktuelle Themen anwenden kannst"
+    }
   ],
   "resources": [
-    { "name": "Berliner Bildungsserver — Philosophie", "url": "https://bildungsserver.berlin-brandenburg.de", "desc": { "es": "El simulacro más fiel para Philosophie oral DIA — exámenes del Gymnasium de Berlín", "de": "Treueste Simulation für mündliche Philosophie-DIA-Prüfung — Berliner Gymnasium-Prüfungen" }, "type": "official" },
-    { "name": "Philosophie.de", "url": "https://www.philosophie.de", "desc": { "es": "Glosario filosófico y resúmenes por corriente", "de": "Philosophie-Glossar und Zusammenfassungen nach Strömung" }, "type": "reference" }
+    {
+      "name": "Berliner Bildungsserver — Philosophie",
+      "url": "https://bildungsserver.berlin-brandenburg.de",
+      "desc": {
+        "es": "El simulacro más fiel para Philosophie oral DIA — exámenes del Gymnasium de Berlín",
+        "de": "Treueste Simulation für mündliche Philosophie-DIA-Prüfung — Berliner Gymnasium-Prüfungen"
+      },
+      "type": "official"
+    },
+    {
+      "name": "Philosophie.de",
+      "url": "https://www.philosophie.de",
+      "desc": {
+        "es": "Glosario filosófico y resúmenes por corriente",
+        "de": "Philosophie-Glossar und Zusammenfassungen nach Strömung"
+      },
+      "type": "reference"
+    }
   ],
   "questions": [
     {
@@ -159,16 +370,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Ética — Kant",
-      "question": { "es": "Según Kant, una acción es moralmente correcta cuando:", "de": "Nach Kant ist eine Handlung moralisch richtig, wenn:" },
+      "question": {
+        "es": "Según Kant, una acción es moralmente correcta cuando:",
+        "de": "Nach Kant ist eine Handlung moralisch richtig, wenn:"
+      },
       "options": [
-        { "es": "Produce la mayor felicidad para el mayor número de personas", "de": "Sie das größte Glück für die größte Anzahl von Menschen erzeugt" },
-        { "es": "La máxima que la guía puede convertirse en ley universal sin contradicción", "de": "Die ihr zugrunde liegende Maxime ohne Widerspruch zum allgemeinen Gesetz werden kann" },
-        { "es": "Es aprobada por la mayoría de la sociedad", "de": "Sie von der Mehrheit der Gesellschaft gebilligt wird" },
-        { "es": "Conduce a la eudaimonia (florecimiento humano)", "de": "Sie zur Eudaimonie (menschliche Entfaltung) führt" }
+        {
+          "es": "Produce la mayor felicidad para el mayor número de personas",
+          "de": "Sie das größte Glück für die größte Anzahl von Menschen erzeugt"
+        },
+        {
+          "es": "La máxima que la guía puede convertirse en ley universal sin contradicción",
+          "de": "Die ihr zugrunde liegende Maxime ohne Widerspruch zum allgemeinen Gesetz werden kann"
+        },
+        {
+          "es": "Es aprobada por la mayoría de la sociedad",
+          "de": "Sie von der Mehrheit der Gesellschaft gebilligt wird"
+        },
+        {
+          "es": "Conduce a la eudaimonia (florecimiento humano)",
+          "de": "Sie zur Eudaimonie (menschliche Entfaltung) führt"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "Esta es la 1ª formulación del Imperativo Categórico: 'Actúa solo según aquella máxima por la cual puedas querer al mismo tiempo que se convierta en ley universal.' La opción A es el utilitarismo de Mill/Bentham. La D es la ética de la virtud de Aristóteles.", "de": "Dies ist die 1. Formel des Kategorischen Imperativs: 'Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde.' Option A = Utilitarismus (Mill/Bentham). D = Aristoteles' Tugendethik." },
-      "tip": { "es": "Las 3 formulaciones del Imperativo Categórico: 1) Universalizabilidad, 2) Humanidad como fin (no como medio), 3) Reino de los fines. ¡El tribunal puede preguntar por cualquiera!", "de": "Die 3 Formeln des Kategorischen Imperativs: 1) Universalisierbarkeit, 2) Menschheit als Zweck (nie als Mittel), 3) Reich der Zwecke. Die Kommission kann nach jeder fragen!" }
+      "explanation": {
+        "es": "Esta es la 1ª formulación del Imperativo Categórico: 'Actúa solo según aquella máxima por la cual puedas querer al mismo tiempo que se convierta en ley universal.' La opción A es el utilitarismo de Mill/Bentham. La D es la ética de la virtud de Aristóteles.",
+        "de": "Dies ist die 1. Formel des Kategorischen Imperativs: 'Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde.' Option A = Utilitarismus (Mill/Bentham). D = Aristoteles' Tugendethik."
+      },
+      "tip": {
+        "es": "Las 3 formulaciones del Imperativo Categórico: 1) Universalizabilidad, 2) Humanidad como fin (no como medio), 3) Reino de los fines. ¡El tribunal puede preguntar por cualquiera!",
+        "de": "Die 3 Formeln des Kategorischen Imperativs: 1) Universalisierbarkeit, 2) Menschheit als Zweck (nie als Mittel), 3) Reich der Zwecke. Die Kommission kann nach jeder fragen!"
+      }
     },
     {
       "id": "ph_002",
@@ -176,16 +408,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Epistemología — Platón vs Descartes",
-      "question": { "es": "¿Cuál es la diferencia fundamental entre el método de Platón y el de Descartes para alcanzar el conocimiento verdadero?", "de": "Was ist der fundamentale Unterschied zwischen Platons und Descartes' Methode zur Erlangung wahren Wissens?" },
+      "question": {
+        "es": "¿Cuál es la diferencia fundamental entre el método de Platón y el de Descartes para alcanzar el conocimiento verdadero?",
+        "de": "Was ist der fundamentale Unterschied zwischen Platons und Descartes' Methode zur Erlangung wahren Wissens?"
+      },
       "options": [
-        { "es": "Platón confía en los sentidos; Descartes en la razón pura", "de": "Platon vertraut den Sinnen; Descartes der reinen Vernunft" },
-        { "es": "Platón parte de la reminiscencia del mundo de las Ideas; Descartes parte de la duda metódica hasta llegar al cogito como certeza indudable", "de": "Platon geht von der Wiedererinnerung an die Ideenwelt aus; Descartes vom methodischen Zweifel bis zum Cogito als unzweifelhafter Gewissheit" },
-        { "es": "Ambos usan el método empírico experimental", "de": "Beide verwenden die empirische experimentelle Methode" },
-        { "es": "No hay diferencia: ambos son racionalistas puros que niegan los sentidos", "de": "Kein Unterschied: beide sind reine Rationalisten, die die Sinne ablehnen" }
+        {
+          "es": "Platón confía en los sentidos; Descartes en la razón pura",
+          "de": "Platon vertraut den Sinnen; Descartes der reinen Vernunft"
+        },
+        {
+          "es": "Platón parte de la reminiscencia del mundo de las Ideas; Descartes parte de la duda metódica hasta llegar al cogito como certeza indudable",
+          "de": "Platon geht von der Wiedererinnerung an die Ideenwelt aus; Descartes vom methodischen Zweifel bis zum Cogito als unzweifelhafter Gewissheit"
+        },
+        {
+          "es": "Ambos usan el método empírico experimental",
+          "de": "Beide verwenden die empirische experimentelle Methode"
+        },
+        {
+          "es": "No hay diferencia: ambos son racionalistas puros que niegan los sentidos",
+          "de": "Kein Unterschied: beide sind reine Rationalisten, die die Sinne ablehnen"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "Platón: el alma ya conoció las Ideas perfectas antes de nacer (reminiscencia/anámnesis). El conocimiento es recordar lo que ya sabíamos. Descartes: parte de cero (duda metódica), destruye todo lo que puede dudar y encuentra una certeza indudable: el Cogito. Ambos son racionalistas pero con metodologías opuestas en su punto de partida.", "de": "Platon: Die Seele kannte die Ideen schon vor der Geburt (Anamnese/Reminiszenz). Erkenntnis = Wiedererinnerung. Descartes: Startet bei null (methodischer Zweifel), zerstört alles Bezweifelbare und findet unzweifelhafte Gewissheit im Cogito. Beide Rationalisten, aber gegensätzliche Ausgangspunkte." },
-      "tip": { "es": "Para el tribunal oral: conecta con actualidad — ¿qué diría Platón sobre la IA? ¿Descartes sobre la realidad virtual? Esto impresiona al examinador.", "de": "Für die mündliche Prüfung: mit Aktualität verbinden — Was würde Platon über KI sagen? Descartes über virtuelle Realität? Das beeindruckt den Prüfer." }
+      "explanation": {
+        "es": "Platón: el alma ya conoció las Ideas perfectas antes de nacer (reminiscencia/anámnesis). El conocimiento es recordar lo que ya sabíamos. Descartes: parte de cero (duda metódica), destruye todo lo que puede dudar y encuentra una certeza indudable: el Cogito. Ambos son racionalistas pero con metodologías opuestas en su punto de partida.",
+        "de": "Platon: Die Seele kannte die Ideen schon vor der Geburt (Anamnese/Reminiszenz). Erkenntnis = Wiedererinnerung. Descartes: Startet bei null (methodischer Zweifel), zerstört alles Bezweifelbare und findet unzweifelhafte Gewissheit im Cogito. Beide Rationalisten, aber gegensätzliche Ausgangspunkte."
+      },
+      "tip": {
+        "es": "Para el tribunal oral: conecta con actualidad — ¿qué diría Platón sobre la IA? ¿Descartes sobre la realidad virtual? Esto impresiona al examinador.",
+        "de": "Für die mündliche Prüfung: mit Aktualität verbinden — Was würde Platon über KI sagen? Descartes über virtuelle Realität? Das beeindruckt den Prüfer."
+      }
     }
   ],
   "official_exams_archive": [
@@ -369,6 +622,68 @@
               "recommendation": {
                 "es": "Recomendación: En esta disertación contemporánea, es brillante mencionar las directrices de la Comisión de Ética de Alemania sobre Vehículos Autónomos (2017), la cual dictaminó que es ilícito discriminar o calcular vidas humanas según la edad o el número, reflejando una postura puramente kantiana.",
                 "de": "Tipp: Verweise auf die realen Richtlinien der deutschen Ethik-Kommission für automatisiertes Fahren (2017), die eine kantische Position (Verbot der Aufrechnung von Menschenleben) einnimmt."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "philosophie_dia_2023_ethik_freiheit",
+      "title": "DIA Abitur Philosophie 2023 — Ethik & Freiheit",
+      "year": "2023",
+      "source": "Basado en currículo DIA/ZfA — Contenido de práctica curado",
+      "intro": {
+        "es": "Examen de Filosofía formato DIA. Texto: Kant, 'Grundlegung zur Metaphysik der Sitten'. Tareas: análisis del argumento, contextualización y erörterung sobre la libertad moral.",
+        "de": "DIA-Prüfung Philosophie. Text: Kant, 'Grundlegung zur Metaphysik der Sitten'. Aufgaben: Argumentanalyse, Kontextualisierung, Erörterung zur moralischen Freiheit."
+      },
+      "blocks": [
+        {
+          "name": "Teil A — Textanalyse",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Rekonstruktion des kantischen Arguments",
+              "question": {
+                "es": "Reconstruye el argumento central de Kant sobre la autonomía de la voluntad: (a) premisa principal, (b) premisas auxiliares, (c) conclusión. Explica el imperativo categórico.",
+                "de": "Rekonstruiere Kants Kernargument zur Autonomie des Willens: (a) Hauptprämisse, (b) Hilfsprämissen, (c) Schlussfolgerung. Erkläre den kategorischen Imperativ."
+              },
+              "solution": {
+                "es": "P1: Un ser racional actúa según leyes que él mismo se da.\nP2: La moralidad exige actuar según máximas que uno pueda querer como ley universal.\nP3: La heteronomía (actuar por deseos externos) destruye la moralidad.\nC: Solo la autonomía — actuar por deber, no por inclinación — fundamenta la moral.\n\nIMPERATIVO CATEGÓRICO: 'Actúa solo según la máxima que puedas querer como ley universal.' Es incondicional, formal y racional.",
+                "de": "P1: Vernunftwesen handeln nach selbstgegebenen Gesetzen.\nP2: Moralität: nur nach Maximen handeln, die man zum allgemeinen Gesetz wollen kann.\nP3: Heteronomie zerstört Moralität.\nK: Nur Autonomie — Handeln aus Pflicht — begründet Moral.\n\nKATEGORISCHER IMPERATIV: 'Handle nur nach der Maxime, die du zum allg. Gesetz wollen kannst.' Unbedingt, formal, rational."
+              },
+              "points": 20,
+              "criteria": {
+                "es": "• 8 Puntos: Reconstrucción correcta (P1, P2, P3, C).\n• 7 Puntos: Explicación precisa del imperativo (incondicional, formal, universal).\n• 5 Puntos: Terminología kantiana correcta (autonomía, heteronomía, deber, máxima).",
+                "de": "• 8 Punkte: Korrekte Rekonstruktion.\n• 7 Punkte: Präzise Erklärung des Imperativs.\n• 5 Punkte: Kantische Terminologie."
+              },
+              "recommendation": {
+                "es": "'Autonomía' no es 'libertad' genérica — es actuar según la ley que uno mismo se da como ser racional. Distingue siempre imperativo hipotético vs. categórico.",
+                "de": "'Autonomie' ist nicht einfach 'Freiheit' — es ist Handeln nach selbstgegebenem Gesetz. Immer zwischen hypothetischem und kategorischem Imperativ unterscheiden."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B — Philosophische Erörterung",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Freiheit und Determinismus",
+              "question": {
+                "es": "Discute filosóficamente: '¿Es posible la libertad moral en un mundo causalmente determinado?' Utiliza a Kant y al menos otro filósofo (Spinoza, Sartre o Schopenhauer).",
+                "de": "Erörtere philosophisch: 'Ist moralische Freiheit in einer kausal bestimmten Welt möglich?' Beziehe Kant und mind. einen weiteren Philosophen ein (Spinoza, Sartre, Schopenhauer)."
+              },
+              "solution": {
+                "es": "TESIS DEL DETERMINISMO: Todo acontecimiento está causalmente determinado → la libertad parece imposible.\n\nKANT (compatibilismo transcendental): Como fenómeno → causalidad natural. Como noúmeno (ser racional) → puede actuar según razón pura. Libertad trascendental y determinismo coexisten.\n\nSARTRE (libertad radical): 'La existencia precede a la esencia.' Conciencia = pura espontaneidad. Estamos 'condenados a ser libres'.\n\nSCHOPENHAUER (contra la libertad): La voluntad ciega mueve todo. El yo que 'elige' es una ilusión del intelecto.\n\nCONCLUSIÓN: Postura propia fundamentada.",
+                "de": "DETERMINISMUS-THESE: Alle Ereignisse kausal bestimmt → Freiheit unmöglich?\n\nKANT (Kompatibilismus): Als Phänomen → Naturkausalität. Als Noumen → Handeln nach reiner Vernunft. Beides schließt sich nicht aus.\n\nSARTRE (radikale Freiheit): 'Existenz geht Essenz voraus.' Zur Freiheit verurteilt.\n\nSCHOPENHAUER: Blinder Wille bewegt alles. Freies Ich = Illusion.\n\nSCHLUSS: Eigene begründete Position."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 10 Puntos: Presentación profunda de Kant y otro filósofo.\n• 10 Puntos: Calidad argumentativa (diálogo entre posiciones, no yuxtaposición).\n• 10 Puntos: Expresión filosófica (precisión, estructura, postura propia).",
+                "de": "• 10 Punkte: Tiefe Darstellung von Kant und mind. einem weiteren Philosophen.\n• 10 Punkte: Argumentationsqualität (Dialog, nicht bloße Aufzählung).\n• 10 Punkte: Philosophischer Ausdruck und eigene Position."
+              },
+              "recommendation": {
+                "es": "El error fatal es yuxtaponer posiciones sin conectarlas. El corrector quiere ver que los filósofos DIALOGAN entre sí. No es un resumen — es un debate filosófico.",
+                "de": "Positionen nebeneinanderstellen ist der häufigste Fehler. Die Philosophen sollen miteinander im Dialog stehen. Kein Wikipedia-Artikel — ein philosophischer Diskurs."
               }
             }
           ]

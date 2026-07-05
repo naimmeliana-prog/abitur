@@ -1,6 +1,9 @@
 {
   "subject": "mathe",
-  "displayName": { "es": "Matemáticas (Mathematik)", "de": "Mathematik" },
+  "displayName": {
+    "es": "Matemáticas (Mathematik)",
+    "de": "Mathematik"
+  },
   "icon": "📐",
   "examType": "written",
   "duration": 240,
@@ -11,16 +14,34 @@
   },
   "parts": {
     "A": {
-      "name": { "es": "Parte A — Sin calculadora (Ohne Hilfsmittel)", "de": "Teil A — Ohne Hilfsmittel" },
+      "name": {
+        "es": "Parte A — Sin calculadora (Ohne Hilfsmittel)",
+        "de": "Teil A — Ohne Hilfsmittel"
+      },
       "duration": 60,
-      "desc": { "es": "Ejercicios de cálculo puro. Derivadas, integrales básicas, vectores. Sin ningún aparato electrónico.", "de": "Reines Rechenhandwerk. Ableitungen, Grundintegrale, Vektoren. Kein elektronisches Hilfsmittel." },
-      "tip": { "es": "Aprende de memoria: reglas de derivación, integrales básicas, fórmulas de geometría analítica.", "de": "Auswendiglernen: Ableitungsregeln, Grundintegrale, Formeln der Analytischen Geometrie." }
+      "desc": {
+        "es": "Ejercicios de cálculo puro. Derivadas, integrales básicas, vectores. Sin ningún aparato electrónico.",
+        "de": "Reines Rechenhandwerk. Ableitungen, Grundintegrale, Vektoren. Kein elektronisches Hilfsmittel."
+      },
+      "tip": {
+        "es": "Aprende de memoria: reglas de derivación, integrales básicas, fórmulas de geometría analítica.",
+        "de": "Auswendiglernen: Ableitungsregeln, Grundintegrale, Formeln der Analytischen Geometrie."
+      }
     },
     "B": {
-      "name": { "es": "Parte B — Con calculadora (Mit Taschenrechner/CAS)", "de": "Teil B — Mit Taschenrechner/CAS" },
+      "name": {
+        "es": "Parte B — Con calculadora (Mit Taschenrechner/CAS)",
+        "de": "Teil B — Mit Taschenrechner/CAS"
+      },
       "duration": 180,
-      "desc": { "es": "Problemas complejos con modelización, contexto real, múltiples pasos. 3 grandes bloques temáticos.", "de": "Komplexe Aufgaben mit Modellierung, realem Kontext, mehreren Schritten. 3 Themenblöcke." },
-      "tip": { "es": "No abuses del CAS. El examinador sabe que tienes calculadora — quiere ver TU razonamiento, no el del ordenador.", "de": "CAS nicht überstrapazieren. Der Prüfer weiß, dass du Taschenrechner hast — er will DEINE Argumentation sehen." }
+      "desc": {
+        "es": "Problemas complejos con modelización, contexto real, múltiples pasos. 3 grandes bloques temáticos.",
+        "de": "Komplexe Aufgaben mit Modellierung, realem Kontext, mehreren Schritten. 3 Themenblöcke."
+      },
+      "tip": {
+        "es": "No abuses del CAS. El examinador sabe que tienes calculadora — quiere ver TU razonamiento, no el del ordenador.",
+        "de": "CAS nicht überstrapazieren. Der Prüfer weiß, dass du Taschenrechner hast — er will DEINE Argumentation sehen."
+      }
     }
   },
   "exam_structure": {
@@ -28,42 +49,125 @@
     "de": "Die Prüfung besteht aus zwei Teilen. Teil A (60 Min., hilfsmittelfrei) prüft grundlegende Rechenfertigkeiten. Teil B (180 Min., mit CAS) enthält komplexe Modellierungsaufgaben in drei Themenblöcken (Analysis, Geometrie, Stochastik)."
   },
   "keyOperators": [
-    { "op": "Berechnen", "meaning": { "es": "Calcular de forma exacta mediante pasos algebraicos lógicos. Se debe mostrar todo el desarrollo matemático.", "de": "Ein exaktes Ergebnis durch logische Rechenschritte ermitteln. Der Rechenweg muss vollständig dargelegt werden." }, "trap": { "es": "Trampa: Escribir directamente el resultado obtenido con la calculadora sin detallar los pasos algebraicos intermedios resta la mayoría de los puntos.", "de": "Falle: Das bloße Endergebnis aus dem Taschenrechner ohne Zwischenschritte aufzuschreiben, gibt fast keine Punkte." } },
-    { "op": "Bestimmen", "meaning": { "es": "Determinar o hallar un resultado empleando un método adecuado, que puede ser gráfico, analítico o a través de la calculadora CAS.", "de": "Einen Wert oder Zusammenhang über einen geeigneten Weg (grafisch, rechnerisch oder per CAS) ermitteln." }, "trap": { "es": "Trampa: Aunque permite mayor flexibilidad, debes indicar brevemente qué método o función de la calculadora utilizaste (ej: 'mediante la función solve del CAS...').", "de": "Falle: Der Rechenweg oder die genutzte CAS-Funktion (z.B. 'solve') muss trotzdem kurz dokumentiert werden." } },
-    { "op": "Zeigen / Nachweisen", "meaning": { "es": "Demostrar matemáticamente la veracidad de una afirmación mediante una deducción formal, cálculo o argumento lógico indiscutible.", "de": "Die Gültigkeit einer Aussage durch mathematische Herleitung, Rechnung oder logische Argumentation lückenlos belegen." }, "trap": { "es": "Trampa: No basta con sustituir un ejemplo numérico concreto; la demostración debe ser general o fundamentada en propiedades teóricas rigurosas.", "de": "Falle: Das Einsetzen eines einzelnen Zahlenbeispiels reicht nicht als allgemeiner Nachweis." } },
-    { "op": "Begründen", "meaning": { "es": "Justificar una afirmación o resultado mediante argumentos matemáticos verbales coherentes basados en teoremas o propiedades geométricas.", "de": "Einen Sachverhalt durch verbale, mathematisch schlüssige Argumente unter Verwendung von Sätzen oder Regeln stützen." }, "trap": { "es": "Trampa: Dar respuestas meramente intuitivas sin conectar con definiciones matemáticas formales (ej. no mencionar la derivada al hablar de crecimiento).", "de": "Falle: Rein intuitive Erklärungen ohne Bezug zu mathematischen Sätzen (z.B. Bezug zur Ableitung bei Monotonie) geben Punktabzug." } },
-    { "op": "Skizzieren", "meaning": { "es": "Esbozar la gráfica de una función o una situación geométrica de manera cualitativa, respetando los puntos clave (intersecciones, extremos, asíntotas).", "de": "Den Graphen einer Funktion oder eine geometrische Situation qualitativ darstellen, wobei charakteristische Punkte erkennbar sein müssen." }, "trap": { "es": "Trampa: Olvidar rotular los ejes de coordenadas o confundir las escalas, lo que invalida el esbozo del gráfico.", "de": "Falle: Achsenbeschriftung oder Skalierung vergessen macht die Skizze wertlos." } }
+    {
+      "op": "Berechnen",
+      "meaning": {
+        "es": "Calcular de forma exacta mediante pasos algebraicos lógicos. Se debe mostrar todo el desarrollo matemático.",
+        "de": "Ein exaktes Ergebnis durch logische Rechenschritte ermitteln. Der Rechenweg muss vollständig dargelegt werden."
+      },
+      "trap": {
+        "es": "Trampa: Escribir directamente el resultado obtenido con la calculadora sin detallar los pasos algebraicos intermedios resta la mayoría de los puntos.",
+        "de": "Falle: Das bloße Endergebnis aus dem Taschenrechner ohne Zwischenschritte aufzuschreiben, gibt fast keine Punkte."
+      }
+    },
+    {
+      "op": "Bestimmen",
+      "meaning": {
+        "es": "Determinar o hallar un resultado empleando un método adecuado, que puede ser gráfico, analítico o a través de la calculadora CAS.",
+        "de": "Einen Wert oder Zusammenhang über einen geeigneten Weg (grafisch, rechnerisch oder per CAS) ermitteln."
+      },
+      "trap": {
+        "es": "Trampa: Aunque permite mayor flexibilidad, debes indicar brevemente qué método o función de la calculadora utilizaste (ej: 'mediante la función solve del CAS...').",
+        "de": "Falle: Der Rechenweg oder die genutzte CAS-Funktion (z.B. 'solve') muss trotzdem kurz dokumentiert werden."
+      }
+    },
+    {
+      "op": "Zeigen / Nachweisen",
+      "meaning": {
+        "es": "Demostrar matemáticamente la veracidad de una afirmación mediante una deducción formal, cálculo o argumento lógico indiscutible.",
+        "de": "Die Gültigkeit einer Aussage durch mathematische Herleitung, Rechnung oder logische Argumentation lückenlos belegen."
+      },
+      "trap": {
+        "es": "Trampa: No basta con sustituir un ejemplo numérico concreto; la demostración debe ser general o fundamentada en propiedades teóricas rigurosas.",
+        "de": "Falle: Das Einsetzen eines einzelnen Zahlenbeispiels reicht nicht als allgemeiner Nachweis."
+      }
+    },
+    {
+      "op": "Begründen",
+      "meaning": {
+        "es": "Justificar una afirmación o resultado mediante argumentos matemáticos verbales coherentes basados en teoremas o propiedades geométricas.",
+        "de": "Einen Sachverhalt durch verbale, mathematisch schlüssige Argumente unter Verwendung von Sätzen oder Regeln stützen."
+      },
+      "trap": {
+        "es": "Trampa: Dar respuestas meramente intuitivas sin conectar con definiciones matemáticas formales (ej. no mencionar la derivada al hablar de crecimiento).",
+        "de": "Falle: Rein intuitive Erklärungen ohne Bezug zu mathematischen Sätzen (z.B. Bezug zur Ableitung bei Monotonie) geben Punktabzug."
+      }
+    },
+    {
+      "op": "Skizzieren",
+      "meaning": {
+        "es": "Esbozar la gráfica de una función o una situación geométrica de manera cualitativa, respetando los puntos clave (intersecciones, extremos, asíntotas).",
+        "de": "Den Graphen einer Funktion oder eine geometrische Situation qualitativ darstellen, wobei charakteristische Punkte erkennbar sein müssen."
+      },
+      "trap": {
+        "es": "Trampa: Olvidar rotular los ejes de coordenadas o confundir las escalas, lo que invalida el esbozo del gráfico.",
+        "de": "Falle: Achsenbeschriftung oder Skalierung vergessen macht die Skizze wertlos."
+      }
+    }
   ],
   "exam_tips": [
-    { "es": "En los problemas de extremos relativos, no te limites a resolver f'(x)=0. Justifica siempre la condición suficiente utilizando la segunda derivada f''(x) o argumentando el cambio de signo de f'(x).", "de": "Bei Extremwertaufgaben nicht nur f'(x)=0 lösen. Zeige immer die hinreichende Bedingung mit f''(x) oder dem Vorzeichenwechsel." },
-    { "es": "Al calcular áreas de regiones delimitadas por funciones, busca primero todas las intersecciones con el eje x (Nullstellen). Si integras de golpe un intervalo con valores positivos y negativos, se restarán entre sí.", "de": "Bei Flächenberechnungen immer zuerst Nullstellen ermitteln. Integrale über positive und negative Bereiche heben sich sonst gegenseitig auf." },
-    { "es": "En geometría analítica, si utilizas un vector normal simplificado para definir la ecuación cartesiana de un plano, recuerda documentar el factor de escala que usaste para dividir.", "de": "Bei der Koordinatenform einer Ebene den Normalenvektor kürzen, aber den Skalierungsfaktor kurz vermerken, um Rechenfehler vorzubeugen." },
-    { "es": "En estocástica, define con total claridad la variable aleatoria (ej: 'Sea X el número de bombillas defectuosas...') y sus parámetros n y p antes de usar las fórmulas binomiales.", "de": "Definiere in der Stochastik immer zuerst die Zufallsvariable und ihre Parameter n und p, bevor du mit Berechnungen beginnst." }
+    {
+      "es": "En los problemas de extremos relativos, no te limites a resolver f'(x)=0. Justifica siempre la condición suficiente utilizando la segunda derivada f''(x) o argumentando el cambio de signo de f'(x).",
+      "de": "Bei Extremwertaufgaben nicht nur f'(x)=0 lösen. Zeige immer die hinreichende Bedingung mit f''(x) oder dem Vorzeichenwechsel."
+    },
+    {
+      "es": "Al calcular áreas de regiones delimitadas por funciones, busca primero todas las intersecciones con el eje x (Nullstellen). Si integras de golpe un intervalo con valores positivos y negativos, se restarán entre sí.",
+      "de": "Bei Flächenberechnungen immer zuerst Nullstellen ermitteln. Integrale über positive und negative Bereiche heben sich sonst gegenseitig auf."
+    },
+    {
+      "es": "En geometría analítica, si utilizas un vector normal simplificado para definir la ecuación cartesiana de un plano, recuerda documentar el factor de escala que usaste para dividir.",
+      "de": "Bei der Koordinatenform einer Ebene den Normalenvektor kürzen, aber den Skalierungsfaktor kurz vermerken, um Rechenfehler vorzubeugen."
+    },
+    {
+      "es": "En estocástica, define con total claridad la variable aleatoria (ej: 'Sea X el número de bombillas defectuosas...') y sus parámetros n y p antes de usar las fórmulas binomiales.",
+      "de": "Definiere in der Stochastik immer zuerst die Zufallsvariable und ihre Parameter n und p, bevor du mit Berechnungen beginnst."
+    }
   ],
   "taskTypes": [
     {
       "id": "analysis_task",
-      "name": { "es": "Análisis (Analysis)", "de": "Analysis" },
-      "desc": { "es": "Análisis de funciones exponenciales, racionales e integrales. Modelización de procesos físicos o económicos de cambio.", "de": "Untersuchung von e-Funktionen, rationalen Funktionen und Integralen. Modellierung von Prozessen." },
+      "name": {
+        "es": "Análisis (Analysis)",
+        "de": "Analysis"
+      },
+      "desc": {
+        "es": "Análisis de funciones exponenciales, racionales e integrales. Modelización de procesos físicos o económicos de cambio.",
+        "de": "Untersuchung von e-Funktionen, rationalen Funktionen und Integralen. Modellierung von Prozessen."
+      },
       "weight": "50%"
     },
     {
       "id": "geometry_task",
-      "name": { "es": "Geometría Analítica (Analytische Geometrie)", "de": "Analytische Geometrie" },
-      "desc": { "es": "Cálculo vectorial, ecuaciones de rectas y planos, distancias, ángulos e intersecciones en el espacio tridimensional.", "de": "Vektorrechnung, Geraden und Ebenen, Abstände und Schnittpunkte im 3D-Raum." },
+      "name": {
+        "es": "Geometría Analítica (Analytische Geometrie)",
+        "de": "Analytische Geometrie"
+      },
+      "desc": {
+        "es": "Cálculo vectorial, ecuaciones de rectas y planos, distancias, ángulos e intersecciones en el espacio tridimensional.",
+        "de": "Vektorrechnung, Geraden und Ebenen, Abstände und Schnittpunkte im 3D-Raum."
+      },
       "weight": "25%"
     },
     {
       "id": "stochastik_task",
-      "name": { "es": "Estocástica (Stochastik)", "de": "Stochastik" },
-      "desc": { "es": "Cálculo de probabilidades, variables aleatorias, distribución binomial/normal y contraste de hipótesis.", "de": "Wahrscheinlichkeitsrechnung, Zufallsvariablen, Binomial-/Normalverteilung und Hypothesentests." },
+      "name": {
+        "es": "Estocástica (Stochastik)",
+        "de": "Stochastik"
+      },
+      "desc": {
+        "es": "Cálculo de probabilidades, variables aleatorias, distribución binomial/normal y contraste de hipótesis.",
+        "de": "Wahrscheinlichkeitsrechnung, Zufallsvariablen, Binomial-/Normalverteilung und Hypothesentests."
+      },
       "weight": "25%"
     }
   ],
   "topics": [
     {
       "id": "analysis",
-      "name": { "es": "Análisis (Cálculo)", "de": "Analysis" },
+      "name": {
+        "es": "Análisis (Cálculo)",
+        "de": "Analysis"
+      },
       "subtopics": [
         {
           "name": "Funciones, Límites y Propiedades Estructurales",
@@ -124,7 +228,10 @@
     },
     {
       "id": "geometrie",
-      "name": { "es": "Geometría Analítica / Álgebra Lineal", "de": "Analytische Geometrie / Lineare Algebra" },
+      "name": {
+        "es": "Geometría Analítica / Álgebra Lineal",
+        "de": "Analytische Geometrie / Lineare Algebra"
+      },
       "subtopics": [
         {
           "name": "Vectores, Operaciones y Propiedades Métricas",
@@ -170,7 +277,10 @@
     },
     {
       "id": "stochastik",
-      "name": { "es": "Estocástica (Probabilidad y Estadística)", "de": "Stochastik" },
+      "name": {
+        "es": "Estocástica (Probabilidad y Estadística)",
+        "de": "Stochastik"
+      },
       "subtopics": [
         {
           "name": "Fundamentos de Probabilidad y Probabilidad Condicionada",
@@ -205,33 +315,111 @@
   ],
   "trap_questions": [
     {
-      "trap": { "es": "Olvidar comprobar las condiciones para los extremos (2ª derivada)", "de": "Bedingungen für Extrema vergessen (2. Ableitung)" },
-      "avoid": { "es": "f'(x)=0 es NECESARIO pero no suficiente. Comprueba siempre f''(x)>0 (mínimo) o f''(x)<0 (máximo). Si f''=0, usa el criterio del cambio de signo.", "de": "f'(x)=0 ist NOTWENDIG aber nicht hinreichend. Immer f''(x) prüfen. Falls f''=0, Vorzeichenwechselkriterium." }
+      "trap": {
+        "es": "Olvidar comprobar las condiciones para los extremos (2ª derivada)",
+        "de": "Bedingungen für Extrema vergessen (2. Ableitung)"
+      },
+      "avoid": {
+        "es": "f'(x)=0 es NECESARIO pero no suficiente. Comprueba siempre f''(x)>0 (mínimo) o f''(x)<0 (máximo). Si f''=0, usa el criterio del cambio de signo.",
+        "de": "f'(x)=0 ist NOTWENDIG aber nicht hinreichend. Immer f''(x) prüfen. Falls f''=0, Vorzeichenwechselkriterium."
+      }
     },
     {
-      "trap": { "es": "Invertir los límites de integración y el signo del área", "de": "Integrationsgrenzen vertauschen und Vorzeichen des Flächeninhalts falsch" },
-      "avoid": { "es": "Si f(x)<0 en [a,b], el área es el valor ABSOLUTO de la integral. El área entre dos curvas = integral de |f(x)-g(x)|.", "de": "Falls f(x)<0 in [a,b], Flächeninhalt = Betrag des Integrals. Fläche zwischen Kurven = Integral von |f(x)-g(x)|." }
+      "trap": {
+        "es": "Invertir los límites de integración y el signo del área",
+        "de": "Integrationsgrenzen vertauschen und Vorzeichen des Flächeninhalts falsch"
+      },
+      "avoid": {
+        "es": "Si f(x)<0 en [a,b], el área es el valor ABSOLUTO de la integral. El área entre dos curvas = integral de |f(x)-g(x)|.",
+        "de": "Falls f(x)<0 in [a,b], Flächeninhalt = Betrag des Integrals. Fläche zwischen Kurven = Integral von |f(x)-g(x)|."
+      }
     },
     {
-      "trap": { "es": "Confundir producto escalar y vectorial", "de": "Skalarprodukt und Kreuzprodukt verwechseln" },
-      "avoid": { "es": "Producto escalar → resultado ESCALAR, sirve para ángulos y perpendicularidad. Producto vectorial → resultado VECTOR, sirve para el vector normal del plano.", "de": "Skalarprodukt → SKALAR, für Winkel und Orthogonalität. Kreuzprodukt → VEKTOR, für Normalenvektor der Ebene." }
+      "trap": {
+        "es": "Confundir producto escalar y vectorial",
+        "de": "Skalarprodukt und Kreuzprodukt verwechseln"
+      },
+      "avoid": {
+        "es": "Producto escalar → resultado ESCALAR, sirve para ángulos y perpendicularidad. Producto vectorial → resultado VECTOR, sirve para el vector normal del plano.",
+        "de": "Skalarprodukt → SKALAR, für Winkel und Orthogonalität. Kreuzprodukt → VEKTOR, für Normalenvektor der Ebene."
+      }
     },
     {
-      "trap": { "es": "Error de signo en Hypothesentest: confundir H0 con H1", "de": "Vorzeichenfehler im Hypothesentest: H0 und H1 verwechseln" },
-      "avoid": { "es": "H0 es la hipótesis nula (lo que quieres refutar). H1 es la alternativa (lo que quieres demostrar). SIEMPRE escribe ambas ANTES de calcular.", "de": "H0 ist die Nullhypothese (das, was du widerlegen willst). H1 ist die Alternative. IMMER beide VOR der Berechnung aufschreiben." }
+      "trap": {
+        "es": "Error de signo en Hypothesentest: confundir H0 con H1",
+        "de": "Vorzeichenfehler im Hypothesentest: H0 und H1 verwechseln"
+      },
+      "avoid": {
+        "es": "H0 es la hipótesis nula (lo que quieres refutar). H1 es la alternativa (lo que quieres demostrar). SIEMPRE escribe ambas ANTES de calcular.",
+        "de": "H0 ist die Nullhypothese (das, was du widerlegen willst). H1 ist die Alternative. IMMER beide VOR der Berechnung aufschreiben."
+      }
     },
     {
-      "trap": { "es": "No justificar la posición relativa de rectas/planos verbalmente", "de": "Lagebeziehung von Geraden/Ebenen nicht verbal begründen" },
-      "avoid": { "es": "Después del cálculo, escribe siempre la conclusión: 'Die Gerade und die Ebene schneiden sich in Point P(...)' o 'sind parallel'. El examinador quiere ver la interpretación.", "de": "Nach der Berechnung immer Schlussfolgerung schreiben: 'Die Gerade und die Ebene schneiden sich in P(...)' oder 'sind parallel'. Der Prüfer will Interpretation sehen." }
+      "trap": {
+        "es": "No justificar la posición relativa de rectas/planos verbalmente",
+        "de": "Lagebeziehung von Geraden/Ebenen nicht verbal begründen"
+      },
+      "avoid": {
+        "es": "Después del cálculo, escribe siempre la conclusión: 'Die Gerade und die Ebene schneiden sich in Point P(...)' o 'sind parallel'. El examinador quiere ver la interpretación.",
+        "de": "Nach der Berechnung immer Schlussfolgerung schreiben: 'Die Gerade und die Ebene schneiden sich in P(...)' oder 'sind parallel'. Der Prüfer will Interpretation sehen."
+      }
     }
   ],
   "resources": [
-    { "name": "Abiturloesung.de", "url": "https://www.abiturloesung.de", "desc": { "es": "Exámenes reales de Bayern/BW resueltos en vídeo y PDF — mismo nivel DIA", "de": "Echte Prüfungen Bayern/BW mit Video- und PDF-Lösungen — DIA-Niveau" }, "type": "practice" },
-    { "name": "Mathehoch13.de", "url": "https://mathehoch13.de", "desc": { "es": "Videolösungen gratuitas para todos los temas del Abitur", "de": "Kostenlose Videolösungen für alle Abiturthemen" }, "type": "practice" },
-    { "name": "IQB Portal", "url": "https://www.iqb.hu-berlin.de", "desc": { "es": "Aufgabenpool oficial para Mathematik DIA", "de": "Offizieller IQB-Aufgabenpool für Mathematik" }, "type": "official" },
-    { "name": "Serlo.org", "url": "https://serlo.org", "desc": { "es": "Explicaciones y ejercicios gratuitos por tema y cálculo interactivo", "de": "Kostenlose Erklärungen und Übungen nach Thema" }, "type": "practice" },
-    { "name": "Abi.de", "url": "https://abi.de", "desc": { "es": "Portal oficial con guías de estudio y exámenes de preparación para el Abitur", "de": "Offizielles Portal mit Studienführern und Vorbereitungsprüfungen für das Abitur" }, "type": "reference" },
-    { "name": "Schlaukopf.de — Oberstufe", "url": "https://www.schlaukopf.de", "desc": { "es": "Ejercicios interactivos y tests rápidos estructurados por asignatura y nivel de Gymnasium", "de": "Interaktive Übungen und Schnelltests nach Fach und Gymnasialstufe gegliedert" }, "type": "practice" }
+    {
+      "name": "Abiturloesung.de",
+      "url": "https://www.abiturloesung.de",
+      "desc": {
+        "es": "Exámenes reales de Bayern/BW resueltos en vídeo y PDF — mismo nivel DIA",
+        "de": "Echte Prüfungen Bayern/BW mit Video- und PDF-Lösungen — DIA-Niveau"
+      },
+      "type": "practice"
+    },
+    {
+      "name": "Mathehoch13.de",
+      "url": "https://mathehoch13.de",
+      "desc": {
+        "es": "Videolösungen gratuitas para todos los temas del Abitur",
+        "de": "Kostenlose Videolösungen für alle Abiturthemen"
+      },
+      "type": "practice"
+    },
+    {
+      "name": "IQB Portal",
+      "url": "https://www.iqb.hu-berlin.de",
+      "desc": {
+        "es": "Aufgabenpool oficial para Mathematik DIA",
+        "de": "Offizieller IQB-Aufgabenpool für Mathematik"
+      },
+      "type": "official"
+    },
+    {
+      "name": "Serlo.org",
+      "url": "https://serlo.org",
+      "desc": {
+        "es": "Explicaciones y ejercicios gratuitos por tema y cálculo interactivo",
+        "de": "Kostenlose Erklärungen und Übungen nach Thema"
+      },
+      "type": "practice"
+    },
+    {
+      "name": "Abi.de",
+      "url": "https://abi.de",
+      "desc": {
+        "es": "Portal oficial con guías de estudio y exámenes de preparación para el Abitur",
+        "de": "Offizielles Portal mit Studienführern und Vorbereitungsprüfungen für das Abitur"
+      },
+      "type": "reference"
+    },
+    {
+      "name": "Schlaukopf.de — Oberstufe",
+      "url": "https://www.schlaukopf.de",
+      "desc": {
+        "es": "Ejercicios interactivos y tests rápidos estructurados por asignatura y nivel de Gymnasium",
+        "de": "Interaktive Übungen und Schnelltests nach Fach und Gymnasialstufe gegliedert"
+      },
+      "type": "practice"
+    }
   ],
   "questions": [
     {
@@ -240,16 +428,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Analysis — Extrema",
-      "question": { "es": "Sea f(x) = x³ - 3x² + 2. ¿Cuál de los puntos siguientes es un MÁXIMO local de f?", "de": "Sei f(x) = x³ - 3x² + 2. Welcher der folgenden Punkte ist ein lokales MAXIMUM von f?" },
+      "question": {
+        "es": "Sea f(x) = x³ - 3x² + 2. ¿Cuál de los puntos siguientes es un MÁXIMO local de f?",
+        "de": "Sei f(x) = x³ - 3x² + 2. Welcher der folgenden Punkte ist ein lokales MAXIMUM von f?"
+      },
       "options": [
-        { "es": "x = 0, porque f'(0) = 0", "de": "x = 0, da f'(0) = 0" },
-        { "es": "x = 2, porque f'(2) = 0 y f''(2) > 0", "de": "x = 2, da f'(2) = 0 und f''(2) > 0" },
-        { "es": "x = 0, porque f'(0) = 0 y f''(0) < 0", "de": "x = 0, da f'(0) = 0 und f''(0) < 0" },
-        { "es": "x = 1, porque f(1) = 0", "de": "x = 1, da f(1) = 0" }
+        {
+          "es": "x = 0, porque f'(0) = 0",
+          "de": "x = 0, da f'(0) = 0"
+        },
+        {
+          "es": "x = 2, porque f'(2) = 0 y f''(2) > 0",
+          "de": "x = 2, da f'(2) = 0 und f''(2) > 0"
+        },
+        {
+          "es": "x = 0, porque f'(0) = 0 y f''(0) < 0",
+          "de": "x = 0, da f'(0) = 0 und f''(0) < 0"
+        },
+        {
+          "es": "x = 1, porque f(1) = 0",
+          "de": "x = 1, da f(1) = 0"
+        }
       ],
       "correct": 2,
-      "explanation": { "es": "f'(x) = 3x²-6x = 3x(x-2). Los candidatos son x=0 y x=2. f''(x)=6x-6. f''(0)=-6 < 0 → MÁXIMO en x=0. f''(2)=6 > 0 → mínimo en x=2. El error clásico es marcar x=2 como máximo porque 'la derivada se anula'.", "de": "f'(x)=3x²-6x=3x(x-2). Kandidaten: x=0 und x=2. f''(x)=6x-6. f''(0)=-6 < 0 → MAXIMUM bei x=0. f''(2)=6 > 0 → Minimum bei x=2. Klassischer Fehler: x=2 als Maximum wählen, weil 'die Ableitung null ist'." },
-      "tip": { "es": "f'=0 solo indica candidato a extremo. f''<0 = máximo, f''>0 = mínimo. Si f''=0, usa tabla de signos de f'.", "de": "f'=0 ist nur Kandidat. f''<0 = Maximum, f''>0 = Minimum. Falls f''=0, Vorzeichentabelle von f'." }
+      "explanation": {
+        "es": "f'(x) = 3x²-6x = 3x(x-2). Los candidatos son x=0 y x=2. f''(x)=6x-6. f''(0)=-6 < 0 → MÁXIMO en x=0. f''(2)=6 > 0 → mínimo en x=2. El error clásico es marcar x=2 como máximo porque 'la derivada se anula'.",
+        "de": "f'(x)=3x²-6x=3x(x-2). Kandidaten: x=0 und x=2. f''(x)=6x-6. f''(0)=-6 < 0 → MAXIMUM bei x=0. f''(2)=6 > 0 → Minimum bei x=2. Klassischer Fehler: x=2 als Maximum wählen, weil 'die Ableitung null ist'."
+      },
+      "tip": {
+        "es": "f'=0 solo indica candidato a extremo. f''<0 = máximo, f''>0 = mínimo. Si f''=0, usa tabla de signos de f'.",
+        "de": "f'=0 ist nur Kandidat. f''<0 = Maximum, f''>0 = Minimum. Falls f''=0, Vorzeichentabelle von f'."
+      }
     },
     {
       "id": "ma_002",
@@ -257,16 +466,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Stochastik — Hypothesentest",
-      "question": { "es": "Una empresa afirma que el 30% de sus productos son defectuosos. Se toma una muestra de n=20. Se rechaza H₀ si X ≤ 3. ¿Cuál es el nivel de significación (Signifikanzniveau) aproximado?", "de": "Ein Unternehmen behauptet, 30% seiner Produkte seien fehlerhaft. n=20, Ablehnungsbereich X ≤ 3. Was ist das ungefähre Signifikanzniveau?" },
+      "question": {
+        "es": "Una empresa afirma que el 30% de sus productos son defectuosos. Se toma una muestra de n=20. Se rechaza H₀ si X ≤ 3. ¿Cuál es el nivel de significación (Signifikanzniveau) aproximado?",
+        "de": "Ein Unternehmen behauptet, 30% seiner Produkte seien fehlerhaft. n=20, Ablehnungsbereich X ≤ 3. Was ist das ungefähre Signifikanzniveau?"
+      },
       "options": [
-        { "es": "α ≈ 5%", "de": "α ≈ 5%" },
-        { "es": "α ≈ 10%", "de": "α ≈ 10%" },
-        { "es": "α ≈ 1%", "de": "α ≈ 1%" },
-        { "es": "α ≈ 20%", "de": "α ≈ 20%" }
+        {
+          "es": "α ≈ 5%",
+          "de": "α ≈ 5%"
+        },
+        {
+          "es": "α ≈ 10%",
+          "de": "α ≈ 10%"
+        },
+        {
+          "es": "α ≈ 1%",
+          "de": "α ≈ 1%"
+        },
+        {
+          "es": "α ≈ 20%",
+          "de": "α ≈ 20%"
+        }
       ],
       "correct": 0,
-      "explanation": { "es": "Con X~B(20; 0,3), P(X≤3) = Σ P(X=k) para k=0,1,2,3. Usando la tabla binomial o CAS: P(X≤3) ≈ 0,0444 ≈ 4,4% < 5%. Por tanto α ≈ 5% (el nivel de significación es el máximo que no superamos con nuestro criterio de rechazo).", "de": "Mit X~B(20; 0,3): P(X≤3) = Σ P(X=k) für k=0,1,2,3 ≈ 0,0444 ≈ 4,4% < 5%. Also α ≈ 5%." },
-      "tip": { "es": "El nivel de significación α es P(Fehler 1. Art) = P(H₀ rechazar | H₀ wahr). Siempre usa la tabla B(n;p) o el CAS para calcular la probabilidad acumulada.", "de": "Signifikanzniveau α = P(Fehler 1. Art) = P(H₀ ablehnen | H₀ wahr). Immer kumulierte Binomialwahrscheinlichkeit berechnen." }
+      "explanation": {
+        "es": "Con X~B(20; 0,3), P(X≤3) = Σ P(X=k) para k=0,1,2,3. Usando la tabla binomial o CAS: P(X≤3) ≈ 0,0444 ≈ 4,4% < 5%. Por tanto α ≈ 5% (el nivel de significación es el máximo que no superamos con nuestro criterio de rechazo).",
+        "de": "Mit X~B(20; 0,3): P(X≤3) = Σ P(X=k) für k=0,1,2,3 ≈ 0,0444 ≈ 4,4% < 5%. Also α ≈ 5%."
+      },
+      "tip": {
+        "es": "El nivel de significación α es P(Fehler 1. Art) = P(H₀ rechazar | H₀ wahr). Siempre usa la tabla B(n;p) o el CAS para calcular la probabilidad acumulada.",
+        "de": "Signifikanzniveau α = P(Fehler 1. Art) = P(H₀ ablehnen | H₀ wahr). Immer kumulierte Binomialwahrscheinlichkeit berechnen."
+      }
     },
     {
       "id": "ma_003",
@@ -274,16 +504,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Geometrie — Ebenen",
-      "question": { "es": "El plano E tiene ecuación: 2x - y + 3z = 6. ¿Cuál es su vector normal?", "de": "Die Ebene E hat die Gleichung: 2x - y + 3z = 6. Wie lautet ihr Normalenvektor?" },
+      "question": {
+        "es": "El plano E tiene ecuación: 2x - y + 3z = 6. ¿Cuál es su vector normal?",
+        "de": "Die Ebene E hat die Gleichung: 2x - y + 3z = 6. Wie lautet ihr Normalenvektor?"
+      },
       "options": [
-        { "es": "n⃗ = (6, 6, 2)", "de": "n⃗ = (6, 6, 2)" },
-        { "es": "n⃗ = (2, -1, 3)", "de": "n⃗ = (2, -1, 3)" },
-        { "es": "n⃗ = (1, -1/2, 3/2)", "de": "n⃗ = (1, -1/2, 3/2)" },
-        { "es": "n⃗ = (2, 1, 3)", "de": "n⃗ = (2, 1, 3)" }
+        {
+          "es": "n⃗ = (6, 6, 2)",
+          "de": "n⃗ = (6, 6, 2)"
+        },
+        {
+          "es": "n⃗ = (2, -1, 3)",
+          "de": "n⃗ = (2, -1, 3)"
+        },
+        {
+          "es": "n⃗ = (1, -1/2, 3/2)",
+          "de": "n⃗ = (1, -1/2, 3/2)"
+        },
+        {
+          "es": "n⃗ = (2, 1, 3)",
+          "de": "n⃗ = (2, 1, 3)"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "En la forma normal ax+by+cz=d, el vector normal es directamente n⃗=(a,b,c). Aquí a=2, b=-1, c=3, por tanto n⃗=(2,-1,3). Error trampa: tomar los coeficientes en valor absoluto → n⃗=(2,1,3) es INCORRECTO.", "de": "In der Normalenform ax+by+cz=d ist der Normalenvektor direkt n⃗=(a,b,c). Hier a=2, b=-1, c=3, also n⃗=(2,-1,3). Falle: Betragszeichen vergessen → n⃗=(2,1,3) ist FALSCH." },
-      "tip": { "es": "Koordinatenform: ax+by+cz=d → n⃗=(a,b,c). Los signos son EXACTAMENTE los coeficientes de x, y, z.", "de": "Koordinatenform: ax+by+cz=d → n⃗=(a,b,c). Vorzeichen EXAKT aus den Koeffizienten von x,y,z." }
+      "explanation": {
+        "es": "En la forma normal ax+by+cz=d, el vector normal es directamente n⃗=(a,b,c). Aquí a=2, b=-1, c=3, por tanto n⃗=(2,-1,3). Error trampa: tomar los coeficientes en valor absoluto → n⃗=(2,1,3) es INCORRECTO.",
+        "de": "In der Normalenform ax+by+cz=d ist der Normalenvektor direkt n⃗=(a,b,c). Hier a=2, b=-1, c=3, also n⃗=(2,-1,3). Falle: Betragszeichen vergessen → n⃗=(2,1,3) ist FALSCH."
+      },
+      "tip": {
+        "es": "Koordinatenform: ax+by+cz=d → n⃗=(a,b,c). Los signos son EXACTAMENTE los coeficientes de x, y, z.",
+        "de": "Koordinatenform: ax+by+cz=d → n⃗=(a,b,c). Vorzeichen EXAKT aus den Koeffizienten von x,y,z."
+      }
     },
     {
       "id": "ma_004",
@@ -291,16 +542,37 @@
       "difficulty": "easy",
       "type": "multiple_choice",
       "topic": "Analysis — Integral",
-      "question": { "es": "¿Cuál es ∫(2x + 3) dx ?", "de": "Was ist ∫(2x + 3) dx ?" },
+      "question": {
+        "es": "¿Cuál es ∫(2x + 3) dx ?",
+        "de": "Was ist ∫(2x + 3) dx ?"
+      },
       "options": [
-        { "es": "2x² + 3x", "de": "2x² + 3x" },
-        { "es": "x² + 3x + C", "de": "x² + 3x + C" },
-        { "es": "2 + 0", "de": "2 + 0" },
-        { "es": "2x²/2 + 3 + C", "de": "2x²/2 + 3 + C" }
+        {
+          "es": "2x² + 3x",
+          "de": "2x² + 3x"
+        },
+        {
+          "es": "x² + 3x + C",
+          "de": "x² + 3x + C"
+        },
+        {
+          "es": "2 + 0",
+          "de": "2 + 0"
+        },
+        {
+          "es": "2x²/2 + 3 + C",
+          "de": "2x²/2 + 3 + C"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "∫(2x+3)dx = 2x²/2 + 3x + C = x² + 3x + C. La constante de integración C es OBLIGATORIA en integrales indefinidas. La opción D es parcialmente correcta pero no simplifica 2x²/2.", "de": "∫(2x+3)dx = 2x²/2 + 3x + C = x² + 3x + C. Die Integrationskonstante C ist bei unbestimmten Integralen PFLICHT. Option D ist teilweise korrekt, vereinfacht 2x²/2 aber nicht." },
-      "tip": { "es": "NUNCA olvides la constante C en integrales indefinidas. En el Abitur pueden quitar puntos por eso.", "de": "Konstante C bei unbestimmten Integralen NIE vergessen. Im Abitur gibt's dafür Punktabzug." }
+      "explanation": {
+        "es": "∫(2x+3)dx = 2x²/2 + 3x + C = x² + 3x + C. La constante de integración C es OBLIGATORIA en integrales indefinidas. La opción D es parcialmente correcta pero no simplifica 2x²/2.",
+        "de": "∫(2x+3)dx = 2x²/2 + 3x + C = x² + 3x + C. Die Integrationskonstante C ist bei unbestimmten Integralen PFLICHT. Option D ist teilweise korrekt, vereinfacht 2x²/2 aber nicht."
+      },
+      "tip": {
+        "es": "NUNCA olvides la constante C en integrales indefinidas. En el Abitur pueden quitar puntos por eso.",
+        "de": "Konstante C bei unbestimmten Integralen NIE vergessen. Im Abitur gibt's dafür Punktabzug."
+      }
     },
     {
       "id": "ma_005",
@@ -308,16 +580,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Analysis — Modelización",
-      "question": { "es": "Una población crece según f(t) = 500 · e^(0,02t), donde t son años desde 2000. ¿En qué año aproximadamente habrá 1000 habitantes?", "de": "Eine Bevölkerung wächst nach f(t)=500·e^(0,02t), t = Jahre seit 2000. In welchem Jahr gibt es ca. 1000 Einwohner?" },
+      "question": {
+        "es": "Una población crece según f(t) = 500 · e^(0,02t), donde t son años desde 2000. ¿En qué año aproximadamente habrá 1000 habitantes?",
+        "de": "Eine Bevölkerung wächst nach f(t)=500·e^(0,02t), t = Jahre seit 2000. In welchem Jahr gibt es ca. 1000 Einwohner?"
+      },
       "options": [
-        { "es": "Año 2025", "de": "Jahr 2025" },
-        { "es": "Año 2035", "de": "Jahr 2035" },
-        { "es": "Año 2050", "de": "Jahr 2050" },
-        { "es": "Año 2045", "de": "Jahr 2045" }
+        {
+          "es": "Año 2025",
+          "de": "Jahr 2025"
+        },
+        {
+          "es": "Año 2035",
+          "de": "Jahr 2035"
+        },
+        {
+          "es": "Año 2050",
+          "de": "Jahr 2050"
+        },
+        {
+          "es": "Año 2045",
+          "de": "Jahr 2045"
+        }
       ],
       "correct": 1,
-      "explanation": { "es": "1000 = 500·e^(0,02t) → 2 = e^(0,02t) → ln(2) = 0,02t → t = ln(2)/0,02 ≈ 0,6931/0,02 ≈ 34,66 años. 2000 + 35 ≈ 2035.", "de": "1000=500·e^(0,02t) → 2=e^(0,02t) → ln(2)=0,02t → t=ln(2)/0,02≈34,66 Jahre. 2000+35≈2035." },
-      "tip": { "es": "Estrategia: 1) Despejar la exponencial, 2) Aplicar logaritmo a ambos lados, 3) Despejar t. El 'tiempo de duplicación' de e^(kt) siempre es ln(2)/k.", "de": "Strategie: 1) Exponential freistellen, 2) Logarithmus auf beide Seiten, 3) t ausrechnen. 'Verdopplungszeit' = ln(2)/k." }
+      "explanation": {
+        "es": "1000 = 500·e^(0,02t) → 2 = e^(0,02t) → ln(2) = 0,02t → t = ln(2)/0,02 ≈ 0,6931/0,02 ≈ 34,66 años. 2000 + 35 ≈ 2035.",
+        "de": "1000=500·e^(0,02t) → 2=e^(0,02t) → ln(2)=0,02t → t=ln(2)/0,02≈34,66 Jahre. 2000+35≈2035."
+      },
+      "tip": {
+        "es": "Estrategia: 1) Despejar la exponencial, 2) Aplicar logaritmo a ambos lados, 3) Despejar t. El 'tiempo de duplicación' de e^(kt) siempre es ln(2)/k.",
+        "de": "Strategie: 1) Exponential freistellen, 2) Logarithmus auf beide Seiten, 3) t ausrechnen. 'Verdopplungszeit' = ln(2)/k."
+      }
     },
     {
       "id": "ma_006",
@@ -325,16 +618,37 @@
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Geometrie — Vektoren",
-      "question": { "es": "Dados los vectores a⃗ = (1, 2, 0) y b⃗ = (0, 1, 3). ¿Cuál de los siguientes vectores es ortogonal a ambos?", "de": "Gegeben sind die Vektoren a⃗ = (1, 2, 0) und b⃗ = (0, 1, 3). Welcher Vektor ist zu beiden orthogonal?" },
+      "question": {
+        "es": "Dados los vectores a⃗ = (1, 2, 0) y b⃗ = (0, 1, 3). ¿Cuál de los siguientes vectores es ortogonal a ambos?",
+        "de": "Gegeben sind die Vektoren a⃗ = (1, 2, 0) und b⃗ = (0, 1, 3). Welcher Vektor ist zu beiden orthogonal?"
+      },
       "options": [
-        { "es": "n⃗ = (6, -3, 1)", "de": "n⃗ = (6, -3, 1)" },
-        { "es": "n⃗ = (2, -1, 3)", "de": "n⃗ = (2, -1, 3)" },
-        { "es": "n⃗ = (1, 1, 1)", "de": "n⃗ = (1, 1, 1)" },
-        { "es": "n⃗ = (-6, 3, -1)", "de": "n⃗ = (-6, 3, -1)" }
+        {
+          "es": "n⃗ = (6, -3, 1)",
+          "de": "n⃗ = (6, -3, 1)"
+        },
+        {
+          "es": "n⃗ = (2, -1, 3)",
+          "de": "n⃗ = (2, -1, 3)"
+        },
+        {
+          "es": "n⃗ = (1, 1, 1)",
+          "de": "n⃗ = (1, 1, 1)"
+        },
+        {
+          "es": "n⃗ = (-6, 3, -1)",
+          "de": "n⃗ = (-6, 3, -1)"
+        }
       ],
       "correct": 0,
-      "explanation": { "es": "Para hallar un vector ortogonal a dos vectores dados, calculamos su producto vectorial (Kreuzprodukt): a⃗ × b⃗ = (2·3 - 0·1, 0·0 - 1·3, 1·1 - 2·0) = (6, -3, 1). Por tanto, n⃗ = (6, -3, 1) es ortogonal.", "de": "Der Kreuzprodukt zweier Vektoren ergibt einen orthogonalen Vektor: a⃗ × b⃗ = (2·3 - 0·1, 0·0 - 1·3, 1·1 - 2·0) = (6, -3, 1)." },
-      "tip": { "es": "Recuerda: El producto escalar de dos vectores ortogonales debe ser 0. Puedes comprobarlo rápidamente: a⃗ · n⃗ = 1·6 + 2·(-3) + 0·1 = 0.", "de": "Das Skalarprodukt orthogonaler Vektoren ist 0. Überprüfung: a⃗ · n⃗ = 1·6 + 2·(-3) + 0·1 = 0." }
+      "explanation": {
+        "es": "Para hallar un vector ortogonal a dos vectores dados, calculamos su producto vectorial (Kreuzprodukt): a⃗ × b⃗ = (2·3 - 0·1, 0·0 - 1·3, 1·1 - 2·0) = (6, -3, 1). Por tanto, n⃗ = (6, -3, 1) es ortogonal.",
+        "de": "Der Kreuzprodukt zweier Vektoren ergibt einen orthogonalen Vektor: a⃗ × b⃗ = (2·3 - 0·1, 0·0 - 1·3, 1·1 - 2·0) = (6, -3, 1)."
+      },
+      "tip": {
+        "es": "Recuerda: El producto escalar de dos vectores ortogonales debe ser 0. Puedes comprobarlo rápidamente: a⃗ · n⃗ = 1·6 + 2·(-3) + 0·1 = 0.",
+        "de": "Das Skalarprodukt orthogonaler Vektoren ist 0. Überprüfung: a⃗ · n⃗ = 1·6 + 2·(-3) + 0·1 = 0."
+      }
     },
     {
       "id": "ma_007",
@@ -342,16 +656,37 @@
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Stochastik — Wahrscheinlichkeit",
-      "question": { "es": "En un colegio, el 60% de los alumnos son chicas. El 70% de las chicas y el 50% de los chicos juegan al fútbol. Si se elige un alumno al azar y juega al fútbol, ¿cuál es la probabilidad de que sea chica?", "de": "60% der Schüler sind Mädchen. 70% der Mädchen und 50% der Jungen spielen Fußball. Ein zufälliger Fußballspieler wird gewählt. Wahrscheinlichkeit, dass es ein Mädchen ist?" },
+      "question": {
+        "es": "En un colegio, el 60% de los alumnos son chicas. El 70% de las chicas y el 50% de los chicos juegan al fútbol. Si se elige un alumno al azar y juega al fútbol, ¿cuál es la probabilidad de que sea chica?",
+        "de": "60% der Schüler sind Mädchen. 70% der Mädchen und 50% der Jungen spielen Fußball. Ein zufälliger Fußballspieler wird gewählt. Wahrscheinlichkeit, dass es ein Mädchen ist?"
+      },
       "options": [
-        { "es": "P ≈ 67.7%", "de": "P ≈ 67.7%" },
-        { "es": "P ≈ 60.0%", "de": "P ≈ 60.0%" },
-        { "es": "P ≈ 42.0%", "de": "P ≈ 42.0%" },
-        { "es": "P ≈ 50.0%", "de": "P ≈ 50.0%" }
+        {
+          "es": "P ≈ 67.7%",
+          "de": "P ≈ 67.7%"
+        },
+        {
+          "es": "P ≈ 60.0%",
+          "de": "P ≈ 60.0%"
+        },
+        {
+          "es": "P ≈ 42.0%",
+          "de": "P ≈ 42.0%"
+        },
+        {
+          "es": "P ≈ 50.0%",
+          "de": "P ≈ 50.0%"
+        }
       ],
       "correct": 0,
-      "explanation": { "es": "Aplicamos el Teorema de Bayes. P(Chica) = 0.6. P(Fútbol|Chica) = 0.7. P(Fútbol|Chico) = 0.5. Probabilidad total de fútbol: P(F) = 0.6·0.7 + 0.4·0.5 = 0.42 + 0.20 = 0.62. P(Chica|Fútbol) = (0.6·0.7) / 0.62 = 0.42 / 0.62 ≈ 0.677 = 67.7%.", "de": "Satz von Bayes: P(M|F) = P(F|M)·P(M) / P(F) = 0.7·0.6 / (0.6·0.7 + 0.4·0.5) = 0.42 / 0.62 ≈ 67.7%." },
-      "tip": { "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.", "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen." }
+      "explanation": {
+        "es": "Aplicamos el Teorema de Bayes. P(Chica) = 0.6. P(Fútbol|Chica) = 0.7. P(Fútbol|Chico) = 0.5. Probabilidad total de fútbol: P(F) = 0.6·0.7 + 0.4·0.5 = 0.42 + 0.20 = 0.62. P(Chica|Fútbol) = (0.6·0.7) / 0.62 = 0.42 / 0.62 ≈ 0.677 = 67.7%.",
+        "de": "Satz von Bayes: P(M|F) = P(F|M)·P(M) / P(F) = 0.7·0.6 / (0.6·0.7 + 0.4·0.5) = 0.42 / 0.62 ≈ 67.7%."
+      },
+      "tip": {
+        "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.",
+        "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen."
+      }
     }
   ],
   "official_exams": [
@@ -363,405 +698,597 @@
         {
           "id": "ma_nrw_23_01",
           "topic": "Analysis — Ableitung",
-      "difficulty": "medium",
-      "question": {
-        "es": "Dada la función f(x) = x · e^(-x). ¿En qué punto la pendiente de la tangente es horizontal?",
-        "de": "Gegeben ist die Funktion f(x) = x · e^(-x). An welcher Stelle hat die Tangente eine waagerechte Steigung?"
-      },
-      "options": [
-        { "es": "x = 0", "de": "x = 0" },
-        { "es": "x = 1", "de": "x = 1" },
-        { "es": "x = -1", "de": "x = -1" },
-        { "es": "No tiene pendiente horizontal", "de": "Es gibt keine waagerechte Steigung" }
-      ],
-      "correct": 1,
-      "explanation": {
-        "es": "Para pendiente horizontal buscamos f'(x) = 0. Aplicando la regla del producto: f'(x) = 1·e^(-x) + x·(-e^(-x)) = (1-x)e^(-x). Como e^(-x) > 0 para todo x, la única solución para (1-x)e^(-x) = 0 es x = 1.",
-        "de": "Waagerechte Steigung bedeutet f'(x) = 0. Produktregel: f'(x) = e^(-x) - x·e^(-x) = (1-x)e^(-x). Da e^(-x) nie null ist, muss 1-x = 0 sein, also x = 1."
-      },
-      "tip": {
-        "es": "La función exponencial e^x o e^(-x) nunca se anula. Por tanto, al igualar la derivada a 0, solo nos centramos en el factor polinómico.",
-        "de": "Die e-Funktion e^(-x) wird niemals null. Setzt man f'(x) = 0, betrachtet man nur den Klammerausdruck."
-      }
+          "difficulty": "medium",
+          "question": {
+            "es": "Dada la función f(x) = x · e^(-x). ¿En qué punto la pendiente de la tangente es horizontal?",
+            "de": "Gegeben ist die Funktion f(x) = x · e^(-x). An welcher Stelle hat die Tangente eine waagerechte Steigung?"
+          },
+          "options": [
+            {
+              "es": "x = 0",
+              "de": "x = 0"
+            },
+            {
+              "es": "x = 1",
+              "de": "x = 1"
+            },
+            {
+              "es": "x = -1",
+              "de": "x = -1"
+            },
+            {
+              "es": "No tiene pendiente horizontal",
+              "de": "Es gibt keine waagerechte Steigung"
+            }
+          ],
+          "correct": 1,
+          "explanation": {
+            "es": "Para pendiente horizontal buscamos f'(x) = 0. Aplicando la regla del producto: f'(x) = 1·e^(-x) + x·(-e^(-x)) = (1-x)e^(-x). Como e^(-x) > 0 para todo x, la única solución para (1-x)e^(-x) = 0 es x = 1.",
+            "de": "Waagerechte Steigung bedeutet f'(x) = 0. Produktregel: f'(x) = e^(-x) - x·e^(-x) = (1-x)e^(-x). Da e^(-x) nie null ist, muss 1-x = 0 sein, also x = 1."
+          },
+          "tip": {
+            "es": "La función exponencial e^x o e^(-x) nunca se anula. Por tanto, al igualar la derivada a 0, solo nos centramos en el factor polinómico.",
+            "de": "Die e-Funktion e^(-x) wird niemals null. Setzt man f'(x) = 0, betrachtet man nur den Klammerausdruck."
+          }
+        },
+        {
+          "id": "ma_nrw_23_02",
+          "topic": "Geometrie — Lagebeziehung",
+          "difficulty": "medium",
+          "question": {
+            "es": "¿Cuál es la posición relativa de la recta g: x⃗ = (1,0,2) + r·(1,-2,3) y el plano E: 2x - y + 3z = 6?",
+            "de": "Wie ist die Lagebeziehung der Geraden g: x⃗ = (1,0,2) + r·(1,-2,3) und der Ebene E: 2x - y + 3z = 6?"
+          },
+          "options": [
+            {
+              "es": "La recta es paralela al plano",
+              "de": "Die Gerade ist parallel zur Ebene"
+            },
+            {
+              "es": "La recta corta al plano en un punto",
+              "de": "Die Gerade schneidet die Ebene in einem Punkt"
+            },
+            {
+              "es": "La recta está contenida en el plano",
+              "de": "Die Gerade liegt in der Ebene"
+            },
+            {
+              "es": "Son perpendiculares",
+              "de": "Sie sind orthogonal"
+            }
+          ],
+          "correct": 1,
+          "explanation": {
+            "es": "Sustituimos las coordenadas de la recta (1+r, -2r, 2+3r) en la ecuación del plano: 2(1+r) - (-2r) + 3(2+3r) = 6 → 2 + 2r + 2r + 6 + 9r = 6 → 13r + 8 = 6 → 13r = -2 → r = -2/13. Al dar un único valor de r, la recta corta al plano en un único punto.",
+            "de": "Setze die Geradengleichung in die Ebene ein: 2(1+r) - (-2r) + 3(2+3r) = 6. Dies führt zu 13r + 8 = 6, also einer eindeutigen Lösung r = -2/13. Die Gerade schneidet die Ebene in einem Punkt."
+          },
+          "tip": {
+            "es": "Si al sustituir la recta en el plano obtienes una contradicción (ej. 8 = 6), son paralelas. Si obtienes una identidad (ej. 6 = 6), la recta está contenida.",
+            "de": "Eindeutige Lösung für r -> Schnittpunkt. Widerspruch (z.B. 8=6) -> parallel. Identität (z.B. 6=6) -> Gerade liegt in der Ebene."
+          }
+        },
+        {
+          "id": "ma_nrw_23_03",
+          "topic": "Stochastik — Erwartungswert",
+          "difficulty": "easy",
+          "question": {
+            "es": "Se lanza un dado de 6 caras. Si sale un número par, se ganan 2€. Si sale impar, se pierde 1€. ¿Cuál es la esperanza matemática (Erwartungswert) del juego?",
+            "de": "Ein Würfel wird geworfen. Bei geraden Zahlen gewinnt man 2€, bei ungeraden verliert man 1€. Was ist der Erwartungswert E(X)?"
+          },
+          "options": [
+            {
+              "es": "E(X) = 0.50 €",
+              "de": "E(X) = 0.50 €"
+            },
+            {
+              "es": "E(X) = 1.00 €",
+              "de": "E(X) = 1.00 €"
+            },
+            {
+              "es": "E(X) = 0.00 €",
+              "de": "E(X) = 0.00 €"
+            },
+            {
+              "es": "E(X) = -0.50 €",
+              "de": "E(X) = -0.50 €"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Los resultados posibles son ganar 2€ (probabilidad 0.5) y ganar -1€ (probabilidad 0.5). El valor esperado E(X) = 2 · 0.5 + (-1) · 0.5 = 1 - 0.5 = 0.50€.",
+            "de": "Mögliche Ausgänge: +2€ (p = 0.5) und -1€ (p = 0.5). E(X) = 2 · 0.5 + (-1) · 0.5 = 0.50€."
+          },
+          "tip": {
+            "es": "Un juego es justo (fair) si su valor esperado E(X) es 0. En este caso, el juego es favorable para el jugador.",
+            "de": "Ein Spiel heißt fair, wenn der Erwartungswert E(X) = 0 ist."
+          }
+        },
+        {
+          "id": "ma_nrw_23_04",
+          "topic": "Analysis — Extrempunkte",
+          "difficulty": "medium",
+          "question": {
+            "es": "Dada la familia de funciones f_k(x) = x^2 - k·x (donde k es un parámetro real). ¿Para qué valor de k la función tiene su punto mínimo en x = 3?",
+            "de": "Gegeben ist die Funktionsschar f_k(x) = x^2 - k·x. Für welchen Wert von k liegt die Minimalstelle bei x = 3?"
+          },
+          "options": [
+            {
+              "es": "k = 6",
+              "de": "k = 6"
+            },
+            {
+              "es": "k = 3",
+              "de": "k = 3"
+            },
+            {
+              "es": "k = -3",
+              "de": "k = -3"
+            },
+            {
+              "es": "k = -6",
+              "de": "k = -6"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Derivamos la función respecto a x: f_k'(x) = 2x - k. Para que haya un mínimo en x = 3, la derivada en esa posición debe ser cero: f_k'(3) = 0 → 2(3) - k = 0 → 6 - k = 0 → k = 6. Comprobamos con la segunda derivada: f_k''(x) = 2 > 0 (siempre es un mínimo).",
+            "de": "Bilde die Ableitung nach x: f_k'(x) = 2x - k. Bedingung für Extremstelle: f_k'(3) = 0 → 2(3) - k = 0 → k = 6. Zweite Ableitung f_k''(x) = 2 > 0 bestätigt das Minimum."
+          },
+          "tip": {
+            "es": "En problemas con familias de funciones (Kurvenscharen), el parámetro k se trata como si fuera un número fijo durante la derivación.",
+            "de": "Bei einer Funktionsschar wird der Parameter k beim Ableiten wie eine konstante Zahl behandelt."
+          }
+        },
+        {
+          "id": "ma_nrw_23_05",
+          "topic": "Geometrie — Abstand",
+          "difficulty": "easy",
+          "question": {
+            "es": "¿Cuál es la distancia mínima del punto P(3, 4, 5) al plano E con ecuación de coordenadas E: x_3 = 2?",
+            "de": "Wie groß ist der Abstand des Punktes P(3, 4, 5) zur Ebene E: x_3 = 2?"
+          },
+          "options": [
+            {
+              "es": "d = 3",
+              "de": "d = 3"
+            },
+            {
+              "es": "d = 5",
+              "de": "d = 5"
+            },
+            {
+              "es": "d = 2",
+              "de": "d = 2"
+            },
+            {
+              "es": "d = 1",
+              "de": "d = 1"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "La ecuación E: x_3 = 2 describe un plano horizontal paralelo al plano x_1-x_2 a una altura constante de z = 2. La distancia del punto P(3,4,5) al plano es simplemente la diferencia entre su coordenada z y la del plano: d = |5 - 2| = 3.",
+            "de": "Die Ebene x_3 = 2 verläuft parallel zur x_1-x_2-Ebene bei z = 2. Der Abstand des Punktes P(3,4,5) zur Ebene ist der absolute Unterschied der z-Koordinaten: d = |5 - 2| = 3."
+          },
+          "tip": {
+            "es": "Si la ecuación de un plano solo tiene una coordenada (como x_3 = d), no necesitas aplicar fórmulas complejas de distancias, simplemente resta el valor de la coordenada del punto.",
+            "de": "Wenn eine Ebene parallel zu einer Koordinatenebene ist (nur eine Koordinate in der Gleichung), reicht eine einfache Subtraktion."
+          }
+        },
+        {
+          "id": "ma_nrw_23_06",
+          "topic": "Stochastik — Binomialverteilung",
+          "difficulty": "medium",
+          "question": {
+            "es": "En un experimento de Bernoulli con probabilidad de éxito p = 0.5 y n = 4 ensayos independientes, ¿cuál es la probabilidad de obtener exactamente k = 3 éxitos?",
+            "de": "Bei einer Bernoulli-Kette mit Erfolgswahrscheinlichkeit p = 0,5 und n = 4 Versuchen, wie groß ist die Wahrscheinlichkeit für genau k = 3 Erfolge?"
+          },
+          "options": [
+            {
+              "es": "P = 25.0%",
+              "de": "P = 25,0%"
+            },
+            {
+              "es": "P = 31.25%",
+              "de": "P = 31,25%"
+            },
+            {
+              "es": "P = 37.5%",
+              "de": "P = 37,5%"
+            },
+            {
+              "es": "P = 12.5%",
+              "de": "P = 12,5%"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Aplicamos la fórmula de la distribución binomial P(X=k) = (n sobre k) · p^k · (1-p)^(n-k). Para n=4, k=3, p=0.5: P(X=3) = (4 sobre 3) · 0.5^3 · 0.5^1 = 4 · 0.125 · 0.5 = 4 · 0.0625 = 0.25 = 25.0%.",
+            "de": "Berechnung mit der Formel für die Binomialverteilung: P(X=3) = (4 über 3) · 0,5^3 · 0,5^1 = 4 · 0,125 · 0,5 = 0,25 = 25%."
+          },
+          "tip": {
+            "es": "El coeficiente binomial (4 sobre 3) es igual a 4. Significa que hay 4 caminos en el diagrama de árbol que contienen exactamente 3 éxitos.",
+            "de": "Der Binomialkoeffizient (4 über 3) ist 4. Es gibt also 4 Pfade im Baumdiagramm mit genau 3 Erfolgen."
+          }
+        },
+        {
+          "id": "ma_nrw_23_07",
+          "topic": "Analysis — Integración",
+          "difficulty": "medium",
+          "question": {
+            "es": "¿Cuál es el valor de la integral definida ∫ de 0 a 2 de (3x^2 - 2x) dx?",
+            "de": "Wie lautet der Wert des bestimmten Integrals von 0 bis 2 über (3x^2 - 2x) dx?"
+          },
+          "options": [
+            {
+              "es": "4",
+              "de": "4"
+            },
+            {
+              "es": "6",
+              "de": "6"
+            },
+            {
+              "es": "8",
+              "de": "8"
+            },
+            {
+              "es": "2",
+              "de": "2"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "1) Hallamos una primitiva F(x) de f(x) = 3x^2 - 2x: F(x) = x^3 - x^2. 2) Evaluamos los límites: F(2) = 2^3 - 2^2 = 8 - 4 = 4. F(0) = 0. 3) Restamos: F(2) - F(0) = 4 - 0 = 4.",
+            "de": "1) Stammfunktion F(x) von 3x^2 - 2x bestimmen: F(x) = x^3 - x^2. 2) Grenzen einsetzen: F(2) = 2^3 - 2^2 = 4. F(0) = 0. 3) Differenz berechnen: F(2) - F(0) = 4."
+          },
+          "tip": {
+            "es": "Recuerda sumar 1 al exponente y dividir por el mismo número al integrar potencias: la primitiva de 3x^2 es 3 · x^3 / 3 = x^3.",
+            "de": "Beim Integrieren von Potenzfunktionen wird der Exponent um 1 erhöht und durch den neuen Exponenten dividiert."
+          }
+        }
+      ]
     },
     {
-      "id": "ma_nrw_23_02",
-      "topic": "Geometrie — Lagebeziehung",
-      "difficulty": "medium",
-      "question": {
-        "es": "¿Cuál es la posición relativa de la recta g: x⃗ = (1,0,2) + r·(1,-2,3) y el plano E: 2x - y + 3z = 6?",
-        "de": "Wie ist die Lagebeziehung der Geraden g: x⃗ = (1,0,2) + r·(1,-2,3) und der Ebene E: 2x - y + 3z = 6?"
-      },
-      "options": [
-        { "es": "La recta es paralela al plano", "de": "Die Gerade ist parallel zur Ebene" },
-        { "es": "La recta corta al plano en un punto", "de": "Die Gerade schneidet die Ebene in einem Punkt" },
-        { "es": "La recta está contenida en el plano", "de": "Die Gerade liegt in der Ebene" },
-        { "es": "Son perpendiculares", "de": "Sie sind orthogonal" }
-      ],
-      "correct": 1,
-      "explanation": {
-        "es": "Sustituimos las coordenadas de la recta (1+r, -2r, 2+3r) en la ecuación del plano: 2(1+r) - (-2r) + 3(2+3r) = 6 → 2 + 2r + 2r + 6 + 9r = 6 → 13r + 8 = 6 → 13r = -2 → r = -2/13. Al dar un único valor de r, la recta corta al plano en un único punto.",
-        "de": "Setze die Geradengleichung in die Ebene ein: 2(1+r) - (-2r) + 3(2+3r) = 6. Dies führt zu 13r + 8 = 6, also einer eindeutigen Lösung r = -2/13. Die Gerade schneidet die Ebene in einem Punkt."
-      },
-      "tip": {
-        "es": "Si al sustituir la recta en el plano obtienes una contradicción (ej. 8 = 6), son paralelas. Si obtienes una identidad (ej. 6 = 6), la recta está contenida.",
-        "de": "Eindeutige Lösung für r -> Schnittpunkt. Widerspruch (z.B. 8=6) -> parallel. Identität (z.B. 6=6) -> Gerade liegt in der Ebene."
-      }
+      "id": "mathe_nrw_2024",
+      "name": "Zentralabitur NRW 2024 — Mathematik GK (Completo)",
+      "year": "2024",
+      "questions": [
+        {
+          "id": "ma_nrw_24_01",
+          "topic": "Analysis — Normalengleichung",
+          "difficulty": "medium",
+          "question": {
+            "es": "Dada la función f(x) = (2x - 3) / (x^2 + 1). ¿Cuál es la ecuación de la recta normal a la gráfica de f en x = 1?",
+            "de": "Gegeben ist die Funktion f(x) = (2x - 3) / (x^2 + 1). Wie lautet die Gleichung der Normalen an den Graphen von f bei x = 1?"
+          },
+          "options": [
+            {
+              "es": "y = -2/3·x + 1/6",
+              "de": "y = -2/3·x + 1/6"
+            },
+            {
+              "es": "y = 1.5·x - 2",
+              "de": "y = 1.5·x - 2"
+            },
+            {
+              "es": "y = -2/3·x - 0.5",
+              "de": "y = -2/3·x - 0.5"
+            },
+            {
+              "es": "y = 1.5·x + 1/6",
+              "de": "y = 1.5·x + 1/6"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Derivamos f(x) por regla del cociente para hallar f'(x) = (-2x^2 + 6x + 2) / (x^2 + 1)^2. Evaluamos en x = 1: f'(1) = 6/4 = 1.5 (pendiente de la tangente). La pendiente de la normal es m_n = -1 / 1.5 = -2/3. El punto de tangencia es (1, f(1)) = (1, -0.5). Usamos la ecuación punto-pendiente: y = -2/3(x - 1) - 0.5 = -2/3·x + 1/6.",
+            "de": "Quotientenregel liefert f'(1) = 1.5. Normalensteigung m_n = -1/m_t = -2/3. Punkt P(1|-0.5) in Normalengleichung einsetzen ergibt y = -2/3·x + 1/6."
+          },
+          "tip": {
+            "es": "Recuerda que la pendiente de la recta normal es la inversa recíproca negativa de la pendiente de la tangente (m_n = -1 / m_t).",
+            "de": "Die Steigung der Normalen ist der negative Kehrwert der Tangentensteigung."
+          }
+        },
+        {
+          "id": "ma_nrw_24_02",
+          "topic": "Geometrie — Vektoren",
+          "difficulty": "medium",
+          "question": {
+            "es": "¿Cómo son los vectores a⃗ = (1, 2, 0), b⃗ = (0, 1, 3) y c⃗ = (2, 5, 3) en R³?",
+            "de": "Wie verhalten sich die Vektoren a⃗ = (1|2|0), b⃗ = (0|1|3) und c⃗ = (2|5|3) im R³?"
+          },
+          "options": [
+            {
+              "es": "Linealmente dependientes (coplanarios)",
+              "de": "Linear abhängig (komplanar)"
+            },
+            {
+              "es": "Linealmente independientes (no coplanarios)",
+              "de": "Linear unabhängig"
+            },
+            {
+              "es": "Son mutuamente ortogonales",
+              "de": "Sie sind paarweise orthogonal"
+            },
+            {
+              "es": "a⃗ y b⃗ son colineales",
+              "de": "a⃗ und b⃗ sind kollinear"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Planteamos la ecuación x·a⃗ + y·b⃗ + z·c⃗ = 0. Resolviendo el LGS obtenemos soluciones no triviales (ej: para z=1, x=-2, y=-1), lo que significa que son linealmente dependientes (coplanarios). También se puede comprobar viendo que det([a⃗, b⃗, c⃗]) = 0.",
+            "de": "Das LGS x·a⃗ + y·b⃗ + z·c⃗ = 0 hat unendlich viele Lösungen. Die Determinante der Vektorenmatrix ist 0, somit sind sie linear abhängig (komplanar)."
+          },
+          "tip": {
+            "es": "Si tres vectores en R³ son coplanarios (pertenecen al mismo plano), entonces son linealmente dependientes y su determinante es nulo.",
+            "de": "Drei Vektoren im R³ sind linear abhängig, wenn sie in einer gemeinsamen Ebene liegen (komplanar)."
+          }
+        },
+        {
+          "id": "ma_nrw_24_03",
+          "topic": "Analysis — Extremum",
+          "difficulty": "medium",
+          "question": {
+            "es": "La concentración de un fármaco se modela mediante c(t) = 0.5·t^2·e^(-0.5t). ¿En qué momento t (en horas) la concentración es máxima?",
+            "de": "Die Konzentration wird durch c(t) = 0,5·t^2·e^(-0,5t) modelliert. Wann ist die Konzentration maximal?"
+          },
+          "options": [
+            {
+              "es": "t = 2 horas",
+              "de": "t = 2 Stunden"
+            },
+            {
+              "es": "t = 4 horas",
+              "de": "t = 4 Stunden"
+            },
+            {
+              "es": "t = 6 horas",
+              "de": "t = 6 Stunden"
+            },
+            {
+              "es": "t = 8 horas",
+              "de": "t = 8 Stunden"
+            }
+          ],
+          "correct": 1,
+          "explanation": {
+            "es": "Buscamos c'(t) = 0. Derivando por producto y cadena: c'(t) = 0.25·t·e^(-0.5t)·(4 - t). Las soluciones son t = 0 y t = 4. Como la segunda derivada en t = 4 es negativa (c''(4) < 0), es un máximo.",
+            "de": "Ableitung c'(t) = 0,25·t·e^(-0,5t)·(4 - t). Nullstellen bei t = 0 und t = 4. Hinreichende Bedingung bestätigt Maximum bei t = 4 Stunden."
+          },
+          "tip": {
+            "es": "Iguala la primera derivada a cero y verifica la condición suficiente usando el signo de la segunda derivada o cambio de signo de la primera.",
+            "de": "Setze die erste Ableitung null und überprüfe das Maximum über die zweite Ableitung."
+          }
+        },
+        {
+          "id": "ma_nrw_24_04",
+          "topic": "Geometrie — Lagebeziehung",
+          "difficulty": "medium",
+          "question": {
+            "es": "Calcula el valor del parámetro r para el cual la recta g: x⃗ = (2000, 3000, 450) + r·(-40, -60, -9) corta el plano E: 3x + 4y + 20z = 15000.",
+            "de": "Bestimme den Parameter r, für den die Gerade g das Hügel-Ebene E schneidet."
+          },
+          "options": [
+            {
+              "es": "r = 10",
+              "de": "r = 10"
+            },
+            {
+              "es": "r = 22.22",
+              "de": "r = 22,22"
+            },
+            {
+              "es": "r = -5.5",
+              "de": "r = -5,5"
+            },
+            {
+              "es": "La recta es paralela al plano",
+              "de": "Die Gerade ist parallel zur Ebene"
+            }
+          ],
+          "correct": 1,
+          "explanation": {
+            "es": "Sustituimos las coordenadas de g (2000-40r, 3000-60r, 450-9r) en la ecuación de E: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000 -> 27000 - 540r = 15000 -> -540r = -12000 -> r = 22.22.",
+            "de": "Setze die Geradenkoordinaten in die Ebene ein: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000. Auflösung nach r liefert r = 22,22."
+          },
+          "tip": {
+            "es": "Sustituye ordenadamente las expresiones de la recta x, y, z en las incógnitas del plano y despeja la ecuación lineal de r.",
+            "de": "Setze die Ausdrücke für x, y, z in die Ebenengleichung ein und löse die lineare Gleichung nach r auf."
+          }
+        },
+        {
+          "id": "ma_nrw_24_05",
+          "topic": "Stochastik — Binomialverteilung",
+          "difficulty": "medium",
+          "question": {
+            "es": "Si la probabilidad de chip defectuoso es p = 0.04 y tomamos una muestra de n = 150 chips. ¿Cuál es la probabilidad aproximada de encontrar exactamente 5 chips defectuosos?",
+            "de": "Bei p = 0,04 und n = 150 Versuchen, wie groß ist die Wahrscheinlichkeit für genau 5 Defekte?"
+          },
+          "options": [
+            {
+              "es": "~16.19%",
+              "de": "~16,19%"
+            },
+            {
+              "es": "~5.00%",
+              "de": "~5,00%"
+            },
+            {
+              "es": "~12.50%",
+              "de": "~12,50%"
+            },
+            {
+              "es": "~25.00%",
+              "de": "~25,00%"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Usamos la fórmula de Bernoulli P(X = 5) = (150 sobre 5)·(0.04)^5·(0.96)^145. (150 sobre 5) = 591,600,030. Operando nos da P(X = 5) ≈ 0.1619 = 16.19%.",
+            "de": "P(X = 5) = (150 über 5) · 0,04^5 · 0,96^145 ≈ 0,1619 = 16,19%."
+          },
+          "tip": {
+            "es": "En exámenes oficiales del Abitur, para muestras con n grande, utiliza las funciones de distribución de probabilidad de la calculadora (binomialPdf).",
+            "de": "Nutze die Funktion binomialPdf deines Taschenrechners für exakte Einzelwahrscheinlichkeiten."
+          }
+        }
+      ]
     },
     {
-      "id": "ma_nrw_23_03",
-      "topic": "Stochastik — Erwartungswert",
-      "difficulty": "easy",
-      "question": {
-        "es": "Se lanza un dado de 6 caras. Si sale un número par, se ganan 2€. Si sale impar, se pierde 1€. ¿Cuál es la esperanza matemática (Erwartungswert) del juego?",
-        "de": "Ein Würfel wird geworfen. Bei geraden Zahlen gewinnt man 2€, bei ungeraden verliert man 1€. Was ist der Erwartungswert E(X)?"
-      },
-      "options": [
-        { "es": "E(X) = 0.50 €", "de": "E(X) = 0.50 €" },
-        { "es": "E(X) = 1.00 €", "de": "E(X) = 1.00 €" },
-        { "es": "E(X) = 0.00 €", "de": "E(X) = 0.00 €" },
-        { "es": "E(X) = -0.50 €", "de": "E(X) = -0.50 €" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Los resultados posibles son ganar 2€ (probabilidad 0.5) y ganar -1€ (probabilidad 0.5). El valor esperado E(X) = 2 · 0.5 + (-1) · 0.5 = 1 - 0.5 = 0.50€.",
-        "de": "Mögliche Ausgänge: +2€ (p = 0.5) und -1€ (p = 0.5). E(X) = 2 · 0.5 + (-1) · 0.5 = 0.50€."
-      },
-      "tip": {
-        "es": "Un juego es justo (fair) si su valor esperado E(X) es 0. En este caso, el juego es favorable para el jugador.",
-        "de": "Ein Spiel heißt fair, wenn der Erwartungswert E(X) = 0 ist."
-      }
-    },
-    {
-      "id": "ma_nrw_23_04",
-      "topic": "Analysis — Extrempunkte",
-      "difficulty": "medium",
-      "question": {
-        "es": "Dada la familia de funciones f_k(x) = x^2 - k·x (donde k es un parámetro real). ¿Para qué valor de k la función tiene su punto mínimo en x = 3?",
-        "de": "Gegeben ist die Funktionsschar f_k(x) = x^2 - k·x. Für welchen Wert von k liegt die Minimalstelle bei x = 3?"
-      },
-      "options": [
-        { "es": "k = 6", "de": "k = 6" },
-        { "es": "k = 3", "de": "k = 3" },
-        { "es": "k = -3", "de": "k = -3" },
-        { "es": "k = -6", "de": "k = -6" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Derivamos la función respecto a x: f_k'(x) = 2x - k. Para que haya un mínimo en x = 3, la derivada en esa posición debe ser cero: f_k'(3) = 0 → 2(3) - k = 0 → 6 - k = 0 → k = 6. Comprobamos con la segunda derivada: f_k''(x) = 2 > 0 (siempre es un mínimo).",
-        "de": "Bilde die Ableitung nach x: f_k'(x) = 2x - k. Bedingung für Extremstelle: f_k'(3) = 0 → 2(3) - k = 0 → k = 6. Zweite Ableitung f_k''(x) = 2 > 0 bestätigt das Minimum."
-      },
-      "tip": {
-        "es": "En problemas con familias de funciones (Kurvenscharen), el parámetro k se trata como si fuera un número fijo durante la derivación.",
-        "de": "Bei einer Funktionsschar wird der Parameter k beim Ableiten wie eine konstante Zahl behandelt."
-      }
-    },
-    {
-      "id": "ma_nrw_23_05",
-      "topic": "Geometrie — Abstand",
-      "difficulty": "easy",
-      "question": {
-        "es": "¿Cuál es la distancia mínima del punto P(3, 4, 5) al plano E con ecuación de coordenadas E: x_3 = 2?",
-        "de": "Wie groß ist der Abstand des Punktes P(3, 4, 5) zur Ebene E: x_3 = 2?"
-      },
-      "options": [
-        { "es": "d = 3", "de": "d = 3" },
-        { "es": "d = 5", "de": "d = 5" },
-        { "es": "d = 2", "de": "d = 2" },
-        { "es": "d = 1", "de": "d = 1" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "La ecuación E: x_3 = 2 describe un plano horizontal paralelo al plano x_1-x_2 a una altura constante de z = 2. La distancia del punto P(3,4,5) al plano es simplemente la diferencia entre su coordenada z y la del plano: d = |5 - 2| = 3.",
-        "de": "Die Ebene x_3 = 2 verläuft parallel zur x_1-x_2-Ebene bei z = 2. Der Abstand des Punktes P(3,4,5) zur Ebene ist der absolute Unterschied der z-Koordinaten: d = |5 - 2| = 3."
-      },
-      "tip": {
-        "es": "Si la ecuación de un plano solo tiene una coordenada (como x_3 = d), no necesitas aplicar fórmulas complejas de distancias, simplemente resta el valor de la coordenada del punto.",
-        "de": "Wenn eine Ebene parallel zu einer Koordinatenebene ist (nur eine Koordinate in der Gleichung), reicht eine einfache Subtraktion."
-      }
-    },
-    {
-      "id": "ma_nrw_23_06",
-      "topic": "Stochastik — Binomialverteilung",
-      "difficulty": "medium",
-      "question": {
-        "es": "En un experimento de Bernoulli con probabilidad de éxito p = 0.5 y n = 4 ensayos independientes, ¿cuál es la probabilidad de obtener exactamente k = 3 éxitos?",
-        "de": "Bei einer Bernoulli-Kette mit Erfolgswahrscheinlichkeit p = 0,5 und n = 4 Versuchen, wie groß ist die Wahrscheinlichkeit für genau k = 3 Erfolge?"
-      },
-      "options": [
-        { "es": "P = 25.0%", "de": "P = 25,0%" },
-        { "es": "P = 31.25%", "de": "P = 31,25%" },
-        { "es": "P = 37.5%", "de": "P = 37,5%" },
-        { "es": "P = 12.5%", "de": "P = 12,5%" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Aplicamos la fórmula de la distribución binomial P(X=k) = (n sobre k) · p^k · (1-p)^(n-k). Para n=4, k=3, p=0.5: P(X=3) = (4 sobre 3) · 0.5^3 · 0.5^1 = 4 · 0.125 · 0.5 = 4 · 0.0625 = 0.25 = 25.0%.",
-        "de": "Berechnung mit der Formel für die Binomialverteilung: P(X=3) = (4 über 3) · 0,5^3 · 0,5^1 = 4 · 0,125 · 0,5 = 0,25 = 25%."
-      },
-      "tip": {
-        "es": "El coeficiente binomial (4 sobre 3) es igual a 4. Significa que hay 4 caminos en el diagrama de árbol que contienen exactamente 3 éxitos.",
-        "de": "Der Binomialkoeffizient (4 über 3) ist 4. Es gibt also 4 Pfade im Baumdiagramm mit genau 3 Erfolgen."
-      }
-    },
-    {
-      "id": "ma_nrw_23_07",
-      "topic": "Analysis — Integración",
-      "difficulty": "medium",
-      "question": {
-        "es": "¿Cuál es el valor de la integral definida ∫ de 0 a 2 de (3x^2 - 2x) dx?",
-        "de": "Wie lautet der Wert des bestimmten Integrals von 0 bis 2 über (3x^2 - 2x) dx?"
-      },
-      "options": [
-        { "es": "4", "de": "4" },
-        { "es": "6", "de": "6" },
-        { "es": "8", "de": "8" },
-        { "es": "2", "de": "2" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "1) Hallamos una primitiva F(x) de f(x) = 3x^2 - 2x: F(x) = x^3 - x^2. 2) Evaluamos los límites: F(2) = 2^3 - 2^2 = 8 - 4 = 4. F(0) = 0. 3) Restamos: F(2) - F(0) = 4 - 0 = 4.",
-        "de": "1) Stammfunktion F(x) von 3x^2 - 2x bestimmen: F(x) = x^3 - x^2. 2) Grenzen einsetzen: F(2) = 2^3 - 2^2 = 4. F(0) = 0. 3) Differenz berechnen: F(2) - F(0) = 4."
-      },
-      "tip": {
-        "es": "Recuerda sumar 1 al exponente y dividir por el mismo número al integrar potencias: la primitiva de 3x^2 es 3 · x^3 / 3 = x^3.",
-        "de": "Beim Integrieren von Potenzfunktionen wird der Exponent um 1 erhöht und durch den neuen Exponenten dividiert."
-      }
+      "id": "mathe_nrw_2022",
+      "name": "Zentralabitur NRW 2022 — Mathematik GK (Completo)",
+      "year": "2022",
+      "questions": [
+        {
+          "id": "ma_nrw_22_01",
+          "topic": "Analysis — Hochpunkt",
+          "difficulty": "medium",
+          "question": {
+            "es": "Dada la función f(x) = x · e^(-x). ¿Cuáles son las coordenadas de su punto máximo local (Hochpunkt)?",
+            "de": "Gegeben ist f(x) = x · e^(-x). Was sind die Koordinaten des lokalen Hochpunkts?"
+          },
+          "options": [
+            {
+              "es": "HP(1, 1/e)",
+              "de": "HP(1 | 1/e)"
+            },
+            {
+              "es": "HP(0, 0)",
+              "de": "HP(0 | 0)"
+            },
+            {
+              "es": "HP(-1, -e)",
+              "de": "HP(-1 | -e)"
+            },
+            {
+              "es": "HP(2, 2/e^2)",
+              "de": "HP(2 | 2/e^2)"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Buscamos f'(x) = 0. f'(x) = (1-x)e^(-x) = 0 -> x = 1. La coordenada y es f(1) = 1·e^(-1) = 1/e. Como f''(1) = -1/e < 0, es un máximo local. Las coordenadas son HP(1, 1/e).",
+            "de": "Erste Ableitung f'(x) = (1-x)e^(-x) = 0 -> x = 1. y-Wert f(1) = 1/e. Zweite Ableitung f''(1) = -1/e < 0 bestätigt Hochpunkt HP(1|1/e)."
+          },
+          "tip": {
+            "es": "Verifica siempre la coordenada y sustituyendo la abscisa x hallada en la función original f(x), no en la derivada.",
+            "de": "Berechne den y-Wert immer durch Einsetzen der Extremstelle in die Ausgangsfunktion f(x)."
+          }
+        },
+        {
+          "id": "ma_nrw_22_02",
+          "topic": "Analysis — Änderungsrate",
+          "difficulty": "medium",
+          "question": {
+            "es": "La concentración de ozono se modela mediante K(t) = -0.05t^3 + 1.8t^2 - 15t + 120. ¿Cuál es la tasa de cambio instantánea de la concentración a las 8:00 (t = 8)?",
+            "de": "Ozonkonzentration K(t) = -0,05t^3 + 1,8t^2 - 15t + 120. Wie groß ist die momentane Änderungsrate um 8:00 Uhr (t = 8)?"
+          },
+          "options": [
+            {
+              "es": "4.2 µg/(m³·h)",
+              "de": "4,2 µg/(m³·h)"
+            },
+            {
+              "es": "-2.5 µg/(m³·h)",
+              "de": "-2,5 µg/(m³·h)"
+            },
+            {
+              "es": "15.0 µg/(m³·h)",
+              "de": "15,0 µg/(m³·h)"
+            },
+            {
+              "es": "0.0 µg/(m³·h)",
+              "de": "0,0 µg/(m³·h)"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "La tasa de cambio instantánea está dada por la derivada K'(t) = -0.15t^2 + 3.6t - 15. Evaluando en t = 8: K'(8) = -0.15·(64) + 3.6·(8) - 15 = -9.6 + 28.8 - 15 = 4.2 µg/(m³·h).",
+            "de": "Ableitung K'(t) = -0,15t^2 + 3,6t - 15. Wert für t = 8 berechnen: K'(8) = 4,2."
+          },
+          "tip": {
+            "es": "El término 'tasa de cambio instantánea' (momentane Änderungsrate) equivale siempre matemáticamente a la derivada de la función en ese punto.",
+            "de": "Die 'momentane Änderungsrate' entspricht immer dem Wert der ersten Ableitung an der gesuchten Stelle."
+          }
+        },
+        {
+          "id": "ma_nrw_22_03",
+          "topic": "Geometrie — Abstand",
+          "difficulty": "medium",
+          "question": {
+            "es": "Calcula la distancia mínima entre el punto de mantenimiento Q(6, 6, 8) y el plano del panel E: 2x + 2y + z = 18.",
+            "de": "Berechne den minimalen Abstand von Q(6|6|8) zur Ebene E: 2x + 2y + z = 18."
+          },
+          "options": [
+            {
+              "es": "d = 14/3 ≈ 4.67 metros",
+              "de": "d = 14/3 ≈ 4,67 Meter"
+            },
+            {
+              "es": "d = 5.00 metros",
+              "de": "d = 5,00 Meter"
+            },
+            {
+              "es": "d = 3.00 metros",
+              "de": "d = 3,00 Meter"
+            },
+            {
+              "es": "d = 2.40 metros",
+              "de": "d = 2,40 Meter"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Utilizamos la fórmula de Hesse: d(Q, E) = |2(6) + 2(6) + 1(8) - 18| / √(2² + 2² + 1²) = |12 + 12 + 8 - 18| / √9 = |14| / 3 = 14/3 ≈ 4.67 metros.",
+            "de": "Hessesche Normalenform anwenden: d = |2·6 + 2·6 + 8 - 18| / √(2^2 + 2^2 + 1^2) = 14/3 ≈ 4,67 Meter."
+          },
+          "tip": {
+            "es": "No olvides tomar el valor absoluto del numerador en la fórmula de la distancia. Las distancias siempre son valores reales no negativos.",
+            "de": "Vergiss nicht die Betragsstriche im Zähler, da Abstände immer positiv sein müssen."
+          }
+        },
+        {
+          "id": "ma_nrw_22_04",
+          "topic": "Stochastik — Binomialverteilung",
+          "difficulty": "medium",
+          "question": {
+            "es": "En un estudio sobre paneles solares con n = 80 y probabilidad p = 0.35, ¿cuál es la probabilidad de que exactamente 25 funcionen con máxima eficiencia?",
+            "de": "Bei n = 80 und p = 0,35, wie hoch ist die Wahrscheinlichkeit für genau k = 25 Erfolge?"
+          },
+          "options": [
+            {
+              "es": "~8.15%",
+              "de": "~8,15%"
+            },
+            {
+              "es": "~15.20%",
+              "de": "~15,20%"
+            },
+            {
+              "es": "~35.00%",
+              "de": "~35,00%"
+            },
+            {
+              "es": "~2.50%",
+              "de": "~2,50%"
+            }
+          ],
+          "correct": 0,
+          "explanation": {
+            "es": "Aplicamos la fórmula de Bernoulli P(X = 25) = (80 sobre 25) · 0.35^25 · 0.65^55. Realizando el cálculo da aproximadamente 0.0815 = 8.15%.",
+            "de": "P(X = 25) = (80 über 25) · 0,35^25 · 0,65^55 ≈ 0,0815 = 8,15%."
+          },
+          "tip": {
+            "es": "En exámenes del Abitur, la probabilidad de éxito de la distribución binomial se mantiene constante en cada ensayo independiente.",
+            "de": "Die Wahrscheinlichkeit p bleibt bei einer Bernoulli-Kette in jedem Schritt konstant."
+          }
+        }
+      ]
     }
-  ]
-},
-{
-  "id": "mathe_nrw_2024",
-  "name": "Zentralabitur NRW 2024 — Mathematik GK (Completo)",
-  "year": "2024",
-  "questions": [
-    {
-      "id": "ma_nrw_24_01",
-      "topic": "Analysis — Normalengleichung",
-      "difficulty": "medium",
-      "question": {
-        "es": "Dada la función f(x) = (2x - 3) / (x^2 + 1). ¿Cuál es la ecuación de la recta normal a la gráfica de f en x = 1?",
-        "de": "Gegeben ist die Funktion f(x) = (2x - 3) / (x^2 + 1). Wie lautet die Gleichung der Normalen an den Graphen von f bei x = 1?"
-      },
-      "options": [
-        { "es": "y = -2/3·x + 1/6", "de": "y = -2/3·x + 1/6" },
-        { "es": "y = 1.5·x - 2", "de": "y = 1.5·x - 2" },
-        { "es": "y = -2/3·x - 0.5", "de": "y = -2/3·x - 0.5" },
-        { "es": "y = 1.5·x + 1/6", "de": "y = 1.5·x + 1/6" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Derivamos f(x) por regla del cociente para hallar f'(x) = (-2x^2 + 6x + 2) / (x^2 + 1)^2. Evaluamos en x = 1: f'(1) = 6/4 = 1.5 (pendiente de la tangente). La pendiente de la normal es m_n = -1 / 1.5 = -2/3. El punto de tangencia es (1, f(1)) = (1, -0.5). Usamos la ecuación punto-pendiente: y = -2/3(x - 1) - 0.5 = -2/3·x + 1/6.",
-        "de": "Quotientenregel liefert f'(1) = 1.5. Normalensteigung m_n = -1/m_t = -2/3. Punkt P(1|-0.5) in Normalengleichung einsetzen ergibt y = -2/3·x + 1/6."
-      },
-      "tip": {
-        "es": "Recuerda que la pendiente de la recta normal es la inversa recíproca negativa de la pendiente de la tangente (m_n = -1 / m_t).",
-        "de": "Die Steigung der Normalen ist der negative Kehrwert der Tangentensteigung."
-      }
-    },
-    {
-      "id": "ma_nrw_24_02",
-      "topic": "Geometrie — Vektoren",
-      "difficulty": "medium",
-      "question": {
-        "es": "¿Cómo son los vectores a⃗ = (1, 2, 0), b⃗ = (0, 1, 3) y c⃗ = (2, 5, 3) en R³?",
-        "de": "Wie verhalten sich die Vektoren a⃗ = (1|2|0), b⃗ = (0|1|3) und c⃗ = (2|5|3) im R³?"
-      },
-      "options": [
-        { "es": "Linealmente dependientes (coplanarios)", "de": "Linear abhängig (komplanar)" },
-        { "es": "Linealmente independientes (no coplanarios)", "de": "Linear unabhängig" },
-        { "es": "Son mutuamente ortogonales", "de": "Sie sind paarweise orthogonal" },
-        { "es": "a⃗ y b⃗ son colineales", "de": "a⃗ und b⃗ sind kollinear" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Planteamos la ecuación x·a⃗ + y·b⃗ + z·c⃗ = 0. Resolviendo el LGS obtenemos soluciones no triviales (ej: para z=1, x=-2, y=-1), lo que significa que son linealmente dependientes (coplanarios). También se puede comprobar viendo que det([a⃗, b⃗, c⃗]) = 0.",
-        "de": "Das LGS x·a⃗ + y·b⃗ + z·c⃗ = 0 hat unendlich viele Lösungen. Die Determinante der Vektorenmatrix ist 0, somit sind sie linear abhängig (komplanar)."
-      },
-      "tip": {
-        "es": "Si tres vectores en R³ son coplanarios (pertenecen al mismo plano), entonces son linealmente dependientes y su determinante es nulo.",
-        "de": "Drei Vektoren im R³ sind linear abhängig, wenn sie in einer gemeinsamen Ebene liegen (komplanar)."
-      }
-    },
-    {
-      "id": "ma_nrw_24_03",
-      "topic": "Analysis — Extremum",
-      "difficulty": "medium",
-      "question": {
-        "es": "La concentración de un fármaco se modela mediante c(t) = 0.5·t^2·e^(-0.5t). ¿En qué momento t (en horas) la concentración es máxima?",
-        "de": "Die Konzentration wird durch c(t) = 0,5·t^2·e^(-0,5t) modelliert. Wann ist die Konzentration maximal?"
-      },
-      "options": [
-        { "es": "t = 2 horas", "de": "t = 2 Stunden" },
-        { "es": "t = 4 horas", "de": "t = 4 Stunden" },
-        { "es": "t = 6 horas", "de": "t = 6 Stunden" },
-        { "es": "t = 8 horas", "de": "t = 8 Stunden" }
-      ],
-      "correct": 1,
-      "explanation": {
-        "es": "Buscamos c'(t) = 0. Derivando por producto y cadena: c'(t) = 0.25·t·e^(-0.5t)·(4 - t). Las soluciones son t = 0 y t = 4. Como la segunda derivada en t = 4 es negativa (c''(4) < 0), es un máximo.",
-        "de": "Ableitung c'(t) = 0,25·t·e^(-0,5t)·(4 - t). Nullstellen bei t = 0 und t = 4. Hinreichende Bedingung bestätigt Maximum bei t = 4 Stunden."
-      },
-      "tip": {
-        "es": "Iguala la primera derivada a cero y verifica la condición suficiente usando el signo de la segunda derivada o cambio de signo de la primera.",
-        "de": "Setze die erste Ableitung null und überprüfe das Maximum über die zweite Ableitung."
-      }
-    },
-    {
-      "id": "ma_nrw_24_04",
-      "topic": "Geometrie — Lagebeziehung",
-      "difficulty": "medium",
-      "question": {
-        "es": "Calcula el valor del parámetro r para el cual la recta g: x⃗ = (2000, 3000, 450) + r·(-40, -60, -9) corta el plano E: 3x + 4y + 20z = 15000.",
-        "de": "Bestimme den Parameter r, für den die Gerade g das Hügel-Ebene E schneidet."
-      },
-      "options": [
-        { "es": "r = 10", "de": "r = 10" },
-        { "es": "r = 22.22", "de": "r = 22,22" },
-        { "es": "r = -5.5", "de": "r = -5,5" },
-        { "es": "La recta es paralela al plano", "de": "Die Gerade ist parallel zur Ebene" }
-      ],
-      "correct": 1,
-      "explanation": {
-        "es": "Sustituimos las coordenadas de g (2000-40r, 3000-60r, 450-9r) en la ecuación de E: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000 -> 27000 - 540r = 15000 -> -540r = -12000 -> r = 22.22.",
-        "de": "Setze die Geradenkoordinaten in die Ebene ein: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000. Auflösung nach r liefert r = 22,22."
-      },
-      "tip": {
-        "es": "Sustituye ordenadamente las expresiones de la recta x, y, z en las incógnitas del plano y despeja la ecuación lineal de r.",
-        "de": "Setze die Ausdrücke für x, y, z in die Ebenengleichung ein und löse die lineare Gleichung nach r auf."
-      }
-    },
-    {
-      "id": "ma_nrw_24_05",
-      "topic": "Stochastik — Binomialverteilung",
-      "difficulty": "medium",
-      "question": {
-        "es": "Si la probabilidad de chip defectuoso es p = 0.04 y tomamos una muestra de n = 150 chips. ¿Cuál es la probabilidad aproximada de encontrar exactamente 5 chips defectuosos?",
-        "de": "Bei p = 0,04 und n = 150 Versuchen, wie groß ist die Wahrscheinlichkeit für genau 5 Defekte?"
-      },
-      "options": [
-        { "es": "~16.19%", "de": "~16,19%" },
-        { "es": "~5.00%", "de": "~5,00%" },
-        { "es": "~12.50%", "de": "~12,50%" },
-        { "es": "~25.00%", "de": "~25,00%" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Usamos la fórmula de Bernoulli P(X = 5) = (150 sobre 5)·(0.04)^5·(0.96)^145. (150 sobre 5) = 591,600,030. Operando nos da P(X = 5) ≈ 0.1619 = 16.19%.",
-        "de": "P(X = 5) = (150 über 5) · 0,04^5 · 0,96^145 ≈ 0,1619 = 16,19%."
-      },
-      "tip": {
-        "es": "En exámenes oficiales del Abitur, para muestras con n grande, utiliza las funciones de distribución de probabilidad de la calculadora (binomialPdf).",
-        "de": "Nutze die Funktion binomialPdf deines Taschenrechners für exakte Einzelwahrscheinlichkeiten."
-      }
-    }
-  ]
-},
-{
-  "id": "mathe_nrw_2022",
-  "name": "Zentralabitur NRW 2022 — Mathematik GK (Completo)",
-  "year": "2022",
-  "questions": [
-    {
-      "id": "ma_nrw_22_01",
-      "topic": "Analysis — Hochpunkt",
-      "difficulty": "medium",
-      "question": {
-        "es": "Dada la función f(x) = x · e^(-x). ¿Cuáles son las coordenadas de su punto máximo local (Hochpunkt)?",
-        "de": "Gegeben ist f(x) = x · e^(-x). Was sind die Koordinaten des lokalen Hochpunkts?"
-      },
-      "options": [
-        { "es": "HP(1, 1/e)", "de": "HP(1 | 1/e)" },
-        { "es": "HP(0, 0)", "de": "HP(0 | 0)" },
-        { "es": "HP(-1, -e)", "de": "HP(-1 | -e)" },
-        { "es": "HP(2, 2/e^2)", "de": "HP(2 | 2/e^2)" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Buscamos f'(x) = 0. f'(x) = (1-x)e^(-x) = 0 -> x = 1. La coordenada y es f(1) = 1·e^(-1) = 1/e. Como f''(1) = -1/e < 0, es un máximo local. Las coordenadas son HP(1, 1/e).",
-        "de": "Erste Ableitung f'(x) = (1-x)e^(-x) = 0 -> x = 1. y-Wert f(1) = 1/e. Zweite Ableitung f''(1) = -1/e < 0 bestätigt Hochpunkt HP(1|1/e)."
-      },
-      "tip": {
-        "es": "Verifica siempre la coordenada y sustituyendo la abscisa x hallada en la función original f(x), no en la derivada.",
-        "de": "Berechne den y-Wert immer durch Einsetzen der Extremstelle in die Ausgangsfunktion f(x)."
-      }
-    },
-    {
-      "id": "ma_nrw_22_02",
-      "topic": "Analysis — Änderungsrate",
-      "difficulty": "medium",
-      "question": {
-        "es": "La concentración de ozono se modela mediante K(t) = -0.05t^3 + 1.8t^2 - 15t + 120. ¿Cuál es la tasa de cambio instantánea de la concentración a las 8:00 (t = 8)?",
-        "de": "Ozonkonzentration K(t) = -0,05t^3 + 1,8t^2 - 15t + 120. Wie groß ist die momentane Änderungsrate um 8:00 Uhr (t = 8)?"
-      },
-      "options": [
-        { "es": "4.2 µg/(m³·h)", "de": "4,2 µg/(m³·h)" },
-        { "es": "-2.5 µg/(m³·h)", "de": "-2,5 µg/(m³·h)" },
-        { "es": "15.0 µg/(m³·h)", "de": "15,0 µg/(m³·h)" },
-        { "es": "0.0 µg/(m³·h)", "de": "0,0 µg/(m³·h)" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "La tasa de cambio instantánea está dada por la derivada K'(t) = -0.15t^2 + 3.6t - 15. Evaluando en t = 8: K'(8) = -0.15·(64) + 3.6·(8) - 15 = -9.6 + 28.8 - 15 = 4.2 µg/(m³·h).",
-        "de": "Ableitung K'(t) = -0,15t^2 + 3,6t - 15. Wert für t = 8 berechnen: K'(8) = 4,2."
-      },
-      "tip": {
-        "es": "El término 'tasa de cambio instantánea' (momentane Änderungsrate) equivale siempre matemáticamente a la derivada de la función en ese punto.",
-        "de": "Die 'momentane Änderungsrate' entspricht immer dem Wert der ersten Ableitung an der gesuchten Stelle."
-      }
-    },
-    {
-      "id": "ma_nrw_22_03",
-      "topic": "Geometrie — Abstand",
-      "difficulty": "medium",
-      "question": {
-        "es": "Calcula la distancia mínima entre el punto de mantenimiento Q(6, 6, 8) y el plano del panel E: 2x + 2y + z = 18.",
-        "de": "Berechne den minimalen Abstand von Q(6|6|8) zur Ebene E: 2x + 2y + z = 18."
-      },
-      "options": [
-        { "es": "d = 14/3 ≈ 4.67 metros", "de": "d = 14/3 ≈ 4,67 Meter" },
-        { "es": "d = 5.00 metros", "de": "d = 5,00 Meter" },
-        { "es": "d = 3.00 metros", "de": "d = 3,00 Meter" },
-        { "es": "d = 2.40 metros", "de": "d = 2,40 Meter" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Utilizamos la fórmula de Hesse: d(Q, E) = |2(6) + 2(6) + 1(8) - 18| / √(2² + 2² + 1²) = |12 + 12 + 8 - 18| / √9 = |14| / 3 = 14/3 ≈ 4.67 metros.",
-        "de": "Hessesche Normalenform anwenden: d = |2·6 + 2·6 + 8 - 18| / √(2^2 + 2^2 + 1^2) = 14/3 ≈ 4,67 Meter."
-      },
-      "tip": {
-        "es": "No olvides tomar el valor absoluto del numerador en la fórmula de la distancia. Las distancias siempre son valores reales no negativos.",
-        "de": "Vergiss nicht die Betragsstriche im Zähler, da Abstände immer positiv sein müssen."
-      }
-    },
-    {
-      "id": "ma_nrw_22_04",
-      "topic": "Stochastik — Binomialverteilung",
-      "difficulty": "medium",
-      "question": {
-        "es": "En un estudio sobre paneles solares con n = 80 y probabilidad p = 0.35, ¿cuál es la probabilidad de que exactamente 25 funcionen con máxima eficiencia?",
-        "de": "Bei n = 80 und p = 0,35, wie hoch ist die Wahrscheinlichkeit für genau k = 25 Erfolge?"
-      },
-      "options": [
-        { "es": "~8.15%", "de": "~8,15%" },
-        { "es": "~15.20%", "de": "~15,20%" },
-        { "es": "~35.00%", "de": "~35,00%" },
-        { "es": "~2.50%", "de": "~2,50%" }
-      ],
-      "correct": 0,
-      "explanation": {
-        "es": "Aplicamos la fórmula de Bernoulli P(X = 25) = (80 sobre 25) · 0.35^25 · 0.65^55. Realizando el cálculo da aproximadamente 0.0815 = 8.15%.",
-        "de": "P(X = 25) = (80 über 25) · 0,35^25 · 0,65^55 ≈ 0,0815 = 8,15%."
-      },
-      "tip": {
-        "es": "En exámenes del Abitur, la probabilidad de éxito de la distribución binomial se mantiene constante en cada ensayo independiente.",
-        "de": "Die Wahrscheinlichkeit p bleibt bei einer Bernoulli-Kette in jedem Schritt konstant."
-      }
-    }
-  ]
-}
-],
-"official_exams_archive": [
+  ],
+  "official_exams_archive": [
     {
       "id": "mathe_nrw_2023_complete",
       "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Mathematik GK",
@@ -1182,6 +1709,88 @@
               "recommendation": {
                 "es": "Recomendación: Cuando n sea grande, puedes emplear la aproximación normal (Teorema de Moivre-Laplace). Recuerda siempre aplicar la corrección de continuidad (restar o sumar 0.5 según corresponda) para no perder centésimas de precisión.",
                 "de": "Tipp: Nutze bei großem n die Normalverteilung als Näherung, vergiss aber nicht die Stetigkeitskorrektur (+/- 0,5)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathe_dia_2023_vollstaendig",
+      "title": "DIA Abitur Mathematik 2023 — Analysis, Geometrie & Stochastik",
+      "year": "2023",
+      "source": "Basado en currículo DIA/ZfA — Contenido de práctica curado",
+      "intro": {
+        "es": "Examen de Matemáticas formato DIA completo. Teil A (sin calculadora): Análisis y Geometría analítica. Teil B (con calculadora CAS): Stochastik y modelización.",
+        "de": "Vollständige DIA-Matheprüfung. Teil A (kein Hilfsmittel): Analysis und Geometrie. Teil B (CAS): Stochastik und Modellierung."
+      },
+      "blocks": [
+        {
+          "name": "Teil A — Analysis (Sin calculadora)",
+          "tasks": [
+            {
+              "title": "A1: Untersuchen einer ganzrationalen Funktion",
+              "question": {
+                "es": "Dada f(x) = x⁴ - 4x³ + 4x²:\na) Calcula los ceros de f.\nb) Determina y clasifica todos los puntos críticos.\nc) Bosqueja la gráfica en [-1, 4].",
+                "de": "Gegeben f(x) = x⁴ - 4x³ + 4x²:\na) Bestimme die Nullstellen.\nb) Bestimme und klassifiziere alle Extrempunkte und Wendepunkte.\nc) Skizziere den Graphen für x ∈ [-1, 4]."
+              },
+              "solution": {
+                "es": "a) f(x) = x²(x-2)² → x₁=0 (doble), x₂=2 (doble).\n\nb) f'(x) = 4x(x-1)(x-2) → puntos críticos x=0, x=1, x=2.\nf''(x) = 12x²-24x+8\nf''(0)=8>0 → Mínimo (0,0)\nf''(1)=-4<0 → Máximo (1,1)\nf''(2)=8>0 → Mínimo (2,0)\nInflexión: x=(3±√3)/3\n\nc) Curva en W simétrica respecto a x=1.",
+                "de": "a) f(x) = x²(x-2)² → x₁=0 (doppelt), x₂=2 (doppelt).\n\nb) f'(x) = 4x(x-1)(x-2); Extrempunkte bei x=0,1,2.\nf''(0)=8>0 → lok. Min. (0,0); f''(1)=-4<0 → lok. Max. (1,1); f''(2)=8>0 → lok. Min. (2,0).\nWendepunkte: x=(3±√3)/3.\n\nc) W-förmige Kurve, symmetrisch zu x=1."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 4 Puntos: Ceros con factorización.\n• 6 Puntos: Clasificación con segunda derivada.\n• 3 Puntos: Puntos de inflexión.\n• 2 Puntos: Bosquejo coherente.",
+                "de": "• 4 Punkte: Nullstellen mit Faktorisierung.\n• 6 Punkte: Klassifikation mit 2. Ableitung.\n• 3 Punkte: Wendepunkte.\n• 2 Punkte: Skizze."
+              },
+              "recommendation": {
+                "es": "Los ceros dobles son tangentes al eje X — el bosquejo debe reflejarlo. Clasifica siempre con f''.",
+                "de": "Doppelte Nullstellen = Berührungspunkte. Immer mit dem 2. Ableitungstest klassifizieren."
+              }
+            },
+            {
+              "title": "A2: Integralrechnung — Flächeninhalt",
+              "question": {
+                "es": "Sea g(x) = 3x - x²:\na) Área entre g(x) y el eje X.\nb) Área entre g(x) y h(x) = x.",
+                "de": "Gegeben g(x) = 3x - x²:\na) Fläche zwischen g(x) und der x-Achse.\nb) Fläche zwischen g(x) und h(x) = x."
+              },
+              "solution": {
+                "es": "a) Ceros: x=0, x=3.\n∫₀³(3x-x²)dx = [3x²/2 - x³/3]₀³ = 27/2 - 9 = 9/2 = 4.5 u²\n\nb) Intersecciones: x=0, x=2.\n∫₀²[(3x-x²)-x]dx = ∫₀²(2x-x²)dx = [x²-x³/3]₀² = 4-8/3 = 4/3 u²",
+                "de": "a) Nullstellen: x=0, x=3.\n∫₀³(3x-x²)dx = 9/2 = 4,5 FE\n\nb) Schnittpunkte: x=0, x=2.\n∫₀²(2x-x²)dx = 4-8/3 = 4/3 FE"
+              },
+              "points": 10,
+              "criteria": {
+                "es": "• 3 Puntos a): Límites + integral correcta.\n• 4 Puntos b): Intersecciones + integral de la diferencia.\n• 3 Puntos: Unidades y signo positivo.",
+                "de": "• 3 Punkte a): Grenzen + Integral.\n• 4 Punkte b): Schnittpunkte + Differenzintegral.\n• 3 Punkte: Einheiten und Vorzeichen."
+              },
+              "recommendation": {
+                "es": "Para áreas entre dos curvas: siempre resta la función inferior de la superior. Verifica los signos antes de integrar.",
+                "de": "Bei Flächen: immer untere von oberer subtrahieren. Vorzeichen vorher prüfen."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B — Stochastik (Con calculadora CAS)",
+          "tasks": [
+            {
+              "title": "B1: Binomialverteilung — Qualitätskontrolle",
+              "question": {
+                "es": "El 8% de los circuitos producidos son defectuosos. Muestra de n=20.\na) P(exactamente 2 defectuosos).\nb) P(como máximo 3 defectuosos).\nc) Valor esperado y desviación típica.",
+                "de": "8% der produzierten Schaltkreise sind defekt. Stichprobe n=20.\na) P(genau 2 defekt).\nb) P(höchstens 3 defekt).\nc) Erwartungswert und Standardabweichung."
+              },
+              "solution": {
+                "es": "X ~ B(20, 0.08)\n\na) P(X=2) = C(20,2)·0.08²·0.92¹⁸ ≈ 0.2711\n\nb) P(X≤3) = P(0)+P(1)+P(2)+P(3) ≈ 0.1887+0.3282+0.2711+0.1414 ≈ 0.9294\n\nc) μ = 20·0.08 = 1.6\nσ = √(20·0.08·0.92) ≈ 1.21",
+                "de": "X ~ B(20; 0,08)\n\na) P(X=2) = C(20;2)·0,08²·0,92¹⁸ ≈ 0,2711\n\nb) P(X≤3) ≈ 0,9294\n\nc) μ = 1,6; σ ≈ 1,21"
+              },
+              "points": 12,
+              "criteria": {
+                "es": "• 4 Puntos a): Fórmula + sustitución + resultado.\n• 5 Puntos b): Los 4 términos correctos.\n• 3 Puntos c): Fórmulas correctas de μ y σ.",
+                "de": "• 4 Punkte a): Formel + Einsetzen + Ergebnis.\n• 5 Punkte b): 4 Terme korrekt.\n• 3 Punkte c): Formeln für μ und σ."
+              },
+              "recommendation": {
+                "es": "Declara siempre la variable: 'X ~ B(20, 0.08)'. Escribe la fórmula antes de usar el CAS.",
+                "de": "Immer Zufallsvariable deklarieren: 'X ~ B(20; 0,08)'. Formel vor CAS-Einsatz aufschreiben."
               }
             }
           ]
