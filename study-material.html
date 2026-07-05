@@ -200,7 +200,7 @@ function renderMaterial() {
           <div>
             <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">DIA — Deutsche Schule Valencia</div>
             <h1 style="font-size:24px;font-weight:900;">Mathematik GK — Abitur-Lehrmaterial</h1>
-            <p style="color:var(--text-secondary);font-size:14px;margin-top:2px;">Zusammenfassung der verbindlichen Richtlinien, inhaltlichen Schwerpunkte und ökonomischen Formeln.</p>
+            <p style="color:var(--text-secondary);font-size:14px;margin-top:2px;">Zusammenfassung der verbindlichen Richtlinien und inhaltlichen Schwerpunkte.</p>
           </div>
         </div>
       </div>
@@ -260,113 +260,7 @@ function renderMaterial() {
             <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
               <li><strong>Bedingte Wahrscheinlichkeit:</strong> Baumdiagramme, Pfadregeln und Vierfeldertafeln zur Visualisierung von Ereignissen.</li>
               <li><strong>Binomialverteilung:</strong> Berechnung von Wahrscheinlichkeiten einer Bernoulli-Kette. Erwartungswert $\mu = n \cdot p$, Standardabweichung $\sigma = \sqrt{n \cdot p \cdot (1-p)}$.</li>
-              <li><strong>Hypothesentests:</strong> Linksseitige und rechtsseitige Hypothesentests zur Qualitätskontrolle.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-xl">
-        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">3. Mathematische Formeln in Wirtschaft und Verwaltung</h2>
-        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
-          Für berufliche Gymnasien und wirtschaftswissenschaftliche Schulen sind folgende ökonomische Modellierungen und Formeln verbindlich:
-        </p>
-
-        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Ökonomische Funktionen:</h3>
-        <table class="grid-table">
-          <thead>
-            <tr>
-              <th>Bezeichnung</th>
-              <th>Mathematischer Term</th>
-              <th>Beschreibung / Ökonomische Bedeutung</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Gesamtkostenfunktion</td>
-              <td>$K(x) = K_v(x) + K_f$</td>
-              <td>Gesamtkosten aus variablen Kosten $K_v(x)$ und fixen Kosten $K_f$.</td>
-            </tr>
-            <tr>
-              <td>Durchschnittliche Stückkosten</td>
-              <td>$k(x) = \\frac{K(x)}{x}$</td>
-              <td>Kosten je hergestellter Einheit. Das Minimum von $k(x)$ liefert das <strong>Betriebsoptimum</strong> $x_{BO}$. Der zugehörige Preis ist die <strong>langfristige Preisuntergrenze</strong>.</td>
-            </tr>
-            <tr>
-              <td>Variable Stückkosten</td>
-              <td>$k_v(x) = \\frac{K_v(x)}{x}$</td>
-              <td>Variable Kosten je Einheit. Das Minimum von $k_v(x)$ liefert das <strong>Betriebsminimum</strong> $x_{BM}$. Der zugehörige Preis ist die <strong>kurzfristige Preisuntergrenze</strong>.</td>
-            </tr>
-            <tr>
-              <td>Grenzkostenfunktion</td>
-              <td>$K'(x)$</td>
-              <td>Kostenzuwachs für eine infinitesimal kleine Erhöhung der Ausbringungsmenge.</td>
-            </tr>
-            <tr>
-              <td>Erlösfunktion (Umsatz)</td>
-              <td>$E(x) = p \\cdot x \\text{ oder } p(x) \\cdot x$</td>
-              <td>Einnahmen aus dem Verkauf. $p(x)$ ist die Preis-Absatz-Funktion (Nachfragefunktion $p_N(x)$).</td>
-            </tr>
-            <tr>
-              <td>Gewinnfunktion</td>
-              <td>$G(x) = E(x) - K(x)$</td>
-              <td>Gewinn. Die Nullstellen von $G(x)$ heißen <strong>Gewinnschwelle</strong> (Break-Even-Point) und <strong>Gewinngrenze</strong>. Das Maximum von $G(x)$ ist das Gewinnmaximum bei $x_{max}$.</td>
-            </tr>
-            <tr>
-              <td>Cournotscher Punkt</td>
-              <td>$C(x_{max} | p_N(x_{max}))$</td>
-              <td>Liefert den Preis und die Menge für ein Gewinnmaximum im Angebotsmonopol.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Konsumenten- und Produzentenrente:</h3>
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
-          Das Marktgleichgewicht liegt bei der Gleichgewichtsmenge $x_G$ und dem Gleichgewichtspreis $p_G$.
-        </p>
-        <div class="grid-2 gap-md">
-          <div class="card" style="background:rgba(255,255,255,0.01);">
-            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Konsumentenrente (KR)</div>
-            <div class="formula-card">
-              KR = &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>N</sub>(x) dx - x<sub>G</sub> * p<sub>G</sub>
-            </div>
-            <div style="font-size:12px;color:var(--text-muted);">Ersparnis der Konsumenten, die bereit gewesen wären, einen höheren Preis als den Gleichgewichtspreis zu zahlen.</div>
-          </div>
-          <div class="card" style="background:rgba(255,255,255,0.01);">
-            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Produzentenrente (PR)</div>
-            <div class="formula-card">
-              PR = x<sub>G</sub> * p<sub>G</sub> - &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>A</sub>(x) dx
-            </div>
-            <div style="font-size:12px;color:var(--text-muted);">Zusätzlicher Gewinn der Produzenten, die bereit gewesen wären, zu einem niedrigeren Preis anzubieten.</div>
-          </div>
-        </div>
-
-        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Mehrstufige Produktionsprozesse (Lineare Algebra):</h3>
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
-          Ein zweistufiger Prozess stellt aus Rohstoffen $R_i$ über Zwischenprodukte $Z_j$ Endprodukte $E_k$ her.
-        </p>
-        <div class="flex-col gap-sm">
-          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
-            <strong>Verflechtungsmatrizen:</strong>
-            <div style="margin-top:var(--space-xs);">
-              - $A$ (Rohstoff-Zwischenprodukt-Matrix, Dimension $m \times n$)<br>
-              - $B$ (Zwischenprodukt-Endprodukt-Matrix, Dimension $n \times p$)<br>
-              - $C$ (Rohstoff-Endprodukt-Matrix, Dimension $m \times p$) &rarr; <strong>Formel:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">C = A * B</span>
-            </div>
-          </div>
-          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
-            <strong>Verbrauchsvektoren:</strong>
-            <div style="margin-top:var(--space-xs);">
-              - $\vec{r}$ (Rohstoffbedarf), $\vec{z}$ (Zwischenproduktebedarf), $\vec{e}$ (Mengen an Endprodukten).<br>
-              - <strong>Gleichungen:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">A * \vec{z} = \vec{r}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">B * \vec{e} = \vec{z}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">C * \vec{e} = \vec{r}</span>
-            </div>
-          </div>
-          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
-            <strong>Kostenberechnungen:</strong>
-            <div style="margin-top:var(--space-xs);">
-              - Rohstoffkosten: $K_R = \vec{k}_R \cdot \vec{r}$ &nbsp;(wobei $\vec{k}_R$ der Rohstoffpreisvektor ist)<br>
-              - Variable Herstellkosten je ME Endprodukt: <span class="formula-card" style="padding:2px 6px;margin:0;">\vec{k}_v = \vec{k}_R \cdot C + \vec{k}_Z \cdot B + \vec{k}_E</span> &nbsp;($\vec{k}_Z, \vec{k}_E$ sind Fertigungskostenvektoren)<br>
-              - Gesamtkosten: $K = \vec{k}_v \cdot \vec{e} + K_f$ &nbsp;($K_f$ sind Fixkosten)
+              <li><strong>Hypothesentests:</strong> Linksse        - Gesamtkosten: $K = \vec{k}_v \cdot \vec{e} + K_f$ &nbsp;($K_f$ sind Fixkosten)
             </div>
           </div>
         </div>
@@ -380,7 +274,7 @@ function renderMaterial() {
           <div>
             <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">DIA — Deutsche Schule Valencia</div>
             <h1 style="font-size:24px;font-weight:900;">Matemáticas GK — Material Didáctico Abitur</h1>
-            <p style="color:var(--text-secondary);font-size:14px;margin-top:2px;">Resumen traducido de las directrices oficiales, temas clave de evaluación y fórmulas aplicadas a la economía.</p>
+            <p style="color:var(--text-secondary);font-size:14px;margin-top:2px;">Resumen traducido de las directrices oficiales y temas clave de evaluación.</p>
           </div>
         </div>
       </div>
@@ -446,111 +340,7 @@ function renderMaterial() {
         </div>
       </div>
 
-      <div class="card mb-xl">
-        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">3. Fórmulas de Matemáticas Aplicadas a la Economía (Wirtschaftsmathematik)</h2>
-        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
-          En el Abitur de economía (Berufskolleg / Wirtschaft) se exigen formalmente las siguientes funciones y modelizaciones:
-        </p>
 
-        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Funciones Económicas Básicas:</h3>
-        <table class="grid-table">
-          <thead>
-            <tr>
-              <th>Concepto</th>
-              <th>Fórmula / Expresión</th>
-              <th>Significado Económico / Criterio Matemático</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Coste Total</td>
-              <td>$K(x) = K_v(x) + K_f$</td>
-              <td>Suma de los costes variables $K_v(x)$ dependientes de la producción y los costes fijos $K_f$.</td>
-            </tr>
-            <tr>
-              <td>Coste Medio Unitario</td>
-              <td>$k(x) = \\frac{K(x)}{x}$</td>
-              <td>Coste por unidad. El punto mínimo de esta curva es el <strong>óptimo de explotación</strong> ($x_{BO}$). El valor de coste en este punto define el <strong>límite de precio a largo plazo</strong>.</td>
-            </tr>
-            <tr>
-              <td>Coste Variable Medio</td>
-              <td>$k_v(x) = \\frac{K_v(x)}{x}$</td>
-              <td>Coste variable por unidad. El punto mínimo de esta curva es el <strong>mínimo de explotación</strong> ($x_{BM}$). El valor de coste en este punto define el <strong>límite de precio a corto plazo</strong>.</td>
-            </tr>
-            <tr>
-              <td>Coste Marginal</td>
-              <td>$K'(x)$ (Grenzkosten)</td>
-              <td>Derivada del coste. Indica el coste adicional de producir una unidad extra infinitesimal.</td>
-            </tr>
-            <tr>
-              <td>Ingreso / Ventas</td>
-              <td>$E(x) = p \\cdot x \\text{ o } p(x) \\cdot x$</td>
-              <td>Facturación. Si el precio no es fijo, se multiplica por la función de precio de demanda $p_N(x)$ (Preis-Absatz-Funktion).</td>
-            </tr>
-            <tr>
-              <td>Beneficio Neto</td>
-              <td>$G(x) = E(x) - K(x)$</td>
-              <td>Ganancias netas. Las raíces de $G(x)$ son el <strong>umbral de rentabilidad</strong> ($x_{GS}$, break-even) y el <strong>límite de beneficio</strong> ($x_{GG}$). El beneficio es máximo cuando $G'(x)=0$ y $G''(x) < 0$.</td>
-            </tr>
-            <tr>
-              <td>Punto de Cournot</td>
-              <td>$C(x_{max} | p_N(x_{max}))$</td>
-              <td>Coordenadas en la curva de demanda del precio óptimo que maximiza el beneficio en régimen de monopolio.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Excedente del Consumidor y del Productor:</h3>
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
-          Suponiendo un precio de equilibrio $p_G$ y una cantidad vendida $x_G$:
-        </p>
-        <div class="grid-2 gap-md">
-          <div class="card" style="background:rgba(255,255,255,0.01);">
-            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Excedente del Consumidor (Konsumentenrente)</div>
-            <div class="formula-card">
-              KR = &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>N</sub>(x) dx - x<sub>G</sub> * p<sub>G</sub>
-            </div>
-            <div style="font-size:12px;color:var(--text-muted);">Mide el ahorro total de los consumidores que habrían estado dispuestos a pagar un precio mayor que el de equilibrio del mercado.</div>
-          </div>
-          <div class="card" style="background:rgba(255,255,255,0.01);">
-            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Excedente del Productor (Produzentenrente)</div>
-            <div class="formula-card">
-              PR = x<sub>G</sub> * p<sub>G</sub> - &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>A</sub>(x) dx
-            </div>
-            <div style="font-size:12px;color:var(--text-muted);">Representa el beneficio adicional de los productores que habrían estado dispuestos a vender por debajo del precio de equilibrio.</div>
-          </div>
-        </div>
-
-        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Procesos de Producción en Dos Etapas (Matrices):</h3>
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
-          Modelización del paso de Materias Primas $R_i$ a Productos Intermedios $Z_j$, y de estos a Productos Finales $E_k$.
-        </p>
-        <div class="flex-col gap-sm">
-          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
-            <strong>Matriz de Verflechtung (Gozintograph):</strong>
-            <div style="margin-top:var(--space-xs);">
-              - $A$ (Matriz Rohstoff-Zwischenprodukt, orden $m \times n$)<br>
-              - $B$ (Matriz Zwischenprodukt-Endprodukt, orden $n \times p$)<br>
-              - $C$ (Matriz Rohstoff-Endprodukt, orden $m \times p$) &rarr; <strong>Fórmula de composición:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">C = A * B</span>
-            </div>
-          </div>
-          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
-            <strong>Ecuaciones de Consumo Vectorial:</strong>
-            <div style="margin-top:var(--space-xs);">
-              - Vectores: $\vec{r}$ (materia prima), $\vec{z}$ (intermedios), $\vec{e}$ (finales).<br>
-              - <strong>Relaciones fundamentales:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">A * \vec{z} = \vec{r}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">B * \vec{e} = \vec{z}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">C * \vec{e} = \vec{r}</span>
-            </div>
-          </div>
-          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
-            <strong>Vectores de Coste:</strong>
-            <div style="margin-top:var(--space-xs);">
-              - Coste de materias primas: $K_R = \vec{k}_R \cdot \vec{r}$ &nbsp;(donde $\vec{k}_R$ es el precio de compra de materias primas)<br>
-              - Coste variable de producción unitario: <span class="formula-card" style="padding:2px 6px;margin:0;">\vec{k}_v = \vec{k}_R \cdot C + \vec{k}_Z \cdot B + \vec{k}_E</span> &nbsp;($\vec{k}_Z, \vec{k}_E$ son costes de fabricación de etapas 1 y 2)<br>
-              - Coste total de un lote: $K = \vec{k}_v \cdot \vec{e} + K_f$ &nbsp;($K_f$ son los costes fijos semanales)
-            </div>
-          </div>
-        </div>
-      </div>
     `;
   }
 }
