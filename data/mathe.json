@@ -751,6 +751,46 @@
                 "es": "Recomendación didáctica: Para calcular la integral de una función del tipo t^2·e^(kt), debes aplicar el método de integración por partes dos veces consecutivas. Mantén orden con los signos negativos para evitar fallos de cálculo.",
                 "de": "Tipp: Für das Integral von t^2·e^(-0,5t) ist zweifache partielle Integration erforderlich. Achte penibel auf die Vorzeichen."
               }
+            },
+            {
+              "title": "Aufgabe B2: Geometrie (Modelización en 3D de la trayectoria de aproximación y plano de la pista)",
+              "question": {
+                "es": "En un sistema de coordenadas tridimensional en metros (donde el plano xy representa el suelo), la trayectoria de aproximación de un avión de entrenamiento se modela mediante la recta g: x⃗ = (2000, 3000, 450) + r·(-40, -60, -9). La superficie inclinada de una colina cercana se modela mediante el plano E: 3x + 4y + 20z = 15000.\n\nApartado a) Determina si la trayectoria del avión interseca el plano de la colina E y, en su caso, calcula las coordenadas del punto de colisión.\nApartado b) Calcula la distancia mínima entre el punto de inicio de la aproximación P(2000, 3000, 450) y el plano de la colina E.",
+                "de": "In einem dreidimensionalen Koordinatensystem (Einheit Meter) wird die Flugbahn eines Flugzeugs durch die Gerade g: x⃗ = (2000|3000|450) + r·(-40|-60|-9) beschrieben. Die Hangoberfläche eines Hügels liegt in der Ebene E: 3x + 4y + 20z = 15000.\n\na) Bestimme den Schnittpunkt der Flugbahn mit der Hangebene E und berechne die Koordinaten des potenziellen Kollisionspunkts.\nb) Berechne den minimalen Abstand des Startpunkts P(2000|3000|450) zur Ebene E."
+              },
+              "solution": {
+                "es": "a) Para calcular la intersección, sustituimos las ecuaciones paramétricas de la recta g en la ecuación cartesiana del plano E:\nx = 2000 - 40r\ny = 3000 - 60r\nz = 450 - 9r\n\nSustituimos en E: 3(2000 - 40r) + 4(3000 - 60r) + 20(450 - 9r) = 15000\n6000 - 120r + 12000 - 240r + 9000 - 180r = 15000\n27000 - 540r = 15000\n-540r = -12000 → r = -12000 / -540 = 22.22...\n\nSustituimos el parámetro r = 22.22 en la recta g para hallar el punto S:\nx_s = 2000 - 40(22.22) = 1111.11 m\ny_s = 3000 - 60(22.22) = 1666.67 m\nz_s = 450 - 9(22.22) = 250.00 m\nEl punto de colisión es S(1111.11, 1666.67, 250.00).\n\nb) La distancia de un punto P(x₀, y₀, z₀) a un plano Ax + By + Cz - D = 0 se calcula con la fórmula de Hesse:\nd(P, E) = |A·x₀ + B·y₀ + C·z₀ - D| / √(A² + B² + C²)\n\nSustituimos P(2000, 3000, 450) y E (3x + 4y + 20z - 15000 = 0):\nd(P, E) = |3(2000) + 4(3000) + 20(450) - 15000| / √(3² + 4² + 20²)\nd(P, E) = |6000 + 12000 + 9000 - 15000| / √(9 + 16 + 400)\nd(P, E) = |12000| / √425 ≈ 12000 / 20.615 ≈ 582.08 metros.",
+                "de": "a) Schnittpunkt g mit E berechnen durch Einsetzen von g in E: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000. Vereinfacht: 27000 - 540r = 15000 -> r = 22,22. Schnittpunkt S(1111,11 | 1666,67 | 250,00).\nb) Abstand P zu E über die Hessesche Normalenform: d = |3(2000)+4(3000)+20(450)-15000| / √(3^2+4^2+20^2) = 12000 / √425 ≈ 582,08 Meter."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 7 Puntos (a): Plantear la ecuación lineal sustituyendo la recta en el plano, resolver el parámetro r ≈ 22.22 de forma exacta y sustituirlo para dar las coordenadas del punto S.\n• 8 Puntos (b): Escribir la fórmula de la distancia punto-plano (Hesse), calcular la longitud del vector normal ||n|| = √425 y obtener la distancia de 582.08 metros.",
+                "de": "• 7 Punkte (a): Gleichung aufstellen, Parameter r = 22,22 berechnen und Koordinaten des Schnittpunktes S angeben.\n• 8 Punkte (b): Hessesche Normalenform korrekt anwenden, Norm des Vektors berechnen und Abstand bestimmen."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el examen DIA escrito, siempre debes comprobar las unidades métricas (m) y justificar si el punto de colisión queda dentro del intervalo físico real del vuelo.",
+                "de": "Tipp: Achte auf die korrekte Angabe von Einheiten und prüfe die Plausibilität im realen Flugkontext."
+              }
+            },
+            {
+              "title": "Aufgabe B3: Stochastik (Control de calidad y contraste de hipótesis binomial)",
+              "question": {
+                "es": "Una empresa fabrica chips electrónicos. La tasa histórica de chips defectuosos es p = 0.04. Para verificar la calidad de un nuevo lote, se toma una muestra aleatoria de n = 150 chips.\n\nApartado a) Calcula la probabilidad de que haya exactamente 5 chips defectuosos en la muestra. A continuación, calcula la probabilidad de que haya como máximo 3 defectuosos.\nApartado b) El director de producción afirma que una nueva calibración ha reducido la tasa de fallos por debajo de 0.04. Para probarlo, se decide realizar un test de hipótesis unilateral con un nivel de significación del 5% y una muestra de n = 150 chips. Define la hipótesis nula H₀ y la hipótesis alternativa H₁, y determina la región de rechazo de H₀.",
+                "de": "Ein Hersteller produziert Mikrochips. Der Anteil defekter Chips betrug bisher p = 0,04. Zur Qualitätskontrolle wird eine Stichprobe von n = 150 Chips entnommen.\n\na) Berechne die Wahrscheinlichkeit, dass genau 5 Chips defekt sind, sowie die Wahrscheinlichkeit für höchstens 3 defekte Chips.\nb) Der Produktionsleiter behauptet, dass ein neues Verfahren den Defektanteil gesenkt hat (p < 0,04). Führe einen linksseitigen Hypothesentest bei n = 150 und einem Signifikanzniveau von 5% durch. Bestimme H₀, H₁ und den Ablehnungsbereich."
+              },
+              "solution": {
+                "es": "a) Sea X el número de chips defectuosos. X sigue una distribución binomial B(150, 0.04).\n- Probabilidad de exactamente 5 defectuosos (Fórmula de Bernoulli):\nP(X = 5) = (150 sobre 5) · 0.04^5 · 0.96^145 ≈ 591,600,030 · 0.0000001024 · 0.002672 ≈ 0.1619 = 16.19%.\n- Probabilidad de como máximo 3 defectuosos (acumulada):\nP(X ≤ 3) = P(X=0) + P(X=1) + P(X=2) + P(X=3)\nP(X=0) = 0.96^150 ≈ 0.00223\nP(X=1) = 150·0.04·0.96^149 ≈ 0.01397\nP(X=2) = 11175·0.0016·0.96^148 ≈ 0.04323\nP(X=3) = 551300·0.000064·0.96^147 ≈ 0.08866\nP(X ≤ 3) ≈ 0.00223 + 0.01397 + 0.04323 + 0.08866 ≈ 0.1481 = 14.81%.\n\nb) Test de hipótesis unilateral izquierdo:\n- Hipótesis nula H₀: p ≥ 0.04 (la tasa de fallos no ha disminuido)\n- Hipótesis alternativa H₁: p < 0.04 (la tasa de fallos ha disminuido)\nAsumimos el valor límite bajo H₀ de p = 0.04. X ~ B(150, 0.04).\nEsperanza μ = n·p = 150·0.04 = 6 chips.\nBuscamos el mayor valor crítico k tal que la probabilidad acumulada P(X ≤ k) ≤ 0.05 (nivel de significación):\nUtilizando la tabla de la binomial acumulada:\nP(X ≤ 1) ≈ P(X=0) + P(X=1) ≈ 0.0162 (1.62%)\nP(X ≤ 2) ≈ P(X ≤ 1) + P(X=2) ≈ 0.0594 (5.94%)\nDado que 5.94% supera el nivel de significación del 5%, el valor crítico máximo admitido para el rechazo es k = 1. La región de rechazo de la hipótesis nula H₀ es K = {0, 1}.",
+                "de": "a) X ~ B(150; 0,04). P(X=5) = (150 über 5)·0,04^5·0,96^145 ≈ 16,19%. P(X≤3) = P(X=0)+...+P(X=3) ≈ 14,81%.\nb) Linksseitiger Test: H₀: p ≥ 0,04; H₁: p < 0,04. Gesucht ist k mit P(X≤k) ≤ 0,05 unter H₀. P(X≤1) ≈ 1,62% und P(X≤2) ≈ 5,94%. Der Ablehnungsbereich ist K = {0, 1}."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 6 Puntos (a): Calcular P(X = 5) mediante Bernoulli y P(X ≤ 3) sumando las probabilidades puntuales acumuladas.\n• 9 Puntos (b): Definir correctamente H₀ y H₁, calcular mediante tablas o calculadora que P(X ≤ 1) ≤ 5% mientras que P(X ≤ 2) > 5% y establecer la región de rechazo K = {0, 1}.",
+                "de": "• 6 Punkte (a): Berechnung der Einzel- und kumulierten Wahrscheinlichkeiten.\n• 9 Punkte (b): Hypothesen formulieren und den Ablehnungsbereich K = {0, 1} bestimmen."
+              },
+              "recommendation": {
+                "es": "Recomendación: En los exámenes alemanes (Abitur), siempre debes escribir la frase de conclusión relacionando el resultado con el contexto de la fábrica para obtener el último punto de argumentación.",
+                "de": "Tipp: Formuliere stets einen abschließenden Antwortsatz im Kontext der Sachaufgabe, um die volle Punktzahl zu sichern."
+              }
             }
           ]
         }
@@ -812,6 +852,46 @@
               "recommendation": {
                 "es": "Recomendación: Asegúrate de interpretar físicamente el resultado. K'(t) da la tasa de cambio (velocidad de variación) del ozono en la atmósfera, medida en unidades de concentración por unidad de tiempo.",
                 "de": "Tipp: K'(t) beschreibt die momentane Änderungsrate. Vergiss nicht die korrekte Einheit µg/(m³·h) anzugeben."
+              }
+            },
+            {
+              "title": "Aufgabe B2: Geometrie (Intersecciones y distancias tridimensionales en la instalación solar)",
+              "question": {
+                "es": "La superficie plana de un panel solar se modela mediante el plano E: 2x + 2y + z = 18. Un rayo de sol incide en la dirección del vector v⃗ = (-2, -2, -3) y pasa por el punto P(8, 8, 12).\n\nApartado a) Determina la ecuación de la recta de luz g y calcula el punto de incidencia S (intersección) en el plano del panel solar E.\nApartado b) Un punto de mantenimiento Q está situado en las coordenadas Q(6, 6, 8). Calcula la distancia más corta desde Q hasta el plano del panel E.",
+                "de": "Ein Solarpanel liegt in der Ebene E: 2x + 2y + z = 18. Ein Lichtstrahl verläuft entlang der Geraden g durch den Punkt P(8|8|12) in Richtung des Vektors v⃗ = (-2|-2|-3).\n\na) Bestimme die Gleichung der Geraden g und berechne den Auftreffpunkt S (Schnittpunkt) auf der Solarpanelebene E.\nb) Ein Wartungspunkt Q hat die Koordinaten Q(6|6|8). Berechne den minimalen Abstand von Q zur Ebene E."
+              },
+              "solution": {
+                "es": "a) Ecuación de la recta de luz g:\ng: x⃗ = (8, 8, 12) + r·(-2, -2, -3)\n\nSustituimos las componentes de g en E:\nx = 8 - 2r\ny = 8 - 2r\nz = 12 - 3r\n\nSustituimos en la ecuación 2x + 2y + z = 18:\n2(8 - 2r) + 2(8 - 2r) + (12 - 3r) = 18\n16 - 4r + 16 - 4r + 12 - 3r = 18\n44 - 11r = 18\n-11r = -26 → r = 26/11 ≈ 2.36\n\nSustituimos el parámetro r = 2.36 en g para hallar el punto S:\nx_s = 8 - 2(2.36) = 3.28 m\ny_s = 8 - 2(2.36) = 3.28 m\nz_s = 12 - 3(2.36) = 4.92 m\nEl punto de incidencia es S(3.28, 3.28, 4.92).\n\nb) Distancia del punto Q(6, 6, 8) al plano E (2x + 2y + z - 18 = 0):\nd(Q, E) = |2(6) + 2(6) + 1(8) - 18| / √(2² + 2² + 1²)\nd(Q, E) = |12 + 12 + 8 - 18| / √(4 + 4 + 1)\nd(Q, E) = |14| / √9 = 14 / 3 ≈ 4.67 metros.",
+                "de": "a) Geradengleichung g: x⃗ = (8|8|12) + r·(-2|-2|-3). Einsetzen in E: 2(8-2r) + 2(8-2r) + (12-3r) = 18. Vereinfacht: 44 - 11r = 18 -> r = 2,36. Auftreffpunkt S(3,28 | 3,28 | 4,92).\nb) Abstand Q(6|6|8) zur Ebene E mit HNF: d = |2(6) + 2(6) + 8 - 18| / √(2^2+2^2+1) = 14 / 3 ≈ 4,67 Meter."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 7 Puntos (a): Plantear la ecuación de la recta, sustituir las componentes en el plano, hallar r ≈ 2.36 y dar las coordenadas exactas de S.\n• 8 Puntos (b): Aplicar la fórmula de Hesse para el punto Q, evaluar correctamente el numerador y el denominador, y dar la distancia de 4.67 metros.",
+                "de": "• 7 Punkte (a): Aufstellen der Geradengleichung, Berechnung des Parameters r und der Koordinaten von S.\n• 8 Punkte (b): Korrekte Anwendung der HNF-Formel und Abstandsbestimmung."
+              },
+              "recommendation": {
+                "es": "Recomendación: En geometría analítica, dibuja siempre un pequeño esquema mental de la situación. Te ayudará a comprobar si el vector director de la recta y el vector normal del plano son paralelos o perpendiculares.",
+                "de": "Tipp: Eine grobe Skizze hilft dir, die geometrische Lagebeziehung der Vektoren zueinander schnell zu überprüfen."
+              }
+            },
+            {
+              "title": "Aufgabe B3: Stochastik (Estadística de la eficiencia del panel solar)",
+              "question": {
+                "es": "Se sabe que la probabilidad de que un panel solar funcione con máxima eficiencia bajo condiciones de nubosidad es p = 0.35. Se realiza un estudio de campo seleccionando una muestra aleatoria de n = 80 paneles.\n\nApartado a) Calcula la probabilidad de que exactamente 25 paneles funcionen con máxima eficiencia.\nApartado b) Calcula la probabilidad de que funcionen con máxima eficiencia al menos 30 paneles.",
+                "de": "Die Wahrscheinlichkeit, dass ein Solarpanel bei bewölktem Himmel die maximale Effizienz erreicht, beträgt p = 0,35. Eine Testreihe umfasst n = 80 Module.\n\na) Berechne die Wahrscheinlichkeit, dass genau 25 Module maximale Effizienz erreichen.\nb) Berechne die Wahrscheinlichkeit, dass mindestens 30 Module maximale Effizienz erreichen."
+              },
+              "solution": {
+                "es": "a) Sea X el número de paneles con eficiencia máxima. X sigue una distribución binomial B(80, 0.35).\n- Probabilidad de exactamente 25 paneles (Fórmula de Bernoulli):\nP(X = 25) = (80 sobre 25) · 0.35^25 · 0.65^55 ≈ 0.0815 = 8.15%.\n\nb) Probabilidad de al menos 30 paneles (acumulada a la derecha):\nP(X ≥ 30) = 1 - P(X ≤ 29).\nUtilizando la aproximación normal de la binomial (dado que n·p = 28 ≥ 9 y n·q = 52 ≥ 9, se cumple la condición de Laplace):\nMedia μ = n·p = 80·0.35 = 28\nDesviación típica σ = √n·p·q = √80·0.35·0.65 = √18.2 ≈ 4.266\nAplicando la corrección de continuidad:\nP(X ≥ 30) ≈ 1 - Φ((29.5 - 28) / 4.266) = 1 - Φ(1.5 / 4.266) ≈ 1 - Φ(0.35).\nBuscamos en la tabla de distribución normal estándar Φ(0.35) ≈ 0.6368:\nP(X ≥ 30) ≈ 1 - 0.6368 = 0.3632 = 36.32%.\n(Nota: El cálculo binomial acumulado exacto mediante CAS da 35.83%, lo cual se considera correcto por cualquiera de las dos vías).",
+                "de": "a) X ~ B(80; 0,35). P(X=25) = (80 über 25)·0,35^25·0,65^55 ≈ 8,15%.\nb) P(X≥30) = 1 - P(X≤29) ≈ 35,83% (berechnet über kumulierte Binomialverteilung oder Normalverteilungsnäherung)."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 6 Puntos (a): Plantear la binomial B(80, 0.35) y calcular de forma correcta P(X = 25) mediante la fórmula de Bernoulli.\n• 9 Puntos (b): Expresar P(X ≥ 30) como 1 - P(X ≤ 29), resolver mediante calculadora CAS o aproximación normal con corrección de continuidad, detallando los pasos de normalización.",
+                "de": "• 6 Punkte (a): Ansatz und Berechnung von P(X=25).\n• 9 Punkte (b): Gegenereignis formulieren und Berechnung mittels kumulierter Binomialverteilung oder Näherung."
+              },
+              "recommendation": {
+                "es": "Recomendación: Cuando n sea grande, puedes emplear la aproximación normal (Teorema de Moivre-Laplace). Recuerda siempre aplicar la corrección de continuidad (restar o sumar 0.5 según corresponda) para no perder centésimas de precisión.",
+                "de": "Tipp: Nutze bei großem n die Normalverteilung als Näherung, vergiss aber nicht die Stetigkeitskorrektur (+/- 0,5)."
               }
             }
           ]

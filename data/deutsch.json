@@ -282,10 +282,35 @@
           ]
         },
         {
-          "name": "Teil B: Erörterung pragmatischer Texte (Disertación argumentativa basada en un artículo)",
+          "name": "Teil B: Drama — Szenenanalyse (Análisis literario de fragmento dramático de Woyzeck)",
           "tasks": [
             {
-              "title": "Aufgabe 2: Analyse und Erörterung eines Sachtextes über die Zukunft des Schreibens im Zeitalter der Künstlichen Intelligenz",
+              "title": "Aufgabe 2: Analyse de la escena de la feria ('Jahrmarkt') de Georg Büchners 'Woyzeck'",
+              "question": {
+                "es": "Analiza la escena de la feria ('Jahrmarkt / Buden, Lichter. Volk'). Describe el contraste entre la naturaleza indómita (representada por los animales amaestrados) y la rigidez de la civilización burguesa, explicando cómo esta escena prefigura el destino trágico de Woyzeck y Marie.",
+                "de": "Analysiere die Szene 'Jahrmarkt' aus Georg Büchners 'Woyzeck'. Untersuche den Kontrast zwischen ungezähmter Natur (repräsentiert durch die dressierten Tiere) und bürgerlicher Zivilisation und erkläre, wie diese Szene das Schicksal von Woyzeck und Marie vorwegnimmt."
+              },
+              "solution": {
+                "es": "1) Einleitung: Introducción de la escena (Woyzeck y Marie pasean por la feria y asisten a las atracciones de animales). Tesis: La feria opera como un microcosmos satírico que expone la degradación de la condición humana en la sociedad; los animales son humanizados y los humanos son animalizados.\n2) El contraste Naturaleza vs. Civilización: El pregonero muestra un caballo sabio y un mono vestido de soldado. Estos animales representan la 'naturaleza racionalizada' por la fuerza. Büchner ironiza sobre los ideales de la Ilustración burguesa: la civilización no libera, sino que doma y reprime la naturaleza genuina del ser.\n3) La prefiguración del destino: En la feria, Marie se encuentra con el Tambor mayor (Tambourmajor), quien la admira físicamente. Woyzeck observa inquieto. El magnetismo sexual instintivo de Marie choca con la debilidad de Woyzeck. El caballo de la feria es descrito como un ser de 'razón bestial', lo que anticipa la posterior locura de Woyzeck cuando sus instintos de celos tomen el control bajo la presión social.\n4) Conclusión: La feria funciona como un espejo deformante de la alienación social de los protagonistas.",
+                "de": "1) Einleitung: Einordnung der Jahrmarktszene. These: Die Szene dient als satirischer Mikrokosmos, der die animalische Natur des Menschen und seine gesellschaftliche Dressur veranschaulicht.\n2) Natur vs. Zivilisation: Die Vorführung des dressierten Pferdes ('Astronomisches Pferd') und des Affen in Soldatenuniform symbolisiert die Pervertierung der Natur durch Zivilisation. Satire auf das bürgerliche Vernunftideal.\n3) Vorausdeutung: Erstes Zusammentreffen von Marie und dem Tambourmajor. Woyzecks Ahnungslosigkeit und zunehmende Unruhe. Die Tiermotive spiegeln die Triebe der Figuren wider (sexuelle Anziehung bei Marie, animalische Eifersucht bei Woyzeck).\n4) Schluss: Die Szene zeigt, dass der Mensch trotz bürgerlicher Maske von Trieben gesteuert wird."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto del ambiente y la dialéctica del pregonero de la feria.\n• 15 Puntos: Análisis de la animalización de los personajes y la humanización de las bestias en el diálogo.\n• 15 Puntos: Explicación de cómo el encuentro físico con el Tambor mayor anticipa la traición y la tragedia de sangre.\n• 5 Puntos: Calidad expresiva formal académica en alemán.",
+                "de": "• 15 Punkte: Analyse des Jahrmarktsmilieus und der Rede des Ausrufers.\n• 15 Punkte: Erarbeitung der Tiermotivik und der Polarität Natur/Kultur.\n• 15 Punkte: Erläuterung der Vorausdeutung auf das Beziehungsdrama.\n• 5 Punkte: Fachsprachliche Angemessenheit."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el examen de alemán escrito (Deutsch Abitur), destaca que Büchner utiliza la feria para criticar de forma satírica la filosofía idealista de su época. Los animales que 'razonan' en la feria ridiculizan el orgullo racional burgués.",
+                "de": "Tipp: Betone Büchners satirische Kritik am Idealismus der Klassik. Die 'Vernunft' der Tiere entlarvt den Hochmut der menschlichen Zivilisation."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil C: Erörterung pragmatischer Texte (Disertación argumentativa basada en un artículo)",
+          "tasks": [
+            {
+              "title": "Aufgabe 3: Analyse und Erörterung eines Sachtextes über die Zukunft des Schreibens im Zeitalter der Künstlichen Inteligencia",
               "question": {
                 "es": "Analiza la argumentación de la autora en el texto de opinión sobre el impacto de ChatGPT en el aprendizaje de la escritura escolar. A continuación, debate si el uso de software de IA en las clases de alemán es beneficioso o perjudicial para el desarrollo cognitivo de los estudiantes.",
                 "de": "Analysiere die Argumentationsstruktur der Autorin im Sachtext zum Thema ChatGPT im Schreibunterricht. Erörtere anschließend, ob der Einsatz von KI-Schreibsoftware im Deutschunterricht für die kognitive Entwicklung der Schüler förderlich oder schädlich ist."
@@ -344,10 +369,35 @@
           ]
         },
         {
-          "name": "Teil B: Erörterung pragmatischer Texte (Disertación argumentativa basada en un artículo)",
+          "name": "Teil B: Drama — Szenenanalyse (Análisis literario de fragmento dramático de Woyzeck)",
           "tasks": [
             {
-              "title": "Aufgabe 2: Analyse und Erörterung eines Sachtextes über die Zukunft des Buches und die Lesekrise",
+              "title": "Aufgabe 2: Analyse der Szene 'Beim Hauptmann' aus Georg Büchners 'Woyzeck'",
+              "question": {
+                "es": "Analiza la escena 'Beim Hauptmann' (El Capitán afeita a Woyzeck). Caracteriza la relación de poder asimétrica entre ambos personajes, analiza cómo el Capitán instrumentaliza su supuesta superioridad moral y analiza el lenguaje fragmentado de Woyzeck frente a la verborrea del militar.",
+                "de": "Analysiere die Szene 'Beim Hauptmann' aus Georg Büchners 'Woyzeck'. Charakterisiere die asymmetrische Beziehung zwischen Woyzeck und dem Hauptmann, untersuche die moralisierende Haltung des Hauptmanns und analysiere Woyzecks sprachliches Verhalten (Ellipse, Gehorsamsfloskeln)."
+              },
+              "solution": {
+                "es": "1) Einleitung: Presentación de la escena (Woyzeck afeita al Capitán para ganar dinero extra). Tesis: La escena establece la asimetría social y de clase de la obra; el Capitán representa el dogmatismo moral y existencial burgués vacío, mientras que Woyzeck encarna al proletario oprimido físicamente que apenas puede verbalizar su trágica realidad.\n2) Relación de personajes y poder: El Capitán domina físicamente (Woyzeck lo sirve) y discursivamente. Utiliza conceptos abstractos de tiempo y moral para humillar a Woyzeck. Este último responde de forma sumisa con frases repetitivas ('Jawohl, Herr Hauptmann').\n3) Discusión sobre la moral: Cuando el Capitán lo acusa de inmoralidad por tener un hijo sin bendición eclesiástica, Woyzeck rompe su sumisión y expone su famosa respuesta sobre la pobreza y la naturaleza humana ('Wir gemeine Leut... Geld, Geld! Wer kein Geld hat... Da setze einmal einer seinesgleichen in die Welt auf moralische Art!'). La moral es un lujo inaccesible para los desposeídos.\n4) Schluss: Relevancia de la escena para anticipar la degradación mental y la tragedia final de Woyzeck.",
+                "de": "1) Einleitung: Einordnung der Szene (Woyzeck rasiert den Hauptmann). These: Etablierung des sozialen Machtgefälles und der unüberbrückbaren Klassengegensätze.\n2) Figurenanalyse: Der Hauptmann verkörpert die selbstgefällige, melancholische Bourgeoisie. Er leidet an existenziellem Ennui ('Langeweile') und instrumentalisiert Religion/Moral zur Disziplinierung.\n3) Woyzecks Gegenrede: Ausbruch aus der sprachlichen Ohnmacht ('Wir gemeine Leut'). Er entlarvt Moral als Luxusgut der Reichen ('Wer kein Geld hat, da setze einmal einer seinesgleichen auf moralische Art in die Welt!').\n4) Schluss: Die Szene antizipiert Woyzecks spätere soziale Ausweglosigkeit und Entfremdung."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto del diálogo y acotaciones, definiendo el conflicto de clase.\n• 15 Puntos: Análisis del estilo del Capitán (repeticiones, superioridad vacía) y Woyzeck (lenguaje subordinado, irrupción del discurso de pobreza).\n• 15 Puntos: Contextualizar en el drama social de Büchner (Vormärz, determinismo social).\n• 5 Puntos: Sintaxis formal académica, ortografía y corrección léxica.",
+                "de": "• 15 Punkte: Textanalyse des Dialogs und der Machtstrukturen.\n• 15 Punkte: Analyse der Sprachformen (Woyzecks Ellipsen vs. Hauptmanns Phrasen).\n• 15 Punkte: Historisch-gesellschaftliche Einordnung des Werkes (Vormärz, Determinismus).\n• 5 Punkte: Ausdrucksvermögen und sprachliche Korrektheit."
+              },
+              "recommendation": {
+                "es": "Recomendación: Enfoca tu análisis en cómo Büchner deconstruye el lenguaje tradicional. Woyzeck no habla mal por ignorancia, sino porque sufre una opresión material que le arrebata la capacidad de estructurar el discurso oficial. Cita siempre en alemán las oraciones clave de Woyzeck.",
+                "de": "Tipp: Achte auf die Sprachlosigkeit Woyzecks als Ausdruck seiner gesellschaftlichen Unterdrückung und zitiere die Schlüsselstellen ('Jawohl, Herr Hauptmann', 'Wir gemeine Leut')."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil C: Erörterung pragmatischer Texte (Disertación argumentativa basada en un artículo)",
+          "tasks": [
+            {
+              "title": "Aufgabe 3: Analyse und Erörterung eines Sachtextes über die Zukunft des Buches und die Lesekrise",
               "question": {
                 "es": "Analiza la argumentación de la autora en el artículo de opinión sobre la pérdida de capacidad de concentración lectora en jóvenes debido a la lectura fragmentada en pantallas. A continuación, debate si la digitalización de las bibliotecas escolares y la sustitución de libros de texto por soportes digitales es conveniente.",
                 "de": "Analysiere die Argumentationsstruktur der Autorin im Sachtext zur Veränderung des Leseverhaltens im digitalen Zeitalter. Erörtere anschließend, ob die Digitalisierung von Schulbibliotheken und der Ersatz gedruckter Schulbücher durch Tablets förderlich für den Lernprozess ist."
@@ -406,10 +456,35 @@
           ]
         },
         {
-          "name": "Teil B: Erörterung pragmatischer Texte (Disertación argumentativa)",
+          "name": "Teil B: Drama — Szenenanalyse (Análisis literario de fragmento dramático de Woyzeck)",
           "tasks": [
             {
-              "title": "Aufgabe 2: Erörterung eines Sachtextes zum Sprachwandel durch Kurznachrichten-Medien",
+              "title": "Aufgabe 2: Analyse de la escena 'Beim Doktor' de Georg Büchners 'Woyzeck'",
+              "question": {
+                "es": "Analiza la escena 'Beim Doktor' (El Doctor examina a Woyzeck). Explica la cosificación de Woyzeck como cobaya de laboratorio y el fanatismo científico-positivista del Doctor, relacionándolo con el determinismo y la pérdida de la dignidad humana.",
+                "de": "Analysiere die Szene 'Beim Doktor' aus Georg Büchners 'Woyzeck'. Untersuche die Verdinglichung Woyzecks als medizinisches Versuchs- und Anschauungsobjekt sowie das szientistische Weltbild des Doktors vor dem Hintergrund der Menschenwürde."
+              },
+              "solution": {
+                "es": "1) Einleitung: Introducción de la escena (Woyzeck es examinado por el Doctor tras realizar una dieta estricta de guisantes por dinero). Tesis: La escena ilustra la deshumanización del proletariado mediante la ciencia positivista del siglo XIX; el Doctor no ve a Woyzeck como un ser sintiente sino como un espécimen fisiológico.\n2) Caracterización del Doctor: Representa el cientificismo radical y la alienación ética. Se alegra de la sintomatología neurótica de Woyzeck ('Oh, meine Erbsen! ... Woyzeck, Er kriegt die schönste Aberratio mentalis partialis!'). Valora más su hipótesis que la salud del paciente.\n3) Cosificación de Woyzeck: El Doctor lo expone públicamente y le prohíbe miccionar de forma natural ('Er hat auf die Straße gepinkelt, wie ein Hund!'). Woyzeck intenta justificar sus actos apelando a la naturaleza ('la llamada de la naturaleza' / die Natur), pero el Doctor rechaza la libertad física e impone el control de la voluntad.\n4) Conclusión: El determinismo biológico y científico somete a Woyzeck a una opresión total de la que es imposible escapar.",
+                "de": "1) Einleitung: Einordnung der Szene (Woyzeck beim Doktor wegen der Erbsendiät). These: Darstellung der pseudowissenschaftlichen Entmenschlichung und sozialen Instrumentalisierung Woyzecks.\n2) Der Doktor: Karikatur des verblendeten Wissenschaftlers. Empathielos, egozentrisch, besessen von Ruhm und seiner Fallstudie. Er diagnostiziert Woyzeck freudig eine 'Aberratio mentalis'.\n3) Woyzecks Erniedrigung: Degradierung zum Tier ('wie ein Hund gepinkelt'). Woyzecks Argumentation mit der 'Natur' wird vom Doktor dogmatisch abgewiesen.\n4) Schluss: Kritik an der Allmacht der Wissenschaft und Kälte der Moderne."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto del diálogo y las dinámicas humillantes del Doctor.\n• 15 Puntos: Análisis formal de los tecnicismos latinos del Doctor frente al balbuceo científico de Woyzeck.\n• 15 Puntos: Relación teórica de la escena con el Materialismo científico y el determinismo literario del Vormärz.\n• 5 Puntos: Sintaxis académica en alemán formal.",
+                "de": "• 15 Punkte: Textanalyse der Szene und Machtkonstellation.\n• 15 Punkte: Sprachanalyse (pseudowissenschaftliches Latein des Doktors vs. Woyzecks stammelnde Sprache).\n• 15 Punkte: Einordnung in das geistesgeschichtliche Epochenbild (Positivismus-Kritik).\n• 5 Punkte: Ausdrucksqualität und Form."
+              },
+              "recommendation": {
+                "es": "Recomendación: En esta escena se ve de forma patente el concepto de 'subjetividad oprimida'. Compara la visión abstracta del Doctor sobre el 'libre albedrío' con la realidad orgánica incontrolable que expone Woyzeck.",
+                "de": "Tipp: Nutze Konzepte wie 'Instrumentalisierung des Menschen' oder 'Szientismus', um das unethische Verhalten des Doktors philosophisch zu untermauern."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil C: Erörterung pragmatischer Texte (Disertación argumentativa)",
+          "tasks": [
+            {
+              "title": "Aufgabe 3: Erörterung eines Sachtextes zum Sprachwandel durch Kurznachrichten-Medien",
               "question": {
                 "es": "Analiza la argumentación del autor en el texto pragmático sobre el declive de las reglas gramaticales y la ortografía tradicional en chats digitales de mensajería (WhatsApp, Telegram). Erórter a continuación si este cambio representa un empobrecimiento cultural irreversible o si es una evolución lingüística funcional legítima.",
                 "de": "Analysiere den Sachtext zum Wandel der deutschen Orthografie in Messengerdiensten. Erörtere kritisch, ob dieser Sprachwandel einen Kulturverlust darstellt oder eine funktionale Weiterentwicklung der Sprache ist."
