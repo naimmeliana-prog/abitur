@@ -394,168 +394,564 @@
       <!-- Container for Operators Tab -->
       <div id="operatorsTabContent" style="display:none;">
         <div class="card mb-xl">
-          <h2 style="margin-bottom:var(--space-md);color:var(--color-gold);">📋 Guía de Operadores del Abitur DIA (DSV)</h2>
+          <h2 style="margin-bottom:var(--space-md);color:var(--color-gold);">📋 Guía Completa de Operadores del Abitur (DSV)</h2>
           <p style="color:var(--text-secondary);font-size:14px;line-height:1.6;margin-bottom:var(--space-lg);">
-            El 30-40% de los puntos se pierden en el Abitur por no respetar la semántica precisa del operador. 
-            Cada verbo director tiene una estructura de respuesta específica que el tribunal corrector espera encontrar.
+            El 70% de los errores en el Abitur no vienen de no saber la materia, sino de no identificar correctamente el operador y responder con el formato equivocado. Domina esta guía para tener una ventaja enorme en tus exámenes.
           </p>
 
-          <div class="flex-col gap-lg">
-            <!-- 1. Analysieren -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-deutsch);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">1. Analysieren (Analizar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Descomponer un texto, problema o fenómeno en sus partes constitutivas y explicar objetivamente cómo funciona su estructura.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;margin-bottom:6px;">
-                <strong style="color:var(--color-success);">✅ Estructura recomendada:</strong><br>
-                Hipótesis de interpretación (tesis de lo que transmite el autor) &rarr; Análisis formal (recursos estilísticos, estructura, lenguaje con citas directas) &rarr; Explicación del efecto de dichos recursos &rarr; Relación con el contexto (época, autor).
-              </div>
-              <div style="padding:var(--space-md);background:rgba(239,68,68,0.03);border-left:3px solid var(--color-error);border-radius:var(--radius-sm);font-size:13px;">
-                <strong style="color:var(--color-error);">❌ Errores comunes:</strong><br>
-                Resumir el contenido de forma pasiva (eso es <em>Zusammenfassen</em>), dar opiniones personales o no citar líneas exactas del texto.
-              </div>
+          <!-- Sub-tabs for Operators -->
+          <div class="flex gap-sm mb-lg" style="flex-wrap:wrap;border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-sm);">
+            <button id="subTabBtnClave" class="difficulty-btn selected easy" onclick="switchSubOperators('clave')" style="padding:6px 12px;font-size:13px;">⭐️ Los 7 Clave (Imprescindibles)</button>
+            <button id="subTabBtnTodos" class="difficulty-btn" onclick="switchSubOperators('todos')" style="padding:6px 12px;font-size:13px;">📚 Todos los Operadores (41)</button>
+          </div>
+
+          <!-- SUB-TAB 1: LOS 7 CLAVE -->
+          <div id="subTabClaveContent">
+            <div style="background:rgba(245,200,66,0.03);border:1px solid rgba(245,200,66,0.2);padding:14px;border-radius:var(--radius-md);margin-bottom:var(--space-lg);font-size:13px;">
+              <strong>💡 Recomendación práctica para el alumno:</strong><br>
+              Dominar primero los 4 grandes: <em>Analysieren</em>, <em>Erörtern</em>, <em>Erläutern</em> y <em>Bewerten</em>. Estos cuatro cubren la gran mayoría de los exámenes. Asegúrate de justificar todo usando <em>Belegen</em> (citas o ejemplos del texto).
             </div>
 
-            <!-- 2. Erörtern -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-philosophie);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">2. Erörtern (Discutir / Argumentar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Presentar, sopesar y confrontar metódicamente diferentes posiciones sobre una tesis o tema controvertido.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;margin-bottom:6px;">
-                <strong style="color:var(--color-success);">✅ Estructura recomendada:</strong><br>
-                Introducción planteando la cuestión polémica &rarr; Tesis (argumentos a favor y ejemplos) &rarr; Antítesis (argumentos en contra y refutaciones) &rarr; Síntesis integradora con balance personal fundamentado.
+            <div class="flex-col gap-lg">
+              <!-- 1. Analysieren -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-deutsch);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">1. Analysieren (Analizar)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> Muy frecuentemente en <em>Deutsch</em>, <em>English</em> y <em>Philosophie</em>.</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Hipótesis / Tesis inicial (qué crees que quiere transmitir el texto) &rarr; Desglose del texto o del problema (partes, recursos, elementos) &rarr; Explicación del efecto de esos recursos &rarr; Relación con el contexto (época, autor, corriente).
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong> <em>"El autor utiliza la metáfora del “viaje sin retorno” para transmitir la irreversibilidad del paso del tiempo. Esta metáfora aparece en el verso 7 (“kein Weg zurück”) y se refuerza mediante el uso de un tono melancólico. De esta forma, el poema refleja la visión pesimista típica del Romanticismo tardío."</em>
+                </div>
               </div>
-              <div style="padding:var(--space-md);background:rgba(239,68,68,0.03);border-left:3px solid var(--color-error);border-radius:var(--radius-sm);font-size:13px;">
-                <strong style="color:var(--color-error);">❌ Errores comunes:</strong><br>
-                Ser unilateral (dar solo argumentos de un lado), redactar de forma puramente emocional o no emplear conectores de contraste (<em>jedoch, dennoch, andererseits</em>).
-              </div>
-            </div>
 
-            <!-- 3. Erläutern -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">3. Erläutern (Explicar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Desarrollar y esclarecer la lógica de un concepto, cita o hecho con palabras propias, aplicando rigor técnico.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;margin-bottom:6px;">
-                <strong style="color:var(--color-success);">✅ Estructura recomendada:</strong><br>
-                Afirmación o tesis principal &rarr; Explicación teórica profunda utilizando vocabulario formal del autor &rarr; Ilustración con un ejemplo práctico o de contexto.
+              <!-- 2. Erörtern -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-philosophie);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">2. Erörtern (Discutir / Argumentar)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> Muy frecuentemente en todas las asignaturas.</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Introducción (presentar el tema) &rarr; Tesis (argumentos a favor) &rarr; Antítesis (argumentos en contra) &rarr; Síntesis / Conclusión (tu posición final, justificada).
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong><br>
+                  • <em>Tesis:</em> La inteligencia artificial puede mejorar la calidad de vida al automatizar tareas repetitivas y peligrosas.<br>
+                  • <em>Antítesis:</em> Sin embargo, también puede generar desempleo masivo y aumentar la desigualdad social.<br>
+                  • <em>Síntesis:</em> Aunque ambos argumentos son válidos, considero que los beneficios superan los riesgos siempre que se establezcan regulaciones éticas claras.
+                </div>
               </div>
-              <div style="padding:var(--space-md);background:rgba(239,68,68,0.03);border-left:3px solid var(--color-error);border-radius:var(--radius-sm);font-size:13px;">
-                <strong style="color:var(--color-error);">❌ Errores comunes:</strong><br>
-                Confundir con describir (<em>Beschreiben</em>), quedándose en la superficie del texto sin analizar las causas o consecuencias profundas.
-              </div>
-            </div>
 
-            <!-- 4. Bewerten -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-espanol);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">4. Bewerten (Valorar / Evaluar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Emitir un juicio de valor fundamentado sobre la validez, moralidad o coherencia de una postura, teoría o decisión.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;margin-bottom:6px;">
-                <strong style="color:var(--color-success);">✅ Estructura recomendada:</strong><br>
-                Resumen sucinto del elemento a valorar &rarr; Formulación de tu postura/juicio (con matices) &rarr; Justificación objetiva contrastándolo con teorías estudiadas o el texto.
+              <!-- 3. Erläutern -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">3. Erläutern (Explicar)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> Con mucha frecuencia en <em>Philosophie</em> y <em>Deutsch</em>.</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Concepto o idea principal &rarr; Explicación usando terminología del autor &rarr; Ejemplo concreto del texto o de la teoría.
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong> <em>"Kant entiende por “imperativo categórico” una norma moral que debe cumplirse independientemente de las consecuencias. Esto significa que una acción es moralmente correcta si su máxima puede convertirse en ley universal. Por ejemplo, mentir no puede ser moral porque si todos mintieran, la confianza en la comunicación desaparecería."</em>
+                </div>
               </div>
-              <div style="padding:var(--space-md);background:rgba(239,68,68,0.03);border-left:3px solid var(--color-error);border-radius:var(--radius-sm);font-size:13px;">
-                <strong style="color:var(--color-error);">❌ Errores comunes:</strong><br>
-                Decir únicamente 'estoy de acuerdo' o 'me parece mal' de manera informal y subjetiva sin acompañarlo de criterios lógicos o teóricos.
-              </div>
-            </div>
 
-            <!-- 5. Vergleichen -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-englisch);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">5. Vergleichen (Comparar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Confrontar de forma kiterios-orientada dos o más elementos (textos, autores, épocas, teorías), hallando similitudes y diferencias.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;margin-bottom:6px;">
-                <strong style="color:var(--color-success);">✅ Estructura recomendada:</strong><br>
-                Similitudes (Gemeinsamkeiten) contrastadas punto por punto &rarr; Diferencias (Unterschiede) estructuradas &rarr; Conclusión analítica del contraste.
+              <!-- 4. Bewerten -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-espanol);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">4. Bewerten (Valorar / Evaluar)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> En <em>Deutsch</em>, <em>Philosophie</em> e <em>English</em>.</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Resumen breve de lo que se va a valorar &rarr; Valoración (positiva, negativa o matizada) &rarr; Justificación con argumentos del texto &rarr; Conclusión.
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong> <em>"La postura del autor resulta coherente en cuanto defiende la libertad individual, pero resulta problemática al no tener en cuenta las limitaciones económicas de muchas personas. Esta omisión debilita su argumento, ya que presenta la libertad como algo accesible para todos sin considerar las desigualdades estructurales."</em>
+                </div>
               </div>
-              <div style="padding:var(--space-md);background:rgba(239,68,68,0.03);border-left:3px solid var(--color-error);border-radius:var(--radius-sm);font-size:13px;">
-                <strong style="color:var(--color-error);">❌ Errores comunes:</strong><br>
-                Escribir dos resúmenes independientes uno detrás de otro sin enlazarlos dinámicamente mediante puntos de comparación.
-              </div>
-            </div>
 
-            <!-- 6. Skizzieren -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-gold);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">6. Skizzieren (Esbozar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Ofrecer una visión general, esquemática y estructurada sobre un tema sin profundizar en detalles ni causas.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;">
-                <strong style="color:var(--color-success);">💡 Aspecto clave:</strong><br>
-                Es un operador de baja complejidad. Sé conciso y directo, no pierdas tiempo profundizando como harías en un <em>Erläutern</em>.
+              <!-- 5. Charakterisieren -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-deutsch);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">5. Charakterisieren (Caracterizar)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> Principalmente en <em>Deutsch</em> (análisis de personajes).</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Caracterización directa (lo que el narrador o el propio personaje dice de sí mismo) &rarr; Caracterización indirecta (acciones, pensamientos, relaciones con otros) &rarr; Evolución del personaje (si la hay) &rarr; Función dentro de la obra.
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong> <em>"Heinrich Faust se caracteriza como un hombre insatisfecho con el conocimiento racional. Esta insatisfacción se manifiesta indirectamente a través de su deseo de experimentar lo absoluto. A lo largo de la obra, pasa de ser un erudito aislado a alguien dispuesto a vender su alma, lo que refleja el conflicto central entre razón y deseo."</em>
+                </div>
               </div>
-            </div>
 
-            <!-- 7. Charakterisieren -->
-            <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-deutsch);">
-              <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:var(--space-sm);">7. Charakterisieren (Caracterizar)</h3>
-              <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);">
-                <strong>Qué significa:</strong> Describir y analizar las cualidades psicológicas, físicas, sociales y morales de un personaje literario.
-              </p>
-              <div style="padding:var(--space-md);background:rgba(34,197,94,0.03);border-left:3px solid var(--color-success);border-radius:var(--radius-sm);font-size:13px;margin-bottom:6px;">
-                <strong style="color:var(--color-success);">✅ Estructura recomendada:</strong><br>
-                Caracterización directa (lo que dice explícitamente el texto/narrador) &rarr; Caracterización indirecta (lo deducido por sus acciones, gestos y diálogos) &rarr; Evolución dramática &rarr; Función del personaje en el conflicto de la obra.
+              <!-- 6. Vergleichen -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-englisch);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">6. Vergleichen (Comparar)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> Muy frecuentemente en <em>Philosophie</em> y <em>Deutsch</em>.</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Similitudes (qué tienen en común) &rarr; Diferencias (en qué se oponen) &rarr; Conclusión (qué aporta la comparación).
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong> <em>"Tanto Kant como el utilitarismo buscan establecer una base racional para la moral. Sin embargo, mientras Kant defiende que la moralidad reside en la intención y en el deber, el utilitarismo la mide por las consecuencias de las acciones. Esta diferencia fundamental hace que ambas teorías lleguen a conclusiones opuestas en dilemas éticos como el de la mentira."</em>
+                </div>
+              </div>
+
+              <!-- 7. Belegen -->
+              <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-gold);">
+                <h3 style="font-size:15px;font-weight:800;margin-bottom:6px;">7. Belegen (Probar con ejemplos o citas)</h3>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;"><strong>Cuándo aparece:</strong> Se usa dentro de casi todos los demás operadores.</p>
+                <div style="font-size:12px;background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);padding:8px 12px;border-radius:4px;margin-bottom:6px;">
+                  <strong>✅ Estructura recomendada:</strong> Siempre que hagas una afirmación importante, debes justificarla con una cita o ejemplo concreto.
+                </div>
+                <div style="font-size:12px;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:4px;">
+                  <strong>💬 Ejemplo de respuesta:</strong> <em>"El autor critica la sociedad moderna al afirmar que “el individuo ha perdido su capacidad de decisión” (línea 23). Esta idea se refuerza más adelante cuando describe cómo las redes sociales “dirigen nuestros pensamientos sin que seamos conscientes” (línea 31)."</em>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Summary Table -->
-          <div class="card mt-xl">
-            <h3 style="margin-bottom:var(--space-md);">📊 Tabla Resumen de Operadores</h3>
-            <table class="grid-table">
-              <thead>
-                <tr>
-                   <th>Operador</th>
-                   <th>Qué debes hacer</th>
-                   <th>Estructura clave</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Analysieren</strong></td>
-                  <td>Descomponer + explicar efecto</td>
-                  <td><span class="badge badge-blue">Hipótesis → Análisis → Efecto</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Erörtern</strong></td>
-                  <td>Argumentar a favor y en contra</td>
-                  <td><span class="badge badge-blue">Tesis → Antítesis → Síntesis</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Erläutern</strong></td>
-                  <td>Explicar un concepto con profundidad</td>
-                  <td><span class="badge badge-blue">Afirmación → Explicación → Ejemplo</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Bewerten</strong></td>
-                  <td>Dar un juicio fundamentado</td>
-                  <td><span class="badge badge-blue">Valoración + Justificación</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Vergleichen</strong></td>
-                  <td>Comparar dos elementos</td>
-                  <td><span class="badge badge-blue">Similitudes → Diferencias → Conclusión</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Skizzieren</strong></td>
-                  <td>Esbozar de forma concisa y directa</td>
-                  <td><span class="badge" style="background:rgba(255,255,255,0.1);">Vista General Rápida</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Charakterisieren</strong></td>
-                  <td>Analizar la psicología de un personaje</td>
-                  <td><span class="badge badge-blue">Directa + Indirecta + Función</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- SUB-TAB 2: TODOS LOS OPERADORES (41) -->
+          <div id="subTabTodosContent" style="display:none;">
+            <!-- 🟢 NIVEL BÁSICO -->
+            <h3 style="color:var(--color-success);border-bottom:1px solid rgba(34,197,94,0.2);padding-bottom:4px;margin-bottom:var(--space-md);margin-top:var(--space-lg);">🟢 Nivel Básico</h3>
+            <div class="flex-col gap-md">
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Angeben / Indicar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Solo el dato. Ni más ni menos. Es el operador más corto de todos.<br>
+                  <strong>¿Cómo responder?</strong> Una palabra, un número o una frase muy breve. No expliques nada.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Gib den Definitionsbereich von f(x) = ln(x) an" &rarr; <strong>D = x > 0</strong>.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Muchos alumnos se ponen a explicar cuando solo piden el dato. No ganas puntos extra y pierdes minutos valiosos.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Aufzählen / Enumerar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Una lista ordenada y completa de elementos.<br>
+                  <strong>¿Cómo responder?</strong> Usa números o guiones. Sin conectores. Sin explicaciones. Es más exhaustivo que <em>Nennen</em>: se espera que no te dejes ningún elemento.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Zähle die Merkmale des Expressionismus auf" &rarr; Großstadtthematik, Ich-Zerfall, Sprachexperiment, Kritik an Industrialisierung.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Confundirlo con Nennen. La diferencia es que Aufzählen exige una lista completa y ordenada. Si te dejas algún elemento importante, pierdes puntos.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Darstellen / Exponer</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Presentar un tema de forma estructurada y completa. Es más desarrollado que <em>Beschreiben</em> pero sigue siendo objetivo, sin valorar ni opinar.<br>
+                  <strong>¿Cómo responder?</strong> Introducción breve &rarr; desarrollo ordenado &rarr; conclusión. Neutral en todo momento.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Stellen Sie den Aufbau der Sonate dar" &rarr; Presentar las tres partes (exposición, desarrollo, recapitulación) con sus características, en orden, sin valorar.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Empezar a opinar o valorar. Darstellen es completamente objetivo. En cuanto escribes "creo que" o "me parece", ya no estás cumpliendo el operador.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Formulieren / Formular</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Expresar algo de forma precisa y clara. Normalmente una tesis, una regla o una conclusión.<br>
+                  <strong>¿Cómo responder?</strong> Una o dos frases muy bien construidas. La clave es la precisión, no la cantidad.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Formuliere eine Hypothese über das Verhalten der Funktion" &rarr; <em>"Die Funktion f hat bei x=2 ein lokales Maximum, da f'(2)=0 und f''(2)<0"</em>.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Escribir demasiado. Formulieren pide precisión quirúrgica, no un desarrollo extenso. Dos frases bien construidas valen más que un párrafo vago.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Wiedergeben / Reproducir</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Reproducir el contenido de un texto o argumento con tus propias palabras. Es parecido a <em>Zusammenfassen</em> pero más fiel al original y más detallado.<br>
+                  <strong>¿Cómo responder?</strong> Sigue el orden del texto. Usa tus palabras. Siempre en tercera persona. Sin ninguna opinión personal.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Gib den Inhalt des Textes wieder" &rarr; Parafrasear el texto en tercera persona: <em>"Der Autor beschreibt zunächst... Anschließend argumentiert er, dass..."</em>.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa clásica:</span> Copiar frases enteras del texto. Eso no es wiedergeben, es citar. También es un error muy frecuente usar la primera persona (<em>"Yo creo..."</em>).
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Zeichnen / Dibujar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Una representación gráfica precisa. Es más exacto que <em>Skizzieren</em>.<br>
+                  <strong>¿Cómo responder?</strong> Usa regla. Marca todos los puntos importantes con sus coordenadas exactas. Pon escala en los ejes.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Zeichne den Graphen von f im Intervall [-2, 4]" &rarr; Dibujo a escala con ejes etiquetados, ceros y extremos marcados.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Hacer un bosquejo rápido cuando el operador dice Zeichnen. La diferencia con Skizzieren es que aquí la precisión sí cuenta y se puntúa.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Berechnen / Calcular</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Obtener un resultado numérico mostrando todos los pasos del cálculo.<br>
+                  <strong>¿Cómo responder?</strong> Escribe cada paso intermedio aunque te parezca obvio. El resultado sin desarrollo no vale puntos.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Berechne die Nullstellen von f(x) = x² - 4" &rarr; Mostrar <em>f(x)=0 &rarr; x²-4=0 &rarr; x²=4 &rarr; x=±2</em>.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa crítica:</span> Escribir solo el resultado final. En el Abitur de Matemáticas, una respuesta sin desarrollo vale 0 puntos aunque el resultado sea correcto.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Bestimmen / Determinar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Hallar algo de forma exacta. Muy frecuente en Matemáticas. Similar a <em>Berechnen</em> pero puede ser más conceptual.<br>
+                  <strong>¿Cómo responder?</strong> Muestra siempre el proceso. Después de hallar el valor, interpreta qué significa en el contexto del problema.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Bestimme die Extrempunkte von f" &rarr; Calcular f'(x)=0, hallar las coordenadas, clasificar con f''(x) y concluir: <em>"Bei x=3 liegt ein lokales Maximum vor, da f''(3) < 0"</em>.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Hallar los puntos sin clasificarlos. Decir "x=3 es un extremo" sin especificar si es máximo o mínimo es una respuesta incompleta que pierde puntos.
+                </div>
+              </div>
+            </div>
+
+            <!-- 🟡 NIVEL MEDIO -->
+            <h3 style="color:var(--color-gold);border-bottom:1px solid rgba(245,200,66,0.2);padding-bottom:4px;margin-bottom:var(--space-md);margin-top:var(--space-lg);">🟡 Nivel Medio</h3>
+            <div class="flex-col gap-md">
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Untersuchen / Examinar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Estudiar algo detalladamente desde diferentes ángulos para llegar a una conclusión fundamentada.<br>
+                  <strong>¿Cómo responder?</strong> Define qué vas a examinar &rarr; analiza sus componentes uno por uno &rarr; saca una conclusión clara.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Untersuche die Funktion auf Monotonie und Krümmungsverhalten" &rarr; Calcular f', estudiar signos &rarr; f'', estudiar signos &rarr; concluir con texto.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Hacer el análisis sin escribir la conclusión. El examinador espera siempre un <em>Schluss</em> claro que resuma lo encontrado.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Herleiten / Deducir</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Llegar a un resultado o conclusión mediante un razonamiento lógico paso a paso. Es una demostración.<br>
+                  <strong>¿Cómo responder?</strong> Cada paso debe justificarse. No puedes saltarte ninguno. El camino es tan importante como el resultado.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Leite die Formel für den Flächeninhalt des Dreiecks her" &rarr; Deducción geométrica desde el rectángulo dividiendo por 2.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Escribir la fórmula directamente sin el proceso. Herleiten es el camino hacia el resultado, no el resultado en sí.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Nachweisen / Demostrar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Probar que algo es verdad mediante evidencias concretas o cálculos. En literatura: cita del texto más análisis. En matemáticas: demostración algebraica.<br>
+                  <strong>¿Cómo responder?</strong> En matemáticas: cálculo que confirma la afirmación. En letras: cita literal + análisis de por qué prueba lo afirmado.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Weise nach, dass f bei x=2 ein lokales Maximum besitzt" &rarr; Probar f'(2)=0 y f''(2)<0.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Afirmar sin demostrar. Decir "es un máximo porque la gráfica lo muestra" vale 0 puntos. La demostración algebraica es obligatoria.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Überprüfen / Verificar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Comprobar si algo es correcto o si un elemento cumple con una condición dada. No es calcular desde cero, es confirmar un resultado.<br>
+                  <strong>¿Cómo responder?</strong> Sustituye el valor en la ecuación o aplica el criterio teórico y escribe la respuesta final afirmativa o negativa.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Überprüfe, ob der Punkt P(2|3) auf dem Graphen von f liegt" &rarr; Calcular f(2) y confirmar si da 3.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> No mostrar el proceso de verificación. Aunque el resultado sea evidente, hay que escribir cada paso.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Charakterisieren / Caracterizar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Describir los rasgos característicos de un personaje, época o fenómeno de forma detallada y conectada.<br>
+                  <strong>¿Cómo responder?</strong> Sigue el orden: aspecto exterior &rarr; personalidad &rarr; motivaciones &rarr; evolución dramática &rarr; función en la trama.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Charakterisiere Mephisto in Goethes Faust I" &rarr; Analizar la personalidad de Mefistófeles y su papel como la fuerza del mal que mueve a Fausto.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa muy frecuente:</span> Hacer una lista de adjetivos sin conectarlos con la función del personaje en la obra (<em>"Mephisto es inteligente y cínico"</em> sin explicar qué simboliza).
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Einordnen / Contextualizar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Situar algo en su contexto histórico, literario o filosófico. No es solo decir la época, es explicar por qué pertenece a ella.<br>
+                  <strong>¿Cómo responder?</strong> Responde: ¿En qué época se sitúa? ¿Por qué es representativo de ella? ¿Qué lo diferencia de lo anterior o posterior?
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Ordne Kafkas 'Die Verwandlung' in die Literaturgeschichte ein" &rarr; Situar en el Expresionismo, conectando sus temas con la alienación del movimiento.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Decir la época sin conectarla con la obra concreta. La contextualización debe siempre volver al texto.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Gegenüberstellen / Confrontar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Poner dos elementos frente a frente para resaltar sus diferencias. Es más específico que <em>Vergleichen</em> porque el foco está en las diferencias.<br>
+                  <strong>¿Cómo responder?</strong> Estructura en paralelo, punto por punto. Para cada aspecto, explica cómo lo entiende A y cómo lo entiende B.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Stellen Sie Kants deontologische Ethik dem Utilitarismus gegenüber" &rarr; Comparar fundamento (deber vs consecuencias) y aplicación práctica.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Explicar a Kant en un párrafo y al Utilitarismo en otro. Eso es describir por separado. Se espera contraste directo.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Zuordnen / Clasificar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Asignar elementos a categorías según criterios teóricos dados.<br>
+                  <strong>¿Cómo responder?</strong> Identifica el criterio &rarr; asigna cada elemento &rarr; justifica brevemente la asignación con el texto.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Ordne die folgenden Texte den Epochen zu" &rarr; Texto A es Romanticismo porque usa la <em>Sehnsucht</em>...
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Auseinandersetzen / Reflexionar críticamente</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Examinar un tema de forma crítica mostrando diferentes perspectivas y tomando postura después.<br>
+                  <strong>¿Cómo responder?</strong> Explica el concepto &rarr; presenta perspectivas diferentes &rarr; toma tu propia postura argumentada. Es más profundo que <em>Erklären</em>.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Setzen Sie sich mit Kants Begriff der Autonomie auseinander" &rarr; Explicación &rarr; Críticas al término &rarr; Tu opinión fundada.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Verfassen / Redactar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Escribir un texto completo de un tipo específico (carta, artículo, discurso, comentario).<br>
+                  <strong>¿Cómo responder?</strong> Respeta estrictamente la silueta del texto solicitado (ej: Leserbrief requiere encabezamiento y saludo formal; Rede requiere interpelación al público).
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <span style="color:var(--color-error);">⚠️ Trampa crítica:</span> Ignorar el formato. Un Leserbrief sin encabezamiento pierde puntos automáticamente aunque el contenido sea excelente.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Erschließen / Inferir</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Extraer información o significado implícito en el texto a través del razonamiento analítico.<br>
+                  <strong>¿Cómo responder?</strong> Deduce a partir de indicios textuales y justifica con citas. No debes inventar nada que no tenga base.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Erschließe die Haltung des Autors gegenüber der Industrialisierung" &rarr; Deducir postura crítica por la adjetivación deshumanizadora de la fábrica.
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔴 NIVEL DIFÍCIL -->
+            <h3 style="color:var(--color-error);border-bottom:1px solid rgba(239,68,68,0.2);padding-bottom:4px;margin-bottom:var(--space-md);margin-top:var(--space-lg);">🔴 Nivel Difícil</h3>
+            <div class="flex-col gap-md">
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Beurteilen / Juzgar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Emitir un juicio fundamentado usando criterios claros y objetivos externos.<br>
+                  <strong>¿Cómo responder?</strong> Enuncia el criterio objetivo que vas a usar (viabilidad, coherencia) &rarr; aplícalo &rarr; formula tu juicio.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Beurteile die Wirksamkeit von Kants Ethik in der modernen Gesellschaft" &rarr; Juzgar la aplicabilidad en base a criterios de consecuencias pragmáticas.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa:</span> Confundirlo con Bewerten. Beurteilen exige criterios objetivos externos explicitados; Bewerten admite opiniones subjetivas directas.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Diskutieren / Discutir</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Examinar un tema complejo desde múltiples perspectivas argumentando pros y contras. Es similar a <em>Erörtern</em> pero más abierto.<br>
+                  <strong>¿Cómo responder?</strong> Presenta argumentos a favor &rarr; argumentos en contra &rarr; síntesis equilibrada que recoja la tensión.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <span style="color:var(--color-error);">⚠️ Trampa crítica:</span> Tomar partido desde el inicio sin presentar el otro lado. Exige equilibrio y neutralidad en el desarrollo.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Reflektieren / Reflexionar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Pensar de forma profunda y crítica sobre un tema incluyendo explícitamente tu propia perspectiva en la discusión.<br>
+                  <strong>¿Cómo responder?</strong> Tu comprensión de la teoría &rarr; conexión con la realidad contemporánea &rarr; tu valoración personal desarrollada.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Reflektiere über die Bedeutung der Freiheit in Kants Philosophie für die heutige Zeit" &rarr; Conectar libertad moral con la autonomía frente a algoritmos de redes sociales.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Entwickeln / Desarrollar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Construir un argumento, teoría o solución de forma progresiva. Pide crear algo nuevo a partir de lo dado.<br>
+                  <strong>¿Cómo responder?</strong> Analiza premisas previas &rarr; infiere pasos algebraicos o lógicos progresivos &rarr; formula una tesis o solución original.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Entwickle eine eigene Position zur Frage der KI-Ethik" &rarr; Proponer un modelo regulatorio nuevo basándote en los textos de examen.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Stellungnehmen / Posicionarse</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Tomar una postura clara sobre un problema y defenderla a ultranza con argumentos y refutaciones.<br>
+                  <strong>¿Cómo responder?</strong> Enuncia tu tesis rotunda desde el inicio &rarr; argumentos de soporte &rarr; refutación de la postura contraria &rarr; conclusión final.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Nehmen Sie Stellung zur Aussage: Soziale Medien gefährden die Demokratie" &rarr; Declarar tu postura explícita y defenderla en todo el texto.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa crítica:</span> No comprometerte con ninguna postura. Si usas "por un lado... y por otro..." sin decidirte en la síntesis, perderás la nota de conclusión.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Übertragen / Transferir</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Aplicar un concepto, método o teoría a un nuevo contexto diferente al original.<br>
+                  <strong>¿Cómo responder?</strong> Explica el concepto base &rarr; identifica paralelismos con la situación nueva &rarr; opera y deduce consecuencias.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Übertragen Sie Kants kategorischen Imperativ auf das Problem autonomer Fahrzeuge" &rarr; Aplicar la fórmula del imperativo al dilema de colisión de vehículos con IA.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Prognostizieren / Pronosticar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Hacer una predicción fundamentada sobre un desarrollo futuro basándose en datos, tendencias o argumentos del texto.<br>
+                  <strong>¿Cómo responder?</strong> Analiza tendencias del texto &rarr; extrapola de forma lógica &rarr; formula la predicción argumentada.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Prognostiziere die gesellschaftlichen Auswirkungen der KI..." &rarr; Extrapolar tendencias de empleo e integración tecnológica.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Kritisieren / Criticar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Señalar puntos débiles o contradicciones de una teoría, texto o argumento de forma fundamentada y constructiva.<br>
+                  <strong>¿Cómo responder?</strong> Identifica la debilidad específica &rarr; explica por qué es problemática &rarr; apoya con argumentos o contraejemplos.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Kritisieren Sie Benthams Konzept des Hedonic Calculus" &rarr; Señalar que el placer es subjetivo y no puede ser medido cuantitativamente de forma uniforme.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Optimieren / Optimizar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Encontrar el valor máximo o mínimo de una función en un contexto de aplicación real.<br>
+                  <strong>¿Cómo responder?</strong> Definir función objetivo &rarr; plantear restricciones &rarr; derivar e igualar a 0 &rarr; verificar con f'' &rarr; interpretar en lenguaje natural.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Optimiere das Volumen einer offenen Schachtel aus einem 12x12 cm Karton" &rarr; Derivar f(x) e interpretar: <em>"El volumen máximo es X cm³ cuando la altura es Y cm"</em>.<br>
+                  <span style="color:var(--color-error);">⚠️ Trampa crítica:</span> Resolver el cálculo algebraico pero olvidar responder explícitamente a la pregunta planteada en palabras.
+                </div>
+              </div>
+
+              <div class="card" style="background:rgba(255,255,255,0.01);padding:12px 16px;">
+                <h4 style="margin-bottom:4px;font-size:14px;color:var(--text-primary);">Modellieren / Modelar</h4>
+                <p style="font-size:12px;color:var(--text-secondary);line-height:1.5;margin-bottom:6px;">
+                  <strong>¿Qué pide?</strong> Traducir un problema real a un modelo matemático, resolverlo y volver a interpretar el resultado en el contexto real.<br>
+                  <strong>¿Cómo responder?</strong> Definir variables &rarr; establecer ecuaciones/funciones &rarr; resolver matemáticamente &rarr; interpretar el resultado.
+                </p>
+                <div style="font-size:11px;color:var(--text-muted);">
+                  <em>Ejemplo real:</em> "Modelliere die Ausbreitung eines Virus mit einer Exponentialfunktion" &rarr; Construir f(t) = a · e^kt, hallar coeficientes e interpretar contagios.
+                </div>
+              </div>
+            </div>
+
+            <!-- 📊 TABLA DE TODOS LOS OPERADORES (41) -->
+            <div class="card mt-xl">
+              <h3 style="margin-bottom:var(--space-md);">📊 Glosario de los 41 Operadores Oficiales del DIA</h3>
+              <p style="font-size:12px;color:var(--text-muted);margin-bottom:var(--space-md);">
+                Lista completa de los 41 operadores oficiales del tribunal ordenados por nivel de dificultad.
+              </p>
+              <table class="grid-table" style="font-size:12px;">
+                <thead>
+                  <tr>
+                    <th>Operador</th>
+                    <th>Nivel</th>
+                    <th>¿Tiene trampa frecuente?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Angeben</td><td>🟢 Básico</td><td>—</td></tr>
+                  <tr><td>Aufzählen</td><td>🟢 Básico</td><td>—</td></tr>
+                  <tr><td>Berechnen</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí (pasos obligatorios)</span></td></tr>
+                  <tr><td>Beschreiben</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Bestimmen</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Darstellen</td><td>🟢 Básico</td><td>—</td></tr>
+                  <tr><td>Erklären</td><td>🟢 Básico</td><td>—</td></tr>
+                  <tr><td>Formulieren</td><td>🟢 Básico</td><td>—</td></tr>
+                  <tr><td>Nennen</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Skizzieren</td><td>🟢 Básico</td><td>—</td></tr>
+                  <tr><td>Wiedergeben</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí (no copiar citas)</span></td></tr>
+                  <tr><td>Zeichnen</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí (precisión de escala)</span></td></tr>
+                  <tr><td>Zusammenfassen</td><td>🟢 Básico</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Analysieren</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí (explicar efecto)</span></td></tr>
+                  <tr><td>Auseinandersetzen</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Begründen</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Charakterisieren</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí (papel del personaje)</span></td></tr>
+                  <tr><td>Einordnen</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Erschließen</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Gegenüberstellen</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí (contraste paralelo)</span></td></tr>
+                  <tr><td>Herleiten</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Interpretieren</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Nachweisen</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí (cómputo formal)</span></td></tr>
+                  <tr><td>Überprüfen</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Untersuchen</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Verfassen</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí (formato)</span></td></tr>
+                  <tr><td>Vergleichen</td><td>🟡 Medio</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Zuordnen</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Ableiten</td><td>🟡 Medio</td><td>—</td></tr>
+                  <tr><td>Beurteilen</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí (criterio externo)</span></td></tr>
+                  <tr><td>Bewerten</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Diskutieren</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Entwickeln</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Erörtern</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí (estructura rígida)</span></td></tr>
+                  <tr><td>Kritisieren</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Modellieren</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Optimieren</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                  <tr><td>Prognostizieren</td><td>🔴 Difícil</td><td>—</td></tr>
+                  <tr><td>Reflektieren</td><td>🔴 Difícil</td><td>—</td></tr>
+                  <tr><td>Stellungnehmen</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí (no ser tibio)</span></td></tr>
+                  <tr><td>Übertragen</td><td>🔴 Difícil</td><td><span class="badge badge-gold">⚠️ Sí</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- COMPARATIVAS IMPORTANTES -->
+            <div class="card mt-lg">
+              <h3 style="margin-bottom:var(--space-sm);">🔄 Diferencias críticas entre operadores</h3>
+              <p style="font-size:12px;color:var(--text-muted);margin-bottom:var(--space-md);">
+                Evita confundir estos pares de verbos para proteger tu calificación:
+              </p>
+              <table class="grid-table" style="font-size:12px;">
+                <thead>
+                  <tr>
+                    <th>Comparativa</th>
+                    <th>Diferencia principal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Analysieren vs Zusammenfassen</strong></td>
+                    <td><em>Analysieren</em> desglosa y detalla el efecto de los recursos formales. <em>Zusammenfassen</em> solo resume ideas principales de forma condensada sin análisis formal.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Erörtern vs Diskutieren</strong></td>
+                    <td><em>Erörtern</em> exige una estructura argumentativa rígida (tesis + antítesis + síntesis). <em>Diskutieren</em> es más abierto, dialógico y dinámico.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Erläutern vs Beschreiben</strong></td>
+                    <td><em>Erläutern</em> explica la lógica profunda de conceptos teóricos. <em>Beschreiben</em> se limita a describir de manera objetiva lo visible superficialmente.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bewerten vs Stellung nehmen</strong></td>
+                    <td><em>Bewerten</em> evalúa la validez, moralidad o peso de un postulado. <em>Stellung nehmen</em> es una opinión personal explícita comprometida y fundamentada.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Erläutern vs Erklären</strong></td>
+                    <td><em>Erläutern</em> es exhaustivo y requiere ejemplos ilustrativos. <em>Erklären</em> es una explicación de carácter más general.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+
         </div>
       </div>
 
@@ -657,6 +1053,25 @@ function switchTipsTab(tab) {
     operatorsContent.style.display = 'block';
     tabTips.classList.remove('selected', 'easy');
     tabOps.classList.add('selected', 'easy');
+  }
+}
+
+function switchSubOperators(sub) {
+  const subClave = document.getElementById('subTabClaveContent');
+  const subTodos = document.getElementById('subTabTodosContent');
+  const btnClave = document.getElementById('subTabBtnClave');
+  const btnTodos = document.getElementById('subTabBtnTodos');
+
+  if (sub === 'clave') {
+    subClave.style.display = 'block';
+    subTodos.style.display = 'none';
+    btnClave.classList.add('selected', 'easy');
+    btnTodos.classList.remove('selected', 'easy');
+  } else {
+    subClave.style.display = 'none';
+    subTodos.style.display = 'block';
+    btnClave.classList.remove('selected', 'easy');
+    btnTodos.classList.add('selected', 'easy');
   }
 }
 </script>
