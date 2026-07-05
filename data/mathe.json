@@ -20,44 +20,104 @@
       "name": { "es": "Parte B — Con calculadora (Mit Taschenrechner/CAS)", "de": "Teil B — Mit Taschenrechner/CAS" },
       "duration": 180,
       "desc": { "es": "Problemas complejos con modelización, contexto real, múltiples pasos. 3 grandes bloques temáticos.", "de": "Komplexe Aufgaben mit Modellierung, realem Kontext, mehreren Schritten. 3 Themenblöcke." },
-      "tip": { "es": "No abuses del CAS. El examinador sabe que tienes calculadora — quiere ver TU razonamiento, no el del ordenador.", "de": "CAS nicht überstrapazieren. Der Prüfer weiß, dass du Taschenrechner hast — er will DEIN Denken sehen." }
+      "tip": { "es": "No abuses del CAS. El examinador sabe que tienes calculadora — quiere ver TU razonamiento, no el del ordenador.", "de": "CAS nicht überstrapazieren. Der Prüfer weiß, dass du Taschenrechner hast — er will DEINE Argumentation sehen." }
     }
   },
+  "exam_structure": {
+    "es": "El examen consta de dos partes principales. La Parte A (60 min, sin calculadora) evalúa destrezas de cálculo y conceptos matemáticos directos. La Parte B (180 min, con calculadora/CAS) consiste en problemas extensos de modelización y desarrollo en tres bloques principales (Análisis, Geometría Analítica, Estocástica).",
+    "de": "Die Prüfung besteht aus zwei Teilen. Teil A (60 Min., hilfsmittelfrei) prüft grundlegende Rechenfertigkeiten. Teil B (180 Min., mit CAS) enthält komplexe Modellierungsaufgaben in drei Themenblöcken (Analysis, Geometrie, Stochastik)."
+  },
+  "keyOperators": [
+    { "op": "Berechnen", "meaning": { "es": "Calcular de forma exacta mediante pasos algebraicos lógicos. Se debe mostrar todo el desarrollo matemático.", "de": "Ein exaktes Ergebnis durch logische Rechenschritte ermitteln. Der Rechenweg muss vollständig dargelegt werden." }, "trap": { "es": "Trampa: Escribir directamente el resultado obtenido con la calculadora sin detallar los pasos algebraicos intermedios resta la mayoría de los puntos.", "de": "Falle: Das bloße Endergebnis aus dem Taschenrechner ohne Zwischenschritte aufzuschreiben, gibt fast keine Punkte." } },
+    { "op": "Bestimmen", "meaning": { "es": "Determinar o hallar un resultado empleando un método adecuado, que puede ser gráfico, analítico o a través de la calculadora CAS.", "de": "Einen Wert oder Zusammenhang über einen geeigneten Weg (grafisch, rechnerisch oder per CAS) ermitteln." }, "trap": { "es": "Trampa: Aunque permite mayor flexibilidad, debes indicar brevemente qué método o función de la calculadora utilizaste (ej: 'mediante la función solve del CAS...').", "de": "Falle: Der Rechenweg oder die genutzte CAS-Funktion (z.B. 'solve') muss trotzdem kurz dokumentiert werden." } },
+    { "op": "Zeigen / Nachweisen", "meaning": { "es": "Demostrar matemáticamente la veracidad de una afirmación mediante una deducción formal, cálculo o argumento lógico indiscutible.", "de": "Die Gültigkeit einer Aussage durch mathematische Herleitung, Rechnung oder logische Argumentation lückenlos belegen." }, "trap": { "es": "Trampa: No basta con sustituir un ejemplo numérico concreto; la demostración debe ser general o fundamentada en propiedades teóricas rigurosas.", "de": "Falle: Das Einsetzen eines einzelnen Zahlenbeispiels reicht nicht als allgemeiner Nachweis." } },
+    { "op": "Begründen", "meaning": { "es": "Justificar una afirmación o resultado mediante argumentos matemáticos verbales coherentes basados en teoremas o propiedades geométricas.", "de": "Einen Sachverhalt durch verbale, mathematisch schlüssige Argumente unter Verwendung von Sätzen oder Regeln stützen." }, "trap": { "es": "Trampa: Dar respuestas meramente intuitivas sin conectar con definiciones matemáticas formales (ej. no mencionar la derivada al hablar de crecimiento).", "de": "Falle: Rein intuitive Erklärungen ohne Bezug zu mathematischen Sätzen (z.B. Bezug zur Ableitung bei Monotonie) geben Punktabzug." } },
+    { "op": "Skizzieren", "meaning": { "es": "Esbozar la gráfica de una función o una situación geométrica de manera cualitativa, respetando los puntos clave (intersecciones, extremos, asíntotas).", "de": "Den Graphen einer Funktion oder eine geometrische Situation qualitativ darstellen, wobei charakteristische Punkte erkennbar sein müssen." }, "trap": { "es": "Trampa: Olvidar rotular los ejes de coordenadas o confundir las escalas, lo que invalida el esbozo del gráfico.", "de": "Falle: Achsenbeschriftung oder Skalierung vergessen macht die Skizze wertlos." } }
+  ],
+  "exam_tips": [
+    { "es": "En los problemas de extremos relativos, no te limites a resolver f'(x)=0. Justifica siempre la condición suficiente utilizando la segunda derivada f''(x) o argumentando el cambio de signo de f'(x).", "de": "Bei Extremwertaufgaben nicht nur f'(x)=0 lösen. Zeige immer die hinreichende Bedingung mit f''(x) oder dem Vorzeichenwechsel." },
+    { "es": "Al calcular áreas de regiones delimitadas por funciones, busca primero todas las intersecciones con el eje x (Nullstellen). Si integras de golpe un intervalo con valores positivos y negativos, se restarán entre sí.", "de": "Bei Flächenberechnungen immer zuerst Nullstellen ermitteln. Integrale über positive und negative Bereiche heben sich sonst gegenseitig auf." },
+    { "es": "En geometría analítica, si utilizas un vector normal simplificado para definir la ecuación cartesiana de un plano, recuerda documentar el factor de escala que usaste para dividir.", "de": "Bei der Koordinatenform einer Ebene den Normalenvektor kürzen, aber den Skalierungsfaktor kurz vermerken, um Rechenfehler vorzubeugen." },
+    { "es": "En estocástica, define con total claridad la variable aleatoria (ej: 'Sea X el número de bombillas defectuosas...') y sus parámetros n y p antes de usar las fórmulas binomiales.", "de": "Definiere in der Stochastik immer zuerst die Zufallsvariable und ihre Parameter n und p, bevor du mit Berechnungen beginnst." }
+  ],
+  "taskTypes": [
+    {
+      "id": "analysis_task",
+      "name": { "es": "Análisis (Analysis)", "de": "Analysis" },
+      "desc": { "es": "Análisis de funciones exponenciales, racionales e integrales. Modelización de procesos físicos o económicos de cambio.", "de": "Untersuchung von e-Funktionen, rationalen Funktionen und Integralen. Modellierung von Prozessen." },
+      "weight": "50%"
+    },
+    {
+      "id": "geometry_task",
+      "name": { "es": "Geometría Analítica (Analytische Geometrie)", "de": "Analytische Geometrie" },
+      "desc": { "es": "Cálculo vectorial, ecuaciones de rectas y planos, distancias, ángulos e intersecciones en el espacio tridimensional.", "de": "Vektorrechnung, Geraden und Ebenen, Abstände und Schnittpunkte im 3D-Raum." },
+      "weight": "25%"
+    },
+    {
+      "id": "stochastik_task",
+      "name": { "es": "Estocástica (Stochastik)", "de": "Stochastik" },
+      "desc": { "es": "Cálculo de probabilidades, variables aleatorias, distribución binomial/normal y contraste de hipótesis.", "de": "Wahrscheinlichkeitsrechnung, Zufallsvariablen, Binomial-/Normalverteilung und Hypothesentests." },
+      "weight": "25%"
+    }
+  ],
   "topics": [
     {
       "id": "analysis",
       "name": { "es": "Análisis (Cálculo)", "de": "Analysis" },
       "subtopics": [
         {
-          "name": "Funciones y sus propiedades",
-          "items": ["Dominio", "Monotonía", "Extremos", "Wendepunkte", "Symmetrie", "Verhalten für x→±∞"],
+          "name": "Funciones, Límites y Propiedades Estructurales",
+          "items": [
+            "Dominio y rango (Definitions- und Wertemenge)",
+            "Comportamiento asintótico y límites (Verhalten für x→±∞)",
+            "Simetría: par (Achsensymmetrie) e impar (Punktsymmetrie)",
+            "Continuidad y diferenciabilidad (Stetigkeit und Differenzierbarkeit)",
+            "Puntos de intersección con los ejes (Nullstellen und Schnittpunkt mit y-Achse)"
+          ],
           "summary": {
-            "es": "Estudia el comportamiento de f(x). 1) Symmetrie: f(-x)=f(x) es simetría par (Achsensymmetrie). f(-x)=-f(x) es simetría impar (Punktsymmetrie). 2) Extremos: resolver f'(x)=0. Si f''(x)<0 es máximo, f''(x)>0 es mínimo. 3) Wendepunkt (inflexión): resolver f''(x)=0 y verificar f'''(x)≠0. 4) Límites: analizar el comportamiento cuando x tiende a infinito (comportamiento asintótico).",
-            "de": "Untersuchung von f(x). 1) Symmetrie: f(-x)=f(x) -> achsensymmetrisch zur y-Achse. f(-x)=-f(x) -> punktsymmetrisch zum Ursprung. 2) Extrema: f'(x)=0 lösen. f''(x)<0 -> Maximum, f''(x)>0 -> Minimum. 3) Wendepunkte: f''(x)=0 lösen, f'''(x)≠0 prüfen. 4) Grenzwertverhalten: Verhalten von f(x) für x gegen unendlich bestimmen."
+            "es": "1) Simetría formal: Simetría par si f(-x) = f(x) (simétrica al eje y). Simetría impar si f(-x) = -f(x) (simétrica al origen). Con funciones racionales, si todos los exponentes son pares es par, si todos son impares es impar. 2) Comportamiento en el infinito: Se evalúa comparando los grados del numerador y denominador en racionales, o el signo del exponente en e^x. Si el límite es un número L, hay una asíntota horizontal y = L. Si tiende a infinito, evaluamos la dirección del crecimiento. 3) Continuidad: f es continua en x=c si el límite cuando x tiende a c coincide con f(c).",
+            "de": "1) Symmetrieverhalten: Achsensymmetrie zur y-Achse falls f(-x) = f(x). Punktsymmetrie zum Ursprung falls f(-x) = -f(x). Bei ganzrationalen Funktionen bestimmen die Exponenten das Verhalten (nur gerade Exponenten -> achsensymmetrisch; nur ungerade -> punktsymmetrisch). 2) Verhalten im Unendlichen (Limes): Vergleich der höchsten Potenzen bei gebrochenrationalen Funktionen oder Wachstum von e^x. Ist der Grenzwert eine reelle Zahl L, existiert eine waagerechte Asymptote y = L. 3) Schnittpunkte: Nullstellen durch f(x) = 0 ermitteln, y-Achsenabschnitt durch f(0)."
           }
         },
         {
-          "name": "Diferenciación",
-          "items": ["Regla de la cadena (Kettenregel)", "Regla del producto (Produktregel)", "Regla del cociente", "Derivada de funciones trigonométricas, exponenciales, logarítmicas"],
+          "name": "Cálculo Diferencial y Análisis de Curvas",
+          "items": [
+            "Criterios de extremos locales (Extrempunkte: Hochpunkte / Tiefpunkte)",
+            "Puntos de inflexión y curvatura (Wendepunkte und Krümmungsverhalten)",
+            "Reglas de derivación: producto (Produktregel) y cadena (Kettenregel)",
+            "Ecuación de la recta tangente y normal a una curva",
+            "Familias de funciones y análisis paramétrico (Funktionsscharen)"
+          ],
           "summary": {
-            "es": "Reglas clave: 1) Producto: (u·v)' = u'·v + u·v'. 2) Cociente: (u/v)' = (u'·v - u·v') / v². 3) Cadena (Kettenregel): [f(g(x))]' = f'(g(x)) · g'(x) (derivada externa por interna). Muy frecuente con funciones exponenciales f(x)=e^(kx) → f'(x)=k·e^(kx).",
-            "de": "Wichtige Ableitungsregeln: 1) Produktregel: (u·v)' = u'·v + u·v'. 2) Quotientenregel: (u/v)' = (u'·v - u·v') / v². 3) Kettenregel: [f(g(x))]' = f'(g(x)) · g'(x) (äußere Ableitung mal innere Ableitung). Besonders wichtig bei Exponentialfunktionen."
+            "es": "1) Puntos Extremos: Condición necesaria f'(x) = 0. Condición suficiente f''(x) ≠ 0. Si f''(x_0) < 0 es un Máximo local (Hochpunkt), si f''(x_0) > 0 es un Mínimo local (Tiefpunkt). Si f''(x_0) = 0, se aplica el criterio del cambio de signo de f'(x). 2) Puntos de Inflexión: Curvatura cambia de dirección. Condición necesaria f''(x) = 0, suficiente f'''(x) ≠ 0. 3) Regla del Producto: (u·v)' = u'·v + u·v'. 4) Regla de la Cadena (Kettenregel): [f(g(x))]' = f'(g(x))·g'(x). Esencial para derivar la e-Funktion: [e^(k·x)]' = k·e^(k·x). 5) Tangente en x₀: y = f'(x₀)·(x - x₀) + f(x₀). Normal en x₀: y = -1/f'(x₀)·(x - x₀) + f(x₀).",
+            "de": "1) Extrempunkte: Notwendige Bedingung f'(x) = 0, hinreichende Bedingung f''(x) ≠ 0. f''(x_0) < 0 -> Hochpunkt (HP), f''(x_0) > 0 -> Tiefpunkt (TP). Bei f''(x_0) = 0 das Vorzeichenwechselkriterium (VZW) anwenden. 2) Wendepunkte: Notwendig f''(x) = 0, hinreichend f'''(x) ≠ 0. Der Graph ändert hier sein Krümmungsverhalten (Links- in Rechtskurve oder umgekehrt). 3) Kettenregel: [f(g(x))]' = f'(g(x)) * g'(x) (äußere Ableitung mal innere Ableitung). Besonders bei e-Funktionen mit linearem Exponenten: (e^(ax+b))' = a * e^(ax+b). 4) Tangente: y = f'(x₀)(x - x₀) + f(x₀). Normale: y = -1/f'(x₀)·(x - x₀) + f(x₀)."
           }
         },
         {
-          "name": "Integración",
-          "items": ["Integral definida e indefinida", "Método de sustitución", "Área entre curvas", "Volumen de revolución", "Teorema fundamental del cálculo"],
+          "name": "Cálculo Integral y Aplicaciones Geométricas",
+          "items": [
+            "Primitivas e integrales indefinidas (Stammfunktion und unbestimmtes Integral)",
+            "Teorema Fundamental del Cálculo (Hauptsatz der Differential- und Integralrechnung)",
+            "Áreas entre curvas e intersecciones con el eje x",
+            "Integrales impropias (orientadas al infinito)",
+            "Volumen de cuerpos de revolución alrededor del eje x"
+          ],
           "summary": {
-            "es": "1) Teorema fundamental: ∫[a,b] f(x)dx = F(b) - F(a). 2) Área entre dos curvas f(x) y g(x): ∫[a,b] |f(x) - g(x)| dx. Recuerda hallar primero los puntos de corte (resolviendo f(x)=g(x)) para dividir los intervalos de integración. 3) Volumen de revolución alrededor del eje x: V = π · ∫[a,b] [f(x)]² dx.",
-            "de": "1) Hauptsatz der Differential- und Integralrechnung: ∫[a,b] f(x)dx = F(b) - F(a). 2) Fläche zwischen zwei Kurven f(x) und g(x): ∫[a,b] |f(x) - g(x)| dx. Schnittpunkte f(x)=g(x) als Integrationsgrenzen bestimmen. 3) Rotationsvolumen um die x-Achse: V = π · ∫[a,b] [f(x)]² dx."
+            "es": "1) Teorema Fundamental: ∫[a,b] f(x) dx = F(b) - F(a). 2) Cálculo de áreas: Si la función cruza el eje x en [a,b], se debe dividir la integral en los puntos de corte (Nullstellen) e integrar por tramos aplicando valor absoluto, ya que las áreas por debajo del eje x resultan en valores negativos y se restarían si se calcula directamente. 3) Área entre dos curvas f(x) y g(x): ∫[a,b] |f(x) - g(x)| dx. Se igualan las funciones f(x)=g(x) para encontrar los límites de integración. 4) Volumen de revolución alrededor del eje x: V = π · ∫[a,b] [f(x)]² dx.",
+            "de": "1) Hauptsatz: ∫[a,b] f(x) dx = F(b) - F(a), wobei F'(x) = f(x). 2) Flächenberechnung: Bei Nullstellen im Intervall muss das Integral aufgeteilt werden, da sich positive und negative Flächenanteile sonst gegenseitig aufheben. Flächeninhalt A = |∫[a,x_0] f(x)dx| + |∫[x_0,b] f(x)dx|. 3) Fläche zwischen zwei Graphen: Integral über die Differenzfunktion h(x) = f(x) - g(x) bilden. Grenzen sind die Schnittstellen. 4) Rotationsvolumen (x-Achse): V = π * ∫[a,b] (f(x))² dx."
           }
         },
         {
-          "name": "Modelización",
-          "items": ["Funciones de coste/beneficio", "Crecimiento/decrecimiento exponencial", "Ecuaciones diferenciales básicas"],
+          "name": "Modelización Avanzada y Crecimiento",
+          "items": [
+            "Modelización de procesos físicos y económicos",
+            "Crecimiento exponencial (Exponentielles Wachstum)",
+            "Crecimiento limitado y logístico (Begrenztes und logistisches Wachstum)",
+            "Interpretación física del área bajo la curva y tasas de cambio"
+          ],
           "summary": {
-            "es": "Uso práctico de funciones. El crecimiento exponencial se modela con f(t) = f(0) · e^(kt). El crecimiento limitado se modela con f(t) = S - (S - f(0))e^(-kt), donde S es el límite de saturación (Sättigungsgrenze).",
-            "de": "Anwendung von Funktionen. Exponentielles Wachstum: f(t) = f(0) · e^(kt). Begrenztes Wachstum: f(t) = S - (S - f(0))e^(-kt), wobei S die Sättigungsgrenze darstellt."
+            "es": "1) Crecimiento exponencial: f(t) = f(0)·e^(k·t), donde k es la constante de crecimiento. El tiempo de duplicación es t_d = ln(2)/k. 2) Crecimiento limitado: f(t) = S - (S - f(0))·e^(-k·t), donde S es el límite de saturación (Sättigungsgrenze). La tasa de crecimiento decrece proporcionalmente a la distancia al límite. 3) Tasa de cambio: Si f(t) representa la tasa de flujo (ej. litros por hora), la integral ∫[a,b] f(t) dt representa el cambio acumulado neto (volumen total en litros).",
+            "de": "1) Exponentielles Wachstum: f(t) = f(0) * e^(k·t). Verdopplungszeit T_v = ln(2)/k. 2) Begrenztes Wachstum: f(t) = S - (S - f(0)) * e^(-k·t), mit S als Sättigungsgrenze. Die Wachstumsgeschwindigkeit nimmt exponentiell ab. 3) Bestandsrekonstruktion: Wenn f(t) die Änderungsrate (z.B. Zuflussrate in l/s) beschreibt, gibt das bestimmte Integral ∫[a,b] f(t)dt die Gesamtänderung des Bestandes (Wasservolumen) im Intervall an."
           }
         }
       ]
@@ -67,27 +127,43 @@
       "name": { "es": "Geometría Analítica / Álgebra Lineal", "de": "Analytische Geometrie / Lineare Algebra" },
       "subtopics": [
         {
-          "name": "Vectores en 3D",
-          "items": ["Suma, resta, producto escalar", "Producto vectorial (Kreuzprodukt)", "Magnitud y normalización"],
+          "name": "Vectores, Operaciones y Propiedades Métricas",
+          "items": [
+            "Vectores en el espacio bidimensional y tridimensional (R³)",
+            "Producto escalar (Skalarprodukt) y ángulo entre vectores",
+            "Producto vectorial (Kreuzprodukt) e interpretación geométrica",
+            "Independencia lineal y vectores coplanarios (Lineare Unabhängigkeit)"
+          ],
           "summary": {
-            "es": "1) Producto escalar: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃. Si a⃗ · b⃗ = 0, los vectores son perpendiculares (orthogonal). 2) Producto vectorial (Kreuzprodukt): a⃗ × b⃗ = vector perpendicular a ambos, de longitud igual al área del paralelogramo formado por ellos. Su fórmula es (a₂b₃-a₃b₂, a₃b₁-a₁b₃, a₁b₂-a₂b₁).",
-            "de": "1) Skalarprodukt: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃. Wenn a⃗ · b⃗ = 0, sind die Vektoren orthogonal. 2) Kreuzprodukt (Vektorprodukt): a⃗ × b⃗ liefert einen Vektor, der orthogonal zu beiden Ausgangsvektoren steht. Seine Länge entspricht dem Flächeninhalt des aufgespannten Parallelogramms."
+            "es": "1) Producto Escalar: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃ = |a⃗|·|b⃗|·cos(φ). Si a⃗ · b⃗ = 0, los vectores son ortogonales (perpendiculares). 2) Producto Vectorial (Kreuzprodukt): n⃗ = a⃗ × b⃗. El resultado es un vector perpendicular a a⃗ y b⃗. Su magnitud |a⃗ × b⃗| equivale al área del paralelogramo formado por los vectores. Útil para hallar el vector normal del plano. 3) Independencia lineal: Un conjunto de vectores es linealmente independiente si la ecuación c₁a⃗ + c₂b⃗ + c₃c⃗ = 0 tiene como única solución c₁ = c₂ = c₃ = 0.",
+            "de": "1) Skalarprodukt: a⃗ · b⃗ = a₁b₁ + a₂b₂ + a₃b₃. Winkelbestimmung: cos(φ) = |a⃗ · b⃗| / (|a⃗|·|b⃗|). Orthogonalitätskriterium: a⃗ · b⃗ = 0. 2) Kreuzprodukt (Vektorprodukt): a⃗ × b⃗ liefert einen Normalenvektor, der senkrecht auf beiden Vektoren steht. Die Länge des Vektors entspricht der Fläche des aufgespannten Parallelogramms. 3) Lineare Unabhängigkeit: Vektoren sind unabhängig, wenn sich keiner als Linearkombination der anderen darstellen lässt."
           }
         },
         {
-          "name": "Rectas y planos",
-          "items": ["Ecuación paramétrica de la recta", "Ecuaciones del plano (Normalenform, Parameterform, Koordinatenform)", "Posición relativa recta-plano, plano-plano"],
+          "name": "Ecuaciones y Representación de Rectas y Planos",
+          "items": [
+            "Ecuación paramétrica de la recta (Parameterform einer Geraden)",
+            "Ecuaciones del plano: paramétrica (Parameterform) y cartesiana (Koordinatenform)",
+            "Forma normal del plano (Normalenform y Hessen-Normalenform)",
+            "Paso de forma paramétrica a cartesiana mediante producto vectorial"
+          ],
           "summary": {
-            "es": "1) Ecuación del plano en forma normal: (x⃗ - p⃗) · n⃗ = 0. En forma cartesiana: ax + by + cz = d, donde n⃗ = (a, b, c) es el vector normal. 2) Posición relativa: para intersectar recta y plano, introduce las coordenadas de la recta (x, y, z) en la ecuación cartesiana del plano y despeja el parámetro r.",
-            "de": "1) Ebenengleichung in Normalenform: (x⃗ - p⃗) · n⃗ = 0. Koordinatenform: ax + by + cz = d, wobei n⃗ = (a, b, c) der Normalenvektor ist. 2) Lagebeziehung: Zur Bestimmung des Schnittpunkts von Gerade und Ebene wird die Geradengleichung komponentenweise in die Koordinatengleichung der Ebene eingesetzt."
+            "es": "1) Recta g: x⃗ = p⃗ + r·u⃗, donde p⃗ es el punto de apoyo (Stützvektor) y u⃗ es el vector director (Richtungsvektor). 2) Plano E en forma paramétrica: x⃗ = p⃗ + s·u⃗ + t·v⃗, con dos vectores directores linealmente independientes. 3) Plano E en forma cartesiana: ax + by + cz = d, donde n⃗ = (a, b, c) es el vector normal del plano. Para pasar de paramétrica a cartesiana, se calcula n⃗ = u⃗ × v⃗ y se sustituye un punto para hallar d.",
+            "de": "1) Geradengleichung: g: x⃗ = p⃗ + r·u⃗. 2) Ebenengleichung: Parameterform E: x⃗ = p⃗ + s·u⃗ + t·v⃗. Koordinatenform E: ax + by + cz = d, wobei n⃗ = (a|b|c) der Normalenvektor ist. 3) Umwandlung Parameter- in Koordinatenform: Normalenvektor mittels Kreuzprodukt der beiden Richtungsvektoren bestimmen: n⃗ = u⃗ × v⃗. Danach n⃗ in die Koordinatenform einsetzen und d durch Punktprobe mit dem Stützvektor p⃗ berechnen."
           }
         },
         {
-          "name": "Distancias y ángulos",
-          "items": ["Distancia punto-recta", "Distancia punto-plano", "Ángulo entre vectores", "Ángulo entre planos"],
+          "name": "Posiciones Relativas y Cálculos de Métrica en R³",
+          "items": [
+            "Posición relativa recta-recta: coinciden, paralelas, se cortan o se cruzan (windschief)",
+            "Posición relativa recta-plano e intersección (Durchstoßpunkt)",
+            "Posición relativa plano-plano e intersección (Schnittgerade)",
+            "Distancias: punto-recta, punto-plano (HNF) y rectas cruzadas",
+            "Ángulos: recta-recta, recta-plano y plano-plano"
+          ],
           "summary": {
-            "es": "1) Ángulo φ entre vectores: cos(φ) = |a⃗ · b⃗| / (|a⃗|·|b⃗|). 2) Distancia punto P a plano E: usa la fórmula de la forma normal de Hesse (HNF): d = |(p⃗ - q⃗) · n₀⃗|, donde n₀⃗ es el vector normal unitario (magnitud 1).",
-            "de": "1) Winkel φ zwischen Vektoren: cos(φ) = |a⃗ · b⃗| / (|a⃗|·|b⃗|). 2) Abstand Punkt P zu Ebene E: Berechnung mit der Hesseschen Normalenform (HNF): d = |(p⃗ - q⃗) · n₀⃗|, wobei n₀⃗ der normierte Normalenvektor ist."
+            "es": "1) Posición relativa recta-recta: Se comparan los vectores directores. Si son paralelos, se comprueba si el punto de apoyo pertenece a la otra recta (coincidentes o paralelas). Si no son paralelos, se igualan las rectas. Si tiene solución única se cortan, si no tiene solución se cruzan. 2) Distancia Punto-Plano: Con la fórmula normal de Hesse (HNF): d = |ax₀ + by₀ + cz₀ - d| / √(a² + b² + c²). 3) Ángulo Recta-Plano: sen(α) = |u⃗ · n⃗| / (|u⃗|·|n⃗|). Nota el uso del seno en lugar del coseno.",
+            "de": "1) Lagebeziehung Gerade-Gerade: Richtungsvektoren auf Kollinearität prüfen. Wenn parallel -> Punktprobe (identisch oder echt parallel). Wenn nicht parallel -> Gleichsetzen (Schnittpunkt oder windschief). 2) Abstand Punkt-Ebene: Hessesche Normalenform (HNF): d = |ax₀ + by₀ + cz₀ - d| / √(a² + b² + c²). 3) Winkel Gerade-Ebene: sin(α) = |u⃗ · n⃗| / (|u⃗| * |n⃗|)."
           }
         }
       ]
@@ -97,19 +173,31 @@
       "name": { "es": "Estocástica (Probabilidad y Estadística)", "de": "Stochastik" },
       "subtopics": [
         {
-          "name": "Probabilidad",
-          "items": ["Espacio muestral, sucesos", "Reglas de probabilidad", "Probabilidad condicionada (bedingte Wahrscheinlichkeit)", "Teorema de Bayes"],
+          "name": "Fundamentos de Probabilidad y Probabilidad Condicionada",
+          "items": [
+            "Experimentos aleatorios, sucesos y reglas de Laplace",
+            "Diagramas de árbol y tablas de contingencia de doble entrada (Vierfeldertafel)",
+            "Probabilidad condicionada (Bedingte Wahrscheinlichkeit)",
+            "Sucesos independientes (Stochastische Unabhängigkeit)",
+            "Teorema de Bayes (diagnóstico y diagnóstico inverso)"
+          ],
           "summary": {
-            "es": "1) Probabilidad condicionada: P(A|B) = P(A ∩ B) / P(B) (probabilidad de A dado que ha ocurrido B). 2) Teorema de Bayes: P(A|B) = [P(B|A) · P(A)] / P(B). Muy útil para pruebas médicas y diagnóstico inverso.",
-            "de": "1) Bedingte Wahrscheinlichkeit: P(A|B) = P(A ∩ B) / P(B) (Wahrscheinlichkeit von A unter der Bedingung B). 2) Satz von Bayes: P(A|B) = [P(B|A) · P(A)] / P(B). Unverzichtbar für die Berechnung umgekehrter Wahrscheinlichkeiten."
+            "es": "1) Probabilidad condicionada: P(A|B) = P(A ∩ B) / P(B) (probabilidad de que ocurra A dado que ha ocurrido B). 2) Independencia estocástica: A y B son independientes si y solo si P(A ∩ B) = P(A) · P(B) (o equivalentemente, P(A|B) = P(A)). 3) Teorema de Bayes: P(A|B) = [P(B|A) · P(A)] / P(B), donde P(B) se calcula mediante la ley de probabilidad total: P(B) = P(B|A)·P(A) + P(B|¬A)·P(¬A).",
+            "de": "1) Bedingte Wahrscheinlichkeit: P(A|B) = P(A ∩ B) / P(B). 2) Stochastische Unabhängigkeit: Zwei Ereignisse A und B sind stochastisch unabhängig, wenn P(A ∩ B) = P(A) * P(B) gilt. Dies bedeutet, dass das Eintreten von B keinen Einfluss auf die Wahrscheinlichkeit von A hat. 3) Vierfeldertafel: Strukturierte Tabelle zur Darstellung von absoluten oder relativen Häufigkeiten zweier Merkmale."
           }
         },
         {
-          "name": "Distribuciones",
-          "items": ["Distribución binomial B(n;p)", "Distribución normal N(μ;σ)", "Estandarización z-score"],
+          "name": "Variables Aleatorias, Distribuciones y Test de Hipótesis",
+          "items": [
+            "Variable aleatoria discreta, esperanza matemática (Erwartungswert) y desviación",
+            "Distribución Binomial: fórmula de Bernoulli B(n;p) y coeficientes binomiales",
+            "Distribución Normal: densidad de Gauss y estandarización (z-score)",
+            "Test de hipótesis unilateral e izquierdo/derecho y bilateral (Hypothesentest)",
+            "Errores de Tipo I (alfa) y Tipo II (beta) y nivel de significación"
+          ],
           "summary": {
-            "es": "1) Bernoulli: P(X=k) = (n/k) · p^k · (1-p)^(n-k). Describe éxitos en n intentos independientes. 2) Distribución normal (Campana de Gauss): se estandariza con z = (X - μ) / σ para poder usar la tabla de distribución normal estándar Φ(z).",
-            "de": "1) Binomialverteilung (Bernoulli-Kette): P(X=k) = (n über k) · p^k · (1-p)^(n-k). 2) Normalverteilung: Stetige Verteilung, definiert durch Erwartungswert μ und Standardabweichung σ. Transformation in Standardnormalverteilung mit z = (X - μ) / σ."
+            "es": "1) Valor Esperado E(X) = Σ x_i · P(X=x_i). El juego es justo (fair) si E(X) = 0. 2) Distribución Binomial: P(X=k) = (n/k)·p^k·(1-p)^(n-k). Describe experimentos de Bernoulli repetidos n veces de forma independiente. 3) Test de hipótesis: Queremos tomar decisiones estadísticas. H₀ es la hipótesis nula, H₁ es la hipótesis alternativa. Rango de rechazo (Ablehnungsbereich) se define de modo que la probabilidad de cometer un error de Tipo I (rechazar H₀ siendo verdadera) sea menor o igual al nivel de significación α. 4) Estandarización: z = (X - μ)/σ.",
+            "de": "1) Erwartungswert E(X) = Σ x_i * P(X=x_i). 2) Binomialverteilung: P(X=k) = (n über k) * p^k * (1-p)^(n-k). 3) Hypothesentest: Einseitiger oder zweiseitiger Test. H₀ ist die Nullhypothese, H₁ die Alternativhypothese. Der Ablehnungsbereich wird so bestimmt, dass die Wahrscheinlichkeit für einen Fehler 1. Art (H₀ fälschlicherweise ablehnen) höchstens dem Signifikanzniveau α entspricht."
           }
         }
       ]
@@ -580,6 +668,88 @@
               "recommendation": {
                 "es": "Recomendación: En los test de hipótesis, define con claridad H₀ y H₁ antes de realizar cálculos. Olvidar escribir los nombres formales de las hipótesis resta bastantes puntos en los criterios de evaluación del Abitur.",
                 "de": "Tipp: Formuliere Hypothesen immer explizit als H₀ und H₁. Das Fehlen dieser Definitionen führt zu Abzug."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathe_nrw_2024_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2024 — Mathematik GK",
+      "year": "2024",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Importación automática del examen unificado del Zentralabitur NRW 2024 para nivel Grundkurs (GK). Incluye cálculo racional y recta normal, coplanaridad vectorial y optimización/integración del comportamiento de un fármaco en sangre.",
+        "de": "Automatischer Import des Zentralabiturs NRW 2024 für den Grundkurs. Umfasst Quotientenregel, orthogonale Normale, lineare Abhängigkeit von Vektoren sowie Analyse und Integralrechnung der Medikamentenkonzentration im Blut."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Hilfsmittelfreier Teil (Ejercicios cortos sin calculadora)",
+          "tasks": [
+            {
+              "title": "Aufgabe A1: Analysis (Regla del cociente y ecuación de la recta normal)",
+              "question": {
+                "es": "Dada la función f(x) = (2x - 3) / (x^2 + 1). Calcula su primera derivada f'(x) y determina la ecuación de la recta normal a la gráfica de f en el punto de abscisa x = 1.",
+                "de": "Gegeben ist die Funktion f(x) = (2x - 3) / (x^2 + 1). Bestimme die erste Ableitung f'(x) und ermittle die Gleichung der Normalen an den Graphen von f an der Stelle x = 1."
+              },
+              "solution": {
+                "es": "1) Derivamos f(x) usando la regla del cociente (u/v)' = (u'·v - u·v') / v²:\nu = 2x - 3 → u' = 2\nv = x^2 + 1 → v' = 2x\nf'(x) = [2(x^2 + 1) - (2x - 3)(2x)] / (x^2 + 1)^2 = [2x^2 + 2 - (4x^2 - 6x)] / (x^2 + 1)^2 = (-2x^2 + 6x + 2) / (x^2 + 1)^2.\n\n2) Evaluamos en x = 1 para obtener la pendiente de la tangente (m_t):\nm_t = f'(1) = (-2(1) + 6(1) + 2) / (1^2 + 1)^2 = 6 / 4 = 1.5.\n\n3) La pendiente de la recta normal (m_n) cumple m_n = -1/m_t:\nm_n = -1 / 1.5 = -2/3.\n\n4) Calculamos la coordenada y del punto de tangencia:\ny = f(1) = (2·1 - 3) / (1^2 + 1) = -1/2 = -0.5. El punto es (1, -0.5).\n\n5) Formulamos la recta normal y = m_n(x - x₀) + y₀:\ny = -2/3·(x - 1) - 0.5 = -2/3·x + 2/3 - 1/2 = -2/3·x + 1/6.",
+                "de": "1) Quotientenregel anwenden: u' = 2, v' = 2x. f'(x) = [2(x^2 + 1) - 2x(2x - 3)] / (x^2 + 1)^2 = (-2x^2 + 6x + 2) / (x^2 + 1)^2.\n2) Tangentensteigung bei x=1: m_t = f'(1) = 6/4 = 1.5.\n3) Normalensteigung: m_n = -1/m_t = -2/3.\n4) Funktionswert: f(1) = -1/2 = -0.5. Berührpunkt P(1|-0.5).\n5) Normalengleichung: y = -2/3(x - 1) - 0.5 = -2/3·x + 1/6."
+              },
+              "points": 5,
+              "criteria": {
+                "es": "• 2 Puntos: Aplicar la regla del cociente de forma correcta y simplificar el numerador.\n• 1 Punto: Calcular la pendiente m_t = 1.5 y deducir la pendiente de la normal m_n = -2/3.\n• 2 Puntos: Calcular la coordenada y = -0.5 y formular correctamente la ecuación de la normal y = -2/3·x + 1/6.",
+                "de": "• 2 Punkte: Korrektes Ableiten mit der Quotientenregel.\n• 1 Punkt: Steigungsberechnung der Normalen m_n = -2/3.\n• 2 Punkte: Bestimmung des y-Wertes und Aufstellen der Normalengleichung."
+              },
+              "recommendation": {
+                "es": "Trampa común: Los alumnos calculan la recta tangente en lugar de la normal. Recuerda que la normal es perpendicular a la tangente (m_n = -1/m_t). ¡Lee con atención el enunciado!",
+                "de": "Achtung: Berechne nicht die Tangente statt der Normalen. Der Normalenvektor steht senkrecht (m_n = -1/m_t)."
+              }
+            },
+            {
+              "title": "Aufgabe A2: Geometrie (Independencia lineal y vectores coplanarios)",
+              "question": {
+                "es": "Demuestra si los vectores a⃗ = (1, 2, 0), b⃗ = (0, 1, 3) y c⃗ = (2, 5, 3) son linealmente dependientes o independientes en R³.",
+                "de": "Überprüfe, ob die Vektoren a⃗ = (1|2|0), b⃗ = (0|1|3) und c⃗ = (2|5|3) im R³ linear abhängig oder unabhängig sind."
+              },
+              "solution": {
+                "es": "Planteamos la combinación lineal nula: x·a⃗ + y·b⃗ + z·c⃗ = 0.\nEquivale al sistema de ecuaciones lineales:\nI)   1x + 0y + 2z = 0 → x = -2z\nII)  2x + 1y + 5z = 0\nIII) 0x + 3y + 3z = 0 → 3y = -3z → y = -z\nSustituimos x e y en la ecuación II:\n2(-2z) + (-z) + 5z = 0 → -4z - z + 5z = 0 → 0 = 0.\nEl sistema es indeterminado y tiene infinitas soluciones distintas de la solución trivial (ej: para z=1, tenemos x=-2, y=-1). Por tanto, los vectores son linealmente dependientes (coplanarios).",
+                "de": "Ansatz: x·a⃗ + y·b⃗ + z·c⃗ = 0.\nI)   x + 2z = 0 → x = -2z\nII)  2x + y + 5z = 0\nIII) 3y + 3z = 0 → y = -z\nEinsetzen in II: 2(-2z) - z + 5z = 0 → 0 = 0. Es existieren unendlich viele Lösungen. Die Vektoren sind somit linear abhängig."
+              },
+              "points": 5,
+              "criteria": {
+                "es": "• 2 Puntos: Plantear correctamente la ecuación de combinación lineal nula o el determinante de la matriz.\n• 3 Puntos: Resolver el sistema de ecuaciones lineales, mostrar que posee infinitas soluciones e interpretar que son linealmente dependientes.",
+                "de": "• 2 Punkte: Aufstellen des Gleichungssystems.\n• 3 Punkte: Lösen des Systems und korrekte Schlussfolgerung zur linearen Abhängigkeit."
+              },
+              "recommendation": {
+                "es": "Recomendación: También puedes calcular el determinante de la matriz formada por los tres vectores. Si det(M) = 0, son linealmente dependientes. En este caso: det = 1(3 - 15) - 2(0 - 0) + 2(6 - 0) = -12 + 12 = 0.",
+                "de": "Tipp: Der Nachweis kann auch über die Determinante der Koeffizientenmatrix geführt werden. Ist det = 0, sind sie linear abhängig."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Hilfsmittel-Teil (Grandes problemas de desarrollo - Con calculadora CAS)",
+          "tasks": [
+            {
+              "title": "Aufgabe B1: Analysis (Concentración de fármaco en torrente sanguíneo)",
+              "question": {
+                "es": "La concentración de un fármaco en el torrente sanguíneo de un paciente en mg/L se modela mediante c(t) = 0.5·t^2·e^(-0.5t), donde t es el tiempo en horas transcurridas desde su administración (t ≥ 0).\n\nApartado a) Calcula la concentración de fármaco en sangre transcurridas 2 horas.\nApartado b) Determina el momento exacto en el que la concentración es máxima y calcula dicho valor.\nApartado c) Calcula la concentración media en sangre durante las primeras 4 horas. (Fórmula de la media: 1/(b-a) · ∫[a,b] c(t) dt).",
+                "de": "Die Konzentration eines Medikaments im Blut eines Patienten (in mg/L) wird beschrieben durch c(t) = 0,5·t^2·e^(-0,5t), wobei t die Zeit in Stunden nach der Einnahme angibt (t ≥ 0).\n\na) Berechne die Medikamentenkonzentration nach genau 2 Stunden.\nb) Bestimme den Zeitpunkt der maximalen Konzentration und berechne diese.\nc) Berechne die mittlere Konzentration des Medikaments während der ersten 4 Stunden."
+              },
+              "solution": {
+                "es": "a) c(2) = 0.5·(2)^2·e^(-0.5·2) = 2 · e^(-1) = 2/e ≈ 0.736 mg/L.\n\nb) Buscamos el extremo de c(t). Derivamos con la regla del producto y de la cadena:\nc'(t) = 0.5 · [2t·e^(-0.5t) + t^2·(-0.5e^(-0.5t))] = 0.5·e^(-0.5t) · [2t - 0.5t^2] = 0.25·t·e^(-0.5t) · [4 - t].\nIgualamos a cero: c'(t) = 0 → t = 0 (mínimo de inicio) o t = 4 horas.\nComprobamos con la segunda derivada que c''(4) < 0 (es un Máximo). Concentración máxima: c(4) = 0.5·(16)·e^(-2) = 8/e² ≈ 1.083 mg/L.\n\nc) Calculamos la integral ∫[0,4] c(t) dt. Primitiva mediante doble integración por partes:\n∫ 0.5·t^2·e^(-0.5t) dt = (-t^2 - 4t - 8)e^(-0.5t) + C.\nEvaluamos la integral definida:\n∫[0,4] c(t) dt = [(-16 - 16 - 8)e^(-2)] - [(-8)e^0] = -40·e^(-2) + 8 ≈ 2.587.\nAplicamos la fórmula de la concentración media:\nConcentración media = 1/(4-0) · 2.587 ≈ 0.647 mg/L.",
+                "de": "a) c(2) = 2/e ≈ 0,736 mg/L.\nb) Ableitung c'(t) = 0,25·t·e^(-0,5t)·(4 - t). c'(t) = 0 → t = 4 Stunden (HP). c(4) = 8/e² ≈ 1,083 mg/L.\nc) Stammfunktion durch zweifache partielle Integration: F(t) = (-t^2 - 4t - 8)e^(-0,5t). Das Integral von 0 bis 4 ergibt ca. 2,587. Die mittlere Konzentration beträgt 1/4 · 2,587 ≈ 0,647 mg/L."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 3 Puntos (a): Evaluar c(2) mostrando el planteamiento algebraico y el valor numérico.\n• 6 Puntos (b): Calcular la derivada c'(t), resolver c'(t) = 0 para hallar t = 4, comprobar la condición suficiente de máximo y calcular c(4).\n• 6 Puntos (c): Hallar la primitiva F(t) paso a paso, calcular la integral definida y dividir por 4 para obtener la media.",
+                "de": "• 3 Punkte: Berechnung von c(2).\n• 6 Punkte: Ableitung c'(t), Bestimmung des Maximums bei t = 4 und Nachweis der hinreichenden Bedingung.\n• 6 Punkte: Integration mittels partieller Integration, Berechnung des Durchschnittswertes."
+              },
+              "recommendation": {
+                "es": "Recomendación didáctica: Para calcular la integral de una función del tipo t^2·e^(kt), debes aplicar el método de integración por partes dos veces consecutivas. Mantén orden con los signos negativos para evitar fallos de cálculo.",
+                "de": "Tipp: Für das Integral von t^2·e^(-0,5t) ist zweifache partielle Integration erforderlich. Achte penibel auf die Vorzeichen."
               }
             }
           ]

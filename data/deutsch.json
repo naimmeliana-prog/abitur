@@ -46,10 +46,72 @@
     { "op": "Charakterisieren", "meaning": { "es": "Describir las características de un personaje, texto o concepto citando el texto.", "de": "Eigenschaften einer Figur, eines Textes oder Begriffs mit Belegen beschreiben." }, "trap": { "es": "Trampa: no añadir valoración personal, solo descripción.", "de": "Falle: keine eigene Wertung, nur Beschreibung." } },
     { "op": "Verfassen", "meaning": { "es": "Escribir un texto propio (editorial, comentario, ensayo) con estructura y registro adecuados.", "de": "Eigenen Text (Leitartikel, Kommentar, Essay) mit passendem Register verfassen." }, "trap": { "es": "Trampa: olvidar el registro (formal/coloquial) adecuado al tipo de texto.", "de": "Falle: falsches Register für die Textsorte wählen." } }
   ],
+  "literary_epochs": [
+    {
+      "name": "Weimarer Klassik (1786 - 1805)",
+      "characteristics": {
+        "es": "Búsqueda de armonía, humanismo, equilibrio entre deber e inclinación (Neigung). Retorno a modelos de la Antigüedad Clásica. Concepto de 'Schöne Seele' (alma bella). Formato dramático formal (verso blanco / Blankvers).",
+        "de": "Streben nach Harmonie, Humanität und Ausgewogenheit. Orientierung an der antiken Klassik. Idee der 'schönen Seele'. Streng geformte Dramen (Blankvers)."
+      },
+      "key_works": ["Goethe: Iphigenie auf Tauris, Faust I", "Schiller: Maria Stuart, Wilhelm Tell"],
+      "focus_themes": {
+        "es": "Educación moral del ser humano, autolimitación, ideal de la humanidad noble y pura.",
+        "de": "Erziehung des Menschen zur Humanität, Selbstbegrenzung, Versöhnung von Pflicht und Neigung."
+      }
+    },
+    {
+      "name": "Romantik (1795 - 1835)",
+      "characteristics": {
+        "es": "Rechazo del racionalismo ilustrado y de la industrialización. Enfoque en el subconsciente, los sueños, la fantasía y la ironía romántica. Los motivos centrales son el viaje (Wanderlust), la noche, la ventana y el anhelo infinito (Sehnsucht).",
+        "de": "Gegenbewegung zur Aufklärung und Industrialisierung. Fokus auf Gefühl, Traum, Fantasie und das Unbewusste. Leitmotive: Sehnsucht, blaue Blume, Wandern, Nacht."
+      },
+      "key_works": ["Eichendorff: Aus dem Leben eines Taugenichts, Gedichte", "E.T.A. Hoffmann: Der Sandmann, Das Fräulein von Scuderi"],
+      "focus_themes": {
+        "es": "Fusión del arte y la vida (Universalpoesie), la naturaleza mística frente a la fría técnica.",
+        "de": "Progressive Universalpoesie, Sehnsucht nach dem Unendlichen, das Schaurige und Unheimliche."
+      }
+    },
+    {
+      "name": "Expressionismus (1910 - 1925)",
+      "characteristics": {
+        "es": "Refleja el horror de la Primera Guerra Mundial, la deshumanización urbana y el miedo a la pérdida del yo (Ich-Zerfall). Estilo subjetivo, uso de metáforas violentas, colores intensos y ruptura del orden gramatical tradicional.",
+        "de": "Ausdruck des Schreckens des Ersten Weltkriegs, der Entfremdung in der Großstadt und des drohenden Ich-Zerfalls. Ästhetik des Hässlichen, Farbsymbolik."
+      },
+      "key_works": ["Heym: Der Gott der Stadt", "Kafka: Die Verwandlung", "Trakl: Grodek, Gedichte", "Sternheim: Die Hose"],
+      "focus_themes": {
+        "es": "Apocalipsis urbano, alienación de la sociedad industrial, rebelión contra la autoridad paterna.",
+        "de": "Großstadtlyrik, Apokalypse, Kriegserfahrung, Vater-Sohn-Konflikt, Kritik am Bürgertum."
+      }
+    },
+    {
+      "name": "Literatur nach 1945 / Trümmerliteratur (1945 - 1950)",
+      "characteristics": {
+        "es": "Refleja la destrucción material y moral de Alemania tras el nacionalsocialismo. Lenguaje sobrio y directo sin adornos (Kahlschlagliteratur / lenguaje de tala).",
+        "de": "Auseinandersetzung mit Krieg, Zerstörung, Heimkehr und Schuld. Kahlschlag der Sprache (nüchtern, schnörkellos, realitätsnah)."
+      },
+      "key_works": ["Wolfgang Borchert: Draußen vor der Tür, An diesem Dienstag", "Heinrich Böll: Wanderer, kommst du nach Spa..."],
+      "focus_themes": {
+        "es": "El trauma de la guerra, la culpa colectiva, la soledad del retornado (Heimkehrer).",
+        "de": "Trauma der Heimkehrer, Schuldfrage, existenzielle Orientierungslosigkeit in Ruinen."
+      }
+    },
+    {
+      "name": "Gegenwartsliteratur (ab 1990)",
+      "characteristics": {
+        "es": "Diversidad temática e híbridos genéricos. Enfoque en la globalización, la identidad digital, la migración y la memoria histórica tras la reunificación de Alemania.",
+        "de": "Pluralismus der Stile und Themen. Beschäftigung mit Globalisierung, Digitalisierung, Migration und der Wendezeit."
+      },
+      "key_works": ["Bernhard Schlink: Der Vorleser", "Juli Zeh: Corpus Delicti, Unterleuten", "Wolfgang Herrndorf: Tschick"],
+      "focus_themes": {
+        "es": "El control biopolítico del Estado, la memoria del Holocausto, crisis de identidad individual en el siglo XXI.",
+        "de": "Vergangenheitsbewältigung, Naturwissenschaft und Ethik, Gesellschaftskritik, Dystopie."
+      }
+    }
+  ],
   "pflichtlektüren": {
     "note": { "es": "Las lecturas obligatorias cambian cada 2 años para la Región 5. Consultar siempre la circular oficial del DSV.", "de": "Pflichtlektüren wechseln alle 2 Jahre für Region 5." },
     "categories": ["Erzählende Prosa (novela/cuento)", "Lyrik (poesía)", "Drama (teatro)"],
-    "typical_authors": ["Kleist", "Kafka", "Brecht", "Goethe", "Schiller", "Fontane", "Dürrenmatt", "Frisch"]
+    "typical_authors": ["Goethe", "Schiller", "Kleist", "Büchner", "Kafka", "Brecht", "Frisch", "Dürrenmatt", "Zeh"]
   },
   "rhetorical_devices": [
     { "name": "Metapher", "es": "Metáfora", "example": "'Das Leben ist ein Spiel'" },
@@ -181,6 +243,132 @@
       "correct": 2,
       "explanation": { "es": "La 'Figurenkonstellation' (relación entre personajes) es un concepto del análisis dramático o narrativo, no del lírico. Para poesía: Metrum, Reimschema, Kadenz, Zäsur, Enjambement, Strophenform.", "de": "'Figurenkonstellation' ist ein Begriff der Dramen- oder Erzähltextanalyse, nicht der Lyrik. Für Lyrik: Metrum, Reimschema, Kadenz, Zäsur, Enjambement, Strophenform." },
       "tip": { "es": "Memoriza los términos por género: Lyrik (Metrum, Reim, Kadenz) vs Drama (Figurenkonstellation, Akt, Szene) vs Prosa (Erzählperspektive, Erzählhaltung, Zeitraffung).", "de": "Begriffe nach Gattung merken: Lyrik vs Drama vs Prosa." }
+    }
+  ],
+  "official_exams_archive": [
+    {
+      "id": "deutsch_nrw_2023_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Deutsch GK",
+      "year": "2023",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Este es el archivo histórico del examen unificado del Zentralabitur NRW 2023 para Deutsch Grundkurs (GK). Incluye ejercicios de desarrollo de análisis e interpretación poética comparada y de disertación de textos de opinión sobre la evolución de la lectura y la tecnología digital.",
+        "de": "Archiv der zentralen Abiturklausur NRW 2023 für den Grundkurs Deutsch. Enthält die Aufgaben zur Lyrikanalyse im Vergleich und zur Sachtextanalyse mit anschließender Erörterung."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Lyrik — Gedichtvergleich (Análisis comparativo de poemas)",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Gedichtanalyse von Eichendorffs 'Sehnsucht' im Vergleich zu Georg Heyms 'Der Gott der Stadt'",
+              "question": {
+                "es": "Analiza el poema 'Sehnsucht' de Joseph von Eichendorff (Romanticismo). A continuación, compáralo con 'Der Gott der Stadt' de Georg Heym (Expresionismo) en relación al motivo de la ciudad, la naturaleza y la experiencia del sujeto lírico.",
+                "de": "Analysiere das Gedicht 'Sehnsucht' von Joseph von Eichendorff. Vergleiche es anschließend mit Georg Heyms 'Der Gott der Stadt' hinsichtlich des Stadt- und Naturmotivs sowie des Lebensgefühls des lyrischen Subjekts."
+              },
+              "solution": {
+                "es": "1) Einleitung: Presentación de ambos poemas (título, autor, año, época, tema central). Tesis: El poema de Eichendorff refleja la nostalgia romántica por la naturaleza y la libertad, mientras que Heym retrata la opresión, el horror urbano y la deshumanización del expresionismo.\n2) Hauptteil (Gedichtanalyse 'Sehnsucht'): Estructura formal (tres estrofas de 4 versos, rima encadenada abab, verso de tres troqueos). Análisis de motivos: el anhelo (Sehnsucht) despertado por el canto de dos jóvenes que pasan en carroza, la ventana como frontera entre el espacio interior cerrado y la lejanía infinita de la naturaleza salvaje (Gegend), la noche iluminada por la luna como momento místico.\n3) Vergleich (Heyms 'Der Gott der Stadt'): Estructura expresionista (cinco estrofas de 4 versos). El dios Baal representa a la metrópolis moderna que oprime al individuo. Contraste de naturaleza: en Eichendorff es libre y sagrada; en Heym está ahogada por el humo y los templos de hormigón de la ciudad.\n4) Schluss: Resumen de la comparación y valoración de cómo la revolución industrial alteró el Lebensgefühl del siglo XIX al XX.",
+                "de": "1) Einleitung: Vorstellung beider Gedichte. Kernthese: Eichendorff drückt die romantische Sehnsucht nach Natur und Ferne aus, während Heym das Grauen der modernen Großstadt und die Entfremdung des Expressionismus darstellt.\n2) Hauptteil (Analyse 'Sehnsucht'): Formale Struktur (drei Strophen, Kreuzreim, Trochäus). Motive: Das offene Fenster als Grenze zwischen Enge und weiter Welt, der Gesang der Gesellen, die mondbeschienene Nacht als Katalysator der Sehnsucht.\n3) Vergleich ('Der Gott der Stadt'): Der Stadtgott Baal thront über der Stadt und unterjocht die Menschen. Naturkontrast: Freie Natur vs. verrußter, lauter und feindlicher urbaner Raum.\n4) Schluss: Zusammenfassung der Epochenunterschiede (Romantik vs. Expressionismus)."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis formal y estilístico correcto de 'Sehnsucht' (métricas, estrofas, figuras líricas).\n• 15 Puntos: Análisis y desarrollo de motivos románticos (ventana, viaje, noche).\n• 15 Puntos: Comparación estructural de similitudes/diferencias con el poema de Heym.\n• 5 Puntos: Expresión lingüística formal y uso de terminología técnica en alemán.",
+                "de": "• 15 Punkte: Formale und inhaltliche Analyse von 'Sehnsucht'.\n• 15 Punkte: Erarbeitung der romantischen Leitmotive.\n• 15 Punkte: Strukturierter Vergleich mit Heyms Gedicht.\n• 5 Punkte: Fachsprachliche Präzision und sprachliche Richtigkeit."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el examen de alemán (Deutsch Abitur) del DIA, la comparación (Vergleich) debe estructurarse de forma sistemática. No analices un poema entero y luego el otro sin conexión; haz un análisis de enlace por puntos temáticos.",
+                "de": "Tipp: Strukturiere den Vergleich kriterienorientiert und springe nicht unzusammenhängend zwischen den Gedichten hin und her."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Erörterung pragmatischer Texte (Disertación argumentativa basada en un artículo)",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Analyse und Erörterung eines Sachtextes über die Zukunft des Schreibens im Zeitalter der Künstlichen Intelligenz",
+              "question": {
+                "es": "Analiza la argumentación de la autora en el texto de opinión sobre el impacto de ChatGPT en el aprendizaje de la escritura escolar. A continuación, debate si el uso de software de IA en las clases de alemán es beneficioso o perjudicial para el desarrollo cognitivo de los estudiantes.",
+                "de": "Analysiere die Argumentationsstruktur der Autorin im Sachtext zum Thema ChatGPT im Schreibunterricht. Erörtere anschließend, ob der Einsatz von KI-Schreibsoftware im Deutschunterricht für die kognitive Entwicklung der Schüler förderlich oder schädlich ist."
+              },
+              "solution": {
+                "es": "1) Analyse des Sachtextes: Determinar la tesis central de la autora, resumir su estructura argumentativa (ej. uso de argumentos de autoridad, concesiones y refutaciones) y analizar el tono (persuasivo, irónico, analítico).\n2) Erörterung (Disertación): Desarrollar argumentos pro y contra.\n- Argumentos PRO: Alivia la carga cognitiva mecánica (ortografía), actúa como tutor personalizado para lluvia de ideas (Brainstorming), ayuda a estructurar borradores.\n- Argumentos CONTRA: Riesgo de atrofia del pensamiento crítico, fomento del plagio involuntario, pérdida de la voz estilística propia del alumno.\n3) Abwägung und Synthese (Fazit): Proponer un modelo híbrido en el que la IA actúe como copiloto pero la redacción final y la toma de decisiones argumentativas correspondan al alumno de forma analítica en papel.",
+                "de": "1) Sachtextanalyse: These der Autorin herausarbeiten, Argumentationstypen (z.B. Autoritätsargumente) identifizieren und sprachliche Gestaltung analysieren.\n2) Erörterung: Pro- und Contra-Argumentation.\n- Pro: Entlastung bei Schreibblockaden, Ideengeber, individuelle Förderung.\n- Contra: Verlust der eigenen Ausdrucksfähigkeit, Plagiatsgefahr, Mangel an kritischem Denken.\n3) Synthese: Plädoyer für einen reflektierten Einsatz von KI als Werkzeug unter Beibehaltung manueller Schreibkompetenzen."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis objetivo del texto pragmático (tesis, argumentos de la autora, lenguaje).\n• 20 Puntos: Desarrollo argumentativo de la disertación con argumentos fundamentados (tesis, antítesis y ejemplos).\n• 10 Puntos: Conclusión estructurada con balance personal.\n• 5 Puntos: Calidad expresiva, ortografía y sintaxis formal en alemán.",
+                "de": "• 15 Punkte: Textanalyse (Thesen und Argumente der Autorin).\n• 20 Punkte: Argumentativer Hauptteil (Dialektischer Aufbau).\n• 10 Punkte: Fazit und eigene ausgewogene Stellungnahme.\n• 5 Punkte: Ausdrucksvermögen und sprachliche Korrektheit."
+              },
+              "recommendation": {
+                "es": "Recomendación: En una Erörterung textgebunden, no te limites a repetir lo que dice el texto. Debes dialogar con las ideas de la autora, apoyando o refutando sus argumentos con tus propios conocimientos y ejemplos de la sociedad actual.",
+                "de": "Achtung: Distanziere dich von den Formulierungen der Autorin. Nimm kritisch zu den Thesen Stellung, statt sie nur zu paraphrasieren."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deutsch_nrw_2024_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2024 — Deutsch GK",
+      "year": "2024",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Archivo de la prueba escrita del Zentralabitur Deutsch NRW 2024 para Grundkurs (GK). Contiene análisis lírico comparado de la Primera Guerra Mundial (Expresionismo de Trakl frente a Barroco de Gryphius) y disertación dialéctica sobre la lectura analítica frente al consumo rápido de contenidos digitales.",
+        "de": "Archiv der zentralen Klausur Deutsch NRW 2024 (Grundkurs). Enthält die Aufgaben zum historisch-thematischen Gedichtvergleich (Kriegslyrik von Trakl und Gryphius) sowie zur Sachtextanalyse mit Erörterung zum Thema 'Lesekompetenz im Medienzeitalter'."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Lyrik — Gedichtvergleich (Análisis comparativo de poemas)",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Analyse von Georg Trakls 'Grodek' im Vergleich zu Andreas Gryphius' 'Tränen des Vaterlandes'",
+              "question": {
+                "es": "Analiza el poema expresionista 'Grodek' (1914) de Georg Trakl. A continuación, compáralo con el soneto barroco 'Tränen des Vaterlandes' (1636) de Andreas Gryphius en relación con la representación de la guerra y la actitud del sujeto lírico frente al sufrimiento.",
+                "de": "Analysiere das expressionistische Gedicht 'Grodek' von Georg Trakl. Vergleiche es anschließend mit dem barocken Sonett 'Tränen des Vaterlandes' von Andreas Gryphius unter Berücksichtigung der Kriegsdarstellung und der Haltung des lyrischen Subjekts."
+              },
+              "solution": {
+                "es": "1) Einleitung: Presentación de ambos poemas. Tesis: Ambos poemas tratan los estragos de la guerra (Primera Guerra Mundial y Guerra de los Treinta Años) en el territorio alemán, pero Gryphius mantiene una fe cristiana en el alma frente a la devastación material, mientras que Trakl expresa el vacío existencial, la locura y el apocalipsis absoluto del expresionismo tardío.\n2) Análisis de 'Grodek': Poema en verso libre con fuertes metáforas oscuras ('am Abend tönen die herbstlichen Wälder von tödlichen Waffen'). Representación de los soldados agonizantes, el dolor de las hermanas enfermeras y la figura de la noche oscura. Simbolismo cromático y fragmentación sintáctica típica de la crisis del yo.\n3) Comparación con Gryphius: Estructura estricta del soneto alejandrino barroco (dos cuartetos, dos tercetos). Motivos del Barroco (Vanitas y Memento Mori) frente a la fragmentación de Trakl. Gryphius concluye que lo peor no es la peste o la muerte, sino la destrucción de la fe del alma ('doch grimmer noch als Pest... dass auch der Seelen Schatz so vielen abgezwungen').\n4) Schluss: Resumen de la comparación formal e ideológica entre épocas.",
+                "de": "1) Einleitung: Vorstellung beider Gedichte. Kernthese: Beide thematisieren Kriegszerstörung (Dreißigjähriger Krieg vs. Erster Weltkrieg), aber Gryphius betont den Verlust des Glaubens als größtes Übel, während Trakl ein düsteres Bild des sinnlosen Sterbens ohne metaphysischen Trost zeichnet.\n2) Analyse 'Grodek': Expressionistischer freier Rhythmus, apokalyptische Farbsymbolik, düstere Naturbilder, Klage über den Untergang zukünftiger Generationen.\n3) Vergleich mit Gryphius: Barockes Sonett (Alexandriner), Vanitas- und Memento-mori-Motive. Strukturierter Aufbau (Thesen in Quartetten, Synthese in Terzetten).\n4) Schluss: Vergleich der Epochenweltsichten."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis formal de 'Grodek' (imágenes poéticas, metáforas, ritmo libre).\n• 15 Puntos: Análisis formal y de motivos del soneto barroco de Gryphius.\n• 15 Puntos: Comparación estructural detallada basada en criterios de contraste.\n• 5 Puntos: Calidad expresiva formal y sintaxis académica en alemán.",
+                "de": "• 15 Punkte: Formale Analyse von 'Grodek'.\n• 15 Punkte: Formale Analyse des Sonetts 'Tränen des Vaterlandes'.\n• 15 Punkte: Kriterienorientierter Vergleich der Kriegsdarstellung.\n• 5 Punkte: Fachsprachliche Präzision."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el Gedichtvergleich, asegúrate de citar las metáforas de ambos poemas con su línea correspondiente. Compara también la estructura del poema: el caos expresionista en verso libre frente al riguroso orden barroco del soneto.",
+                "de": "Tipp: Vergleiche auch die formale Strenge des Barocks (Sonettstruktur) mit der Formauflösung des Expressionismus."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Erörterung pragmatischer Texte (Disertación argumentativa basada en un artículo)",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Analyse und Erörterung eines Sachtextes über die Zukunft des Buches und die Lesekrise",
+              "question": {
+                "es": "Analiza la argumentación de la autora en el artículo de opinión sobre la pérdida de capacidad de concentración lectora en jóvenes debido a la lectura fragmentada en pantallas. A continuación, debate si la digitalización de las bibliotecas escolares y la sustitución de libros de texto por soportes digitales es conveniente.",
+                "de": "Analysiere die Argumentationsstruktur der Autorin im Sachtext zur Veränderung des Leseverhaltens im digitalen Zeitalter. Erörtere anschließend, ob die Digitalisierung von Schulbibliotheken und der Ersatz gedruckter Schulbücher durch Tablets förderlich für den Lernprozess ist."
+              },
+              "solution": {
+                "es": "1) Análisis del texto pragmático: Tesis de la autora (la lectura digital fomenta la lectura superficial / skimming y reduce la comprensión profunda / deep reading). Estructura argumentativa y uso de datos científicos.\n2) Disertación (Erörterung):\n- Argumentos PRO (Digitalización): Acceso instantáneo a miles de libros, interactividad y elementos multimedia que motivan al alumno, ahorro de papel y peso en las mochilas.\n- Argumentos CONTRA (Gedruckte Bücher): La lectura en papel fomenta una mayor retención de conceptos complejos, reduce la fatiga visual y evita las constantes distracciones de notificaciones de las tabletas.\n3) Balance y Fazit: Propuesta de coexistencia: los textos de estudio y novelas de lectura crítica deben mantenerse en formato físico, mientras que las fuentes de consulta rápidas y enciclopedias pueden digitalizarse.",
+                "de": "1) Sachtextanalyse: These der Autorin (digitale Medien führen zu oberflächlichem Lesen / Skimming). Rhetorische Gestaltung analysieren.\n2) Erörterung: Pro- und Contra-Argumentation.\n- Pro: Schneller Zugriff, Multimedia, Gewichtsersparnis.\n- Contra: Konzentrationsverlust durch Ablenkung, kognitiv tiefere Verarbeitung bei gedruckten Texten.\n3) Synthese: Plädoyer für ein hybrides Konzept (Fachliteratur digital, Pflichtlektüren gedruckt)."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto del texto original (tesis, estructura y tono de la autora).\n• 20 Puntos: Redacción argumentativa dialéctica (tesis, antítesis, argumentos justificados y ejemplos).\n• 10 Puntos: Conclusión integrada de síntesis.\n• 5 Puntos: Riqueza léxica formal, ortografía y corrección estilística.",
+                "de": "• 15 Punkte: Textanalyse (Argumentationsstruktur der Autorin).\n• 20 Punkte: Argumentativer Hauptteil (dialektische Erörterung).\n• 10 Punkte: Fazit und eigene Stellungnahme.\n• 5 Punkte: Ausdrucksfähigkeit und Grammatik."
+              },
+              "recommendation": {
+                "es": "Recomendación: En una Erörterung dialectal en alemán (Sanduhr-Prinzip), empieza siempre con los argumentos opuestos a tu propia tesis y termina con tus argumentos más fuertes. Esto hace que tu postura final resulte lógicamente inevitable para el examinador.",
+                "de": "Tipp: Nutze das Sanduhrprinzip. Beginne mit der Gegenseite und präsentiere deine stärksten eigenen Argumente zum Schluss."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

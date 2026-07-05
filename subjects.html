@@ -350,10 +350,18 @@ function renderArchiveTab(data, lang) {
             <h3 style="font-size:18px;font-weight:800;">${exam.title}</h3>
             <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Año oficial: ${exam.year}</div>
           </div>
-          ${exam.pdf_url ? `
-            <a href="${exam.pdf_url}" target="_blank" class="btn btn-outline-gold btn-sm" style="margin-left:auto;display:flex;align-items:center;gap:6px;">
-              📥 Descargar Enunciado Oficial (PDF)
-            </a>` : ''}
+          <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-left:auto;">
+            ${exam.pdf_url ? `
+              <a href="${exam.pdf_url}" target="_blank" class="btn btn-outline-gold btn-sm" style="display:flex;align-items:center;gap:6px;">
+                📥 PDF Original
+              </a>` : ''}
+            <button onclick="PDFGenerator.generateWrittenExam('${data.subject}', '${exam.id}', false)" class="btn btn-secondary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
+              🖨️ Imprimir Examen
+            </button>
+            <button onclick="PDFGenerator.generateWrittenExam('${data.subject}', '${exam.id}', true)" class="btn btn-primary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
+              🖨️ Imprimir Solución
+            </button>
+          </div>
         </div>
         
         <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-lg);padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">

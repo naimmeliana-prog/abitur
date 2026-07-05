@@ -41,6 +41,56 @@
     { "name": "News Article", "structure": "Headline → Lead (5 Ws) → Body (inverted pyramid) → Quotes → Background", "register": "Neutral, factual" },
     { "name": "Comment / Blog Post", "structure": "Attention-grabbing title → Personal stance → Arguments + Examples → Conclusion with call to action", "register": "Semi-formal to informal" }
   ],
+  "curriculum_topics": [
+    {
+      "name": "The American Dream — Myth and Reality",
+      "focus_areas": [
+        "Historical origins: Pilgrim Fathers, Declaration of Independence (1776), 'pursuit of happiness'",
+        "Concept of 'from rags to riches' and the self-made man",
+        "The American Nightmare: systemic racism, social inequality, economic crises, the Great Gatsby context"
+      ],
+      "summary": {
+        "es": "1) Mito: Cualquier persona, independientemente de su origen social, puede alcanzar el éxito y la prosperidad mediante el trabajo duro y la determinación (concepto meritocrático). 2) Realidad: La movilidad social en EE.UU. es menor que en muchos países europeos. Las minorías étnicas y los grupos vulnerables enfrentan barreras estructurales (racismo sistémico, coste de la educación superior). 3) Literatura relacionada: 'The Great Gatsby' de F. Scott Fitzgerald (la decadencia del sueño americano y la superficialidad de la clase alta de los años 20).",
+        "de": "1) Mythos: Jeder Mensch kann unabhängig von seiner Herkunft durch harte Arbeit und Fleiß Erfolg und Wohlstand erlangen ('vom Tellerwäscher zum Millionär'). 2) Realität: Geringe soziale Mobilität, strukturelle Hürden (Rassismus, Bildungsschulden). 3) Literarische Bezüge: 'The Great Gatsby' von F. Scott Fitzgerald (Scheitern des Traums, Oberflächlichkeit der Oberschicht)."
+      }
+    },
+    {
+      "name": "The United Kingdom — Tradition and Change",
+      "focus_areas": [
+        "Monarchy and democracy: the role of the Royal Family and constitutional monarchy",
+        "Multicultural society: immigration (Windrush generation), postcolonial integration and social cohesion",
+        "Post-Brexit challenges: economic impact, national identity, relations with Europe"
+      ],
+      "summary": {
+        "es": "1) Multiculturalismo: El Reino Unido ha sido moldeado por la inmigración procedente de sus antiguas colonias (Commonwealth). La generación Windrush sentó las bases de una sociedad multiétnica, pero persisten debates sobre el racismo y la integración. 2) Brexit: La salida de la UE en 2020 redefinió las relaciones comerciales y la identidad británica, exacerbando tensiones con Escocia e Irlanda del Norte.",
+        "de": "1) Multikulturelle Gesellschaft: Einwanderung aus dem Commonwealth (Windrush-Generation). Herausforderungen der Integration und ethnische Konflikte. 2) Brexit: Wirtschaftliche und politische Neuorientierung, Wiederaufflammen des Nordirland-Konflikts und schottische Unabhängigkeitsbestrebungen."
+      }
+    },
+    {
+      "name": "Postcolonialism — The Legacy of Empire",
+      "focus_areas": [
+        "The British Empire: colonization, decolonization, and the birth of the Commonwealth",
+        "Identity and belonging: hybrid identities, cultural clashes and alienation in postcolonial literature",
+        "Issues of power, racism, stereotyping, and eurocentric worldviews"
+      ],
+      "summary": {
+        "es": "1) Conceptos clave: Identidad híbrida (sentirse de dos culturas a la vez pero sin pertenecer del todo a ninguna). Alienación y aculturación. 2) Impacto: La herencia de la colonización en la lengua inglesa (variedades globales de inglés / World Englishes) y la literatura de autores postcoloniales (como Chinua Achebe, Chimamanda Ngozi Adichie) que 'escriben de vuelta' (write back) al centro del imperio.",
+        "de": "1) Kernkonzepte: Hybride Identität, Entfremdung, Kulturkonflikte. 2) Postkoloniale Literatur: Auseinandersetzung mit den Folgen des Imperialismus aus Sicht der Kolonisierten (z.B. Adichie, Achebe). Wandel des Englischen zu Global English."
+      }
+    },
+    {
+      "name": "Shakespeare — Timeless Themes",
+      "focus_areas": [
+        "The Elizabethan world picture: Great Chain of Being and the divine right of kings",
+        "Universal themes in tragedies (Macbeth, Hamlet, Romeo and Juliet) and sonnets",
+        "The relevance of Shakespeare's language, characterization, and motifs in the modern world"
+      ],
+      "summary": {
+        "es": "1) Orden del Mundo Isabelino: Creencia en una jerarquía cósmica ordenada por Dios (Great Chain of Being). Cualquier perturbación (ej. regicidio en Macbeth) desata el caos natural y político. 2) Temas Universales: La ambición destructiva, la locura, el poder corruptor, los celos y el amor prohibido siguen siendo de absoluta vigencia actual.",
+        "de": "1) Elisabethanisches Weltbild: Die Vorstellung einer gottgegebenen Ordnung (Great Chain of Being). Ein Verstoß gegen diese Ordnung (z.B. Königsmord) führt zu Chaos. 2) Universelle Themen: Ehrgeiz, Machtgier, Liebe, Eifersucht und Verrat machen Shakespeares Stücke zeitlos."
+      }
+    }
+  ],
   "academic_vocabulary": {
     "linking_ideas": ["Furthermore", "Moreover", "In addition", "Nevertheless", "However", "Despite this", "Consequently", "Therefore", "As a result", "In contrast"],
     "expressing_opinion": ["It is argued that", "It could be claimed that", "From my perspective", "I would contend that", "Evidence suggests that"],
@@ -130,6 +180,182 @@
       "correct": 2,
       "explanation": { "es": "La opción C adapta el mensaje al destinatario (pen pal en UK), usa vocabulario apropiado, hace la información relevante para el receptor y no traduce literalmente. La A es traducción literal (no mediation). La B es demasiado informal. La D está en alemán.", "de": "Option C passt die Botschaft dem Adressaten an (Brieffreund in UK), verwendet passendes Vokabular und macht den Inhalt relevant. A ist wörtliche Übersetzung (keine Mediation). B zu informell. D auf Deutsch." },
       "tip": { "es": "Mediation mantra: ¿Quién es el receptor? ¿Qué necesita saber? ¿Qué registro le corresponde? Responde estas 3 preguntas ANTES de escribir.", "de": "Mediation-Mantra: Wer ist der Empfänger? Was muss er wissen? Welches Register passt? Diese 3 Fragen VOR dem Schreiben beantworten." }
+    }
+  ],
+  "official_exams_archive": [
+    {
+      "id": "englisch_nrw_2023_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Englisch GK",
+      "year": "2023",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Este es el archivo histórico de la prueba unificada de inglés del Abitur NRW 2023 para nivel Grundkurs (GK). Se compone de tres partes clásicas del DIA: comprensión lectora y análisis estilístico de un discurso sobre la globalización, redacción de un ensayo de opinión y mediación lingüística de un folleto informativo alemán sobre sostenibilidad.",
+        "de": "Archiv der zentralen Abiturprüfung Englisch NRW 2023 für den Grundkurs. Umfasst Leseverstehen und Stilanalyse eines Vortrags zur Globalisierung, das Verfassen eines argumentativen Kommentars sowie die Sprachmittlung (Mediation) eines deutschen Textes ins Englische."
+      },
+      "blocks": [
+        {
+          "name": "Part A: Reading Comprehension and Analysis (Análisis y comprensión lectora)",
+          "tasks": [
+            {
+              "title": "Task 1: Comprehension (Outline) and Analysis of Rhetorical Devices in Barack Obama's Speech on Climate Change",
+              "question": {
+                "es": "Apartado a) Resume (Outline) las tesis principales del autor sobre la responsabilidad compartida de los países industrializados en la crisis climática.\nApartado b) Analiza (Analyse) cómo el autor utiliza recursos retóricos (como la anáfora y la metáfora) para persuadir a su audiencia y estructurar su discurso argumentativo.",
+                "de": "a) Fasse die Hauptthesen des Autors zur gemeinsamen Verantwortung der Industrieländer in der Klimakrise zusammen (Outline).\nb) Analysiere (Analyse), wie der Autor rhetorische Mittel (wie Anaphern und Metaphern) einsetzt, um seine Zuhörer zu überzeugen und seine Argumentation zu strukturieren."
+              },
+              "solution": {
+                "es": "a) Outline:\n- The author states that developed nations are the historic contributors to greenhouse gas emissions.\n- He highlights that collective global action is required, yet leaders must spearhead investments in green technologies.\n- He concludes that failing to act is a moral failure towards future generations.\n\nb) Rhetorical Analysis:\n- **Anaphora**: The author repeats the phrase 'We must...' at the beginning of lines 12, 15, and 18. This repetition builds urgency and appeals to the audience's sense of duty.\n- **Metaphor**: In line 25, the author describes the transition to clean energy as a 'unidirectional train we cannot afford to miss'. This metaphor visualizes progress and creates a fear of missing out on economic and environmental opportunities.",
+                "de": "a) Outline:\n- Der Autor betont, dass Industrienationen historisch für den Großteil der Emissionen verantwortlich sind.\n- Er fordert gemeinsames globales Handeln und Vorreiterrollen bei grünen Technologien.\n- Er warnt vor einem moralischen Versagen gegenüber zukünftigen Generationen.\n\nb) Analyse:\n- **Anapher**: Wiederholung von 'We must...' (Z. 12, 15, 18) erzeugt Dringlichkeit und appelliert an das Pflichtbewusstsein.\n- **Metapher**: Die Energiewende als 'unidirectional train' (Z. 25) verdeutlicht Fortschritt und die Notwendigkeit, Chancen nicht zu verpassen."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 10 Puntos (a): Redactar un resumen breve y estructurado en inglés (con sus propias palabras, sin copiar fragmentos enteros).\n• 20 Puntos (b): Identificar, citar (indicando línea) y explicar formalmente el efecto de al menos dos recursos retóricos en el texto.",
+                "de": "• 10 Punkte: Strukturierte, präzise Zusammenfassung der Thesen (Outline) auf Englisch.\n• 20 Punkte: Analyse rhetorischer Mittel mit Textbelegen und Erläuterung der Leserwirkung."
+              },
+              "recommendation": {
+                "es": "Recomendación: En 'Outline' nunca incluyas interpretaciones personales. Debes ser estrictamente objetivo. En el análisis, usa la estructura de tres pasos: identificar el recurso, citarlo ('quote') y explicar el efecto en el lector ('effect').",
+                "de": "Achtung: Beim Outline sachlich und distanziert bleiben. Bei der Analyse zwingend die Wirkung der Stilmittel (rhetorical effect) erläutern."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Part B: Composition / Writing (Redacción y disertación)",
+          "tasks": [
+            {
+              "title": "Task 2: Comment on the role of youth activism in modern international politics",
+              "question": {
+                "es": "Redacta un comentario argumentativo (Comment) de aproximadamente 250 palabras sobre la siguiente afirmación: 'Youth climate movements have successfully forced international leaders to take concrete actions against global warming.' Argumenta a favor o en contra aportando ejemplos concretos.",
+                "de": "Schreibe einen argumentativen Kommentar (Comment) von ca. 250 Wörtern zu folgender Aussage: 'Youth climate movements have successfully forced international leaders to take concrete actions against global warming.' Diskutiere Pro- und Contra-Argumente anhand konkreter Beispiele."
+              },
+              "solution": {
+                "es": "1) Introduction: Hook (ej. Greta Thunberg o Fridays for Future en los medios). Presentar la tesis: Aunque los movimientos juveniles han logrado elevar la conciencia climática pública a niveles récord, su influencia real en las políticas internacionales legislativas de los gobiernos ha sido limitada.\n2) Body (Arguments PRO): Han modificado la agenda pública de los parlamentos, han ganado demandas judiciales climáticas y han presionado a empresas multinacionales para adoptar metas ESG.\n3) Body (Arguments CON): Los acuerdos internacionales (como la COP) siguen dominados por intereses económicos fósiles y los compromisos reales de reducción de carbono apenas se cumplen.\n4) Conclusion: Recapitular y proponer que el activismo juvenil es crucial para el cambio a largo plazo porque educa a los futuros votantes y líderes.",
+                "de": "1) Einleitung: Einstieg mit Fridays for Future. These: Jugendbewegungen haben das Bewusstsein geschärft, aber den tatsächlichen Gesetzeswandel kaum beeinflusst.\n2) Hauptteil (Pro): Agenda-Setting in den Medien, juristische Erfolge bei Klimaklagen, Druck auf Konzerne.\n3) Hauptteil (Contra): COP-Verhandlungen werden weiterhin von Wirtschaftsinteressen dominiert, tatsächliche Emissionen sinken nicht ausreichend.\n4) Schluss: Zusammenfassendes Fazit und Ausblick."
+              },
+              "points": 40,
+              "criteria": {
+                "es": "• 10 Puntos: Estructura formal del ensayo (Introduction con gancho, párrafos argumentativos bien divididos y conclusión).\n• 20 Puntos: Calidad de los argumentos y ejemplos presentados.\n• 10 Puntos: Rango de vocabulario académico formal y precisión gramatical en inglés.",
+                "de": "• 10 Punkte: Strukturierter Aufbau des Kommentars (Einleitung, Hauptteil, Schluss).\n• 20 Punkte: Überzeugende Argumentation und Relevanz der Beispiele.\n• 10 Punkte: Sprachliche Qualität, akademischer Wortschatz und Grammatik."
+              },
+              "recommendation": {
+                "es": "Recomendación: Utiliza 'linking words' formales (Furthermore, Nevertheless, In addition) para unir tus ideas de forma fluida. Evita oraciones extremadamente largas para no cometer fallos de concordancia.",
+                "de": "Tipp: Nutze formale Übergangswörter (linking devices) für einen flüssigen Lesefluss und vermeide zu komplexe Satzkonstruktionen."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Part C: Mediation (Sprachmittlung alemán-inglés)",
+          "tasks": [
+            {
+              "title": "Task 3: Mediate a German informational brochure about Germany's Energiewende into English",
+              "question": {
+                "es": "Imagina que eres voluntario en un blog escolar sobre medio ambiente. Medía (Mediate) al inglés los puntos principales de un folleto alemán sobre la transición energética (Energiewende) de forma concisa y adaptada a un público internacional joven.",
+                "de": "Stelle dir vor, du schreibst für einen internationalen Umwelt-Schulblog. Vermittle (Mediate) die Kernaussagen einer deutschen Broschüre über die Energiewende verständlich und adressatengerecht auf Englisch."
+              },
+              "solution": {
+                "es": "1) Salutation and Context: 'Hi everyone! In this post, I want to share how Germany is tackling the transition to renewable energy...'\n2) Main Content (Mediation points): Hechos clave sintetizados:\n- Germany aims to phase out coal and nuclear energy completely, focusing on wind and solar power.\n- The goal is to reach carbon neutrality by 2045.\n- Key challenges include updating the electrical grid and storing wind energy produced in the North Sea.\n3) Conclusion and Sign-off: 'What do you think about these measures? Let me know in the comments!'",
+                "de": "1) Einleitung: 'Hi everyone! Today, I want to share some insights on Germany's transition to green energy...'\n2) Hauptinhalte (Mediation): Synthese der Kernpunkte:\n- Kohle- und Atomausstieg, Fokus auf Wind- und Solarenergie.\n- Klimaneutralität bis 2045.\n- Herausforderung: Netzausbau und Energiespeicherung.\n3) Schluss: Call to Action an die Leser des Blogs."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 10 Puntos: Adaptar correctamente el registro formal/semi-formal al contexto del blog escolar y al destinatario internacional joven.\n• 10 Puntos: Extraer y sintetizar de forma correcta los puntos informativos esenciales del texto original en alemán sin copiar literalmente.\n• 10 Puntos: Fluidez expresiva y corrección lingüística al redactar en inglés.",
+                "de": "• 10 Punkte: Adressatengerechte Gestaltung und passendes Register (Blogpost).\n• 10 Punkte: Korrekte Auswahl und Reduktion der wesentlichen Informationen aus dem deutschen Ausgangstext.\n• 10 Punkte: Sprachliche Richtigkeit und Natürlichkeit des Englischen."
+              },
+               "recommendation": {
+                "es": "Recomendación: En Mediation, NUNCA traduzcas literalmente oraciones completas. El examinador restará puntos si detecta traducciones literales de modismos o estructuras gramaticales alemanas. Debes expresar el significado con estructuras nativas en inglés.",
+                "de": "Achtung: Keine direkte Übersetzung! Es geht um die sinngemäße Übertragung der relevanten Aspekte in flüssigem Englisch."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "englisch_nrw_2024_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2024 — Englisch GK",
+      "year": "2024",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen escrito oficial del Zentralabitur Englisch NRW 2024 (Grundkurs). Contiene análisis de un discurso medioambiental de Barack Obama en relación con las responsabilidades políticas globales, redacción de un ensayo argumentativo sobre la ética de la inteligencia artificial en el sector educativo, y mediación escrita sobre alternativas de transporte compartido en grandes urbes alemanas.",
+        "de": "Archiv der zentralen Abiturprüfung Englisch NRW 2024 für den Grundkurs. Umfasst Textanalyse einer Rede von Barack Obama zur Klimagerechtigkeit, eine argumentative Erörterung über KI-Ethik in Schulen sowie eine Mediation über Carsharing-Konzepte in deutschen Großstädten."
+      },
+      "blocks": [
+        {
+          "name": "Part A: Reading Comprehension and Language Analysis",
+          "tasks": [
+            {
+              "title": "Task 1: Rhetorical Analysis of Barack Obama's Speech on Environmental Justice",
+              "question": {
+                "es": "Analiza la estructura argumentativa y los recursos estilísticos (rhetorical devices) utilizados por Barack Obama en su discurso sobre el cambio climático para convencer a la audiencia sobre la necesidad de tomar medidas urgentes.",
+                "de": "Analysiere die Argumentationsstruktur und die rhetorischen Mittel in Barack Obamas Rede zum Klimawandel und erläutere, wie er das Publikum von der Notwendigkeit sofortigen Handelns überzeugt."
+              },
+              "solution": {
+                "es": "1) Introduction: Identify the source, date, author, and main thesis (climate change is a global moral challenge, not just an economic or scientific one).\n2) Structure: The speech is structured into three parts: a diagnostic phase outlining current damage, a moral call to action targeting the youth, and a hopeful projection of a sustainable future.\n3) Rhetorical devices and style:\n- Use of Metaphors ('our warming planet is a warning sign') to create visual urgency.\n- Use of Anaphora ('For the sake of our children, for the sake of our future...') to build emotional momentum (Pathos).\n- Use of Inclusive Pronouns ('we', 'our') to build solidarity and shared responsibility (Ethos).\n4) Conclusion: Evaluate the speech as highly persuasive, blending scientific urgency with universal ethical values.",
+                "de": "1) Einleitung: Vorstellung der Rede. Kernthese: Klimawandel ist eine ethische Pflicht.\n2) Struktur: Gliederung in Diagnose der Schäden, moralischer Appell an die Jugend und optimistische Zukunftsvision.\n3) Rhetorische Mittel:\n- Metaphern ('warming planet is a warning sign') erzeugen Dringlichkeit.\n- Anaphern ('For the sake of...') verstärken das Pathos.\n- Inklusive Pronomen ('we', 'our') stärken das Gemeinschaftsgefühl (Ethos).\n4) Schluss: Zusammenfassende Bewertung der rhetorischen Wirkung."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 10 Puntos: Comprensión y síntesis clara de las tesis principales del discurso (Reading Comprehension).\n• 15 Puntos: Análisis formal riguroso de al menos 3 recursos estilísticos con citas textuales y su efecto en la audiencia.\n• 5 Puntos: Fluidez en el uso de vocabulario académico de análisis literario en inglés.",
+                "de": "• 10 Punkte: Erfassung der Hauptaussagen der Rede.\n• 15 Punkte: Analyse von mindestens 3 rhetorischen Mitteln mit Textbelegen und Wirkung.\n• 5 Punkte: Verwendung adäquater englischer Fachterminologie."
+              },
+              "recommendation": {
+                "es": "Recomendación: Al analizar discursos políticos en inglés, enfócate siempre en la tríada clásica de la retórica: Ethos (credibilidad), Pathos (emoción) y Logos (lógica). Esto estructurará tu análisis de forma brillante.",
+                "de": "Tipp: Nutze bei Redenanalysen das klassische Schema von Ethos, Pathos und Logos zur Strukturierung deiner Argumentation."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Part B: Composition / Writing (Aufsatz)",
+          "tasks": [
+            {
+              "title": "Task 2: Comment on the ethical implications of AI tools in schools",
+              "question": {
+                "es": "Redacta un comentario argumentativo (Comment) sobre si el uso generalizado de herramientas de IA para redactar ensayos en las escuelas representa el fin de la educación humanista tradicional o una oportunidad de aprendizaje personalizado.",
+                "de": "Schreibe einen Kommentar zu der Frage, ob der Einsatz von KI-Software zum Schreiben von Aufsätzen das Ende der traditionellen Bildung bedeutet oder eine Chance für individualisiertes Lernen darstellt."
+              },
+              "solution": {
+                "es": "1) Introduction: Define the current context of generative AI in high schools. Thesis: AI does not signify the end of education, but rather forces a shift from mechanical writing to high-level critical thinking.\n2) Body (Arguments PRO AI): Custom pacing, instant feedback on grammar, and overcoming the blank-page syndrome.\n3) Body (Arguments CON AI): Risks of lazy thinking, lack of personal voice, and issues with factual errors (hallucinations).\n4) Conclusion: Propose a reform of grading systems, focusing on oral defense, process evaluation, and human-in-the-loop assessments.",
+                "de": "1) Einleitung: Kontextualisierung von generativer KI an Schulen. These: Kein Ende der Bildung, sondern Verschiebung hin zu kritischem Denken.\n2) Hauptteil (Pro): Individuelle Förderung, Hilfe bei Schreibblockaden, Überwindung mechanischer Hürden.\n3) Hauptteil (Contra): Denkfaulheit, Verlust der eigenen Stimme, Halluzinationen von Fehlern.\n4) Schluss: Plädoyer für neue Prüfungsformate (z.B. mündliche Prüfungen)."
+              },
+              "points": 40,
+              "criteria": {
+                "es": "• 10 Puntos: Introducción clara y planteamiento formal de la tesis.\n• 20 Puntos: Dos bloques argumentativos (Pro y Contra) equilibrados con ejemplos reales.\n• 10 Puntos: Estilo formal (sin contracciones como 'don't' o 'can't') y conectores variados.",
+                "de": "• 10 Punkte: Einleitung und präzise Thesenformulierung.\n• 20 Punkte: Dialektische Erörterung mit Beispielen.\n• 10 Punkte: Formaler Schreibstil (keine Kurzformen) und logische Verknüpfungen."
+              },
+              "recommendation": {
+                "es": "Recomendación: En los exámenes escritos oficiales en inglés (written Abitur), evita las contracciones coloquiales (usa 'do not' en lugar de 'don't', o 'would not' en lugar de 'wouldn't'). Esto eleva el registro y complace a los correctores.",
+                "de": "Achtung: Vermeide in formellen Klausuren jegliche Kurzformen (don't, can't, it's). Schreibe die Wörter immer voll aus."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Part C: Mediation (Sprachmittlung)",
+          "tasks": [
+            {
+              "title": "Task 3: Mediate a German text about urban mobility and car-sharing to an English-speaking city council",
+              "question": {
+                "es": "El ayuntamiento de una ciudad británica estudia implementar zonas peatonales y opciones de coche compartido. Medía al inglés los puntos fundamentales de un artículo sobre la expansión del Carsharing en Berlín y Múnich.",
+                "de": "Ein britischer Stadtrat plant die Förderung von Carsharing. Vermittle (Mediate) die wesentlichen Erkenntnisse eines deutschen Fachartikels über die Entwicklung von Carsharing in Berlin und München auf Englisch."
+              },
+              "solution": {
+                "es": "1) Formal Salutation: 'To the Members of the City Council, I am writing to present key findings from German urban planning research...'\n2) Mediation points:\n- Car-sharing has reduced private car ownership in Berlin (one shared car replaces about 4 to 10 private vehicles).\n- Two models coexist: free-floating (flexible park-and-leave) and station-based (pick up and return to the same spot).\n- Major barriers include securing parking spaces reserved exclusively for shared cars and high registration costs.\n3) Conclusion and Recommendation: Suggest adopting reserved parking zones as implemented in Munich.",
+                "de": "1) Formale Anrede: 'To the Members of the City Council...'\n2) Mediation (Kernpunkte):\n- Carsharing reduziert privaten PKW-Besitz (1 geteiltes Auto ersetzt 4 bis 10 Privatwagen in Berlin).\n- Zwei Modelle: Free-floating (flexibles Parken) und stationsbasiert.\n- Hürden: Mangel an reservierten Parkflächen, Anmeldegebühren.\n3) Fazit und Empfehlung für den Stadtrat."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 10 Puntos: Redacción en estilo formal de carta/informe oficial para el ayuntamiento.\n• 10 Puntos: Selección y síntesis de los datos estadísticos y operacionales relevantes de las ciudades alemanas.\n• 10 Puntos: Excelente traducción cultural y reformulación al inglés.",
+                "de": "• 10 Punkte: Einhaltung des formellen Brief-/Berichtsregisters.\n• 10 Punkte: Relevante Auswahl von Daten und Fakten.\n• 10 Punkte: Natürlicher englischer Ausdruck."
+              },
+              "recommendation": {
+                "es": "Recomendación: En una mediación de informe, organiza la información en viñetas (bullet points) legibles con títulos claros en negrita. Esto facilita la lectura del destinatario y es muy bien valorado en la rúbrica oficial.",
+                "de": "Tipp: Nutze Aufzählungspunkte (bullet points) für eine übersichtliche Darstellung im Bericht."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

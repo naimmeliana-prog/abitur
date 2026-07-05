@@ -9,6 +9,22 @@
     "es": "El examen de Español en el DIA de Valencia está diseñado bajo formato nativo específico para España. Al ser nativos hispanohablantes en su mayoría, el nivel de exigencia es muy alto. Incluye: comentario de texto de prensa actual, análisis literario e historia contemporánea. Recurso principal: Knowunity España (alumnos de colegios alemanes de la Región 5).",
     "de": "Die Spanisch-DIA-Prüfung in Valencia ist im spezifischen Formato für Spanien gestaltet. Da die meisten Schüler Muttersprachler sind, ist das Anforderungsniveau sehr hoch. Hauptquelle: Knowunity España."
   },
+  "exam_structure": {
+    "es": "El examen consta de tres grandes bloques diferenciados: el Comentario de un texto periodístico de opinión actual (resumen, análisis de estructura, figuras retóricas e intención comunicativa), el Análisis Literario y contextualización histórica de un fragmento de las lecturas obligatorias, y finalmente una Disertación/Aufsatz argumentativa sobre un tema de relevancia social o ética actual.",
+    "de": "Die Prüfung umfasst drei Blöcke: Textanalyse einer aktuellen Zeitungskolumne, literaturhistorische Analyse eines Textauszugs der Pflichtlektüren und eine argumentative Erörterung (Disertación) zu einem gesellschaftlichen Thema."
+  },
+  "keyOperators": [
+    { "op": "Resumir", "meaning": { "es": "Sintetizar de manera objetiva, breve y con palabras propias las ideas esenciales del texto original, respetando su jerarquía lógica.", "de": "Die Hauptthesen des Textes sachlich, kurz und mit eigenen Worten wiedergeben." }, "trap": { "es": "Trampa: Copiar oraciones literales del texto (el tribunal restará puntos) o añadir valoraciones personales antes de tiempo.", "de": "Falle: Direkte Textpassagen abschreiben oder bereits im Resümee werten." } },
+    { "op": "Analizar / Explicar", "meaning": { "es": "Desglosar la estructura del texto, identificar el género periodístico o movimiento literario y señalar los recursos lingüísticos funcionales.", "de": "Die Struktur des Textes zerlegen, die Textsorte/Strömung bestimmen und die sprachlich-stilistischen Mittel aufzeigen." }, "trap": { "es": "Trampa: Hacer una lista simple de figuras estilísticas sin explicar qué efecto buscan producir en el lector.", "de": "Falle: Stilmittel nur auflisten, statt deren konkrete Wirkung im Kontext zu erklären." } },
+    { "op": "Contextualizar", "meaning": { "es": "Relacionar el texto u obra literaria con su época histórica, movimiento artístico, trayectoria del autor y las corrientes de pensamiento contemporáneas.", "de": "Das Werk in seine historische Epoche, Strömung, das Gesamtwerk des Autors und den zeitgenössischen Kontext einbetten." }, "trap": { "es": "Trampa: Proporcionar datos biográficos anecdóticos o históricos irrelevantes que no explican la significación profunda de la obra.", "de": "Falle: Unwichtige biografische Anekdoten nennen, statt den Bezug zum Werk zu verdeutlichen." } },
+    { "op": "Disertar / Argumentar", "meaning": { "es": "Desarrollar una postura propia frente a una tesis dada, fundamentando con argumentos lógicos, ejemplos reales y contraargumentos dialécticos.", "de": "Einen eigenen Standpunkt zu einer These ausarbeiten, gestützt auf logische Argumente, Beispiele und Gegenargumente." }, "trap": { "es": "Trampa: Hacer una redacción puramente emocional o unilateral sin contraargumentar ni refutar las tesis opuestas.", "de": "Falle: Nur einseitig argumentieren, ohne die Gegenperspektive zu betrachten und zu entkräften." } }
+  ],
+  "exam_tips": [
+    "Usa conectores discursivos avanzados para dar fluidez y cohesión a la redacción (ej. 'por consiguiente', 'no obstante', 'a mayor abundamiento').",
+    "En el análisis de teatro, presta especial atención a las acotaciones (didaskalias) ya que Lorca y Valle-Inclán las usan para construir el simbolismo escénico.",
+    "Para la disertación, planifica la estructura en sucio durante 10 minutos antes de empezar a escribir para no mezclar argumentos de forma caótica.",
+    "Mantén un registro culto formal y evita vulgarismos, muletillas o simplificaciones léxicas (ej. no uses la palabra 'cosa', usa 'concepto/asunto/materia')."
+  ],
   "taskTypes": [
     {
       "id": "comentario",
@@ -49,6 +65,56 @@
     { "author": "Gabriel García Márquez", "works": ["Cien años de soledad", "El amor en los tiempos del cólera"], "period": "Boom latinoamericano", "themes": ["Realismo mágico", "Tiempo cíclico", "Soledad", "Memoria"] },
     { "author": "Miguel Hernández", "works": ["El rayo que no cesa", "Vientos del pueblo"], "period": "Generación del 27 / Guerra Civil", "themes": ["Amor", "Muerte", "Guerra", "Pueblo"] },
     { "author": "Camilo José Cela", "works": ["La familia de Pascual Duarte", "La colmena"], "period": "Posguerra — Tremendismo", "themes": ["Violencia", "Miseria", "España posguerra"] }
+  ],
+  "contemporary_history": [
+    {
+      "period": "La Segunda República (1931 - 1936)",
+      "events": [
+        "Proclamación de la Segunda República el 14 de abril de 1931",
+        "Reformas educativas, agrarias y militares para modernizar España",
+        "Alta polarización social y política, inestabilidad gubernamental"
+      ],
+      "summary": {
+        "es": "1) Reformas: Intentaron la laicización del Estado, la extensión de la educación obligatoria gratuita y el voto femenino (conseguido por Clara Campoamor en 1931). 2) Oposición: Provocó el rechazo radical de los sectores conservadores (Iglesia, terratenientes, ejército), desembocando en el levantamiento militar del 17-18 de julio de 1936.",
+        "de": "1) Republikanische Reformen: Säkularisierung, Agrarreform, Frauenwahlrecht (1931). 2) Widerstand: Starke Polarisierung führt zum Militärputsch unter Franco im Juli 1936."
+      }
+    },
+    {
+      "period": "La Guerra Civil Española (1936 - 1939)",
+      "events": [
+        "Golpe de Estado militar contra la República y división de España",
+        "Conflicto nacional con fuerte implicación internacional (Eje vs Brigadas Internacionales)",
+        "Consecuencias: exilio masivo, represión y destrucción económica"
+      ],
+      "summary": {
+        "es": "1) Bandos: El bando sublevado o nacional (apoyado por la Alemania nazi y la Italia fascista) contra el bando republicano (apoyado por las Brigadas Internacionales y la URSS). 2) Literatura de guerra: Poetas como Miguel Hernández plasmaron el dolor y la trinchera ('Vientos del pueblo'). La muerte de Lorca fusilado en 1936 se convirtió en el símbolo de la tragedia.",
+        "de": "1) Spanischer Bürgerkrieg: Nationalisten (unterstützt durch Legion Condor / Hitler) gegen Republikaner (UdSSR, Internationale Brigaden). 2) Kriegslyrik: Miguel Hernández und der Tod Lorcas (1936) als Symbole der Zerstörung."
+      }
+    },
+    {
+      "period": "La Dictadura Franquista (1939 - 1975)",
+      "events": [
+        "Autarquía y aislamiento internacional en la posguerra (años 40)",
+        "Nacionalcatolicismo, censura y represión cultural de las lenguas cooficiales",
+        "Desarrollismo de los años 60: apertura turística y emigración laboral"
+      ],
+      "summary": {
+        "es": "1) Posguerra (años 40): Periodo de extrema miseria (los 'años del hambre') y cartillas de racionamiento. Autarquía económica. 2) Censura: Afectó profundamente a la literatura, surgiendo la novela existencial ('Nada' de Carmen Laforet) y el tremendismo de Cela para retratar la cruda realidad nacional bajo el control estatal.",
+        "de": "1) Diktatur Franco: Isolation und Hungerjahre (Autarkie) in den 40er Jahren. Nationalkatholizismus und Zensur. Existenzialistische Literatur (Laforet) und Tremendismus (Cela) spiegeln die Trostlosigkeit wider. 2) 60er: Wirtschaftswachstum durch Tourismus."
+      }
+    },
+    {
+      "period": "La Transición Democrática (1975 - 1982)",
+      "events": [
+        "Muerte de Franco y proclamación de Juan Carlos I como rey",
+        "Ley para la Reforma Política y primeras elecciones democráticas (1977)",
+        "Aprobación de la Constitución Española de 1978 e intento de golpe de Estado (23-F, 1981)"
+      ],
+      "summary": {
+        "es": "1) Proceso: Periodo de consenso político liderado por Adolfo Suárez que permitió desmantelar el régimen dictatorial hacia una monarquía parlamentaria. 2) Constitución de 1978: Consagra los derechos fundamentales, la aconfesionalidad del Estado y la descentralización autonómica ('Estado de las Autonomías'). 3) 23-F: El fracaso del golpe militar del coronel Tejero consolidó definitivamente el proceso democrático.",
+        "de": "1) Übergang zur Demokratie (Transición): Adolfo Suárez führt das Land vom Franquismus zur parlamentarischen Monarchie. Verfassung von 1978. 2) Putschversuch 1981 (Tejero/23-F) scheitert, was die Demokratie festigt."
+      }
+    }
   ],
   "trap_questions": [
     {
@@ -123,6 +189,132 @@
       "correct": 1,
       "explanation": { "es": "La redacción argumentativa sigue siempre: Introducción (tesis clara) → Desarrollo (argumentos pro + contraargumentos rebatidos) → Conclusión (reafirmación de tesis). La ausencia de contraargumentos hace la argumentación débil e incompleta.", "de": "Argumentationsredacción: Einleitung (klare These) → Hauptteil (Pro-Argumente + widerlegte Gegenargumente) → Schluss (Tese bekräftigen). Ohne Gegenargumente ist die Argumentation schwach." },
       "tip": { "es": "Un buen contraargumento REFUTADO vale más que 3 argumentos sin desarrollar. El examinador valora la capacidad de rebatir con lógica.", "de": "Ein gutes widerlegtes Gegenargument ist mehr wert als 3 unentwickelte Argumente. Der Prüfer schätzt logisches Widerlegen." }
+    }
+  ],
+  "official_exams_archive": [
+    {
+      "id": "espanol_nrw_2023_complete",
+      "title": "Zentralabitur Region 5 (España) 2023 — Español GK",
+      "year": "2023",
+      "pdf_url": "https://knowunity.es",
+      "intro": {
+        "es": "Este es el archivo de la prueba escrita unificada de Español del Abitur DIA (Región 5 - Península Ibérica) del año 2023. Consta de un comentario crítico de un texto periodístico de opinión y el análisis literario y contextualización de la obra poética de Federico García Lorca.",
+        "de": "Archiv der schriftlichen Abiturprüfung Spanisch für die Region 5 (Iberische Halbinsel) aus dem Jahr 2023. Besteht aus dem textgebundenen Kommentar eines Zeitungsartikels und der literarischen Analyse eines Textausschnitts von Federico García Lorca."
+      },
+      "blocks": [
+        {
+          "name": "Parte A: Comentario de Texto Periodístico (Textkommentar)",
+          "tasks": [
+            {
+              "title": "Tarea 1: Comentario crítico de una columna de opinión sobre la hiperconectividad digital en adolescentes",
+              "question": {
+                "es": "Realiza un comentario de texto crítico del artículo periodístico propuesto:\nApartado a) Resume de forma objetiva y concisa la tesis del autor y sus ideas principales.\nApartado b) Analiza la estructura argumentativa, la tipología del texto y describe tres recursos lingüísticos o figuras retóricas empleados por el autor para persuadir al lector.",
+                "de": "Erstelle einen textgebundenen Kommentar zum vorliegenden Zeitungsartikel:\na) Fasse die These und die Hauptargumente des Autors sachlich und präzise zusammen.\nb) Analysiere die Argumentationsstruktur, die Textsorte und beschreibe drei sprachliche Mittel oder rhetorische Figuren, die der Autor nutzt, um den Leser zu überzeugen."
+              },
+              "solution": {
+                "es": "a) Resumen:\n- El autor expone que el uso desmedido de teléfonos inteligentes genera adicciones conductuales y trastornos de atención en adolescentes.\n- Sostiene que las empresas tecnológicas diseñan algoritmos con el fin de retener la atención del usuario a costa de su salud mental.\n- Concluye exigiendo una regulación institucional y una educación digital en las familias.\n\nb) Análisis Formal y Recursos:\n- **Tipología**: Se trata de una columna de opinión periodística (subgénero de opinión). Combina el registro formal con giros lingüísticos apelativos.\n- **Recursos estilísticos**:\n  1. **Metáfora**: Describe las pantallas como 'chupetes electrónicos' (línea 15), asociando de forma crítica la inmadurez afectiva y la dependencia infantil con el smartphone.\n  2. **Pregunta retórica**: '¿Es este el futuro de la comunicación?' (línea 30), apelando directamente al lector para forzar una reflexión ética.\n  3. **Ironía**: Llama a los algoritmos 'nuestros mejores amigos' (línea 42), destacando el engaño mercantilista tras la apariencia de ayuda digital personalizada.",
+                "de": "a) Zusammenfassung:\n- Der Autor legt dar, dass exzessive Smartphone-Nutzung zu Verhaltenssüchten und Aufmerksamkeitsdefiziten führt.\n- Die Tech-Konzerne maximieren die Nutzerzeit auf Kosten der mentalen Gesundheit.\n- Er fordert stärkere staatliche Regulierung und Medienkompetenz in Familien.\n\nb) Analyse und Stilmittel:\n- **Textsorte**: Meinungskolumne (Zeitungsartikel).\n- **Stilmittel**:\n  1. **Metapher**: 'chupetes electrónicos' (Z. 15) vergleicht Smartphones mit Schnullern, was emotionale Abhängigkeit und Unreife betont.\n  2. **Rhetorische Frage**: '¿Es este el futuro de la comunicación?' (Z. 30) zwingt den Leser zum Nachdenken.\n  3. **Ironie**: Algorithmen werden als 'nuestros mejores amigos' (Z. 42) bezeichnet, um die kommerziellen Absichten zu kritisieren."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos (a): Resumen preciso redactado en español formal con ideas jerarquizadas.\n• 25 Puntos (b): Identificación del género textual, descripción de la estructura y explicación funcional del efecto de al menos tres figuras retóricas.\n• 10 Puntos: Expresión escrita, riqueza de vocabulario formal y ortografía correcta.",
+                "de": "• 15 Punkte: Sachliche und präzise Zusammenfassung der Thesen auf Spanisch.\n• 25 Punkte: Textsortenbestimmung, Strukturierungsanalyse und Funktionserklärung von drei Stilmitteln.\n• 10 Punkte: Ausdrucksvermögen, formale Sprache und Rechtschreibung."
+              },
+              "recommendation": {
+                "es": "Recomendación: Al ser un examen con nivel nativo de lengua española, el examinador restará puntos si utilizas frases hechas infantiles. Usa vocabulario avanzado (ej. en lugar de 'el texto habla de' escribe 'el texto aborda/analiza/cuestiona'). Cita siempre la línea exacta del recurso.",
+                "de": "Tipp: Da hohes Niveau verlangt wird, einfache Ausdrücke wie 'el texto habla de' vermeiden. Verwende stattdessen: 'el autor analiza/cuestioniert'. Immer Zeilen zitieren."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Parte B: Análisis Literario e Historia (Literarische Analyse)",
+          "tasks": [
+            {
+              "title": "Tarea 2: Análisis formal y simbólico de un fragmento de Federico García Lorca ('Romance Sonámbulo')",
+              "question": {
+                "es": "Analiza los aspectos métricos, estilísticos y simbólicos del fragmento del 'Romance Sonámbulo' propuesto ('Verde que te quiero verde...'). Contextualiza la obra en la trayectoria literaria de Lorca y en los ideales poéticos de la Generación del 27.",
+                "de": "Analysiere die formalen, stilistischen und symbolischen Aspekte des vorgelegten Textausschnitts aus Lorcas 'Romance Sonámbulo'. Ordne das Werk in das Schaffen Lorcas und die Poetik der Generación del 27 ein."
+              },
+              "solution": {
+                "es": "1) Métrica y Forma: Poema en romance tradicional (octosílabos con rima asonante e-a en los versos pares, quedando libres los impares). Combina la tradición del cancionero popular con la vanguardia moderna.\n2) Simbología lorquiana: El color verde opera como un símbolo ambiguo y obsesivo, evocando el deseo erótico frustrado y, a la vez, la premonición de la muerte trágica. El viento verde, las ramas verdes y el agua simbolizan una naturaleza indiferente al drama de los personajes. El caballo en la montaña y el barco sobre la mar representan la libertad inalcanzable.\n3) Contextualización: Publicado en el 'Romancero Gitano' (1928), obra cumbre del neopopularismo de Lorca que funde el mito del gitano con la tragedia existencial. La Generación del 27 busca conciliar la tradición literaria española (Cervantes, Góngora) con las vanguardias del surrealismo y ultraísmo de principios del siglo XX.",
+                "de": "1) Metrik und Form: Klassische Romanzenform (achtsilbige Verse mit Assonanz auf e-a in den geraden Versen). Verschmelzung von Volksdichtung und literarischer Moderne.\n2) Lorcas Symbolismus: Die Farbe Grün ('verde') steht doppeldeutig für erotisches Begehren und Vorahnung des Todes. Wind, Äste und Wasser symbolisieren eine dem Drama gleichgültige Natur. Pferd und Schiff stehen für unerreichbare Freiheit.\n3) Einordnung: Teil des 'Romancero Gitano' (1928). Die Generación del 27 verbindet spanische Barocktraditionen mit modernen Avantgarde-Strömungen wie dem Surrealismus."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto de la métrica (octosílabo, rima asonante) y rasgos del romance lírico-narrativo.\n• 20 Puntos: Explicación de los símbolos centrales (verde, luna, caballo, plata) en el fragmento y su significado estético.\n• 15 Puntos: Ubicación formal del autor y la obra dentro del neopopularismo y los ideales de la Generación del 27.",
+                "de": "• 15 Punkte: Formale Metrikanalyse (Acht-Silber, Assonanz) und Merkmale der Romanze.\n• 20 Punkte: Erläuterung der lorquianischen Symbole im Textfragment.\n• 15 Punkte: Historisch-literarische Einordnung in die Generación del 27."
+              },
+              "recommendation": {
+                "es": "Recomendación: Al analizar poesía de Lorca, recuerda que el 'gitano' no representa un folclore costumbrista, sino una encarnación del ser humano enfrentado al destino inevitable y las convenciones sociales represivas. Explicar esta dimensión existencial demuestra una comprensión profunda del tema.",
+                "de": "Tipp: Der 'gitano' (Zigeuner) bei Lorca ist kein Folklore-Klischee, sondern symbolisiert die existenzielle Einsamkeit und das tragische Schicksal des Menschen."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espanol_reg5_2024_complete",
+      "title": "Zentralabitur Region 5 (Península Ibérica) 2024 — Español",
+      "year": "2024",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen oficial de Español escrito del Zentralabitur Region 5 2024. Contiene el comentario de un artículo de Rosa Montero sobre la soledad del individuo hiperconectado en redes, el análisis de un fragmento teatral de 'La casa de Bernarda Alba' (conflicto autoridad-libertad) y una disertación sobre el impacto social de la brecha digital intergeneracional.",
+        "de": "Offizielle Spanisch-Abiturklausur Region 5 (Iberische Halbinsel) 2024. Enthält Textkommentar zu einer Kolumne von Rosa Montero über Einsamkeit im digitalen Zeitalter, Analyse einer Szene aus Lorcas 'La casa de Bernarda Alba' (Konflikt Autorität vs. Freiheit) sowie eine Erörterung über die digitale Kluft zwischen den Generationen."
+      },
+      "blocks": [
+        {
+          "name": "Parte A: Comentario de Texto Periodístico (Textanalyse)",
+          "tasks": [
+            {
+              "title": "Tarea 1: Comentario de la columna 'Solos en la red' de Rosa Montero",
+              "question": {
+                "es": "Analiza la estructura argumentativa, las tesis principales y el uso de los recursos lingüísticos y estilísticos que emplea Rosa Montero en el texto 'Solos en la red' para criticar la falsa socialización digital.",
+                "de": "Analysiere den Aufbau der Argumentation, die Hauptthesen und die sprachlich-stilistischen Mittel, die Rosa Montero in ihrer Kolumne 'Solos en la red' nutzt, um die scheinbare digitale Sozialisierung zu kritisieren."
+              },
+              "solution": {
+                "es": "1) Resumen: La autora argumenta que, a pesar de estar rodeados de notificaciones y contactos virtuales en redes sociales, el ser humano occidental padece una soledad estructural más profunda que nunca, debido a que las relaciones en línea carecen de empatía táctil y presencia física.\n2) Estructura y Género: Columna de opinión periodística. Estructura encuadrada: parte de una anécdota cotidiana (un joven mirando el móvil en el metro), desarrolla argumentos de causa-efecto (las redes activan la dopamina pero no consolidan la intimidad afectiva) y concluye con una advertencia final sobre la deshumanización de los afectos.\n3) Recursos estilísticos y lingüísticos:\n- Metáfora: 'islas de cristal en el océano digital' para caracterizar a los individuos ensimismados.\n- Paradoja: 'conectados al mundo entero pero incomunicados con el prójimo' para resaltar la contradicción.\n- Registro: Culto pero cercano, con uso de sustantivos abstractos y adjetivación valorativa.",
+                "de": "1) Zusammenfassung: Trotz ständiger digitaler Vernetzung erleben Menschen eine tiefere Einsamkeit, da virtuelle Beziehungen keinen echten emotionalen Austausch ersetzen.\n2) Struktur: Kolumne (Meinung). Einstieg durch eine Alltagsanekdote, gefolgt von Kausalargumenten und einem Appell am Ende.\n3) Stilmittel:\n- Metapher: 'islas de cristal' (Gläserne Inseln) beschreibt isolierte Smartphone-Nutzer.\n- Paradoxon: 'conectados... pero incomunicados' verdeutlicht den Widerspruch."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Resumen jerárquico objetivo sin repetir frases literales del texto.\n• 25 Puntos: Análisis formal de los mecanismos persuasivos y desglose funcional de tres figuras retóricas.\n• 10 Puntos: Redacción formal-culta, ortografía impecable y riqueza léxica.",
+                "de": "• 15 Punkte: Präzise Zusammenfassung der Argumentationslinie.\n• 25 Punkte: Formale Analyse der Textmerkmale und Erläuterung von 3 Stilmitteln.\n• 10 Punkte: Gehobene Sprachqualität und Korrektheit."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el comentario de textos periodísticos de opinión, identifica siempre la postura de la autora respecto a la sociedad contemporánea. Esto dará coherencia a tu análisis de recursos y contextualización.",
+                "de": "Tipp: Identifiziere bei journalistischen Texten immer die Haltung des Autors zur modernen Gesellschaft."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Parte B: Análisis Literario e Historia (Literarische Analyse)",
+          "tasks": [
+            {
+              "title": "Tarea 2: Análisis de un fragmento dramático de 'La casa de Bernarda Alba' (Lorca)",
+              "question": {
+                "es": "Analiza la escena propuesta del Acto II en la que Adela rompe el bastón de Bernarda. Analiza el conflicto trágico entre el principio de autoridad (Bernarda) y el principio de libertad (Adela), explicando el simbolismo del bastón.",
+                "de": "Analysiere den vorliegenden Ausschnitt aus Akt II, in dem Adela den Stock von Bernarda zerbricht. Diskutiere den Konflikt zwischen Autorität (Bernarda) und Freiheit (Adela) und erläutere die Symbolik des Stocks."
+              },
+              "solution": {
+                "es": "1) Análisis del conflicto dramático: Enfrentamiento directo entre el autoritarismo opresivo de Bernarda (cuyo código moral impone un luto asfixiante y encierro de ocho años) y el anhelo de realización personal y libertad erótica de Adela (la hija menor que desafía activamente las normas sociales).\n2) Simbolismo del bastón: El bastón de Bernarda representa el poder absoluto, el yugo de la ley patriarcal y la dominación dentro de la casa. El acto físico de Adela al romper el bastón por la mitad es el clímax dramático de la rebelión: la pérdida de la autoridad material de Bernarda sobre su cuerpo y deseos.\n3) Contextualización histórica: La obra (terminada en 1936, poco antes del estallido de la Guerra Civil y asesinato del autor) refleja el clima de opresión ideológica y represión de la España rural tradicional. Lorca la subtitula 'Documento fotográfico', pretendiendo una sobriedad realista en la puesta en escena (decorados blancos y luto negro).",
+                "de": "1) Dramatischer Konflikt: Direkte Konfrontation zwischen dem repressiven Autoritarismus Bernardas (achtjährige Trauerzeit, Einsperren der Töchter) und Adelas Freiheitsdrang.\n2) Symbolik des Stocks: Bernardas Stock symbolisiert ihre absolute Macht und Tyrannei. Das Zerbrechen durch Adela ist der Höhepunkt der Rebellion: der symbolische Sturz der Autorität.\n3) Einordnung: Geschrieben 1936 vor dem Bürgerkrieg, spiegelt das Werk das repressive Klima Spaniens wider."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis formal de los diálogos dramáticos, acotaciones (didaskalias) y ritmo de la escena.\n• 20 Puntos: Explicación de los símbolos (bastón, luto, calor, caballo garañón) y la progresión dramática.\n• 15 Puntos: Relacionar de forma correcta la obra con el teatro lorquiano y el contexto histórico de la preguerra.",
+                "de": "• 15 Punkte: Formale Analyse des Dialogs und der Regieanweisungen.\n• 20 Punkte: Erläuterung der lorquianischen Symbole im Textausschnitt.\n• 15 Punkte: Historische Einordnung des Werkes vor dem Hintergrund von 1936."
+              },
+              "recommendation": {
+                "es": "Recomendación: En los textos teatrales, no pases por alto las acotaciones (indicaciones entre paréntesis). Lorca las utiliza para definir el cromatismo, el sonido y la iluminación. Analizarlas demuestra un rigor extraordinario.",
+                "de": "Tipp: Regieanweisungen (Acotaciones) dürfen nicht ignoriert werden, da Lorca sie gezielt zur Steuerung der Atmosphäre einsetzt."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

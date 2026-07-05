@@ -21,6 +21,24 @@
       "tip": "Die Kommission stellt IMMER mindestens EINE unerwartete Frage, um zu sehen, ob du verstehst oder auswendig gelernt hast."
     }
   },
+  "keyOperators": [
+    { "op": "Analysieren", "meaning": { "es": "Describir el fragmento de texto filosófico, reconstruyendo de forma objetiva la estructura de sus argumentos y la tesis central del autor.", "de": "Einen philosophischen Text analysieren und den argumentativen Aufbau sowie die Hauptthese des Autors sachlich rekonstruieren." }, "trap": { "es": "Trampa: Empezar a criticar las ideas del filósofo en la fase de análisis. Primero debes demostrar que comprendes objetivamente qué dice el autor.", "de": "Falle: Bereits in der Analysephase die Thesen kritisieren. Zuerst muss eine objektive Rekonstruktion erfolgen." } },
+    { "op": "Vergleichen", "meaning": { "es": "Contrastar las tesis del texto propuesto con las de otro filósofo estudiado en los semestres del DIA, señalando similitudes y diferencias esenciales.", "de": "Die Thesen des Textes mit einer anderen philosophischen Position kontrastieren und Gemeinsamkeiten sowie Unterschiede aufzeigen." }, "trap": { "es": "Trampa: Exponer las teorías de ambos autores por separado sin enlazarlas dinámicamente mediante puntos de comparación específicos.", "de": "Falle: Beide Positionen isoliert nacheinander darstellen, statt sie kriterienorientiert zu vergleichen." } },
+    { "op": "Erörtern", "meaning": { "es": "Debatir críticamente una tesis filosófica pesando argumentos a favor y en contra, evaluando sus premisas lógicas y consecuencias éticas o políticas.", "de": "Eine philosophische These kritisch diskutieren, Pro- und Contra-Argumente abwägen und die logische Konsistenz prüfen." }, "trap": { "es": "Trampa: Olvidar tomar una posición personal justificada y firme al final de la argumentación.", "de": "Falle: Am Ende keine eigene, philosophisch begründete Stellungnahme abzugeben." } },
+    { "op": "Stellung nehmen", "meaning": { "es": "Tomar partido argumentadamente respecto a una afirmación filosófica o dilema ético actual desde un punto de vista fundamentado.", "de": "Ausgehend von philosophischen Argumenten eine eigene begründete Meinung zu einem Sachverhalt oder Dilemma äußern." }, "trap": { "es": "Trampa: Dar una opinión meramente subjetiva o informal sin usar el vocabulario ni los conceptos éticos de los autores estudiados.", "de": "Falle: Eine rein subjektive Alltagsmeinung äußern, statt philosophisch-terminologisch zu begründen." } }
+  ],
+  "key_concepts": [
+    { "concept": "Eudaimonía", "es": "Felicidad o autorrealización como el fin supremo del ser humano, alcanzada mediante la virtud y el término medio (Aristóteles).", "de": "Glückseligkeit als höchstes menschliches Ziel, zu erreichen durch ein tugendhaftes Leben der goldenen Mitte (Aristoteles)." },
+    { "concept": "Kategorischer Imperativ", "es": "Ley moral formal universal de Kant: actúa de modo que la máxima de tu acción pueda convertirse en ley universal.", "de": "Universelles Moralgesetz nach Kant: Handle nur nach Maximen, die sich verallgemeinern lassen." },
+    { "concept": "Naturzustand", "es": "Hipótesis filosófica sobre la vida del ser humano antes del Estado (Hobbes: caos; Locke: derechos desprotegidos; Rousseau: bondad natural).", "de": "Gedankliches Modell des menschlichen Lebens vor der staatlichen Ordnung (Hobbes, Locke, Rousseau)." },
+    { "concept": "Schleier des Nichtwissens", "es": "Concepto de Rawls: decidir las reglas de justicia de una sociedad sin saber qué posición social o características individuales ocuparemos.", "de": "Rawls' Konzept: Entscheidung über Gerechtigkeitsprinzipien ohne Wissen über die eigene spätere gesellschaftliche Rolle." }
+  ],
+  "exam_tips": [
+    "En la preparación de 10 minutos, haz un esquema claro en papel con la tesis y 3 argumentos clave. Te servirá de guía visual durante tu exposición oral.",
+    "Utiliza la pizarra (Tafel) si el tribunal te lo permite para esquematizar los conceptos difíciles. Esto demuestra gran seguridad didáctica.",
+    "Habla con calma y vocaliza en alemán. El tribunal del DIA valora la claridad expositiva tanto como el rigor filosófico de tus respuestas.",
+    "Cuando el tribunal te plantee una pregunta de profundización imprevista, tómate 5 segundos para reflexionar antes de responder. No respondas de forma apresurada."
+  ],
   "topics_by_semester": [
     {
       "semester": "11.1",
@@ -152,6 +170,132 @@
       "correct": 1,
       "explanation": { "es": "Platón: el alma ya conoció las Ideas perfectas antes de nacer (reminiscencia/anámnesis). El conocimiento es recordar lo que ya sabíamos. Descartes: parte de cero (duda metódica), destruye todo lo que puede dudar y encuentra una certeza indudable: el Cogito. Ambos son racionalistas pero con metodologías opuestas en su punto de partida.", "de": "Platon: Die Seele kannte die Ideen schon vor der Geburt (Anamnese/Reminiszenz). Erkenntnis = Wiedererinnerung. Descartes: Startet bei null (methodischer Zweifel), zerstört alles Bezweifelbare und findet unzweifelhafte Gewissheit im Cogito. Beide Rationalisten, aber gegensätzliche Ausgangspunkte." },
       "tip": { "es": "Para el tribunal oral: conecta con actualidad — ¿qué diría Platón sobre la IA? ¿Descartes sobre la realidad virtual? Esto impresiona al examinador.", "de": "Für die mündliche Prüfung: mit Aktualität verbinden — Was würde Platon über KI sagen? Descartes über virtuelle Realität? Das beeindruckt den Prüfer." }
+    }
+  ],
+  "official_exams_archive": [
+    {
+      "id": "philosophie_berlin_2023_complete",
+      "title": "Abiturprüfung Berlin/Brandenburg 2023 — Philosophie GK",
+      "year": "2023",
+      "pdf_url": "https://bildungsserver.berlin-brandenburg.de",
+      "intro": {
+        "es": "Este archivo contiene una prueba modelo basada en las directrices unificadas de Berlín/Brandeburgo 2023 para Philosophie (GK). Consta del análisis estructural de un fragmento del ensayo clásico de Kant sobre la Ilustración y una disertación crítica sobre dilemas morales comparando la ética del deber de Kant con el utilitarismo.",
+        "de": "Archiv einer Musterabiturprüfung Philosophie (GK) basierend auf den Berliner Rahmenlehrplänen 2023. Umfasst die Textanalyse eines Ausschnitts aus Kants Aufklärungsschrift sowie eine philosophische Erörterung zum moralischen Dilemma der Wahrheitspflicht."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Textanalyse (Análisis de texto filosófico)",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Analyse eines Textauszugs aus Immanuel Kants 'Beantwortung der Frage: Was ist Aufklärung?' (1784)",
+              "question": {
+                "es": "Analiza el fragmento de Kant propuesto:\nApartado a) Resume la tesis principal de Kant y explica qué causas señala para la 'minoría de edad' (Unmündigkeit) del ser humano.\nApartado b) Explica y diferencia el concepto de 'uso público' (öffentlicher Gebrauch) y 'uso privado' (privater Gebrauch) de la razón según el autor.",
+                "de": "Analysiere den vorliegenden Textauszug aus Kants Aufklärungsschrift:\na) Fasse Kants Hauptthese zusammen und erläutere, welche Ursachen er für die selbstverschuldete Unmündigkeit des Menschen nennt.\nb) Erkläre und differenziere die Begriffe des 'öffentlichen' und 'privaten' Gebrauchs der Vernunft nach Kant."
+              },
+              "solution": {
+                "es": "a) Tesis y causas de la minoría de edad:\n- La tesis central de Kant es que la Ilustración es el proceso mediante el cual el ser humano sale de su minoría de edad, entendida como la incapacidad de servirse de su propio entendimiento sin la guía de otro.\n- Kant señala que esta minoría de edad es 'autoculpable' (selbstverschuldet) porque la causa no reside en una falta de entendimiento, sino en la falta de decisión y valor para pensar por uno mismo. Sus dos causas principales son la **pereza** (Faulheit) y la **cobardía** (Feigheit), que facilitan que otros se erijan en sus tutores (como el libro que piensa por mí o el confesor que dirige mi conciencia).\n\nb) Uso público vs. privado de la razón:\n- **Uso público**: Aquel que un ciudadano (como sabio o intelectual) hace de la razón ante el público lector o comunidad científica. Debe ser siempre libre, pues es el único que puede traer ilustración a los hombres.\n- **Uso privado**: El uso que se hace de la razón al desempeñar un cargo civil o función pública encomendada (ej. un oficial en el ejército o un sacerdote en su parroquia). En este ámbito se debe obedecer y actuar de forma pasiva para asegurar que el engranaje del Estado funcione (no se puede razonar o criticar en el servicio, sino cumplir las órdenes).",
+                "de": "a) These und Ursachen:\n- Kants Hauptthese lautet, dass Aufklärung der Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit ist (Unfähigkeit, sich seines Verstandes ohne Leitung eines anderen zu bedienen).\n- Die Ursachen sind **Faulheit** und **Feigheit**, die es Vormündern leicht machen, die Führung zu übernehmen.\n\nb) Öffentlicher vs. privater Gebrauch:\n- **Öffentlicher Gebrauch**: Freier Gebrauch der Vernunft als Gelehrter vor der gesamten Leserwelt. Muss immer frei sein (fördert Aufklärung).\n- **Privater Gebrauch**: Gebrauch der Vernunft in einem anvertrauten bürgerlichen Posten oder Amt. Muss oft eingeschränkt sein (Gehorsamspflicht, damit der Staat funktioniert)."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos (a): Resumen preciso de la tesis de Kant y explicación estructurada de los conceptos de cobardía y pereza.\n• 25 Puntos (b): Explicación y diferenciación formal clara entre el uso público y privado de la razón, indicando sus límites y su relación con la libertad de expresión.\n• 10 Puntos: Rigor terminológico filosófico, coherencia en la argumentación y expresión académica en alemán.",
+                "de": "• 15 Punkte: Präzise Herausarbeitung der Kernthese und der Ursachen (Faulheit/Feigheit).\n• 25 Punkte: Klare Erklärung und Abgrenzung von öffentlichem und privatem Vernunftgebrauch.\n• 10 Punkte: Fachbegriffsnutzung, logischer Aufbau und sprachliche Stringenz."
+              },
+              "recommendation": {
+                "es": "Recomendación: Una trampa habitual es pensar que Kant exige rebelión o desobediencia civil en el 'uso privado' de la razón. ¡Al contrario! Kant exige obediencia en el cargo civil ('¡no razones, obedece!') pero libertad absoluta de crítica como intelectual en el espacio público. Asegúrate de destacar esta sutil paradoja en tu examen.",
+                "de": "Achtung: Kant fordert keine Rebellion. Im Amt muss gehorcht werden ('räsoniert nicht, gehorcht!'), während der Gelehrte im öffentlichen Raum absolute Freiheit zur Kritik besitzt."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Philosophische Erörterung (Disertación crítica)",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Erörterung des moralischen Dilemmas der Wahrheitspflicht (Kant vs. Utilitarismus)",
+              "question": {
+                "es": "Debate críticamente el siguiente dilema moral: 'Un amigo se esconde en tu casa huyendo de un asesino. El asesino llega a tu puerta y te pregunta directamente si tu amigo está dentro.' ¿Tienes el deber moral de decir la verdad? Diserta comparando la postura deontológica de Kant frente al principio de utilidad de John Stuart Mill.",
+                "de": "Erörtere folgendes moralisches Dilemma: 'Ein Freund versteckt sich in deinem Haus vor einem Mörder. Der Mörder klopft an und fragt, ob dein Freund im Haus ist.' Besteht eine moralische Pflicht zur Wahrheit? Vergleiche Kants Pflichtenethik mit dem utilitaristischen Prinzip von J.S. Mill."
+              },
+              "solution": {
+                "es": "1) Introducción: Presentar el dilema del 'mentiroso filantrópico'. Formular el problema ético: ¿Es la mentira aceptable cuando se trata de salvar una vida humana o es la veracidad un deber absoluto?\n2) Postura kantiana (Deontología): Para Kant, la veracidad es un deber jurídico y moral absoluto. Según el Imperativo Categórico, la máxima de mentir no puede ser universalizada (si todos mintiéramos, el lenguaje y los pactos perderían sentido). Mentir, incluso para salvar a un amigo, instrumentaliza al asesino y destruye el fundamento del deber. El resultado de decir la verdad no es mi responsabilidad moral directa; las consecuencias de mentir (ej. si el amigo escapa y el asesino lo encuentra fuera tras mi mentira) sí lo serían.\n3) Postura utilitarista (Mill): El valor moral de una acción reside en sus consecuencias (consecuencialismo). Según el principio de utilidad, debemos maximizar el bienestar general y minimizar el dolor. Decir la verdad al asesino causa la muerte del amigo (dolor extremo). Mentir salva su vida y evita el dolor. Por tanto, en este caso, mentir es moralmente preferible y correcto.\n4) Conclusión y síntesis: Evaluar de forma crítica las limitaciones de ambas posturas (el rigorismo extremo de Kant frente al problema de la 'pendiente resbaladiza' y la dificultad de predecir las consecuencias en Mill).",
+                "de": "1) Einleitung: Einführung in das berühmte Dilemma der Notlüge gegenüber einem Mörder.\n2) Kants Position: Wahrheitspflicht ist eine absolute, vollkommene Pflicht gegen sich selbst und andere. Die Maxime des Lügens ist nicht universell anwendbar (Kategorischer Imperativ). Die Folgen einer Notlüge sind unvorhersehbar; wer lügt, haftet moralisch und rechtlich für alle Folgeschäden.\n3) Utilitarismus (Mill): Moralwert hängt von den Folgen ab. Prinzip der Nützlichkeit verlangt Schadensminimierung. Lügen schützt das Leben des Freundes und verhindert maximales Leid. Lügen ist hier moralisch geboten.\n4) Fazit: Kritische Abwägung des kantischen Rigorismus gegenüber der utilitaristischen Zweck-Mittel-Rechnung."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Presentación estructurada del dilema moral e introducción formal de las corrientes.\n• 15 Puntos: Exposición detallada y fiel de la argumentación kantiana (Imperativo Categórico, deber absoluto).\n• 15 Puntos: Exposición del utilitarismo de Mill (consecuencialismo, maximización de felicidad).\n• 5 Puntos: Balance crítico final razonado y coherencia formal.",
+                "de": "• 15 Punkte: Strukturierte Einführung in das ethische Problem.\n• 15 Punkte: Fundierte Darstellung der Position Kants.\n• 15 Punkte: Fundierte Darstellung des Utilitarismus.\n• 5 Punkte: Abschließende kritische Synthese und eigene Stellungnahme."
+              },
+              "recommendation": {
+                "es": "Recomendación: Evita dar juicios morales ingenuos como 'Kant no tiene corazón por dejar morir al amigo'. Kant argumenta que si mientes, destruyes la base del contrato social y de la confianza. Enfoca tu discusión en la tensión entre la 'ética de la convicción' (Gesinnungsethik) y la 'ética de la responsabilidad' (Verantwortungsethik) de Max Weber.",
+                "de": "Tipp: Vermeide rein emotionale Urteile über Kants Rigorismus. Nutze stattdessen Max Webers Unterscheidung zwischen Gesinnungsethik (Kant) und Verantwortungsethik (Mill) zur Einordnung."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "philosophie_berlin_2024_complete",
+      "title": "Abiturprüfung Berlin-Brandenburg 2024 — Philosophie GK",
+      "year": "2024",
+      "pdf_url": "https://bildungsserver.berlin-brandenburg.de/pruefungsaufgaben/",
+      "intro": {
+        "es": "Archivo del examen unificado de Filosofía Abitur Berlín-Brandenburg 2024 para Grundkurs (GK). Consta de dos tareas de desarrollo: el análisis hermenéutico de la teoría de la propiedad y contrato social en John Locke (Segundo Tratado del Gobierno Civil) y la disertación crítica sobre la libertad existencial y la condena del libre albedrío en Jean-Paul Sartre frente al condicionamiento materialista de Karl Marx.",
+        "de": "Archiv der zentralen Abiturklausur Philosophie Berlin-Brandenburg 2024 (Grundkurs). Enthält die Aufgaben zur Textanalyse von John Lockes Vertragstheorie und Eigentumsbegründung sowie eine philosophische Erörterung zum existenzialistischen Freiheitsbegriff Sartres im Kontrast zu Karl Marx' historischem Materialismus."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Textanalyse (Análisis e interpretación de un texto filosófico)",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Analyse eines Textauszugs aus John Lockes 'Zweite Abhandlung über die Regierung' (1689)",
+              "question": {
+                "es": "Analiza el fragmento propuesto del filósofo liberal John Locke:\nApartado a) Resume la argumentación de Locke sobre la fundamentación de la propiedad privada en el estado de naturaleza.\nApartado b) Explica detalladamente por qué, según Locke, los seres humanos deciden abandonar el estado de naturaleza y constituir una sociedad civil mediante el contrato social.",
+                "de": "Analysiere den vorliegenden Textauszug aus Lockes staatstheoretischem Werk:\na) Fasse Lockes Argumentation zur Begründung des Privateigentums im Naturzustand zusammen.\nb) Erkläre ausführlich, warum die Menschen nach Locke den Naturzustand verlassen und sich durch einen Gesellschaftsvertrag zusammenschließen."
+              },
+              "solution": {
+                "es": "a) Fundamentación de la propiedad privada:\n- Locke afirma que, aunque Dios entregó la Tierra a los hombres en común, cada persona posee una propiedad exclusiva sobre su propio cuerpo y sobre el trabajo realizado por sus manos.\n- Por lo tanto, cuando un individuo extrae algo del estado común de la naturaleza y le añade su esfuerzo físico (trabajo/labour), remueve ese objeto de la propiedad común y lo convierte en su propiedad privada, sin requerir el consentimiento de los demás hombres. El trabajo es el título legítimo de propiedad.\n\nb) Abandono del estado de naturaleza y pacto:\n- Aunque el estado de naturaleza en Locke no es de guerra absoluta (como en Hobbes), la propiedad y los derechos naturales (vida, libertad, propiedad) están desprotegidos y expuestos a constantes transgresiones.\n- Los hombres deciden voluntariamente formar una sociedad civil para subsanar tres deficiencias del estado de naturaleza: 1) la falta de una ley establecida y conocida que sirva de norma común, 2) la ausencia de un juez público e imparcial con autoridad para resolver conflictos, y 3) la falta de un poder ejecutor que respalde y dé cumplimiento a las sentencias justas. El contrato social se firma exclusivamente para proteger la propiedad privada y la libertad de los ciudadanos bajo un gobierno de leyes.",
+                "de": "a) Begründung des Privateigentums:\n- Gott hat die Erde den Menschen gemeinsam gegeben. Jeder Mensch besitzt jedoch Eigentum an seiner eigenen Person und seiner Arbeitskraft.\n- Wenn der Mensch der Natur ein Gut entnimmt und es durch seine Arbeit (labour) verändert, eignet er es sich rechtmäßig an. Die Arbeit legitimiert das Eigentum.\n\nb) Verlassen des Naturzustands:\n- Obwohl der Naturzustand kein Kriegszustand wie bei Hobbes ist, ist das Eigentum unsicher, da ein neutraler Richter, feste Gesetze und eine exekutive Gewalt fehlen.\n- Der Gesellschaftsvertrag dient dem Schutz des Eigentums (Leben, Freiheit, Besitz) unter einer rechtsstaatlichen Regierung."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos (a): Explicar correctamente la teoría del trabajo como origen de la propiedad privada en Locke.\n• 25 Puntos (b): Exponer las tres deficiencias del estado de naturaleza y explicar cómo el contrato social las soluciona instaurando los tres poderes legislativo, judicial y ejecutivo.\n• 10 Puntos: Redacción clara, rigor terminológico de filosofía política y uso formal del alemán.",
+                "de": "• 15 Punkte: Richtige Darstellung der Arbeitstheorie Lockes.\n• 25 Punkte: Erläuterung der Mängel des Naturzustands und des Zwecks des Gesellschaftsvertrags.\n• 10 Punkte: Fachbegriffspräzision und sprachliche Stringenz."
+              },
+              "recommendation": {
+                "es": "Recomendación: Haz hincapié en que en Locke el derecho a la propiedad privada preexiste a la formación del Estado, a diferencia de Hobbes, donde es el soberano absoluto quien otorga la propiedad. Esta diferencia entre el liberalismo clásico y el absolutismo es clave en las rúbricas de evaluación del Abitur.",
+                "de": "Tipp: Betone, dass bei Locke das Eigentum ein Naturrecht ist, das dem Staat vorausgeht, im Gegensatz zu Hobbes, wo das Eigentum erst durch den Souverän geschaffen wird."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Philosophische Erörterung (Disertación crítica)",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Erörterung des existenzialistischen Freiheitsbegriffs bei Jean-Paul Sartre im Kontrast zu Karl Marx",
+              "question": {
+                "es": "Diserta críticamente sobre la siguiente tesis de Jean-Paul Sartre: 'El hombre está condenado a ser libre'. Discute esta afirmación confrontándola con la concepción determinista materialista de Karl Marx, según la cual las condiciones económicas de producción determinan la conciencia social e individual del ser humano.",
+                "de": "Erörtere kritisch Sartres These: 'Der Mensch ist verurteilt, frei zu sein'. Setze diese Aussage in Kontrast zu Karl Marx' materialistischer Sichtweise, wonach das gesellschaftliche Sein das Bewusstsein des Menschen bestimmt."
+              },
+              "solution": {
+                "es": "1) Introducción: Contextualizar el existencialismo sartriano ('la existencia precede a la esencia') y formular la contradicción fundamental: ¿es el ser humano radicalmente libre de auto-definirse mediante sus elecciones, o su subjetividad está condicionada y determinada por las estructuras materiales y económicas de su sociedad?\n2) Argumentación sartriana: El hombre nace sin un propósito dado (esencia). Al no haber un Dios creador que diseñe una naturaleza humana previa, el ser humano se encuentra 'arrojado al mundo' y está condenado a elegir a cada instante. Incluso no elegir es una elección. Buscar justificaciones o determinismos (como la herencia o la psicología) es actuar de 'mala fe' (mauvaise foi) para rehuir la angustia ante la responsabilidad absoluta de nuestra propia existencia.\n3) Contra-argumentación materialista de Marx: Marx afirma en el 'Materialismo Histórico' que el ser humano no se define en un vacío metafísico, sino en condiciones materiales dadas. Las relaciones socioeconómicas de producción (la infraestructura) condicionan y determinan el pensamiento y la ideología (la superestructura). El trabajador alienado (entfremdete Arbeit) bajo el capitalismo no es libre: su trabajo y su ser están despojados de autonomía creadora. Por tanto, la emancipación material colectiva es prerrequisito para cualquier libertad individual real.\n4) Síntesis y conclusión: Valorar críticamente la compatibilidad de ambos pensadores (como intentó el propio Sartre en su época tardía con el existencialismo dialéctico): el ser humano está condicionado materialmente (Marx), pero conserva siempre un margen de libertad existencial para posicionarse frente a ese condicionamiento (Sartre).",
+                "de": "1) Einleitung: Einführung in Sartres Freiheitsbegriff und den Gegensatz zu Marx' historischem Materialismus.\n2) Sartres Freiheit: Existenz geht der Essenz voraus. Der Mensch ist zur Wahl verdammt und voll verantwortlich für sein Tun. Ausreden (Determinismus) sind Zeichen 'unaufrichtigen Handelns' (mauvaise foi).\n3) Marx' Materialismus: Das gesellschaftliche Sein bestimmt das Bewusstsein. Ökonomische Basis bestimmt den Überbau. Der entfremdete Arbeiter ist im Kapitalismus strukturell unfrei; Befreiung erfordert die Revolution der materiellen Verhältnisse.\n4) Synthese: Versuch der Versöhnung (Sartre: 'Der Mensch ist durch das bestimmt, was er aus dem macht, was aus ihm gemacht wurde')."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Exposición detallada y fiel de la tesis de Sartre ('existencia precede a la esencia', angustia, mala fe).\n• 15 Puntos: Exposición de la concepción materialista de Marx (alienación del trabajo, infraestructura determina la conciencia).\n• 15 Puntos: Discusión dialéctica crítica entre ambas posturas sobre los límites del albedrío humano.\n• 5 Puntos: Rigor argumentativo formal y calidad expositiva en alemán.",
+                "de": "• 15 Punkte: Darstellung der Existenzphilosophie Sartres.\n• 15 Punkte: Darstellung des historischen Materialismus von Marx.\n• 15 Punkte: Kritische Gegenüberstellung und Argumentation.\n• 5 Punkte: Ausdrucksvermögen und Logik."
+              },
+              "recommendation": {
+                "es": "Recomendación: En esta disertación, es muy valorado usar la famosa cita de Sartre que resume el debate posterior con el marxismo: 'El hombre es lo que hace con lo que hicieron de él'. Esto te permitirá unir ambos pensadores con una finura analítica brillante.",
+                "de": "Tipp: Nutze Sartres berühmtes Zitat zur Synthese: 'Der Mensch ist das, was er aus dem macht, was man aus ihm gemacht hat', um die philosophische Tiefe zu demonstrar."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
