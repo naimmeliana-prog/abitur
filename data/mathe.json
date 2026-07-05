@@ -529,6 +529,236 @@
       }
     }
   ]
+},
+{
+  "id": "mathe_nrw_2024",
+  "name": "Zentralabitur NRW 2024 — Mathematik GK (Completo)",
+  "year": "2024",
+  "questions": [
+    {
+      "id": "ma_nrw_24_01",
+      "topic": "Analysis — Normalengleichung",
+      "difficulty": "medium",
+      "question": {
+        "es": "Dada la función f(x) = (2x - 3) / (x^2 + 1). ¿Cuál es la ecuación de la recta normal a la gráfica de f en x = 1?",
+        "de": "Gegeben ist die Funktion f(x) = (2x - 3) / (x^2 + 1). Wie lautet die Gleichung der Normalen an den Graphen von f bei x = 1?"
+      },
+      "options": [
+        { "es": "y = -2/3·x + 1/6", "de": "y = -2/3·x + 1/6" },
+        { "es": "y = 1.5·x - 2", "de": "y = 1.5·x - 2" },
+        { "es": "y = -2/3·x - 0.5", "de": "y = -2/3·x - 0.5" },
+        { "es": "y = 1.5·x + 1/6", "de": "y = 1.5·x + 1/6" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Derivamos f(x) por regla del cociente para hallar f'(x) = (-2x^2 + 6x + 2) / (x^2 + 1)^2. Evaluamos en x = 1: f'(1) = 6/4 = 1.5 (pendiente de la tangente). La pendiente de la normal es m_n = -1 / 1.5 = -2/3. El punto de tangencia es (1, f(1)) = (1, -0.5). Usamos la ecuación punto-pendiente: y = -2/3(x - 1) - 0.5 = -2/3·x + 1/6.",
+        "de": "Quotientenregel liefert f'(1) = 1.5. Normalensteigung m_n = -1/m_t = -2/3. Punkt P(1|-0.5) in Normalengleichung einsetzen ergibt y = -2/3·x + 1/6."
+      },
+      "tip": {
+        "es": "Recuerda que la pendiente de la recta normal es la inversa recíproca negativa de la pendiente de la tangente (m_n = -1 / m_t).",
+        "de": "Die Steigung der Normalen ist der negative Kehrwert der Tangentensteigung."
+      }
+    },
+    {
+      "id": "ma_nrw_24_02",
+      "topic": "Geometrie — Vektoren",
+      "difficulty": "medium",
+      "question": {
+        "es": "¿Cómo son los vectores a⃗ = (1, 2, 0), b⃗ = (0, 1, 3) y c⃗ = (2, 5, 3) en R³?",
+        "de": "Wie verhalten sich die Vektoren a⃗ = (1|2|0), b⃗ = (0|1|3) und c⃗ = (2|5|3) im R³?"
+      },
+      "options": [
+        { "es": "Linealmente dependientes (coplanarios)", "de": "Linear abhängig (komplanar)" },
+        { "es": "Linealmente independientes (no coplanarios)", "de": "Linear unabhängig" },
+        { "es": "Son mutuamente ortogonales", "de": "Sie sind paarweise orthogonal" },
+        { "es": "a⃗ y b⃗ son colineales", "de": "a⃗ und b⃗ sind kollinear" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Planteamos la ecuación x·a⃗ + y·b⃗ + z·c⃗ = 0. Resolviendo el LGS obtenemos soluciones no triviales (ej: para z=1, x=-2, y=-1), lo que significa que son linealmente dependientes (coplanarios). También se puede comprobar viendo que det([a⃗, b⃗, c⃗]) = 0.",
+        "de": "Das LGS x·a⃗ + y·b⃗ + z·c⃗ = 0 hat unendlich viele Lösungen. Die Determinante der Vektorenmatrix ist 0, somit sind sie linear abhängig (komplanar)."
+      },
+      "tip": {
+        "es": "Si tres vectores en R³ son coplanarios (pertenecen al mismo plano), entonces son linealmente dependientes y su determinante es nulo.",
+        "de": "Drei Vektoren im R³ sind linear abhängig, wenn sie in einer gemeinsamen Ebene liegen (komplanar)."
+      }
+    },
+    {
+      "id": "ma_nrw_24_03",
+      "topic": "Analysis — Extremum",
+      "difficulty": "medium",
+      "question": {
+        "es": "La concentración de un fármaco se modela mediante c(t) = 0.5·t^2·e^(-0.5t). ¿En qué momento t (en horas) la concentración es máxima?",
+        "de": "Die Konzentration wird durch c(t) = 0,5·t^2·e^(-0,5t) modelliert. Wann ist die Konzentration maximal?"
+      },
+      "options": [
+        { "es": "t = 2 horas", "de": "t = 2 Stunden" },
+        { "es": "t = 4 horas", "de": "t = 4 Stunden" },
+        { "es": "t = 6 horas", "de": "t = 6 Stunden" },
+        { "es": "t = 8 horas", "de": "t = 8 Stunden" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Buscamos c'(t) = 0. Derivando por producto y cadena: c'(t) = 0.25·t·e^(-0.5t)·(4 - t). Las soluciones son t = 0 y t = 4. Como la segunda derivada en t = 4 es negativa (c''(4) < 0), es un máximo.",
+        "de": "Ableitung c'(t) = 0,25·t·e^(-0,5t)·(4 - t). Nullstellen bei t = 0 und t = 4. Hinreichende Bedingung bestätigt Maximum bei t = 4 Stunden."
+      },
+      "tip": {
+        "es": "Iguala la primera derivada a cero y verifica la condición suficiente usando el signo de la segunda derivada o cambio de signo de la primera.",
+        "de": "Setze die erste Ableitung null und überprüfe das Maximum über die zweite Ableitung."
+      }
+    },
+    {
+      "id": "ma_nrw_24_04",
+      "topic": "Geometrie — Lagebeziehung",
+      "difficulty": "medium",
+      "question": {
+        "es": "Calcula el valor del parámetro r para el cual la recta g: x⃗ = (2000, 3000, 450) + r·(-40, -60, -9) corta el plano E: 3x + 4y + 20z = 15000.",
+        "de": "Bestimme den Parameter r, für den die Gerade g das Hügel-Ebene E schneidet."
+      },
+      "options": [
+        { "es": "r = 10", "de": "r = 10" },
+        { "es": "r = 22.22", "de": "r = 22,22" },
+        { "es": "r = -5.5", "de": "r = -5,5" },
+        { "es": "La recta es paralela al plano", "de": "Die Gerade ist parallel zur Ebene" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Sustituimos las coordenadas de g (2000-40r, 3000-60r, 450-9r) en la ecuación de E: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000 -> 27000 - 540r = 15000 -> -540r = -12000 -> r = 22.22.",
+        "de": "Setze die Geradenkoordinaten in die Ebene ein: 3(2000-40r) + 4(3000-60r) + 20(450-9r) = 15000. Auflösung nach r liefert r = 22,22."
+      },
+      "tip": {
+        "es": "Sustituye ordenadamente las expresiones de la recta x, y, z en las incógnitas del plano y despeja la ecuación lineal de r.",
+        "de": "Setze die Ausdrücke für x, y, z in die Ebenengleichung ein und löse die lineare Gleichung nach r auf."
+      }
+    },
+    {
+      "id": "ma_nrw_24_05",
+      "topic": "Stochastik — Binomialverteilung",
+      "difficulty": "medium",
+      "question": {
+        "es": "Si la probabilidad de chip defectuoso es p = 0.04 y tomamos una muestra de n = 150 chips. ¿Cuál es la probabilidad aproximada de encontrar exactamente 5 chips defectuosos?",
+        "de": "Bei p = 0,04 und n = 150 Versuchen, wie groß ist die Wahrscheinlichkeit für genau 5 Defekte?"
+      },
+      "options": [
+        { "es": "~16.19%", "de": "~16,19%" },
+        { "es": "~5.00%", "de": "~5,00%" },
+        { "es": "~12.50%", "de": "~12,50%" },
+        { "es": "~25.00%", "de": "~25,00%" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Usamos la fórmula de Bernoulli P(X = 5) = (150 sobre 5)·(0.04)^5·(0.96)^145. (150 sobre 5) = 591,600,030. Operando nos da P(X = 5) ≈ 0.1619 = 16.19%.",
+        "de": "P(X = 5) = (150 über 5) · 0,04^5 · 0,96^145 ≈ 0,1619 = 16,19%."
+      },
+      "tip": {
+        "es": "En exámenes oficiales del Abitur, para muestras con n grande, utiliza las funciones de distribución de probabilidad de la calculadora (binomialPdf).",
+        "de": "Nutze die Funktion binomialPdf deines Taschenrechners für exakte Einzelwahrscheinlichkeiten."
+      }
+    }
+  ]
+},
+{
+  "id": "mathe_nrw_2022",
+  "name": "Zentralabitur NRW 2022 — Mathematik GK (Completo)",
+  "year": "2022",
+  "questions": [
+    {
+      "id": "ma_nrw_22_01",
+      "topic": "Analysis — Hochpunkt",
+      "difficulty": "medium",
+      "question": {
+        "es": "Dada la función f(x) = x · e^(-x). ¿Cuáles son las coordenadas de su punto máximo local (Hochpunkt)?",
+        "de": "Gegeben ist f(x) = x · e^(-x). Was sind die Koordinaten des lokalen Hochpunkts?"
+      },
+      "options": [
+        { "es": "HP(1, 1/e)", "de": "HP(1 | 1/e)" },
+        { "es": "HP(0, 0)", "de": "HP(0 | 0)" },
+        { "es": "HP(-1, -e)", "de": "HP(-1 | -e)" },
+        { "es": "HP(2, 2/e^2)", "de": "HP(2 | 2/e^2)" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Buscamos f'(x) = 0. f'(x) = (1-x)e^(-x) = 0 -> x = 1. La coordenada y es f(1) = 1·e^(-1) = 1/e. Como f''(1) = -1/e < 0, es un máximo local. Las coordenadas son HP(1, 1/e).",
+        "de": "Erste Ableitung f'(x) = (1-x)e^(-x) = 0 -> x = 1. y-Wert f(1) = 1/e. Zweite Ableitung f''(1) = -1/e < 0 bestätigt Hochpunkt HP(1|1/e)."
+      },
+      "tip": {
+        "es": "Verifica siempre la coordenada y sustituyendo la abscisa x hallada en la función original f(x), no en la derivada.",
+        "de": "Berechne den y-Wert immer durch Einsetzen der Extremstelle in die Ausgangsfunktion f(x)."
+      }
+    },
+    {
+      "id": "ma_nrw_22_02",
+      "topic": "Analysis — Änderungsrate",
+      "difficulty": "medium",
+      "question": {
+        "es": "La concentración de ozono se modela mediante K(t) = -0.05t^3 + 1.8t^2 - 15t + 120. ¿Cuál es la tasa de cambio instantánea de la concentración a las 8:00 (t = 8)?",
+        "de": "Ozonkonzentration K(t) = -0,05t^3 + 1,8t^2 - 15t + 120. Wie groß ist die momentane Änderungsrate um 8:00 Uhr (t = 8)?"
+      },
+      "options": [
+        { "es": "4.2 µg/(m³·h)", "de": "4,2 µg/(m³·h)" },
+        { "es": "-2.5 µg/(m³·h)", "de": "-2,5 µg/(m³·h)" },
+        { "es": "15.0 µg/(m³·h)", "de": "15,0 µg/(m³·h)" },
+        { "es": "0.0 µg/(m³·h)", "de": "0,0 µg/(m³·h)" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La tasa de cambio instantánea está dada por la derivada K'(t) = -0.15t^2 + 3.6t - 15. Evaluando en t = 8: K'(8) = -0.15·(64) + 3.6·(8) - 15 = -9.6 + 28.8 - 15 = 4.2 µg/(m³·h).",
+        "de": "Ableitung K'(t) = -0,15t^2 + 3,6t - 15. Wert für t = 8 berechnen: K'(8) = 4,2."
+      },
+      "tip": {
+        "es": "El término 'tasa de cambio instantánea' (momentane Änderungsrate) equivale siempre matemáticamente a la derivada de la función en ese punto.",
+        "de": "Die 'momentane Änderungsrate' entspricht immer dem Wert der ersten Ableitung an der gesuchten Stelle."
+      }
+    },
+    {
+      "id": "ma_nrw_22_03",
+      "topic": "Geometrie — Abstand",
+      "difficulty": "medium",
+      "question": {
+        "es": "Calcula la distancia mínima entre el punto de mantenimiento Q(6, 6, 8) y el plano del panel E: 2x + 2y + z = 18.",
+        "de": "Berechne den minimalen Abstand von Q(6|6|8) zur Ebene E: 2x + 2y + z = 18."
+      },
+      "options": [
+        { "es": "d = 14/3 ≈ 4.67 metros", "de": "d = 14/3 ≈ 4,67 Meter" },
+        { "es": "d = 5.00 metros", "de": "d = 5,00 Meter" },
+        { "es": "d = 3.00 metros", "de": "d = 3,00 Meter" },
+        { "es": "d = 2.40 metros", "de": "d = 2,40 Meter" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Utilizamos la fórmula de Hesse: d(Q, E) = |2(6) + 2(6) + 1(8) - 18| / √(2² + 2² + 1²) = |12 + 12 + 8 - 18| / √9 = |14| / 3 = 14/3 ≈ 4.67 metros.",
+        "de": "Hessesche Normalenform anwenden: d = |2·6 + 2·6 + 8 - 18| / √(2^2 + 2^2 + 1^2) = 14/3 ≈ 4,67 Meter."
+      },
+      "tip": {
+        "es": "No olvides tomar el valor absoluto del numerador en la fórmula de la distancia. Las distancias siempre son valores reales no negativos.",
+        "de": "Vergiss nicht die Betragsstriche im Zähler, da Abstände immer positiv sein müssen."
+      }
+    },
+    {
+      "id": "ma_nrw_22_04",
+      "topic": "Stochastik — Binomialverteilung",
+      "difficulty": "medium",
+      "question": {
+        "es": "En un estudio sobre paneles solares con n = 80 y probabilidad p = 0.35, ¿cuál es la probabilidad de que exactamente 25 funcionen con máxima eficiencia?",
+        "de": "Bei n = 80 und p = 0,35, wie hoch ist die Wahrscheinlichkeit für genau k = 25 Erfolge?"
+      },
+      "options": [
+        { "es": "~8.15%", "de": "~8,15%" },
+        { "es": "~15.20%", "de": "~15,20%" },
+        { "es": "~35.00%", "de": "~35,00%" },
+        { "es": "~2.50%", "de": "~2,50%" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Aplicamos la fórmula de Bernoulli P(X = 25) = (80 sobre 25) · 0.35^25 · 0.65^55. Realizando el cálculo da aproximadamente 0.0815 = 8.15%.",
+        "de": "P(X = 25) = (80 über 25) · 0,35^25 · 0,65^55 ≈ 0,0815 = 8,15%."
+      },
+      "tip": {
+        "es": "En exámenes del Abitur, la probabilidad de éxito de la distribución binomial se mantiene constante en cada ensayo independiente.",
+        "de": "Die Wahrscheinlichkeit p bleibt bei einer Bernoulli-Kette in jedem Schritt konstant."
+      }
+    }
+  ]
 }
 ],
 "official_exams_archive": [
@@ -725,6 +955,25 @@
               "recommendation": {
                 "es": "Recomendación: También puedes calcular el determinante de la matriz formada por los tres vectores. Si det(M) = 0, son linealmente dependientes. En este caso: det = 1(3 - 15) - 2(0 - 0) + 2(6 - 0) = -12 + 12 = 0.",
                 "de": "Tipp: Der Nachweis kann auch über die Determinante der Koeffizientenmatrix geführt werden. Ist det = 0, sind sie linear abhängig."
+            },
+            {
+              "title": "Aufgabe A3: Stochastik (Árboles de decisión y probabilidad total)",
+              "question": {
+                "es": "Una urna contiene 3 bolas rojas y 2 bolas azules. Se extraen dos bolas sucesivamente sin devolución.\nApartado a) Dibuja el diagrama de árbol de probabilidades correspondiente.\nApartado b) Calcula la probabilidad de que las dos bolas extraídas sean del mismo color.",
+                "de": "Eine Urne enthält 3 rote und 2 blaue Kugeln. Es werden nacheinander zwei Kugeln ohne Zurücklegen gezogen.\na) Zeichne ein passendes Baumdiagramm mit allen Pfadwahrscheinlichkeiten.\nb) Berechne die Wahrscheinlichkeit, dass beide gezogenen Kugeln die gleiche Farbe haben."
+              },
+              "solution": {
+                "es": "a) Diagrama de árbol:\n- Primera extracción: P(R) = 3/5 = 0.6; P(A) = 2/5 = 0.4.\n- Segunda extracción (sin devolución):\n  * Si la primera fue roja: P(R|R) = 2/4 = 0.5, P(A|R) = 2/4 = 0.5.\n  * Si la primera fue azul: P(R|A) = 3/4 = 0.75, P(A|A) = 1/4 = 0.25.\n\nb) Mismo color significa obtener (R, R) o (A, A):\nP(Mismo color) = P(R)·P(R|R) + P(A)·P(A|A) = (3/5)·(1/2) + (2/5)·(1/4) = 3/10 + 1/10 = 4/10 = 2/5 = 0.4 (40%).",
+                "de": "a) Baumdiagramm:\n- 1. Zug: P(R) = 3/5; P(B) = 2/5.\n- 2. Zug (ohne Zurücklegen):\n  * Nach Rot: P(R|R) = 2/4 = 1/2; P(B|R) = 2/4 = 1/2.\n  * Nach Blau: P(R|B) = 3/4; P(B|B) = 1/4.\n\nb) Gleiche Farbe bedeutet (R,R) oder (B,B):\nP(gleiche Farbe) = P(R)·P(R|R) + P(B)·P(B|B) = (3/5)·(1/2) + (2/5)·(1/4) = 3/10 + 1/10 = 4/10 = 0,4 (40%)."
+              },
+              "points": 5,
+              "criteria": {
+                "es": "• 2 Puntos (a): Dibujar el diagrama de árbol correcto con todas las probabilidades condicionadas en las ramas.\n• 3 Puntos (b): Aplicar la fórmula de la probabilidad total sumando los dos casos favorables y dar la probabilidad del 40%.",
+                "de": "• 2 Punkte (a): Zeichnen des vollständigen Baumdiagramms.\n• 3 Punkte (b): Anwendung der Pfadregeln zur Berechnung der Wahrscheinlichkeit von 40%."
+              },
+              "recommendation": {
+                "es": "¡Ojo con la falta de devolución! En la segunda extracción el denominador siempre pasa a ser 4 en lugar de 5, y el numerador del color extraído disminuye en 1.",
+                "de": "Achtung: Beachte das Ziehen 'ohne Zurücklegen'. Im zweiten Zug verringert sich die Gesamtzahl der Kugeln auf 4."
               }
             }
           ]
@@ -832,6 +1081,48 @@
           ]
         },
         {
+          "title": "Aufgabe A2: Geometrie (Ortogonalidad y distancia de punto a plano)",
+          "question": {
+            "es": "Apartado a) Determina si los vectores u⃗ = (1, 2, -2) y v⃗ = (4, 1, 3) son ortogonales.\nApartado b) Calcula la distancia del punto P(2, -1, 3) al plano E: 2x - y + 2z = 5.",
+            "de": "a) Überprüfe, ob die Vektoren u⃗ = (1|2|-2) und v⃗ = (4|1|3) orthogonal zueinander sind.\nb) Berechne den Abstand des Punktes P(2|-1|3) zur Ebene E: 2x - y + 2z = 5."
+          },
+          "solution": {
+            "es": "a) Evaluamos el producto escalar: u⃗ · v⃗ = 1·4 + 2·1 + (-2)·3 = 4 + 2 - 6 = 0. Dado que el producto escalar es cero, los vectores u⃗ y v⃗ son ortogonales.\nb) Aplicamos la HNF: d = |2(2) - (-1) + 2(3) - 5| / √(2² + (-1)² + 2²) = |4 + 1 + 6 - 5| / √9 = 6/3 = 2 unidades.",
+            "de": "a) Skalarprodukt bilden: u⃗ · v⃗ = 1·4 + 2·1 + (-2)·3 = 4 + 2 - 6 = 0. Da das Skalarprodukt null ist, sind die Vektoren u⃗ und v⃗ orthogonal.\nb) Hessesche Normalenform anwenden: d = |2·2 - (-1) + 2·3 - 5| / √(2^2 + (-1)^2 + 2^2) = 6 / 3 = 2 Längeneinheiten."
+          },
+          "points": 5,
+          "criteria": {
+            "es": "• 2 Puntos (a): Producto escalar correcto y conclusión verbal.\n• 3 Puntos (b): Aplicar la distancia de Hesse, simplificar y obtener la distancia de 2 unidades.",
+            "de": "• 2 Punkte (a): Berechnung des Skalarprots und Schlussfolgerung.\n• 3 Punkte (b): Anwendung der HNF-Formel und Abstandsbestimmung."
+          },
+          "recommendation": {
+            "es": "Recomendación: Recuerda simplificar siempre la raíz del denominador. El módulo del vector normal (2, -1, 2) es 3.",
+            "de": "Tipp: Der Normalenvektor der Ebene lautet n⃗ = (2|-1|2). Seine Länge ist genau 3."
+          }
+        },
+        {
+          "title": "Aufgabe A3: Stochastik (Probabilidad condicional en test médico)",
+          "question": {
+            "es": "Una prueba médica para detectar una enfermedad tiene una sensibilidad del 98% (detecta el positivo si está enfermo) y una especificidad del 95% (da negativo si está sano). La tasa de prevalencia de la enfermedad en la población es del 1%.\nApartado a) Dibuja el diagrama de árbol con las probabilidades correspondientes.\nApartado b) Si una persona da positivo en la prueba, calcula la probabilidad de que realmente esté enferma.",
+            "de": "Ein medizinischer Test hat eine Sensitivität von 98% und eine Spezifität von 95%. Die Prävalenz der Krankheit in der Bevölkerung beträgt 1%.\na) Zeichne ein vollständiges Baumdiagramm mit den entsprechenden Wahrscheinlichkeiten.\nb) Berechne die Wahrscheinlichkeit, dass eine positiv getestete Person tatsächlich krank ist."
+          },
+          "solution": {
+            "es": "a) Ramas del árbol: Enfermo (E): 0.01; Sano (S): 0.99.\nDesde E: Positivo (T+): 0.98; Negativo (T-): 0.02.\nDesde S: Positivo (T+): 0.05; Negativo (T-): 0.95.\nb) Aplicamos la fórmula de Bayes:\nP(E | T+) = P(T+ | E)·P(E) / [P(T+ | E)·P(E) + P(T+ | S)·P(S)]\nP(E | T+) = 0.98·0.01 / [0.98·0.01 + 0.05·0.99] = 0.0098 / [0.0098 + 0.0495] = 0.0098 / 0.0593 ≈ 16.53%.",
+            "de": "a) Pfade: Krank (K): 0,01; Gesund (G): 0,99.\nKrank -> Positiv (T+): 0,98; Negativ (T-): 0,02.\nGesund -> Positiv (T+): 0,05; Negativ (T-): 0,95.\nb) Satz von Bayes: P(K | T+) = 0,98·0,01 / (0,98·0,01 + 0,05·0,99) = 0,0098 / 0,0593 ≈ 16,53%."
+          },
+          "points": 5,
+          "criteria": {
+            "es": "• 2 Puntos (a): Diagrama de árbol completo con las 4 probabilidades finales correctas.\n• 3 Puntos (b): Aplicar la fórmula de la probabilidad total y de Bayes para obtener 16.53%.",
+            "de": "• 2 Punkte (a): Vollständiges Baumdiagramm mit allen Wahrscheinlichkeiten.\n• 3 Punkte (b): Anwendung des Satzes von Bayes und Ergebnis."
+          },
+          "recommendation": {
+            "es": "La paradoja de los falsos positivos: aunque la prueba parezca muy precisa (98% y 95%), si la enfermedad es muy rara (1%), la probabilidad de estar enfermo al dar positivo sigue siendo baja (16.53%).",
+            "de": "Tipp: Da die Krankheit selten ist, ist der Anteil der Falsch-Positiven trotz guter Testwerte hoch."
+          }
+        }
+      ]
+    },
+    {
           "name": "Teil B: Hilfsmittel-Teil (Con calculadora CAS)",
           "tasks": [
             {
