@@ -97,6 +97,12 @@
         </div>
       </div>
 
+      <!-- Navigation Tabs -->
+      <div style="display:flex;gap:var(--space-sm);margin-bottom:var(--space-xl);flex-wrap:wrap;" id="bankModeTabs">
+        <button class="difficulty-btn selected easy" onclick="switchBankMode('test', this)">❓ Preguntas Tipo Test</button>
+        <button class="difficulty-btn" onclick="switchBankMode('written', this)">📜 Exámenes de Desarrollo Oficiales</button>
+      </div>
+
       <!-- Questions List -->
       <div id="bankContainer">
         <div class="text-center" style="padding:var(--space-3xl);">
@@ -121,6 +127,7 @@
 <script src="js/auth.js"></script>
 <script src="js/progress.js"></script>
 <script src="js/exam-engine.js"></script>
+<script src="js/pdf-generator.js"></script>
 <script>
 const subjectMeta = {
   deutsch:     { name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
@@ -136,15 +143,27 @@ const FILES = {
 };
 
 let allQuestions = [];
+let allWrittenExams = [];
+let currentBankMode = 'test'; // 'test' or 'written'
 
 async function loadAll() {
-  const langs = ['deutsch','englisch','mathe','espanol','philosophie'];
-  const results = await Promise.all(langs.map(async id => {
+  const subjects = ['deutsch','englisch','mathe','espanol','philosophie'];
+  
+  const results = await Promise.all(subjects.map(async id => {
     try {
-      const r = await fetch(`data/${FILES[id]}`);
+      const r = await fetch(`data/${FILES[id]}?t=${Date.now()}`);
       const d = await r.json();
+      
+      // Store written exams
+      const exams = (d.official_exams_archive || d.official_exams || []).map(e => ({ ...e, subjectId: id }));
+      allWrittenExams.push(...exams);
+      
+      // Store test questions
       return (d.questions || []).map(q => ({ ...q, subjectId: id }));
-    } catch { return []; }
+    } catch (err) {
+      console.warn("Error loading subject files:", err);
+      return [];
+    }
   }));
 
   // Also load custom questions from admin
@@ -152,39 +171,71 @@ async function loadAll() {
 
   allQuestions = [...results.flat(), ...custom];
   updateStats();
-  renderBank(allQuestions);
+  filterBank();
 }
 
 function updateStats() {
-  document.getElementById('bankTotalQ').textContent = allQuestions.length;
-  document.getElementById('bankEasyQ').textContent = allQuestions.filter(q => q.difficulty === 'easy').length;
-  document.getElementById('bankMediumQ').textContent = allQuestions.filter(q => q.difficulty === 'medium').length;
-  document.getElementById('bankHardQ').textContent = allQuestions.filter(q => q.difficulty === 'hard').length;
+  if (currentBankMode === 'test') {
+    document.getElementById('bankStats').style.display = 'grid';
+    document.getElementById('bankTotalQ').textContent = allQuestions.length;
+    document.getElementById('bankEasyQ').textContent = allQuestions.filter(q => q.difficulty === 'easy').length;
+    document.getElementById('bankMediumQ').textContent = allQuestions.filter(q => q.difficulty === 'medium').length;
+    document.getElementById('bankHardQ').textContent = allQuestions.filter(q => q.difficulty === 'hard').length;
+  } else {
+    document.getElementById('bankStats').style.display = 'none'; // hide stats for written list
+  }
+}
+
+function switchBankMode(mode, btn) {
+  currentBankMode = mode;
+  document.querySelectorAll('#bankModeTabs .difficulty-btn').forEach(b => b.classList.remove('selected','easy'));
+  btn.classList.add('selected','easy');
+  
+  // Toggle filters visibility (difficulty filter is only for multiple choice)
+  const diffSelect = document.getElementById('bankDiff');
+  if (diffSelect) {
+    diffSelect.style.display = mode === 'test' ? 'block' : 'none';
+  }
+  
+  updateStats();
+  filterBank();
 }
 
 function filterBank() {
   const search = document.getElementById('bankSearch').value.toLowerCase();
   const subject = document.getElementById('bankSubject').value;
-  const diff = document.getElementById('bankDiff').value;
   const lang = App.currentLang;
 
-  const filtered = allQuestions.filter(q => {
-    const matchSubject = !subject || q.subjectId === subject;
-    const matchDiff = !diff || q.difficulty === diff;
-    const qText = (q.question?.[lang] || q.question?.es || '').toLowerCase();
-    const topicText = (q.topic || '').toLowerCase();
-    const matchSearch = !search || qText.includes(search) || topicText.includes(search);
-    return matchSubject && matchDiff && matchSearch;
-  });
-
-  renderBank(filtered);
+  if (currentBankMode === 'test') {
+    const diff = document.getElementById('bankDiff').value;
+    const filtered = allQuestions.filter(q => {
+      const matchSubject = !subject || q.subjectId === subject;
+      const matchDiff = !diff || q.difficulty === diff;
+      const qText = (q.question?.[lang] || q.question?.es || '').toLowerCase();
+      const topicText = (q.topic || '').toLowerCase();
+      const matchSearch = !search || qText.includes(search) || topicText.includes(search);
+      return matchSubject && matchDiff && matchSearch;
+    });
+    renderBank(filtered);
+  } else {
+    const filtered = allWrittenExams.filter(e => {
+      const matchSubject = !subject || e.subjectId === subject;
+      const titleText = (e.title || '').toLowerCase();
+      const introText = (e.intro?.[lang] || e.intro?.es || '').toLowerCase();
+      const yearText = (e.year || '').toLowerCase();
+      const matchSearch = !search || titleText.includes(search) || introText.includes(search) || yearText.includes(search);
+      return matchSubject && matchSearch;
+    });
+    renderWrittenExams(filtered);
+  }
 }
 
 function resetFilters() {
   document.getElementById('bankSearch').value = '';
   document.getElementById('bankSubject').value = '';
-  document.getElementById('bankDiff').value = '';
-  renderBank(allQuestions);
+  const diffSelect = document.getElementById('bankDiff');
+  if (diffSelect) diffSelect.value = '';
+  filterBank();
 }
 
 function renderBank(questions) {
@@ -192,7 +243,7 @@ function renderBank(questions) {
   const container = document.getElementById('bankContainer');
 
   if (questions.length === 0) {
-    container.innerHTML = `<div class="card text-center"><div class="empty-state"><div class="empty-state-icon">🔍</div><p>No se encontraron preguntas con esos filtros.</p><button onclick="resetFilters()" class="btn btn-primary btn-sm" style="margin-top:var(--space-md);">Limpiar filtros</button></div></div>`;
+    container.innerHTML = `<div class="card text-center"><div class="empty-state"><div class="empty-state-icon">🔍</div><p>No se encontraron preguntas tipo test con esos filtros.</p><button onclick="resetFilters()" class="btn btn-primary btn-sm" style="margin-top:var(--space-md);">Limpiar filtros</button></div></div>`;
     return;
   }
 
@@ -251,6 +302,78 @@ function renderBank(questions) {
         </div>
         <div style="margin-top:var(--space-md);">
           <a href="exam-generator.html?s=${sid}" class="btn btn-secondary btn-sm">⚡ Generar examen de ${lang==='de'?meta.nameDE:meta.name}</a>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function renderWrittenExams(exams) {
+  const lang = App.currentLang;
+  const container = document.getElementById('bankContainer');
+
+  if (exams.length === 0) {
+    container.innerHTML = `<div class="card text-center"><div class="empty-state"><div class="empty-state-icon">🔍</div><p>No se encontraron exámenes oficiales de desarrollo con esos filtros.</p><button onclick="resetFilters()" class="btn btn-primary btn-sm" style="margin-top:var(--space-md);">Limpiar filtros</button></div></div>`;
+    return;
+  }
+
+  container.innerHTML = exams.map((exam, ei) => {
+    const meta = subjectMeta[exam.subjectId] || { name: exam.subjectId, icon: '📜', color: '' };
+    return `
+      <div class="card mb-lg">
+        <div class="flex items-center gap-md mb-lg flex-wrap">
+          <div class="subject-icon ${meta.color}" style="width:40px;height:40px;font-size:20px;flex-shrink:0;">${meta.icon}</div>
+          <div style="flex:1;min-width:200px;">
+            <h3 style="font-size:17px;font-weight:800;">${exam.title}</h3>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">
+              Materia: <strong>${lang==='de'?meta.nameDE:meta.name}</strong> | Año oficial: ${exam.year}
+            </div>
+          </div>
+          <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-left:auto;">
+            <button onclick="PDFGenerator.generateWrittenExam('${exam.subjectId}', '${exam.id}', false)" class="btn btn-secondary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
+              🖨️ Imprimir Examen
+            </button>
+            <button onclick="PDFGenerator.generateWrittenExam('${exam.subjectId}', '${exam.id}', true)" class="btn btn-primary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
+              🖨️ Imprimir Solución
+            </button>
+          </div>
+        </div>
+        
+        <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;margin-bottom:var(--space-lg);padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+          💡 <strong>Descripción:</strong> ${exam.intro?.[lang] || exam.intro?.es}
+        </p>
+
+        <div class="flex-col gap-sm">
+          ${(exam.blocks || []).map((block, bi) => `
+            <div style="border:1px solid var(--glass-border);border-radius:var(--radius-md);background:rgba(255,255,255,0.01);overflow:hidden;padding:var(--space-sm) var(--space-md);">
+              <span style="font-size:13px;font-weight:700;color:var(--text-primary);">${block.name}</span>
+              <div class="flex-col gap-xs" style="margin-top:6px;">
+                ${(block.tasks || []).map((task, ti) => {
+                  const uniqueId = `bank_written_task_${ei}_${bi}_${ti}`;
+                  return `
+                    <div style="border:1px solid var(--glass-border);border-radius:var(--radius-sm);background:rgba(255,255,255,0.02);overflow:hidden;margin-bottom:4px;">
+                      <div style="padding:6px 12px;cursor:pointer;background:rgba(255,255,255,0.03);display:flex;justify-content:between;align-items:center;"
+                        onclick="const el = document.getElementById('${uniqueId}'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
+                        <span style="font-size:12px;font-weight:700;color:var(--color-gold);">${task.title} (${task.points} Puntos)</span>
+                        <span style="margin-left:auto;font-size:10px;color:var(--text-muted);">▼</span>
+                      </div>
+                      
+                      <div id="${uniqueId}" style="display:none;padding:var(--space-md);border-top:1px solid var(--glass-border);">
+                        <div style="font-size:13px;font-weight:600;margin-bottom:var(--space-md);color:var(--text-primary);line-height:1.4;">
+                          ${task.question?.[lang] || task.question?.es}
+                        </div>
+                        <div style="margin-bottom:var(--space-sm);padding:var(--space-sm);background:rgba(34,197,94,0.03);border-left:2px solid var(--color-success);border-radius:var(--radius-sm);font-size:12px;line-height:1.4;">
+                          <strong style="color:var(--color-success);">✅ Solución oficial:</strong><br>
+                          <div style="margin-top:4px;color:var(--text-secondary);">${task.solution?.[lang] || task.solution?.es}</div>
+                        </div>
+                        <div style="padding:var(--space-sm);background:rgba(245,200,66,0.03);border-left:2px solid var(--color-gold);border-radius:var(--radius-sm);font-size:12px;line-height:1.4;">
+                          <strong style="color:var(--color-gold);">📊 Criterios y Rúbricas:</strong><br>
+                          <div style="margin-top:4px;color:var(--text-secondary);">${task.criteria?.[lang] || task.criteria?.es}</div>
+                        </div>
+                      </div>
+                    </div>`;
+                }).join('')}
+              </div>
+            </div>`).join('')}
         </div>
       </div>`;
   }).join('');

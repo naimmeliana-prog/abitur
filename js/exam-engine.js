@@ -23,7 +23,7 @@ const ExamEngine = {
         const questions = officialExam.questions.map(q => ({ ...q, subjectId }));
         const exam = {
           id: Date.now(),
-          name: officialExam.name,
+          name: officialExam.title || officialExam.name || 'Examen Oficial',
           mode,
           subjects,
           difficulty: 'all',

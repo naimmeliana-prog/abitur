@@ -344,7 +344,7 @@ async function loadOfficialExamsList() {
 
   const lang = App.currentLang;
   select.innerHTML = exams.map(e => `
-    <option value="${e.id}">${e.name} (${e.year})</option>
+    <option value="${e.id}">${e.title || e.name || 'Examen'} (${e.year})</option>
   `).join('');
 }
 

@@ -486,16 +486,39 @@ const PDFGenerator = {
 
     const filename = `AbiturDSV_Written_${subjectId}_${examId}_${withSolutions ? 'Solved' : 'Blank'}.pdf`;
     
-    // Open PDF directly in screen/new tab instead of downloading silently
+    // Render PDF directly inside an on-screen blurred iframe modal (bypasses browser popup blockers entirely)
     try {
       const pdfBlob = doc.output('bloburl');
       if (pdfBlob) {
-        window.open(pdfBlob, '_blank');
+        let modal = document.getElementById('pdf-modal-preview');
+        if (modal) {
+          modal.remove(); // Remove existing
+        }
+        
+        modal = document.createElement('div');
+        modal.id = 'pdf-modal-preview';
+        modal.innerHTML = `
+          <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(15,23,42,0.85);z-index:999999;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);animation:fadeIn 0.25s ease;">
+            <div style="width:92%;height:92%;background:var(--bg-1, #0f172a);border-radius:16px;border:1px solid var(--glass-border);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.8);animation:scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+              <div style="padding:16px 24px;background:rgba(30,41,59,0.5);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--glass-border);">
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <span style="font-size:20px;">📄</span>
+                  <strong style="color:var(--color-gold, #f5c242);font-size:15px;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.5px;">Vista Previa e Impresión del Examen Escrito</strong>
+                </div>
+                <button onclick="document.getElementById('pdf-modal-preview').remove()" style="background:var(--color-error, #ef4444);color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700;font-size:12px;transition:all 0.2s;display:flex;align-items:center;gap:4px;" onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1.1)';" onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(1)';">
+                  Cerrar ✕
+                </button>
+              </div>
+              <iframe id="pdf-iframe-container" src="${pdfBlob}" style="width:100%;flex:1;border:none;background:var(--bg-0);"></iframe>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modal);
       } else {
         doc.save(filename);
       }
     } catch (e) {
-      console.warn("Failed to open PDF in new tab, downloading instead:", e);
+      console.warn("Failed to open PDF in modal, downloading instead:", e);
       doc.save(filename);
     }
 
