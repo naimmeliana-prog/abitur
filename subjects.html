@@ -8,42 +8,27 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    .operator-badge {
-      position: relative;
-      cursor: help;
-    }
-    .operator-badge::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: 125%;
-      left: 50%;
-      transform: translateX(-50%) translateY(5px);
-      background: rgba(30, 30, 40, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+    .operator-badge { cursor: help; }
+    #op-tooltip {
+      position: fixed;
+      z-index: 9999;
+      max-width: 260px;
+      background: rgba(22, 22, 32, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--color-gold);
       color: var(--text-primary);
       padding: 10px 14px;
       border-radius: var(--radius-md);
       font-size: 12px;
-      white-space: normal;
-      width: 250px;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-      box-shadow: var(--shadow-lg);
+      line-height: 1.55;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
       pointer-events: none;
-      line-height: 1.5;
-      text-align: left;
-      font-weight: normal;
-      text-transform: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      white-space: normal;
     }
-    .operator-badge:hover::after {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0);
-    }
+    #op-tooltip.visible { opacity: 1; }
   </style>
 </head>
 <body>
@@ -639,5 +624,64 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+
+<!-- Global operator tooltip — positioned relative to viewport, never clipped -->
+<div id="op-tooltip"></div>
+<script>
+(function () {
+  const tip = document.getElementById('op-tooltip');
+  const MARGIN = 10; // px away from viewport edge
+
+  function showTip(badge, text) {
+    tip.textContent = text;
+    tip.classList.add('visible');
+    positionTip(badge);
+  }
+
+  function hideTip() {
+    tip.classList.remove('visible');
+  }
+
+  function positionTip(badge) {
+    const rect = badge.getBoundingClientRect();
+    const tw   = tip.offsetWidth  || 260;
+    const th   = tip.offsetHeight || 60;
+    const vw   = window.innerWidth;
+    const vh   = window.innerHeight;
+
+    // Prefer above the badge; fall back to below if not enough room
+    let top = rect.top - th - 8;
+    if (top < MARGIN) top = rect.bottom + 8;
+
+    // Centre horizontally on the badge, clamped to viewport
+    let left = rect.left + rect.width / 2 - tw / 2;
+    left = Math.max(MARGIN, Math.min(left, vw - tw - MARGIN));
+
+    // Clamp vertical too
+    top = Math.max(MARGIN, Math.min(top, vh - th - MARGIN));
+
+    tip.style.top  = top  + 'px';
+    tip.style.left = left + 'px';
+  }
+
+  // Event delegation — works with dynamically rendered badges
+  document.addEventListener('mouseover', function (e) {
+    const badge = e.target.closest('.operator-badge[data-tooltip]');
+    if (badge) showTip(badge, badge.dataset.tooltip);
+  });
+
+  document.addEventListener('mouseout', function (e) {
+    const badge = e.target.closest('.operator-badge[data-tooltip]');
+    if (badge) hideTip();
+  });
+
+  // Reposition on scroll in case the user scrolls while hovering
+  document.addEventListener('scroll', function () {
+    const hovered = document.querySelector('.operator-badge[data-tooltip]:hover');
+    if (hovered) positionTip(hovered);
+  }, true);
+})();
+</script>
 </body>
 </html>
+
