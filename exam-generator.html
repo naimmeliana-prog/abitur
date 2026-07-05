@@ -336,7 +336,7 @@ async function loadOfficialExamsList() {
   const subjectId = selectedSubjects[0];
   const data = await ExamEngine.loadSubjectData(subjectId);
 
-  const exams = data?.official_exams || [];
+  const exams = data?.official_exams_archive || data?.official_exams || [];
   if (exams.length === 0) {
     select.innerHTML = '<option value="">No hay exámenes oficiales cargados en este momento</option>';
     return;

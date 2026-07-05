@@ -18,7 +18,7 @@ const ExamEngine = {
     if (officialExamId) {
       const subjectId = subjects[0];
       const data = ExamEngine.getSubjectData(subjectId);
-      const officialExam = data?.official_exams?.find(e => e.id === officialExamId);
+      const officialExam = (data?.official_exams_archive || data?.official_exams || []).find(e => e.id === officialExamId);
       if (officialExam) {
         const questions = officialExam.questions.map(q => ({ ...q, subjectId }));
         const exam = {
