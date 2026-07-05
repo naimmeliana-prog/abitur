@@ -955,6 +955,7 @@
               "recommendation": {
                 "es": "Recomendación: También puedes calcular el determinante de la matriz formada por los tres vectores. Si det(M) = 0, son linealmente dependientes. En este caso: det = 1(3 - 15) - 2(0 - 0) + 2(6 - 0) = -12 + 12 = 0.",
                 "de": "Tipp: Der Nachweis kann auch über die Determinante der Koeffizientenmatrix geführt werden. Ist det = 0, sind sie linear abhängig."
+              }
             },
             {
               "title": "Aufgabe A3: Stochastik (Árboles de decisión y probabilidad total)",
