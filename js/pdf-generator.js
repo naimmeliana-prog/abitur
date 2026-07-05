@@ -242,8 +242,8 @@ const PDFGenerator = {
   },
 
   generateWrittenExam(subjectId, examId, withSolutions) {
-    if (typeof window.jspdf === 'undefined' && typeof jsPDF === 'undefined') {
-      App.showToast('PDF: Cargando librería...', 'info');
+    if (typeof window.jspdf === 'undefined' && typeof window.jsPDF === 'undefined' && typeof jsPDF === 'undefined') {
+      if (typeof App !== 'undefined') App.showToast('PDF: Cargando librería...', 'info');
       const script = document.createElement('script');
       script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
       script.onload = () => this._doGenerateWritten(subjectId, examId, withSolutions);
@@ -257,13 +257,22 @@ const PDFGenerator = {
     if (typeof App !== 'undefined') {
       App.showToast('📄 Generando PDF del examen escrito...', 'info');
     }
-    let data;
-    try {
-      const res = await fetch(`data/${subjectId}.json?t=${Date.now()}`);
-      data = await res.json();
-    } catch (e) {
-      console.error(e);
-      if (typeof App !== 'undefined') App.showToast('Error al cargar datos del examen', 'error');
+    let data = null;
+    
+    // Check if subjectData is already in memory on the current page to avoid CORS block on file://
+    if (window.subjectData && window.subjectData.subject === subjectId) {
+      data = window.subjectData;
+    } else {
+      try {
+        const res = await fetch(`data/${subjectId}.json?t=${Date.now()}`);
+        data = await res.json();
+      } catch (e) {
+        console.error("CORS/Fetch error, attempting memory read:", e);
+      }
+    }
+
+    if (!data) {
+      if (typeof App !== 'undefined') App.showToast('Error: No se pudieron cargar los datos del examen.', 'error');
       return;
     }
 
@@ -273,8 +282,22 @@ const PDFGenerator = {
       return;
     }
 
-    const { jsPDF } = window.jspdf || window;
-    const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+    // Robust jsPDF detection
+    let jsPDFConstructor = null;
+    if (typeof window.jspdf !== 'undefined' && typeof window.jspdf.jsPDF !== 'undefined') {
+      jsPDFConstructor = window.jspdf.jsPDF;
+    } else if (typeof window.jsPDF !== 'undefined') {
+      jsPDFConstructor = window.jsPDF;
+    } else if (typeof jsPDF !== 'undefined') {
+      jsPDFConstructor = jsPDF;
+    }
+
+    if (!jsPDFConstructor) {
+      if (typeof App !== 'undefined') App.showToast('Error: No se encontró el constructor de jsPDF.', 'error');
+      return;
+    }
+
+    const doc = new jsPDFConstructor({ orientation: 'portrait', unit: 'mm', format: 'a4' });
     const lang = localStorage.getItem('abitur_lang') || 'es';
     const pageW = 210;
     const pageH = 297;
@@ -462,9 +485,22 @@ const PDFGenerator = {
     }
 
     const filename = `AbiturDSV_Written_${subjectId}_${examId}_${withSolutions ? 'Solved' : 'Blank'}.pdf`;
-    doc.save(filename);
+    
+    // Open PDF directly in screen/new tab instead of downloading silently
+    try {
+      const pdfBlob = doc.output('bloburl');
+      if (pdfBlob) {
+        window.open(pdfBlob, '_blank');
+      } else {
+        doc.save(filename);
+      }
+    } catch (e) {
+      console.warn("Failed to open PDF in new tab, downloading instead:", e);
+      doc.save(filename);
+    }
+
     if (typeof App !== 'undefined') {
-      App.showToast('📄 PDF del examen generado correctamente', 'success');
+      App.showToast('📄 PDF del examen generado en pantalla', 'success');
     }
   },
 };
