@@ -1078,52 +1078,50 @@
                 "es": "Recomendación: En el apartado b, es mucho más sencillo y seguro derivar F(x) para demostrar que es igual a f(x), en lugar de intentar integrar f(x) mediante integración por partes.",
                 "de": "Tipp: Leite F(x) ab, um F'(x) = f(x) zu zeigen. Dies ist wesentlich einfacher und weniger fehleranfällig als das Integrieren."
               }
+            },
+            {
+              "title": "Aufgabe A2: Geometrie (Ortogonalidad y distancia de punto a plano)",
+              "question": {
+                "es": "Apartado a) Determina si los vectores u⃗ = (1, 2, -2) y v⃗ = (4, 1, 3) son ortogonales.\nApartado b) Calcula la distancia del punto P(2, -1, 3) al plano E: 2x - y + 2z = 5.",
+                "de": "a) Überprüfe, ob die Vektoren u⃗ = (1|2|-2) und v⃗ = (4|1|3) orthogonal zueinander sind.\nb) Berechne den Abstand des Punktes P(2|-1|3) zur Ebene E: 2x - y + 2z = 5."
+              },
+              "solution": {
+                "es": "a) Evaluamos el producto escalar: u⃗ · v⃗ = 1·4 + 2·1 + (-2)·3 = 4 + 2 - 6 = 0. Dado que el producto escalar es cero, los vectores u⃗ y v⃗ son ortogonales.\nb) Aplicamos la HNF: d = |2(2) - (-1) + 2(3) - 5| / √(2² + (-1)² + 2²) = |4 + 1 + 6 - 5| / √9 = 6/3 = 2 unidades.",
+                "de": "a) Skalarprodukt bilden: u⃗ · v⃗ = 1·4 + 2·1 + (-2)·3 = 4 + 2 - 6 = 0. Da das Skalarprodukt null ist, sind die Vektoren u⃗ und v⃗ orthogonal.\nb) Hessesche Normalenform anwenden: d = |2·2 - (-1) + 2·3 - 5| / √(2^2 + (-1)^2 + 2^2) = 6 / 3 = 2 Längeneinheiten."
+              },
+              "points": 5,
+              "criteria": {
+                "es": "• 2 Puntos (a): Producto escalar correcto y conclusión verbal.\n• 3 Puntos (b): Aplicar la distancia de Hesse, simplificar y obtener la distancia de 2 unidades.",
+                "de": "• 2 Punkte (a): Berechnung des Skalarprots und Schlussfolgerung.\n• 3 Punkte (b): Anwendung der HNF-Formel und Abstandsbestimmung."
+              },
+              "recommendation": {
+                "es": "Recomendación: Recuerda simplificar siempre la raíz del denominador. El módulo del vector normal (2, -1, 2) es 3.",
+                "de": "Tipp: Der Normalenvektor der Ebene lautet n⃗ = (2|-1|2). Seine Länge ist genau 3."
+              }
+            },
+            {
+              "title": "Aufgabe A3: Stochastik (Probabilidad condicional en test médico)",
+              "question": {
+                "es": "Una prueba médica para detectar una enfermedad tiene una sensibilidad del 98% (detecta el positivo si está enfermo) y una especificidad del 95% (da negativo si está sano). La tasa de prevalencia de la enfermedad en la población es del 1%.\nApartado a) Dibuja el diagrama de árbol con las probabilidades correspondientes.\nApartado b) Si una persona da positivo en la prueba, calcula la probabilidad de que realmente esté enferma.",
+                "de": "Ein medizinischer Test hat eine Sensitivität von 98% und eine Spezifität von 95%. Die Prävalenz der Krankheit in der Bevölkerung beträgt 1%.\na) Zeichne ein vollständiges Baumdiagramm mit den entsprechenden Wahrscheinlichkeiten.\nb) Berechne die Wahrscheinlichkeit, dass eine positiv getestete Person tatsächlich krank ist."
+              },
+              "solution": {
+                "es": "a) Ramas del árbol: Enfermo (E): 0.01; Sano (S): 0.99.\nDesde E: Positivo (T+): 0.98; Negativo (T-): 0.02.\nDesde S: Positivo (T+): 0.05; Negativo (T-): 0.95.\nb) Aplicamos la fórmula de Bayes:\nP(E | T+) = P(T+ | E)·P(E) / [P(T+ | E)·P(E) + P(T+ | S)·P(S)]\nP(E | T+) = 0.98·0.01 / [0.98·0.01 + 0.05·0.99] = 0.0098 / [0.0098 + 0.0495] = 0.0098 / 0.0593 ≈ 16.53%.",
+                "de": "a) Pfade: Krank (K): 0,01; Gesund (G): 0,99.\nKrank -> Positiv (T+): 0,98; Negativ (T-): 0,02.\nGesund -> Positiv (T+): 0,05; Negativ (T-): 0,95.\nb) Satz von Bayes: P(K | T+) = 0,98·0,01 / (0,98·0,01 + 0,05·0,99) = 0,0098 / 0,0593 ≈ 16,53%."
+              },
+              "points": 5,
+              "criteria": {
+                "es": "• 2 Puntos (a): Diagrama de árbol completo con las 4 probabilidades finales correctas.\n• 3 Puntos (b): Aplicar la fórmula de la probabilidad total y de Bayes para obtener 16.53%.",
+                "de": "• 2 Punkte (a): Vollständiges Baumdiagramm mit allen Wahrscheinlichkeiten.\n• 3 Punkte (b): Anwendung des Satzes von Bayes und Ergebnis."
+              },
+              "recommendation": {
+                "es": "La paradoja de los falsos positivos: aunque la prueba parezca muy precisa (98% y 95%), si la enfermedad es muy rara (1%), la probabilidad de estar enfermo al dar positivo sigue siendo baja (16.53%).",
+                "de": "Tipp: Da die Krankheit selten ist, ist der Anteil der Falsch-Positiven trotz guter Testwerte hoch."
+              }
             }
           ]
         },
         {
-          "title": "Aufgabe A2: Geometrie (Ortogonalidad y distancia de punto a plano)",
-          "question": {
-            "es": "Apartado a) Determina si los vectores u⃗ = (1, 2, -2) y v⃗ = (4, 1, 3) son ortogonales.\nApartado b) Calcula la distancia del punto P(2, -1, 3) al plano E: 2x - y + 2z = 5.",
-            "de": "a) Überprüfe, ob die Vektoren u⃗ = (1|2|-2) und v⃗ = (4|1|3) orthogonal zueinander sind.\nb) Berechne den Abstand des Punktes P(2|-1|3) zur Ebene E: 2x - y + 2z = 5."
-          },
-          "solution": {
-            "es": "a) Evaluamos el producto escalar: u⃗ · v⃗ = 1·4 + 2·1 + (-2)·3 = 4 + 2 - 6 = 0. Dado que el producto escalar es cero, los vectores u⃗ y v⃗ son ortogonales.\nb) Aplicamos la HNF: d = |2(2) - (-1) + 2(3) - 5| / √(2² + (-1)² + 2²) = |4 + 1 + 6 - 5| / √9 = 6/3 = 2 unidades.",
-            "de": "a) Skalarprodukt bilden: u⃗ · v⃗ = 1·4 + 2·1 + (-2)·3 = 4 + 2 - 6 = 0. Da das Skalarprodukt null ist, sind die Vektoren u⃗ und v⃗ orthogonal.\nb) Hessesche Normalenform anwenden: d = |2·2 - (-1) + 2·3 - 5| / √(2^2 + (-1)^2 + 2^2) = 6 / 3 = 2 Längeneinheiten."
-          },
-          "points": 5,
-          "criteria": {
-            "es": "• 2 Puntos (a): Producto escalar correcto y conclusión verbal.\n• 3 Puntos (b): Aplicar la distancia de Hesse, simplificar y obtener la distancia de 2 unidades.",
-            "de": "• 2 Punkte (a): Berechnung des Skalarprots und Schlussfolgerung.\n• 3 Punkte (b): Anwendung der HNF-Formel und Abstandsbestimmung."
-          },
-          "recommendation": {
-            "es": "Recomendación: Recuerda simplificar siempre la raíz del denominador. El módulo del vector normal (2, -1, 2) es 3.",
-            "de": "Tipp: Der Normalenvektor der Ebene lautet n⃗ = (2|-1|2). Seine Länge ist genau 3."
-          }
-        },
-        {
-          "title": "Aufgabe A3: Stochastik (Probabilidad condicional en test médico)",
-          "question": {
-            "es": "Una prueba médica para detectar una enfermedad tiene una sensibilidad del 98% (detecta el positivo si está enfermo) y una especificidad del 95% (da negativo si está sano). La tasa de prevalencia de la enfermedad en la población es del 1%.\nApartado a) Dibuja el diagrama de árbol con las probabilidades correspondientes.\nApartado b) Si una persona da positivo en la prueba, calcula la probabilidad de que realmente esté enferma.",
-            "de": "Ein medizinischer Test hat eine Sensitivität von 98% und eine Spezifität von 95%. Die Prävalenz der Krankheit in der Bevölkerung beträgt 1%.\na) Zeichne ein vollständiges Baumdiagramm mit den entsprechenden Wahrscheinlichkeiten.\nb) Berechne die Wahrscheinlichkeit, dass eine positiv getestete Person tatsächlich krank ist."
-          },
-          "solution": {
-            "es": "a) Ramas del árbol: Enfermo (E): 0.01; Sano (S): 0.99.\nDesde E: Positivo (T+): 0.98; Negativo (T-): 0.02.\nDesde S: Positivo (T+): 0.05; Negativo (T-): 0.95.\nb) Aplicamos la fórmula de Bayes:\nP(E | T+) = P(T+ | E)·P(E) / [P(T+ | E)·P(E) + P(T+ | S)·P(S)]\nP(E | T+) = 0.98·0.01 / [0.98·0.01 + 0.05·0.99] = 0.0098 / [0.0098 + 0.0495] = 0.0098 / 0.0593 ≈ 16.53%.",
-            "de": "a) Pfade: Krank (K): 0,01; Gesund (G): 0,99.\nKrank -> Positiv (T+): 0,98; Negativ (T-): 0,02.\nGesund -> Positiv (T+): 0,05; Negativ (T-): 0,95.\nb) Satz von Bayes: P(K | T+) = 0,98·0,01 / (0,98·0,01 + 0,05·0,99) = 0,0098 / 0,0593 ≈ 16,53%."
-          },
-          "points": 5,
-          "criteria": {
-            "es": "• 2 Puntos (a): Diagrama de árbol completo con las 4 probabilidades finales correctas.\n• 3 Puntos (b): Aplicar la fórmula de la probabilidad total y de Bayes para obtener 16.53%.",
-            "de": "• 2 Punkte (a): Vollständiges Baumdiagramm mit allen Wahrscheinlichkeiten.\n• 3 Punkte (b): Anwendung des Satzes von Bayes und Ergebnis."
-          },
-          "recommendation": {
-            "es": "La paradoja de los falsos positivos: aunque la prueba parezca muy precisa (98% y 95%), si la enfermedad es muy rara (1%), la probabilidad de estar enfermo al dar positivo sigue siendo baja (16.53%).",
-            "de": "Tipp: Da die Krankheit selten ist, ist der Anteil der Falsch-Positiven trotz guter Testwerte hoch."
-          }
-        }
-      ]
-    },
-    {
           "name": "Teil B: Hilfsmittel-Teil (Con calculadora CAS)",
           "tasks": [
             {
