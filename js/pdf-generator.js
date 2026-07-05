@@ -254,10 +254,11 @@ const PDFGenerator = {
   },
 
   async _doGenerateWritten(subjectId, examId, withSolutions) {
-    if (typeof App !== 'undefined') {
-      App.showToast('📄 Generando PDF del examen escrito...', 'info');
-    }
-    let data = null;
+    try {
+      if (typeof App !== 'undefined') {
+        App.showToast('📄 Generando PDF del examen escrito...', 'info');
+      }
+      let data = null;
     
     // Check if subjectData is already in memory on the current page to avoid CORS block on file://
     if (window.subjectData && window.subjectData.subject === subjectId) {
@@ -322,7 +323,11 @@ const PDFGenerator = {
     const typeLabel = withSolutions 
       ? (lang === 'de' ? 'MUSTERLÖSUNG' : 'EXAMEN RESUELTO')
       : (lang === 'de' ? 'PRÜFUNGSBLATT' : 'ENUNCIADOS');
-    doc.setFillColor(withSolutions ? [34, 197, 94] : [245, 200, 66]);
+    if (withSolutions) {
+      doc.setFillColor(34, 197, 94);
+    } else {
+      doc.setFillColor(245, 200, 66);
+    }
     doc.roundedRect(pageW - margin - 38, 20, 38, 8, 2, 2, 'F');
     doc.setTextColor(26, 43, 95);
     doc.setFontSize(7.5);
@@ -524,6 +529,12 @@ const PDFGenerator = {
 
     if (typeof App !== 'undefined') {
       App.showToast('📄 PDF del examen generado en pantalla', 'success');
+    }
+    } catch (globalErr) {
+      console.error("Global PDF generation error:", globalErr);
+      if (typeof App !== 'undefined') {
+        App.showToast('Error al generar PDF: ' + globalErr.message, 'error');
+      }
     }
   },
 };
