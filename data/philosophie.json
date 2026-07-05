@@ -296,6 +296,68 @@
           ]
         }
       ]
+    },
+    {
+      "id": "philosophie_berlin_2022_complete",
+      "title": "Abiturprüfung Berlin-Brandenburg 2022 — Philosophie GK",
+      "year": "2022",
+      "pdf_url": "https://bildungsserver.berlin-brandenburg.de/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen unificado de Filosofía Abitur Berlín-Brandenburg 2022 (Grundkurs). Contiene dos tareas principales de desarrollo: el análisis textual de la fundamentación del contrato social, las causas del pacto y el leviatán en Thomas Hobbes, y una disertación crítica sobre la validez del imperativo categórico kantiano aplicado al dilema ético del desarrollo del algoritmo de conducción autónoma.",
+        "de": "Zentralabiturprüfung Philosophie Berlin-Brandenburg 2022 (Grundkurs). Besteht aus einer Textanalyse zum Gesellschaftsvertrag und dem Naturzustand bei Thomas Hobbes (Leviathan) sowie einer philosophischen Erörterung zur Anwendbarkeit des kantischen kategorischen Imperativs auf die Programmierung autonomer Fahrzeuge."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Textanalyse (Análisis hermenéutico)",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Analyse eines Textauszugs aus Thomas Hobbes' 'Leviathan' (1651)",
+              "question": {
+                "es": "Analiza el fragmento propuesto de Thomas Hobbes:\nApartado a) Explica la concepción hobbesiana del estado de naturaleza como un estado de 'guerra de todos contra todos'.\nApartado b) Expón detalladamente cómo y por qué los seres humanos transfieren sus derechos individuales al Leviatán mediante el contrato social.",
+                "de": "Analysiere den vorliegenden Textauszug aus Hobbes' staatstheoretischem Werk 'Leviathan':\na) Erläuere Hobbes' Konzeption des Naturzustands als 'Krieg aller gegen alle'.\nb) Erkläre ausführlich, wie und warum die Menschen ihre Rechte auf den Souverän (Leviathan) übertragen."
+              },
+              "solution": {
+                "es": "a) El estado de naturaleza en Hobbes:\n- Para Hobbes, los seres humanos son iguales por naturaleza en sus facultades físicas y mentales, lo que genera una igualdad de esperanza respecto a la consecución de sus fines.\n- Puesto que los bienes son escasos y no hay un poder común que los modere, esta igualdad deviene en desconfianza mutua y, finalmente, en un estado de guerra latente ('guerra de todos contra todos' / bellum omnium contra omnes).\n- En este estado no hay leyes, ni justicia, ni propiedad privada real; la vida del hombre es 'solitaria, pobre, tosca, embrutecida y corta'. Las causas de la discordia son tres: la competencia, la desconfianza y el deseo de gloria.\n\nb) El contrato social y el nacimiento del Leviatán:\n- El miedo a una muerte violenta y el deseo de una vida confortable inclinan a los hombres a buscar la paz.\n- Mediante el pacto de unión, cada individuo cede voluntaria e irrevocablemente su derecho de autogobierno a un tercero (sea un hombre o una asamblea), a condición de que todos los demás cedan su derecho de la misma manera.\n- El depositario de esta voluntad colectiva es el soberano absoluto (el Leviatán), quien posee el monopolio de la fuerza y de la ley para asegurar la paz interior y la defensa común. El soberano está fuera del pacto, por lo que su poder es ilimitado y no puede ser despojado por los súbditos.",
+                "de": "a) Hobbes' Naturzustand:\n- Der Mensch ist dem Menschen ein Wolf (homo homini lupus). Gleichheit der Kräfte führt zu Konkurrenz, Misstrauen und Ruhmsucht.\n- Ohne staatliche Macht herrscht ein ständiger Kriegszustand, in dem das Leben 'einsam, armselig, ekelhaft, tierisch und kurz' ist.\n\nb) Der Gesellschaftsvertrag:\n- Aus Todesfurcht schließen die Menschen einen Vertrag. Jeder überträgt sein Recht auf Selbstbestimmung auf einen Souverän (Leviathan).\n- Der Vertrag ist unkündbar, und der Souverän herrscht absolut, um Schutz und Ordnung zu garantieren."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos (a): Explicar las características de la antropología hobbesiana y la guerra de todos contra todos.\n• 25 Puntos (b): Exponer la fórmula del pacto de unión y la sumisión irrevocable al soberano absoluto.\n• 10 Puntos: Rigor terminológico de filosofía política y redacción clara en alemán.",
+                "de": "• 15 Punkte (a): Darstellung des Naturzustands und der drei Konfliktursachen.\n• 25 Punkte (b): Erklärung des Gesellschaftsvertrags und der Rolle des Souveräns.\n• 10 Punkte: Fachbegriffe und sprachliche Qualität."
+              },
+              "recommendation": {
+                "es": "Recomendación: Contrasta la visión pesimista de la naturaleza humana de Hobbes con la visión optimista de Rousseau ('el hombre nace bueno y la sociedad lo corrompe'). Esto dará una riqueza comparativa fantástica en las rúbricas del Abitur.",
+                "de": "Tipp: Kontrastiere Hobbes' pessimistisches Menschenbild kurz mit Rousseaus Idee des edlen Wilden, um dein breites Epochenwissen zu demonstrieren."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Philosophische Erörterung (Disertación ética)",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Erörterung des kategorischen Imperativs angewandt auf die Ethik autonomer Fahrzeuge",
+              "question": {
+                "es": "Discute críticamente la viabilidad de programar el software de toma de decisiones de los vehículos autónomos basándose en el imperativo categórico de Immanuel Kant. Contrasta esta perspectiva deontológica con una solución puramente utilitarista ante una situación de colisión inevitable (dilema del tranvía).",
+                "de": "Erörtere die Anwendbarkeit des kantischen kategorischen Imperativs auf die Programmierung autonomer Fahrzeuge. Vergleiche diese deontologische Sicht mit utilitaristischen Ansätzen bei unausweichlichen Unfallszenarien."
+              },
+              "solution": {
+                "es": "1) Introducción: Formulación del dilema ético: ante un accidente inevitable, el algoritmo del coche autónomo debe decidir a quién desviar o atropellar (ej: sacrificar al conductor para salvar a un grupo de peatones). ¿Cómo resolverlo filosóficamente?\n2) Perspectiva deontológica kantiana (Imperativo Categórico):\n- Según la fórmula de la humanidad como fin en sí mismo, un ser humano nunca puede ser utilizado meramente como un medio para lograr otro fin. Por tanto, es moralmente inadmisible que el coche realice un cálculo de vidas (atropellar a 1 persona para salvar a 5) porque estaría instrumentalizando la vida de esa persona.\n- Universalización de la máxima: no se puede universalizar la regla de matar a transeúntes inocentes para maximizar la utilidad colectiva. Para Kant, no está permitido participar de forma activa en el sacrificio de un inocente; el algoritmo no debería discriminar por edad, sexo o número de personas.\n3) Perspectiva utilitarista (Bentham/Mill):\n- El principio de utilidad ordena maximizar el bienestar o el número de vidas salvadas. El algoritmo debe calcular activamente las probabilidades y minimizar la pérdida agregada: en caso de colisión inevitable, se desvía hacia el menor número de víctimas.\n4) Conclusión y síntesis: Evaluar las limitaciones prácticas de ambos enfoques. La postura kantiana resguarda de forma absoluta la dignidad inviolable de la vida, pero puede parecer paralizante en la práctica algorítmica. Por el contrario, el utilitarismo corre el riesgo de mercantilizar la vida humana. Las comisiones de ética (como la alemana para la conducción automatizada) prohíben la discriminación de personas basadas en características personales o número.",
+                "de": "1) Einleitung: Das Trolley-Problem im Kontext künstlicher Intelligenz bei selbstfahrenden Autos.\n2) Kantischer Deontologieansatz:\n- Zweck-an-sich-Formel: Menschen dürfen niemals als bloßes Mittel zur Rettung anderer instrumentalisiert werden. Leben gegen Leben abzuwägen ist kantisch unzulässig.\n- Universelle Maxime: Es lässt sich nicht verallgemeinern, dass unbeteiligte Personen zur Schadensminimierung geopfert werden.\n3) Utilitarismus:\n- Nutzenmaximierung (Zahl der überlebenden Personen maximieren). Abwägung ist hier Pflicht.\n4) Fazit: Kants Ansatz schützt die Menschenwürde absolut, erschwert aber algorithmische Entscheidungen in Grenzsituationen. Die reale deutsche Ethik-Kommission folgt Kants Verbot der Abwägung von Menschenleben."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Exposición fiel del imperativo categórico kantiano (máximas, fines en sí mismos).\n• 15 Puntos: Exposición de la ética utilitarista y su aplicación algorítmica.\n• 15 Puntos: Discusión dialéctica crítica entre la inviolabilidad moral (Kant) y el pragmatismo agregado (Utilitarismo).\n• 5 Puntos: Nivel léxico formal y calidad argumentativa en alemán.",
+                "de": "• 15 Punkte: Korrekte Darstellung des kategorischen Imperativs.\n• 15 Punkte: Erläuterung des Utilitarismus.\n• 15 Punkte: Kritische Abwägung des moralischen Dilemmas.\n• 5 Punkte: Ausdrucksvermögen und Logik."
+              },
+              "recommendation": {
+                "es": "Recomendación: En esta disertación contemporánea, es brillante mencionar las directrices de la Comisión de Ética de Alemania sobre Vehículos Autónomos (2017), la cual dictaminó que es ilícito discriminar o calcular vidas humanas según la edad o el número, reflejando una postura puramente kantiana.",
+                "de": "Tipp: Verweise auf die realen Richtlinien der deutschen Ethik-Kommission für automatisiertes Fahren (2017), die eine kantische Position (Verbot der Aufrechnung von Menschenleben) einnimmt."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

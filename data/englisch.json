@@ -356,6 +356,88 @@
           ]
         }
       ]
+    },
+    {
+      "id": "englisch_nrw_2022_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2022 — Englisch GK",
+      "year": "2022",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen unificado de Inglés Abitur NRW 2022 para Grundkurs (GK). Contiene tres tareas de desarrollo: análisis formal de un artículo del Guardian sobre el Brexit y la crisis de identidad británica, redacción de un ensayo argumentativo sobre la globalización frente al resurgimiento del nacionalismo en situaciones de crisis internacional, y mediación del folleto de movilidad de Múnich al inglés.",
+        "de": "Zentralabitur Englisch Nordrhein-Westfalen 2022 (Grundkurs). Enthält Aufgaben zur Textanalyse eines Guardian-Artikels über den Brexit und die nationale Identitätskrise, eine argumentative Erörterung zur globalen Kooperation vs. Nationalismus in Krisenzeiten sowie eine Mediation über Mobilitätskonzepte der Stadt München ins Englische."
+      },
+      "blocks": [
+        {
+          "name": "Part A: Text Analysis & Composition",
+          "tasks": [
+            {
+              "title": "Task 1: Rhetorical Analysis of a Guardian Article on Brexit and British Identity",
+              "question": {
+                "es": "Analiza formalmente el fragmento de un artículo de opinión publicado en The Guardian sobre los efectos socioculturales del Brexit. Explica el uso de metáforas, la actitud del narrador y el impacto de su tono crítico en la opinión del lector.",
+                "de": "Analysiere rhetorisch den vorliegenden Auszug eines Kommentarartikels aus The Guardian zum Brexit. Erkläre die Metaphorik, die Haltung des Autors sowie die Wirkung des kritischen Tons auf den Leser."
+              },
+              "solution": {
+                "es": "1) Comprehension / Outline: The author argues that Brexit was not just a political event but a symptom of a deep-seated postcolonial nostalgia. The UK is facing an identity crisis, torn between its history as a global empire and its current status as an isolated island state.\n2) Analysis of stylistic devices:\n- Metaphors: 'a ship lost in a fog of memories' (illustrates the disorientation of the country) and 'clinging to imperial coat-tails' (shows dependency on past glory).\n- Contrast and Irony: Highlighting the discrepancy between the promises of sovereignty and the reality of economic barriers.\n- Word choice: Emotive terms like 'isolationist', 'shattered ideals', 'delusion' reveal the author's highly critical attitude towards nationalist politicians.",
+                "de": "1) Inhaltsangabe: Der Autor argumentiert, der Brexit sei Symptom einer tiefen Identitätskrise, genährt von postkolonialer Nostalgie.\n2) Analyse der Stilmittel:\n- Metaphorik: 'a ship lost in a fog of memories' zur Veranschaulichung der Orientierungslosigkeit.\n- Kontraste und Ironie zur Entlarvung der Souveränitätsversprechen.\n- Wortwahl: Emotional geladene Wörter ('delusion', 'isolationist') verdeutlichen die kritische Haltung des Autors."
+              },
+              "points": 40,
+              "criteria": {
+                "es": "• 15 Puntos: Textverständnis und Herausarbeiten der Hauptthesen.\n• 15 Puntos: Análisis formal de recursos estilísticos con citas directas del texto.\n• 10 Puntos: Redacción en estilo académico C1 de inglés.",
+                "de": "• 15 Punkte: Textverständnis und Herausarbeiten der Hauptthesen.\n• 15 Punkte: Präzise Analyse der rhetorischen Mittel und der Haltung des Autors mit Textbelegen.\n• 10 Punkte: Sprachliche Qualität im englischen Register (C1 Niveau)."
+              },
+              "recommendation": {
+                "es": "Recomendación didáctica: Cuando analices la ironía o la actitud del narrador, no te limites a decir 'es irónico'. Cita la contradicción textual exacta y explica cómo el autor utiliza esa tensión para convencer al lector de su postura crítica.",
+                "de": "Tipp: Bei der Ironie-Analyse immer den genauen Textbeleg zitieren und erklären, wie der Autor durch die Diskrepanz zwischen Wortlaut und Intention den Leser beeinflusst."
+              }
+            },
+            {
+              "title": "Task 2: Composition — Global Cooperation vs. National Sovereignty",
+              "question": {
+                "es": "Discute críticamente la tensión entre la cooperación internacional y el auge de los discursos soberanistas en la política global contemporánea. Apoya tu argumentación en ejemplos del cambio climático o de la gestión de recursos energéticos internacionales.",
+                "de": "Erörtere kritisch das Spannungsfeld zwischen globaler Kooperation und dem Aufkommen souveränistischer Tendenzen in der modernen Weltpolitik. Beziehe dich dabei auf das Thema Klimawandel oder Energiepolitik."
+              },
+              "solution": {
+                "es": "1) Introduction: Introduce the central paradox: global problems (like global warming) require trans-national cooperation, yet we observe a resurgence of nationalism and isolationism ('America First', 'Brexit').\n2) Body:\n- Arguments for Cooperation: Climate change knows no borders. The Paris Agreement demonstrates that targets are only achievable if major polluters (USA, China, EU) coordinate policies. Economic interdependence requires stable global rules.\n- Arguments for Sovereignty / Nationalist perspective: Politicians claim that international regulations undermine national economies and democratic control. Popular desire for clear borders and local security during crises.\n3) Synthesis and Conclusion: Unilateral actions are structurally incapable of resolving ecological disasters. True sovereignty in the 21st century lies in the capacity to shape cooperative international frameworks rather than retreating into isolation.",
+                "de": "1) Einleitung: Einführung in das Paradoxon globaler Probleme vs. nationalistische Abschottung.\n2) Hauptteil:\n- Kooperationsargumente: Klimawandel erfordert transnationale Verträge wie das Pariser Abkommen. Wirtschaftliche Interdependenz.\n- Souveränitätsargumente: Schutz der heimischen Wirtschaft, demokratisches Defizit supranaturaler Organisationen.\n3) Fazit: Einseitige Maßnahmen können ökologische Krisen nicht lösen; Kooperation ist im 21. Jahrhundert zwingend."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 15 Puntos: Estructura lógica del ensayo (introducción clara, desarrollo dialéctico equilibrado, conclusión sólida).\n• 10 Puntos: Uso de ejemplos históricos o actuales correctos (ej: COP, protocolos climáticos, Brexit).\n• 5 Puntos: Estilo persuasivo, conectores discursivos en inglés y vocabulario de relaciones internacionales.",
+                "de": "• 15 Punkte: Strukturierte Argumentation (Einleitung, dialektischer Aufbau, überzeugendes Fazit).\n• 10 Punkte: Sachbezug und Plausibilität der Argumente (z.B. Pariser Klimaabkommen).\n• 5 Punkte: Ausdrucksvermögen und Verwendung politischer Fachbegriffe."
+              },
+              "recommendation": {
+                "es": "Recomendación: Enriqueciendo la composición con términos específicos como 'supranationalism', 'multilateral agreements' o 'nationalist backlash' obtendrás una puntuación excelente de vocabulario formal.",
+                "de": "Tipp: Nutze Fachbegriffe der internationalen Beziehungen ('supranationalism', 'multilateralism', 'isolationist tendencies'), um das akademische Niveau zu unterstreichen."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Part B: Mediation (Sprachmittlung)",
+          "tasks": [
+            {
+              "title": "Task 3: Mediate a German brochure about Munich's sustainable mobility strategy into English",
+              "question": {
+                "es": "Un estudiante inglés realiza un trabajo sobre ciudades sostenibles en Europa. Traduce y sintetiza en inglés los puntos fundamentales del folleto oficial del Ayuntamiento de Múnich sobre la expansión del transporte público eléctrico y la red de carriles bici.",
+                "de": "Ein englischer Austauschschüler recherchiert über nachhaltige Mobilität in Europa. Vermittle (Mediate) die Kernaussagen einer deutschen Broschüre der Stadt München über E-Busse und Radverkehrskonzepte ins Englische."
+              },
+              "solution": {
+                "es": "1) Salutation & Context: Informal email to a peer: 'Hi James, glad to hear about your research. I read this German brochure about Munich...'\n2) Mediation points:\n- Munich aims to convert 100% of its bus fleet to electric propulsion by 2030.\n- Massive expansion of express cycle routes (Radschnellverbindungen) connecting the suburban areas to the city center.\n- Introduction of mobility hubs (Mobilitätsstationen) where citizens can seamlessly switch between subways, rental bikes, and shared electric scooters.\n3) Final greeting: 'Hope this helps with your paper! Let me know if you need more details. Best, ...'",
+                "de": "1) Anrede und Kontext: 'Hi James... I read this German brochure about Munich...'\n2) Kernpunkte der Broschüre:\n- Ziel: Busflotte bis 2030 komplett elektrifizieren.\n- Ausbau von Radschnellwegen für Pendler aus dem Umland.\n- Einrichtung von Mobilitätsstationen (U-Bahn, Leihräder, E-Scooter an einem Ort).\n3) Grußformel."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 10 Puntos: Adecuación al registro informal de correo electrónico entre compañeros.\n• 10 Puntos: Inclusión fiel de los datos técnicos de Múnich.\n• 10 Puntos: Reformulación idiomática natural y fluida al inglés.",
+                "de": "• 10 Punkte: Einhaltung des informellen E-Mail-Registers.\n• 10 Punkte: Relevante Auswahl von Mobilitätsdaten der Stadt München.\n• 10 Punkte: Natürliche englische Formulierung."
+              },
+              "recommendation": {
+                "es": "Recomendación: En la mediación escrita informal, no traduzcas literalmente palabras compuestas alemanas complejas como 'Radschnellverbindungen'. Es mucho mejor explicar el concepto de forma natural: 'express cycle tracks/routes for commuters'.",
+                "de": "Tipp: Vermeide wörtliche Übersetzungen deutscher Komposita. Beschreibe stattdessen den Zweck ('express cycle routes for commuters')."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

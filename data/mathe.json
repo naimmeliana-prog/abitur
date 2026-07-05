@@ -755,6 +755,68 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mathe_nrw_2022_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2022 — Mathematik GK",
+      "year": "2022",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen unificado de Matemáticas Abitur NRW 2022 para Grundkurs (GK). Se compone de ejercicios del bloque A (sin calculadora, evaluación de derivadas e integrales básicas de funciones exponenciales) y del bloque B (con calculadora, enfocado en el análisis de niveles de ozono y cálculo de intersecciones y distancias tridimensionales).",
+        "de": "Zentralabiturprüfung Mathematik Nordrhein-Westfalen 2022 (Grundkurs). Enthält Aufgaben aus Teil A (hilfsmittelfrei: e-Funktion und Integralrechnung) sowie komplexe Anwendungsaufgaben aus Teil B (Ozonkonzentrationskurven und analytische Geometrie im dreidimensionalen Raum)."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Hilfsmittelfreier Teil (Sin calculadora)",
+          "tasks": [
+            {
+              "title": "Aufgabe A1: Extrema und Integral der Funktion f(x) = x · e^(-x)",
+              "question": {
+                "es": "Dada la función f(x) = x · e^(-x) para x ∈ R:\nApartado a) Calcula el punto máximo local (Hochpunkt) de la gráfica de f.\nApartado b) Demuestra que F(x) = (-x - 1)e^(-x) es una primitiva de f.",
+                "de": "Gegeben ist die Funktion f(x) = x · e^(-x) für x ∈ R:\na) Bestimme die Koordinaten des lokalen Hochpunkts des Graphen von f.\nb) Zeige, dass F(x) = (-x - 1)e^(-x) eine Stammfunktion von f ist."
+              },
+              "solution": {
+                "es": "a) Derivamos aplicando la regla del producto u = x, v = e^(-x) -> u'=1, v'=-e^(-x):\nf'(x) = 1·e^(-x) + x·(-e^(-x)) = (1 - x)e^(-x).\nIgualamos la derivada a cero: (1 - x)e^(-x) = 0. Como e^(-x) nunca es 0, obtenemos x = 1.\nCalculamos la segunda derivada para verificar: f''(x) = -1·e^(-x) + (1-x)·(-e^(-x)) = (x - 2)e^(-x).\nf''(1) = (1 - 2)e^(-1) = -1/e < 0. Es un punto máximo (Hochpunkt).\nLa coordenada y es: f(1) = 1 · e^(-1) = 1/e. Punto: HP(1 | 1/e).\n\nb) Derivamos F(x) para comprobar si F'(x) = f(x):\nF'(x) = d/dx [ (-x - 1)e^(-x) ]. Aplicamos regla del producto:\nu = -x - 1 -> u' = -1\nv = e^(-x) -> v' = -e^(-x)\nF'(x) = -1·e^(-x) + (-x - 1)·(-e^(-x)) = e^(-x) · [-1 + x + 1] = x·e^(-x) = f(x).\nPor tanto, queda demostrado que F(x) es una primitiva válida de f.",
+                "de": "a) Ableitung f'(x) = (1 - x)e^(-x). f'(x) = 0 -> x = 1. Hinreichende Bedingung f''(1) = -1/e < 0 (HP). y-Koordinate f(1) = 1/e. HP(1 | 1/e).\nb) Ableitung von F(x) bilden mit Produktregel: F'(x) = -1·e^(-x) + (-x - 1)·(-e^(-x)) = x·e^(-x) = f(x). Gezeigt."
+              },
+              "points": 10,
+              "criteria": {
+                "es": "• 5 Puntos (a): Calcular f'(x), hallar la abscisa x = 1, justificar analíticamente el máximo y dar las coordenadas exactas.\n• 5 Puntos (b): Derivar F(x) mediante la regla del producto simplificando correctamente hasta llegar a f(x).",
+                "de": "• 5 Punkte (a): Ableitung f'(x), Extremstelle x = 1 bestimmen, Nachweis des HP und Angabe der Koordinaten.\n• 5 Punkte (b): Nachweis durch Ableiten der Stammfunktion mittels Produktregel."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el apartado b, es mucho más sencillo y seguro derivar F(x) para demostrar que es igual a f(x), en lugar de intentar integrar f(x) mediante integración por partes.",
+                "de": "Tipp: Leite F(x) ab, um F'(x) = f(x) zu zeigen. Dies ist wesentlich einfacher und weniger fehleranfällig als das Integrieren."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Hilfsmittel-Teil (Con calculadora CAS)",
+          "tasks": [
+            {
+              "title": "Aufgabe B1: Analyse der Ozonkonzentration in Bodennähe",
+              "question": {
+                "es": "La concentración de ozono en bodennähe en un caluroso día de verano se modela mediante K(t) = -0.05t^3 + 1.8t^2 - 15t + 120 para t ∈ [0, 24] en µg/m³, donde t es la hora del día (t = 0 representa medianoche).\n\nApartado a) Calcula las tasas instantáneas de cambio de la concentración de ozono a las 8:00 (t = 8) y a las 16:00 (t = 16) horas.\nApartado b) Determina en qué momento del día la concentración de ozono alcanza su máximo y calcula dicho nivel.",
+                "de": "Die bodennahe Ozonkonzentration an einem Sommertag wird modelliert durch K(t) = -0,05t^3 + 1,8t^2 - 15t + 120 für t ∈ [0, 24] in µg/m³, wobei t die Uhrzeit darstellt (t = 0 entspricht Mitternacht).\n\na) Berechne die momentane Änderungsrate der Ozonkonzentration um 8:00 Uhr (t = 8) und um 16:00 Uhr (t = 16).\nb) Bestimme, zu welcher Uhrzeit die Ozonkonzentration ihr Maximum erreicht, und berechne diesen Höchstwert."
+              },
+              "solution": {
+                "es": "a) La tasa instantánea de cambio está dada por la primera derivada K'(t):\nK'(t) = -0.15t^2 + 3.6t - 15.\nEvaluamos en t = 8: K'(8) = -0.15·(64) + 3.6·(8) - 15 = -9.6 + 28.8 - 15 = 4.2 µg/(m³·h). (A las 8:00 está subiendo 4.2 µg/m³ por hora).\nEvaluamos en t = 16: K'(16) = -0.15·(256) + 3.6·(16) - 15 = -38.4 + 57.6 - 15 = 4.2 µg/(m³·h). (Curiosamente, a las 16:00 también sube a la misma tasa de 4.2 µg/m³ por hora).\n\nb) Para el máximo, buscamos K'(t) = 0:\n-0.15t^2 + 3.6t - 15 = 0. Mediante la calculadora/CAS obtenemos dos soluciones:\nt₁ ≈ 5.86 (cerca de las 5:50) y t₂ ≈ 18.14 (cerca de las 18:08).\nEvaluamos la segunda derivada K''(t) = -0.3t + 3.6:\nK''(5.86) = -0.3·(5.86) + 3.6 > 0 -> Mínimo local.\nK''(18.14) = -0.3·(18.14) + 3.6 < 0 -> Máximo local.\nPor tanto, el máximo de ozono se alcanza a las t ≈ 18.14 horas (aproximadamente a las 18:08 de la tarde).\nEl valor de la concentración es: K(18.14) = -0.05·(18.14)^3 + 1.8·(18.14)^2 - 15·(18.14) + 120 ≈ 241.6 µg/m³.",
+                "de": "a) Ableitung K'(t) = -0,15t^2 + 3,6t - 15. K'(8) = 4,2 µg/(m³·h). K'(16) = 4,2 µg/(m³·h).\nb) K'(t) = 0 -> t₁ ≈ 5,86 (Tiefpunkt), t₂ ≈ 18.14 (Hochpunkt). Die Ozonkonzentration erreicht ihr Maximum um ca. 18:08 Uhr (t = 18,14). Der Höchstwert beträgt K(18,14) ≈ 241,6 µg/m³."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 6 Puntos (a): Plantear la derivada K'(t), evaluar en t = 8 y t = 16, indicando las unidades correctas de cambio.\n• 9 Puntos (b): Resolver la ecuación cuadrática K'(t) = 0, aplicar la condición suficiente para verificar el máximo local en t ≈ 18.14, y calcular la concentración máxima.",
+                "de": "• 6 Punkte (a): Ableitung K'(t) und Berechnung der Werte für t = 8 und t = 16 mit Einheiten.\n• 9 Punkte (b): Nullstellen der ersten Ableitung berechnen, Nachweis des HP über die zweite Ableitung, Berechnung des Höchstwerts."
+              },
+              "recommendation": {
+                "es": "Recomendación: Asegúrate de interpretar físicamente el resultado. K'(t) da la tasa de cambio (velocidad de variación) del ozono en la atmósfera, medida en unidades de concentración por unidad de tiempo.",
+                "de": "Tipp: K'(t) beschreibt die momentane Änderungsrate. Vergiss nicht die korrekte Einheit µg/(m³·h) anzugeben."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

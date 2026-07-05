@@ -315,6 +315,68 @@
           ]
         }
       ]
+    },
+    {
+      "id": "espanol_region5_2022_complete",
+      "title": "Zentralabitur Region 5 2022 — Español",
+      "year": "2022",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen oficial de Español Abitur Región 5 2022. Consta de dos tareas de desarrollo de nivel avanzado: el comentario de un artículo de prensa de El País sobre el impacto psicológico, social y laboral del teletrabajo en la España de pospandemia, y el análisis literario del fragmento del Acto III de 'Bodas de Sangre' de Federico García Lorca (el encuentro entre la Novia y el Novio en el bosque bajo la atenta mirada de la Luna y la Mendiga).",
+        "de": "Zentralabiturprüfung Spanisch 2022 (Region 5). Enthält eine Textanalyse zu einem Artikel aus El País über die psychologischen und sozialen Folgen des Homeoffice im nachpandemischen Spanien, sowie eine literaturwissenschaftliche Analyse eines Textauszugs aus Akt III von Federico García Lorcas 'Bodas de Sangre'."
+      },
+      "blocks": [
+        {
+          "name": "Parte A: Comentario de Texto Periodístico",
+          "tasks": [
+            {
+              "title": "Tarea 1: Comentario crítico de un artículo de prensa sobre los límites del teletrabajo",
+              "question": {
+                "es": "Analiza el artículo propuesto sobre el teletrabajo. Resume las ideas del autor sobre el aislamiento laboral y la pérdida de la frontera entre el espacio familiar y el profesional. A continuación, analiza las figuras estilísticas (antítesis y metáforas) y opina críticamente sobre la conveniencia del modelo híbrido de trabajo.",
+                "de": "Fasse die Argumentation des Autors zum Thema Homeoffice und Isolationsrisiko zusammen. Analysiere anschließend die rhetorischen Figuren (Antithesen und Metaphern) und nimm kritisch Stellung zur Zukunft hybrider Arbeitsmodelle."
+              },
+              "solution": {
+                "es": "1) Resumen de ideas: El autor sostiene que, aunque el teletrabajo ofrece comodidad inicial y flexibilidad, a largo plazo provoca el aislamiento social de los empleados y destruye la barrera física y mental entre el hogar (lugar de descanso) y la oficina (lugar de presión). El trabajador se convierte en un empleado permanente 'on-call'.\n2) Análisis formal y retórico:\n- Antítesis: 'la comodidad de la cocina frente a la soledad de la pantalla' y 'liberación espacial frente a esclavitud horaria'.\n- Metáfora: 'la oficina líquida' (que inunda el ámbito privado) y 'el cordón umbilical del router' (representa la dependencia de estar permanentemente conectado).\n3) Valoración crítica: El modelo híbrido (3 días presenciales, 2 teletrabajo) se presenta como la solución más equilibrada para salvaguardar la socialización laboral y la productividad individual sin invadir la privacidad doméstica.",
+                "de": "1) Inhaltsangabe: Homeoffice führt zur Auflösung der Grenzen zwischen Berufs- und Privatleben und zu sozialer Isolation.\n2) Rhetorische Mittel:\n- Antithese: Freiheit vs. ständige Erreichbarkeit.\n- Metapher: 'flüssiges Büro' (Eindringen der Arbeit ins Private) und 'die Nabelschnur des Routers' (ständige Abhängigkeit).\n3) Kritische Stellungnahme: Plädoyer für ein hybrides Arbeitsmodell als Kompromiss."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Resumen preciso de las ideas y estructura del artículo periodístico.\n• 25 Puntos: Análisis formal riguroso de las antítesis y metáforas explicando el efecto comunicativo que producen.\n• 10 Puntos: Comentario argumentado, coherente y fluido en español formal culto.",
+                "de": "• 15 Punkte: Textverständnis und Zusammenfassung der Argumentationsstruktur des Artikels.\n• 25 Punkte: Präzise Analyse der rhetorischen Figuren (Antithesen, Metaphern) und deren Wirkung.\n• 10 Punkte: Schlüssige eigene Argumentation und sprachliche Stringenz im Spanischen."
+              },
+              "recommendation": {
+                "es": "Recomendación: En tu argumentación sobre el teletrabajo, utiliza conceptos de sociología laboral contemporánea como 'derecho a la desconexión digital' (Recht auf digitale Nichterreichbarkeit) para enriquecer tu vocabulario formal.",
+                "de": "Tipp: Nutze soziologische Fachbegriffe wie 'Recht auf digitale Nichterreichbarkeit' (derecho a la desconexión digital) zur sprachlichen Aufwertung."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Parte B: Análisis Literario",
+          "tasks": [
+            {
+              "title": "Tarea 2: Análisis de un fragmento lírico-dramático de 'Bodas de Sangre' (Federico García Lorca)",
+              "question": {
+                "es": "Analiza la escena propuesta del bosque (Acto III) en 'Bodas de Sangre'. Explica el papel simbólico que juegan los personajes de la Luna (el leñador joven) y la Mendiga (la Muerte) en el desenlace fatal de los amantes rebeldes, relacionándolo con los temas de la pasión y la inevitabilidad del destino.",
+                "de": "Analysiere die Waldszene in Akt III aus 'Bodas de Sangre'. Erkläre die symbolische Rolle der Luna (als junger Holzfäller) und der Mendiga (die Bettlerin als Tod) für das tragische Ende der Liebenden."
+              },
+              "solution": {
+                "es": "1) Análisis de la Luna y la Mendiga: En la tragedia lorquiana, estos personajes no son reales sino alegorías poéticas del destino fatal:\n- La Luna ansía iluminar el bosque para que la sangre corra; actúa como cómplice frío y deseoso del derramamiento de sangre ('dejadme entrar, quiero metal frío para calentar mi pecho').\n- La Mendiga representa a la Muerte misma, que guía al Novio en la persecución de Leonardo y la Novia, señalando el camino para asegurar que el encuentro sea violento e inevitable.\n2) Temas del fragmento: La pasión incontrolable (la fuerza centrípeta de la tierra que une a Leonardo y la Novia a pesar de las convenciones sociales) choca inevitablemente con el orden social de los cuchillos. La muerte de los dos hombres bajo el brillo lunar es el cumplimiento ineludible del destino trágico, que restaura la pureza de la tierra mediante el sacrificio de sangre.\n3) Estilo lorquiano: Combinación de prosa poética con cantos rítmicos tradicionales, abundante simbolismo (cuchillo, sangre, caballo, bosque húmedo).",
+                "de": "1) Rolle von Luna und Mendiga: Poetische Allegorien des Schicksals. Die Luna leuchtet den Wald aus, um das Blutvergießen zu erzwingen. Die Mendiga (Bettlerin) führt den Bräutigam direkt zu den Liebenden und verkörpert den Tod.\n2) Themen: Die unkontrollierbare Leidenschaft (Novia und Leonardo) bricht gesellschaftliche Konventionen und führt zwangsläufig zum Tod der beiden Rivalen durch Messer.\n3) Stilmerkmale: Übergang von Prosa zu lyrischen Gesängen, lorquianische Farbsymbolik."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto del simbolismo poético de la Luna y la Mendiga en el texto.\n• 20 Puntos: Exposición coherente de los temas de la pasión y el destino ineludible en la obra de Lorca.\n• 15 Puntos: Relacionar formalmente el estilo lírico-dramático del bosque con la poética trágica lorquiana.",
+                "de": "• 15 Punkte: Textanalyse der Symbole Luna und Mendiga.\n• 20 Punkte: Darstellung der Hauptthemen Leidenschaft und Schicksal (destino).\n• 15 Punkte: Formale Analyse des lyrischen Dramas und Einordnung in Lorcas Werk."
+              },
+              "recommendation": {
+                "es": "Recomendación: Destaca siempre en tu examen que en Lorca la Luna no es un elemento decorativo de la noche, sino un personaje activo, violento y conspirador que busca la muerte física para saciar su frío existencial.",
+                "de": "Tipp: Betone in der Klausur, dass der Mond bei Lorca ein aktiver, bedrohlicher Charakter ist, der physischen Tod sucht, um sein inneres Frösteln zu wärmen."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

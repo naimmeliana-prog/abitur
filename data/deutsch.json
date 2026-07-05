@@ -369,6 +369,68 @@
           ]
         }
       ]
+    },
+    {
+      "id": "deutsch_nrw_2022_complete",
+      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2022 — Deutsch GK",
+      "year": "2022",
+      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "intro": {
+        "es": "Examen unificado de Lengua y Literatura Alemana Abitur NRW 2022 (Grundkurs). Contiene las dos opciones de desarrollo tradicionales del Abitur alemán: el análisis y comparación de poemas de las épocas del Romanticismo y Expresionismo sobre el impacto de la ciudad y el fin de los tiempos, y la disertación crítica de un ensayo sobre la pérdida de competencias ortográficas por el uso masivo del chat digital.",
+        "de": "Zentralabiturklausur Deutsch Nordrhein-Westfalen 2022 (Grundkurs). Besteht aus Aufgabe 1 (Gedichtvergleich: Eichendorffs Romantik im Kontrast zu Jakob van Hoddis' expressionistischem Weltende) und Aufgabe 2 (Sachtextanalyse und kritische Erörterung zum Wandel der deutschen Rechtschreibung durch digitale Chat-Plattformen)."
+      },
+      "blocks": [
+        {
+          "name": "Teil A: Lyrik — Natur und Mensch (Gedichtvergleich)",
+          "tasks": [
+            {
+              "title": "Aufgabe 1: Analyse von Joseph von Eichendorffs 'Sehnsucht' im Vergleich zu Jakob van Hoddis' 'Weltende'",
+              "question": {
+                "es": "Analiza formal y temáticamente el poema 'Sehnsucht' (1834) de Joseph von Eichendorff. Compara después este texto con el poema expresionista 'Weltende' (1911) de Jakob van Hoddis, enfocando la comparación en la percepción del espacio y los sentimientos íntimos de los sujetos líricos.",
+                "de": "Analysiere Eichendorffs Gedicht 'Sehnsucht' (1834). Vergleiche es anschließend mit Jakob van Hoddis' expressionistischem Gedicht 'Weltende' (1911) im Hinblick auf Raumwahrnehmung und Gemütszustand."
+              },
+              "solution": {
+                "es": "1) Análisis de 'Sehnsucht' (Eichendorff):\n- Estructura: 3 estrofas de 8 versos, rima consonante regular, ritmo armónico y fluido.\n- Temas románticos: la ventana abierta como umbral al viaje, el anhelo del alma (Sehnsucht) ante la contemplación del paisaje nocturno, la música y el canto lejano de dos jóvenes en la montaña.\n- Figuras clave: personificación de las estrellas, metáforas del infinito y la nostalgia romántica.\n\n2) Comparación con 'Weltende' (Hoddis):\n- Estructura expresionista: 2 estrofas de 4 versos, ritmo sincopado y rima a veces discordante.\n- Temas: el colapso urbano, el fin del orden burgués, la ironía macabra del cataclismo y el absurdo. La naturaleza no es idílica (como en Eichendorff) sino destructiva (mares desbordándose, vientos salvajes).\n- Síntesis: El sujeto lírico de Eichendorff busca fundirse con el cosmos de forma armónica, mientras que el sujeto de Hoddis observa el desmoronamiento trágico e indiferente del mundo con sarcasmo expresionista.",
+                "de": "1) Analyse von Eichendorffs 'Sehnsucht':\n- Form: 3 Strophen, Kreuzreime, Volksliedton. Naturromantik, Sehnsuchtsmotiv am Fenster.\n- Motive: Reise, Ferne, Nacht, Musik.\n\n2) Vergleich mit Hoddis' 'Weltende':\n- Form: Reihungsstil, Simultanstil, expressionistische Formauflösung.\n- Motive: Weltuntergang, Ironisierung des Bürgertums, bedrohliche Naturkräfte statt idyllischer Weite.\n\n3) Fazit: Romantische Sehnsucht nach Transzendenz vs. expressionistisches Katastrophenbewusstsein."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 20 Puntos: Análisis exhaustivo del poema de Eichendorff (figuras, métrica, conceptos románticos).\n• 20 Puntos: Comparación estructural y temático-histórica con el poema expresionista de van Hoddis.\n• 10 Puntos: Redacción fluida y terminología literaria especializada en lengua alemana.",
+                "de": "• 20 Punkte: Analyse von Eichendorffs Gedicht.\n• 20 Punkte: Strukturierter Vergleich mit Hoddis.\n• 10 Punkte: Fachbegriffe (Simultanstil, Reihungsstil, Epochenmerkmale) und Ausdruck."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el análisis lírico del Abitur se valora mucho asociar el estilo formal con la época. En Eichendorff el orden formal refleja la armonía cósmica; en Hoddis el estilo desarticulado (Reihungsstil) refleja la fragmentación mental moderna del siglo XX.",
+                "de": "Tipp: Bringe die Form mit der Epochenphilosophie in Verbindung. Eichendorffs Harmonie vs. Hoddis' Reihungsstil als Ausdruck der Moderne."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B: Erörterung pragmatischer Texte (Disertación argumentativa)",
+          "tasks": [
+            {
+              "title": "Aufgabe 2: Erörterung eines Sachtextes zum Sprachwandel durch Kurznachrichten-Medien",
+              "question": {
+                "es": "Analiza la argumentación del autor en el texto pragmático sobre el declive de las reglas gramaticales y la ortografía tradicional en chats digitales de mensajería (WhatsApp, Telegram). Erórter a continuación si este cambio representa un empobrecimiento cultural irreversible o si es una evolución lingüística funcional legítima.",
+                "de": "Analysiere den Sachtext zum Wandel der deutschen Orthografie in Messengerdiensten. Erörtere kritisch, ob dieser Sprachwandel einen Kulturverlust darstellt oder eine funktionale Weiterentwicklung der Sprache ist."
+              },
+              "solution": {
+                "es": "1) Análisis del texto pragmático: Tesis del lingüista (la escritura informal en redes sociales acelera la simplificación ortográfica: eliminación de mayúsculas, signos de puntuación e incorporación de anglicismos/emojis). Identificar recursos retóricos e ironía.\n2) Disertación (Erörterung):\n- Postura A (Pérdida cultural): Pérdida de la capacidad de redactar textos académicos complejos, debilitamiento del pensamiento analítico, homogeneización léxica y descortesía comunicativa.\n- Postura B (Evolución legítima): Flexibilidad expresiva, economía del lenguaje (ahorro de tiempo), mayor expresividad emocional mediante emojis y adaptación a los canales inmediatos modernos de comunicación. La lengua es un sistema vivo, no una estructura estática.\n3) Balance final: El debate no debe ser puramente prescriptivo; se debe abogar por la competencia situacional (saber adaptar el registro formal al ámbito académico y el informal al chat social).",
+                "de": "1) Sachtextanalyse: Rekonstruktion der Argumentationslinie des Autors zum Sprachwandel.\n2) Erörterung:\n- Verlust-Argumente: Kompetenzverlust bei komplexen Texten, Sprachverflachung.\n- Evolutions-Argumente: Sprachökonomie, Kontextangemessenheit, Erweiterung der Ausdrucksmittel.\n3) Fazit: Plädoyer für Registerkompetenz (Situationsadäquater Sprachgebrauch)."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 15 Puntos: Análisis correcto del texto pragmático (tesis y estructura).\n• 20 Puntos: Erörterung equilibrada dialéctica con argumentos lógicos sólidos sobre sociolingüística.\n• 10 Puntos: Conclusión integrada con balance.\n• 5 Puntos: Nivel lingüístico alto C1/C2 en alemán.",
+                "de": "• 15 Punkte: Systematische Analyse des pragmatischen Textes.\n• 20 Punkte: Dialektische Auseinandersetzung mit Argumenten und Beispielen.\n• 15 Punkte: Fazit und sprachliche Qualität."
+              },
+              "recommendation": {
+                "es": "Recomendación: Para esta Erörterung, utiliza el concepto sociolingüístico alemán de 'Kodewechsel' (Code-Switching) para argumentar que los jóvenes no han olvidado escribir, sino que alternan voluntariamente de código según la situación.",
+                "de": "Tipp: Nutze Fachbegriffe wie 'Registerkompetenz' oder 'Code-Switching', um die sprachwissenschaftliche Tiefe der Erörterung zu steigern."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
