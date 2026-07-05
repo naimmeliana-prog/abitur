@@ -90,8 +90,8 @@ async function searchNewMaterials(subject) {
                   de: "Gegeben ist f(x) = (2x - 3) · e^(2x). Bestimme die erste Ableitung f'(x)."
                 },
                 solution: {
-                  es": "Aplicando la regla del producto (u·v)' = u'·v + u·v' y la regla de la cadena para e^(2x):\nu = 2x - 3 → u' = 2\nv = e^(2x) → v' = 2e^(2x)\nf'(x) = 2 · e^(2x) + (2x - 3) · 2e^(2x) = e^(2x) · [2 + 4x - 6] = (4x - 4)e^(2x).",
-                  de": "Mit Produkt- und Kettenregel: u' = 2, v' = 2e^(2x). f'(x) = 2e^(2x) + (2x-3)·2e^(2x) = (4x - 4)e^(2x)."
+                  es: "Aplicando la regla del producto (u·v)' = u'·v + u·v' y la regla de la cadena para e^(2x):\nu = 2x - 3 → u' = 2\nv = e^(2x) → v' = 2e^(2x)\nf'(x) = 2 · e^(2x) + (2x - 3) · 2e^(2x) = e^(2x) · [2 + 4x - 6] = (4x - 4)e^(2x).",
+                  de: "Mit Produkt- und Kettenregel: u' = 2, v' = 2e^(2x). f'(x) = 2e^(2x) + (2x-3)·2e^(2x) = (4x - 4)e^(2x)."
                 },
                 points: 5,
                 criteria: {
