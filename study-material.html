@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Material Didáctico</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Custom styles for Math formulations and matrices */
+    .formula-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      margin: var(--space-sm) 0 var(--space-md) 0;
+      font-family: var(--font-mono);
+      color: var(--color-gold);
+      font-size: 14px;
+      overflow-x: auto;
+    }
+    .grid-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-md) 0;
+    }
+    .grid-table th, .grid-table td {
+      border: 1px solid var(--glass-border);
+      padding: var(--space-sm) var(--space-md);
+      text-align: left;
+      font-size: 13px;
+    }
+    .grid-table th {
+      background: rgba(255,255,255,0.05);
+      font-weight: 700;
+    }
+    .matrix-display {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      margin: var(--space-xs) 0;
+    }
+    .matrix-brackets {
+      border-left: 2px solid var(--text-primary);
+      border-right: 2px solid var(--text-primary);
+      border-radius: 4px;
+      padding: 0 6px;
+      margin: 0 4px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></a>
+      <a href="subjects.html" class="nav-item"><span class="nav-icon">📚</span><span class="nav-label">Asignaturas</span></a>
+      <div class="nav-section-label">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label">Banco de Exámenes</span></a>
+      <div class="nav-section-label">Mi Progreso</div>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Técnicas de Estudio</span></a>
+      <a href="study-material.html" class="nav-item active"><span class="nav-icon">📖</span><span class="nav-label" data-i18n="nav.study-material">Material Didáctico</span></a>
+      <div class="nav-section-label">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title" data-i18n="nav.study-material">Material Didáctico</span>
+      </div>
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+
+      <!-- Subject Selector Tabs -->
+      <div class="flex gap-sm mb-xl" style="flex-wrap:wrap;" id="materialTabs">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Material Detail Panel -->
+      <div id="materialPanel">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span class="icon">🏠</span><span class="label">Inicio</span></a>
+    <a href="subjects.html" class="mobile-nav-item"><span class="icon">📚</span><span class="label">Materias</span></a>
+    <a href="exam-generator.html" class="mobile-nav-item"><span class="icon">⚡</span><span class="label">Examen</span></a>
+    <a href="progress.html" class="mobile-nav-item"><span class="icon">📊</span><span class="label">Progreso</span></a>
+    <a href="study-tips.html" class="mobile-nav-item"><span class="icon">💡</span><span class="label">Tips</span></a>
+  </nav>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/progress.js"></script>
+
+<script>
+const SUBJECTS_META = [
+  { id:'mathe',       name:'Matemáticas',nameDE:'Mathematik',  icon:'📐', color:'mathe' },
+  { id:'deutsch',     name:'Alemán',     nameDE:'Deutsch',     icon:'🇩🇪', color:'deutsch' },
+  { id:'englisch',    name:'Inglés',     nameDE:'Englisch',    icon:'🇬🇧', color:'englisch' },
+  { id:'espanol',     name:'Español',    nameDE:'Español',     icon:'🇪🇸', color:'espanol' },
+  { id:'philosophie', name:'Filosofía',  nameDE:'Philosophie', icon:'🧠', color:'philosophie' },
+];
+
+let currentSubjectId = 'mathe';
+
+function initPage() {
+  // Override setLang to render materials on change
+  const originalSetLang = App.setLang;
+  App.setLang = function(lang) {
+    originalSetLang.call(App, lang);
+    renderTabs();
+    renderMaterial();
+  };
+  
+  renderTabs();
+  renderMaterial();
+}
+
+function renderTabs() {
+  const lang = App.currentLang;
+  const tabs = document.getElementById('subjectTabs') || document.getElementById('materialTabs');
+  tabs.innerHTML = SUBJECTS_META.map(s => `
+    <button class="difficulty-btn ${currentSubjectId === s.id ? 'selected easy' : ''}"
+      style="min-width:100px;"
+      onclick="selectSubject('${s.id}')">
+      ${s.icon} ${lang === 'de' ? s.nameDE : s.name}
+    </button>`).join('');
+}
+
+function selectSubject(id) {
+  currentSubjectId = id;
+  renderTabs();
+  renderMaterial();
+}
+
+function renderMaterial() {
+  const lang = App.currentLang;
+  const panel = document.getElementById('materialPanel');
+
+  if (currentSubjectId !== 'mathe') {
+    panel.innerHTML = `
+      <div class="card text-center" style="padding:var(--space-3xl);">
+        <div style="font-size:48px;margin-bottom:var(--space-md);">📚</div>
+        <h3 style="font-size:20px;font-weight:700;margin-bottom:var(--space-sm);">
+          ${lang === 'de' ? 'Material bald verfügbar' : 'Material didáctico próximamente'}
+        </h3>
+        <p style="color:var(--text-muted);max-width:500px;margin:0 auto;">
+          ${lang === 'de' 
+            ? 'Das Lehrmaterial für dieses Fach wird in Kürze vom Administrator hinzugefügt. Nutze die Prüfungsgenerierung, um weiter zu üben!' 
+            : 'Los apuntes y guías didácticas para esta asignatura se irán publicando poco a poco. ¡Utiliza la sección "Generar Examen" para seguir practicando con exámenes oficiales completos!'}
+        </p>
+      </div>
+    `;
+    return;
+  }
+
+  // Mathematics Content Render
+  if (lang === 'de') {
+    panel.innerHTML = `
+      <div class="hero-section mb-xl" style="padding:var(--space-xl);">
+        <div class="flex items-center gap-lg flex-wrap">
+          <div class="subject-icon mathe" style="width:64px;height:64px;font-size:32px;">📐</div>
+          <div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">DIA — Deutsche Schule Valencia</div>
+            <h1 style="font-size:24px;font-weight:900;">Mathematik GK — Abitur-Lehrmaterial</h1>
+            <p style="color:var(--text-secondary);font-size:14px;margin-top:2px;">Zusammenfassung der verbindlichen Richtlinien, inhaltlichen Schwerpunkte und ökonomischen Formeln.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">1. Aufbau der schriftlichen Abiturprüfung (NRW G9)</h2>
+        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
+          Die schriftliche Abiturprüfung im Fach Mathematik (Grundkurs) gliedert sich ab dem Prüfungsjahr 2025/2027 in zwei Hauptteile:
+        </p>
+        <div class="grid-2 gap-lg mb-md">
+          <div class="card" style="background:rgba(255,255,255,0.02);">
+            <h3 style="font-weight:700;color:var(--color-mathe);margin-bottom:var(--space-sm);">Prüfungsteil A: Hilfsmittelfreier Teil (25 BE)</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+              <li><strong>Pflichttteil (obligatorisch):</strong> 3 Aufgaben (je 1 aus Analysis, analytische Geometrie und Stochastik).</li>
+              <li><strong>Wahlpflichtteil:</strong> 2 freie Aufgaben aus einem Pool von 6 Aufgaben (2 aus jedem Teilgebiet).</li>
+              <li><strong>Einschränkung:</strong> Kein Taschenrechner und keine Formelsammlung zugelassen. Nur deutsches Wörterbuch.</li>
+            </ul>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.02);">
+            <h3 style="font-weight:700;color:var(--color-mathe);margin-bottom:var(--space-sm);">Prüfungsteil B: Hilfsmittel-Teil (55 BE)</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+              <li><strong>Umfang:</strong> 3 komplexe Aufgaben (1x Analysis, 1x Geometrie, 1x Stochastik).</li>
+              <li><strong>Zugelassene Hilfsmittel:</strong> WTR (Wissenschaftlicher Taschenrechner) oder CAS/MMS, mathematische Formelsammlung und deutsches Wörterbuch.</li>
+              <li>Die Schule erhält zwei Analysisaufgaben, wovon die Fachlehrkraft eine zur Bearbeitung auswählt.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="highlight-box">
+          ⚠️ <strong>Achtung Bewertungseinheiten:</strong> Ab 2025 beträgt die maximale Punktzahl <strong>80 BE</strong> (früher 100 BE) für Grundkurs und <strong>100 BE</strong> für Leistungskurs, bei gleicher Bearbeitungszeit (255 Minuten).
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">2. Inhaltliche Schwerpunkte und Fokussierungen</h2>
+        <div class="flex-col gap-md">
+          <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+            <h3 style="font-weight:700;margin-bottom:var(--space-sm);">2.1 Analysis (Differential- und Integralrechnung)</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+              <li><strong>Ganzrationale & Exponentialfunktionen:</strong> Verhalten im Unendlichen ($x \to \pm\infty$), Definitions- und Wertebereiche, Symmetrieeigenschaften (Achsen-/Punktsymmetrie) und Nullstellen.</li>
+              <li><strong>Differentialrechnung:</strong> Ableitung mittels Produktregel ($f(x)=u(x)\cdot v(x)$) und Kettenregel für Verkettungen von e-Funktionen mit linearen Funktionen ($e^{ax+b}$). Bestimmung von Extremwerten (Hoch-/Tiefpunkte) und Wendepunkten (Wendetangente). ReKonstruktion von Funktionstermen ("Steckbriefaufgaben").</li>
+              <li><strong>Integralrechnung:</strong> Berechnung von orientierten Flächeninhalten mittels bestimmter Integrale. Stammfunktionen aufstellen (Hauptsatz der Differential- und Integralrechnung).</li>
+            </ul>
+          </div>
+
+          <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+            <h3 style="font-weight:700;margin-bottom:var(--space-sm);">2.2 Analytische Geometrie und Lineare Algebra</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+              <li><strong>Vektoren:</strong> Skalarprodukt zweier Vektoren und Orthogonalitätsprüfung (Vektoren senkrecht wenn Skalarprodukt = 0).</li>
+              <li><strong>Ebenen im Raum:</strong> Parameterform, Koordinatenform und Aufstellen des Normalenvektors. Schnittpunkte und Schnittwinkel (Gerade/Gerade, Gerade/Ebene, Ebene/Ebene).</li>
+              <li><strong>Lagebeziehungen & Abstände:</strong> Abstandsformeln (z.B. Punkt zu Ebene mit Hessescher Normalenform).</li>
+              <li><strong>Lineare Gleichungssysteme:</strong> Modellierung von mehrstufigen Produktionsprozessen mittels Matrizen.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+            <h3 style="font-weight:700;margin-bottom:var(--space-sm);">2.3 Stochastik</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+              <li><strong>Bedingte Wahrscheinlichkeit:</strong> Baumdiagramme, Pfadregeln und Vierfeldertafeln zur Visualisierung von Ereignissen.</li>
+              <li><strong>Binomialverteilung:</strong> Berechnung von Wahrscheinlichkeiten einer Bernoulli-Kette. Erwartungswert $\mu = n \cdot p$, Standardabweichung $\sigma = \sqrt{n \cdot p \cdot (1-p)}$.</li>
+              <li><strong>Hypothesentests:</strong> Linksseitige und rechtsseitige Hypothesentests zur Qualitätskontrolle.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">3. Mathematische Formeln in Wirtschaft und Verwaltung</h2>
+        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
+          Für berufliche Gymnasien und wirtschaftswissenschaftliche Schulen sind folgende ökonomische Modellierungen und Formeln verbindlich:
+        </p>
+
+        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Ökonomische Funktionen:</h3>
+        <table class="grid-table">
+          <thead>
+            <tr>
+              <th>Bezeichnung</th>
+              <th>Mathematischer Term</th>
+              <th>Beschreibung / Ökonomische Bedeutung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gesamtkostenfunktion</td>
+              <td>$K(x) = K_v(x) + K_f$</td>
+              <td>Gesamtkosten aus variablen Kosten $K_v(x)$ und fixen Kosten $K_f$.</td>
+            </tr>
+            <tr>
+              <td>Durchschnittliche Stückkosten</td>
+              <td>$k(x) = \\frac{K(x)}{x}$</td>
+              <td>Kosten je hergestellter Einheit. Das Minimum von $k(x)$ liefert das <strong>Betriebsoptimum</strong> $x_{BO}$. Der zugehörige Preis ist die <strong>langfristige Preisuntergrenze</strong>.</td>
+            </tr>
+            <tr>
+              <td>Variable Stückkosten</td>
+              <td>$k_v(x) = \\frac{K_v(x)}{x}$</td>
+              <td>Variable Kosten je Einheit. Das Minimum von $k_v(x)$ liefert das <strong>Betriebsminimum</strong> $x_{BM}$. Der zugehörige Preis ist die <strong>kurzfristige Preisuntergrenze</strong>.</td>
+            </tr>
+            <tr>
+              <td>Grenzkostenfunktion</td>
+              <td>$K'(x)$</td>
+              <td>Kostenzuwachs für eine infinitesimal kleine Erhöhung der Ausbringungsmenge.</td>
+            </tr>
+            <tr>
+              <td>Erlösfunktion (Umsatz)</td>
+              <td>$E(x) = p \\cdot x \\text{ oder } p(x) \\cdot x$</td>
+              <td>Einnahmen aus dem Verkauf. $p(x)$ ist die Preis-Absatz-Funktion (Nachfragefunktion $p_N(x)$).</td>
+            </tr>
+            <tr>
+              <td>Gewinnfunktion</td>
+              <td>$G(x) = E(x) - K(x)$</td>
+              <td>Gewinn. Die Nullstellen von $G(x)$ heißen <strong>Gewinnschwelle</strong> (Break-Even-Point) und <strong>Gewinngrenze</strong>. Das Maximum von $G(x)$ ist das Gewinnmaximum bei $x_{max}$.</td>
+            </tr>
+            <tr>
+              <td>Cournotscher Punkt</td>
+              <td>$C(x_{max} | p_N(x_{max}))$</td>
+              <td>Liefert den Preis und die Menge für ein Gewinnmaximum im Angebotsmonopol.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Konsumenten- und Produzentenrente:</h3>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
+          Das Marktgleichgewicht liegt bei der Gleichgewichtsmenge $x_G$ und dem Gleichgewichtspreis $p_G$.
+        </p>
+        <div class="grid-2 gap-md">
+          <div class="card" style="background:rgba(255,255,255,0.01);">
+            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Konsumentenrente (KR)</div>
+            <div class="formula-card">
+              KR = &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>N</sub>(x) dx - x<sub>G</sub> * p<sub>G</sub>
+            </div>
+            <div style="font-size:12px;color:var(--text-muted);">Ersparnis der Konsumenten, die bereit gewesen wären, einen höheren Preis als den Gleichgewichtspreis zu zahlen.</div>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.01);">
+            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Produzentenrente (PR)</div>
+            <div class="formula-card">
+              PR = x<sub>G</sub> * p<sub>G</sub> - &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>A</sub>(x) dx
+            </div>
+            <div style="font-size:12px;color:var(--text-muted);">Zusätzlicher Gewinn der Produzenten, die bereit gewesen wären, zu einem niedrigeren Preis anzubieten.</div>
+          </div>
+        </div>
+
+        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Mehrstufige Produktionsprozesse (Lineare Algebra):</h3>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
+          Ein zweistufiger Prozess stellt aus Rohstoffen $R_i$ über Zwischenprodukte $Z_j$ Endprodukte $E_k$ her.
+        </p>
+        <div class="flex-col gap-sm">
+          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
+            <strong>Verflechtungsmatrizen:</strong>
+            <div style="margin-top:var(--space-xs);">
+              - $A$ (Rohstoff-Zwischenprodukt-Matrix, Dimension $m \times n$)<br>
+              - $B$ (Zwischenprodukt-Endprodukt-Matrix, Dimension $n \times p$)<br>
+              - $C$ (Rohstoff-Endprodukt-Matrix, Dimension $m \times p$) &rarr; <strong>Formel:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">C = A * B</span>
+            </div>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
+            <strong>Verbrauchsvektoren:</strong>
+            <div style="margin-top:var(--space-xs);">
+              - $\vec{r}$ (Rohstoffbedarf), $\vec{z}$ (Zwischenproduktebedarf), $\vec{e}$ (Mengen an Endprodukten).<br>
+              - <strong>Gleichungen:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">A * \vec{z} = \vec{r}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">B * \vec{e} = \vec{z}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">C * \vec{e} = \vec{r}</span>
+            </div>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
+            <strong>Kostenberechnungen:</strong>
+            <div style="margin-top:var(--space-xs);">
+              - Rohstoffkosten: $K_R = \vec{k}_R \cdot \vec{r}$ &nbsp;(wobei $\vec{k}_R$ der Rohstoffpreisvektor ist)<br>
+              - Variable Herstellkosten je ME Endprodukt: <span class="formula-card" style="padding:2px 6px;margin:0;">\vec{k}_v = \vec{k}_R \cdot C + \vec{k}_Z \cdot B + \vec{k}_E</span> &nbsp;($\vec{k}_Z, \vec{k}_E$ sind Fertigungskostenvektoren)<br>
+              - Gesamtkosten: $K = \vec{k}_v \cdot \vec{e} + K_f$ &nbsp;($K_f$ sind Fixkosten)
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  } else {
+    panel.innerHTML = `
+      <div class="hero-section mb-xl" style="padding:var(--space-xl);">
+        <div class="flex items-center gap-lg flex-wrap">
+          <div class="subject-icon mathe" style="width:64px;height:64px;font-size:32px;">📐</div>
+          <div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">DIA — Deutsche Schule Valencia</div>
+            <h1 style="font-size:24px;font-weight:900;">Matemáticas GK — Material Didáctico Abitur</h1>
+            <p style="color:var(--text-secondary);font-size:14px;margin-top:2px;">Resumen traducido de las directrices oficiales, temas clave de evaluación y fórmulas aplicadas a la economía.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">1. Estructura de la prueba escrita del Abitur (NRW G9)</h2>
+        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
+          La prueba escrita del Abitur de Matemáticas para el nivel Grundkurs (GK) se estructura a partir de las reformas de 2025/2027 en dos partes diferenciadas:
+        </p>
+        <div class="grid-2 gap-lg mb-md">
+          <div class="card" style="background:rgba(255,255,255,0.02);">
+            <h3 style="font-weight:700;color:var(--color-mathe);margin-bottom:var(--space-sm);">Prueba A: Sin calculadora ni recursos (25 BE)</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+              <li><strong>Pflichtteil (Obligatorio):</strong> 3 tareas (1 de Análisis, 1 de Geometría Vectorial y 1 de Estocástica). Todas se deben resolver.</li>
+              <li><strong>Wahlpflichtteil (Optativo):</strong> Se proponen 6 tareas (2 de cada área). El alumno elige libremente y resuelve 2 de ellas.</li>
+              <li><strong>Reglas:</strong> Prohibido el uso de calculadora científica, CAS y formularios de fórmulas. Solo se permite diccionario de alemán.</li>
+            </ul>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.02);">
+            <h3 style="font-weight:700;color:var(--color-mathe);margin-bottom:var(--space-sm);">Prueba B: Con calculadora y recursos (55 BE)</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+              <li><strong>Estructura:</strong> 3 problemas complejos (1 de Análisis, 1 de Geometría Analítica y 1 de Estocástica).</li>
+              <li><strong>Opciones en Análisis:</strong> El tribunal envía dos problemas de análisis. El profesor del colegio elige uno de ellos para sus alumnos.</li>
+              <li><strong>Recursos permitidos:</strong> Calculadora científica (WTR) o calculadora gráfica/CAS, formulario de fórmulas oficial y diccionario.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="highlight-box">
+          ⚠️ <strong>Importante sobre la puntuación:</strong> A partir de los exámenes de 2025, la prueba de Grundkurs (GK) se evalúa sobre un total de <strong>80 BE</strong> (antes 100 BE), mientras que Leistungskurs (LK) es sobre <strong>100 BE</strong>. El tiempo de examen se mantiene en 255 minutos.
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">2. Temas clave del currículo unificado (Fokussierungen)</h2>
+        <div class="flex-col gap-md">
+          <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+            <h3 style="font-weight:700;margin-bottom:var(--space-sm);">2.1 Análisis (Analysis)</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+              <li><strong>Funciones polinómicas y exponenciales:</strong> Comportamiento asintótico en el infinito ($x \to \pm\infty$), dominios y rangos, simetrías (par/impar) y cálculo de raíces/ceros (Nullstellen).</li>
+              <li><strong>Cálculo Diferencial:</strong> Regla del producto ($f(x)=u(x)\cdot v(x)$) y de la cadena para funciones exponenciales de exponente lineal ($e^{ax+b}$). Análisis de extremos relativos (Hochpunkt/Tiefpunkt) e inflexiones (Wendetangente). Reconstrucción de curvas a partir de condiciones dadas ("Steckbriefaufgaben").</li>
+              <li><strong>Cálculo Integral:</strong> Cálculo de áreas orientadas y definidas bajo la curva. Teorema Fundamental del Cálculo (Hauptsatz der Differential- und Integralrechnung).</li>
+            </ul>
+          </div>
+
+          <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+            <h3 style="font-weight:700;margin-bottom:var(--space-sm);">2.2 Geometría Analítica y Álgebra Lineal</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+              <li><strong>Vectores:</strong> Producto escalar (Skalarprodukt) y prueba de ortogonalidad (vectores perpendiculares si su producto escalar es 0).</li>
+              <li><strong>Planos en el espacio:</strong> Ecuación paramétrica (Parameterform), ecuación cartesiana (Koordinatenform) y vector normal. Intersecciones y ángulos de inclinación (recta-recta, recta-plano, plano-plano).</li>
+              <li><strong>Distancias y Posición Relativa:</strong> Distancia entre puntos, rectas y planos (fórmula de la normal de Hesse).</li>
+              <li><strong>Sistemas de ecuaciones lineales (LGS):</strong> Aplicados al modelado de procesos productivos en varias etapas con matrices de costes y consumos.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="background:rgba(255,255,255,0.01);border-left:4px solid var(--color-mathe);">
+            <h3 style="font-weight:700;margin-bottom:var(--space-sm);">2.3 Estocástica y Probabilidad</h3>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+              <li><strong>Probabilidad condicional:</strong> Diagramas de árbol (diagrama de árbol ponderado), teorema de Bayes y tablas de contingencia de doble entrada (Vierfeldertafel).</li>
+              <li><strong>Distribución binomial:</strong> Cálculo de probabilidades puntuales e integrales en cadenas de Bernoulli. Esperanza matemática $\mu = n \cdot p$, desviación típica $\sigma = \sqrt{n \cdot p \cdot (1-p)}$.</li>
+              <li><strong>Test de Hipótesis:</strong> Planteamiento y cálculo del rango de rechazo (Ablehnungsbereich) en contrastes unilaterales izquierdos y derechos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">3. Fórmulas de Matemáticas Aplicadas a la Economía (Wirtschaftsmathematik)</h2>
+        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
+          En el Abitur de economía (Berufskolleg / Wirtschaft) se exigen formalmente las siguientes funciones y modelizaciones:
+        </p>
+
+        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Funciones Económicas Básicas:</h3>
+        <table class="grid-table">
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Fórmula / Expresión</th>
+              <th>Significado Económico / Criterio Matemático</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coste Total</td>
+              <td>$K(x) = K_v(x) + K_f$</td>
+              <td>Suma de los costes variables $K_v(x)$ dependientes de la producción y los costes fijos $K_f$.</td>
+            </tr>
+            <tr>
+              <td>Coste Medio Unitario</td>
+              <td>$k(x) = \\frac{K(x)}{x}$</td>
+              <td>Coste por unidad. El punto mínimo de esta curva es el <strong>óptimo de explotación</strong> ($x_{BO}$). El valor de coste en este punto define el <strong>límite de precio a largo plazo</strong>.</td>
+            </tr>
+            <tr>
+              <td>Coste Variable Medio</td>
+              <td>$k_v(x) = \\frac{K_v(x)}{x}$</td>
+              <td>Coste variable por unidad. El punto mínimo de esta curva es el <strong>mínimo de explotación</strong> ($x_{BM}$). El valor de coste en este punto define el <strong>límite de precio a corto plazo</strong>.</td>
+            </tr>
+            <tr>
+              <td>Coste Marginal</td>
+              <td>$K'(x)$ (Grenzkosten)</td>
+              <td>Derivada del coste. Indica el coste adicional de producir una unidad extra infinitesimal.</td>
+            </tr>
+            <tr>
+              <td>Ingreso / Ventas</td>
+              <td>$E(x) = p \\cdot x \\text{ o } p(x) \\cdot x$</td>
+              <td>Facturación. Si el precio no es fijo, se multiplica por la función de precio de demanda $p_N(x)$ (Preis-Absatz-Funktion).</td>
+            </tr>
+            <tr>
+              <td>Beneficio Neto</td>
+              <td>$G(x) = E(x) - K(x)$</td>
+              <td>Ganancias netas. Las raíces de $G(x)$ son el <strong>umbral de rentabilidad</strong> ($x_{GS}$, break-even) y el <strong>límite de beneficio</strong> ($x_{GG}$). El beneficio es máximo cuando $G'(x)=0$ y $G''(x) < 0$.</td>
+            </tr>
+            <tr>
+              <td>Punto de Cournot</td>
+              <td>$C(x_{max} | p_N(x_{max}))$</td>
+              <td>Coordenadas en la curva de demanda del precio óptimo que maximiza el beneficio en régimen de monopolio.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Excedente del Consumidor y del Productor:</h3>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
+          Suponiendo un precio de equilibrio $p_G$ y una cantidad vendida $x_G$:
+        </p>
+        <div class="grid-2 gap-md">
+          <div class="card" style="background:rgba(255,255,255,0.01);">
+            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Excedente del Consumidor (Konsumentenrente)</div>
+            <div class="formula-card">
+              KR = &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>N</sub>(x) dx - x<sub>G</sub> * p<sub>G</sub>
+            </div>
+            <div style="font-size:12px;color:var(--text-muted);">Mide el ahorro total de los consumidores que habrían estado dispuestos a pagar un precio mayor que el de equilibrio del mercado.</div>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.01);">
+            <div style="font-weight:700;color:var(--color-gold);margin-bottom:var(--space-xs);">Excedente del Productor (Produzentenrente)</div>
+            <div class="formula-card">
+              PR = x<sub>G</sub> * p<sub>G</sub> - &int;<sub>0</sub><sup>x<sub>G</sub></sup> p<sub>A</sub>(x) dx
+            </div>
+            <div style="font-size:12px;color:var(--text-muted);">Representa el beneficio adicional de los productores que habrían estado dispuestos a vender por debajo del precio de equilibrio.</div>
+          </div>
+        </div>
+
+        <h3 style="font-weight:700;color:var(--color-mathe);margin-top:var(--space-lg);margin-bottom:var(--space-xs);">Procesos de Producción en Dos Etapas (Matrices):</h3>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-sm);">
+          Modelización del paso de Materias Primas $R_i$ a Productos Intermedios $Z_j$, y de estos a Productos Finales $E_k$.
+        </p>
+        <div class="flex-col gap-sm">
+          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
+            <strong>Matriz de Verflechtung (Gozintograph):</strong>
+            <div style="margin-top:var(--space-xs);">
+              - $A$ (Matriz Rohstoff-Zwischenprodukt, orden $m \times n$)<br>
+              - $B$ (Matriz Zwischenprodukt-Endprodukt, orden $n \times p$)<br>
+              - $C$ (Matriz Rohstoff-Endprodukt, orden $m \times p$) &rarr; <strong>Fórmula de composición:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">C = A * B</span>
+            </div>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
+            <strong>Ecuaciones de Consumo Vectorial:</strong>
+            <div style="margin-top:var(--space-xs);">
+              - Vectores: $\vec{r}$ (materia prima), $\vec{z}$ (intermedios), $\vec{e}$ (finales).<br>
+              - <strong>Relaciones fundamentales:</strong> <span class="formula-card" style="padding:2px 6px;margin:0;">A * \vec{z} = \vec{r}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">B * \vec{e} = \vec{z}</span>, &nbsp;<span class="formula-card" style="padding:2px 6px;margin:0;">C * \vec{e} = \vec{r}</span>
+            </div>
+          </div>
+          <div class="card" style="background:rgba(255,255,255,0.01);font-size:13px;">
+            <strong>Vectores de Coste:</strong>
+            <div style="margin-top:var(--space-xs);">
+              - Coste de materias primas: $K_R = \vec{k}_R \cdot \vec{r}$ &nbsp;(donde $\vec{k}_R$ es el precio de compra de materias primas)<br>
+              - Coste variable de producción unitario: <span class="formula-card" style="padding:2px 6px;margin:0;">\vec{k}_v = \vec{k}_R \cdot C + \vec{k}_Z \cdot B + \vec{k}_E</span> &nbsp;($\vec{k}_Z, \vec{k}_E$ son costes de fabricación de etapas 1 y 2)<br>
+              - Coste total de un lote: $K = \vec{k}_v \cdot \vec{e} + K_f$ &nbsp;($K_f$ son los costes fijos semanales)
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  App.init();
+  initPage();
+});
+</script>
+<script src="js/auth.js"></script>
+</body>
+</html>

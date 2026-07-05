@@ -15,6 +15,7 @@ const TRANSLATIONS = {
     'nav.exam-bank':    'Banco de Exámenes',
     'nav.progress':     'Mi Progreso',
     'nav.study-tips':   'Técnicas de Estudio',
+    'nav.study-material': 'Material Didáctico',
     'nav.admin':        'Admin',
     'nav.logout':       'Cerrar sesión',
 
@@ -130,6 +131,7 @@ const TRANSLATIONS = {
     'nav.exam-bank':    'Prüfungsbank',
     'nav.progress':     'Mein Fortschritt',
     'nav.study-tips':   'Lerntechniken',
+    'nav.study-material': 'Lehrmaterial',
     'nav.admin':        'Admin',
     'nav.logout':       'Abmelden',
 
