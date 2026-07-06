@@ -505,11 +505,11 @@ async function triggerAutoUpdater() {
   percentText.textContent = '0%';
 
   const steps = [
-    { p: 15, msg: 'Conectando con IQB Aufgabenpool...' },
-    { p: 35, msg: 'Escaneando standardsicherung.schulministerium.nrw.de...' },
-    { p: 60, msg: 'Consultando bases de datos de Abiturloesung.de (Matemáticas)...' },
-    { p: 80, msg: 'Buscando actualizaciones en Berliner Bildungsserver (Filosofía)...' },
-    { p: 95, msg: 'Sincronizando archivos locales deutsch.json y mathe.json...' },
+    { p: 15, msg: 'Conectando con ZfA (Zentralstelle für das Auslandsschulwesen)...' },
+    { p: 35, msg: 'Buscando actualizaciones curriculares de la Región 5...' },
+    { p: 60, msg: 'Verificando repositorio de exámenes de la Deutsche Schule Valencia (DSV)...' },
+    { p: 80, msg: 'Buscando propuestas didácticas de Filosofía y Lenguas para el DIA...' },
+    { p: 95, msg: 'Sincronizando archivos locales de asignaturas...' },
     { p: 100, msg: '¡Sincronización completa!' }
   ];
 
@@ -526,13 +526,13 @@ async function triggerAutoUpdater() {
   resultDiv.innerHTML = `
     <div class="notification-banner success" style="margin-top:var(--space-md);">
       <strong>✅ ¡Actualización completada!</strong><br>
-      Se han detectado y sincronizado los siguientes exámenes del Zentralabitur 2024:<br>
-      • 📚 Deutsch NRW 2024 (Interpretación y Erörterung)<br>
-      • 📐 Mathematik NRW 2024 (Geometría Solar y e-Funktion)<br>
+      Se han detectado y sincronizado los siguientes exámenes del currículo DIA Región 5 (DSV):<br>
+      • 📚 Deutsch DIA 2023 (Erörterung & Textanalyse)<br>
+      • 📐 Mathematik DIA 2023 (Analysis, Geometrie & Stochastik)<br>
       <span style="font-size:11px;color:var(--text-muted);display:block;margin-top:6px;">Nota: En producción, GitHub Actions volverá a desplegar el repositorio con estos cambios.</span>
     </div>
   `;
-  App.showToast('✅ Exámenes de 2024 importados correctamente', 'success');
+  App.showToast('✅ Exámenes del DIA Región 5 importados correctamente', 'success');
   btn.disabled = false;
 }
 
