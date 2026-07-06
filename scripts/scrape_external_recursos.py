@@ -3,8 +3,7 @@
 """
 ABITURSTUDY - EXTERNAL RESOURCES SCRAPER & IMPORTER
 This script aggregates scraping logic for Serlo.org, Wikiversity.org, 
-and the Hessischer Bildungsserver. It outputs results as JSON and can 
-be integrated into the Abitur Web platform.
+Hessischer Bildungsserver, and Abiturloesung.de. It outputs results as JSON.
 
 Licensed under CC BY-SA / Respectful Scraping Compliance.
 """
@@ -13,11 +12,9 @@ import os
 import sys
 import json
 import time
-import re
 import requests
 from bs4 import BeautifulSoup
 
-# Define default configuration
 HEADERS = {
     'User-Agent': 'AbiturStudyBot/1.0 (Educational Purpose; contact@abiturstudy.local)'
 }
@@ -35,9 +32,7 @@ def check_robots_txt(base_url):
     return None
 
 def fetch_serlo_content(subject):
-    """
-    Fetches articles from Serlo.org
-    """
+    """Fetches articles from Serlo.org"""
     base_url = "https://de.serlo.org"
     subject_map = {
         'mathe': 'mathematik',
@@ -57,11 +52,9 @@ def fetch_serlo_content(subject):
         soup = BeautifulSoup(response.content, 'html.parser')
         
         articles = []
-        # Find article cards and links
         for link in soup.find_all('a', href=True):
             href = link['href']
             text = link.text.strip()
-            # Serlo article path pattern
             if len(text) > 8 and ('/mathe/' in href or '/deutsch/' in href or '/englisch/' in href or '/philosophie/' in href or href.startswith('/') and len(href) > 5):
                 articles.append({
                     'title': text,
@@ -75,9 +68,7 @@ def fetch_serlo_content(subject):
         return []
 
 def scrape_wikiversity(subject):
-    """
-    Scrapes German Wikiversity categories
-    """
+    """Scrapes German Wikiversity categories"""
     base_url = "https://de.wikiversity.org"
     categories = {
         'mathe': 'Fachbereich:Mathematik',
@@ -97,7 +88,6 @@ def scrape_wikiversity(subject):
         soup = BeautifulSoup(response.content, 'html.parser')
         
         pages = []
-        # Select links in category sections
         for link in soup.select('#mw-pages .mw-category-group a'):
             pages.append({
                 'title': link.text.strip(),
@@ -111,9 +101,7 @@ def scrape_wikiversity(subject):
         return []
 
 def scrape_hessen_bildungsserver(subject):
-    """
-    Scrapes the Hessischer Bildungsserver index pages ethically.
-    """
+    """Scrapes the Hessischer Bildungsserver index pages ethically."""
     urls = {
         'mathe': 'https://lernarchiv.bildung.hessen.de/sek/mathematik/index.html',
         'deutsch': 'https://lernarchiv.bildung.hessen.de/sek/deutsch/index.html',
@@ -127,9 +115,7 @@ def scrape_hessen_bildungsserver(subject):
     
     print(f"🔍 [HESSEN] Scraping: {url}")
     try:
-        # Rate limit compliance
-        time.sleep(1.5)
-        
+        time.sleep(1.0)
         response = requests.get(url, headers=HEADERS, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -151,6 +137,39 @@ def scrape_hessen_bildungsserver(subject):
         print(f"❌ [HESSEN] Error: {e}")
         return []
 
+def scrape_abiturloesung(subject):
+    """Scrapes solutions from abiturloesung.de for mathematics."""
+    if subject != 'mathe':
+        return []
+    
+    base_url = "https://abiturloesung.de"
+    url = f"{base_url}/abitur/Bayern"
+    
+    print(f"🔍 [ABITURLOESUNG] Scraping: {url}")
+    try:
+        time.sleep(1.0)
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        resources = []
+        for link in soup.find_all('a', href=True):
+            href = link['href']
+            text = link.text.strip()
+            if any(year in href for year in ['2024', '2023', '2022', '2021', '2020']) or '.pdf' in href.lower():
+                if len(text) > 3:
+                    resources.append({
+                        'title': f"Abitur Bayern Mathe: {text}",
+                        'url': href if href.startswith('http') else base_url + href,
+                        'source': 'abiturloesung.de',
+                        'license': 'Verify Individually/Educational',
+                        'type': 'pdf' if '.pdf' in href.lower() else 'html'
+                    })
+        return resources
+    except Exception as e:
+        print(f"❌ [ABITURLOESUNG] Error: {e}")
+        return []
+
 def run_all_scrapes():
     subjects = ['mathe', 'deutsch', 'englisch', 'philosophie', 'espanol']
     aggregated_data = {}
@@ -160,11 +179,11 @@ def run_all_scrapes():
         serlo_items = fetch_serlo_content(subject)
         wiki_items = scrape_wikiversity(subject)
         hessen_items = scrape_hessen_bildungsserver(subject)
+        abiturloesung_items = scrape_abiturloesung(subject)
         
-        # Merge items and remove duplicate URLs
         urls_seen = set()
         merged = []
-        for item in (serlo_items + wiki_items + hessen_items):
+        for item in (serlo_items + wiki_items + hessen_items + abiturloesung_items):
             if item['url'] not in urls_seen:
                 urls_seen.add(item['url'])
                 merged.append(item)
@@ -175,7 +194,6 @@ def run_all_scrapes():
         }
         print(f"✓ Total unique external items found for {subject}: {len(merged)}")
         
-    # Write output to local JSON database
     output_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'external_scraped_resources.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(aggregated_data, f, ensure_ascii=False, indent=2)
