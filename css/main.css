@@ -107,7 +107,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 17.5px; /* Aumentado para mejorar la legibilidad y evitar fatiga visual */
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
@@ -116,7 +116,7 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg-0);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.7; /* Incrementado para espaciar mejor las líneas y descansar la vista */
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
