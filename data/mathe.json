@@ -1794,6 +1794,81 @@
               }
             }
           ]
+        },
+        {
+          "name": "Teil A — Geometrie (Sin calculadora)",
+          "tasks": [
+            {
+              "title": "A3: Analytische Geometrie — Lagebeziehung von Geraden",
+              "question": {
+                "es": "Dadas las rectas g: x⃗ = (1, 3, 2) + r·(2, 1, -1) y h: x⃗ = (5, 5, 0) + s·(1, 0, 2):\na) Comprueba si las rectas g y h se intersectan en un punto.\nb) Determina si son paralelas, idénticas, se intersectan o se cruzan (windschief).",
+                "de": "Gegeben sind die Geraden g: x⃗ = (1, 3, 2) + r·(2, 1, -1) und h: x⃗ = (5, 5, 0) + s·(1, 0, 2):\na) Prüfen Sie, ob sich die Geraden g und h in einem Punkt schneiden.\nb) Bestimmen Sie die gegenseitige Lage der Geraden (parallel, identisch, schneidend oder windschief)."
+              },
+              "solution": {
+                "es": "a) Igualamos g y h para buscar un punto de corte:\n(1 + 2r, 3 + r, 2 - r) = (5 + s, 5, 2s)\nDe la segunda componente: 3 + r = 5 → r = 2.\nSustituimos r = 2 en la primera componente: 1 + 2(2) = 5 = 5 + s → s = 0.\nComprobamos en la tercera componente con r=2 y s=0:\n2 - (2) = 0. Por otro lado, 2(0) = 0. Se cumple 0 = 0.\nEl punto de intersección es S(5, 5, 0) (coincidente con el punto de apoyo de h para s=0).\n\nb) Dado que sus vectores directores v_g = (2, 1, -1) y v_h = (1, 0, 2) no son proporcionales y tienen un único punto en común S, las rectas se intersectan.",
+                "de": "a) Gleichsetzen der Geradengleichungen ergibt das LGS:\n1) 1 + 2r = 5 + s\n2) 3 + r = 5 → r = 2\n3) 2 - r = 2s\nEinsetzen von r=2 in 1) ergibt s=0. Überprüfung in 3): 2-2 = 2(0) → 0=0 (wahr).\nSchnittpunkt ist S(5|5|0).\nb) Da die Richtungsvektoren nicht kollinear sind und ein Schnittpunkt existiert, schneiden sich die Geraden."
+              },
+              "points": 10,
+              "criteria": {
+                "es": "• 4 Puntos: Plantear el LGS correspondiente al igualar las ecuaciones.\n• 4 Puntos: Resolver r y s y comprobar la consistencia en la tercera ecuación.\n• 2 Puntos: Conclusión formal de la posición relativa de las rectas.",
+                "de": "• 4 Punkte: Aufstellen des LGS.\n• 4 Punkte: Lösen und Überprüfen des LGS.\n• 2 Punkte: Bestimmung der Lagebeziehung."
+              },
+              "recommendation": {
+                "es": "Recomendación: En el examen de la ZfA siempre debes mostrar la comprobación en la tercera ecuación. Si no la muestras, la resolución del sistema no se considera válida para demostrar la intersección.",
+                "de": "Tipp: Die Überprüfung der dritten Zeile ist für die volle Punktzahl zwingend erforderlich."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B — Analysis & Modellierung (Con calculadora CAS)",
+          "tasks": [
+            {
+              "title": "B2: Modellierung von Wachstumsprozessen — e-Funktion",
+              "question": {
+                "es": "La temperatura T (en °C) de una taza de café en una habitación se modela mediante T(t) = 20 + 60·e^(-0.05t), donde t es el tiempo en minutos desde que se sirve.\na) ¿Cuál es la temperatura inicial del café?\nb) Calcula el tiempo necesario para que la temperatura disminuya a 40 °C (muestra los pasos algebraicos intermedios antes de usar la calculadora).\nc) Determina el límite de T(t) cuando t tiende a infinito e interpreta el resultado en el contexto real.",
+                "de": "Die Temperatur T (in °C) einer Tasse Kaffee wird durch T(t) = 20 + 60·e^(-0,05t) modelliert (t in Minuten).\na) Wie hoch ist die Anfangstemperatur des Kaffees?\nb) Berechnen Sie die Zeit, bis die Temperatur auf 40 °C sinkt.\nc) Bestimmen Sie den Grenzwert für t gegen Unendlich und interpretieren Sie diesen im Sachzusammenhang."
+              },
+              "solution": {
+                "es": "a) Temperatura inicial (t = 0):\nT(0) = 20 + 60·e^0 = 20 + 60 = 80 °C.\n\nb) Planteamos T(t) = 40:\n20 + 60·e^(-0.05t) = 40 → 60·e^(-0.05t) = 20 → e^(-0.05t) = 1/3\nAplicamos logaritmo natural:\n-0.05t = ln(1/3) = -ln(3) → t = ln(3) / 0.05 = 20·ln(3) ≈ 21.97 minutos.\n\nc) Límite cuando t → ∞:\nlim(t→∞) [20 + 60·e^(-0.05t)] = 20 + 0 = 20 °C.\nInterpretación: El café se enfría paulatinamente hasta aproximarse a la temperatura ambiente de la habitación, que es de 20 °C.",
+                "de": "a) Anfangstemperatur T(0) = 20 + 60 = 80 °C.\nb) T(t) = 40 → 20 + 60·e^(-0,05t) = 40 → e^(-0,05t) = 1/3 → -0,05t = ln(1/3) → t ≈ 21,97 Minuten.\nc) Grenzwert lim(t→∞) T(t) = 20 °C. Die Kaffeetemperatur gleicht sich langfristig der Raumtemperatur von 20 °C an."
+              },
+              "points": 15,
+              "criteria": {
+                "es": "• 3 Puntos: Evaluar correctamente T(0).\n• 8 Puntos: Despejar algebraicamente la exponencial aplicando logaritmos y dar el valor exacto y aproximado.\n• 4 Puntos: Calcular el límite matemático y redactar la explicación física (temperatura ambiente).",
+                "de": "• 3 Punkte: Berechnung von T(0).\n• 8 Punkte: Algebraische Bestimmung des ln-Wertes und Näherung.\n• 4 Punkte: Grenzwertbestimmung und Sachzusammenhang."
+              },
+              "recommendation": {
+                "es": "Recomendación: En problemas de modelización, siempre debes incluir las unidades físicas (°C, minutos) en tus respuestas para cumplir la rúbrica formal.",
+                "de": "Tipp: Achte im Abitur darauf, die physikalischen Einheiten in der Antwort zu nennen."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Teil B — Geometrie & Ebenen (Con calculadora CAS)",
+          "tasks": [
+            {
+              "title": "B3: Ebenen im Raum und Abstände",
+              "question": {
+                "es": "Un plano E en R³ contiene los puntos P(2, 0, 1), Q(0, 4, 1) y R(1, 1, 3).\na) Determina la ecuación del plano E en forma cartesiana (Koordinatenform).\nb) Calcula la distancia del punto S(5, 5, 8) al plano E.",
+                "de": "Die Ebene E im R³ verläuft durch P(2|0|1), Q(0|4|1) und R(1|1|3).\na) Bestimmen Sie die Koordinatengleichung der Ebene E.\nb) Berechnen Sie den Abstand des Punktes S(5|5|8) zur Ebene E."
+              },
+              "solution": {
+                "es": "a) Vectores directores a partir de P, Q, R:\nPQ⃗ = (-2, 4, 0), PR⃗ = (-1, 1, 2).\nHallamos el vector normal n⃗ = PQ⃗ × PR⃗:\nn⃗ = (4·2 - 0·1, 0·(-1) - (-2)·2, (-2)·1 - 4·(-1)) = (8, 4, 2).\nSimplificamos dividiendo por 2: n⃗ = (4, 2, 1).\nEcuación: 4x + 2y + z = d. Sustituimos P(2,0,1): 4(2) + 2(0) + 1 = 9.\nPlano E: 4x + 2y + z = 9.\n\nb) Usamos la fórmula de distancia de Hesse para S(5, 5, 8):\nd = |4(5) + 2(5) + 8 - 9| / √(4² + 2² + 1²) = |20 + 10 + 8 - 9| / √(16 + 4 + 1) = 29 / √21 ≈ 6.33 unidades de longitud.",
+                "de": "a) Normalenvektor n⃗ = PQ⃗ × PR⃗ = (-2,4,0) × (-1,1,2) = (8,4,2) -> vereinfacht (4,2,1).\nKoordinatengleichung E: 4x + 2y + z = 9.\nb) HNF mit Punkt S(5|5|8): d = |4·5 + 2·5 + 8 - 9| / √21 = 29 / √21 ≈ 6,33 LE."
+              },
+              "points": 13,
+              "criteria": {
+                "es": "• 7 Puntos: Calcular los vectores directores, el producto vectorial simplificado y dar la ecuación cartesiana correcta.\n• 6 Puntos: Aplicar de forma correcta la fórmula de Hesse y calcular el valor aproximado con dos decimales.",
+                "de": "• 7 Punkte: Aufstellen der Richtungsvektoren, Kreuzprodukt und Koordinatenform.\n• 6 Punkte: Abstandsberechnung über HNF."
+              },
+              "recommendation": {
+                "es": "Recomendación: Al simplificar el vector normal del plano, comprueba siempre que el punto de apoyo cumple la ecuación final para descartar pequeños errores de signos en el producto cruz.",
+                "de": "Tipp: Führe immer eine Punktprobe mit einem der gegebenen Punkte durch, um Vorzeichenfehler zu vermeiden."
+              }
+            }
+          ]
         }
       ]
     }
