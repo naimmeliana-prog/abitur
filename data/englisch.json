@@ -402,13 +402,13 @@
   ],
   "official_exams_archive": [
     {
-      "id": "englisch_nrw_2023_complete",
-      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Englisch GK",
+      "id": "englisch_dia_2023_complete",
+      "title": "DIA Abitur Englisch 2023 — Región 5 (DSV)",
       "year": "2023",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Este es el archivo histórico de la prueba unificada de inglés del Abitur NRW 2023 para nivel Grundkurs (GK). Se compone de tres partes clásicas del DIA: comprensión lectora y análisis estilístico de un discurso sobre la globalización, redacción de un ensayo de opinión y mediación lingüística de un folleto informativo alemán sobre sostenibilidad.",
-        "de": "Archiv der zentralen Abiturprüfung Englisch NRW 2023 für den Grundkurs. Umfasst Leseverstehen und Stilanalyse eines Vortrags zur Globalisierung, das Verfassen eines argumentativen Kommentars sowie die Sprachmittlung (Mediation) eines deutschen Textes ins Englische."
+        "es": "Archivo de la prueba escrita del Abitur DIA de Inglés de la Región 5 (DSV) del año 2023. Consta de comprensión lectora, análisis formal y retórico sobre cambio climático, redacción de un comment argumentado y una mediación lingüística.",
+        "de": "Archiv der zentralen Abiturprüfung Englisch 2023 für die Region 5 (DSV). Umfasst Leseverstehen, Analyse eines Klimaretoriktextes, Verfassen eines Kommentars sowie die Mediation."
       },
       "blocks": [
         {
@@ -489,13 +489,13 @@
       ]
     },
     {
-      "id": "englisch_nrw_2024_complete",
-      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2024 — Englisch GK",
+      "id": "englisch_dia_2024_complete",
+      "title": "DIA Abitur Englisch 2024 — Región 5 (DSV)",
       "year": "2024",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Examen escrito oficial del Zentralabitur Englisch NRW 2024 (Grundkurs). Contiene análisis de un discurso medioambiental de Barack Obama en relación con las responsabilidades políticas globales, redacción de un ensayo argumentativo sobre la ética de la inteligencia artificial en el sector educativo, y mediación escrita sobre alternativas de transporte compartido en grandes urbes alemanas.",
-        "de": "Archiv der zentralen Abiturprüfung Englisch NRW 2024 für den Grundkurs. Umfasst Textanalyse einer Rede von Barack Obama zur Klimagerechtigkeit, eine argumentative Erörterung über KI-Ethik in Schulen sowie eine Mediation über Carsharing-Konzepte in deutschen Großstädten."
+        "es": "Examen escrito de Inglés del Abitur DIA Región 5 2024. Contiene análisis del discurso de Obama sobre justicia ambiental, comment sobre ética de la IA en la escuela y mediación sobre movilidad urbana compartida.",
+        "de": "Abiturprüfung Englisch 2024 für die Region 5 (DSV). Enthält Redeanalyse (Obama), Erörterung/Comment zu KI in der Schule sowie Mediation zur urbanen Mobilität."
       },
       "blocks": [
         {
@@ -576,13 +576,13 @@
       ]
     },
     {
-      "id": "englisch_nrw_2022_complete",
-      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2022 — Englisch GK",
+      "id": "englisch_dia_2022_complete",
+      "title": "DIA Abitur Englisch 2022 — Región 5 (DSV)",
       "year": "2022",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Examen unificado de Inglés Abitur NRW 2022 para Grundkurs (GK). Contiene tres tareas de desarrollo: análisis formal de un artículo del Guardian sobre el Brexit y la crisis de identidad británica, redacción de un ensayo argumentativo sobre la globalización frente al resurgimiento del nacionalismo en situaciones de crisis internacional, y mediación del folleto de movilidad de Múnich al inglés.",
-        "de": "Zentralabitur Englisch Nordrhein-Westfalen 2022 (Grundkurs). Enthält Aufgaben zur Textanalyse eines Guardian-Artikels über den Brexit und die nationale Identitätskrise, eine argumentative Erörterung zur globalen Kooperation vs. Nationalismus in Krisenzeiten sowie eine Mediation über Mobilitätskonzepte der Stadt München ins Englische."
+        "es": "Examen unificado de Inglés del Abitur DIA 2022 de la Región 5 (DSV). Contiene tres tareas de desarrollo: análisis formal de un artículo de The Guardian sobre el Brexit y la identidad británica, redacción de un comment sobre cooperación internacional vs. soberanía, y mediación sobre movilidad al inglés.",
+        "de": "Abiturprüfung Englisch 2022 für die Region 5 (DSV). Umfasst Guardian-Textanalyse (Brexit/Identität), Erörterung zu globaler Kooperation sowie Mediation."
       },
       "blocks": [
         {

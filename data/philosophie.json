@@ -443,13 +443,13 @@
   ],
   "official_exams_archive": [
     {
-      "id": "philosophie_berlin_2023_complete",
-      "title": "Abiturprüfung Berlin/Brandenburg 2023 — Philosophie GK",
+      "id": "philosophie_dia_2023_complete",
+      "title": "DIA Abitur Philosophie 2023 — Región 5 (DSV)",
       "year": "2023",
-      "pdf_url": "https://bildungsserver.berlin-brandenburg.de",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Este archivo contiene una prueba modelo basada en las directrices unificadas de Berlín/Brandeburgo 2023 para Philosophie (GK). Consta del análisis estructural de un fragmento del ensayo clásico de Kant sobre la Ilustración y una disertación crítica sobre dilemas morales comparando la ética del deber de Kant con el utilitarismo.",
-        "de": "Archiv einer Musterabiturprüfung Philosophie (GK) basierend auf den Berliner Rahmenlehrplänen 2023. Umfasst die Textanalyse eines Ausschnitts aus Kants Aufklärungsschrift sowie eine philosophische Erörterung zum moralischen Dilemma der Wahrheitspflicht."
+        "es": "Examen oficial de Filosofía del Abitur DIA 2023 de la Región 5 (DSV). Consta del análisis de un fragmento clásico de Kant sobre la Ilustración y una disertación crítica sobre dilemas morales comparando la ética del deber de Kant con el utilitarismo.",
+        "de": "Archiv der schriftlichen Abiturprüfung Philosophie 2023 für die Region 5 (DSV). Umfasst die Textanalyse eines Ausschnitts aus Kants Aufklärungsschrift sowie eine philosophische Erörterung zum moralischen Dilemma der Wahrheitspflicht."
       },
       "blocks": [
         {

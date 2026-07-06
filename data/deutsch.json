@@ -584,13 +584,13 @@
   ],
   "official_exams_archive": [
     {
-      "id": "deutsch_nrw_2023_complete",
-      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Deutsch GK",
+      "id": "deutsch_dia_2023_complete",
+      "title": "DIA Abitur Deutsch 2023 — Región 5 (DSV)",
       "year": "2023",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Este es el archivo histórico del examen unificado del Zentralabitur NRW 2023 para Deutsch Grundkurs (GK). Incluye ejercicios de desarrollo de análisis e interpretación poética comparada y de disertación de textos de opinión sobre la evolución de la lectura y la tecnología digital.",
-        "de": "Archiv der zentralen Abiturklausur NRW 2023 für den Grundkurs Deutsch. Enthält die Aufgaben zur Lyrikanalyse im Vergleich und zur Sachtextanalyse mit anschließender Erörterung."
+        "es": "Archivo del examen unificado de Alemán del Abitur DIA 2023 de la Región 5 (DSV). Contiene la interpretación lírica comparada de poemas y el análisis de una escena dramática de 'Woyzeck' junto a un análisis pragmático.",
+        "de": "Archiv der zentralen Abiturklausur Deutsch 2023 für die Region 5 (DSV). Enthält die Aufgaben zur Lyrikanalyse im Vergleich, Szenenanalyse von 'Woyzeck' sowie eine Sachtextanalyse."
       },
       "blocks": [
         {
@@ -671,13 +671,13 @@
       ]
     },
     {
-      "id": "deutsch_nrw_2024_complete",
-      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2024 — Deutsch GK",
+      "id": "deutsch_dia_2024_complete",
+      "title": "DIA Abitur Deutsch 2024 — Región 5 (DSV)",
       "year": "2024",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Archivo de la prueba escrita del Zentralabitur Deutsch NRW 2024 para Grundkurs (GK). Contiene análisis lírico comparado de la Primera Guerra Mundial (Expresionismo de Trakl frente a Barroco de Gryphius) y disertación dialéctica sobre la lectura analítica frente al consumo rápido de contenidos digitales.",
-        "de": "Archiv der zentralen Klausur Deutsch NRW 2024 (Grundkurs). Enthält die Aufgaben zum historisch-thematischen Gedichtvergleich (Kriegslyrik von Trakl und Gryphius) sowie zur Sachtextanalyse mit Erörterung zum Thema 'Lesekompetenz im Medienzeitalter'."
+        "es": "Archivo de la prueba escrita del Abitur DIA 2024 (Región 5 - DSV). Contiene el análisis comparativo lírico entre Trakl y Gryphius, y la escena 'Beim Hauptmann' de Büchner junto a la disertación pragmática.",
+        "de": "Archiv der zentralen Klausur Deutsch 2024 (Region 5 - DSV). Enthält den Gedichtvergleich (Trakl vs. Gryphius), die Szenenanalyse von 'Woyzeck' und die Erörterung pragmatischer Texte."
       },
       "blocks": [
         {
@@ -758,13 +758,13 @@
       ]
     },
     {
-      "id": "deutsch_nrw_2022_complete",
-      "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2022 — Deutsch GK",
+      "id": "deutsch_dia_2022_complete",
+      "title": "DIA Abitur Deutsch 2022 — Región 5 (DSV)",
       "year": "2022",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Examen unificado de Lengua y Literatura Alemana Abitur NRW 2022 (Grundkurs). Contiene las dos opciones de desarrollo tradicionales del Abitur alemán: el análisis y comparación de poemas de las épocas del Romanticismo y Expresionismo sobre el impacto de la ciudad y el fin de los tiempos, y la disertación crítica de un ensayo sobre la pérdida de competencias ortográficas por el uso masivo del chat digital.",
-        "de": "Zentralabiturklausur Deutsch Nordrhein-Westfalen 2022 (Grundkurs). Besteht aus Aufgabe 1 (Gedichtvergleich: Eichendorffs Romantik im Kontrast zu Jakob van Hoddis' expressionistischem Weltende) und Aufgabe 2 (Sachtextanalyse und kritische Erörterung zum Wandel der deutschen Rechtschreibung durch digitale Chat-Plattformen)."
+        "es": "Examen unificado de Lengua y Literatura Alemana del Abitur DIA 2022 (Región 5 - DSV). Incluye análisis y comparación lírica de Eichendorff frente a Jakob van Hoddis, y el análisis de la escena 'Beim Doktor' de 'Woyzeck' junto al análisis de un texto periodístico de opinión.",
+        "de": "Zentralabiturklausur Deutsch 2022 (Region 5 - DSV). Besteht aus dem Gedichtvergleich (Eichendorff vs. Hoddis) sowie der Szenenanalyse von 'Woyzeck' und der Sachtextanalyse."
       },
       "blocks": [
         {
@@ -807,7 +807,7 @@
               },
               "points": 50,
               "criteria": {
-                "es": "• 15 Puntos: Análisis correcto del diálogo y las dinámicas humillantes del Doctor.\n• 15 Puntos: Análisis formal de los tecnicismos latinos del Doctor frente al balbuceo científico de Woyzeck.\n• 15 Puntos: Relación teórica de la escena con el Materialismo científico y el determinismo literario del Vormärz.\n• 5 Puntos: Sintaxis académica en alemán formal.",
+                "es": "• 15 Puntos: Análisis correcto del diálogo y dinámicas humillantes del Doctor.\n• 15 Puntos: Análisis formal de los tecnicismos latinos del Doctor frente al balbuceo científico de Woyzeck.\n• 15 Puntos: Relación teórica de la escena con el Materialismo científico y el determinismo literario del Vormärz.\n• 5 Puntos: Sintaxis académica en alemán formal.",
                 "de": "• 15 Punkte: Textanalyse der Szene und Machtkonstellation.\n• 15 Punkte: Sprachanalyse (pseudowissenschaftliches Latein des Doktors vs. Woyzecks stammelnde Sprache).\n• 15 Punkte: Einordnung in das geistesgeschichtliche Epochenbild (Positivismus-Kritik).\n• 5 Punkte: Ausdrucksqualität und Form."
               },
               "recommendation": {

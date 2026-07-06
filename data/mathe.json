@@ -614,7 +614,7 @@
     },
     {
       "id": "ma_006",
-      "year": "Tipo NRW 2023",
+      "year": "Tipo DIA 2023",
       "difficulty": "medium",
       "type": "multiple_choice",
       "topic": "Geometrie — Vektoren",
@@ -652,7 +652,7 @@
     },
     {
       "id": "ma_007",
-      "year": "Tipo NRW 2022",
+      "year": "Tipo DIA 2022",
       "difficulty": "hard",
       "type": "multiple_choice",
       "topic": "Stochastik — Wahrscheinlichkeit",
@@ -691,8 +691,8 @@
   ],
   "official_exams": [
     {
-      "id": "mathe_nrw_2023",
-      "name": "Zentralabitur NRW 2023 — Mathematik GK (Completo)",
+      "id": "mathe_dia_2023_test",
+      "name": "DIA Abitur Mathematik 2023 — Región 5 (Preguntas Cortas)",
       "year": "2023",
       "questions": [
         {
@@ -950,8 +950,8 @@
       ]
     },
     {
-      "id": "mathe_nrw_2024",
-      "name": "Zentralabitur NRW 2024 — Mathematik GK (Completo)",
+      "id": "mathe_dia_2024_test",
+      "name": "DIA Abitur Mathematik 2024 — Región 5 (Preguntas Cortas)",
       "year": "2024",
       "questions": [
         {
@@ -1137,8 +1137,8 @@
       ]
     },
     {
-      "id": "mathe_nrw_2022",
-      "name": "Zentralabitur NRW 2022 — Mathematik GK (Completo)",
+      "id": "mathe_dia_2022_test",
+      "name": "DIA Abitur Mathematik 2022 — Región 5 (Preguntas Cortas)",
       "year": "2022",
       "questions": [
         {

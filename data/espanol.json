@@ -483,12 +483,12 @@
   ],
   "official_exams_archive": [
     {
-      "id": "espanol_nrw_2023_complete",
-      "title": "Zentralabitur Region 5 (España) 2023 — Español GK",
+      "id": "espanol_dia_2023_complete",
+      "title": "DIA Abitur Español 2023 — Región 5 (DSV)",
       "year": "2023",
-      "pdf_url": "https://knowunity.es",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Este es el archivo de la prueba escrita unificada de Español del Abitur DIA (Región 5 - Península Ibérica) del año 2023. Consta de un comentario crítico de un texto periodístico de opinión y el análisis literario y contextualización de la obra poética de Federico García Lorca.",
+        "es": "Archivo de la prueba escrita unificada de Español del Abitur DIA (Región 5 - Península Ibérica) del año 2023. Consta de un comentario crítico de un texto periodístico de opinión y el análisis literario y contextualización de la obra de Federico García Lorca.",
         "de": "Archiv der schriftlichen Abiturprüfung Spanisch für die Region 5 (Iberische Halbinsel) aus dem Jahr 2023. Besteht aus dem textgebundenen Kommentar eines Zeitungsartikels und der literarischen Analyse eines Textausschnitts von Federico García Lorca."
       },
       "blocks": [
@@ -545,12 +545,12 @@
       ]
     },
     {
-      "id": "espanol_reg5_2024_complete",
-      "title": "Zentralabitur Region 5 (Península Ibérica) 2024 — Español",
+      "id": "espanol_dia_2024_complete",
+      "title": "DIA Abitur Español 2024 — Región 5 (DSV)",
       "year": "2024",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Examen oficial de Español escrito del Zentralabitur Region 5 2024. Contiene el comentario de un artículo de Rosa Montero sobre la soledad del individuo hiperconectado en redes, el análisis de un fragmento teatral de 'La casa de Bernarda Alba' (conflicto autoridad-libertad) y una disertación sobre el impacto social de la brecha digital intergeneracional.",
+        "es": "Examen oficial de Español escrito del Abitur DIA Región 5 2024. Contiene el comentario de un artículo de Rosa Montero sobre la soledad del individuo hiperconectado en redes, el análisis de un fragmento teatral de 'La casa de Bernarda Alba' (conflicto autoridad-libertad) y una disertación sobre el impacto social de la brecha digital intergeneracional.",
         "de": "Offizielle Spanisch-Abiturklausur Region 5 (Iberische Halbinsel) 2024. Enthält Textkommentar zu einer Kolumne von Rosa Montero über Einsamkeit im digitalen Zeitalter, Analyse einer Szene aus Lorcas 'La casa de Bernarda Alba' (Konflikt Autorität vs. Freiheit) sowie eine Erörterung über die digitale Kluft zwischen den Generationen."
       },
       "blocks": [
@@ -607,13 +607,13 @@
       ]
     },
     {
-      "id": "espanol_region5_2022_complete",
-      "title": "Zentralabitur Region 5 2022 — Español",
+      "id": "espanol_dia_2022_complete",
+      "title": "DIA Abitur Español 2022 — Región 5 (DSV)",
       "year": "2022",
-      "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "pdf_url": "https://www.zfa.bund.de/de/dia/",
       "intro": {
-        "es": "Examen oficial de Español Abitur Región 5 2022. Consta de dos tareas de desarrollo de nivel avanzado: el comentario de un artículo de prensa de El País sobre el impacto psicológico, social y laboral del teletrabajo en la España de pospandemia, y el análisis literario del fragmento del Acto III de 'Bodas de Sangre' de Federico García Lorca (el encuentro entre la Novia y el Novio en el bosque bajo la atenta mirada de la Luna y la Mendiga).",
-        "de": "Zentralabiturprüfung Spanisch 2022 (Region 5). Enthält eine Textanalyse zu einem Artikel aus El País über die psychologischen und sozialen Folgen des Homeoffice im nachpandemischen Spanien, sowie eine literaturwissenschaftliche Analyse eines Textauszugs aus Akt III von Federico García Lorcas 'Bodas de Sangre'."
+        "es": "Examen oficial de Español Abitur Región 5 (DSV) 2022. Consta de dos tareas de desarrollo de nivel avanzado: el comentario de un artículo de prensa de El País sobre el impacto psicológico, social y laboral del teletrabajo en la España de pospandemia, y el análisis literario del fragmento del Acto III de 'Bodas de Sangre' de Federico García Lorca.",
+        "de": "Zentralabiturprüfung Spanisch 2022 (Region 5 - DSV). Enthält eine Textanalyse zu einem Artikel aus El País über die psychologischen und sozialen Folgen des Homeoffice im nachpandemischen Spanien, sowie eine literaturwissenschaftliche Analyse eines Textauszugs aus Akt III von Federico García Lorcas 'Bodas de Sangre'."
       },
       "blocks": [
         {
