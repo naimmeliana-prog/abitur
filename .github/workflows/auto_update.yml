@@ -2,8 +2,8 @@ name: Auto Update Abitur Materials
 
 on:
   schedule:
-    # Runs every Sunday at 00:00 UTC
-    - cron: '0 0 * * 0'
+    # Runs every day at 00:00 UTC
+    - cron: '0 0 * * *'
   workflow_dispatch:
     # Allows manual triggering from GitHub Actions tab
 
@@ -22,8 +22,21 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run Auto-Updater Scraper
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 requests
+
+      - name: Run Auto-Updater Scraper (JS)
         run: node scripts/auto-updater.js
+
+      - name: Run External Resource Scraper (Python)
+        run: python scripts/scrape_external_recursos.py
 
       - name: Commit and push changes if any
         run: |
@@ -31,8 +44,9 @@ jobs:
           git config --global user.email "actions@github.com"
           git add data/*.json
           if ! git diff --staged --quiet; then
-            git commit -m "Auto-update: Import latest official written exam materials [skip ci]"
+            git commit -m "Auto-update: Import latest official written exam materials and scraped resources [skip ci]"
             git push origin main
           else
             echo "No updates detected. Repository is clean."
           fi
+
