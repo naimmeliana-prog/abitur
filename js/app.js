@@ -378,14 +378,12 @@ const App = {
     document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
       
-      // Remove old listeners by replacing with clean clone only if not already initialized
-      if (!btn.dataset.initialized) {
-        const newBtn = btn.cloneNode(true);
-        newBtn.dataset.initialized = 'true';
-        btn.parentNode.replaceChild(newBtn, btn);
-        newBtn.addEventListener('click', (e) => {
+      // Bind click handler directly to avoid cloning which breaks dynamically rendered headers
+      if (!btn.dataset.langBound) {
+        btn.dataset.langBound = 'true';
+        btn.addEventListener('click', (e) => {
           e.preventDefault();
-          this.setLang(newBtn.dataset.lang);
+          this.setLang(btn.dataset.lang);
         });
       }
     });
