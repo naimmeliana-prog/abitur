@@ -12,6 +12,63 @@
     "es": "El examen de Inglés DIA puede ser escrito (3ª asignatura elegida) u oral (4ª/5ª). El escrito evalúa: Reading Comprehension, Mediation, Writing (Composition). Fuente: Bildungsserver — sección Fremdsprachen para colegios alemanes en el extranjero.",
     "de": "Die Englisch-DIA-Prüfung kann schriftlich (3. Prüfungsfach) oder mündlich (4./5.) sein. Schriftlich: Reading Comprehension, Mediation, Writing (Composition). Quelle: Bildungsserver — Fremdsprachen."
   },
+  "keyOperators": [
+    {
+      "op": "Outline / Summarize",
+      "meaning": {
+        "es": "Presentar los aspectos principales de un texto de forma condensada, concisa y estructurada. Solo información relevante sin añadir valoraciones u opiniones personales.",
+        "de": "Die wesentlichen Aspekte eines Textes strukturiert und kurz zusammenfassen, ohne eigene Wertung."
+      },
+      "trap": {
+        "es": "Trampa: Copiar frases textuales del texto de origen o empezar a analizar los recursos estilísticos. Debe redactarse con tus propias palabras (own words).",
+        "de": "Falle: Zitate kopieren statt eigene Worte zu nutzen, oder bereits mit einer Analyse beginnen."
+      }
+    },
+    {
+      "op": "Analyze / Examine",
+      "meaning": {
+        "es": "Describir y explicar detalladamente la estructura, las ideas de fondo y los recursos lingüísticos o retóricos del texto, conectándolos con el efecto que producen en el lector.",
+        "de": "Struktur, Inhalt und sprachliche/rhetorische Mittel detailliert herausarbeiten und deren Wirkung erklären."
+      },
+      "trap": {
+        "es": "Trampa: Limitarse a hacer una lista de recursos estilísticos sin explicar el efecto persuasivo concreto que tiene cada recurso en el lector.",
+        "de": "Falle: Rhetorische Mittel bloß auflisten, statt deren konkrete Wirkung im Kontext zu erläutern."
+      }
+    },
+    {
+      "op": "Explain / Clarify",
+      "meaning": {
+        "es": "Hacer comprensible una relación o un hecho complejo del texto, detallando las causas, contextos y consecuencias de forma clara y lógica.",
+        "de": "Einen komplexen Sachverhalt verständlich machen, Ursachen und Zusammenhänge klar darlegen."
+      },
+      "trap": {
+        "es": "Trampa: Quedarse en la superficie resumiendo el argumento general del texto en lugar de rastrear la lógica profunda y los antecedentes del concepto.",
+        "de": "Falle: Den Text oberflächlich nacherzählen, anstatt die kausalen Zusammenhänge präzise zu erklären."
+      }
+    },
+    {
+      "op": "Comment on",
+      "meaning": {
+        "es": "Tomar una posición personal justificada y clara sobre un tema planteado en el texto, respaldando la opinión propia con argumentos lógicos, ejemplos y conocimientos adquiridos.",
+        "de": "Eine begründete persönliche Stellungnahme zu einem Thema abgeben und die eigene Meinung durch Argumente stützen."
+      },
+      "trap": {
+        "es": "Trampa: Ser ambiguo y concluir con un simple 'depende', o no fundamentar la postura propia en datos u otros contextos históricos (como el Sueño Americano).",
+        "de": "Falle: Unentschlossen bleiben ('sowohl als auch') ohne eigene klare Schlussfolgerung."
+      }
+    },
+    {
+      "op": "Discuss / Evaluate",
+      "meaning": {
+        "es": "Investigar un problema analizando pros y contras de forma objetiva y balanceada, llegando finalmente a una síntesis o juicio crítico fundado.",
+        "de": "Ein Problem durch Abwägen von Pro- und Kontra-Argumenten objektiv untersuchen und ein begründetes Urteil fällen."
+      },
+      "trap": {
+        "es": "Trampa: Tomar partido desde el principio en lugar de mantener la neutralidad durante el cuerpo argumentativo antes de la conclusión final.",
+        "de": "Falle: Voreingenommen argumentieren, anstatt Pro- und Kontra-Seiten ausgewogen darzustellen."
+      }
+    }
+  ],
   "skills": [
     {
       "id": "reading",
