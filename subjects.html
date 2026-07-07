@@ -67,7 +67,7 @@
     <header class="top-header">
       <div class="header-left">
         <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
-        <span class="header-title">Asignaturas DIA</span>
+        <span class="header-title" data-i18n="nav.subjects">Asignaturas DIA</span>
       </div>
       <div class="header-right" style="display:flex; align-items:center; gap:var(--space-md);">
         <!-- Font Size Adjusters -->
@@ -171,13 +171,13 @@ function renderSubjectPanel() {
           <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">DIA — Deutsche Schule Valencia</div>
           <h1 style="font-size:24px;font-weight:900;">${lang === 'de' ? data.displayName?.de : data.displayName?.es}</h1>
           <div class="flex gap-sm flex-wrap" style="margin-top:var(--space-sm);">
-            <span class="badge badge-gold">${data.examType === 'written' ? '✍️ Escrito' : data.examType === 'oral' ? '🎤 Oral' : '✍️/🎤'}</span>
+            <span class="badge badge-gold">${data.examType === 'written' ? (lang === 'de' ? '✍️ Schriftlich' : '✍️ Escrito') : data.examType === 'oral' ? (lang === 'de' ? '🎤 Mündlich' : '🎤 Oral') : '✍️/🎤'}</span>
             <span class="badge badge-blue">⏱️ ${data.duration ? data.duration + ' min' : '—'}</span>
             <span class="badge" style="background:rgba(255,255,255,0.06);">📋 ${data.source || 'DIA'}</span>
           </div>
         </div>
         <div style="margin-left:auto;">
-          <a href="exam-generator.html?s=${meta.id}" class="btn btn-primary">⚡ Practicar examen</a>
+          <a href="exam-generator.html?s=${meta.id}" class="btn btn-primary">⚡ ${lang === 'de' ? 'Prüfung üben' : 'Practicar examen'}</a>
         </div>
       </div>
 
@@ -187,12 +187,12 @@ function renderSubjectPanel() {
     <!-- Tabs within subject -->
     <div style="display:flex;gap:var(--space-sm);margin-bottom:var(--space-xl);flex-wrap:wrap;" id="subjectInnerTabs">
       <button class="difficulty-btn selected easy" onclick="showTab('info', this)">📋 Info</button>
-      ${(data.taskTypes || data.text_types) ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 Tipos de tarea</button>` : ''}
-      ${(data.topics || data.topics_by_semester || data.curriculum_topics || data.literary_epochs || data.contemporary_history) ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 Temario</button>` : ''}
-      ${data.official_exams_archive ? `<button class="difficulty-btn" onclick="showTab('archive', this)">📜 Exámenes Reales</button>` : ''}
-      ${data.trap_questions ? `<button class="difficulty-btn" onclick="showTab('traps', this)">⚠️ Trampas</button>` : ''}
-      ${data.questions ? `<button class="difficulty-btn" onclick="showTab('questions', this)">❓ Preguntas tipo</button>` : ''}
-      ${data.resources ? `<button class="difficulty-btn" onclick="showTab('resources', this)">🔗 Recursos</button>` : ''}
+      ${(data.taskTypes || data.text_types) ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 ${lang === 'de' ? 'Aufgabentypen' : 'Tipos de tarea'}</button>` : ''}
+      ${(data.topics || data.topics_by_semester || data.curriculum_topics || data.literary_epochs || data.contemporary_history) ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 ${lang === 'de' ? 'Lehrplan' : 'Temario'}</button>` : ''}
+      ${data.official_exams_archive ? `<button class="difficulty-btn" onclick="showTab('archive', this)">📜 ${lang === 'de' ? 'Abiturprüfungen' : 'Exámenes Reales'}</button>` : ''}
+      ${data.trap_questions ? `<button class="difficulty-btn" onclick="showTab('traps', this)">⚠️ ${lang === 'de' ? 'Fallen' : 'Trampas'}</button>` : ''}
+      ${data.questions ? `<button class="difficulty-btn" onclick="showTab('questions', this)">❓ ${lang === 'de' ? 'Musterfragen' : 'Preguntas tipo'}</button>` : ''}
+      ${data.resources ? `<button class="difficulty-btn" onclick="showTab('resources', this)">🔗 ${lang === 'de' ? 'Ressourcen' : 'Recursos'}</button>` : ''}
     </div>
 
     <!-- Tab content -->

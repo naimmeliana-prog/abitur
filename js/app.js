@@ -307,10 +307,10 @@ const App = {
     this.setupLangSwitcher();
     this.setupMobileNav();
     this.setupToasts();
+    this.initFontSizeControl(); // Run first to apply saved font scaling class on html tag
     this.applyTranslations();
     this.markActivePage();
     this.updateUserUI();
-    this.initFontSizeControl();
     // Update daily streak
     if (this.currentUser) {
       Progress.updateStreak();
