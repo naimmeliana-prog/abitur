@@ -1,0 +1,1158 @@
+{
+  "mathe": {
+    "count": 34,
+    "items": [
+      {
+        "title": "Unterricht",
+        "url": "https://lernarchiv.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lehrerbildung",
+        "url": "https://lehrerbildung.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Medienbildung",
+        "url": "https://medien.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schule",
+        "url": "https://djaco.bildung.hessen.de/schule/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bildungsregion",
+        "url": "https://region.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Arbeitsplattform",
+        "url": "https://arbeitsplattform.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Mehr ...",
+        "url": "https://dms-portal.bildung.hessen.de/mehr/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Einführung",
+        "url": "https://dms-portal.bildung.hessen.de/einfuehrung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wir über uns",
+        "url": "https://dms-portal.bildung.hessen.de/wir_ueber_uns/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "bildungsserver",
+        "url": "https://dms.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "mathematik",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Zahlen und Größen\n        \n        \n               \n            87",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/arithmetik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Variablen und Terme\n        \n        \n               \n            35",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/algebra/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Gleichungen, Ungleichungen, lineare Gleichungssysteme\n        \n        \n               \n            54",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/gleich/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Zuordnungen, Funktionen\n        \n        \n               \n            226",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/funktionen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Stochastik\n        \n        \n               \n            77",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/stochastik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Euklidische Geometrie der Ebene\n        \n        \n               \n            163",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/geometrie/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Euklidische Geometrie des Raumes\n        \n        \n               \n            60",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/raum/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Analytische Geometrie\n        \n        \n               \n            78",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/analy/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Allgemeines",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/allgemein/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Fachdidaktik\n        \n        \n               \n            26",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/didaktik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Fächerübergreifende Themen\n        \n        \n               \n            98",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/anwendung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Mathematik und KI\n        \n        \n               \n            5",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/mathematikundki/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lernpfad:",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/funktionen/diff/differenzen-_und_differentialquotient/lernpfad_einfuehrung_differentialrechnung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Webquest:",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/gleich/verh/webquest_goldener_schnitt/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "RechentrainerApp",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/anwendung/neue_medien/rechentrainerapp/edu_link_1710711776_0174737.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lernpfad: Binomialverteilung",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/stochastik/binomial/bernoulli_vers_kette_form/lernpfad_binomial/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lernpfad: Kumulierte Binomialverteilung",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/stochastik/binomial/bernoulli_vers_kette_form/lernpfad_kum_bin/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lernpfad:Die Quadratur des Rechtecks",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/geometrie/dreieckskonstruktion/pythagoras/lernpfad_satzgruppe_pythagoras/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Mathematik",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/mathematik/index.html/show_info_for_tag/?tag=mathemat&info=Mathematik",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Impressum",
+        "url": "https://djaco.bildung.hessen.de/impress.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Datenschutz",
+        "url": "https://djaco.bildung.hessen.de/datenschutz.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Haftungsausschluss",
+        "url": "https://djaco.bildung.hessen.de/disclaimer.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Abitur Bayern Mathe: Merkhilfe Mathematik",
+        "url": "https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf",
+        "source": "abiturloesung.de",
+        "license": "Verify Individually/Educational",
+        "type": "pdf"
+      }
+    ]
+  },
+  "deutsch": {
+    "count": 47,
+    "items": [
+      {
+        "title": "Unterricht",
+        "url": "https://lernarchiv.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lehrerbildung",
+        "url": "https://lehrerbildung.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Medienbildung",
+        "url": "https://medien.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schule",
+        "url": "https://djaco.bildung.hessen.de/schule/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bildungsregion",
+        "url": "https://region.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Arbeitsplattform",
+        "url": "https://arbeitsplattform.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Mehr ...",
+        "url": "https://dms-portal.bildung.hessen.de/mehr/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Einführung",
+        "url": "https://dms-portal.bildung.hessen.de/einfuehrung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wir über uns",
+        "url": "https://dms-portal.bildung.hessen.de/wir_ueber_uns/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "bildungsserver",
+        "url": "https://dms.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Zeitschriften in die Schule\n        \n        \n               \n            1",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/zeitschriften-in-die-schule-2026/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Themenspecial KI\n        \n        \n               \n            2",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/themenspecial-ki/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Der Wunderweltenbaum (2026) (Filmstart: 30.04.2026)\n        \n               \n            \n        \n        \n               \n            2",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/filme/der-wunderweltenbaum-2026/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schriftstellerinnen und Schriftsteller\n        \n        \n               \n            623",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/autoren/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Ganzschriften (nach Autor)\n        \n        \n               \n            148",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/ganzschriften/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Filme und Serien\n        \n        \n               \n            57",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/filme/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Textsorten, Operatoren, Methoden\n        \n        \n               \n            96",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/methoden-und-operatoren/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Klasse 5/6\n        \n        \n               \n            225",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/6/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Klasse 7/8\n        \n        \n               \n            231",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/8/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Klasse 9/10\n        \n        \n               \n            266",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/10/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "E1 Norm und Positionierung\n        \n        \n               \n            65",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/e1/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "E2 Konfrontation und Interaktion\n        \n        \n               \n            34",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/e2/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Q1 Fiktion und Wirklichkeit\n        \n        \n               \n            123",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/q1/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Q2 Sprache und Literatur in politisch-gesellschaftlichen Spannungsfeldern\n        \n        \n               \n            75",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/q2/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Q3 Zäsuren, Umbrüche und Neuanfänge\n        \n        \n               \n            112",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/q3/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Q4 Literatur und Rezeption\n        \n        \n               \n            25",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/q4/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Materialgestütztes Schreiben\n        \n        \n               \n            27",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/materialgestuetztes-schreiben/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Abiturvorbereitung\n        \n        \n               \n            15",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/abiturvorbereitung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Unterrichtsplanung\n        \n        \n               \n            1",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/unterrichtsplanung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lesen, Umgang mit Texten und anderen Medien\n        \n        \n               \n            81",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/umgang-mit-texten/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Sprache und Kommunikation\n        \n        \n               \n            37",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/sprache-und-kommunikation/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schreiben und Schreibstrategien\n        \n        \n               \n            43",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/schreibfaehigkeiten-verbessern/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Deutsch als Zweitsprache\n        \n        \n               \n            20",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/fremdsprache/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Landeskunde Deutschland\n        \n        \n               \n            16",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/landeskunde/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Materialien zur Unterstützung speziell für Ukraine-Flüchtlinge\n        \n        \n               \n            5",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/ukraine/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "nach Niveaustufen (GER)\n        \n        \n               \n            46",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/nach-niveaustufen-ger/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "nach Schulform/Klassenstufe\n        \n        \n               \n            8",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/klassenstufe/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "nach Themen\n        \n        \n               \n            6",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/nach-themen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Besondere Schwierigkeiten beim Lesen und Rechtschreiben (§39 Abs. 4 VOGSV)\n        \n        \n               \n            2",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/lrs/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Fachdidaktik\n        \n        \n               \n            46",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/d_didaktik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Künstliche Intelligenz\n        \n        \n               \n            11",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/ai/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Internet-Portale\n        \n        \n               \n            19",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/portale/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Online-Nachschlagewerke\n        \n        \n               \n            9",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/nachschlagewerke/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Deutsch",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/index.html/show_info_for_tag/?tag=deutsch&info=Deutsch",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Impressum",
+        "url": "https://djaco.bildung.hessen.de/impress.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Datenschutz",
+        "url": "https://djaco.bildung.hessen.de/datenschutz.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Haftungsausschluss",
+        "url": "https://djaco.bildung.hessen.de/disclaimer.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      }
+    ]
+  },
+  "englisch": {
+    "count": 53,
+    "items": [
+      {
+        "title": "http://de.serlo.org/107557",
+        "url": "https://de.serlo.org/englisch/107557/englisch",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Was bedeutet das?",
+        "url": "https://de.serlo.org/license/detail/1",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mitmachen bei SerloHinter serlo.org stehen viele engagierte Menschen, die Bildung besser und gerechter machen wollen. Auch du kannst mitmachen! Klicke hier, um zu erfahren, wie du Teil der Serlo Community werden kannst.",
+        "url": "https://de.serlo.org/mitmachen",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mehr erfahren",
+        "url": "https://de.serlo.org/serlo",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Community",
+        "url": "https://de.serlo.org/community",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Datenschutz",
+        "url": "https://de.serlo.org/privacy",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Einwilligungen widerrufen",
+        "url": "https://de.serlo.org/consent",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Nutzungsbedingungen und Urheberrecht",
+        "url": "https://de.serlo.org/terms",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Impressum",
+        "url": "https://de.serlo.org/legal",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Unterricht",
+        "url": "https://lernarchiv.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lehrerbildung",
+        "url": "https://lehrerbildung.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Medienbildung",
+        "url": "https://medien.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schule",
+        "url": "https://djaco.bildung.hessen.de/schule/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bildungsregion",
+        "url": "https://region.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Arbeitsplattform",
+        "url": "https://arbeitsplattform.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Mehr ...",
+        "url": "https://dms-portal.bildung.hessen.de/mehr/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Einführung",
+        "url": "https://dms-portal.bildung.hessen.de/einfuehrung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wir über uns",
+        "url": "https://dms-portal.bildung.hessen.de/wir_ueber_uns/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "bildungsserver",
+        "url": "https://dms.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "englisch",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lernarchiv Englisch für die Grund- und Förderschule",
+        "url": "https://lernarchiv.bildung.hessen.de/grundschule/englisch/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Aktuelles",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/aktuelles/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Curricula und Lehrpläne Englisch",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/curricula/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Didaktik\n        \n        \n               \n            43",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/didaktik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Englisch online lernen\n        \n        \n               \n            54",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/internetportale/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wettbewerbe\n        \n        \n               \n            3",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/wettbewerbe/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wörterbücher\n        \n        \n               \n            19",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/worterbucher-nachschlagewerke/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Grammatik\n        \n        \n               \n            240",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/grammatik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Hör-Verstehen & Hör-Seh-Verstehen\n        \n        \n               \n            18",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/hoerverstehen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Leseverstehen\n        \n        \n               \n            17",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/leseverstehen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schreiben\n        \n        \n               \n            14",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/schreiben/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Sprachmittlung / Mediation\n        \n        \n               \n            9",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/sprachkompetenz/sprachmittlung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Sprechen\n        \n        \n               \n            30",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/sprechen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wortschatz / Themen\n        \n        \n               \n            189",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/wortschatzlexik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Auslandserfahrungen\n        \n        \n               \n            26",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/ausland/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bildende Kunst\n        \n        \n               \n            2",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/musikkunst/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Interkulturelle Kompetenzen\n        \n        \n               \n            6",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/interkulturelle-kompetenzen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Landeskunde\n        \n        \n               \n            277",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/landeskunde/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Literatur\n        \n        \n               \n            358",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/literatur/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Theater\n        \n        \n               \n            5",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/theater/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Film / Audio\n        \n        \n               \n            35",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/medien/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Künstliche Intelligenz\n        \n        \n               \n            27",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/kuenstliche-intelligenz/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Songs\n        \n        \n               \n            13",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/musik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Zeitungen / Zeitschriften\n        \n        \n               \n            29",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/zeitschriften/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "E-Phase\n        \n        \n               \n            54",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/e-phase/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Q-Phase\n        \n        \n               \n            176",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/q-phase/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Skills\n        \n        \n               \n            46",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/skills/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bilingualer Unterricht (Englisch)\n        \n        \n               \n            3265",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/engl/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bilder-Sammlung\n        \n        \n               \n            62",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/bildersammlung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Englisch",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/englisch/index.html/show_info_for_tag/?tag=englisch&info=Englisch",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Impressum",
+        "url": "https://djaco.bildung.hessen.de/impress.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Datenschutz",
+        "url": "https://djaco.bildung.hessen.de/datenschutz.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Haftungsausschluss",
+        "url": "https://djaco.bildung.hessen.de/disclaimer.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      }
+    ]
+  },
+  "philosophie": {
+    "count": 29,
+    "items": [
+      {
+        "title": "Unterricht",
+        "url": "https://lernarchiv.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Lehrerbildung",
+        "url": "https://lehrerbildung.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Medienbildung",
+        "url": "https://medien.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Schule",
+        "url": "https://djaco.bildung.hessen.de/schule/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bildungsregion",
+        "url": "https://region.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Arbeitsplattform",
+        "url": "https://arbeitsplattform.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Mehr ...",
+        "url": "https://dms-portal.bildung.hessen.de/mehr/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Einführung",
+        "url": "https://dms-portal.bildung.hessen.de/einfuehrung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Wir über uns",
+        "url": "https://dms-portal.bildung.hessen.de/wir_ueber_uns/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "bildungsserver",
+        "url": "https://dms.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "philosophie",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "https://ges.engagement-global.de/files/2_Mediathek/Mediathek_Microsites/OR-Schulprogramm/Downloads/Orientierungsrahmen/12_OR-GE_Religion_bf.pdf",
+        "url": "https://ges.engagement-global.de/files/2_Mediathek/Mediathek_Microsites/OR-Schulprogramm/Downloads/Orientierungsrahmen/12_OR-GE_Religion_bf.pdf",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "pdf"
+      },
+      {
+        "title": "Aktuelle Themen\n        \n        \n               \n            1",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/aktthemphil/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Portale\n        \n        \n               \n            7",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/portale/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Philosophen\n        \n        \n               \n            244",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/philosophen/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Einführung in die Philosophie\n        \n        \n               \n            18",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/einfuehrung/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Naturphilosophie\n        \n        \n               \n            6",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/natur/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Philosophie und Wissenschaft\n        \n        \n               \n            11",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/wissenschaft/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Philosophische Anthropologie\n        \n        \n               \n            6",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/anthropologie/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Staats-, Gesellschafts- und Geschichtsphilosophie\n        \n        \n               \n            24",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/staat/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Ethik \n        \n               \n            \n        \n        \n               \n            446",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/ethik/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Weitere Philosophische Disziplinen\n        \n        \n               \n            7",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/weiteres/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Buchhinweise\n        \n        \n               \n            1",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/buchphil/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Philosophische Ethik\n        \n        \n               \n            6",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/phil/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Philosophie - Fachdidaktik\n        \n        \n               \n            6",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/fachdid/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Philosophie",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/philosophie/index.html/show_info_for_tag/?tag=philosophi&info=Philosophie",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Impressum",
+        "url": "https://djaco.bildung.hessen.de/impress.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Datenschutz",
+        "url": "https://djaco.bildung.hessen.de/datenschutz.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Haftungsausschluss",
+        "url": "https://djaco.bildung.hessen.de/disclaimer.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      }
+    ]
+  },
+  "espanol": {
+    "count": 0,
+    "items": []
+  }
+}
