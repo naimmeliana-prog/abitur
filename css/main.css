@@ -106,9 +106,9 @@
   padding: 0;
 }
 
-html.font-size-small { font-size: 16px; }
-html.font-size-normal { font-size: 19.5px; }
-html.font-size-large { font-size: 23px; }
+html.font-size-small { font-size: 14px; }
+html.font-size-normal { font-size: 16px; }
+html.font-size-large { font-size: 20px; }
 
 html {
   scroll-behavior: smooth;

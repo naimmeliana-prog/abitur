@@ -264,6 +264,9 @@ const App = {
 
   applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
+      // Do not overwrite translations inside dynamic render containers that manage their own translation logic
+      if (el.closest('#materialPanel') || el.closest('#subjectPanel')) return;
+      
       const key = el.dataset.i18n;
       if (el.tagName === 'INPUT' && el.type !== 'submit') {
         el.placeholder = this.t(key);
@@ -272,6 +275,7 @@ const App = {
       }
     });
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      if (el.closest('#materialPanel') || el.closest('#subjectPanel')) return;
       el.title = this.t(el.dataset.i18nTitle);
     });
   },
