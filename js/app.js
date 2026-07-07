@@ -18,6 +18,10 @@ const TRANSLATIONS = {
     'nav.study-material': 'Material Didáctico',
     'nav.admin':        'Admin',
     'nav.logout':       'Cerrar sesión',
+    'nav.section.principal': 'Principal',
+    'nav.section.exams':     'Exámenes',
+    'nav.section.progress':  'Mi Progreso',
+    'nav.section.admin':     'Admin',
 
     // Subjects
     'subject.deutsch':     'Alemán',
@@ -134,6 +138,10 @@ const TRANSLATIONS = {
     'nav.study-material': 'Lehrmaterial',
     'nav.admin':        'Admin',
     'nav.logout':       'Abmelden',
+    'nav.section.principal': 'Hauptmenü',
+    'nav.section.exams':     'Prüfungen',
+    'nav.section.progress':  'Mein Fortschritt',
+    'nav.section.admin':     'Admin',
 
     // Subjects
     'subject.deutsch':     'Deutsch',
@@ -260,6 +268,10 @@ const App = {
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
+    // Trigger custom page-level callback if registered
+    if (typeof window.onLangChange === 'function') {
+      window.onLangChange(lang);
+    }
   },
 
   applyTranslations() {

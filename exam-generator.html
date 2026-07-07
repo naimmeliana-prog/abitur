@@ -911,6 +911,15 @@ function selectAnswerContinuous(qIdx, optIdx, el) {
   }
 }
 
+// i18n dynamic page level update
+window.onLangChange = function(lang) {
+  renderSubjectSelector();
+  updateSummary();
+  if (ExamEngine.currentExam) {
+    renderQuestion(ExamEngine.currentQuestion);
+  }
+};
+
 // ── Init ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
   renderSubjectSelector();

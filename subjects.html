@@ -40,18 +40,18 @@
       <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
     </a>
     <nav class="sidebar-nav">
-      <div class="nav-section-label">Principal</div>
-      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Inicio</span></a>
-      <a href="subjects.html" class="nav-item active"><span class="nav-icon">📚</span><span class="nav-label">Asignaturas</span></a>
-      <div class="nav-section-label">Exámenes</div>
-      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label">Generar Examen</span></a>
-      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label">Banco de Exámenes</span></a>
-      <div class="nav-section-label">Mi Progreso</div>
-      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label">Mi Progreso</span></a>
-      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Técnicas de Estudio</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.principal">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label" data-i18n="nav.dashboard">Inicio</span></a>
+      <a href="subjects.html" class="nav-item active"><span class="nav-icon">📚</span><span class="nav-label" data-i18n="nav.subjects">Asignaturas</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.exams">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label" data-i18n="nav.exam-gen">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label" data-i18n="nav.exam-bank">Banco de Exámenes</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.progress">Mi Progreso</div>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label" data-i18n="nav.progress">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label" data-i18n="nav.study-tips">Técnicas de Estudio</span></a>
       <a href="study-material.html" class="nav-item"><span class="nav-icon">📖</span><span class="nav-label" data-i18n="nav.study-material">Material Didáctico</span></a>
-      <div class="nav-section-label">Admin</div>
-      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label">Admin</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.admin">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label" data-i18n="nav.admin">Admin</span></a>
     </nav>
     <div class="sidebar-footer">
       <a href="progress.html" class="user-card">
@@ -234,9 +234,9 @@ function renderInfoTab(data, lang) {
           <div class="flex-col gap-md">
             ${keyOps.slice(0,8).map(o => `
               <div style="border-left:2px solid var(--color-gold);padding-left:var(--space-md);">
-                <div style="font-weight:700;font-size:14px;color:var(--color-gold);">${o.op || o.id || o.name}</div>
-                <div style="font-size:13px;color:var(--text-secondary);margin-top:2px;">${o.meaning?.[lang] || o.meaning?.es || o.desc?.[lang] || ''}</div>
-                ${o.trap ? `<div class="warning-box" style="margin-top:6px;font-size:12px;">⚠️ ${o.trap?.[lang] || o.trap?.es}</div>` : ''}
+                <div style="font-weight:700;font-size:0.9rem;color:var(--color-gold);">${o.op || o.id || o.name}</div>
+                <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:2px;">${o.meaning?.[lang] || o.meaning?.es || o.desc?.[lang] || ''}</div>
+                ${o.trap ? `<div class="warning-box" style="margin-top:6px;font-size:0.75rem;">⚠️ ${o.trap?.[lang] || o.trap?.es}</div>` : ''}
               </div>`).join('')}
           </div>
         </div>` : ''}
@@ -244,7 +244,7 @@ function renderInfoTab(data, lang) {
       ${data.exam_structure ? `
         <div class="card">
           <h3 style="margin-bottom:var(--space-md);">📋 Estructura del examen</h3>
-          <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">${data.exam_structure?.[lang] || data.exam_structure?.es}</p>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;">${data.exam_structure?.[lang] || data.exam_structure?.es}</p>
         </div>` : ''}
 
       ${data.exam_format ? `
@@ -265,9 +265,9 @@ function renderInfoTab(data, lang) {
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);">
             ${devices.slice(0,12).map(d => `
               <div style="padding:var(--space-sm);background:var(--glass-bg);border-radius:var(--radius-sm);border:1px solid var(--glass-border);">
-                <div style="font-weight:700;font-size:13px;">${d.name}</div>
-                ${d.es ? `<div style="font-size:11px;color:var(--text-muted);">${d.es}</div>` : ''}
-                ${d.example ? `<div style="font-size:11px;color:var(--color-gold);font-style:italic;margin-top:2px;">"${d.example}"</div>` : ''}
+                <div style="font-weight:700;font-size:0.85rem;">${d.name}</div>
+                ${d.es ? `<div style="font-size:0.75rem;color:var(--text-muted);">${d.es}</div>` : ''}
+                ${d.example ? `<div style="font-size:0.75rem;color:var(--color-gold);font-style:italic;margin-top:2px;">"${d.example}"</div>` : ''}
               </div>`).join('')}
           </div>
         </div>` : ''}
@@ -278,8 +278,8 @@ function renderInfoTab(data, lang) {
           <div class="flex-col gap-sm">
             ${concepts.map(c => `
               <div style="padding:var(--space-sm) var(--space-md);background:var(--glass-bg);border-radius:var(--radius-sm);border:1px solid var(--glass-border);">
-                <div style="font-weight:700;font-size:13px;color:var(--color-gold);">${c.concept}</div>
-                <div style="font-size:12px;color:var(--text-muted);">${c[lang] || c.es}</div>
+                <div style="font-weight:700;font-size:0.85rem;color:var(--color-gold);">${c.concept}</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">${c[lang] || c.es}</div>
               </div>`).join('')}
           </div>
         </div>` : ''}
@@ -290,8 +290,8 @@ function renderInfoTab(data, lang) {
           <div class="flex-col gap-sm">
             ${(Array.isArray(techniques) ? techniques : []).map(t =>
               `<div class="tip-card" style="padding:var(--space-sm) var(--space-md);">
-                <span style="font-size:16px;">✅</span>
-                <div style="font-size:13px;">${typeof t === 'string' ? t : (t[lang] || t.es)}</div>
+                <span style="font-size:1rem;">✅</span>
+                <div style="font-size:0.85rem;">${typeof t === 'string' ? t : (t[lang] || t.es)}</div>
               </div>`).join('')}
           </div>
         </div>` : ''}
@@ -614,6 +614,14 @@ function renderResourcesTab(data, lang) {
     ${resources.length === 0 ? '<div class="card"><p style="color:var(--text-muted)">No hay recursos registrados.</p></div>' : ''}
   </div>`;
 }
+
+// i18n dynamic page level update
+window.onLangChange = function(lang) {
+  renderTabs();
+  if (currentSubjectId) {
+    renderSubject(currentSubjectId);
+  }
+};
 
 // ── Init ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
