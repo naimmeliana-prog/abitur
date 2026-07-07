@@ -43,7 +43,7 @@
           <div class="user-level user-level-display">Nivel 1</div>
         </div>
       </a>
-      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;" data-i18n="nav.logout">Cerrar sesión</button>
     </div>
   </aside>
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -88,15 +88,15 @@
 
             <!-- Step 1.5: Generation Type -->
             <div class="card">
-              <h3 style="margin-bottom:var(--space-md);">⚙️ Tipo de Generación</h3>
+              <h3 style="margin-bottom:var(--space-md);" data-i18n="exam.gen-type">Tipo de Generación</h3>
               <div class="flex gap-sm" style="margin-bottom:var(--space-md);">
-                <button class="difficulty-btn selected easy" id="typeRandomBtn" onclick="setGenType('random')" style="flex:1;">🎲 Aleatorio</button>
-                <button class="difficulty-btn" id="typeOfficialBtn" onclick="setGenType('official')" style="flex:1;">📜 Examen Oficial</button>
+                <button class="difficulty-btn selected easy" id="typeRandomBtn" onclick="setGenType('random')" style="flex:1;" data-i18n="exam.gen-random">🎲 Aleatorio</button>
+                <button class="difficulty-btn" id="typeOfficialBtn" onclick="setGenType('official')" style="flex:1;" data-i18n="exam.gen-official">📜 Examen Oficial</button>
               </div>
 
               <!-- Official Exam Select Wrapper (hidden by default) -->
               <div id="officialExamWrapper" class="hidden">
-                <label class="form-label" style="margin-bottom:var(--space-sm);display:block;font-size:13px;color:var(--text-muted);">Selecciona un examen real de años anteriores:</label>
+                <label class="form-label" style="margin-bottom:var(--space-sm);display:block;font-size:13px;color:var(--text-muted);" data-i18n="exam.select-official-desc">Selecciona un examen real de años anteriores:</label>
                 <select id="officialExamSelect" class="form-select" onchange="updateSummary()" style="width:100%;"></select>
               </div>
             </div>
@@ -110,13 +110,13 @@
                   <button class="difficulty-btn easy selected" data-diff="easy" data-i18n="exam.easy">Fácil</button>
                   <button class="difficulty-btn medium" data-diff="medium" data-i18n="exam.medium">Medio</button>
                   <button class="difficulty-btn hard" data-diff="hard" data-i18n="exam.hard">Difícil</button>
-                  <button class="difficulty-btn" data-diff="all" style="flex:0.7;font-size:11px;">Todos</button>
+                  <button class="difficulty-btn" data-diff="all" style="flex:0.7;font-size:11px;" data-i18n="exam.all-diffs">Todos</button>
                 </div>
               </div>
 
               <!-- Step 3: Questions -->
               <div class="card">
-                <h3 style="margin-bottom:var(--space-md);">3️⃣ Número de preguntas</h3>
+                <h3 style="margin-bottom:var(--space-md);" data-i18n="exam.questions-count">Número de preguntas</h3>
                 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-sm);">
                   <button class="difficulty-btn selected" data-count="5">5</button>
                   <button class="difficulty-btn" data-count="10">10</button>
@@ -133,7 +133,7 @@
 
             <!-- Mode -->
             <div class="card">
-              <h3 style="margin-bottom:var(--space-lg);">4️⃣ Modo de examen</h3>
+              <h3 style="margin-bottom:var(--space-lg);" data-i18n="exam.modality">Modo de examen</h3>
 
               <div id="modeSelector" class="flex-col gap-md">
 
@@ -142,7 +142,7 @@
                     <span style="font-size:32px;">📖</span>
                     <div>
                       <div style="font-size:16px;font-weight:700;" data-i18n="exam.practice-mode">Modo Práctica</div>
-                      <div style="font-size:13px;color:var(--text-muted);">Sin temporizador. Ve a tu ritmo. Feedback inmediato.</div>
+                      <div style="font-size:13px;color:var(--text-muted);" data-i18n="exam.practice-mode-desc">Sin temporizador. Ve a tu ritmo. Feedback inmediato.</div>
                     </div>
                   </div>
                 </div>
@@ -152,10 +152,10 @@
                     <span style="font-size:32px;">⏱️</span>
                     <div>
                       <div style="font-size:16px;font-weight:700;" data-i18n="exam.simulation-mode">Modo Simulacro</div>
-                      <div style="font-size:13px;color:var(--text-muted);">Con temporizador oficial DIA. Condiciones reales.</div>
+                      <div style="font-size:13px;color:var(--text-muted);" data-i18n="exam.simulation-mode-desc">Con temporizador oficial DIA. Condiciones reales.</div>
                     </div>
                   </div>
-                  <div class="badge badge-warning" style="margin-top:var(--space-sm);font-size:11px;">⏱️ Tiempo real del DIA</div>
+                  <div class="badge badge-warning" style="margin-top:var(--space-sm);font-size:11px;" data-i18n="exam.real-time-warning">⏱️ Tiempo real del DIA</div>
                 </div>
               </div>
             </div>
@@ -167,14 +167,14 @@
                 <span class="switch-slider"></span>
               </label>
               <div>
-                <div style="font-size:14px;font-weight:600;">Generar PDF al completar</div>
-                <div style="font-size:12px;color:var(--text-muted);">Descarga un examen imprimible con correcciones</div>
+                <div style="font-size:14px;font-weight:600;" data-i18n="exam.pdf-option">Generar PDF al completar</div>
+                <div style="font-size:12px;color:var(--text-muted);" data-i18n="exam.pdf-option-desc">Descarga un examen imprimible con correcciones</div>
               </div>
             </div>
 
             <!-- Summary + Start -->
             <div class="card" style="background:rgba(245,200,66,0.05);border-color:rgba(245,200,66,0.2);">
-              <h4 style="margin-bottom:var(--space-md);">📋 Resumen</h4>
+              <h4 style="margin-bottom:var(--space-md);" data-i18n="exam.summary-title">📋 Resumen</h4>
               <div id="examSummary" class="flex-col gap-sm" style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-lg);">
                 <div>📚 <span id="sumSubjects">Ninguna asignatura</span></div>
                 <div>🎯 <span id="sumDifficulty">Fácil</span></div>
@@ -190,7 +190,7 @@
         </div>
 
         <!-- Tip box -->
-        <div class="highlight-box" style="margin-top:var(--space-xl);">
+        <div class="highlight-box" style="margin-top:var(--space-xl);" data-i18n="exam.tip-box-desc">
           <strong>💡 Consejo DIA:</strong> Los exámenes de Matemáticas son los más diferentes entre Práctica y Simulacro.
           Empieza con Práctica para aprender los patrones, luego cambia a Simulacro para simular condiciones reales (sin calculadora en Parte A).
         </div>
@@ -392,22 +392,26 @@ document.querySelectorAll('[data-count]').forEach(btn => {
 
 function updateSummary() {
   const lang = App.currentLang;
+  const isDe = lang === 'de';
   const subjNames = selectedSubjects.map(id => subjects.find(s => s.id === id))
-    .filter(Boolean).map(s => lang === 'de' ? s.nameDE : s.name);
+    .filter(Boolean).map(s => isDe ? s.nameDE : s.name);
   
-  document.getElementById('sumSubjects').textContent = subjNames.length ? subjNames.join(', ') : 'Ninguna';
+  document.getElementById('sumSubjects').textContent = subjNames.length ? subjNames.join(', ') : (isDe ? 'Keine' : 'Ninguna');
   
   if (selectedGenType === 'official') {
     const select = document.getElementById('officialExamSelect');
-    const examName = select.options[select.selectedIndex]?.text || 'Ninguno seleccionado';
-    document.getElementById('sumDifficulty').textContent = 'Examen Oficial';
+    const examName = select.options[select.selectedIndex]?.text || (isDe ? 'Keine ausgewählt' : 'Ninguno seleccionado');
+    document.getElementById('sumDifficulty').textContent = isDe ? 'Offizielle Prüfung' : 'Examen Oficial';
     document.getElementById('sumQuestions').textContent = examName;
   } else {
-    document.getElementById('sumDifficulty').textContent = selectedDifficulty;
-    document.getElementById('sumQuestions').textContent = `${selectedCount} preguntas`;
+    const diffMap = { easy: isDe ? 'Leicht' : 'Fácil', medium: isDe ? 'Mittel' : 'Medio', hard: isDe ? 'Schwer' : 'Difícil', all: isDe ? 'Alle' : 'Todos' };
+    document.getElementById('sumDifficulty').textContent = diffMap[selectedDifficulty] || selectedDifficulty;
+    document.getElementById('sumQuestions').textContent = isDe ? `${selectedCount} Fragen` : `${selectedCount} preguntas`;
   }
   
-  document.getElementById('sumMode').textContent = selectedMode === 'simulacro' ? '⏱️ Simulacro' : '📖 Práctica';
+  document.getElementById('sumMode').textContent = selectedMode === 'simulacro' 
+    ? (isDe ? '⏱️ Simulation' : '⏱️ Simulacro') 
+    : (isDe ? '📖 Übungsmodus' : '📖 Práctica');
 }
 
 // ── Start Exam ────────────────────────────────────────────────
@@ -534,6 +538,83 @@ function renderQuestion(idx) {
 
   const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
   const yearBadge  = q.year  ? `<span class="badge badge-gold">${q.year}</span>` : '';
+
+  // ── ORAL simulation question ──────────────────────────────────────
+  const isOralSubject = q.subjectId === 'espanol' || q.subjectId === 'philosophie';
+  if (isOralSubject && (exam.isOfficial || selectedGenType === 'official' || q.isEssay)) {
+    const qText        = q.question?.[lang] || q.question?.es || '';
+    const solutionText = q.solution?.[lang] || q.solution?.es || '';
+    const criteriaText = q.criteria?.[lang] || q.criteria?.es || '';
+    const recoText     = q.recommendation?.[lang] || q.recommendation?.es || '';
+    const maxPts       = q.points || 50;
+    const savedScore   = ExamEngine.essayScores?.[idx];
+    const uid          = `oral_sol_${idx}`;
+
+    document.getElementById('questionsContainer').innerHTML = `
+      <div class="question-card page-enter">
+        <div class="flex gap-sm items-center flex-wrap" style="margin-bottom:var(--space-sm);">
+          ${topicBadge}
+          <span class="badge badge-gold">🎤 Simulacro Oral — ${maxPts} puntos</span>
+          <span class="badge" style="background:rgba(59,130,246,0.15);color:var(--color-info);">⏱️ 10 min prep + 10 min coloquio</span>
+        </div>
+
+        <div style="margin:var(--space-md) 0;padding:var(--space-md);background:rgba(255,255,255,0.02);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+          <div style="font-size:11px;color:var(--color-gold);font-weight:700;margin-bottom:6px;letter-spacing:0.5px;text-transform:uppercase;">📌 Estimulo / Enunciado (Stimulus)</div>
+          <div class="question-text" style="line-height:1.6;white-space:pre-line;font-size:15px;">${qText}</div>
+        </div>
+
+        <!-- Oral Timers Widget -->
+        <div class="grid-2 gap-md" style="margin-top:var(--space-lg);margin-bottom:var(--space-lg);">
+          <div class="card card-sm text-center" style="background:rgba(255,255,255,0.01);">
+            <div style="font-size:11px;color:var(--text-muted);font-weight:700;margin-bottom:4px;">⏱️ TIEMPO DE PREPARACIÓN</div>
+            <div id="oralPrepTimer" style="font-size:24px;font-weight:800;color:var(--color-info);">10:00</div>
+            <button onclick="startOralTimer('oralPrepTimer', 10*60, this)" class="btn btn-secondary btn-sm" style="margin-top:8px;padding:2px 8px;font-size:11px;">▶ Iniciar Preparación</button>
+          </div>
+          <div class="card card-sm text-center" style="background:rgba(255,255,255,0.01);">
+            <div style="font-size:11px;color:var(--text-muted);font-weight:700;margin-bottom:4px;">⏱️ EXPOSICIÓN + COLOQUIO</div>
+            <div id="oralSpeechTimer" style="font-size:24px;font-weight:800;color:var(--color-success);">10:00</div>
+            <button onclick="startOralTimer('oralSpeechTimer', 10*60, this)" class="btn btn-secondary btn-sm" style="margin-top:8px;padding:2px 8px;font-size:11px;">▶ Iniciar Exposición</button>
+          </div>
+        </div>
+
+        <div style="margin-top:var(--space-lg);">
+          <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:6px;">✏️ Estructura tus notas de preparación (Vortragsnotizen)</label>
+          <textarea id="essay_draft_${idx}" placeholder="Redacta aquí tu esquema, ideas clave y vocabulario específico en alemán para tu presentación..."
+            style="width:100%;min-height:150px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);color:var(--text-primary);padding:12px;font-size:13px;line-height:1.6;resize:vertical;font-family:inherit;"></textarea>
+        </div>
+
+        <div style="margin-top:var(--space-md);display:flex;gap:var(--space-sm);flex-wrap:wrap;align-items:center;">
+          <button onclick="const el=document.getElementById('${uid}');el.style.display=el.style.display==='none'?'block':'none';"
+            class="btn btn-secondary btn-sm" style="font-size:12px;">
+            💡 Ver solución modelo y criterios
+          </button>
+          <div style="display:flex;align-items:center;gap:8px;margin-left:auto;">
+            <label style="font-size:12px;color:var(--text-muted);">Tu autoevaluación:</label>
+            <input type="number" id="essay_score_${idx}" min="0" max="${maxPts}" value="${savedScore !== undefined ? savedScore : ''}"
+              placeholder="0-${maxPts}"
+              onchange="if(ExamEngine.essayScores===undefined)ExamEngine.essayScores={};ExamEngine.essayScores[${idx}]=Math.min(${maxPts},Math.max(0,parseInt(this.value)||0));"
+              style="width:70px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--text-primary);padding:6px 8px;font-size:13px;text-align:center;">
+            <span style="font-size:12px;color:var(--text-muted);">/ ${maxPts}</span>
+          </div>
+        </div>
+
+        <div id="${uid}" style="display:none;margin-top:var(--space-md);">
+          ${solutionText ? `<div style="padding:var(--space-md);background:rgba(34,197,94,0.04);border-left:3px solid var(--color-success);border-radius:var(--radius-md);margin-bottom:var(--space-md);">
+            <div style="font-size:11px;color:var(--color-success);font-weight:700;margin-bottom:6px;">✅ SOLUCIÓN MODELO (Contenido esperado)</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;white-space:pre-line;">${solutionText}</div>
+          </div>` : ''}
+          ${criteriaText ? `<div style="padding:var(--space-md);background:rgba(245,200,66,0.04);border-left:3px solid var(--color-gold);border-radius:var(--radius-md);margin-bottom:var(--space-md);">
+            <div style="font-size:11px;color:var(--color-gold);font-weight:700;margin-bottom:6px;">📋 CRITERIOS DE EVALUACIÓN MÜNDLICH</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;white-space:pre-line;">${criteriaText}</div>
+          </div>` : ''}
+          ${recoText ? `<div style="padding:var(--space-md);background:rgba(100,150,255,0.04);border-left:3px solid rgba(100,150,255,0.5);border-radius:var(--radius-md);">
+            <div style="font-size:11px;color:rgba(120,170,255,0.9);font-weight:700;margin-bottom:6px;">💬 RECOMENDACIÓN PARA EL EXAMEN ORAL</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;">${recoText}</div>
+          </div>` : ''}
+        </div>
+      </div>`;
+    return;
+  }
 
   // ── ESSAY question ────────────────────────────────────────────────
   if (q.isEssay) {
@@ -928,6 +1009,39 @@ function selectAnswerContinuous(qIdx, optIdx, el) {
   }
 }
 
+// ── Oral Simulation Helper Timers ─────────────────────────────
+let oralTimerIntervals = {};
+function startOralTimer(elementId, seconds, btn) {
+  if (oralTimerIntervals[elementId]) {
+    clearInterval(oralTimerIntervals[elementId]);
+  }
+  btn.disabled = true;
+  let remaining = seconds;
+  const display = document.getElementById(elementId);
+  btn.textContent = App.currentLang === 'de' ? '⏱️ Läuft...' : '⏱️ Corriendo...';
+  
+  oralTimerIntervals[elementId] = setInterval(() => {
+    remaining--;
+    const mins = Math.floor(remaining / 60).toString().padStart(2, '0');
+    const secs = (remaining % 60).toString().padStart(2, '0');
+    display.textContent = `${mins}:${secs}`;
+    
+    if (remaining <= 60) {
+      display.style.color = 'var(--color-error)';
+    } else if (remaining <= 180) {
+      display.style.color = 'var(--color-warning)';
+    }
+
+    if (remaining <= 0) {
+      clearInterval(oralTimerIntervals[elementId]);
+      delete oralTimerIntervals[elementId];
+      display.textContent = '00:00';
+      App.showToast(App.currentLang === 'de' ? '⏰ Zeit abgelaufen!' : '⏰ ¡Tiempo agotado!', 'warning');
+      btn.textContent = App.currentLang === 'de' ? 'Beendet' : 'Finalizado';
+    }
+  }, 1000);
+}
+
 // i18n dynamic page level update
 window.onLangChange = function(lang) {
   renderSubjectSelector();
@@ -937,8 +1051,8 @@ window.onLangChange = function(lang) {
   }
 };
 
-// ── Init ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
+  App.init();
   renderSubjectSelector();
   updateSummary();
 

@@ -111,6 +111,7 @@ const ExamEngine = {
     this.currentExam = exam;
     this.currentQuestion = 0;
     this.answers = {};
+    this.essayScores = {};
     this.startTime = Date.now();
 
     return exam;

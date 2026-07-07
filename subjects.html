@@ -58,7 +58,7 @@
         <div class="user-avatar"><span class="user-avatar-text">U</span></div>
         <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
       </a>
-      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;" data-i18n="nav.logout">Cerrar sesión</button>
     </div>
   </aside>
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -636,6 +636,7 @@ window.onLangChange = function(lang) {
 
 // ── Init ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  App.init();
   renderTabs();
 
   // URL param ?s=subjectId

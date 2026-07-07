@@ -35,7 +35,7 @@
         <div class="user-avatar"><span class="user-avatar-text">U</span></div>
         <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
       </a>
-      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar sesión</button>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;" data-i18n="nav.logout">Cerrar sesión</button>
     </div>
   </aside>
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -64,22 +64,22 @@
       <!-- Search + Filters -->
       <div class="card mb-xl">
         <div class="flex gap-md flex-wrap items-center">
-          <input type="text" id="bankSearch" class="form-input" placeholder="🔍 Buscar por tema, año, palabra clave..." style="flex:1;min-width:200px;" oninput="filterBank()">
+          <input type="text" id="bankSearch" class="form-input" data-i18n-placeholder="bank.search-placeholder" placeholder="🔍 Buscar por tema, año, palabra clave..." style="flex:1;min-width:200px;" oninput="filterBank()">
           <select id="bankSubject" class="form-select" style="max-width:180px;" onchange="filterBank()">
-            <option value="">Todas las asignaturas</option>
-            <option value="deutsch">🇩🇪 Alemán</option>
-            <option value="englisch">🇬🇧 Inglés</option>
-            <option value="mathe">📐 Matemáticas</option>
-            <option value="espanol">🇪🇸 Español</option>
-            <option value="philosophie">🧠 Filosofía</option>
+            <option value="" data-i18n="bank.all-subjects">Todas las asignaturas</option>
+            <option value="deutsch" data-i18n="subject.deutsch">🇩🇪 Alemán</option>
+            <option value="englisch" data-i18n="subject.englisch">🇬🇧 Inglés</option>
+            <option value="mathe" data-i18n="subject.mathe">📐 Matemáticas</option>
+            <option value="espanol" data-i18n="subject.espanol">🇪🇸 Español</option>
+            <option value="philosophie" data-i18n="subject.philosophie">🧠 Filosofía</option>
           </select>
           <select id="bankDiff" class="form-select" style="max-width:140px;" onchange="filterBank()">
-            <option value="">Todas las dificultades</option>
-            <option value="easy">Fácil</option>
-            <option value="medium">Medio</option>
-            <option value="hard">Difícil</option>
+            <option value="" data-i18n="bank.all-difficulties">Todas las dificultades</option>
+            <option value="easy" data-i18n="exam.easy">Fácil</option>
+            <option value="medium" data-i18n="exam.medium">Medio</option>
+            <option value="hard" data-i18n="exam.hard">Difícil</option>
           </select>
-          <button onclick="resetFilters()" class="btn btn-secondary btn-sm">Limpiar</button>
+          <button onclick="resetFilters()" class="btn btn-secondary btn-sm" data-i18n="bank.clear">Limpiar</button>
         </div>
       </div>
 
@@ -87,26 +87,26 @@
       <div class="grid-4 mb-xl" id="bankStats">
         <div class="quick-stat">
           <div class="quick-stat-icon gold">❓</div>
-          <div><div class="quick-stat-value text-gradient-gold" id="bankTotalQ">0</div><div class="quick-stat-label">Preguntas totales</div></div>
+          <div><div class="quick-stat-value text-gradient-gold" id="bankTotalQ">0</div><div class="quick-stat-label" data-i18n="bank.total-questions">Preguntas totales</div></div>
         </div>
         <div class="quick-stat">
           <div class="quick-stat-icon success">✅</div>
-          <div><div class="quick-stat-value" id="bankEasyQ" style="color:var(--color-success)">0</div><div class="quick-stat-label">Fáciles</div></div>
+          <div><div class="quick-stat-value" id="bankEasyQ" style="color:var(--color-success)">0</div><div class="quick-stat-label" data-i18n="bank.easy-questions">Fáciles</div></div>
         </div>
         <div class="quick-stat">
           <div class="quick-stat-icon blue">⚡</div>
-          <div><div class="quick-stat-value" id="bankMediumQ" style="color:var(--color-info)">0</div><div class="quick-stat-label">Medias</div></div>
+          <div><div class="quick-stat-value" id="bankMediumQ" style="color:var(--color-info)">0</div><div class="quick-stat-label" data-i18n="bank.medium-questions">Medias</div></div>
         </div>
         <div class="quick-stat">
           <div class="quick-stat-icon purple">🔥</div>
-          <div><div class="quick-stat-value" id="bankHardQ" style="color:var(--color-error)">0</div><div class="quick-stat-label">Difíciles</div></div>
+          <div><div class="quick-stat-value" id="bankHardQ" style="color:var(--color-error)">0</div><div class="quick-stat-label" data-i18n="bank.hard-questions">Difíciles</div></div>
         </div>
       </div>
 
       <!-- Navigation Tabs -->
       <div style="display:flex;gap:var(--space-sm);margin-bottom:var(--space-xl);flex-wrap:wrap;" id="bankModeTabs">
-        <button class="difficulty-btn selected easy" onclick="switchBankMode('test', this)">❓ Preguntas Tipo Test</button>
-        <button class="difficulty-btn" onclick="switchBankMode('written', this)">📜 Exámenes de Desarrollo Oficiales</button>
+        <button class="difficulty-btn selected easy" onclick="switchBankMode('test', this)" id="tabModeTest" data-i18n="bank.tab-test">❓ Preguntas Tipo Test</button>
+        <button class="difficulty-btn" onclick="switchBankMode('written', this)" id="tabModeWritten" data-i18n="bank.tab-written">📜 Exámenes de Desarrollo Oficiales</button>
       </div>
 
       <!-- Questions List -->
@@ -390,7 +390,10 @@ window.onLangChange = function(lang) {
   filterBank();
 };
 
-document.addEventListener('DOMContentLoaded', loadAll);
+document.addEventListener('DOMContentLoaded', () => {
+  App.init();
+  loadAll();
+});
 </script>
 </body>
 </html>

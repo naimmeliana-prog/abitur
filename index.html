@@ -319,6 +319,7 @@
 <script src="js/progress.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  App.init();
   const user = Auth.getCurrentUser();
   if (!user) { window.location.href = 'auth.html'; return; }
 

@@ -126,9 +126,32 @@ const TRANSLATIONS = {
     'misc.loading': 'Cargando...',
     'misc.error':   'Ha ocurrido un error',
     'misc.success': '¡Completado!',
-    'misc.new':     'NUEVO',
     'misc.locked':  'Bloqueado',
     'misc.unlock':  'Desbloquear',
+
+    // Exam generator additional keys
+    'exam.gen-type':            'Tipo de Generación',
+    'exam.gen-random':          '🎲 Aleatorio',
+    'exam.gen-official':        '📜 Examen Oficial',
+    'exam.select-official-desc': 'Selecciona un examen real de años anteriores:',
+    'exam.all-diffs':           'Todos',
+    'exam.questions-count':     'Número de preguntas',
+    'exam.modality':            'Modo de examen',
+    'exam.practice-mode-desc':   'Sin temporizador. Ve a tu ritmo. Feedback inmediato.',
+    'exam.simulation-mode-desc': 'Con temporizador oficial DIA. Condiciones reales.',
+    'exam.summary-title':       '📋 Resumen',
+
+    // Exam Bank specific keys (es)
+    'bank.search-placeholder':  '🔍 Buscar por tema, año, palabra clave...',
+    'bank.all-subjects':        'Todas las asignaturas',
+    'bank.all-difficulties':    'Todas las dificultades',
+    'bank.clear':               'Limpiar',
+    'bank.total-questions':     'Preguntas totales',
+    'bank.easy-questions':      'Fáciles',
+    'bank.medium-questions':    'Medias',
+    'bank.hard-questions':      'Difíciles',
+    'bank.tab-test':            '❓ Preguntas Tipo Test',
+    'bank.tab-written':         '📜 Exámenes de Desarrollo Oficiales',
   },
   de: {
     // Navigation
@@ -252,6 +275,30 @@ const TRANSLATIONS = {
     'misc.new':     'NEU',
     'misc.locked':  'Gesperrt',
     'misc.unlock':  'Freischalten',
+
+    // Exam generator additional keys
+    'exam.gen-type':            'Erstellungsart',
+    'exam.gen-random':          '🎲 Zufällig',
+    'exam.gen-official':        '📜 Offizielle Prüfung',
+    'exam.select-official-desc': 'Wähle eine echte Prüfung aus den Vorjahren:',
+    'exam.all-diffs':           'Alle',
+    'exam.questions-count':     'Anzahl der Fragen',
+    'exam.modality':            'Prüfungsmodus',
+    'exam.practice-mode-desc':   'Kein Timer. Gehe in deinem eigenen Tempo. Sofortiges Feedback.',
+    'exam.simulation-mode-desc': 'Mit offiziellem DIA-Timer. Unter echten Bedingungen.',
+    'exam.summary-title':       '📋 Zusammenfassung',
+
+    // Exam Bank specific keys (de)
+    'bank.search-placeholder':  '🔍 Suche nach Thema, Jahr, Schlüsselwort...',
+    'bank.all-subjects':        'Alle Fächer',
+    'bank.all-difficulties':    'Alle Schwierigkeitsgrade',
+    'bank.clear':               'Löschen',
+    'bank.total-questions':     'Fragen insgesamt',
+    'bank.easy-questions':      'Leicht',
+    'bank.medium-questions':    'Mittel',
+    'bank.hard-questions':      'Schwer',
+    'bank.tab-test':            '❓ Multiple-Choice-Fragen',
+    'bank.tab-written':         '📜 Offizielle schriftliche Prüfungen',
   }
 };
 
@@ -300,19 +347,27 @@ const App = {
 
   applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      // Do not overwrite translations inside dynamic render containers that manage their own translation logic
+      // Do not overwrite translation keys that are inside dynamic subject/material panels which render separately
       if (el.closest('#materialPanel') || el.closest('#subjectPanel')) return;
-      
+
       const key = el.dataset.i18n;
+      const text = this.t(key);
       if (el.tagName === 'INPUT' && el.type !== 'submit') {
-        el.placeholder = this.t(key);
+        el.placeholder = text;
+      } else if (el.tagName === 'TEXTAREA') {
+        el.placeholder = text;
       } else {
-        el.textContent = this.t(key);
+        el.textContent = text;
       }
     });
+
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
       if (el.closest('#materialPanel') || el.closest('#subjectPanel')) return;
       el.title = this.t(el.dataset.i18nTitle);
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      el.placeholder = this.t(el.dataset.i18nPlaceholder);
     });
   },
 
@@ -422,9 +477,8 @@ const App = {
       btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
     });
 
-    // Use single delegated listener on document body to catch clicks dynamically
-    if (!this.langBoundDelegated) {
-      this.langBoundDelegated = true;
+    if (!window._langBoundDelegated) {
+      window._langBoundDelegated = true;
       document.body.addEventListener('click', (e) => {
         const btn = e.target.closest('.lang-btn[data-lang]');
         if (btn) {

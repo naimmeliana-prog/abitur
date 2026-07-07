@@ -47,8 +47,7 @@
             <div class="user-level user-level-display">Nivel 1</div>
           </div>
         </a>
-        <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;">Cerrar
-          sesión</button>
+        <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;" data-i18n="nav.logout">Cerrar sesión</button>
       </div>
     </aside>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -1646,6 +1645,10 @@
         document.getElementById('pomodoroStart').disabled = false;
       }
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+    });
 
     updatePomDisplay();
 
