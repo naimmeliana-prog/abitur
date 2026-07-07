@@ -61,6 +61,39 @@
       }
     },
     {
+      "op": "Angeben / Nennen",
+      "meaning": {
+        "es": "Escribir directamente el resultado, fórmula, coordenada o término solicitado. No se requiere justificación ni mostrar el desarrollo de los pasos.",
+        "de": "Das Ergebnis, die Formel oder den gesuchten Wert direkt aufschreiben. Ein Rechenweg oder eine Begründung ist nicht erforderlich."
+      },
+      "trap": {
+        "es": "Trampa: Aunque no requiere desarrollo, escribir un valor incorrecto sin haber mostrado ningún planteamiento te restará el 100% de la puntuación, ya que no hay margen de error parcial.",
+        "de": "Falle: Da kein Rechenweg verlangt wird, gibt es bei falschem Ergebnis sofort 0 Punkte, da keine Teilpunkte vergeben werden können."
+      }
+    },
+    {
+      "op": "Beschreiben",
+      "meaning": {
+        "es": "Explicar con palabras estructuradas y lenguaje matemático formal un proceso, propiedad o una transformación geométrica (por ejemplo, traslaciones, simetrías o dilataciones de funciones).",
+        "de": "Einen Sachverhalt, Ablauf oder geometrische Transformationen (z. B. Spiegelung, Streckung oder Verschiebung) in fachsprachlich angemessener Textform erklären."
+      },
+      "trap": {
+        "es": "Trampa: Limitarse a una explicación vaga sin usar terminología formal (ej: no usar 'desplazamiento en la dirección del eje y' o 'dilatación en la dirección de la ordenada').",
+        "de": "Falle: Zu ungenaue Alltagsformulierungen ohne Verwendung von mathematischen Fachbegriffen wie 'Verschiebung in y-Richtung' oder 'Streckung'."
+      }
+    },
+    {
+      "op": "Beurteilen",
+      "meaning": {
+        "es": "Analizar críticamente una propuesta, hipótesis o resultado matemático y tomar una postura razonada basándose en cálculos previos, teoremas o un contexto real.",
+        "de": "Eine mathematische Aussage, Hypothese oder einen Vorschlag auf der Basis von Berechnungen oder Sätzen kritisch prüfen und bewerten."
+      },
+      "trap": {
+        "es": "Trampa: Responder solo con un 'Sí' o 'No' o dar una opinión personal sin respaldarla en datos numéricos o teoremas demostrados.",
+        "de": "Falle: Bloße Ja/Nein-Antworten oder rein subjektive Einschätzungen ohne mathematisch-logische Begründung."
+      }
+    },
+    {
       "op": "Bestimmen",
       "meaning": {
         "es": "Determinar o hallar un resultado empleando un método adecuado, que puede ser gráfico, analítico o a través de la calculadora CAS.",
@@ -107,20 +140,24 @@
   ],
   "exam_tips": [
     {
-      "es": "En los problemas de extremos relativos, no te limites a resolver f'(x)=0. Justifica siempre la condición suficiente utilizando la segunda derivada f''(x) o argumentando el cambio de signo de f'(x).",
-      "de": "Bei Extremwertaufgaben nicht nur f'(x)=0 lösen. Zeige immer die hinreichende Bedingung mit f''(x) oder dem Vorzeichenwechsel."
+      "es": "Estructuración y Limpieza: La ZfA exige que las soluciones tengan una estructura clara y limpia. Utiliza oraciones breves en alemán para estructurar tus pasos (ej. 'Ansatz:', 'Berechnung der Nullstellen:', 'Probe:') y define con precisión cualquier variable nueva que introduzcas.",
+      "de": "Dokumentation von Schülerlösungen: Erwartet wird eine saubere und nachvollziehbare Struktur mit kurzen verbalen Zwischenschritten (z.B. 'Ansatz:', 'Berechnung der Nullstellen:') und klaren Definitionen neu eingeführter Variablen."
     },
     {
-      "es": "Al calcular áreas de regiones delimitadas por funciones, busca primero todas las intersecciones con el eje x (Nullstellen). Si integras de golpe un intervalo con valores positivos y negativos, se restarán entre sí.",
-      "de": "Bei Flächenberechnungen immer zuerst Nullstellen ermitteln. Integrale über positive und negative Bereiche heben sich sonst gegenseitig auf."
+      "es": "Uso de la calculadora (CAS): Nunca escribas secuencias de teclas de tu calculadora (como 'press menu, then 3, then 1'). En su lugar, describe la operación matemática realizada (ej. 'Lösung des LGS mittels CAS...'). Si se pide un valor exacto ('exakter Wert'), proporciona expresiones con fracciones, raíces o logaritmos como ln(2) o π/4, nunca decimales redondeados.",
+      "de": "Keine Tastenfolgen dokumentieren: Schreibe niemals Tastenabfolgen des Taschenrechners auf. Dokumentiere stattdessen den mathematischen Ansatz. Wenn ein 'exakter Wert' verlangt wird, gebe Brüche oder mathematische Ausdrücke wie ln(2) oder π/4 an, keine gerundeten Dezimalzahlen."
     },
     {
-      "es": "En geometría analítica, si utilizas un vector normal simplificado para definir la ecuación cartesiana de un plano, recuerda documentar el factor de escala que usaste para dividir.",
-      "de": "Bei der Koordinatenform einer Ebene den Normalenvektor kürzen, aber den Skalierungsfaktor kurz vermerken, um Rechenfehler vorzubeugen."
+      "es": "Análisis — Funciones definidas por partes y transformaciones: Presta especial atención al dominio (Definitionsbereich) de funciones compuestas. Para verificar transformaciones complejas como u(x) = -f(x) + 2, recuerda que un signo negativo delante de la función equivale a una simetría respecto al eje x, y sumar una constante desplaza la gráfica verticalmente.",
+      "de": "Analysis: Achte genau auf Definitionsbereiche zusammengesetzter Funktionen. Bei Spiegelungen und Transformationen (z. B. u(x) = -f(x)+2) gilt: Das Minus spiegelt an der x-Achse, die Addition verschiebt in y-Richtung."
     },
     {
-      "es": "En estocástica, define con total claridad la variable aleatoria (ej: 'Sea X el número de bombillas defectuosas...') y sus parámetros n y p antes de usar las fórmulas binomiales.",
-      "de": "Definiere in der Stochastik immer zuerst die Zufallsvariable und ihre Parameter n und p, bevor du mit Berechnungen beginnst."
+      "es": "Geometría — Demostrar Ortogonalidad y Simetría: Dos vectores son perpendiculares (ortogonales) si y solo si su producto escalar (Skalarprodukt) es estrictamente igual a cero. Al calcular ecuaciones de planos, utiliza siempre vectores normales simplificados dividiendo por divisores comunes para agilizar las operaciones de Hesse en los siguientes apartados.",
+      "de": "Geometrie: Zwei Vektoren sind orthogonal, wenn ihr Skalarprodukt null ist. Kürze den Normalenvektor vor dem Aufstellen der Koordinatenform, um die Hessesche Normalenform in Folgeaufgaben zu vereinfachen."
+    },
+    {
+      "es": "Estocástica — Contraste de Hipótesis y Errores: Estudia a fondo los errores tipo I (rechazar la hipótesis nula siendo verdadera) y tipo II (no rechazar la hipótesis nula siendo falsa). Define siempre la variable aleatoria X con su distribución (ej. X ~ B(n, p)) antes de realizar cálculos binomiales acumulados en la calculadora.",
+      "de": "Stochastik: Definiere die Zufallsvariable X und ihre Parameter (z.B. X ~ B(n; p)) vor der Berechnung. Achte auf die korrekte Formulierung von Fehlern 1. und 2. Art (Alpha- und Beta-Fehler)."
     }
   ],
   "taskTypes": [
