@@ -294,10 +294,40 @@ const App = {
     this.applyTranslations();
     this.markActivePage();
     this.updateUserUI();
+    this.initFontSizeControl();
     // Update daily streak
     if (this.currentUser) {
       Progress.updateStreak();
     }
+  },
+
+  // ── Font Size Control (A+ / A-) ──────────────────────────────
+  initFontSizeControl() {
+    let sizeClass = localStorage.getItem('abitur_font_size') || 'normal';
+    this.applyFontSize(sizeClass);
+
+    // Setup listener for dynamic controls if they exist in header
+    const btnIncrease = document.getElementById('btnFontSizeIncrease');
+    const btnDecrease = document.getElementById('btnFontSizeDecrease');
+
+    btnIncrease?.addEventListener('click', () => {
+      let current = localStorage.getItem('abitur_font_size') || 'normal';
+      let next = current === 'normal' ? 'large' : current === 'small' ? 'normal' : 'large';
+      localStorage.setItem('abitur_font_size', next);
+      this.applyFontSize(next);
+    });
+
+    btnDecrease?.addEventListener('click', () => {
+      let current = localStorage.getItem('abitur_font_size') || 'normal';
+      let next = current === 'normal' ? 'small' : current === 'large' ? 'normal' : 'small';
+      localStorage.setItem('abitur_font_size', next);
+      this.applyFontSize(next);
+    });
+  },
+
+  applyFontSize(size) {
+    document.documentElement.classList.remove('font-size-small', 'font-size-normal', 'font-size-large');
+    document.documentElement.classList.add(`font-size-${size}`);
   },
 
   // ── Sidebar ─────────────────────────────────────────────────

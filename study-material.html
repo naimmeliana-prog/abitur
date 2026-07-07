@@ -93,7 +93,12 @@
         <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
         <span class="header-title" data-i18n="nav.study-material">Material Didáctico</span>
       </div>
-      <div class="header-right">
+      <div class="header-right" style="display:flex; align-items:center; gap:var(--space-md);">
+        <!-- Font Size Adjusters -->
+        <div class="lang-switcher" style="margin-right:8px;">
+          <button class="lang-btn" id="btnFontSizeDecrease" title="Disminuir texto" style="font-weight:bold; font-size:11px; padding:4px 10px;">A-</button>
+          <button class="lang-btn" id="btnFontSizeIncrease" title="Aumentar texto" style="font-weight:bold; font-size:14px; padding:4px 10px;">A+</button>
+        </div>
         <div class="lang-switcher">
           <button class="lang-btn" data-lang="es">ES</button>
           <button class="lang-btn" data-lang="de">DE</button>
@@ -126,7 +131,6 @@
 </div>
 
 <script src="js/app.js"></script>
-<script src="js/auth.js"></script>
 <script src="js/progress.js"></script>
 
 <script>
@@ -260,8 +264,55 @@ function renderMaterial() {
             <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
               <li><strong>Bedingte Wahrscheinlichkeit:</strong> Baumdiagramme, Pfadregeln und Vierfeldertafeln zur Visualisierung von Ereignissen.</li>
               <li><strong>Binomialverteilung:</strong> Berechnung von Wahrscheinlichkeiten einer Bernoulli-Kette. Erwartungswert $\mu = n \cdot p$, Standardabweichung $\sigma = \sqrt{n \cdot p \cdot (1-p)}$.</li>
-              <li><strong>Hypothesentests:</strong> Linksse        - Gesamtkosten: $K = \vec{k}_v \cdot \vec{e} + K_f$ &nbsp;($K_f$ sind Fixkosten)
+              <li><strong>Hypothesentests:</strong> Links- und rechtsseitige Tests, Fehler 1. und 2. Art sowie Bestimmung von Entscheidungsbereichen (Ablehnungsbereich).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">3. Material zur Prüfungsvorbereitung Abitur 2024</h2>
+        
+        <div class="flex-col gap-lg">
+          
+          <!-- BLOQUE DE ANÁLISIS -->
+          <div class="card" style="background:rgba(255,255,255,0.01);border:1px solid rgba(52, 152, 219, 0.2);">
+            <h3 style="color:var(--color-mathe);font-weight:800;margin-bottom:var(--space-md);">📐 Teil 1: Analysis (Differentialrechnung und Modellierung)</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.6;">
+              <strong>Beispiel: Abkühlungsprozess einer Flüssigkeit:</strong> Die Wassertemperatur $f(t)$ in °C zum Zeitpunkt $t$ (in Minuten) wird modelliert durch:
+            </p>
+            <div class="formula-card">
+              f(t) = 25 - 20 * e^(-0.014 * t)
             </div>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-md);">
+              <li><strong>Anfangstemperatur:</strong> $f(0) = 5$ °C. Asymptotische Umgebungstemperatur: $\lim_{t\to\infty} f(t) = 25$ °C.</li>
+              <li><strong>Zeitpunkt bestimmen:</strong> $f(t) = 12 \implies t \approx 30.77$ Min.</li>
+              <li><strong>Änderungsrate:</strong> $f'(t) = 0.28\cdot e^{-0.014\cdot t}$.</li>
+            </ul>
+          </div>
+
+          <!-- BLOQUE DE GEOMETRÍA -->
+          <div class="card" style="background:rgba(255,255,255,0.01);border:1px solid rgba(52, 152, 219, 0.2);">
+            <h3 style="color:var(--color-mathe);font-weight:800;margin-bottom:var(--space-md);">📐 Teil 2: Analytische Geometrie</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.6;">
+              <strong>Beispiel: Prisma-Körper:</strong> Ein Prisma mit Eckpunkten $C(0,0,0)$, $D(6,0,5)$, $E(0,8,5)$, $F(0,0,5)$ und Mittelpunkt $M(3,4,5)$.
+            </p>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-md);">
+              <li><strong>Oberflächeninhalt:</strong> $O = 2\cdot G + U\cdot h = 168$ Flächeneinheiten.</li>
+              <li><strong>Orthogonalität:</strong> Vektoren $\vec{BA}$ und $\vec{BC}$ stehen senkrecht, da $\vec{BA} \cdot \vec{BC} = 0$.</li>
+            </ul>
+          </div>
+
+          <!-- BLOQUE DE ESTOCÁSTICA -->
+          <div class="card" style="background:rgba(255,255,255,0.01);border:1px solid rgba(52, 152, 219, 0.2);">
+            <h3 style="color:var(--color-mathe);font-weight:800;margin-bottom:var(--space-md);">📐 Teil 3: Stochastik</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.6;">
+              <strong>Beispiel: Bedingte Wahrscheinlichkeit:</strong> Analyse von Nutzerpräferenzen (70% $\le$ 40 Jahre, 80% Premium-Anteil).
+            </p>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-md);">
+              <li><strong>Satz von Bayes:</strong> $P_{\text{Premium}}(\le 40) = 0.56 / 0.71 \approx 78.87\%$.</li>
+              <li><strong>Hypothesentest:</strong> Signifikanzniveau und Ablehnungsbereiche für $n=200$.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -340,7 +391,53 @@ function renderMaterial() {
         </div>
       </div>
 
+      <div class="card mb-xl">
+        <h2 style="margin-bottom:var(--space-lg);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);">3. Material de Preparación Oficial Abitur 2024 (Traducido)</h2>
+        
+        <div class="flex-col gap-lg">
+          
+          <!-- BLOQUE DE ANÁLISIS -->
+          <div class="card" style="background:rgba(255,255,255,0.01);border:1px solid rgba(52, 152, 219, 0.2);">
+            <h3 style="color:var(--color-mathe);font-weight:800;margin-bottom:var(--space-md);">📐 Bloque 1: Análisis (Cálculo y Modelización Térmica)</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.6;">
+              <strong>Problema de Contexto Real (Enfriamiento de Líquidos):</strong> Un vaso de agua se extrae de un refrigerador. La evolución de la temperatura del agua $f(t)$ en °C en función del tiempo $t$ (en minutos) se modela mediante la función:
+            </p>
+            <div class="formula-card">
+              f(t) = 25 - 20 * e^(-0.014 * t)
+            </div>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-md);">
+              <li><strong>Temperatura Inicial:</strong> Evaluando en $t=0$, $f(0) = 5$ °C. La temperatura ambiente es la asíntota horizontal $\lim_{t\to\infty} f(t) = 25$ °C.</li>
+              <li><strong>Cálculo de Tiempos:</strong> Para hallar cuándo alcanza los 12 °C, igualamos la función y aplicamos logaritmos: $t \approx 30.77$ minutos.</li>
+              <li><strong>Tasa de Cambio Instantánea (Derivada):</strong> Aplicando la regla de la cadena: $f'(t) = 0.28\cdot e^{-0.014\cdot t}$.</li>
+            </ul>
+          </div>
 
+          <!-- BLOQUE DE GEOMETRÍA -->
+          <div class="card" style="background:rgba(255,255,255,0.01);border:1px solid rgba(52, 152, 219, 0.2);">
+            <h3 style="color:var(--color-mathe);font-weight:800;margin-bottom:var(--space-md);">📐 Bloque 2: Geometría Analítica y Cuerpos Prismáticos</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.6;">
+              <strong>Problema de Cuerpos (Prisma Recto):</strong> Consideremos un prisma recto $ABCDEF$ con vértices $C(0,0,0)$, $D(6,0,5)$, $E(0,8,5)$, $F(0,0,5)$ y punto medio de la cubierta $M(3,4,5)$.
+            </p>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-md);">
+              <li><strong>Área de Superficie:</strong> $O = 2(24) + (6+8+10)\cdot 5 = 168$ unidades de área.</li>
+              <li><strong>Condición de Ortogonalidad:</strong> $\vec{BA} \cdot \vec{BC} = 0$, demostrando que son lados perpendiculares.</li>
+            </ul>
+          </div>
+
+          <!-- BLOQUE DE ESTOCÁSTICA -->
+          <div class="card" style="background:rgba(255,255,255,0.01);border:1px solid rgba(52, 152, 219, 0.2);">
+            <h3 style="color:var(--color-mathe);font-weight:800;margin-bottom:var(--space-md);">📐 Bloque 3: Estocástica (Probabilidad Condicional y Contraste)</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin-bottom:var(--space-md);line-height:1.6;">
+              <strong>Problema de Análisis de Suscriptores y Calidad:</strong> Probabilidad de que un suscriptor Premium tenga 40 años o menos basándose en segmentación.
+            </p>
+            <ul style="padding-left:20px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-md);">
+              <li><strong>Teorema de Bayes:</strong> $P_{\text{Premium}}(\le 40) = 0.56 / 0.71 \approx 78.87\%$.</li>
+              <li><strong>Contraste de Hipótesis:</strong> Definición de zona crítica de éxito para un nivel de confianza determinado.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
     `;
   }
 }
@@ -351,6 +448,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPage();
 });
 </script>
-<script src="js/auth.js"></script>
 </body>
 </html>

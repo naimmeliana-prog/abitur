@@ -300,8 +300,8 @@
   text-align: right;
 }
 
-.next-level-name { font-size: 14px; font-weight: 600; color: var(--text-secondary); }
-.next-level-xp   { font-size: 12px; color: var(--text-muted); }
+.next-level-name { font-size: 15.5px; font-weight: 600; color: var(--text-secondary); }
+.next-level-xp   { font-size: 14px; color: var(--text-muted); }
 
 /* ─── Study Tip Cards ───────────────────────────────────────── */
 .tip-card {
@@ -320,25 +320,25 @@
 }
 
 .tip-icon {
-  font-size: 28px;
+  font-size: 32px;
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tip-title {
-  font-size: 15px;
+  font-size: 17.5px;
   font-weight: 700;
   margin-bottom: var(--space-xs);
 }
 
 .tip-text {
-  font-size: 13px;
+  font-size: 15.5px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ─── Pomodoro Timer ────────────────────────────────────────── */

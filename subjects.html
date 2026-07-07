@@ -69,7 +69,12 @@
         <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
         <span class="header-title">Asignaturas DIA</span>
       </div>
-      <div class="header-right">
+      <div class="header-right" style="display:flex; align-items:center; gap:var(--space-md);">
+        <!-- Font Size Adjusters -->
+        <div class="lang-switcher" style="margin-right:8px;">
+          <button class="lang-btn" id="btnFontSizeDecrease" title="Disminuir texto" style="font-weight:bold; font-size:11px; padding:4px 10px;">A-</button>
+          <button class="lang-btn" id="btnFontSizeIncrease" title="Aumentar texto" style="font-weight:bold; font-size:14px; padding:4px 10px;">A+</button>
+        </div>
         <div class="lang-switcher">
           <button class="lang-btn" data-lang="es">ES</button>
           <button class="lang-btn" data-lang="de">DE</button>
