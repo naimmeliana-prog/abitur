@@ -271,6 +271,23 @@ const App = {
     localStorage.setItem('abitur_lang', lang);
     this.applyTranslations();
     this.updateUserUI(); // Update level text
+    this.setupLangSwitcher(); // Rebind any new switcher elements
+    
+    // Dynamically update document tab title based on page context
+    const navKeyMap = {
+      'index.html': 'nav.dashboard',
+      'subjects.html': 'nav.subjects',
+      'exam-generator.html': 'nav.exam-gen',
+      'exam-bank.html': 'nav.exam-bank',
+      'progress.html': 'nav.progress',
+      'study-tips.html': 'nav.study-tips',
+      'study-material.html': 'nav.study-material',
+      'admin.html': 'nav.admin'
+    };
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    const translationKey = navKeyMap[page] || 'nav.dashboard';
+    document.title = `AbiturDSV — ${this.t(translationKey)}`;
+
     // Update active button only for buttons that have data-lang
     document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -315,6 +332,22 @@ const App = {
     this.setupMobileNav();
     this.setupToasts();
     this.initFontSizeControl(); // Run first to apply saved font scaling class on html tag
+    
+    // Set dynamic tab title on page load
+    const navKeyMap = {
+      'index.html': 'nav.dashboard',
+      'subjects.html': 'nav.subjects',
+      'exam-generator.html': 'nav.exam-gen',
+      'exam-bank.html': 'nav.exam-bank',
+      'progress.html': 'nav.progress',
+      'study-tips.html': 'nav.study-tips',
+      'study-material.html': 'nav.study-material',
+      'admin.html': 'nav.admin'
+    };
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    const translationKey = navKeyMap[page] || 'nav.dashboard';
+    document.title = `AbiturDSV — ${this.t(translationKey)}`;
+
     this.applyTranslations();
     this.markActivePage();
     this.updateUserUI();
@@ -329,22 +362,24 @@ const App = {
     let sizeClass = localStorage.getItem('abitur_font_size') || 'normal';
     this.applyFontSize(sizeClass);
 
-    // Setup listener for dynamic controls if they exist in header
-    const btnIncrease = document.getElementById('btnFontSizeIncrease');
-    const btnDecrease = document.getElementById('btnFontSizeDecrease');
+    // Use event delegation on the document to avoid listener detachment on dynamic loads
+    document.addEventListener('click', (e) => {
+      const btnIncrease = e.target.closest('#btnFontSizeIncrease');
+      const btnDecrease = e.target.closest('#btnFontSizeDecrease');
 
-    btnIncrease?.addEventListener('click', () => {
-      let current = localStorage.getItem('abitur_font_size') || 'normal';
-      let next = current === 'normal' ? 'large' : current === 'small' ? 'normal' : 'large';
-      localStorage.setItem('abitur_font_size', next);
-      this.applyFontSize(next);
-    });
-
-    btnDecrease?.addEventListener('click', () => {
-      let current = localStorage.getItem('abitur_font_size') || 'normal';
-      let next = current === 'normal' ? 'small' : current === 'large' ? 'normal' : 'small';
-      localStorage.setItem('abitur_font_size', next);
-      this.applyFontSize(next);
+      if (btnIncrease) {
+        e.preventDefault();
+        let current = localStorage.getItem('abitur_font_size') || 'normal';
+        let next = current === 'normal' ? 'large' : current === 'small' ? 'normal' : 'large';
+        localStorage.setItem('abitur_font_size', next);
+        this.applyFontSize(next);
+      } else if (btnDecrease) {
+        e.preventDefault();
+        let current = localStorage.getItem('abitur_font_size') || 'normal';
+        let next = current === 'normal' ? 'small' : current === 'large' ? 'normal' : 'small';
+        localStorage.setItem('abitur_font_size', next);
+        this.applyFontSize(next);
+      }
     });
   },
 
@@ -382,18 +417,22 @@ const App = {
 
   // ── Language Switcher ────────────────────────────────────────
   setupLangSwitcher() {
+    // Bind active state classes
     document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
-      
-      // Bind click handler directly to avoid cloning which breaks dynamically rendered headers
-      if (!btn.dataset.langBound) {
-        btn.dataset.langBound = 'true';
-        btn.addEventListener('click', (e) => {
+    });
+
+    // Use single delegated listener on document body to catch clicks dynamically
+    if (!this.langBoundDelegated) {
+      this.langBoundDelegated = true;
+      document.body.addEventListener('click', (e) => {
+        const btn = e.target.closest('.lang-btn[data-lang]');
+        if (btn) {
           e.preventDefault();
           this.setLang(btn.dataset.lang);
-        });
-      }
-    });
+        }
+      });
+    }
   },
 
   // ── Mobile Bottom Nav ────────────────────────────────────────

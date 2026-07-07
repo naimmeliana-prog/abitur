@@ -130,14 +130,14 @@
           <div>
             <p style="font-size:13px;color:var(--text-muted);margin-bottom:4px;letter-spacing:0.5px;">DIA — Deutsche Schule Valencia • Región 5</p>
             <h1 style="margin-bottom:var(--space-sm);">
-              <span data-i18n="dashboard.welcome">Bienvenido,</span>
+              <span id="dashWelcome" data-i18n="dashboard.welcome">Bienvenido,</span>
               <span class="text-gradient-gold user-name-display" style="display:inline;"> </span>
               <span> 👋</span>
             </h1>
-            <p style="font-size:16px;color:var(--text-secondary);max-width:500px;" data-i18n="dashboard.subtitle">Prepárate para tu Abitur en el DSV</p>
+            <p id="dashSubtitle" style="font-size:16px;color:var(--text-secondary);max-width:500px;" data-i18n="dashboard.subtitle">Prepárate para tu Abitur en el DSV</p>
 
             <div class="flex gap-sm" style="margin-top:var(--space-lg);flex-wrap:wrap;">
-              <a href="exam-generator.html" class="btn btn-primary" data-i18n="dashboard.continue">Continuar estudiando</a>
+              <a id="dashWelcomeContinue" href="exam-generator.html" class="btn btn-primary" data-i18n="dashboard.continue">Continuar estudiando</a>
               <a href="subjects.html" class="btn btn-secondary">📚 <span data-i18n="nav.subjects">Asignaturas</span></a>
             </div>
           </div>
@@ -351,6 +351,36 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('statHours').textContent = hours + 'h';
   document.getElementById('statAchievements').textContent = (data.achievements || []).length;
 
+  // Dynamic dashboard titles & labels for ES/DE
+  const isDe = App.currentLang === 'de';
+  document.getElementById('pageTitle').textContent = isDe ? 'Dashboard' : 'Panel de Control';
+  document.getElementById('dashWelcome').textContent = isDe ? 'Willkommen,' : 'Bienvenido,';
+  document.getElementById('dashSubtitle').textContent = isDe ? 'Bereite dich auf dein Abitur an der DSV vor' : 'Prepárate para tu Abitur en el DSV';
+  document.getElementById('dashWelcomeContinue').textContent = isDe ? 'Weiterlernen →' : 'Continuar estudiando →';
+  
+  // Stats labels
+  const statsLabels = document.querySelectorAll('#quickStats .quick-stat-label');
+  if (statsLabels.length >= 4) {
+    statsLabels[0].textContent = isDe ? 'Abgeschlossene Prüfungen' : 'Exámenes completados';
+    statsLabels[1].textContent = isDe ? 'Durchschnittsnote' : 'Nota media';
+    statsLabels[2].textContent = isDe ? 'Lernstunden' : 'Horas de estudio';
+    statsLabels[3].textContent = isDe ? 'Errungenschaften' : 'Logros';
+  }
+
+  // Level & XP translation
+  document.getElementById('dashLevelName').textContent = isDe ? `Level ${levelInfo.level} — ${App.t('level.' + levelInfo.level)}` : `Nivel ${levelInfo.level} — ${App.t('level.' + levelInfo.level)}`;
+  document.getElementById('dashXPCurrent').textContent = `${levelInfo.xpInLevel} / ${levelInfo.xpNeeded} XP`;
+  document.getElementById('dashXPNext').textContent = levelInfo.nextLevel
+    ? (isDe ? `${levelInfo.xpNeeded - levelInfo.xpInLevel} XP bis Level ${levelInfo.level + 1}` : `${levelInfo.xpNeeded - levelInfo.xpInLevel} XP para nivel ${levelInfo.level + 1}`)
+    : (isDe ? 'Maximales Level!' : '¡Nivel máximo!');
+
+  // Recent activity & subject progress headers
+  const cardHeaders = document.querySelectorAll('.page-content .card h3.section-title');
+  if (cardHeaders.length >= 2) {
+    cardHeaders[0].textContent = isDe ? 'Letzte Aktivitäten' : 'Actividad reciente';
+    cardHeaders[1].textContent = isDe ? 'Fortschritt nach Fach' : 'Progreso por asignatura';
+  }
+
   // Streak
   document.getElementById('streakCount').textContent = data.streak || 0;
 
@@ -365,6 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lang = App.currentLang;
   const subjectGrid = document.getElementById('subjectCards');
+  subjectGrid.innerHTML = ''; // Clear prior entries
   subjects.forEach(s => {
     const stats = data.subjectStats?.[s.id] || { exams: 0, avgScore: 0 };
     subjectGrid.innerHTML += `
@@ -376,11 +407,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="subject-stats">
           <div class="subject-stat-item">
             <div class="subject-stat-number">${stats.exams}</div>
-            <div class="subject-stat-label">Exámenes</div>
+            <div class="subject-stat-label">${isDe ? 'Prüfungen' : 'Exámenes'}</div>
           </div>
           <div class="subject-stat-item">
             <div class="subject-stat-number">${stats.avgScore || '—'}${stats.exams ? '%' : ''}</div>
-            <div class="subject-stat-label">Media</div>
+            <div class="subject-stat-label">${isDe ? 'Schnitt' : 'Media'}</div>
           </div>
         </div>
         <div class="progress-bar thin" style="margin-top:var(--space-md);">
@@ -391,6 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Subject progress bars (right column)
   const progDiv = document.getElementById('subjectProgress');
+  progDiv.innerHTML = ''; // Clear prior entries
   subjects.forEach(s => {
     const stats = data.subjectStats?.[s.id] || { exams: 0, avgScore: 0 };
     progDiv.innerHTML += `
@@ -407,26 +439,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Recent activity
   const history = (data.history || []).slice(0, 5);
+  const actDiv = document.getElementById('recentActivity');
   if (history.length > 0) {
-    const actDiv = document.getElementById('recentActivity');
     actDiv.innerHTML = history.map(h => {
       const grade = Progress.getGrade(h.percentage);
       const subj = subjects.find(s => s.id === h.subject);
       return `<div class="schedule-item">
         <div class="schedule-date">
           <div class="schedule-day">${new Date(h.date).getDate()}</div>
-          <div class="schedule-month">${new Date(h.date).toLocaleString('es', {month:'short'})}</div>
+          <div class="schedule-month">${new Date(h.date).toLocaleString(isDe ? 'de-DE' : 'es-ES', {month:'short'})}</div>
         </div>
         <div class="schedule-content flex-col gap-xs">
           <div class="schedule-title">${subj?.icon || '📝'} ${subj ? (lang==='de'?subj.nameDE:subj.name) : h.subject}</div>
           <div class="flex gap-sm items-center">
             <span class="badge badge-${h.percentage>=70?'success':h.percentage>=50?'warning':'error'}">${h.percentage}%</span>
-            <span style="font-size:12px;color:var(--text-muted)">${h.mode === 'simulacro' ? '⏱️ Simulacro' : '📖 Práctica'}</span>
+            <span style="font-size:12px;color:var(--text-muted)">${h.mode === 'simulacro' ? (isDe ? '⏱️ Simulation' : '⏱️ Simulacro') : (isDe ? '📖 Übung' : '📖 Práctica')}</span>
           </div>
         </div>
         <div style="margin-left:auto;font-size:22px;">${h.percentage>=90?'⭐':h.percentage>=70?'👍':h.percentage>=50?'📈':'💪'}</div>
       </div>`;
     }).join('');
+  } else {
+    actDiv.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">📝</div>
+        <p>${isDe ? 'Mache deine erste Prüfung, um hier deinen Verlauf zu sehen!' : '¡Haz tu primer examen para ver tu historial aquí!'}</p>
+        <a href="exam-generator.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-md);">${isDe ? 'Jetzt starten' : 'Empezar ahora'}</a>
+      </div>
+    `;
   }
 
   // Level up overlay
@@ -436,6 +476,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   App.setupAccordions();
 });
+
+// Dynamic language callback registered globally
+window.onLangChange = function(lang) {
+  // Re-run index UI rendering loop to dynamically update all elements
+  document.dispatchEvent(new Event('DOMContentLoaded'));
+};
 </script>
 </body>
 </html>

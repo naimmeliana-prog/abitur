@@ -112,9 +112,10 @@ html {
   font-size: 16px; /* default fallback */
 }
 
-html.font-size-small { font-size: 13px !important; }
-html.font-size-normal { font-size: 16px !important; }
-html.font-size-large { font-size: 21px !important; }
+/* Propagate root font-sizing changes dynamically to all text tags using relative sizing */
+html.font-size-small, html.font-size-small * { font-size: 13px !important; }
+html.font-size-normal, html.font-size-normal * { font-size: 16px !important; }
+html.font-size-large, html.font-size-large * { font-size: 21px !important; }
 
 body {
   font-family: var(--font-body);
