@@ -226,11 +226,22 @@ function renderInfoTab(data, lang) {
   const concepts = data.key_concepts || [];
   const techniques = data.oral_techniques || data.exam_tips || [];
 
+  const headers = {
+    operators: lang === 'de' ? '🔑 Operatoren / Schlüsselqualifikationen' : '🔑 Operadores / Habilidades clave',
+    structure: lang === 'de' ? '📋 Prüfungsstruktur' : '📋 Estructura del examen',
+    format: lang === 'de' ? '🎤 Format der mündlichen Prüfung' : '🎤 Formato del examen oral',
+    devices: lang === 'de' ? '🎭 Stilmittel' : '🎭 Recursos estilísticos',
+    concepts: lang === 'de' ? '💡 Schlüsselkonzepte' : '💡 Conceptos clave',
+    tips: lang === 'de' ? '✅ Prüfungstipps' : '✅ Consejos para el examen',
+    duration: lang === 'de' ? 'Dauer:' : 'Duración:',
+    structLabel: lang === 'de' ? 'Struktur:' : 'Estructura:'
+  };
+
   return `<div class="grid-2 gap-xl">
     <div class="flex-col gap-lg">
       ${keyOps.length ? `
         <div class="card">
-          <h3 style="margin-bottom:var(--space-md);">🔑 Operadores / Habilidades clave</h3>
+          <h3 style="margin-bottom:var(--space-md);">${headers.operators}</h3>
           <div class="flex-col gap-md">
             ${keyOps.slice(0,8).map(o => `
               <div style="border-left:2px solid var(--color-gold);padding-left:var(--space-md);">
@@ -243,16 +254,16 @@ function renderInfoTab(data, lang) {
 
       ${data.exam_structure ? `
         <div class="card">
-          <h3 style="margin-bottom:var(--space-md);">📋 Estructura del examen</h3>
+          <h3 style="margin-bottom:var(--space-md);">${headers.structure}</h3>
           <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;">${data.exam_structure?.[lang] || data.exam_structure?.es}</p>
         </div>` : ''}
 
       ${data.exam_format ? `
         <div class="card">
-          <h3 style="margin-bottom:var(--space-md);">🎤 Formato del examen oral</h3>
+          <h3 style="margin-bottom:var(--space-md);">${headers.format}</h3>
           <div class="flex-col gap-md">
-            <div><strong>Duración:</strong> ${data.exam_format?.[lang]?.duration || data.exam_format?.es?.duration}</div>
-            <div><strong>Estructura:</strong> ${data.exam_format?.[lang]?.structure || data.exam_format?.es?.structure}</div>
+            <div><strong>${headers.duration}</strong> ${data.exam_format?.[lang]?.duration || data.exam_format?.es?.duration}</div>
+            <div><strong>${headers.structLabel}</strong> ${data.exam_format?.[lang]?.structure || data.exam_format?.es?.structure}</div>
             <div class="highlight-box">💡 ${data.exam_format?.[lang]?.tip || data.exam_format?.es?.tip}</div>
           </div>
         </div>` : ''}
@@ -261,7 +272,7 @@ function renderInfoTab(data, lang) {
     <div class="flex-col gap-lg">
       ${devices.length ? `
         <div class="card">
-          <h3 style="margin-bottom:var(--space-md);">🎭 Recursos estilísticos</h3>
+          <h3 style="margin-bottom:var(--space-md);">${headers.devices}</h3>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);">
             ${devices.slice(0,12).map(d => `
               <div style="padding:var(--space-sm);background:var(--glass-bg);border-radius:var(--radius-sm);border:1px solid var(--glass-border);">
@@ -274,7 +285,7 @@ function renderInfoTab(data, lang) {
 
       ${concepts.length ? `
         <div class="card">
-          <h3 style="margin-bottom:var(--space-md);">💡 Conceptos clave</h3>
+          <h3 style="margin-bottom:var(--space-md);">${headers.concepts}</h3>
           <div class="flex-col gap-sm">
             ${concepts.map(c => `
               <div style="padding:var(--space-sm) var(--space-md);background:var(--glass-bg);border-radius:var(--radius-sm);border:1px solid var(--glass-border);">
@@ -286,7 +297,7 @@ function renderInfoTab(data, lang) {
 
       ${techniques.length ? `
         <div class="card">
-          <h3 style="margin-bottom:var(--space-md);">✅ Consejos para el examen</h3>
+          <h3 style="margin-bottom:var(--space-md);">${headers.tips}</h3>
           <div class="flex-col gap-sm">
             ${(Array.isArray(techniques) ? techniques : []).map(t =>
               `<div class="tip-card" style="padding:var(--space-sm) var(--space-md);">
@@ -618,8 +629,8 @@ function renderResourcesTab(data, lang) {
 // i18n dynamic page level update
 window.onLangChange = function(lang) {
   renderTabs();
-  if (currentSubjectId) {
-    renderSubject(currentSubjectId);
+  if (currentSubject && currentSubject.id) {
+    renderSubjectPanel();
   }
 };
 

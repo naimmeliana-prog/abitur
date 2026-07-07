@@ -86,6 +86,9 @@ const TRANSLATIONS = {
     'tips.mindmap':          'Mapas Mentales',
     'tips.plan':             'Plan de Estudio',
     'tips.emergency':        'Modo Emergencia',
+    'tips.pomodoro.desc':    '25 min estudio + 5 min pausa. Ideal para quien no está acostumbrado.',
+    'tips.8weeks':           '8 semanas antes',
+    'tips.8weeks.desc':      'Plan de estudio personalizado por semanas. Matemáticas: 3h/semana, Deutsch: 2h/semana.',
 
     // Auth
     'auth.login':            'Iniciar sesión',
@@ -206,6 +209,9 @@ const TRANSLATIONS = {
     'tips.mindmap':          'Mindmaps',
     'tips.plan':             'Lernplan',
     'tips.emergency':        'Notfall-Modus',
+    'tips.pomodoro.desc':    '25 Min. Lernen + 5 Min. Pause. Ideal für Einsteiger.',
+    'tips.8weeks':           '8 Wochen vorher',
+    'tips.8weeks.desc':      'Personalisierter Wochenlernplan. Mathe: 3 Std./Woche, Deutsch: 2 Std./Woche.',
 
     // Auth
     'auth.login':            'Anmelden',
@@ -264,6 +270,7 @@ const App = {
     this.currentLang = lang;
     localStorage.setItem('abitur_lang', lang);
     this.applyTranslations();
+    this.updateUserUI(); // Update level text
     // Update active button only for buttons that have data-lang
     document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);

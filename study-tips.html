@@ -1686,6 +1686,43 @@
         btnTodos.classList.add('selected', 'easy');
       }
     }
+
+    // Dynamic language translation callback without reload
+    window.onLangChange = function(lang) {
+      const isDe = lang === 'de';
+      
+      // Hero Banner
+      const hero = document.querySelector('.hero-section');
+      if (hero) {
+        hero.querySelector('p').textContent = isDe 
+          ? 'Für den Schüler, der zu Hause nicht lernt' 
+          : 'Para el estudiante que no estudia en casa';
+        hero.querySelector('h1').textContent = isDe 
+          ? 'Techniken, die wirklich funktionieren 🧠' 
+          : 'Técnicas que sí funcionan 🧠';
+        hero.querySelector('p:nth-of-type(2)').textContent = isDe 
+          ? 'Dein Kind hat noch nie zu Hause gelernt. Das ist in Ordnung – diese Techniken sind speziell für Faule gedacht, um im DIA ohne Erschöpfung Leistung zu bringen.'
+          : 'Tu hijo nunca ha estudiado en casa. No pasa nada — estas técnicas están diseñadas específicamente para estudiantes perezosos que necesitan rendir en el DIA sin agotarse.';
+      }
+
+      // Tabs
+      document.getElementById('tabBtnTips').textContent = isDe ? '💡 Techniken & Lernplan' : '💡 Técnicas y Plan de Estudio';
+      document.getElementById('tabBtnOperators').textContent = isDe ? '📋 Operatoren-Leitfaden (DSV)' : '📋 Guía de Operadores (DSV)';
+
+      // Pomodoro Modes
+      MODES.study.label = isDe ? '🍅 Lernsitzung' : '🍅 Sesión de estudio';
+      MODES.short.label = isDe ? '☕ Kurze Pause' : '☕ Descanso corto';
+      MODES.long.label = isDe ? '🌴 Lange Pause' : '🌴 Descanso largo';
+      document.getElementById('pomodoroMode').textContent = MODES[pomMode].label;
+      
+      // Update buttons text
+      const buttons = document.querySelectorAll('#pomodoroTimer .flex.gap-md button');
+      if (buttons.length >= 3) {
+        buttons[0].textContent = pomTimer ? (isDe ? '▶ Läuft...' : '▶ Corriendo...') : (isDe ? '▶ Starten' : '▶ Iniciar');
+        buttons[1].textContent = isDe ? '⏸ Pause' : '⏸ Pausa';
+        buttons[2].textContent = isDe ? '🔄 Zurücksetzen' : '🔄 Reset';
+      }
+    };
   </script>
 </body>
 

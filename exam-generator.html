@@ -469,7 +469,19 @@ function renderExam(exam) {
   document.getElementById('examTitle').textContent = subj.map(s => `${s.icon} ${lang === 'de' ? s.nameDE : s.name}`).join(' + ');
   
   // Set meta text
-  document.getElementById('examMetaText').textContent = `${exam.totalQuestions} preguntas • ${exam.difficulty} • ${exam.mode === 'simulacro' ? '⏱️ Con temporizador' : '📖 Sin temporizador'}`;
+  const difficultyMap = {
+    easy: lang === 'de' ? 'Leicht' : 'Fácil',
+    medium: lang === 'de' ? 'Mittel' : 'Medio',
+    hard: lang === 'de' ? 'Schwer' : 'Difícil',
+    all: lang === 'de' ? 'Alle' : 'Todos'
+  };
+  const diffLabel = difficultyMap[exam.difficulty] || exam.difficulty;
+  const questionsLabel = lang === 'de' ? `${exam.totalQuestions} Fragen` : `${exam.totalQuestions} preguntas`;
+  const modeLabel = exam.mode === 'simulacro' 
+    ? (lang === 'de' ? '⏱️ Mit Timer' : '⏱️ Con temporizador') 
+    : (lang === 'de' ? '📖 Ohne Timer' : '📖 Sin temporizador');
+  
+  document.getElementById('examMetaText').textContent = `${questionsLabel} • ${diffLabel} • ${modeLabel}`;
   
   // Reset view mode
   examViewMode = 'single';
@@ -513,7 +525,12 @@ function renderQuestion(idx) {
   document.getElementById('examProgress').style.width = `${(idx / total) * 100}%`;
   document.getElementById('examProgressText').textContent = `${idx + 1}/${total}`;
   document.getElementById('prevBtn').disabled = idx === 0;
-  document.getElementById('nextBtn').textContent = idx === total - 1 ? '📤 Entregar' : 'Siguiente →';
+  
+  if (idx === total - 1) {
+    document.getElementById('nextBtn').textContent = lang === 'de' ? '📤 Abgeben' : '📤 Entregar';
+  } else {
+    document.getElementById('nextBtn').textContent = lang === 'de' ? 'Weiter →' : 'Siguiente →';
+  }
 
   const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
   const yearBadge  = q.year  ? `<span class="badge badge-gold">${q.year}</span>` : '';

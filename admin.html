@@ -551,6 +551,29 @@ document.querySelectorAll('.toggle-password').forEach(btn => {
   });
 });
 
+window.onLangChange = function(lang) {
+  const isDe = lang === 'de';
+  
+  // Login gate title
+  const gateTitle = document.querySelector('#adminGate h2');
+  if (gateTitle) gateTitle.textContent = isDe ? 'Administrationsbereich' : 'Panel de Administración';
+  
+  const gateDesc = document.querySelector('#adminGate p');
+  if (gateDesc) gateDesc.textContent = isDe ? 'Eingeschränkter Zugriff — Bitte Admin-Passwort eingeben' : 'Acceso restringido — Introduce la contraseña de administrador';
+
+  const gateLabel = document.querySelector('#adminGate label');
+  if (gateLabel) gateLabel.textContent = isDe ? 'Admin-Passwort' : 'Contraseña de administrador';
+
+  const gateInput = document.getElementById('adminPassInput');
+  if (gateInput) gateInput.placeholder = isDe ? 'Passwort eingeben...' : 'Contraseña admin...';
+
+  const gateBtn = document.querySelector('#adminGate button.btn-primary');
+  if (gateBtn) gateBtn.textContent = isDe ? '🔓 Anmelden' : '🔓 Acceder';
+
+  const gateBack = document.querySelector('#adminGate a.btn-secondary');
+  if (gateBack) gateBack.textContent = isDe ? '← Zurück zur Startseite' : '← Volver al inicio';
+};
+
 // Auto-check session
 document.addEventListener('DOMContentLoaded', () => {
   if (sessionStorage.getItem('admin_auth') === '1') {
@@ -559,6 +582,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initAdminPanel();
   }
   document.getElementById('adminPassInput')?.focus();
+  if (typeof window.onLangChange === 'function') {
+    window.onLangChange(App.currentLang);
+  }
 });
 </script>
 </body>

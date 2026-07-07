@@ -385,6 +385,11 @@ function renderWrittenExams(exams) {
   }).join('');
 }
 
+window.onLangChange = function(lang) {
+  updateStats();
+  filterBank();
+};
+
 document.addEventListener('DOMContentLoaded', loadAll);
 </script>
 </body>
