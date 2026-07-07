@@ -146,17 +146,14 @@ const SUBJECTS_META = [
 let currentSubjectId = 'mathe';
 
 function initPage() {
-  // Override setLang to render materials on change
-  const originalSetLang = App.setLang;
-  App.setLang = function(lang) {
-    originalSetLang.call(App, lang);
-    renderTabs();
-    renderMaterial();
-  };
-  
   renderTabs();
   renderMaterial();
 }
+
+window.onLangChange = function(lang) {
+  renderTabs();
+  renderMaterial();
+};
 
 function renderTabs() {
   const lang = App.currentLang;

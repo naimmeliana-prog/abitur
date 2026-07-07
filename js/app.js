@@ -264,8 +264,8 @@ const App = {
     this.currentLang = lang;
     localStorage.setItem('abitur_lang', lang);
     this.applyTranslations();
-    // Update active button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    // Update active button only for buttons that have data-lang
+    document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
     // Trigger custom page-level callback if registered
@@ -375,9 +375,12 @@ const App = {
 
   // ── Language Switcher ────────────────────────────────────────
   setupLangSwitcher() {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
-      btn.addEventListener('click', () => this.setLang(btn.dataset.lang));
+      // Remove old click listeners before adding to avoid duplicated handlers
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      newBtn.addEventListener('click', () => this.setLang(newBtn.dataset.lang));
     });
   },
 
