@@ -437,6 +437,14 @@ const App = {
   applyFontSize(size) {
     document.documentElement.classList.remove('font-size-small', 'font-size-normal', 'font-size-large');
     document.documentElement.classList.add(`font-size-${size}`);
+    
+    // Fallback/Direct override to ensure body propagates sizing relative to the selection
+    const sizeMap = {
+      'small': '13px',
+      'normal': '16px',
+      'large': '21px'
+    };
+    document.body.style.fontSize = sizeMap[size] || '16px';
   },
 
   // ── Sidebar ─────────────────────────────────────────────────

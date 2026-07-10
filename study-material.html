@@ -146,11 +146,13 @@ const SUBJECTS_META = [
 let currentSubjectId = 'mathe';
 
 function initPage() {
+  App.applyTranslations();
   renderTabs();
   renderMaterial();
 }
 
 window.onLangChange = function(lang) {
+  App.applyTranslations();
   renderTabs();
   renderMaterial();
 };
