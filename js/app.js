@@ -399,11 +399,12 @@ const App = {
     const translationKey = navKeyMap[page] || 'nav.dashboard';
     document.title = `AbiturDSV — ${this.t(translationKey)}`;
 
-    this.applyTranslations();
+    // Set active language state and propagate translations & hooks correctly on startup
+    const savedLang = localStorage.getItem('abitur_lang') || 'es';
+    this.setLang(savedLang);
+
     this.markActivePage();
     this.updateUserUI();
-    // Enforce switcher layout active state mapping
-    this.setupLangSwitcher();
     // Update daily streak
     if (this.currentUser) {
       Progress.updateStreak();

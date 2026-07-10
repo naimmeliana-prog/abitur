@@ -1692,6 +1692,8 @@
 
     // Dynamic language translation callback without reload
     window.onLangChange = function(lang) {
+      App.applyTranslations();
+      App.setupLangSwitcher();
       const isDe = lang === 'de';
       
       // Hero Banner
