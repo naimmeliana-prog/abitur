@@ -347,9 +347,6 @@ const App = {
 
   applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      // Do not overwrite translation keys that are inside dynamic subject/material panels which render separately
-      if (el.closest('#materialPanel') || el.closest('#subjectPanel')) return;
-
       const key = el.dataset.i18n;
       const text = this.t(key);
       if (el.tagName === 'INPUT' && el.type !== 'submit') {
@@ -362,7 +359,6 @@ const App = {
     });
 
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
-      if (el.closest('#materialPanel') || el.closest('#subjectPanel')) return;
       el.title = this.t(el.dataset.i18nTitle);
     });
 
