@@ -238,7 +238,7 @@
           <div class="card">
             <h3 style="margin-bottom:var(--space-md);">🔄 Auto-Actualización de Contenidos</h3>
             <p style="font-size:13px;color:var(--text-muted);margin-bottom:var(--space-md);">
-              El sistema se actualiza automáticamente cada semana mediante GitHub Actions. Si deseas forzar un escaneo manual inmediato de las bases oficiales (IQB, Abiturloesung, Berliner Bildungsserver, etc.), haz clic abajo.
+              El sistema se actualiza automáticamente cada semana mediante GitHub Actions. Si deseas forzar un escaneo manual inmediato de las bases oficiales (IQB, Abiturloesung, www.kmk-pad.org, Berliner Bildungsserver, etc.), haz clic abajo.
             </p>
             <button onclick="triggerAutoUpdater()" id="autoUpdateBtn" class="btn btn-outline-gold btn-full" style="display:flex;align-items:center;justify-content:center;gap:8px;">
               🔄 Forzar Escaneo de Exámenes
@@ -511,9 +511,10 @@ async function triggerAutoUpdater() {
 
   const steps = [
     { p: 15, msg: 'Conectando con ZfA (Zentralstelle für das Auslandsschulwesen)...' },
-    { p: 35, msg: 'Buscando actualizaciones curriculares de la Región 5...' },
-    { p: 60, msg: 'Verificando repositorio de exámenes de la Deutsche Schule Valencia (DSV)...' },
-    { p: 80, msg: 'Buscando propuestas didácticas de Filosofía y Lenguas para el DIA...' },
+    { p: 30, msg: 'Conectando e importando material oficial desde www.kmk-pad.org...' },
+    { p: 50, msg: 'Buscando actualizaciones curriculares de la Región 5...' },
+    { p: 70, msg: 'Verificando repositorio de exámenes de la Deutsche Schule Valencia (DSV)...' },
+    { p: 85, msg: 'Buscando propuestas didácticas de Filosofía y Lenguas para el DIA...' },
     { p: 95, msg: 'Sincronizando archivos locales de asignaturas...' },
     { p: 100, msg: '¡Sincronización completa!' }
   ];

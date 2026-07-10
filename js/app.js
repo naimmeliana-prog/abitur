@@ -402,6 +402,8 @@ const App = {
     this.applyTranslations();
     this.markActivePage();
     this.updateUserUI();
+    // Enforce switcher layout active state mapping
+    this.setupLangSwitcher();
     // Update daily streak
     if (this.currentUser) {
       Progress.updateStreak();
