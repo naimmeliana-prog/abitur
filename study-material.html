@@ -176,20 +176,241 @@ function renderMaterial() {
   const lang = App.currentLang;
   const panel = document.getElementById('materialPanel');
 
+  // ── Non-mathematics Content Render (Deutsch, Englisch, Espanol, Philosophie) ──
   if (currentSubjectId !== 'mathe') {
-    panel.innerHTML = `
-      <div class="card text-center" style="padding:var(--space-3xl);">
-        <div style="font-size:48px;margin-bottom:var(--space-md);">📚</div>
-        <h3 style="font-size:20px;font-weight:700;margin-bottom:var(--space-sm);">
-          ${lang === 'de' ? 'Material bald verfügbar' : 'Material didáctico próximamente'}
-        </h3>
-        <p style="color:var(--text-muted);max-width:500px;margin:0 auto;">
-          ${lang === 'de' 
-            ? 'Das Lehrmaterial für dieses Fach wird in Kürze vom Administrator hinzugefügt. Nutze die Prüfungsgenerierung, um weiter zu üben!' 
-            : 'Los apuntes y guías didácticas para esta asignatura se irán publicando poco a poco. ¡Utiliza la sección "Generar Examen" para seguir practicando con exámenes oficiales completos!'}
-        </p>
-      </div>
-    `;
+    if (currentSubjectId === 'deutsch') {
+      panel.innerHTML = `
+        <div class="hero-section mb-xl" style="padding:var(--space-xl);background:linear-gradient(135deg, rgba(230,126,34,0.1), rgba(243,156,18,0.05));border:1px solid rgba(230,126,34,0.2);">
+          <div class="flex items-center gap-lg flex-wrap">
+            <div class="hero-icon" style="background:var(--color-gold);color:#fff;">🇩🇪</div>
+            <div>
+              <h2 style="font-size:22px;font-weight:900;margin-bottom:4px;" data-i18n="material.de.title">Currículo de Referencia Oficial de Alemán (Deutsch)</h2>
+              <p style="color:var(--text-secondary);font-size:13px;max-width:600px;" data-i18n="material.de.subtitle">
+                Guía completa de competencias, áreas temáticas (Themenfelder) y tipologías de exámenes de selectividad alemana unificada (Abitur).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2 gap-xl mb-xl">
+          <div class="flex-col gap-lg">
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);font-weight:800;border-bottom:1px solid var(--glass-border);padding-bottom:6px;">
+                📂 Áreas Temáticas Obligatorias (Themenfelder)
+              </h3>
+              <div class="flex-col gap-md">
+                <div style="border-left:3px solid var(--color-gold);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">1. Freiheit und Verantwortung</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    El ser humano en el campo de tensión de la cultura, historia, religión y política. Foco en la Ilustración (Epoche der Aufklärung) e interpretaciones de obras como "Emilia Galotti" de Lessing o "Ringparabel".
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-gold);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">2. Zwischenmenschliche Beziehungen</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Relaciones interpersonales: éxito y fracaso. Foco en teorías y modelos de comunicación (Bühler, Watzlawick, Schulz von Thun) y lectura obligatoria de novelas contemporáneas como "Corpus Delicti" de Juli Zeh.
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-gold);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">3. Natur, Mensch, Technik</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Amenaza, control y reconciliación entre la naturaleza y la técnica. Análisis pragmático de discursos políticos históricos y análisis literario del drama épico "La ópera de los tres centavos" (Die Dreigroschenoper) de Bertolt Brecht.
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-gold);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">4. Heimat und Fremde</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Búsqueda de identidad y su consolidación. Análisis de lírica contemporánea, cortometrajes y literatura comparada hispano-alemana.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col gap-lg">
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);font-weight:800;border-bottom:1px solid var(--glass-border);padding-bottom:6px;">
+                📝 Estructura de Evaluaciones (Klausuren)
+              </h3>
+              <ul style="padding-left:20px;font-size:0.85rem;color:var(--text-secondary);line-height:1.7;">
+                <li><strong>Clase 10:</strong> Argumentación guiada por materiales (Materialgestütztes Argumentieren), análisis de cuentos cortos (Kurzgeschichten) y análisis de escenas de teatro.</li>
+                <li><strong>Clase 11:</strong> Interpretación de textos líricos (Lyrik) e interpretación dramática con redacción extendida.</li>
+                <li><strong>Clase 12 (Abitur):</strong> Análisis pragmático de discursos (Redeanalyse), interpretación literaria comparada o análisis de medios cinematográficos con tarea de escritura libre.</li>
+              </ul>
+            </div>
+            
+            <div class="card" style="background:rgba(255,255,255,0.02);">
+              <h3 style="margin-bottom:var(--space-sm);font-weight:800;color:var(--color-gold);">💡 Consejos de los Correctores del Abitur</h3>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;">
+                La evaluación unificada exige un dominio estricto de los <strong>Operadores</strong> de la KMK (como <em>Analysieren, Erörtern, Charakterisieren</em>). Recuerda usar citas bibliográficas y textuales con números de línea exactos en formato alemán y justificar formalmente tu hipótesis de interpretación (Deutungshypothese).
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (currentSubjectId === 'englisch') {
+      panel.innerHTML = `
+        <div class="hero-section mb-xl" style="padding:var(--space-xl);background:linear-gradient(135deg, rgba(52,152,219,0.1), rgba(41,128,185,0.05));border:1px solid rgba(52,152,219,0.2);">
+          <div class="flex items-center gap-lg flex-wrap">
+            <div class="hero-icon" style="background:var(--color-mathe);color:#fff;">🇬🇧</div>
+            <div>
+              <h2 style="font-size:22px;font-weight:900;margin-bottom:4px;" data-i18n="material.en.title">Currículo Regional Unificado de Inglés (Englisch)</h2>
+              <p style="color:var(--text-secondary);font-size:13px;max-width:600px;" data-i18n="material.en.subtitle">
+                Marco curricular de referencia (RC) para los Colegios Alemanes de España y Portugal (Región 5).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2 gap-xl mb-xl">
+          <div class="flex-col gap-lg">
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);font-weight:800;border-bottom:1px solid var(--glass-border);padding-bottom:6px;">
+                📚 Ejes Temáticos Obligatorios (11º y 12º)
+              </h3>
+              <div class="flex-col gap-md">
+                <div style="border-left:3px solid var(--color-mathe);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">1. Young People in Society (11/I)</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Generaciones, primer amor, amistad y educación. Material de apoyo: "Dead Poets Society" (película), "About a boy" (novela de Nick Hornby).
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-mathe);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">2. Culture and the Mass Media (11/I)</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Revolución de internet y redes sociales. Material de apoyo: "The Social Network" (película), "1984" de George Orwell, "The Truman Show" (película).
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-mathe);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">3. The UK - Tradition and Change (11/II)</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Del imperio a la Commonwealth, multiculturalidad británica. Antología de relatos obligatorios: "Caught between Cultures" (Editorial Klett).
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-mathe);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">4. American Dreams, American Nightmares (11/II)</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    El sueño americano, inmigración (Ellis Island), derechos civiles y 11 de septiembre. Novelas recomendadas: "The Tortilla Curtain" de T.C. Boyle.
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-mathe);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">5. Globalisation & Environment (12/I)</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    Globalización económica, cambio climático, ingeniería genética. Películas asociadas: "An Inconvenient Truth" de Al Gore y "Gattaca".
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col gap-lg">
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);font-weight:800;border-bottom:1px solid var(--glass-border);padding-bottom:6px;">
+                🏆 Niveles y Estructura de Examen
+              </h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-md);">
+                De acuerdo con el Marco Común Europeo de Referencia para las Lenguas (MCER), los niveles de competencia exigidos para los alumnos del DIA en inglés oscilan entre el **B2** (usuario independiente avanzado) y el **C1** (usuario competente/avanzado).
+              </p>
+              <ul style="padding-left:20px;font-size:0.85rem;color:var(--text-secondary);line-height:1.7;">
+                <li><strong>Comprensión (Listening & Reading):</strong> Seguir discursos complejos en inglés estándar y analizar registros estilísticos en textos de prensa internacional.</li>
+                <li><strong>Mediación (Mediation D ➔ E):</strong> Transferir de manera resumida informaciones complejas escritas en alemán hacia el inglés de forma adaptada al receptor.</li>
+                <li><strong>Expresión Escrita (Composition):</strong> Escribir comentarios, discursos (giving a speech) o cartas al editor empleando operadores formales complejos.</li>
+              </ul>
+            </div>
+
+            <div class="card" style="background:rgba(255,255,255,0.02);">
+              <h3 style="margin-bottom:var(--space-sm);font-weight:800;color:var(--color-mathe);">📐 Rúbrica de Evaluación Lingüística</h3>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;">
+                La nota de inglés unifica la calidad del contenido y la adecuación expresiva en una sola calificación global. Los correctores valoran el uso de construcciones sintácticas variadas (cláusulas relativas, participios) y penalizan el uso excesivo de estructuras básicas y los calcos del alemán (germanismos / false friends).
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (currentSubjectId === 'espanol') {
+      panel.innerHTML = `
+        <div class="hero-section mb-xl" style="padding:var(--space-xl);background:linear-gradient(135deg, rgba(46,204,113,0.1), rgba(39,174,96,0.05));border:1px solid rgba(46,204,113,0.2);">
+          <div class="flex items-center gap-lg flex-wrap">
+            <div class="hero-icon" style="background:var(--color-success);color:#fff;">🇪🇸</div>
+            <div>
+              <h2 style="font-size:22px;font-weight:900;margin-bottom:4px;" data-i18n="material.es.title">Currículo Regional de Lengua Castellana y Literatura (Español)</h2>
+              <p style="color:var(--text-secondary);font-size:13px;max-width:600px;" data-i18n="material.es.subtitle">
+                Criterios de examen oficial, desglose de descriptores cognitivos y lecturas obligatorias para el Abitur DIA.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2 gap-xl mb-xl">
+          <div class="flex-col gap-lg">
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);font-weight:800;border-bottom:1px solid var(--glass-border);padding-bottom:6px;">
+                📖 Lecturas Obligatorias (Plan Lector 11º y 12º)
+              </h3>
+              <div class="flex-col gap-md">
+                <div style="border-left:3px solid var(--color-success);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">Clase 11 — Del Realismo a la Vanguardia</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    • <strong>Pío Baroja:</strong> "El árbol de la ciencia" (Novela del 98, existencialismo).\n• <strong>Federico García Lorca:</strong> "La casa de Bernarda Alba" (Teatro del 36, opresión social, drama de las mujeres en los pueblos).\n• <strong>Antonio Machado:</strong> "Campos de Castilla" (Lírica del 98, paisaje existencial e histórico).
+                  </p>
+                </div>
+                <div style="border-left:3px solid var(--color-success);padding-left:var(--space-md);">
+                  <strong style="color:var(--text-primary);font-size:0.9rem;">Clase 12 — Literatura de Posguerra y Contemporánea</strong>
+                  <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:2px;">
+                    • <strong>Blas de Otero:</strong> "Pido la paz y la palabra" (Poesía social de posguerra).\n• <strong>Antonio Buero Vallejo:</strong> "Historia de una escalera" (Teatro social realista de posguerra).\n• <strong>Dulce Chacón:</strong> "La voz dormida" (Narrativa contemporánea, memoria de la posguerra y la represión).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col gap-lg">
+            <div class="card">
+              <h3 style="margin-bottom:var(--space-md);font-weight:800;border-bottom:1px solid var(--glass-border);padding-bottom:6px;">
+                📊 Modelos de Examen Escrito (Abitur)
+              </h3>
+              <div class="flex-col gap-sm" style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;">
+                <div><strong>Tipo A: Redacción a partir de un texto:</strong>
+                  <ul style="padding-left:15px;margin-top:4px;">
+                    <li>1. Interpretación de un texto literario (fondo y forma).</li>
+                    <li>2. Análisis de un texto no literario (columna periodística).</li>
+                    <li>3. Disertación sobre un tema a partir de un texto literario.</li>
+                    <li>4. Disertación sobre un tema a partir de un texto no literario.</li>
+                  </ul>
+                </div>
+                <div style="margin-top:8px;"><strong>Tipo B: Redacción a partir de fuentes (Materialgestützt):</strong>
+                  <ul style="padding-left:15px;margin-top:4px;">
+                    <li>5. Redacción de un texto informativo a partir de fuentes (dossier, artículo).</li>
+                    <li>6. Redacción de un texto argumentativo a partir de fuentes (artículo de opinión).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="background:rgba(255,255,255,0.02);">
+              <h3 style="margin-bottom:var(--space-sm);font-weight:800;color:var(--color-success);">💡 Criterios Clave de Corrección</h3>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;">
+                El examen de español en el Abitur valora la madurez intelectual, la autonomía en el análisis crítico, la variedad de los puntos de vista y el razonamiento argumentativo. La calidad expresiva no se calcula mediante coeficientes de errores (número de fallos), sino por una evaluación global del registro culto, coherencia y riqueza sintáctica.
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      panel.innerHTML = `
+        <div class="card text-center" style="padding:var(--space-3xl);">
+          <div style="font-size:48px;margin-bottom:var(--space-md);">🧠</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:var(--space-sm);">
+            ${lang === 'de' ? 'Material bald verfügbar' : 'Material didáctico próximamente'}
+          </h3>
+          <p style="color:var(--text-muted);max-width:500px;margin:0 auto;">
+            ${lang === 'de' 
+              ? 'Das Lehrmaterial für dieses Fach wird in Kürze vom Administrator hinzugefügt. Nutze die Prüfungsgenerierung, um weiter zu üben!' 
+              : 'Los apuntes y guías didácticas para esta asignatura se irán publicando poco a poco. ¡Utiliza la sección "Generar Examen" para seguir practicando con exámenes oficiales completos!'}
+          </p>
+        </div>
+      `;
+    }
     return;
   }
 
