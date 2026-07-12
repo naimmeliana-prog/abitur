@@ -577,7 +577,7 @@
     ]
   },
   "englisch": {
-    "count": 54,
+    "count": 55,
     "items": [
       {
         "title": "http://de.serlo.org/107557",
@@ -592,14 +592,20 @@
         "license": "CC BY-SA 4.0"
       },
       {
-        "title": "Serlo Informatik im AufbauHilf mit! Der Fachbereich Informatik auf serlo.org befindet sich im Aufbau und freut sich über deine Mitarbeit. Schau dir doch mal die bestehenden Inhalte an und melde dich bei uns! :-)",
-        "url": "https://de.serlo.org/informatik",
+        "title": "Mitmachen bei SerloHinter serlo.org stehen viele engagierte Menschen, die Bildung besser und gerechter machen wollen. Auch du kannst mitmachen! Klicke hier, um zu erfahren, wie du Teil der Serlo Community werden kannst.",
+        "url": "https://de.serlo.org/mitmachen",
         "source": "serlo.org",
         "license": "CC BY-SA 4.0"
       },
       {
-        "title": "Mitmachen bei SerloHinter serlo.org stehen viele engagierte Menschen, die Bildung besser und gerechter machen wollen. Auch du kannst mitmachen! Klicke hier, um zu erfahren, wie du Teil der Serlo Community werden kannst.",
-        "url": "https://de.serlo.org/mitmachen",
+        "title": "Selbstständig lernenAuf Serlo sind Themen so aufbereitet, dass du sie besonders leicht selbstständig lernen kannst. Klick hier, um mehr über unser pädagogisches Konzept zu erfahren!",
+        "url": "https://de.serlo.org/paedagogik-konzept",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Serlo.org richtig nutzenSerlo.org hat viele Features, die dir beim Lernen helfen. Klick hier für eine Übersicht der unterschiedlichen Lernfunktionen und erfahre in 3 Minuten, wie du mit serlo.org erfolgreich lernen kannst!",
+        "url": "https://de.serlo.org/features",
         "source": "serlo.org",
         "license": "CC BY-SA 4.0"
       },
