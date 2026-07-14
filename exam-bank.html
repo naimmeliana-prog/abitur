@@ -311,6 +311,9 @@ function renderBank(questions) {
         </div>
       </div>`;
   }).join('');
+  if (typeof App !== 'undefined') {
+    App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
+  }
 }
 
 function renderWrittenExams(exams) {
@@ -383,6 +386,9 @@ function renderWrittenExams(exams) {
         </div>
       </div>`;
   }).join('');
+  if (typeof App !== 'undefined') {
+    App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
+  }
 }
 
 window.onLangChange = function(lang) {
