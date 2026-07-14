@@ -66,6 +66,7 @@ const Progress = {
         flashcardReviews: {},
       };
       localStorage.setItem(key, JSON.stringify(data));
+      this.pushProgressToCloud().catch(console.error);
     }
   },
 
@@ -85,6 +86,47 @@ const Progress = {
   // ── Save data ─────────────────────────────────────────────────
   saveData(data) {
     localStorage.setItem(this.key(), JSON.stringify(data));
+    this.pushProgressToCloud().catch(console.error);
+  },
+
+  // ── Pull progress from cloud ─────────────────────────────────
+  async pullProgressFromCloud(username) {
+    if (typeof Auth !== 'undefined' && Auth.useFirebase && Auth.db) {
+      try {
+        const doc = await Auth.db.collection('users_progress').doc(username).get();
+        if (doc.exists) {
+          const cloudData = doc.data().progressData;
+          if (cloudData) {
+            localStorage.setItem(this.key(username), JSON.stringify(cloudData));
+            console.log('Progress successfully pulled from cloud.');
+          }
+        }
+      } catch (e) {
+        console.error('Failed to pull progress from cloud:', e);
+      }
+    }
+  },
+
+  // ── Push progress to cloud ──────────────────────────────────
+  async pushProgressToCloud() {
+    if (typeof Auth !== 'undefined' && Auth.useFirebase && Auth.db) {
+      const user = Auth.getCurrentUser();
+      if (user && user.username) {
+        try {
+          const progressData = JSON.parse(localStorage.getItem(this.key(user.username)) || 'null');
+          if (progressData) {
+            await Auth.db.collection('users_progress').doc(user.username).set({
+              username: user.username,
+              progressData: progressData,
+              updatedAt: Date.now()
+            });
+            console.log('Progress successfully pushed to cloud.');
+          }
+        } catch (e) {
+          console.error('Failed to push progress to cloud:', e);
+        }
+      }
+    }
   },
 
   // ── Level info from XP ────────────────────────────────────────
