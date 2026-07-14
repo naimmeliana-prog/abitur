@@ -243,7 +243,7 @@
     ]
   },
   "deutsch": {
-    "count": 47,
+    "count": 48,
     "items": [
       {
         "title": "Unterricht",
@@ -311,6 +311,13 @@
       {
         "title": "bildungsserver",
         "url": "https://dms.bildung.hessen.de/index.html",
+        "source": "hessen-bildungsserver",
+        "license": "Verify Individually",
+        "type": "html"
+      },
+      {
+        "title": "Bundesweiter Vorlesetag 2026 - ab sofort anmelden\n        \n        \n               \n            1",
+        "url": "https://lernarchiv.bildung.hessen.de/sek/deutsch/vorlesetag/index.html",
         "source": "hessen-bildungsserver",
         "license": "Verify Individually",
         "type": "html"
@@ -577,7 +584,7 @@
     ]
   },
   "englisch": {
-    "count": 55,
+    "count": 56,
     "items": [
       {
         "title": "http://de.serlo.org/107557",
@@ -592,8 +599,8 @@
         "license": "CC BY-SA 4.0"
       },
       {
-        "title": "Mitmachen bei SerloHinter serlo.org stehen viele engagierte Menschen, die Bildung besser und gerechter machen wollen. Auch du kannst mitmachen! Klicke hier, um zu erfahren, wie du Teil der Serlo Community werden kannst.",
-        "url": "https://de.serlo.org/mitmachen",
+        "title": "Vögel - Meister der LüfteAchtung - Wortwitz: Vögel sind solche Überflieger. ;-) Aber wieso können sie eigentlich fliegen? Die Antwort dazu und noch vieles mehr findest du hier, bei Serlo Biologie",
+        "url": "https://de.serlo.org/biologie/vielfalt-lebewesen/wirbeltiere/voegel-koennen-voegel-fliegen",
         "source": "serlo.org",
         "license": "CC BY-SA 4.0"
       },
@@ -612,6 +619,12 @@
       {
         "title": "Mehr erfahren",
         "url": "https://de.serlo.org/serlo",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mitmachen",
+        "url": "https://de.serlo.org/mitmachen",
         "source": "serlo.org",
         "license": "CC BY-SA 4.0"
       },
@@ -1099,7 +1112,7 @@
         "type": "html"
       },
       {
-        "title": "Ethik \n        \n               \n            \n        \n        \n               \n            446",
+        "title": "Ethik \n        \n               \n            \n        \n        \n               \n            448",
         "url": "https://lernarchiv.bildung.hessen.de/sek/ethik/index.html",
         "source": "hessen-bildungsserver",
         "license": "Verify Individually",
