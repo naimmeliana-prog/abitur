@@ -201,6 +201,9 @@ function renderSubjectPanel() {
     </div>`;
 
   document.getElementById('subjectPanel').innerHTML = html;
+  if (typeof App !== 'undefined') {
+    App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
+  }
 }
 
 function showTab(tab, btn) {
@@ -217,6 +220,9 @@ function showTab(tab, btn) {
     case 'traps':     container.innerHTML = renderTrapsTab(data, lang); break;
     case 'questions': container.innerHTML = renderQuestionsTab(data, lang); break;
     case 'resources': container.innerHTML = renderResourcesTab(data, lang); break;
+  }
+  if (typeof App !== 'undefined') {
+    App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
   }
 }
 

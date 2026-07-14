@@ -150,6 +150,7 @@ function initPage() {
   App.setupLangSwitcher();
   renderTabs();
   renderMaterial();
+  App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
 }
 
 window.onLangChange = function(lang) {
@@ -157,6 +158,7 @@ window.onLangChange = function(lang) {
   App.setupLangSwitcher();
   renderTabs();
   renderMaterial();
+  App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
 };
 
 function renderTabs() {
@@ -174,6 +176,7 @@ function selectSubject(id) {
   currentSubjectId = id;
   renderTabs();
   renderMaterial();
+  App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
 }
 
 function renderMaterial() {

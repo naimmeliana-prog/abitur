@@ -304,16 +304,18 @@ const TRANSLATIONS = {
 
 // ─── App State ───────────────────────────────────────────────
 const App = {
-  currentLang: localStorage.getItem('abitur_lang') || 'es',
+  currentLang: ['es', 'de'].includes(localStorage.getItem('abitur_lang')) ? localStorage.getItem('abitur_lang') : 'es',
   currentUser: null,
   currentPage: null,
 
   // ── i18n ────────────────────────────────────────────────────
   t(key) {
-    return TRANSLATIONS[this.currentLang][key] || TRANSLATIONS['es'][key] || key;
+    const lang = TRANSLATIONS[this.currentLang] ? this.currentLang : 'es';
+    return TRANSLATIONS[lang][key] || TRANSLATIONS['es'][key] || key;
   },
 
   setLang(lang) {
+    if (lang !== 'es' && lang !== 'de') lang = 'es';
     this.currentLang = lang;
     localStorage.setItem('abitur_lang', lang);
     this.applyTranslations();
@@ -343,6 +345,10 @@ const App = {
     if (typeof window.onLangChange === 'function') {
       window.onLangChange(lang);
     }
+
+    // Re-apply font size after language changes render new content
+    const savedSize = localStorage.getItem('abitur_font_size') || 'normal';
+    this.applyFontSize(savedSize);
   },
 
   applyTranslations() {
@@ -400,7 +406,11 @@ const App = {
     document.title = `AbiturDSV — ${this.t(translationKey)}`;
 
     // Set active language state and propagate translations & hooks correctly on startup
-    const savedLang = localStorage.getItem('abitur_lang') || 'es';
+    let savedLang = localStorage.getItem('abitur_lang');
+    if (savedLang !== 'es' && savedLang !== 'de') {
+      savedLang = 'es';
+      localStorage.setItem('abitur_lang', 'es');
+    }
     this.setLang(savedLang);
 
     this.markActivePage();
@@ -448,6 +458,35 @@ const App = {
       'large': '21px'
     };
     document.body.style.fontSize = sizeMap[size] || '16px';
+
+    const factorMap = {
+      'small': 0.8,
+      'normal': 1.0,
+      'large': 1.3
+    };
+    const factor = factorMap[size] || 1.0;
+
+    // Dynamically scale any inline/absolute pixel font sizes so they respond to A+/A-
+    document.querySelectorAll('[style*="font-size"]').forEach(el => {
+      if (el.id === 'btnFontSizeIncrease' || el.id === 'btnFontSizeDecrease') return;
+      
+      if (!el.dataset.originalFontSize) {
+        const match = el.style.fontSize.match(/^(\d+)px$/);
+        if (match) {
+          el.dataset.originalFontSize = match[1];
+        } else if (el.style.fontSize.endsWith('rem')) {
+          el.dataset.originalFontSizeRem = parseFloat(el.style.fontSize);
+        }
+      }
+
+      if (el.dataset.originalFontSize) {
+        const original = parseInt(el.dataset.originalFontSize);
+        el.style.fontSize = `${Math.round(original * factor)}px`;
+      } else if (el.dataset.originalFontSizeRem) {
+        const original = parseFloat(el.dataset.originalFontSizeRem);
+        el.style.fontSize = `${original * factor}rem`;
+      }
+    });
   },
 
   // ── Sidebar ─────────────────────────────────────────────────
