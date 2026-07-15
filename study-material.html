@@ -144,11 +144,24 @@ const SUBJECTS_META = [
 ];
 
 let currentSubjectId = 'mathe';
+let scrapedResources = {};
 
-function initPage() {
+async function loadScrapedResources() {
+  try {
+    const res = await fetch('data/external_scraped_resources.json');
+    if (res.ok) {
+      scrapedResources = await res.json();
+    }
+  } catch (e) {
+    console.warn("No se pudieron cargar los recursos externos:", e);
+  }
+}
+
+async function initPage() {
   App.applyTranslations();
   App.setupLangSwitcher();
   renderTabs();
+  await loadScrapedResources();
   renderMaterial();
   App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
 }
@@ -657,6 +670,46 @@ function renderMaterial() {
               <li><strong>Contraste de Hipótesis:</strong> Definición de zona crítica de éxito para un nivel de confianza determinado.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Append external scraped resources section at the bottom
+  const subjectResources = scrapedResources[currentSubjectId] || { count: 0, items: [] };
+  if (subjectResources.items && subjectResources.items.length > 0) {
+    const lang = App.currentLang;
+    const titleES = "🔗 Recursos y Exámenes oficiales de prueba (Recopilados)";
+    const titleDE = "🔗 Offizielle Ressourcen und Prüfungsaufgaben (Gesammelt)";
+    const title = lang === 'de' ? titleDE : titleES;
+    
+    const subtitleES = `Encontrados ${subjectResources.items.length} recursos de preparación del Abitur en portales oficiales y colegios alemanes.`;
+    const subtitleDE = `${subjectResources.items.length} Abitur-Vorbereitungsressourcen auf offiziellen Portalen und deutschen Auslandsschulen gefunden.`;
+    const subtitle = lang === 'de' ? subtitleDE : subtitleES;
+
+    let itemsHtml = subjectResources.items.map(item => {
+      const typeLabel = item.type === 'pdf' ? '📄 PDF' : '🌐 Link';
+      return `
+        <div class="card" style="padding:var(--space-md); background:rgba(255,255,255,0.02); display:flex; justify-content:space-between; align-items:center; gap:var(--space-md);">
+          <div style="display:flex; flex-direction:column; gap:2px; text-align:left;">
+            <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">${item.source}</span>
+            <a href="${item.url}" target="_blank" style="font-size:0.85rem; font-weight:700; color:var(--text-primary); text-decoration:none;">
+              ${item.title}
+            </a>
+          </div>
+          <a href="${item.url}" target="_blank" class="difficulty-btn easy" style="font-size:0.75rem; padding:4px 10px; min-width:80px; text-align:center; text-decoration:none;">
+            ${typeLabel}
+          </a>
+        </div>
+      `;
+    }).join('');
+
+    panel.innerHTML += `
+      <div class="card mb-xl" style="border-top: 3px solid var(--color-gold);">
+        <h2 style="margin-bottom:var(--space-xs); font-weight:900;">${title}</h2>
+        <p style="color:var(--text-secondary); font-size:0.8rem; margin-bottom:var(--space-lg); text-align:left;">${subtitle}</p>
+        <div class="grid-2 gap-md">
+          ${itemsHtml}
         </div>
       </div>
     `;
