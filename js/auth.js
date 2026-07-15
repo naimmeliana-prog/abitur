@@ -231,6 +231,56 @@ const Auth = {
     }
   },
 
+  // ── Login with Google ─────────────────────────────────────────
+  async loginWithGoogle() {
+    await firebaseLoadPromise;
+    if (this.useFirebase) {
+      try {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        const result = await this.firebaseAuth.signInWithPopup(provider);
+        const user = result.user;
+        
+        // Formulate username from displayName or email prefix
+        const username = (user.displayName || user.email.split('@')[0]).trim().replace(/\s+/g, '_').toLowerCase();
+        
+        // Check if user profile exists in Firestore, if not create it
+        const userDoc = await this.db.collection('users').doc(username).get();
+        if (!userDoc.exists) {
+          const userDetails = {
+            username,
+            email: user.email,
+            createdAt: Date.now(),
+            lastLogin: Date.now(),
+            uid: user.uid
+          };
+          await this.db.collection('users').doc(username).set(userDetails);
+          
+          if (typeof Progress !== 'undefined') {
+            await Progress.initForUser(username);
+          }
+        } else {
+          // Update last login
+          await this.db.collection('users').doc(username).update({ lastLogin: Date.now() });
+        }
+
+        const sessionUser = { username, email: user.email };
+        this.createSession(sessionUser);
+
+        // Pull progress from Cloud
+        if (typeof Progress !== 'undefined') {
+          await Progress.pullProgressFromCloud(username);
+        }
+
+        return { ok: true, user: sessionUser };
+      } catch (e) {
+        console.error('Firebase Google Login Error:', e);
+        return { ok: false, error: e.message || 'Error al iniciar sesión con Google' };
+      }
+    } else {
+      return { ok: false, error: 'El inicio de sesión con Google requiere estar conectado a internet y tener Firebase activo.' };
+    }
+  },
+
   // ── Session ──────────────────────────────────────────────────
   createSession(user) {
     const session = {
@@ -418,6 +468,24 @@ document.addEventListener('DOMContentLoaded', () => {
       showError('registerError', 'Error de conexión a internet o de base de datos');
     }
   });
+
+  // Google sign in click handlers
+  const handleGoogleSignIn = async (errorId) => {
+    clearErrors();
+    try {
+      const result = await Auth.loginWithGoogle();
+      if (result.ok) {
+        window.location.href = 'index.html';
+      } else {
+        showError(errorId, result.error);
+      }
+    } catch (err) {
+      showError(errorId, 'Error al conectar con Google. Verifica que el proveedor de Google esté activo en Firebase.');
+    }
+  };
+
+  document.getElementById('btnGoogleLogin')?.addEventListener('click', () => handleGoogleSignIn('loginError'));
+  document.getElementById('btnGoogleRegister')?.addEventListener('click', () => handleGoogleSignIn('registerError'));
 
   function showError(id, msg) {
     const el = document.getElementById(id);
