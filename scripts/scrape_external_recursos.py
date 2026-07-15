@@ -196,7 +196,7 @@ def scrape_colegios_alemanes(subject):
             for link in soup.find_all('a', href=True):
                 href = link['href']
                 text = link.text.strip()
-                if '.pdf' in href.lower() or any(keyword in href.lower() or keyword in text.lower() for keyword in ['abitur', 'prüfung', 'examen', 'modelo', 'dias']):
+                if '.pdf' in href.lower():
                     from urllib.parse import urljoin
                     full_url = urljoin(url, href)
                     
@@ -206,7 +206,7 @@ def scrape_colegios_alemanes(subject):
                             'url': full_url,
                             'source': f"{school_name}.org",
                             'license': 'Educational Use/Public School Document',
-                            'type': 'pdf' if '.pdf' in href.lower() else 'html'
+                            'type': 'pdf'
                         })
         except Exception as e:
             print(f"❌ [COLEGIO ALEMAN] Error scraping {school_name}: {e}")
@@ -233,7 +233,7 @@ def scrape_kmk_org(subject):
         for link in soup.find_all('a', href=True):
             href = link['href']
             text = link.text.strip()
-            if '.pdf' in href.lower() or any(keyword in href.lower() or keyword in text.lower() for keyword in ['abitur', 'prüfung', 'bildungsstandards']):
+            if '.pdf' in href.lower():
                 from urllib.parse import urljoin
                 full_url = urljoin(url, href)
                 if len(text) > 3:
@@ -242,7 +242,7 @@ def scrape_kmk_org(subject):
                         'url': full_url,
                         'source': 'kmk.org',
                         'license': 'Official Public Document',
-                        'type': 'pdf' if '.pdf' in href.lower() else 'html'
+                        'type': 'pdf'
                     })
         return resources
     except Exception as e:
@@ -255,16 +255,13 @@ def run_all_scrapes():
     
     for subject in subjects:
         print(f"\n==================== PROCESSING: {subject} ====================")
-        serlo_items = fetch_serlo_content(subject)
-        wiki_items = scrape_wikiversity(subject)
-        hessen_items = scrape_hessen_bildungsserver(subject)
         abiturloesung_items = scrape_abiturloesung(subject)
         colegios_items = scrape_colegios_alemanes(subject)
         kmk_items = scrape_kmk_org(subject)
         
         urls_seen = set()
         merged = []
-        for item in (serlo_items + wiki_items + hessen_items + abiturloesung_items + colegios_items + kmk_items):
+        for item in (abiturloesung_items + colegios_items + kmk_items):
             if item['url'] not in urls_seen:
                 urls_seen.add(item['url'])
                 merged.append(item)

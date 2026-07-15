@@ -677,24 +677,63 @@ function renderMaterial() {
 
   // Append external scraped resources section at the bottom
   const subjectResources = scrapedResources[currentSubjectId] || { count: 0, items: [] };
-  if (subjectResources.items && subjectResources.items.length > 0) {
+  
+  // Filter strictly to PDF files or high-quality exam solutions (like abiturloesung.de)
+  const pdfResources = (subjectResources.items || []).filter(item => 
+    item.url.toLowerCase().endsWith('.pdf') || 
+    item.title.toLowerCase().includes('.pdf') ||
+    item.source === 'abiturloesung.de'
+  );
+
+  function translateTitleToSpanish(title) {
+    let clean = title;
+    const replacements = [
+      [/Mathematik/gi, "Matemáticas"],
+      [/Deutsch/gi, "Alemán"],
+      [/Englisch/gi, "Inglés"],
+      [/Spanisch/gi, "Español"],
+      [/Philosophie/gi, "Filosofía"],
+      [/Abiturprüfung/gi, "Examen de Abitur"],
+      [/Musteraufgaben/gi, "Tareas de Muestra"],
+      [/Musterprüfung/gi, "Examen de Muestra"],
+      [/Aufgaben/gi, "Tareas / Ejercicios"],
+      [/Lösung/gi, "Solución"],
+      [/Lösungen/gi, "Soluciones"],
+      [/Prüfung/gi, "Examen"],
+      [/Prüfungen/gi, "Exámenes"],
+      [/Jahrgang/gi, "Promoción"],
+      [/Bildungsstandards/gi, "Estándares Educativos"],
+      [/Erwartungshorizont/gi, "Criterios de Corrección / Solución"],
+      [/Gymnasium/gi, "Instituto"],
+      [/Schule/gi, "Colegio"]
+    ];
+    
+    replacements.forEach(([regex, rep]) => {
+      clean = clean.replace(regex, rep);
+    });
+    return clean;
+  }
+
+  if (pdfResources.length > 0) {
     const lang = App.currentLang;
-    const titleES = "🔗 Recursos y Exámenes oficiales de prueba (Recopilados)";
-    const titleDE = "🔗 Offizielle Ressourcen und Prüfungsaufgaben (Gesammelt)";
+    const titleES = "🔗 Exámenes y Recursos Oficiales de Prueba (PDF / Enlaces)";
+    const titleDE = "🔗 Offizielle Prüfungen und Testressourcen (PDF / Links)";
     const title = lang === 'de' ? titleDE : titleES;
     
-    const subtitleES = `Encontrados ${subjectResources.items.length} recursos de preparación del Abitur en portales oficiales y colegios alemanes.`;
-    const subtitleDE = `${subjectResources.items.length} Abitur-Vorbereitungsressourcen auf offiziellen Portalen und deutschen Auslandsschulen gefunden.`;
+    const subtitleES = `Encontrados ${pdfResources.length} documentos y exámenes oficiales de preparación para el Abitur.`;
+    const subtitleDE = `${pdfResources.length} PDF-Dokumente und Abitur-Prüfungen gefunden.`;
     const subtitle = lang === 'de' ? subtitleDE : subtitleES;
 
-    let itemsHtml = subjectResources.items.map(item => {
-      const typeLabel = item.type === 'pdf' ? '📄 PDF' : '🌐 Link';
+    let itemsHtml = pdfResources.map(item => {
+      const isPdf = item.url.toLowerCase().endsWith('.pdf') || item.title.toLowerCase().includes('.pdf');
+      const typeLabel = isPdf ? '📄 PDF' : '🌐 Solución';
+      const displayTitle = lang === 'es' ? translateTitleToSpanish(item.title) : item.title;
       return `
         <div class="card" style="padding:var(--space-md); background:rgba(255,255,255,0.02); display:flex; justify-content:space-between; align-items:center; gap:var(--space-md);">
           <div style="display:flex; flex-direction:column; gap:2px; text-align:left;">
             <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">${item.source}</span>
             <a href="${item.url}" target="_blank" style="font-size:0.85rem; font-weight:700; color:var(--text-primary); text-decoration:none;">
-              ${item.title}
+              ${displayTitle}
             </a>
           </div>
           <a href="${item.url}" target="_blank" class="difficulty-btn easy" style="font-size:0.75rem; padding:4px 10px; min-width:80px; text-align:center; text-decoration:none;">
