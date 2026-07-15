@@ -538,6 +538,12 @@ function renderQuestion(idx) {
 
   const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
   const yearBadge  = q.year  ? `<span class="badge badge-gold">${q.year}</span>` : '';
+  
+  // Bayern Formeldokument reference for Mathe
+  let formeldokumentBadge = '';
+  if (q.subjectId === 'mathe') {
+    formeldokumentBadge = `<a href="https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf" target="_blank" class="badge" style="background:rgba(245,200,66,0.15);color:var(--color-gold);text-decoration:none;border:1px solid rgba(245,200,66,0.3);">📐 Formeldokument (Bayern/ISB)</a>`;
+  }
 
   // ── ORAL simulation question ──────────────────────────────────────
   const isOralSubject = q.subjectId === 'espanol' || q.subjectId === 'philosophie';
@@ -626,10 +632,15 @@ function renderQuestion(idx) {
     const savedScore   = ExamEngine.essayScores?.[idx];
     const uid          = `essay_sol_${idx}`;
 
+    let curriculoBadge = '';
+    if (q.subjectId === 'espanol') {
+      curriculoBadge = `<a href="https://www.dsmadrid.org/docs/asignaturas/Curri%CC%81culo_DSM.pdf" target="_blank" class="badge" style="background:rgba(245,200,66,0.15);color:var(--color-gold);text-decoration:none;border:1px solid rgba(245,200,66,0.3);">📚 Currículo (DSM Madrid)</a>`;
+    }
+
     document.getElementById('questionsContainer').innerHTML = `
       <div class="question-card page-enter">
         <div class="flex gap-sm items-center flex-wrap" style="margin-bottom:var(--space-sm);">
-          ${topicBadge}
+          ${topicBadge} ${curriculoBadge}
           <span class="badge" style="background:rgba(245,200,66,0.15);color:var(--color-gold);">✍️ Desarrollo — ${maxPts} puntos</span>
         </div>
 
@@ -709,8 +720,8 @@ function renderQuestion(idx) {
 
   document.getElementById('questionsContainer').innerHTML = `
     <div class="question-card page-enter">
-      <div class="question-number flex gap-sm items-center" style="margin-bottom:var(--space-sm);">
-        ${topicBadge} ${yearBadge}
+      <div class="question-number flex gap-sm items-center flex-wrap" style="margin-bottom:var(--space-sm);">
+        ${topicBadge} ${yearBadge} ${formeldokumentBadge}
       </div>
       <div class="question-text">${qText}</div>
       <div class="answer-options">${optionsHTML}</div>
@@ -933,12 +944,18 @@ function renderContinuousExam() {
 
     const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
     const yearBadge = q.year ? `<span class="badge badge-gold">${q.year}</span>` : '';
+    
+    // Bayern Formeldokument reference for Mathe
+    let formeldokumentBadge = '';
+    if (q.subjectId === 'mathe') {
+      formeldokumentBadge = `<a href="https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf" target="_blank" class="badge" style="background:rgba(245,200,66,0.15);color:var(--color-gold);text-decoration:none;border:1px solid rgba(245,200,66,0.3);">📐 Formeldokument (Bayern/ISB)</a>`;
+    }
 
     html += `
       <div class="question-card" style="margin-bottom:var(--space-md);" id="q-card-${idx}">
-        <div class="question-number flex gap-sm items-center" style="margin-bottom:var(--space-sm);">
+        <div class="question-number flex gap-sm items-center flex-wrap" style="margin-bottom:var(--space-sm);">
           <span class="badge badge-success">Pregunta ${idx + 1} de ${total}</span>
-          ${topicBadge} ${yearBadge}
+          ${topicBadge} ${yearBadge} ${formeldokumentBadge}
         </div>
         <div class="question-text">${qText}</div>
         <div class="answer-options" id="q-options-${idx}">${optionsHTML}</div>

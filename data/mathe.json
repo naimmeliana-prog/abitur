@@ -1331,9 +1331,10 @@
       "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2023 — Mathematik GK",
       "year": "2023",
       "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "formeldokument_url": "https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf",
       "intro": {
-        "es": "Este es el archivo histórico del examen unificado del Zentralabitur NRW 2023 para nivel Grundkurs (GK). Abajo tienes acceso al enlace oficial de enunciados de la KMK/Ministerio y el desglose de los grandes problemas de desarrollo de la Parte B con sus correspondientes Erwartungshorizonte (pautas de corrección) y recomendaciones de examen redactadas por correctores oficiales.",
-        "de": "Hier findest du das Prüfungsarchiv des Zentralabiturs NRW 2023 für den Grundkurs (GK). Unten sind die ausführlichen Musterlösungen und der Erwartungshorizont (Bewertungskriterien) für die komplexen Aufgaben aus Teil B aufgeführt."
+        "es": "Este es el archivo histórico del examen unificado del Zentralabitur NRW 2023 para nivel Grundkurs (GK). Abajo tienes acceso al enlace oficial de enunciados de la KMK/Ministerio, el Formulario Oficial de Fórmulas Autorizado (formeldokument.pdf de Baviera/ISB) y el desglose de los grandes problemas de desarrollo de la Parte B con sus correspondientes Erwartungshorizonte (pautas de corrección) y recomendaciones de examen redactadas por correctores oficiales.",
+        "de": "Hier findest du das Prüfungsarchiv des Zentralabiturs NRW 2023 für den Grundkurs (GK). Unten sind die ausführlichen Musterlösungen, das offizielle Formeldokument (ISB Bayern) und der Erwartungshorizont (Bewertungskriterien) für die komplexen Aufgaben aus Teil B aufgeführt."
       },
       "blocks": [
         {
@@ -1615,9 +1616,10 @@
       "title": "Zentralabitur Nordrhein-Westfalen (NRW) 2022 — Mathematik GK",
       "year": "2022",
       "pdf_url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/pruefungsaufgaben/",
+      "formeldokument_url": "https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf",
       "intro": {
-        "es": "Examen unificado de Matemáticas Abitur NRW 2022 para Grundkurs (GK). Se compone de ejercicios del bloque A (sin calculadora, evaluación de derivadas e integrales básicas de funciones exponenciales) y del bloque B (con calculadora, enfocado en el análisis de niveles de ozono y cálculo de intersecciones y distancias tridimensionales).",
-        "de": "Zentralabiturprüfung Mathematik Nordrhein-Westfalen 2022 (Grundkurs). Enthält Aufgaben aus Teil A (hilfsmittelfrei: e-Funktion und Integralrechnung) sowie komplexe Anwendungsaufgaben aus Teil B (Ozonkonzentrationskurven und analytische Geometrie im dreidimensionalen Raum)."
+        "es": "Examen unificado de Matemáticas Abitur NRW 2022 para Grundkurs (GK). Se compone de ejercicios del bloque A (sin calculadora) y del bloque B (con calculadora). Puedes consultar el Formulario Oficial de Fórmulas Autorizado (formeldokument.pdf de Baviera/ISB) durante la práctica.",
+        "de": "Zentralabiturprüfung Mathematik Nordrhein-Westfalen 2022 (Grundkurs). Enthält Aufgaben aus Teil A (hilfsmittelfrei) und Teil B (mit CAS). Das offizielle Formeldokument (ISB Bayern) ist als Hilfsmittel zugelassen."
       },
       "blocks": [
         {
@@ -1757,9 +1759,10 @@
       "title": "DIA Abitur Mathematik 2023 — Analysis, Geometrie & Stochastik",
       "year": "2023",
       "source": "Basado en currículo DIA/ZfA — Contenido de práctica curado",
+      "formeldokument_url": "https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf",
       "intro": {
-        "es": "Examen de Matemáticas formato DIA completo. Teil A (sin calculadora): Análisis y Geometría analítica. Teil B (con calculadora CAS): Stochastik y modelización.",
-        "de": "Vollständige DIA-Matheprüfung. Teil A (kein Hilfsmittel): Analysis und Geometrie. Teil B (CAS): Stochastik und Modellierung."
+        "es": "Examen de Matemáticas formato DIA completo. Teil A (sin calculadora): Análisis y Geometría analítica. Teil B (con calculadora CAS): Stochastik y modelización. Puedes utilizar el Formulario Oficial de Fórmulas Autorizado (formeldokument.pdf de Baviera/ISB) durante la resolución.",
+        "de": "Vollständige DIA-Matheprüfung. Teil A (kein Hilfsmittel): Analysis und Geometrie. Teil B (CAS): Stochastik und Modellierung. Das offizielle Formeldokument (ISB Bayern) ist als Hilfsmittel zugelassen."
       },
       "blocks": [
         {

@@ -376,7 +376,17 @@ function renderWrittenExams(exams) {
               Materia: <strong>${lang==='de'?meta.nameDE:meta.name}</strong> | Año oficial: ${exam.year}
             </div>
           </div>
-          <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-left:auto;">
+          <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-left:auto;align-items:center;">
+            ${exam.formeldokument_url ? `
+              <a href="${exam.formeldokument_url}" target="_blank" class="btn btn-outline-gold btn-sm" style="display:flex;align-items:center;gap:6px;text-decoration:none;border-radius:var(--radius-sm);font-size:11px;">
+                📐 Formulario (Bayern/ISB)
+              </a>
+            ` : ''}
+            ${exam.curriculo_dsm_url ? `
+              <a href="${exam.curriculo_dsm_url}" target="_blank" class="btn btn-outline-gold btn-sm" style="display:flex;align-items:center;gap:6px;text-decoration:none;border-radius:var(--radius-sm);font-size:11px;">
+                📚 Currículo (DSM Madrid)
+              </a>
+            ` : ''}
             <button onclick="PDFGenerator.generateWrittenExam('${exam.subjectId}', '${exam.id}', false)" class="btn btn-secondary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
               🖨️ Imprimir Examen
             </button>

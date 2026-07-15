@@ -1,6 +1,6 @@
 {
   "mathe": {
-    "count": 6,
+    "count": 1,
     "items": [
       {
         "title": "Abitur Bayern Mathe: Merkhilfe Mathematik",
@@ -8,132 +8,23 @@
         "source": "abiturloesung.de",
         "license": "Verify Individually/Educational",
         "type": "pdf"
-      },
-      {
-        "title": "[DSMADRID] Currículo Castellano",
-        "url": "https://www.dsmadrid.org/docs/asignaturas/Currículo_DSM.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSMADRID] Schulcurriculum Mathematik Klasse 11 - 12",
-        "url": "https://www.dsmadrid.org/docs/matematicas/Schulcurriculum_SEK2_DSM_Mathematik_Juni 2024.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSMADRID] GTR Führerschein",
-        "url": "https://www.dsmadrid.org/docs/asignaturas/GTR-Führerschein.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSTENERIFE] Matemáticas",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2024/09/Arbeitsplan-Mathe-20.05.2024.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSTENERIFE] Español (e)",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2016/04/Primaria-Curriculum-Lengua-Castellana-y-Literatura-de-la-Comunidad-Autónoma-Canaria.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
       }
     ]
   },
   "deutsch": {
-    "count": 6,
-    "items": [
-      {
-        "title": "[DSMADRID] Förderkurs Deutsch Klassenstufe 9/10",
-        "url": "https://www.dsmadrid.org/docs/actualidad/Informationen zum Förderunterricht Deutsch Klassenstufe 9_10.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSMADRID] Schulcurriculum Deutsch 5. - 8. Klasse",
-        "url": "https://www.dsmadrid.org/docs/asignaturas/Curriculum 5-8 DSM_schulintern ab SJ 2024_25.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSMADRID] Schulcurriculum Deutsch 11. -12. Klasse",
-        "url": "https://www.dsmadrid.org/docs/asignaturas/Schulcurriculum Deutsch Sek II für Abitur ab 2024.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSMADRID] Schulcurriculum Deutsch 11. -12. Klasse",
-        "url": "https://www.dsmadrid.org/docs/asignaturas/DSM_Curriculum_Deutsch_11-12_ab2025_2026.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSTENERIFE] Alemán",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2024/09/Arbeitsplan-Deutsch-06.06.2024.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSTENERIFE] Español (e)",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2016/04/Primaria-Curriculum-Lengua-Castellana-y-Literatura-de-la-Comunidad-Autónoma-Canaria.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "englisch": {
-    "count": 1,
-    "items": [
-      {
-        "title": "[DSTENERIFE] Inglés",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2024/09/Arbeitsplan-Englisch_06.06.2024.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "philosophie": {
-    "count": 1,
-    "items": [
-      {
-        "title": "[DSTENERIFE] Ética",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2024/09/Arbeitsplan-Ethik_-06.06.2024.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "espanol": {
-    "count": 2,
-    "items": [
-      {
-        "title": "[DSMADRID] Currículo Castellano",
-        "url": "https://www.dsmadrid.org/docs/asignaturas/Currículo_DSM.pdf",
-        "source": "dsmadrid.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      },
-      {
-        "title": "[DSTENERIFE] Español (e)",
-        "url": "https://www.dstenerife.eu/wp-content/uploads/2016/04/Primaria-Curriculum-Lengua-Castellana-y-Literatura-de-la-Comunidad-Autónoma-Canaria.pdf",
-        "source": "dstenerife.org",
-        "license": "Educational Use/Public School Document",
-        "type": "pdf"
-      }
-    ]
+    "count": 0,
+    "items": []
   }
 }

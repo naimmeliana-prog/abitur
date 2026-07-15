@@ -326,15 +326,39 @@ def run_all_scrapes():
         urls_seen = set()
         merged = []
         for item in (abiturloesung_items + colegios_items + kmk_items):
-            if item['url'] not in urls_seen:
-                urls_seen.add(item['url'])
-                merged.append(item)
+            # Respect user request: only pull real exams by matching "Abiturprüfung" or "Prüfung" or "Merkhilfe"
+            title_lower = item['title'].lower()
+            url_lower = item['url'].lower()
+            
+            is_valid_exam = (
+                "abiturprüfung" in title_lower or 
+                "abiturprüfung" in url_lower or 
+                "prüfung" in title_lower or 
+                "merkhilfe" in title_lower or
+                "loesung" in url_lower
+            )
+            
+            # Avoid calculator guides, curricula (except where explicitly wanted), general ethics plans
+            is_noise = (
+                "taschenrechner" in title_lower or
+                "führerschein" in title_lower or
+                "curriculum" in title_lower or
+                "currículo" in title_lower or
+                "arbeitsplan" in title_lower or
+                "förderkurs" in title_lower or
+                "informationen" in title_lower
+            )
+            
+            if is_valid_exam and not is_noise:
+                if item['url'] not in urls_seen:
+                    urls_seen.add(item['url'])
+                    merged.append(item)
                 
         aggregated_data[subject] = {
             'count': len(merged),
             'items': merged
         }
-        print(f"✓ Total unique external items found for {subject}: {len(merged)}")
+        print(f"✓ Total unique external exams found for {subject}: {len(merged)}")
         
     output_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'external_scraped_resources.json')
     with open(output_path, 'w', encoding='utf-8') as f:
