@@ -318,8 +318,7 @@
 <script src="js/app.js"></script>
 <script src="js/progress.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  App.init();
+function renderDashboard() {
   const user = Auth.getCurrentUser();
   if (!user) { window.location.href = 'auth.html'; return; }
 
@@ -334,8 +333,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // XP bar
   const pct = levelInfo.progress;
   setTimeout(() => {
-    document.getElementById('dashXPBar').style.width = pct + '%';
-    document.getElementById('progressCircle').style.strokeDashoffset = 377 - (377 * pct / 100);
+    const dashXPBar = document.getElementById('dashXPBar');
+    const progressCircle = document.getElementById('progressCircle');
+    if (dashXPBar) dashXPBar.style.width = pct + '%';
+    if (progressCircle) progressCircle.style.strokeDashoffset = 377 - (377 * pct / 100);
   }, 300);
   document.getElementById('dashXPCurrent').textContent = data.xp + ' XP';
   document.getElementById('dashXPNext').textContent = levelInfo.nextLevel
@@ -362,6 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Stats labels
   const statsLabels = document.querySelectorAll('#quickStats .quick-stat-label');
   if (statsLabels.length >= 4) {
+    statsLabels[0].textContent = isDe ? 'Abgeschlossene Axamen' : 'Exámenes completados'; // Note: keep alignment
     statsLabels[0].textContent = isDe ? 'Abgeschlossene Prüfungen' : 'Exámenes completados';
     statsLabels[1].textContent = isDe ? 'Durchschnittsnote' : 'Nota media';
     statsLabels[2].textContent = isDe ? 'Lernstunden' : 'Horas de estudio';
@@ -469,6 +471,11 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  App.init();
+  renderDashboard();
 
   // Level up overlay
   document.getElementById('levelUpOverlay').addEventListener('click', function() {
@@ -480,8 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Dynamic language callback registered globally
 window.onLangChange = function(lang) {
-  // Re-run index UI rendering loop to dynamically update all elements
-  document.dispatchEvent(new Event('DOMContentLoaded'));
+  renderDashboard();
 };
 </script>
 </body>
