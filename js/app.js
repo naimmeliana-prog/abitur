@@ -434,13 +434,21 @@ const App = {
       if (btnIncrease) {
         e.preventDefault();
         let current = localStorage.getItem('abitur_font_size') || 'normal';
-        let next = current === 'normal' ? 'large' : current === 'small' ? 'normal' : 'large';
+        let next = current;
+        if (current === 'small') next = 'normal';
+        else if (current === 'normal') next = 'large';
+        else if (current === 'large') next = 'xlarge';
+        else if (current === 'xlarge') next = 'xlarge';
         localStorage.setItem('abitur_font_size', next);
         this.applyFontSize(next);
       } else if (btnDecrease) {
         e.preventDefault();
         let current = localStorage.getItem('abitur_font_size') || 'normal';
-        let next = current === 'normal' ? 'small' : current === 'large' ? 'normal' : 'small';
+        let next = current;
+        if (current === 'xlarge') next = 'large';
+        else if (current === 'large') next = 'normal';
+        else if (current === 'normal') next = 'small';
+        else if (current === 'small') next = 'small';
         localStorage.setItem('abitur_font_size', next);
         this.applyFontSize(next);
       }
@@ -448,21 +456,23 @@ const App = {
   },
 
   applyFontSize(size) {
-    document.documentElement.classList.remove('font-size-small', 'font-size-normal', 'font-size-large');
+    document.documentElement.classList.remove('font-size-small', 'font-size-normal', 'font-size-large', 'font-size-xlarge');
     document.documentElement.classList.add(`font-size-${size}`);
     
     // Fallback/Direct override to ensure body propagates sizing relative to the selection
     const sizeMap = {
       'small': '13px',
       'normal': '16px',
-      'large': '21px'
+      'large': '20px',
+      'xlarge': '24px'
     };
     document.body.style.fontSize = sizeMap[size] || '16px';
 
     const factorMap = {
       'small': 0.8,
       'normal': 1.0,
-      'large': 1.3
+      'large': 1.25,
+      'xlarge': 1.5
     };
     const factor = factorMap[size] || 1.0;
 

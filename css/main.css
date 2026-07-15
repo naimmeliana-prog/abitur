@@ -115,15 +115,19 @@ html {
 /* Propagate root font-sizing changes dynamically to all elements using rem */
 html.font-size-small { font-size: 13px; }
 html.font-size-normal { font-size: 16px; }
-html.font-size-large { font-size: 21px; }
+html.font-size-large { font-size: 20px; }
+html.font-size-xlarge { font-size: 24px; }
 
 /* Apply responsive sizing adjustments for headers/elements when scaled */
 html.font-size-small h1 { font-size: 1.3rem; }
 html.font-size-small h2 { font-size: 1.1rem; }
 html.font-size-small h3 { font-size: 0.95rem; }
-html.font-size-large h1 { font-size: 2.2rem; }
-html.font-size-large h2 { font-size: 1.8rem; }
-html.font-size-large h3 { font-size: 1.5rem; }
+html.font-size-large h1 { font-size: 2.1rem; }
+html.font-size-large h2 { font-size: 1.7rem; }
+html.font-size-large h3 { font-size: 1.4rem; }
+html.font-size-xlarge h1 { font-size: 2.5rem; }
+html.font-size-xlarge h2 { font-size: 2.0rem; }
+html.font-size-xlarge h3 { font-size: 1.7rem; }
 
 body {
   font-family: var(--font-body);
@@ -537,12 +541,12 @@ body {
 .grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-lg); }
 
 /* ─── Typography ────────────────────────────────────────────── */
-h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; letter-spacing: -1px; line-height: 1.2; }
-h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.5px; }
-h3 { font-size: clamp(16px, 2.5vw, 22px); font-weight: 600; }
-h4 { font-size: 16px; font-weight: 600; }
-h5 { font-size: 14px; font-weight: 600; }
-h6 { font-size: 12px; font-weight: 600; }
+h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 800; letter-spacing: -1px; line-height: 1.2; }
+h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; letter-spacing: -0.5px; }
+h3 { font-size: clamp(1rem, 2.5vw, 1.375rem); font-weight: 600; }
+h4 { font-size: 1rem; font-weight: 600; }
+h5 { font-size: 0.875rem; font-weight: 600; }
+h6 { font-size: 0.75rem; font-weight: 600; }
 
 .text-gradient-gold {
   background: var(--gradient-gold);
@@ -1348,4 +1352,30 @@ h6 { font-size: 12px; font-weight: 600; }
   .main-content { margin-left: 0 !important; }
   body { background: white; color: black; }
   .card { border: 1px solid #ccc; box-shadow: none; }
+}
+
+/* ─── Responsive Font Sizing Layout Safety Overrides ───────────────── */
+/* Ensure all cards break words and wrap correctly to prevent horizontal text clipping */
+.card, .highlight-box, .formula-card, .subject-card-full, .subject-card {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Force grid columns to collapse to a single column when viewport is narrow OR when font-size is large/xlarge */
+html.font-size-large .grid-2,
+html.font-size-large .grid-3,
+html.font-size-xlarge .grid-2,
+html.font-size-xlarge .grid-3,
+html.font-size-xlarge .grid-4,
+html.font-size-xlarge .grid-5,
+html.font-size-large .grid-auto,
+html.font-size-xlarge .grid-auto {
+  grid-template-columns: 1fr !important;
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4, .grid-5, .grid-auto {
+    grid-template-columns: 1fr !important;
+  }
 }
