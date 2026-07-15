@@ -166,88 +166,152 @@ def scrape_abiturloesung(subject):
         print(f"❌ [ABITURLOESUNG] Error: {e}")
         return []
 
+# Global caches to run the web requests only once per session
+COLEGIOS_CACHE = None
+KMK_CACHE = None
+
 def scrape_colegios_alemanes(subject):
     """Scrapes Abitur resources and PDFs from the 9 official German schools in Spain"""
-    # Since these are German schools, materials are usually for general subjects
-    # We will look for PDFs on their Abitur landing pages
-    schools = {
-        'dsmadrid': 'https://www.dsmadrid.org/es/secundaria/abitur',
-        'dsbarcelona': 'https://www.dsbarcelona.com/es/secundaria/abitur',
-        'dsvalencia': 'https://www.dsvalencia.org/es/abitur',
-        'dsbilbao': 'https://www.dsbilbao.org/es/secundaria/abitur',
-        'dsmalaga': 'https://www.dsmalaga.com/es/secundaria/abitur',
-        'colegioaleman_san_sebastian': 'https://colegioaleman.net/es/abitur',
-        'colegioaleman_sevilla': 'https://colegioalemansevilla.com/es/secundaria/abitur',
-        'dstenerife': 'https://www.dstenerife.eu/es/secundaria/abitur',
-        'dslpa': 'https://www.dslpa.org/es/secundaria/abitur'
+    global COLEGIOS_CACHE
+    
+    # Subject keywords to filter the cached school resources
+    subject_keywords = {
+        'mathe': ['mathe', 'mathematik', 'math', 'gtr', 'cas'],
+        'deutsch': ['deutsch', 'aleman', 'germanistik', 'literatur'],
+        'englisch': ['englisch', 'ingles', 'english', 'anglistik'],
+        'philosophie': ['philosophie', 'filosofia', 'ethik'],
+        'espanol': ['espanol', 'spanisch', 'castellano', 'lengua']
     }
     
-    resources = []
-    for school_name, url in schools.items():
-        print(f"🔍 [COLEGIO ALEMAN] Scraping {school_name}: {url}")
-        try:
-            time.sleep(1.0)
-            response = requests.get(url, headers=HEADERS, timeout=15)
-            if response.status_code != 200:
-                print(f"⚠️ [COLEGIO ALEMAN] Status code {response.status_code} for {school_name}")
-                continue
-                
-            soup = BeautifulSoup(response.content, 'html.parser')
-            for link in soup.find_all('a', href=True):
-                href = link['href']
-                text = link.text.strip()
-                if '.pdf' in href.lower():
-                    from urllib.parse import urljoin
-                    full_url = urljoin(url, href)
+    if COLEGIOS_CACHE is None:
+        schools = {
+            'dsmadrid': 'https://www.dsmadrid.org/es/secundaria/abitur',
+            'dsbarcelona': 'https://www.dsbarcelona.com/es/secundaria/abitur',
+            'dsvalencia': 'https://www.dsvalencia.org/es/abitur',
+            'dsbilbao': 'https://www.dsbilbao.org/es/secundaria/abitur',
+            'dsmalaga': 'https://www.dsmalaga.com/es/secundaria/abitur',
+            'colegioaleman_san_sebastian': 'https://colegioaleman.net/es/abitur',
+            'colegioaleman_sevilla': 'https://colegioalemansevilla.com/es/secundaria/abitur',
+            'dstenerife': 'https://www.dstenerife.eu/es/secundaria/abitur',
+            'dslpa': 'https://www.dslpa.org/es/secundaria/abitur'
+        }
+        
+        all_resources = []
+        from urllib.parse import urljoin
+        
+        for school_name, url in schools.items():
+            print(f"🔍 [COLEGIO ALEMAN] Scraping {school_name}: {url}")
+            try:
+                time.sleep(1.0)
+                response = requests.get(url, headers=HEADERS, timeout=10)
+                if response.status_code != 200:
+                    print(f"⚠️ [COLEGIO ALEMAN] Status code {response.status_code} for {school_name}")
+                    continue
                     
-                    if len(text) > 3:
-                        resources.append({
-                            'title': f"[{school_name.upper()}] {text}",
-                            'url': full_url,
-                            'source': f"{school_name}.org",
-                            'license': 'Educational Use/Public School Document',
-                            'type': 'pdf'
-                        })
-        except Exception as e:
-            print(f"❌ [COLEGIO ALEMAN] Error scraping {school_name}: {e}")
+                soup = BeautifulSoup(response.content, 'html.parser')
+                visited_subpages = set()
+                
+                def find_pdfs(page_soup, page_url):
+                    page_resources = []
+                    for link in page_soup.find_all('a', href=True):
+                        href = link['href']
+                        text = link.text.strip()
+                        if '.pdf' in href.lower():
+                            full_url = urljoin(page_url, href)
+                            if len(text) > 3:
+                                page_resources.append({
+                                    'title': f"[{school_name.upper()}] {text}",
+                                    'url': full_url,
+                                    'source': f"{school_name}.org",
+                                    'license': 'Educational Use/Public School Document',
+                                    'type': 'pdf'
+                                })
+                    return page_resources
+
+                # Extract direct PDFs
+                all_resources.extend(find_pdfs(soup, url))
+                
+                # Find and scan highly specific subpages (depth 1)
+                for link in soup.find_all('a', href=True):
+                    href = link['href']
+                    full_sub_url = urljoin(url, href)
+                    # Visit Abitur sections and direct subject curriculum folders
+                    if school_name in full_sub_url and any(k in href.lower() for k in ['abitur', 'lehrplan', 'curriculum', 'curriculo', 'prüfung', 'examen', 'asignaturas', 'castellano', 'religion', 'filosofia', 'etica']):
+                        if full_sub_url not in visited_subpages and len(visited_subpages) < 20: # Limit subpages to 20 to prevent loops
+                            visited_subpages.add(full_sub_url)
+                            try:
+                                time.sleep(0.5)
+                                sub_res = requests.get(full_sub_url, headers=HEADERS, timeout=10)
+                                if sub_res.status_code == 200:
+                                    sub_soup = BeautifulSoup(sub_res.content, 'html.parser')
+                                    all_resources.extend(find_pdfs(sub_soup, full_sub_url))
+                            except Exception:
+                                pass
+            except Exception as e:
+                print(f"❌ [COLEGIO ALEMAN] Error scraping {school_name}: {e}")
+        
+        COLEGIOS_CACHE = all_resources
+
+    # Filter resources for this subject
+    keywords = subject_keywords.get(subject, [])
+    filtered_resources = []
+    for item in COLEGIOS_CACHE:
+        # Check if the title or URL contains any keyword for this subject
+        if any(kw in item['title'].lower() or kw in item['url'].lower() for kw in keywords):
+            filtered_resources.append(item)
             
-    return resources
+    return filtered_resources
 
 def scrape_kmk_org(subject):
     """Scrapes official Abitur standards and pool guidelines from the Kultusministerkonferenz (kmk.org)"""
-    if subject not in ['deutsch', 'mathe', 'englisch']:
-        return []
-        
-    base_url = "https://www.kmk.org"
-    url = f"{base_url}/themen/allgemeinbildende-schulen/gegenseitige-anerkennung-von-abiturzeugnissen.html"
+    global KMK_CACHE
     
-    print(f"🔍 [KMK.ORG] Scraping: {url}")
-    try:
-        time.sleep(1.0)
-        response = requests.get(url, headers=HEADERS, timeout=15)
-        if response.status_code != 200:
-            return []
-            
-        soup = BeautifulSoup(response.content, 'html.parser')
-        resources = []
-        for link in soup.find_all('a', href=True):
-            href = link['href']
-            text = link.text.strip()
-            if '.pdf' in href.lower():
-                from urllib.parse import urljoin
-                full_url = urljoin(url, href)
-                if len(text) > 3:
-                    resources.append({
-                        'title': f"KMK: {text}",
-                        'url': full_url,
-                        'source': 'kmk.org',
-                        'license': 'Official Public Document',
-                        'type': 'pdf'
-                    })
-        return resources
-    except Exception as e:
-        print(f"❌ [KMK.ORG] Error: {e}")
+    subject_keywords = {
+        'mathe': ['mathe', 'mathematik', 'math'],
+        'deutsch': ['deutsch', 'germanistik', 'literatur'],
+        'englisch': ['englisch', 'ingles', 'english']
+    }
+    
+    if subject not in subject_keywords:
         return []
+
+    if KMK_CACHE is None:
+        base_url = "https://www.kmk.org"
+        url = f"{base_url}/downloads-dokumente/beschluesse-und-veroeffentlichungen/bildung-/-schule.html"
+        
+        print(f"🔍 [KMK.ORG] Scraping: {url}")
+        all_kmk = []
+        try:
+            time.sleep(1.0)
+            response = requests.get(url, headers=HEADERS, timeout=15)
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
+                for link in soup.find_all('a', href=True):
+                    href = link['href']
+                    text = link.text.strip()
+                    if '.pdf' in href.lower() and any(k in href.lower() or k in text.lower() for k in ['abitur', 'vereinbarung', 'gymnasiale', 'oberstufe']):
+                        from urllib.parse import urljoin
+                        full_url = urljoin(url, href)
+                        if len(text) > 3:
+                            all_kmk.append({
+                                'title': f"KMK: {text}",
+                                'url': full_url,
+                                'source': 'kmk.org',
+                                'license': 'Official Public Document',
+                                'type': 'pdf'
+                            })
+        except Exception as e:
+            print(f"❌ [KMK.ORG] Error: {e}")
+        
+        KMK_CACHE = all_kmk
+
+    # Filter KMK files for this subject
+    keywords = subject_keywords.get(subject, [])
+    filtered = []
+    for item in KMK_CACHE:
+        if any(kw in item['title'].lower() or kw in item['url'].lower() for kw in keywords):
+            filtered.append(item)
+    return filtered
 
 def run_all_scrapes():
     subjects = ['mathe', 'deutsch', 'englisch', 'philosophie', 'espanol']

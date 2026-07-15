@@ -316,6 +316,45 @@ function renderBank(questions) {
   }
 }
 
+function translateTitleToSpanish(title) {
+  if (!title) return '';
+  let clean = title;
+  const replacements = [
+    [/Aufgabe/gi, "Tarea"],
+    [/Gedichtanalyse/gi, "Análisis de Poema"],
+    [/im Vergleich zu/gi, "en comparación con"],
+    [/von/gi, "de"],
+    [/Gedichtvergleich/gi, "Comparación de Poemas"],
+    [/Analyse/gi, "Análisis"],
+    [/und/gi, "y"],
+    [/Erörterung/gi, "Disertación / Debate"],
+    [/eines Sachtextes/gi, "de un texto pragmático"],
+    [/über/gi, "sobre"],
+    [/der Szene/gi, "de la escena"],
+    [/aus/gi, "de"],
+    [/Teil/gi, "Parte"],
+    [/Geometrie/gi, "Geometría"],
+    [/Ebenen/gi, "Planos"],
+    [/Raum/gi, "el Espacio"],
+    [/Abstände/gi, "Distancias"],
+    [/LGS/gi, "Sistema de Ecuaciones Lineales"],
+    [/Matrizen/gi, "Matrices"],
+    [/Bedingte Wahrscheinlichkeit/gi, "Probabilidad Condicional"],
+    [/Binomialverteilung/gi, "Distribución Binomial"],
+    [/Hypothesentest/gi, "Test de Hipótesis"],
+    [/Inhaltliche/gi, "Contenido"],
+    [/Wiedergabe/gi, "Resumen / Reproducción"],
+    [/Sprachanalyse/gi, "Análisis Lingüístico"],
+    [/Erwartungshorizont/gi, "Criterios de Corrección / Solución"],
+    [/Schriftliche Prüfung/gi, "Examen Escrito"]
+  ];
+  
+  replacements.forEach(([regex, rep]) => {
+    clean = clean.replace(regex, rep);
+  });
+  return clean;
+}
+
 function renderWrittenExams(exams) {
   const lang = App.currentLang;
   const container = document.getElementById('bankContainer');
@@ -352,17 +391,20 @@ function renderWrittenExams(exams) {
         </p>
 
         <div class="flex-col gap-sm">
-          ${(exam.blocks || []).map((block, bi) => `
+          ${(exam.blocks || []).map((block, bi) => {
+            const blockName = lang === 'es' ? translateTitleToSpanish(block.name) : block.name;
+            return `
             <div style="border:1px solid var(--glass-border);border-radius:var(--radius-md);background:rgba(255,255,255,0.01);overflow:hidden;padding:var(--space-sm) var(--space-md);">
-              <span style="font-size:13px;font-weight:700;color:var(--text-primary);">${block.name}</span>
+              <span style="font-size:13px;font-weight:700;color:var(--text-primary);">${blockName}</span>
               <div class="flex-col gap-xs" style="margin-top:6px;">
                 ${(block.tasks || []).map((task, ti) => {
                   const uniqueId = `bank_written_task_${ei}_${bi}_${ti}`;
+                  const taskTitle = lang === 'es' ? translateTitleToSpanish(task.title) : task.title;
                   return `
                     <div style="border:1px solid var(--glass-border);border-radius:var(--radius-sm);background:rgba(255,255,255,0.02);overflow:hidden;margin-bottom:4px;">
                       <div style="padding:6px 12px;cursor:pointer;background:rgba(255,255,255,0.03);display:flex;justify-content:between;align-items:center;"
                         onclick="const el = document.getElementById('${uniqueId}'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
-                        <span style="font-size:12px;font-weight:700;color:var(--color-gold);">${task.title} (${task.points} Puntos)</span>
+                        <span style="font-size:12px;font-weight:700;color:var(--color-gold);">${taskTitle} (${task.points} Puntos)</span>
                         <span style="margin-left:auto;font-size:10px;color:var(--text-muted);">▼</span>
                       </div>
                       
@@ -382,7 +424,8 @@ function renderWrittenExams(exams) {
                     </div>`;
                 }).join('')}
               </div>
-            </div>`).join('')}
+            </div>`;
+          }).join('')}
         </div>
       </div>`;
   }).join('');
