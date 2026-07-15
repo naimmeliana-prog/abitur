@@ -32,18 +32,12 @@ def check_robots_txt(base_url):
     return None
 
 def fetch_serlo_content(subject):
-    """Fetches articles from Serlo.org"""
+    """Fetches articles from Serlo.org (Only available for math)"""
+    if subject != 'mathe':
+        return []
+        
     base_url = "https://de.serlo.org"
-    subject_map = {
-        'mathe': 'mathematik',
-        'deutsch': 'deutsch',
-        'englisch': 'englisch',
-        'philosophie': 'philosophie',
-        'espanol': 'spanisch'
-    }
-    
-    subject_path = subject_map.get(subject, subject)
-    url = f"{base_url}/{subject_path}"
+    url = f"{base_url}/mathe"
     
     print(f"🔍 [SERLO] Scraping: {url}")
     try:
@@ -55,7 +49,7 @@ def fetch_serlo_content(subject):
         for link in soup.find_all('a', href=True):
             href = link['href']
             text = link.text.strip()
-            if len(text) > 8 and ('/mathe/' in href or '/deutsch/' in href or '/englisch/' in href or '/philosophie/' in href or href.startswith('/') and len(href) > 5):
+            if len(text) > 8 and ('/mathe/' in href or href.startswith('/') and len(href) > 5):
                 articles.append({
                     'title': text,
                     'url': href if href.startswith('http') else base_url + href,
@@ -71,14 +65,16 @@ def scrape_wikiversity(subject):
     """Scrapes German Wikiversity categories"""
     base_url = "https://de.wikiversity.org"
     categories = {
-        'mathe': 'Fachbereich:Mathematik',
-        'deutsch': 'Fachbereich:Deutsch',
-        'englisch': 'Fachbereich:Englisch',
-        'philosophie': 'Fachbereich:Philosophie',
-        'espanol': 'Fachbereich:Spanisch'
+        'mathe': 'Fachbereich_Mathematik',
+        'deutsch': 'Fachbereich_Germanistik',
+        'englisch': 'Fachbereich_Anglistik',
+        'philosophie': 'Fachbereich_Philosophie',
+        'espanol': 'Fachbereich_Romanistik'
     }
     
-    cat = categories.get(subject, subject)
+    cat = categories.get(subject)
+    if not cat:
+        return []
     url = f"{base_url}/wiki/Kategorie:{cat}"
     
     print(f"🔍 [WIKIVERSITY] Scraping: {url}")
@@ -170,6 +166,89 @@ def scrape_abiturloesung(subject):
         print(f"❌ [ABITURLOESUNG] Error: {e}")
         return []
 
+def scrape_colegios_alemanes(subject):
+    """Scrapes Abitur resources and PDFs from the 9 official German schools in Spain"""
+    # Since these are German schools, materials are usually for general subjects
+    # We will look for PDFs on their Abitur landing pages
+    schools = {
+        'dsmadrid': 'https://www.dsmadrid.org/es/secundaria/abitur',
+        'dsbarcelona': 'https://www.dsbarcelona.com/es/secundaria/abitur',
+        'dsvalencia': 'https://www.dsvalencia.org/es/abitur',
+        'dsbilbao': 'https://www.dsbilbao.org/es/secundaria/abitur',
+        'dsmalaga': 'https://www.dsmalaga.com/es/secundaria/abitur',
+        'colegioaleman_san_sebastian': 'https://colegioaleman.net/es/abitur',
+        'colegioaleman_sevilla': 'https://colegioalemansevilla.com/es/secundaria/abitur',
+        'dstenerife': 'https://www.dstenerife.eu/es/secundaria/abitur',
+        'dslpa': 'https://www.dslpa.org/es/secundaria/abitur'
+    }
+    
+    resources = []
+    for school_name, url in schools.items():
+        print(f"🔍 [COLEGIO ALEMAN] Scraping {school_name}: {url}")
+        try:
+            time.sleep(1.0)
+            response = requests.get(url, headers=HEADERS, timeout=15)
+            if response.status_code != 200:
+                print(f"⚠️ [COLEGIO ALEMAN] Status code {response.status_code} for {school_name}")
+                continue
+                
+            soup = BeautifulSoup(response.content, 'html.parser')
+            for link in soup.find_all('a', href=True):
+                href = link['href']
+                text = link.text.strip()
+                if '.pdf' in href.lower() or any(keyword in href.lower() or keyword in text.lower() for keyword in ['abitur', 'prüfung', 'examen', 'modelo', 'dias']):
+                    from urllib.parse import urljoin
+                    full_url = urljoin(url, href)
+                    
+                    if len(text) > 3:
+                        resources.append({
+                            'title': f"[{school_name.upper()}] {text}",
+                            'url': full_url,
+                            'source': f"{school_name}.org",
+                            'license': 'Educational Use/Public School Document',
+                            'type': 'pdf' if '.pdf' in href.lower() else 'html'
+                        })
+        except Exception as e:
+            print(f"❌ [COLEGIO ALEMAN] Error scraping {school_name}: {e}")
+            
+    return resources
+
+def scrape_kmk_org(subject):
+    """Scrapes official Abitur standards and pool guidelines from the Kultusministerkonferenz (kmk.org)"""
+    if subject not in ['deutsch', 'mathe', 'englisch']:
+        return []
+        
+    base_url = "https://www.kmk.org"
+    url = f"{base_url}/themen/allgemeinbildende-schulen/gegenseitige-anerkennung-von-abiturzeugnissen.html"
+    
+    print(f"🔍 [KMK.ORG] Scraping: {url}")
+    try:
+        time.sleep(1.0)
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        if response.status_code != 200:
+            return []
+            
+        soup = BeautifulSoup(response.content, 'html.parser')
+        resources = []
+        for link in soup.find_all('a', href=True):
+            href = link['href']
+            text = link.text.strip()
+            if '.pdf' in href.lower() or any(keyword in href.lower() or keyword in text.lower() for keyword in ['abitur', 'prüfung', 'bildungsstandards']):
+                from urllib.parse import urljoin
+                full_url = urljoin(url, href)
+                if len(text) > 3:
+                    resources.append({
+                        'title': f"KMK: {text}",
+                        'url': full_url,
+                        'source': 'kmk.org',
+                        'license': 'Official Public Document',
+                        'type': 'pdf' if '.pdf' in href.lower() else 'html'
+                    })
+        return resources
+    except Exception as e:
+        print(f"❌ [KMK.ORG] Error: {e}")
+        return []
+
 def run_all_scrapes():
     subjects = ['mathe', 'deutsch', 'englisch', 'philosophie', 'espanol']
     aggregated_data = {}
@@ -180,10 +259,12 @@ def run_all_scrapes():
         wiki_items = scrape_wikiversity(subject)
         hessen_items = scrape_hessen_bildungsserver(subject)
         abiturloesung_items = scrape_abiturloesung(subject)
+        colegios_items = scrape_colegios_alemanes(subject)
+        kmk_items = scrape_kmk_org(subject)
         
         urls_seen = set()
         merged = []
-        for item in (serlo_items + wiki_items + hessen_items + abiturloesung_items):
+        for item in (serlo_items + wiki_items + hessen_items + abiturloesung_items + colegios_items + kmk_items):
             if item['url'] not in urls_seen:
                 urls_seen.add(item['url'])
                 merged.append(item)

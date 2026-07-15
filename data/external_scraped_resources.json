@@ -1,7 +1,619 @@
 {
   "mathe": {
-    "count": 34,
+    "count": 147,
     "items": [
+      {
+        "title": "🎓 Ui, schon Prüfungszeit? Hier geht's zur Mathe-Prüfungsvorbereitung.",
+        "url": "https://de.serlo.org/mathe-pruefungen",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Themen nach Lehrplan ⬈",
+        "url": "https://de.serlo.org/mathe/16030/deutschland",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Nullstellen berechnen Artikel",
+        "url": "https://de.serlo.org/mathe/1531/nullstellen-berechnen",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Gemischte Aufgaben zum Ableiten von Funktionen Aufgabensammlung",
+        "url": "https://de.serlo.org/mathe/26408/gemischte-aufgaben-zum-ableiten-von-funktionen",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Was ist ein Bruch? Artikel",
+        "url": "https://de.serlo.org/mathe/1657/was-ist-ein-bruch",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Prozentrechnung mittels Formeln Artikel",
+        "url": "https://de.serlo.org/mathe/2193/prozentrechnung-mittels-formeln",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Aufgaben zu den binomischen Formeln Aufgabensammlung",
+        "url": "https://de.serlo.org/mathe/26312/aufgaben-zu-den-binomischen-formeln",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mitmachen",
+        "url": "https://de.serlo.org/community",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mitmachen",
+        "url": "https://de.serlo.org/mitmachen",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Über Serlo",
+        "url": "https://de.serlo.org/serlo",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Angewandte Nachhaltigkeit",
+        "url": "https://de.serlo.org/nachhaltigkeit",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Informatik",
+        "url": "https://de.serlo.org/informatik",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Lerntipps",
+        "url": "https://de.serlo.org/lerntipps",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fächer im Aufbau",
+        "url": "https://de.serlo.org/106081",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Datenschutz",
+        "url": "https://de.serlo.org/privacy",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Einwilligungen widerrufen",
+        "url": "https://de.serlo.org/consent",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Nutzungsbedingungen und Urheberrecht",
+        "url": "https://de.serlo.org/terms",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Impressum",
+        "url": "https://de.serlo.org/legal",
+        "source": "serlo.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mathematik",
+        "url": "https://de.wikiversity.org/wiki/Mathematik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/1 Reelle und komplexe Zahlen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/1_Reelle_und_komplexe_Zahlen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/3 Grenzwert und Stetigkeit",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/3_Grenzwert_und_Stetigkeit",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/Sofaraum im Mathetower",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/Sofaraum_im_Mathetower",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§1 Der Körper der reellen Zahlen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A71_Der_K%C3%B6rper_der_reellen_Zahlen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§1 Grenzwert",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A71_Grenzwert",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§1 Konvergente Folgen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A71_Konvergente_Folgen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§2 Stetige Funktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A72_Stetige_Funktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§2 Vollständigkeit",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A72_Vollst%C3%A4ndigkeit",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§3 Gleichmäßige Konvergenz",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A73_Gleichm%C3%A4%C3%9Fige_Konvergenz",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§3 Teilfolgen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A73_Teilfolgen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§3 Vollständige Induktion",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A73_Vollst%C3%A4ndige_Induktion",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§4 Unendliche Reihen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A74_Unendliche_Reihen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§4 Wurzeln",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A74_Wurzeln",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§5 Absolut konvergente Reihen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A75_Absolut_konvergente_Reihen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§5 Der Körper der komplexen Zahlen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A75_Der_K%C3%B6rper_der_komplexen_Zahlen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis 1 (TU Dortmund)/§6 Doppelreihen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_1_(TU_Dortmund)/%C2%A76_Doppelreihen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel I: Das System der reellen und komplexen Zahlen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_I:_Das_System_der_reellen_und_komplexen_Zahlen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel II: Differential- und Integralrechnung für Funktionen einer Veränderlichen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_II:_Differential-_und_Integralrechnung_f%C3%BCr_Funktionen_einer_Ver%C3%A4nderlichen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§1 Komplexe Exponentialfunktion und natürliche Logarithmusfunktion",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A71_Komplexe_Exponentialfunktion_und_nat%C3%BCrliche_Logarithmusfunktion",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§2 Die trigonometrischen Funktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A72_Die_trigonometrischen_Funktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§3 Die Hyperbelfunktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A73_Die_Hyperbelfunktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§4 Die Arcusfunktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A74_Die_Arcusfunktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§5 Polarkoordinaten und Überlagerungsflächen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A75_Polarkoordinaten_und_%C3%9Cberlagerungsfl%C3%A4chen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§6 Die n-ten Wurzeln und die komplexe Logarithmusfunktion",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A76_Die_n-ten_Wurzeln_und_die_komplexe_Logarithmusfunktion",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§7 Die allgemeinen Potenzfunktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A77_Die_allgemeinen_Potenzfunktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§8 Der Fundamentalsatz der Algebra",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A78_Der_Fundamentalsatz_der_Algebra",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis I/Kapitel III: Die elementaren Funktionen/§9 Partialbruchzerlegung gebrochen rationaler Funktionen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_I/Kapitel_III:_Die_elementaren_Funktionen/%C2%A79_Partialbruchzerlegung_gebrochen_rationaler_Funktionen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel IV: Partielle Differentiation für Funktionen mehrerer Veränderlicher",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_IV:_Partielle_Differentiation_f%C3%BCr_Funktionen_mehrerer_Ver%C3%A4nderlicher",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel IV: Partielle Differentiation für Funktionen mehrerer Veränderlicher/Fundamentalsatz über die inverse Abbildung (§4)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_IV:_Partielle_Differentiation_f%C3%BCr_Funktionen_mehrerer_Ver%C3%A4nderlicher/Fundamentalsatz_%C3%BCber_die_inverse_Abbildung_(%C2%A74)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel IV: Partielle Differentiation für Funktionen mehrerer Veränderlicher/Impliziert definierte Funktionen und restringierte Extremwertaufgaben (§5)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_IV:_Partielle_Differentiation_f%C3%BCr_Funktionen_mehrerer_Ver%C3%A4nderlicher/Impliziert_definierte_Funktionen_und_restringierte_Extremwertaufgaben_(%C2%A75)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel IV: Partielle Differentiation für Funktionen mehrerer Veränderlicher/Partielle Ableitungen erster Ordnung (§1)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_IV:_Partielle_Differentiation_f%C3%BCr_Funktionen_mehrerer_Ver%C3%A4nderlicher/Partielle_Ableitungen_erster_Ordnung_(%C2%A71)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel IV: Partielle Differentiation für Funktionen mehrerer Veränderlicher/Partielle Ableitungen höherer Ordnung (§2)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_IV:_Partielle_Differentiation_f%C3%BCr_Funktionen_mehrerer_Ver%C3%A4nderlicher/Partielle_Ableitungen_h%C3%B6herer_Ordnung_(%C2%A72)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel IV: Partielle Differentiation für Funktionen mehrerer Veränderlicher/Taylorsche Formel im R^n und Extremwertaufgaben (§3)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_IV:_Partielle_Differentiation_f%C3%BCr_Funktionen_mehrerer_Ver%C3%A4nderlicher/Taylorsche_Formel_im_R%5En_und_Extremwertaufgaben_(%C2%A73)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel V: Das Riemannsche Integral im R^n",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_V:_Das_Riemannsche_Integral_im_R%5En",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel V: Das Riemannsche Integral im R^n/Existenz des Riemannschen Integrals (§2)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_V:_Das_Riemannsche_Integral_im_R%5En/Existenz_des_Riemannschen_Integrals_(%C2%A72)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel V: Das Riemannsche Integral im R^n/Integration mittels Standardsubstitutionen (§1)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_V:_Das_Riemannsche_Integral_im_R%5En/Integration_mittels_Standardsubstitutionen_(%C2%A71)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel V: Das Riemannsche Integral im R^n/Klassen Riemann-integrierbarer Funktionen (§3)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_V:_Das_Riemannsche_Integral_im_R%5En/Klassen_Riemann-integrierbarer_Funktionen_(%C2%A73)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis II/Kapitel VI: Gewöhnliche Differentialgleichungen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_II/Kapitel_VI:_Gew%C3%B6hnliche_Differentialgleichungen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§1 Der Weierstraßsche Approximationssatz",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A71_Der_Weierstra%C3%9Fsche_Approximationssatz",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§2 Parameterinvariante Integrale und Differentialformen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A72_Parameterinvariante_Integrale_und_Differentialformen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§3 Die äußere Ableitung von Differentialformen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A73_Die_%C3%A4u%C3%9Fere_Ableitung_von_Differentialformen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§4 Der Stokessche Integralsatz für Mannigfaltigkeiten",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A74_Der_Stokessche_Integralsatz_f%C3%BCr_Mannigfaltigkeiten",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§5 Der Gaußsche und der Stokessche Integralsatz",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A75_Der_Gau%C3%9Fsche_und_der_Stokessche_Integralsatz",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§6 Kurvenintegrale",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A76_Kurvenintegrale",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§7 Das Poincarésche Lemma",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A77_Das_Poincar%C3%A9sche_Lemma",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel I: Differentiation und Integration auf Mannigfaltigkeiten/§8 Die Coableitung und der Laplace-Beltrami-Operator",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_I:_Differentiation_und_Integration_auf_Mannigfaltigkeiten/%C2%A78_Die_Coableitung_und_der_Laplace-Beltrami-Operator",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel II: Grundlagen der Funktionalanalysis",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_II:_Grundlagen_der_Funktionalanalysis",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel II: Grundlagen der Funktionalanalysis/§1 Das Daniellsche Integral mit Beispielen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_II:_Grundlagen_der_Funktionalanalysis/%C2%A71_Das_Daniellsche_Integral_mit_Beispielen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Analysis III/Kapitel II: Grundlagen der Funktionalanalysis/§2 Fortsetzung des Daniell-Integrals zum Lebesgue-Integral",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Analysis_III/Kapitel_II:_Grundlagen_der_Funktionalanalysis/%C2%A72_Fortsetzung_des_Daniell-Integrals_zum_Lebesgue-Integral",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:AnOrMaL",
+        "url": "https://de.wikiversity.org/wiki/Projekt:AnOrMaL",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Arithmetik/Dreisatz",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Arithmetik/Dreisatz",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Mathematik für Elektrotechnik",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Mathematik_f%C3%BCr_Elektrotechnik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Funktionalanalysis",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Funktionalanalysis",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Funktionentheorie",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Funktionentheorie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Funktionentheorie/Lernvoraussetzungen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Funktionentheorie/Lernvoraussetzungen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Gewöhnliche Differentialgleichungen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Gew%C3%B6hnliche_Differentialgleichungen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Infinitesimal-Rechnung",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Infinitesimal-Rechnung",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Lineare Algebra I",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Lineare_Algebra_I",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Lineare Algebra II",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Lineare_Algebra_II",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Maßtheorie auf topologischen Räumen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Ma%C3%9Ftheorie_auf_topologischen_R%C3%A4umen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Mathematik in Natur und Technik",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Mathematik_in_Natur_und_Technik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Mathematik ist überall",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Mathematik_ist_%C3%BCberall",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mathematik/Jahr der Mathematik 2008",
+        "url": "https://de.wikiversity.org/wiki/Mathematik/Jahr_der_Mathematik_2008",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Mathematik/Kurse/Mathematische Modellbildung",
+        "url": "https://de.wikiversity.org/wiki/Mathematik/Kurse/Mathematische_Modellbildung",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Mathematische Autorengruppe Folklore Osnabrück (MAFO)",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Mathematische_Autorengruppe_Folklore_Osnabr%C3%BCck_(MAFO)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Modellierung und Numerische Methoden von Finanzderivaten",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Modellierung_und_Numerische_Methoden_von_Finanzderivaten",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Nichtlineare Partielle Differentialgleichungen",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Nichtlineare_Partielle_Differentialgleichungen",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Numerik I",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Numerik_I",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Numerik II",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Numerik_II",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:OpenOffice.org",
+        "url": "https://de.wikiversity.org/wiki/Kurs:OpenOffice.org",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Optimierung II",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Optimierung_II",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Räumliche Modellbildung",
+        "url": "https://de.wikiversity.org/wiki/Kurs:R%C3%A4umliche_Modellbildung",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Semantische Organisation der Mathematik",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Semantische_Organisation_der_Mathematik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Statistik mit S-PLUS / R",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Statistik_mit_S-PLUS_/_R",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Stochastik",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Stochastik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Topologie (Osnabrück 2008-2009)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Topologie_(Osnabr%C3%BCck_2008-2009)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Topologische Invertierbarkeitskriterien",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Topologische_Invertierbarkeitskriterien",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Zahlentheorie (Osnabrück 2008)",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Zahlentheorie_(Osnabr%C3%BCck_2008)",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
       {
         "title": "Unterricht",
         "url": "https://lernarchiv.bildung.hessen.de/index.html",
@@ -239,12 +851,155 @@
         "source": "abiturloesung.de",
         "license": "Verify Individually/Educational",
         "type": "pdf"
+      },
+      {
+        "title": "[DSMADRID] Acceso Phidias",
+        "url": "https://dsmadrid.phidias.es/",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Hinweise zu schriftlichen Prüfungen",
+        "url": "https://www.dsmadrid.org/es/colegio/secundaria/asignaturas/aleman/hinweise-zu-schriftlichen-prufungen",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Prüfungszentrum Goethe-Institut",
+        "url": "https://www.dsmalaga.com/schule/pruefungszentrum-goethe-institut/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf Facebook",
+        "url": "https://www.facebook.com/sharer.php?u=https://www.dsmalaga.com/abitur-2020/&t=Abitur%202020",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf X",
+        "url": "https://twitter.com/share?text=Abitur%202020&url=https://www.dsmalaga.com/?p=1222",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf WhatsApp",
+        "url": "https://api.whatsapp.com/send?text=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf LinkedIn",
+        "url": "https://linkedin.com/shareArticle?mini=true&title=Abitur%202020&url=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Per E-Mail teilen",
+        "url": "mailto:?subject=Abitur%202020&body=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] angemeldet",
+        "url": "https://www.dsmalaga.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.dsmalaga.com%2Fabitur-2020%2F",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Ein Tag, auf den alle gewartet haben, die Abiturzeugnisausgabe 2026 an der Deutschen Schule Málaga",
+        "url": "https://www.dsmalaga.com/ein-tag-auf-den-alle-gewartet-haben-die-abiturzeugnisausgabe-2026-an-der-deutschen-schule-malaga/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSTENERIFE] Deutsch",
+        "url": "https://www.dstenerife.eu/de/abitur-2019/",
+        "source": "dstenerife.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
       }
     ]
   },
   "deutsch": {
-    "count": 48,
+    "count": 70,
     "items": [
+      {
+        "title": "Fachbereich Germanistik",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Buch und Schrift im Mittelalter",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Buch_und_Schrift_im_Mittelalter",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Community",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Community",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Kolloquium",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Kolloquium",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Kolloquium/Archiv",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Kolloquium/Archiv",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Kolloquium/Archiv/2007",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Kolloquium/Archiv/2007",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Kurse",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Kurse",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Kurse/Übersicht",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Kurse/%C3%9Cbersicht",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Projekte",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Projekte",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Sitemap",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Sitemap",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Germanistik/Weblinks",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Germanistik/Weblinks",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
       {
         "title": "Unterricht",
         "url": "https://lernarchiv.bildung.hessen.de/index.html",
@@ -580,82 +1335,99 @@
         "source": "hessen-bildungsserver",
         "license": "Verify Individually",
         "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Acceso Phidias",
+        "url": "https://dsmadrid.phidias.es/",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Hinweise zu schriftlichen Prüfungen",
+        "url": "https://www.dsmadrid.org/es/colegio/secundaria/asignaturas/aleman/hinweise-zu-schriftlichen-prufungen",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Prüfungszentrum Goethe-Institut",
+        "url": "https://www.dsmalaga.com/schule/pruefungszentrum-goethe-institut/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf Facebook",
+        "url": "https://www.facebook.com/sharer.php?u=https://www.dsmalaga.com/abitur-2020/&t=Abitur%202020",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf X",
+        "url": "https://twitter.com/share?text=Abitur%202020&url=https://www.dsmalaga.com/?p=1222",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf WhatsApp",
+        "url": "https://api.whatsapp.com/send?text=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf LinkedIn",
+        "url": "https://linkedin.com/shareArticle?mini=true&title=Abitur%202020&url=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Per E-Mail teilen",
+        "url": "mailto:?subject=Abitur%202020&body=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] angemeldet",
+        "url": "https://www.dsmalaga.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.dsmalaga.com%2Fabitur-2020%2F",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Ein Tag, auf den alle gewartet haben, die Abiturzeugnisausgabe 2026 an der Deutschen Schule Málaga",
+        "url": "https://www.dsmalaga.com/ein-tag-auf-den-alle-gewartet-haben-die-abiturzeugnisausgabe-2026-an-der-deutschen-schule-malaga/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSTENERIFE] Deutsch",
+        "url": "https://www.dstenerife.eu/de/abitur-2019/",
+        "source": "dstenerife.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
       }
     ]
   },
   "englisch": {
-    "count": 56,
+    "count": 57,
     "items": [
       {
-        "title": "http://de.serlo.org/107557",
-        "url": "https://de.serlo.org/englisch/107557/englisch",
-        "source": "serlo.org",
+        "title": "Fachbereich Anglistik",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Anglistik",
+        "source": "wikiversity.org",
         "license": "CC BY-SA 4.0"
       },
       {
-        "title": "Was bedeutet das?",
-        "url": "https://de.serlo.org/license/detail/1",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Vögel - Meister der LüfteAchtung - Wortwitz: Vögel sind solche Überflieger. ;-) Aber wieso können sie eigentlich fliegen? Die Antwort dazu und noch vieles mehr findest du hier, bei Serlo Biologie",
-        "url": "https://de.serlo.org/biologie/vielfalt-lebewesen/wirbeltiere/voegel-koennen-voegel-fliegen",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Was heißt eigentlich “Serlo”?Wusstest du schon, dass serlo.org nach einem Kloster in Nepal benannt ist? Dort hatte der Gründer von serlo.org die Idee für eine freie Lernplattform. Klick hier, um mehr über unsere Geschichte zu erfahren!",
-        "url": "https://de.serlo.org/serlo-geschichte",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Salatturm zum selbst bauenWenig Platz zu Hause, aber total Lust auf frischen, selbst angebauten Salat? Kein Problem mit dieser Anleitung von Serlo Nachhaltigkeit zum Bau eines Salatturms.",
-        "url": "https://de.serlo.org/36733",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Mehr erfahren",
-        "url": "https://de.serlo.org/serlo",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Mitmachen",
-        "url": "https://de.serlo.org/mitmachen",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Community",
-        "url": "https://de.serlo.org/community",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Datenschutz",
-        "url": "https://de.serlo.org/privacy",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Einwilligungen widerrufen",
-        "url": "https://de.serlo.org/consent",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Nutzungsbedingungen und Urheberrecht",
-        "url": "https://de.serlo.org/terms",
-        "source": "serlo.org",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "title": "Impressum",
-        "url": "https://de.serlo.org/legal",
-        "source": "serlo.org",
+        "title": "Kolloquium Anglistik",
+        "url": "https://de.wikiversity.org/wiki/Kolloquium_Anglistik",
+        "source": "wikiversity.org",
         "license": "CC BY-SA 4.0"
       },
       {
@@ -965,12 +1737,173 @@
         "source": "hessen-bildungsserver",
         "license": "Verify Individually",
         "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Acceso Phidias",
+        "url": "https://dsmadrid.phidias.es/",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Hinweise zu schriftlichen Prüfungen",
+        "url": "https://www.dsmadrid.org/es/colegio/secundaria/asignaturas/aleman/hinweise-zu-schriftlichen-prufungen",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Prüfungszentrum Goethe-Institut",
+        "url": "https://www.dsmalaga.com/schule/pruefungszentrum-goethe-institut/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf Facebook",
+        "url": "https://www.facebook.com/sharer.php?u=https://www.dsmalaga.com/abitur-2020/&t=Abitur%202020",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf X",
+        "url": "https://twitter.com/share?text=Abitur%202020&url=https://www.dsmalaga.com/?p=1222",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf WhatsApp",
+        "url": "https://api.whatsapp.com/send?text=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf LinkedIn",
+        "url": "https://linkedin.com/shareArticle?mini=true&title=Abitur%202020&url=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Per E-Mail teilen",
+        "url": "mailto:?subject=Abitur%202020&body=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] angemeldet",
+        "url": "https://www.dsmalaga.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.dsmalaga.com%2Fabitur-2020%2F",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Ein Tag, auf den alle gewartet haben, die Abiturzeugnisausgabe 2026 an der Deutschen Schule Málaga",
+        "url": "https://www.dsmalaga.com/ein-tag-auf-den-alle-gewartet-haben-die-abiturzeugnisausgabe-2026-an-der-deutschen-schule-malaga/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSTENERIFE] Deutsch",
+        "url": "https://www.dstenerife.eu/de/abitur-2019/",
+        "source": "dstenerife.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
       }
     ]
   },
   "philosophie": {
-    "count": 29,
+    "count": 54,
     "items": [
+      {
+        "title": "Fachbereich Philosophie",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Philosophie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Der erste Kontakt - Eine Einführung in die Philosophie",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Der_erste_Kontakt_-_Eine_Einf%C3%BChrung_in_die_Philosophie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Der erste Kontakt - Eine Einführung in die Philosophie/Geschichte",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Der_erste_Kontakt_-_Eine_Einf%C3%BChrung_in_die_Philosophie/Geschichte",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Der erste Kontakt - Eine Einführung in die Philosophie/Philosophieren",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Der_erste_Kontakt_-_Eine_Einf%C3%BChrung_in_die_Philosophie/Philosophieren",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Philosophie/Linksammlung",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Philosophie/Linksammlung",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Fachbereich Philosophie/Organisation",
+        "url": "https://de.wikiversity.org/wiki/Fachbereich_Philosophie/Organisation",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:Forschung im Fachbereich Philosophie",
+        "url": "https://de.wikiversity.org/wiki/Kurs:Forschung_im_Fachbereich_Philosophie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kolloquium Philosophie",
+        "url": "https://de.wikiversity.org/wiki/Kolloquium_Philosophie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Philosophie Artikel",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Philosophie_Artikel",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Philosophie und Quantenphysik - Von der Entschlüsselung emergenter Phänomene zur Weltformel",
+        "url": "https://de.wikiversity.org/wiki/Philosophie_und_Quantenphysik_-_Von_der_Entschl%C3%BCsselung_emergenter_Ph%C3%A4nomene_zur_Weltformel",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Phänomenologie",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Ph%C3%A4nomenologie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projekt:Praxen der Gerechtigkeit",
+        "url": "https://de.wikiversity.org/wiki/Projekt:Praxen_der_Gerechtigkeit",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Projektvorschläge Philosophie",
+        "url": "https://de.wikiversity.org/wiki/Projektvorschl%C3%A4ge_Philosophie",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Kurs:STS SoSe11",
+        "url": "https://de.wikiversity.org/wiki/Kurs:STS_SoSe11",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
       {
         "title": "Unterricht",
         "url": "https://lernarchiv.bildung.hessen.de/index.html",
@@ -1173,11 +2106,172 @@
         "source": "hessen-bildungsserver",
         "license": "Verify Individually",
         "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Acceso Phidias",
+        "url": "https://dsmadrid.phidias.es/",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Hinweise zu schriftlichen Prüfungen",
+        "url": "https://www.dsmadrid.org/es/colegio/secundaria/asignaturas/aleman/hinweise-zu-schriftlichen-prufungen",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Prüfungszentrum Goethe-Institut",
+        "url": "https://www.dsmalaga.com/schule/pruefungszentrum-goethe-institut/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf Facebook",
+        "url": "https://www.facebook.com/sharer.php?u=https://www.dsmalaga.com/abitur-2020/&t=Abitur%202020",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf X",
+        "url": "https://twitter.com/share?text=Abitur%202020&url=https://www.dsmalaga.com/?p=1222",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf WhatsApp",
+        "url": "https://api.whatsapp.com/send?text=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf LinkedIn",
+        "url": "https://linkedin.com/shareArticle?mini=true&title=Abitur%202020&url=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Per E-Mail teilen",
+        "url": "mailto:?subject=Abitur%202020&body=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] angemeldet",
+        "url": "https://www.dsmalaga.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.dsmalaga.com%2Fabitur-2020%2F",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Ein Tag, auf den alle gewartet haben, die Abiturzeugnisausgabe 2026 an der Deutschen Schule Málaga",
+        "url": "https://www.dsmalaga.com/ein-tag-auf-den-alle-gewartet-haben-die-abiturzeugnisausgabe-2026-an-der-deutschen-schule-malaga/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSTENERIFE] Deutsch",
+        "url": "https://www.dstenerife.eu/de/abitur-2019/",
+        "source": "dstenerife.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
       }
     ]
   },
   "espanol": {
-    "count": 0,
-    "items": []
+    "count": 12,
+    "items": [
+      {
+        "title": "Fach Romanistik",
+        "url": "https://de.wikiversity.org/wiki/Fach_Romanistik",
+        "source": "wikiversity.org",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "[DSMADRID] Acceso Phidias",
+        "url": "https://dsmadrid.phidias.es/",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMADRID] Hinweise zu schriftlichen Prüfungen",
+        "url": "https://www.dsmadrid.org/es/colegio/secundaria/asignaturas/aleman/hinweise-zu-schriftlichen-prufungen",
+        "source": "dsmadrid.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Prüfungszentrum Goethe-Institut",
+        "url": "https://www.dsmalaga.com/schule/pruefungszentrum-goethe-institut/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf Facebook",
+        "url": "https://www.facebook.com/sharer.php?u=https://www.dsmalaga.com/abitur-2020/&t=Abitur%202020",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf X",
+        "url": "https://twitter.com/share?text=Abitur%202020&url=https://www.dsmalaga.com/?p=1222",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf WhatsApp",
+        "url": "https://api.whatsapp.com/send?text=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Teilen auf LinkedIn",
+        "url": "https://linkedin.com/shareArticle?mini=true&title=Abitur%202020&url=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Per E-Mail teilen",
+        "url": "mailto:?subject=Abitur%202020&body=https://www.dsmalaga.com/abitur-2020/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] angemeldet",
+        "url": "https://www.dsmalaga.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.dsmalaga.com%2Fabitur-2020%2F",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSMALAGA] Ein Tag, auf den alle gewartet haben, die Abiturzeugnisausgabe 2026 an der Deutschen Schule Málaga",
+        "url": "https://www.dsmalaga.com/ein-tag-auf-den-alle-gewartet-haben-die-abiturzeugnisausgabe-2026-an-der-deutschen-schule-malaga/",
+        "source": "dsmalaga.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      },
+      {
+        "title": "[DSTENERIFE] Deutsch",
+        "url": "https://www.dstenerife.eu/de/abitur-2019/",
+        "source": "dstenerife.org",
+        "license": "Educational Use/Public School Document",
+        "type": "html"
+      }
+    ]
   }
 }
