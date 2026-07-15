@@ -695,11 +695,9 @@ function renderMaterial() {
   // Append external scraped resources section at the bottom
   const subjectResources = scrapedResources[currentSubjectId] || { count: 0, items: [] };
   
-  // Filter strictly to PDF files or high-quality exam solutions (like abiturloesung.de)
+  // Filter strictly to any valid resource item that has a url (since user cleaned resources already)
   const pdfResources = (subjectResources.items || []).filter(item => 
-    item.url.toLowerCase().endsWith('.pdf') || 
-    item.title.toLowerCase().includes('.pdf') ||
-    item.source === 'abiturloesung.de'
+    item.url
   );
 
   function translateTitleToSpanish(title) {
@@ -771,6 +769,20 @@ function renderMaterial() {
         <div class="grid-2 gap-md">
           ${itemsHtml}
         </div>
+      </div>
+    `;
+  } else {
+    // If no resources in json list, output helpful notice
+    const lang = App.currentLang;
+    const noticeTitle = lang === 'de' ? '🔗 Zusätzliche Ressourcen' : '🔗 Recursos Adicionales';
+    const noticeDesc = lang === 'de' 
+      ? 'Keine externen Abitur-Prüfungen gelistet. Du kannst den Scraper im Adminbereich starten, um neue Dokumente abzurufen.' 
+      : 'No hay exámenes externos adicionales en la lista. Puedes forzar un escaneo desde el panel de Administración.';
+    
+    panel.innerHTML += `
+      <div class="card mb-xl" style="border-top: 3px solid var(--glass-border);">
+        <h2 style="margin-bottom:var(--space-xs); font-weight:900;">${noticeTitle}</h2>
+        <p style="color:var(--text-muted); font-size:0.8rem; text-align:left;">${noticeDesc}</p>
       </div>
     `;
   }
