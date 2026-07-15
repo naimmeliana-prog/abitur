@@ -5,10 +5,10 @@
    ============================================================ */
 
 const firebaseConfig = {
-  apiKey: "REEMPLAZAR_CON_TU_API_KEY",
-  authDomain: "REEMPLAZAR_CON_TU_AUTH_DOMAIN",
-  projectId: "REEMPLAZAR_CON_TU_PROJECT_ID",
-  storageBucket: "REEMPLAZAR_CON_TU_STORAGE_BUCKET",
-  messagingSenderId: "REEMPLAZAR_CON_TU_MESSAGING_SENDER_ID",
-  appId: "REEMPLAZAR_CON_TU_APP_ID"
+  apiKey: "AIzaSyCxU9Iwxhlk74C3uu2BxM6lATrxbOAJgWo",
+  authDomain: "abitur-9e342.firebaseapp.com",
+  projectId: "abitur-9e342",
+  storageBucket: "abitur-9e342.firebasestorage.app",
+  messagingSenderId: "1076172772533",
+  appId: "1:1076172772533:web:572600580d871cb9a15afc"
 };
