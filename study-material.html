@@ -443,6 +443,8 @@ function renderMaterial() {
         </div>
       `;
     }
+    // Append resources to non-math subjects right here, before returning
+    appendScrapedResources(lang, panel);
     return;
   }
 
@@ -693,9 +695,13 @@ function renderMaterial() {
   }
 
   // Append external scraped resources section at the bottom
+  appendScrapedResources(lang, panel);
+}
+
+function appendScrapedResources(lang, panel) {
   const subjectResources = scrapedResources[currentSubjectId] || { count: 0, items: [] };
   
-  // Filter strictly to any valid resource item that has a url (since user cleaned resources already)
+  // Filter strictly to any valid resource item that has a url
   const pdfResources = (subjectResources.items || []).filter(item => 
     item.url
   );
@@ -734,7 +740,6 @@ function renderMaterial() {
   }
 
   if (pdfResources.length > 0) {
-    const lang = App.currentLang;
     const titleES = "🔗 Exámenes y Recursos Oficiales de Prueba (PDF / Enlaces)";
     const titleDE = "🔗 Offizielle Prüfungen und Testressourcen (PDF / Links)";
     const title = lang === 'de' ? titleDE : titleES;
@@ -773,7 +778,6 @@ function renderMaterial() {
     `;
   } else {
     // If no resources in json list, output helpful notice
-    const lang = App.currentLang;
     const noticeTitle = lang === 'de' ? '🔗 Zusätzliche Ressourcen' : '🔗 Recursos Adicionales';
     const noticeDesc = lang === 'de' 
       ? 'Keine externen Abitur-Prüfungen gelistet. Du kannst den Scraper im Adminbereich starten, um neue Dokumente abzurufen.' 
