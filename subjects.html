@@ -546,8 +546,8 @@ function renderArchiveTab(data, lang) {
                         <span style="margin-left:auto;font-size:11px;color:var(--text-muted);">▼</span>
                       </div>
                       
-                      <!-- Contenido desplegable -->
-                      <div id="${uniqueId}" style="display:none;padding:var(--space-md);border-top:1px solid var(--glass-border);">
+                      <!-- Contenido desplegable (visible por defecto) -->
+                      <div id="${uniqueId}" style="padding:var(--space-md);border-top:1px solid var(--glass-border);">
                         <!-- Enunciado de la tarea -->
                         <div style="font-size:14px;font-weight:600;margin-bottom:var(--space-md);color:var(--text-primary);line-height:1.4;">
                           ${task.question?.[lang] || task.question?.es}
