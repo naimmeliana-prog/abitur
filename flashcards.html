@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiturDSV — Tarjetas Leitner</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Premium 3D Flippable Card Styling */
+    .flashcard-container {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 550px;
+      margin: 0 auto;
+      height: 380px;
+      cursor: pointer;
+    }
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flashcard-container.flipped .flashcard-inner {
+      transform: rotateY(180deg);
+    }
+    .flashcard-front, .flashcard-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--glass-border);
+      text-align: left;
+    }
+    .flashcard-front {
+      background: linear-gradient(135deg, rgba(26, 43, 95, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+      color: var(--text-primary);
+      border-left: 4px solid var(--color-gold);
+    }
+    .flashcard-back {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(20, 10, 40, 0.95) 100%);
+      color: var(--text-primary);
+      transform: rotateY(180deg);
+      border-left: 4px solid var(--color-success);
+    }
+    .card-body-scroll {
+      flex: 1;
+      overflow-y: auto;
+      margin: var(--space-md) 0;
+      padding-right: 4px;
+      font-size: 15px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .card-badge {
+      align-self: flex-start;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .leitner-box-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .leitner-box-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-sm) var(--space-md);
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+    }
+    .leitner-box-count {
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body>
+<div class="app-shell">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="sidebarToggle">◀</button>
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <div class="sidebar-logo-text"><span class="brand">AbiturDSV</span><span class="sub">Deutsche Schule Valencia</span></div>
+    </a>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label" data-i18n="nav.section.principal">Principal</div>
+      <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label" data-i18n="nav.dashboard">Inicio</span></a>
+      <a href="subjects.html" class="nav-item"><span class="nav-icon">📚</span><span class="nav-label" data-i18n="nav.subjects">Asignaturas</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.exams">Exámenes</div>
+      <a href="exam-generator.html" class="nav-item"><span class="nav-icon">⚡</span><span class="nav-label" data-i18n="nav.exam-gen">Generar Examen</span></a>
+      <a href="exam-bank.html" class="nav-item"><span class="nav-icon">🗂️</span><span class="nav-label" data-i18n="nav.exam-bank">Banco de Exámenes</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.progress">Mi Progreso</div>
+      <a href="flashcards.html" class="nav-item active"><span class="nav-icon">🎴</span><span class="nav-label" data-i18n="nav.flashcards">Flashcards</span></a>
+      <a href="progress.html" class="nav-item"><span class="nav-icon">📊</span><span class="nav-label" data-i18n="nav.progress">Mi Progreso</span></a>
+      <a href="study-tips.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label" data-i18n="nav.study-tips">Técnicas de Estudio</span></a>
+      <a href="study-material.html" class="nav-item"><span class="nav-icon">📖</span><span class="nav-label" data-i18n="nav.study-material">Material Didáctico</span></a>
+      <div class="nav-section-label" data-i18n="nav.section.admin">Admin</div>
+      <a href="admin.html" class="nav-item"><span class="nav-icon">🔧</span><span class="nav-label" data-i18n="nav.admin">Admin</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="progress.html" class="user-card">
+        <div class="user-avatar"><span class="user-avatar-text">U</span></div>
+        <div class="user-info"><div class="user-name user-name-display">Usuario</div><div class="user-level user-level-display">Nivel 1</div></div>
+      </a>
+      <button onclick="Auth.logout()" class="btn btn-secondary btn-full btn-sm" style="margin-top:8px;" data-i18n="nav.logout">Cerrar sesión</button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button class="header-btn mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="header-title" data-i18n="nav.flashcards">🎴 Tarjetas Leitner</span>
+      </div>
+      <div class="header-right" style="display:flex; align-items:center; gap:var(--space-md);">
+        <div class="lang-switcher" style="margin-right:8px;">
+          <button class="lang-btn" id="btnFontSizeDecrease" title="Disminuir texto" style="font-weight:bold; font-size:11px; padding:4px 10px;">A-</button>
+          <button class="lang-btn" id="btnFontSizeIncrease" title="Aumentar texto" style="font-weight:bold; font-size:14px; padding:4px 10px;">A+</button>
+        </div>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content page-enter">
+      <!-- Subject Tabs -->
+      <div class="flex gap-sm mb-xl" style="flex-wrap:wrap;" id="flashcardSubjectTabs">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="grid-3 gap-xl">
+        <!-- Leitner Boxes panel -->
+        <div class="card flex-col gap-md" style="height:fit-content;">
+          <h3 style="font-size:18px;margin-bottom:4px;" id="boxTitle">Cajas Leitner</h3>
+          <p style="font-size:12px;color:var(--text-muted);margin-bottom:var(--space-md);" id="boxSubtitle">El algoritmo Leitner programa tus repasos según el nivel de retención.</p>
+          
+          <div class="leitner-box-row" id="leitnerBoxesList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Central Card Area -->
+        <div class="lg:col-span-2 flex-col items-center gap-lg">
+          <div class="flashcard-container" id="flashcardContainer">
+            <div class="flashcard-inner">
+              <!-- Front -->
+              <div class="flashcard-front">
+                <div class="flex items-center justify-between">
+                  <span class="card-badge" style="background:rgba(245,200,66,0.15);color:var(--color-gold);" id="frontBadge">PREGUNTA</span>
+                  <span style="font-size:11px;opacity:0.6;" id="frontBoxLabel">Caja 1</span>
+                </div>
+                <div class="card-body-scroll" id="frontText">
+                  Cargando...
+                </div>
+                <div style="font-size:11px;text-align:center;opacity:0.6;border-top:1px solid rgba(255,255,255,0.1);padding-top:10px;" id="frontHint">
+                  Haz clic para revelar la respuesta
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="flashcard-back">
+                <div class="flex items-center justify-between">
+                  <span class="card-badge" style="background:rgba(34,197,94,0.15);color:var(--color-success);" id="backBadge">RESPUESTA Y EXPLICACIÓN</span>
+                  <span style="font-size:11px;opacity:0.6;" id="backBoxLabel">Caja 1</span>
+                </div>
+                <div class="card-body-scroll" id="backText">
+                  Cargando...
+                </div>
+                <div style="font-size:11px;text-align:center;opacity:0.6;border-top:1px solid rgba(255,255,255,0.1);padding-top:10px;" id="backHint">
+                  Haz clic para ver la pregunta
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Evaluation triggers -->
+          <div class="flex gap-md justify-between items-center w-full" style="max-width:550px;margin-top:var(--space-md);">
+            <button class="btn btn-secondary" id="btnPrevCard">◀</button>
+            <div class="flex gap-sm" id="evalButtons" style="display:none;">
+              <button class="btn btn-secondary" id="btnEvalHard" style="background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.3);color:#f87171;">❌ No me la sabía</button>
+              <button class="btn btn-primary" id="btnEvalEasy" style="background:rgba(34,197,94,0.2);border-color:rgba(34,197,94,0.4);color:#4ade80;">✅ ¡Me la sabía!</button>
+            </div>
+            <span class="text-muted" style="font-size:12px;font-style:italic;" id="instructionLabel">Haz clic en la tarjeta para revelar la respuesta</span>
+            <button class="btn btn-secondary" id="btnNextCard">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/flashcards.js"></script>
+</body>
+</html>

@@ -752,6 +752,82 @@
           ]
         }
       ]
+    },
+    {
+      "id": "espanol_dia_2025_complete",
+      "title": "Abiturprüfung Spanisch 2025 — DIA",
+      "year": "2025",
+      "pdf_url": "exams/IlluPA_Spanisch_Beispielaufgaben_Sprachmittlung_gA.pdf",
+      "curriculo_dsm_url": "exams/IlluPA_Spanisch_Erlaeuterungen_und_Loesungsvorschlaege_Sprachmittlung_gA.pdf",
+      "intro": {
+        "es": "Prueba oficial de Abitur Español 2025. Incluye mediación lingüística (Sprachmittlung) y comentario literario de textos del siglo XX.",
+        "de": "Offizielle Abiturprüfung Spanisch 2025. Beinhaltet Sprachmittlung und literarischen Kommentar."
+      },
+      "blocks": [
+        {
+          "name": "Parte A: Mediación Lingüística (Sprachmittlung)",
+          "tasks": [
+            {
+              "title": "Tarea 1: Mediación de un artículo sobre sostenibilidad y consumo responsable",
+              "question": {
+                "es": "Resume en alemán las ideas principales del artículo español sobre las nuevas directivas de consumo circular en la Unión Europea.",
+                "de": "Fassen Sie die Hauptgedanken des spanischen Artikels über neue Richtlinien der Kreislaufwirtschaft in der EU auf Deutsch zusammen."
+              },
+              "solution": {
+                "es": "Se realiza una síntesis estructurada en alemán de los puntos clave del texto original: objetivos de reducción de residuos, derecho a reparar y penalización de la obsolescencia programada.",
+                "de": "Strukturierte Zusammenfassung auf Deutsch: Ziele zur Abfallvermeidung, Recht auf Reparatur und Sanktionierung von geplantem Verschleiß."
+              },
+              "points": 30,
+              "criteria": {
+                "es": "• 15 Puntos: Fidelidad y precisión de la información mediada.\n• 15 Puntos: Calidad de expresión y adecuación del registro en alemán.",
+                "de": "• 15 Punkte: Informationsgehalt und Relevanz.\n• 15 Punkte: Kommunikative Textgestaltung auf Deutsch."
+              },
+              "recommendation": {
+                "es": "Evita traducir palabra por palabra. El tribunal penaliza los calcos sintácticos y valora la reformulación natural.",
+                "de": "Vermeide Wort-für-Wort-Übersetzungen. Freie, sinngemäße Übertragung wird bewertet."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espanol_dia_2024_complete",
+      "title": "Abiturprüfung Spanisch 2024 — DIA",
+      "year": "2024",
+      "pdf_url": "exams/IlluPA_Spanisch_Beispielaufgaben_Sprachmittlung_gA.pdf",
+      "curriculo_dsm_url": "exams/IlluPA_Spanisch_Erlaeuterungen_und_Loesungsvorschlaege_Sprachmittlung_gA.pdf",
+      "intro": {
+        "es": "Prueba oficial de Abitur Español 2024.",
+        "de": "Offizielle Abiturprüfung Spanisch 2024."
+      },
+      "blocks": [
+        {
+          "name": "Parte A: Comentario de Texto Periodístico",
+          "tasks": [
+            {
+              "title": "Tarea 1: Comentario crítico de un artículo sobre inteligencia artificial y educación",
+              "question": {
+                "es": "Analiza las tesis de la autora sobre el impacto de la IA generativa en la evaluación académica.",
+                "de": "Analysieren Sie die Thesen der Autorin über die Auswirkungen generativer KI auf die akademische Bewertung."
+              },
+              "solution": {
+                "es": "Resumen de las preocupaciones de la autora, análisis del tono irónico empleado y propuesta de rediseño de tareas evaluativas basadas en el pensamiento crítico.",
+                "de": "Zusammenfassung der Bedenken der Autorin, Analyse des ironischen Tons und Vorschlag zur Neugestaltung von Aufgaben."
+              },
+              "points": 50,
+              "criteria": {
+                "es": "• 20 Puntos: Comprensión y síntesis de argumentos.\n• 20 Puntos: Análisis de recursos estilísticos.\n• 10 Puntos: Registro y corrección idiomática.",
+                "de": "• 20 Punkte: Textverständnis.\n• 20 Punkte: Form- und Stilmittelanalyse.\n• 10 Punkte: Sprachliche Qualität."
+              },
+              "recommendation": {
+                "es": "Identifica las metáforas que comparan la IA con un cerebro artificial y explica el efecto persuasivo que causan en el lector.",
+                "de": "Analysiere Metaphern zur künstlichen Intelligenz und erkläre deren persuasive Wirkung."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

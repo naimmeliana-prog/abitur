@@ -1,0 +1,8 @@
+{
+  "name": "abitur-dsv",
+  "version": "1.0.0",
+  "description": "AbiturDSV static website server configuration",
+  "scripts": {
+    "dev": "npx http-server -p 8080"
+  }
+}
