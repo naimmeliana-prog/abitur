@@ -926,5 +926,38 @@
         }
       ]
     }
+  ],
+  "formulas": [
+    {
+      "category": { "es": "Textanalyse & Erörterung", "de": "Textanalyse & Erörterung" },
+      "items": [
+        {
+          "title": { "es": "Estructura de la Introducción (Einleitung)", "de": "Aufbau der Einleitung" },
+          "content": {
+            "es": "T-A-T-T-E Satz:\n- Titel (Título del texto)\n- Autor (Autor)\n- Textsorte (Tipo de texto: Kommentar, Sachtext...)\n- Thema (Tema central)\n- Erscheinungsort/jahr (Lugar y año de publicación)\n- Kernthese (Tesis principal del autor)",
+            "de": "T-A-T-T-E Satz:\n- Titel des Textes\n- Autor des Textes\n- Textsorte (z.B. Kommentar, Sachtext)\n- Thema des Textes\n- Erscheinungsort und -jahr\n- Kernthese des Autors"
+          }
+        },
+        {
+          "title": { "es": "Conectores de Argumentación", "de": "Argumentationsstruktur & Überleitungen" },
+          "content": {
+            "es": "- Para introducir pros: 'Ein wichtiges Argument dafür ist...', 'Zudem spricht dafür, dass...'\n- Para introducir contras: 'Einerseits..., andererseits...', 'Gegen diese These lässt sich einwenden...'\n- Conectores lógicos: 'Demzufolge', 'Infolgedessen', 'Darüber hinaus', 'Jedoch'.",
+            "de": "- Pro-Argumente: 'Ein wichtiges Argument dafür ist...', 'Zudem spricht dafür, dass...'\n- Kontra-Argumente: 'Ein Einwand ist...', 'Gegen diese These lässt sich einwenden...'\n- Logische Verknüpfungen: 'Demzufolge', 'Infolgedessen', 'Darüber hinaus', 'Jedoch'."
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Rhetorische Mittel (Figuras Estilísticas)", "de": "Rhetorische Mittel" },
+      "items": [
+        {
+          "title": { "es": "Figuras Clave en el Abitur", "de": "Wichtige Stilmittel im Abitur" },
+          "content": {
+            "es": "- Alliteration: Repetición de consonante inicial ('Milch macht müde Männer munter').\n- Anapher: Repetición de palabra inicial ('Wir wollen..., wir müssen...').\n- Antithese: Contraste de ideas opuestas ('Himmel und Hölle').\n- Klimax: Gradación ascendente ('Ich kam, sah und siegte').\n- Personifikation: Humanización de conceptos no humanos ('Die Sonne lacht').",
+            "de": "- Alliteration: Gleicher Anfangslaut ('Milch macht müde Männer munter').\n- Anapher: Wiederholung des Anfangsworts ('Wir wollen..., wir müssen...').\n- Antithese: Gegenüberstellung von Gegensätzen ('Himmel und Hölle').\n- Klimax: Dreistufige Steigerung ('Ich kam, sah und siegte').\n- Personifikation: Vermenschlichung ('Die Sonne lacht')."
+          }
+        }
+      ]
+    }
   ]
 }

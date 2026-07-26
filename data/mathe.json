@@ -8,6 +8,7 @@
   "examType": "written",
   "duration": 240,
   "source": "DIA - Deutsches Internationales Abitur / IQB / Abiturloesung.de (Bayern/BW nivel)",
+  "formeldokument_url": "https://www.isb.bayern.de/fileadmin/user_upload/Gymnasium/Faecher/Mathematik/Hilfsmittel/formeldokument.pdf",
   "dia_info": {
     "es": "El examen de Matemáticas DIA equivale en nivel al de Bayern y Baden-Württemberg. Se divide en PARTE A (sin calculadora, 60 min) y PARTE B (con calculadora CAS, 180 min). Fuente de práctica: abiturloesung.de",
     "de": "Die Mathe-DIA-Prüfung entspricht dem Niveau von Bayern und Baden-Württemberg. Teil A (ohne Hilfsmittel, 60 Min.) und Teil B (mit CAS-Rechner, 180 Min.)."
@@ -2061,6 +2062,58 @@
               }
             }
           ]
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "category": { "es": "Analysis (Cálculo)", "de": "Analysis" },
+      "items": [
+        {
+          "title": { "es": "Regla de la Cadena & Derivadas", "de": "Kettenregel & Ableitungen" },
+          "content": {
+            "es": "- f(x) = g(h(x)) -> f'(x) = g'(h(x)) · h'(x)\n- f(x) = e^(k·x) -> f'(x) = k · e^(k·x)\n- f(x) = ln(x) -> f'(x) = 1/x\n- f(x) = u(x)·v(x) -> f'(x) = u'·v + u·v'",
+            "de": "- f(x) = g(h(x)) -> f'(x) = g'(h(x)) · h'(x)\n- f(x) = e^(k·x) -> f'(x) = k · e^(k·x)\n- f(x) = ln(x) -> f'(x) = 1/x\n- f(x) = u(x)·v(x) -> f'(x) = u'·v + u·v'"
+          }
+        },
+        {
+          "title": { "es": "Extremos Relativos & Inflexión", "de": "Extrema & Wendepunkte" },
+          "content": {
+            "es": "- Máximo local (Hochpunkt): f'(x) = 0 y f''(x) < 0\n- Mínimo local (Tiefpunkt): f'(x) = 0 y f''(x) > 0\n- Punto de Inflexión (Wendepunkt): f''(x) = 0 y f'''(x) != 0 (o cambio de signo en f'')",
+            "de": "- Hochpunkt (HP): f'(x) = 0 und f''(x) < 0\n- Tiefpunkt (TP): f'(x) = 0 und f''(x) > 0\n- Wendepunkt (WP): f''(x) = 0 und f'''(x) != 0 (oder Vorzeichenwechsel von f'')"
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Analytische Geometrie", "de": "Analytische Geometrie" },
+      "items": [
+        {
+          "title": { "es": "Ecuaciones del Plano", "de": "Ebenengleichungen" },
+          "content": {
+            "es": "- Koordinatenform: ax + by + cz = d, donde n⃗ = (a, b, c) es el vector normal.\n- Parameterform: x⃗ = p⃗ + r·u⃗ + s·v⃗\n- Normalenform: (x⃗ - p⃗) · n⃗ = 0",
+            "de": "- Koordinatenform: ax + by + cz = d, wobei n⃗ = (a|b|c) der Normalenvektor ist.\n- Parameterform: x⃗ = p⃗ + r·u⃗ + s·v⃗\n- Normalenform: (x⃗ - p⃗) · n⃗ = 0"
+          }
+        },
+        {
+          "title": { "es": "Distancia Punto-Plano (Hesse)", "de": "Abstand Punkt-Ebene (HNF)" },
+          "content": {
+            "es": "d = |a·x_s + b·y_s + c·z_s - d| / √(a² + b² + c²)\nDonde S(x_s, y_s, z_s) es el punto exterior y el plano es ax+by+cz=d.",
+            "de": "d = |a·x_s + b·y_s + c·z_s - d| / √(a^2 + b^2 + c^2)\nFür den Punkt S(x_s|y_s|z_s) und Ebene E: ax+by+cz=d."
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Stochastik", "de": "Stochastik" },
+      "items": [
+        {
+          "title": { "es": "Distribución Binomial", "de": "Binomialverteilung" },
+          "content": {
+            "es": "- P(X=k) = B(n; p; k) = (n sobre k) · p^k · (1-p)^(n-k)\n- Esperanza (Erwartungswert): μ = n · p\n- Desviación típica (Standardabweichung): σ = √(n · p · (1-p))",
+            "de": "- P(X=k) = B(n; p; k) = (n über k) · p^k · (1-p)^(n-k)\n- Erwartungswert: μ = n · p\n- Standardabweichung: σ = √(n · p · (1-p))"
+          }
         }
       ]
     }

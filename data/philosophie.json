@@ -690,5 +690,38 @@
         }
       ]
     }
+  ],
+  "formulas": [
+    {
+      "category": { "es": "Análisis de Textos Filosóficos", "de": "Analyse philosophischer Texte" },
+      "items": [
+        {
+          "title": { "es": "Estructura del Análisis Filosófico (Textanalyse)", "de": "Aufbau der Textanalyse" },
+          "content": {
+            "es": "1. Introducción: Presentación del texto, autor, época y tesis/problema central.\n2. Reconstrucción del Argumento: Identificación de premisas, conceptos clave y cómo se llega a la conclusión.\n3. Comparación Crítica: Confrontar la tesis del autor con otra corriente/filósofo del temario.\n4. Valoración Propia: Opinión personal argumentada basada en razones racionales y ejemplos.",
+            "de": "1. Einleitung: Text, Autor, Epoche und zentrale These/Problemstellung.\n2. Rekonstruktion der Argumentation: Prämissen, Schlüsselbegriffe und Konklusion.\n3. Kritischer Vergleich: Gegenüberstellung mit einer anderen philosophischen Position.\n4. Eigene Stellungnahme: Begründete persönliche Meinung mit rationalen Argumenten."
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Corrientes Éticas Fundamentales", "de": "Zentrale ethische Positionen" },
+      "items": [
+        {
+          "title": { "es": "Deontología (Kant)", "de": "Deontologie (Immanuel Kant)" },
+          "content": {
+            "es": "- Actuar por deber (Pflichtgefühl), no por inclinación.\n- El Imperativo Categórico: 'Obra sólo según aquella máxima por la cual puedas querer que al mismo tiempo se convierta en ley universal'.\n- Dignidad humana: Las personas nunca deben ser usadas como un simple medio, sino como fines en sí mismas.",
+            "de": "- Handeln aus Pflicht (nicht aus Neigung).\n- Kategorischer Imperativ: 'Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde.'\n- Selbstzweckformel: Der Mensch darf nie bloß als Mittel, sondern muss als Zweck an sich selbst behandelt werden."
+          }
+        },
+        {
+          "title": { "es": "Utilitarismo (Bentham & Mill)", "de": "Utilitarismus (Bentham & Mill)" },
+          "content": {
+            "es": "- Consecuencialismo: Las acciones se juzgan por sus consecuencias.\n- Principio de Utilidad: La mayor felicidad para el mayor número de personas.\n- Cálculo Felicífico (Bentham - cuantitativo) vs. Calidad del placer (Mill - cualitativo: 'Es mejor ser un Sócrates insatisfecho que un cerdo satisfecho').",
+            "de": "- Konsequenzialismus: Handlungen werden nach ihren Folgen beurteilt.\n- Nützlichkeitsprinzip: Das größte Glück der größten Zahl.\n- Nützlichkeitskalkül (Bentham - quantitativ) vs. Qualität des Glücks (Mill - qualitativ: 'Lieber ein unzufriedener Sokrates als ein zufriedenes Schwein')."
+          }
+        }
+      ]
+    }
   ]
 }

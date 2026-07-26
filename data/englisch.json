@@ -801,5 +801,38 @@
         }
       ]
     }
+  ],
+  "formulas": [
+    {
+      "category": { "es": "Text Analysis & Writing", "de": "Text Analysis & Writing" },
+      "items": [
+        {
+          "title": { "es": "Estructura del Ensayo Argumentativo (Comment)", "de": "Structure of a Comment" },
+          "content": {
+            "es": "- Introduction: Catchy hook, outline the issue, state your thesis.\n- Body Paragraphs (PEEL method):\n  * Point (make your claim)\n  * Explanation (expand on the point)\n  * Evidence (provide facts or quotes)\n  * Link (connect back to the main thesis)\n- Conclusion: Restate thesis in a new way, summarize arguments, end with a food-for-thought statement.",
+            "de": "- Introduction: Hook, issue outline, thesis statement.\n- Body Paragraphs (PEEL method):\n  * Point (state your claim)\n  * Explanation (elaborate on it)\n  * Evidence (facts/examples)\n  * Link (connect back to thesis)\n- Conclusion: Restate thesis, summarize main arguments, food-for-thought statement."
+          }
+        },
+        {
+          "title": { "es": "Conectores Formales Avanzados", "de": "Useful Linking Words" },
+          "content": {
+            "es": "- Añadir ideas: 'Furthermore', 'Moreover', 'In addition to this'\n- Contrastar: 'However', 'On the contrary', 'Despite this', 'Conversely'\n- Explicar causas: 'Owing to', 'Consequently', 'For this reason'\n- Concluir: 'To sum up', 'In conclusion', 'All in all'.",
+            "de": "- Adding ideas: 'Furthermore', 'Moreover', 'In addition to this'\n- Contrast: 'However', 'On the contrary', 'Despite this', 'Conversely'\n- Causes: 'Owing to', 'Consequently', 'For this reason'\n- Conclusion: 'To sum up', 'In conclusion', 'All in all'."
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Stylistic Devices", "de": "Stylistic Devices" },
+      "items": [
+        {
+          "title": { "es": "Figuras Estilísticas Frecuentes", "de": "Important Stylistic Devices" },
+          "content": {
+            "es": "- Alliteration: Repeated initial consonant sound ('safe and sound').\n- Anaphora: Repetition of words at the beginning of successive sentences.\n- Contrast/Antithesis: Placing opposing ideas next to each other.\n- Imagery (Simile/Metaphor): Creating vivid mental pictures.\n- Rhetorical Question: A question asked for effect with no answer expected.",
+            "de": "- Alliteration: Wiederholung des Anfangslauts ('safe and sound').\n- Anaphora: Wiederholung von Wörtern am Satzanfang.\n- Contrast/Antithesis: Gegenüberstellung von Gegensätzen.\n- Imagery (Simile/Metaphor): Anschauliche Bilder (Vergleich/Metapher).\n- Rhetorical Question: Scheinfrage, die keine Antwort erwartet."
+          }
+        }
+      ]
+    }
   ]
 }

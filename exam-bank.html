@@ -378,6 +378,11 @@ function renderWrittenExams(exams) {
             </div>
           </div>
           <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-left:auto;align-items:center;">
+            ${exam.pdf_url ? `
+              <a href="${exam.pdf_url}" target="_blank" class="btn btn-secondary btn-sm" style="display:flex;align-items:center;gap:6px;text-decoration:none;border-radius:var(--radius-sm);font-size:11px;">
+                📄 Ver PDF Oficial ↗
+              </a>
+            ` : ''}
             ${exam.formeldokument_url ? `
               <a href="${exam.formeldokument_url}" target="_blank" class="btn btn-outline-gold btn-sm" style="display:flex;align-items:center;gap:6px;text-decoration:none;border-radius:var(--radius-sm);font-size:11px;">
                 📐 Formulario (Bayern/ISB)

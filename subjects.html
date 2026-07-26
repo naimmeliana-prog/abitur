@@ -175,6 +175,11 @@ function renderSubjectPanel() {
             <span class="badge badge-gold">${data.examType === 'written' ? (lang === 'de' ? '✍️ Schriftlich' : '✍️ Escrito') : data.examType === 'oral' ? (lang === 'de' ? '🎤 Mündlich' : '🎤 Oral') : '✍️/🎤'}</span>
             <span class="badge badge-blue">⏱️ ${data.duration ? data.duration + ' min' : '—'}</span>
             <span class="badge" style="background:rgba(255,255,255,0.06);">📋 ${data.source || 'DIA'}</span>
+            ${data.formulas ? `
+              <span onclick="selectInnerTab('formulas')" class="badge badge-success" style="cursor:pointer;display:inline-flex;align-items:center;gap:4px;">
+                🧮 ${lang === 'de' ? 'Formeln & Notizen' : 'Fórmulas y Apuntes'} ➔
+              </span>
+            ` : ''}
           </div>
         </div>
         <div style="margin-left:auto;">
@@ -190,6 +195,7 @@ function renderSubjectPanel() {
       <button class="difficulty-btn selected easy" onclick="showTab('info', this)">📋 Info</button>
       ${(data.taskTypes || data.text_types) ? `<button class="difficulty-btn" onclick="showTab('tasks', this)">📝 ${lang === 'de' ? 'Aufgabentypen' : 'Tipos de tarea'}</button>` : ''}
       ${(data.topics || data.topics_by_semester || data.curriculum_topics || data.literary_epochs || data.contemporary_history) ? `<button class="difficulty-btn" onclick="showTab('topics', this)">📚 ${lang === 'de' ? 'Lehrplan' : 'Temario'}</button>` : ''}
+      ${data.formulas ? `<button class="difficulty-btn" onclick="showTab('formulas', this)">🧮 ${lang === 'de' ? 'Formeln & Notizen' : 'Fórmulas y Apuntes'}</button>` : ''}
       ${data.official_exams_archive ? `<button class="difficulty-btn" onclick="showTab('archive', this)">📜 ${lang === 'de' ? 'Abiturprüfungen' : 'Exámenes Reales'}</button>` : ''}
       ${data.trap_questions ? `<button class="difficulty-btn" onclick="showTab('traps', this)">⚠️ ${lang === 'de' ? 'Fallen' : 'Trampas'}</button>` : ''}
       ${data.questions ? `<button class="difficulty-btn" onclick="showTab('questions', this)">❓ ${lang === 'de' ? 'Musterfragen' : 'Preguntas tipo'}</button>` : ''}
@@ -217,6 +223,7 @@ function showTab(tab, btn) {
     case 'info':      container.innerHTML = renderInfoTab(data, lang); break;
     case 'tasks':     container.innerHTML = renderTasksTab(data, lang); break;
     case 'topics':    container.innerHTML = renderTopicsTab(data, lang); break;
+    case 'formulas':  container.innerHTML = renderFormulasTab(data, lang); break;
     case 'archive':   container.innerHTML = renderArchiveTab(data, lang); break;
     case 'traps':     container.innerHTML = renderTrapsTab(data, lang); break;
     case 'questions': container.innerHTML = renderQuestionsTab(data, lang); break;
@@ -224,6 +231,14 @@ function showTab(tab, btn) {
   }
   if (typeof App !== 'undefined') {
     App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
+  }
+}
+
+function selectInnerTab(tabName) {
+  const btn = Array.from(document.querySelectorAll('#subjectInnerTabs .difficulty-btn'))
+    .find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabName));
+  if (btn) {
+    btn.click();
   }
 }
 
@@ -494,11 +509,16 @@ function renderArchiveTab(data, lang) {
             <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Año oficial: ${exam.year}</div>
           </div>
           <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-left:auto;">
+             ${exam.pdf_url ? `
+              <a href="${exam.pdf_url}" target="_blank" class="btn btn-secondary btn-sm" style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);text-decoration:none;color:inherit;">
+                📄 ${lang === 'de' ? 'Offizielles PDF' : 'Ver PDF Oficial'} ↗
+              </a>
+             ` : ''}
              <button onclick="PDFGenerator.generateWrittenExam('${data.subject}', '${exam.id}', false)" class="btn btn-secondary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
-              🖨️ Imprimir Examen
+              🖨️ ${lang === 'de' ? 'Drucken' : 'Imprimir Examen'}
              </button>
              <button onclick="PDFGenerator.generateWrittenExam('${data.subject}', '${exam.id}', true)" class="btn btn-primary btn-sm" style="display:flex;align-items:center;gap:6px;cursor:pointer;border-radius:var(--radius-sm);">
-              🖨️ Imprimir Solución
+              🖨️ ${lang === 'de' ? 'Lösung drucken' : 'Imprimir Solución'}
              </button>
           </div>
         </div>
@@ -630,6 +650,31 @@ function renderResourcesTab(data, lang) {
         <div style="font-size:12px;color:var(--color-gold);">${r.url} ↗</div>
       </a>`).join('')}
     ${resources.length === 0 ? '<div class="card"><p style="color:var(--text-muted)">No hay recursos registrados.</p></div>' : ''}
+  </div>`;
+}
+
+function renderFormulasTab(data, lang) {
+  const formulas = data.formulas || [];
+  if (formulas.length === 0) {
+    return `<div class="card text-center"><p>No hay fórmulas ni apuntes registrados para esta asignatura.</p></div>`;
+  }
+
+  return `<div class="flex-col gap-lg">
+    ${formulas.map(cat => `
+      <div class="card mb-lg">
+        <h3 style="font-size:18px;font-weight:800;color:var(--color-gold);margin-bottom:var(--space-md);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);text-transform:uppercase;">
+          ${cat.category[lang] || cat.category.es}
+        </h3>
+        <div class="grid-2 gap-md">
+          ${cat.items.map(item => `
+            <div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+              <h4 style="font-size:14px;font-weight:700;margin-bottom:var(--space-sm);color:var(--text-primary);border-left:2px solid var(--color-gold);padding-left:8px;">${item.title[lang] || item.title.es}</h4>
+              <pre style="font-family:inherit;font-size:13px;color:var(--text-secondary);white-space:pre-wrap;line-height:1.6;margin:0;">${item.content[lang] || item.content.es}</pre>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('')}
   </div>`;
 }
 

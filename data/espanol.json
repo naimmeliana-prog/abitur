@@ -8,6 +8,7 @@
   "examType": "oral",
   "duration": 20,
   "source": "DIA — formato nativo específico para España / Knowunity España / DSV Región 5",
+  "curriculo_dsm_url": "https://www.dsmadrid.org/docs/asignaturas/Curri%CC%81culo_DSM.pdf",
   "dia_info": {
     "es": "El examen de Español en el DIA de Valencia está diseñado bajo formato nativo específico para España. Al ser nativos hispanohablantes en su mayoría, el nivel de exigencia es muy alto. Incluye: comentario de texto de prensa actual, análisis literario e historia contemporánea. Recurso principal: Knowunity España (alumnos de colegios alemanes de la Región 5).",
     "de": "Die Spanisch-DIA-Prüfung in Valencia ist im spezifischen Formato für Spanien gestaltet. Da die meisten Schüler Muttersprachler sind, ist das Anforderungsniveau sehr hoch. Hauptquelle: Knowunity España."
@@ -826,6 +827,39 @@
               }
             }
           ]
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "category": { "es": "Comentario de Texto", "de": "Textkommentar" },
+      "items": [
+        {
+          "title": { "es": "Estructura del Comentario Crítico", "de": "Aufbau des kritischen Kommentars" },
+          "content": {
+            "es": "1. Resumen objetivo y neutro de la tesis del autor (sin valoraciones).\n2. Análisis de estructura argumentativa (introducción, desarrollo, conclusión).\n3. Análisis formal y estilístico (identificación de tipología textual y figuras retóricas).\n4. Posición personal justificada (disertación).",
+            "de": "1. Sachliche und neutrale Zusammenfassung der Hauptthese des Autors.\n2. Analyse der Argumentationsstruktur (Einleitung, Hauptteil, Schluss).\n3. Formale und stilistische Analyse (Textsorte und rhetorische Mittel).\n4. Begründete eigene Stellungnahme (Disertación)."
+          }
+        },
+        {
+          "title": { "es": "Figuras Retóricas Recurrentes", "de": "Häufige rhetorische Mittel" },
+          "content": {
+            "es": "- Metáfora: Asociación analógica de dos conceptos.\n- Oxímoron: Unión de dos términos opuestos o contradictorios.\n- Hipérbole: Exageración desmesurada de la realidad.\n- Paralelismo: Repetición de una misma estructura sintáctica.",
+            "de": "- Metapher: Analoger Vergleich zweier Konzepte.\n- Oxymoron: Verbindung zweier widersprüchlicher Begriffe.\n- Hyperbel: Starke Übertreibung der Realität.\n- Parallelismus: Wiederholung derselben Satzstruktur."
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Análisis Literario e Historia", "de": "Literatur- und Geschichtsanalyse" },
+      "items": [
+        {
+          "title": { "es": "Temática de Federico García Lorca", "de": "Themen bei Federico García Lorca" },
+          "content": {
+            "es": "- El destino trágico e inevitable del ser humano.\n- La opresión social frente a los deseos individuales de libertad.\n- Simbología lorquiana: la luna (muerte/destino), el caballo (pasión/libertad), el agua fluyendo (vida) o estancada (muerte).",
+            "de": "- Das unausweichliche tragische Schicksal des Menschen.\n- Gesellschaftliche Unterdrückung vs. individueller Freiheitsdrang.\n- Lorcas Symbolik: der Mond (Tod/Schicksal), das Pferd (Leidenschaft/Freiheit), fließendes Wasser (Leben) vs. stehendes Wasser (Tod)."
+          }
         }
       ]
     }
