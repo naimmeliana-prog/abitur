@@ -424,6 +424,13 @@ function renderWrittenExams(exams) {
                       </div>
                       <!-- Contenido desplegable (visible por defecto) -->
                       <div id="${uniqueId}" style="padding:var(--space-md);border-top:1px solid var(--glass-border);">
+                        <!-- Texto de lectura de apoyo si existe -->
+                        ${task.reading_text ? `
+                          <div style="margin-bottom:var(--space-lg);padding:var(--space-md);background:rgba(255,255,255,0.015);border:1px dashed var(--glass-border);border-radius:var(--radius-md);font-size:13px;line-height:1.5;color:var(--text-secondary);">
+                            <strong style="color:var(--color-gold);display:block;margin-bottom:6px;">📖 ${lang === 'de' ? 'Lesetext / Textauszug:' : 'Texto de lectura / Artículo periodístico:'}</strong>
+                            ${(task.reading_text[lang] || task.reading_text.es).replace(/\n/g, '<br>')}
+                          </div>
+                        ` : ''}
                         <div style="font-size:13px;font-weight:600;margin-bottom:var(--space-md);color:var(--text-primary);line-height:1.4;">
                           ${task.question?.[lang] || task.question?.es}
                         </div>
