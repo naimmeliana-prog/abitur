@@ -439,6 +439,690 @@
         "es": "Para el tribunal oral: conecta con actualidad — ¿qué diría Platón sobre la IA? ¿Descartes sobre la realidad virtual? Esto impresiona al examinador.",
         "de": "Für die mündliche Prüfung: mit Aktualität verbinden — Was würde Platon über KI sagen? Descartes über virtuelle Realität? Das beeindruckt den Prüfer."
       }
+    },
+    {
+      "id": "ph_003",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Filosofía Política — Hobbes vs Locke",
+      "question": {
+        "es": "¿Cuál es la diferencia fundamental respecto a los derechos naturales en el contrato social de Hobbes y Locke?",
+        "de": "Was ist der Hauptunterschied bezüglich der Naturrechte im Gesellschaftsvertrag von Hobbes und Locke?"
+      },
+      "options": [
+        {
+          "es": "Hobbes cree que el ciudadano cede todos sus derechos al soberano absoluto (excepto la vida); Locke sostiene que el Estado debe proteger los derechos inalienables (vida, libertad, propiedad).",
+          "de": "Hobbes meint, Bürger treten alle Rechte (außer Leben) an den Souverän ab; Locke fordert, der Staat müsse unveräußerliche Rechte (Leben, Freiheit, Eigentum) schützen."
+        },
+        {
+          "es": "Locke aboga por una monarquía absoluta; Hobbes por la democracia directa.",
+          "de": "Locke befürwortet eine absolute Monarchie; Hobbes eine direkte Demokratie."
+        },
+        {
+          "es": "Ambos coinciden en que la propiedad privada no existe en el estado de naturaleza.",
+          "de": "Beide stimmen überein, dass es im Naturzustand kein Privateigentum gibt."
+        },
+        {
+          "es": "Hobbes considera que el ser humano es pacífico por naturaleza; Locke que es violento.",
+          "de": "Hobbes sieht den Menschen von Natur aus friedlich; Locke als gewalttätig."
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Para Hobbes, en el estado de naturaleza impera la guerra. Para salir de él, se ceden todos los derechos al Leviatán a cambio de paz y orden. Para Locke, el estado de naturaleza es relativamente pacífico y los derechos ya existen; el Estado se crea con el único fin de proteger esos derechos preexistentes (concepción liberal).",
+        "de": "Bei Hobbes gibt man fast alle Rechte für Sicherheit auf. Bei Locke ist der Staat nur der Hüter bereits existierender Rechte (Leben, Eigentum, Freiheit)."
+      },
+      "tip": {
+        "es": "Este contraste de la filosofía política es un clásico del Abitur. Memoriza los términos 'Leviatán' (Hobbes) y 'Estado liberal de derecho' (Locke).",
+        "de": "Wichtiges Thema. Merke: Hobbes = Leviathan (Sicherheitsstaat), Locke = liberaler Rechtsstaat."
+      }
+    },
+    {
+      "id": "ph_004",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Antropología — Sartre",
+      "question": {
+        "es": "¿Qué significa la famosa fórmula existencialista de Jean-Paul Sartre: 'La existencia precede a la esencia'?",
+        "de": "Was bedeutet Jean-Paul Sartres Formel 'Die Existenz geht der Essenz voraus'?"
+      },
+      "options": [
+        {
+          "es": "Que el ser humano nace con un destino o propósito determinado por Dios que debe descubrir.",
+          "de": "Dass der Mensch mit einer gottgegebenen Bestimmung geboren wird, die er entdecken muss."
+        },
+        {
+          "es": "Que el ser humano primero existe, se encuentra en el mundo, surge en él y solo después se define a través de sus elecciones y acciones libres.",
+          "de": "Dass der Mensch zuerst existiert, in der Welt erscheint und sich erst danach durch seine freien Entscheidungen und Taten definiert."
+        },
+        {
+          "es": "Que la esencia biológica y genética determina toda la conducta humana posterior.",
+          "de": "Dass das biologische und genetische Wesen das menschliche Verhalten komplett bestimmt."
+        },
+        {
+          "es": "Que las cosas y los objetos creados por el hombre tienen mayor valor ontológico que los propios seres humanos.",
+          "de": "Dass von Menschen geschaffene Dinge einen höheren Wert haben als der Mensch selbst."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Sartre defiende el existencialismo ateo: no hay una naturaleza humana prediseñada porque no hay un Dios creador que la conciba. El ser humano empieza por ser nada y se autoconstruye con su libertad absoluta, lo cual genera angustia (Angst).",
+        "de": "Es gibt keine vorgegebene Natur des Menschen. Der Mensch ist das, wozu er sich durch seine Existenz und freien Handlungen selbst macht."
+      },
+      "tip": {
+        "es": "Conecta a Sartre con el concepto de 'condenado a ser libre'. El ser humano no tiene excusas para justificar sus acciones morales.",
+        "de": "Verknüpfe Sartre mit dem Begriff 'Zur Freiheit verurteilt'. Der Mensch trägt die volle Verantwortung."
+      }
+    },
+    {
+      "id": "ph_005",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Epistemología — Hume",
+      "question": {
+        "es": "Según el empirista David Hume, ¿cuál es el origen último de todas nuestras ideas?",
+        "de": "Was ist nach David Hume der Ursprung all unserer Ideen?"
+      },
+      "options": [
+        {
+          "es": "Las ideas innatas grabadas por Dios en nuestra mente.",
+          "de": "Die angeborenen Ideen, die Gott in unsere Seele gelegt hat."
+        },
+        {
+          "es": "Las percepciones sensibles, divididas en impresiones (impresiones directas) e ideas (copias debilitadas de las impresiones).",
+          "de": "Die Sinneseindrücke, aufgeteilt in Impressionen (direkte Wahrnehmung) und Ideen (blasse Kopien davon)."
+        },
+        {
+          "es": "La intuición intelectual pura e independiente de la experiencia corporal.",
+          "de": "Die reine intellektuelle Anschauung unabhängig von körperlicher Erfahrung."
+        },
+        {
+          "es": "El estudio formal de las matemáticas y la geometría.",
+          "de": "Das formale Studium der Mathematik und der Geometrie."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Como empirista radical, Hume sostiene que la mente es una 'página en blanco' (tabula rasa). Sin una impresión previa sensible (por ejemplo, ver el color rojo), no es posible tener la correspondiente idea en el pensamiento.",
+        "de": "Hume ist Empirist: Alle Ideen stammen von vorherigen Impressionen (Sinneseindrücken). Ohne Wahrnehmung kein Gedanke."
+      },
+      "tip": {
+        "es": "Hume usa este criterio para criticar las ideas metafísicas (como Dios o el Alma): al no corresponder a ninguna impresión sensible directa, carecen de validez científica.",
+        "de": "Humes Kriterium: Jede valide Idee muss auf eine Impression zurückführbar sein. Metaphysische Begriffe wie Substanz scheitern daran."
+      }
+    },
+    {
+      "id": "ph_006",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Filosofía Política — Rawls",
+      "question": {
+        "es": "En la teoría de la justicia de John Rawls, ¿cuál es la función del 'velo de la ignorancia' (Schleier des Nichtwissens)?",
+        "de": "Welche Funktion hat John Rawls' 'Schleier des Nichtwissens'?"
+      },
+      "options": [
+        {
+          "es": "Ocultar los delitos de corrupción cometidos por los gobernantes en el estado de naturaleza.",
+          "de": "Die Korruptionsdelikte der Herrschenden im Naturzustand zu vertuschen."
+        },
+        {
+          "es": "Asegurar la imparcialidad al diseñar los principios de la sociedad, haciendo que las personas desconozcan su clase social, género, raza o talentos.",
+          "de": "Unparteilichkeit garantieren, indem Entscheider ihre eigene soziale Stellung, Geschlecht, Rasse oder Fähigkeiten nicht kennen."
+        },
+        {
+          "es": "Demostrar que es imposible alcanzar la justicia real debido a la ignorancia de los votantes.",
+          "de": "Zu beweisen, dass Gerechtigkeit wegen der Unwissenheit der Wähler unmöglich ist."
+        },
+        {
+          "es": "Limitar el acceso a la educación superior a los ciudadanos con menos recursos.",
+          "de": "Den Zugang zur Hochschulbildung für ärmere Bürger einzuschränken."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Rawls propone un experimento mental (posición original). Bajo el 'velo de la ignorancia', nadie sabe qué lugar ocupará en la sociedad. Así, por puro egoísmo racional, elegirán principios justos que protejan a los más desfavorecidos (principio de diferencia), por si acaso les toca estar en esa posición.",
+        "de": "Hinter dem Schleier des Nichtwissens entscheidet man rational und fair, weil man nicht weiß, ob man reich, arm, gesund oder krank sein wird."
+      },
+      "tip": {
+        "es": "Memoriza los dos principios de Rawls: 1) Igualdad en libertades básicas, 2) Las desigualdades solo se justifican si benefician a los menos favorecidos.",
+        "de": "Merke Rawls' Prinzipien: 1) Maximale gleiche Grundfreiheiten, 2) Differenzprinzip (Ungleichheit nur, wenn sie den Schwächsten nutzt)."
+      }
+    },
+    {
+      "id": "ph_007",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Ética — Utilitarismo",
+      "question": {
+        "es": "El utilitarismo de John Stuart Mill valora la moralidad de una acción en función de:",
+        "de": "Der Utilitarismus von John Stuart Mill bewertet die Moralität einer Handlung nach:"
+      },
+      "options": [
+        {
+          "es": "La pureza de las intenciones del sujeto y el cumplimiento riguroso del deber.",
+          "de": "Der Reinheit der Absicht des Handelnden und der Befolgung von Pflichten."
+        },
+        {
+          "es": "Las consecuencias de la acción, buscando maximizar el bienestar general y minimizar el dolor para el mayor número de afectados.",
+          "de": "Den Konsequenzen der Handlung, mit dem Ziel, das Glück für die größte Zahl von Betroffenen zu maximieren."
+        },
+        {
+          "es": "La imitación de la conducta de los ciudadanos ejemplares de la comunidad.",
+          "de": "Der Nachahmung des Verhaltens vorbildlicher Bürger."
+        },
+        {
+          "es": "El cumplimiento estricto de las leyes religiosas tradicionales.",
+          "de": "Der strengen Einhaltung traditioneller religiöser Gesetze."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El utilitarismo es una ética consecuencialista (consequentialist). No importa si tenías buenas intenciones; si tu acción causó dolor masivo, es inmoral. Lo que define la bondad es la utilidad (fórmula de la felicidad agregada).",
+        "de": "Der Utilitarismus ist konsequentialistisch: Eine Tat ist gut, wenn ihre Folgen das Gesamtwohl aller Betroffenen mehren."
+      },
+      "tip": {
+        "es": "Mill refina a Bentham distinguiendo placeres cualitativos (intelectuales) de cuantitativos (corporales). Ej: 'Es preferible ser un Sócrates insatisfecho que un cerdo satisfecho'.",
+        "de": "Mill betont qualitative Unterschiede beim Glück: Geistige Freuden stehen über bloß körperlichen Bedürfnissen."
+      }
+    },
+    {
+      "id": "ph_008",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Epistemología — Kant",
+      "question": {
+        "es": "En la síntesis de Kant, ¿cuál es el papel de los 'conceptos puros del entendimiento' (categorías)?",
+        "de": "Welche Rolle spielen die Kategorien des Verstandes in Kants Erkenntnistheorie?"
+      },
+      "options": [
+        {
+          "es": "Son ideas que provienen directamente de la observación repetida de los objetos del mundo externo.",
+          "de": "Sie sind Ideen, die aus der wiederholten Beobachtung der Außenwelt stammen."
+        },
+        {
+          "es": "Son estructuras a priori de nuestra mente que ordenan y dan sentido a la materia caótica recibida por los sentidos.",
+          "de": "Sie sind mentale Strukturen a priori, die das ungeordnete Material der Sinne strukturieren und verständlich machen."
+        },
+        {
+          "es": "Son delirios metafísicos que la ciencia moderna debe erradicar por completo.",
+          "de": "Sie sind metaphysische Täuschungen, die die moderne Wissenschaft abschaffen sollte."
+        },
+        {
+          "es": "Son definiciones matemáticas establecidas por convención social.",
+          "de": "Sie sind mathematische Definitionen, die gesellschaftlich vereinbart wurden."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Kant afirma: 'Pensamientos sin contenidos son vacíos; intuiciones sin conceptos son ciegas.' Los sentidos nos dan sensaciones caóticas, pero la mente las organiza usando el espacio y el tiempo (sensibilidad) y las categorías a priori (como la causalidad) en el entendimiento.",
+        "de": "Kant: 'Gedanken ohne Inhalt sind leer, Anschauungen ohne Begriffe sind blind.' Die Kategorien ordnen den Datenstrom der Sinne."
+      },
+      "tip": {
+        "es": "Este giro revolucionario se conoce como la 'Revolución Copernicana' (Kopernikanische Wende) de Kant: el sujeto no gira en torno al objeto, sino al revés.",
+        "de": "Dies ist Kants 'Kopernikanische Wende': Nicht das Subjekt richtet sich nach dem Objekt, sondern das Objekt nach dem Subjekt."
+      }
+    },
+    {
+      "id": "ph_009",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Antropología — Mito de la caverna",
+      "question": {
+        "es": "En la alegoría de la caverna de Platón, ¿qué representan los prisioneros encadenados que solo ven las sombras en la pared?",
+        "de": "Was repräsentieren die gefesselten Höhlenbewohner in Platons Höhlengleichnis?"
+      },
+      "options": [
+        {
+          "es": "A la clase gobernante (filósofos reyes) controlando a la población.",
+          "de": "Die Herrscherschicht (Philosophenkönige), die die Bevölkerung kontrolliert."
+        },
+        {
+          "es": "A la humanidad en su estado ordinario de ignorancia, tomando las copias e ilusiones sensibles por la realidad verdadera.",
+          "de": "Die Menschheit im Zustand der Unwissenheit, die bloße Sinnestäuschungen und Schatten für die wahre Wirklichkeit hält."
+        },
+        {
+          "es": "A los delincuentes castigados por las leyes de la polis ateniense.",
+          "de": "Die Kriminellen, die nach den Gesetzen der Athener Polis bestraft werden."
+        },
+        {
+          "es": "A los artistas creadores que pintan la realidad subjetiva.",
+          "de": "Die Künstler, die eine subjektive Realität malen."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La caverna representa el mundo sensible. Las sombras en la pared representan las apariencias efímeras. Los prisioneros somos nosotros cuando no ejercitamos la dialéctica racional para ascender al mundo de las Ideas perfectas.",
+        "de": "Die Höhle steht für das Sichtbare (Sinnenwelt), die Schatten für das Scheinbare (Doxa). Der Ausstieg führt zum wahren Wissen (Noesis/Ideenwelt)."
+      },
+      "tip": {
+        "es": "Utiliza este mito para estructurar análisis sobre la manipulación mediática, 'fake news' y la postverdad en la sociedad de la información.",
+        "de": "Verwende das Gleichnis für Vergleiche mit modernen Medien, Fake News und virtueller Realität."
+      }
+    },
+    {
+      "id": "ph_010",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Antropología — Determinismo",
+      "question": {
+        "es": "El determinismo fuerte sostiene que la libertad humana es una ilusión porque:",
+        "de": "Der harte Determinismus behauptet, dass der freie Wille eine Illusion ist, weil:"
+      },
+      "options": [
+        {
+          "es": "Las leyes físicas del Estado impiden que las personas viajen libremente.",
+          "de": "Die Gesetze des Staates die Reisefreiheit einschränken."
+        },
+        {
+          "es": "Todos los acontecimientos, incluidas las elecciones humanas, están causados y determinados por eventos previos según leyes naturales de causa y efecto.",
+          "de": "Jedes Ereignis, einschließlich menschlicher Entscheidungen, durch Kausalgesetze lückenlos durch Vorbedingungen festgelegt ist."
+        },
+        {
+          "es": "El cerebro humano carece de la complejidad necesaria para tomar decisiones complejas.",
+          "de": "Das menschliche Gehirn zu einfach für komplexe Entscheidungen ist."
+        },
+        {
+          "es": "La libertad solo existe en los sistemas políticos socialistas.",
+          "de": "Freiheit nur in sozialistischen Staaten existiert."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El determinismo científico afirma que el universo físico es predecible en sus causas. Al estar el cerebro humano formado por átomos y regido por la biología, todas nuestras decisiones mentales no son libres, sino el resultado necesario de impulsos bioquímicos y condicionamiento previo.",
+        "de": "Determinismus: Das Prinzip von Ursache und Wirkung gilt auch für den menschlichen Geist. Willensfreiheit existiert somit nicht."
+      },
+      "tip": {
+        "es": "El debate clave es si el determinismo es compatible (compatibilismo) o incompatible (incompatibilismo) con la responsabilidad moral.",
+        "de": "Hauptfrage im DIA: Schließt Determinismus moralische Verantwortung aus (Inkompatibilismus) oder nicht (Kompatibilismus)?"
+      }
+    },
+    {
+      "id": "ph_011",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Ética — Dilemas morales",
+      "question": {
+        "es": "Ante el clásico 'dilema del tranvía' (donde desviar el tren salva a 5 personas pero mata a 1 vía alternativa), ¿cómo actuaría un kantiano puro?",
+        "de": "Wie würde ein überzeugter Kantianer im 'Trolley-Dilemma' (Weiche umstellen rettet 5, tötet 1) handeln?"
+      },
+      "options": [
+        {
+          "es": "Desviaría la aguja porque 5 vidas valen más que 1 (cálculo de utilidad).",
+          "de": "Er würde die Weiche umstellen, weil 5 Leben wertvoller sind als 1."
+        },
+        {
+          "es": "No intervendría para desviar el tren, ya que hacerlo implicaría usar activamente la vida de una persona inocente como un medio para salvar a otras (violando la 2ª formulación del Imperativo Categórico).",
+          "de": "Er würde nicht eingreifen, da das aktive Opfern einer Person, um andere zu retten, die Würde verletzt (Menschheitszweckformel)."
+        },
+        {
+          "es": "Echaría a suertes la decisión lanzando una moneda al aire.",
+          "de": "Er würde eine Münze werfen."
+        },
+        {
+          "es": "Huiría del lugar para no tener ninguna responsabilidad.",
+          "de": "Er würde weglaufen, um keine Schuld auf sich zu laden."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La ética kantiana prohíbe instrumentalizar a los seres humanos. Matar a una persona de forma activa (aunque sea para salvar a un millón) es intrínsecamente malo según el deber categórico. La vida humana no tiene precio, sino dignidad (Würde), y no es objeto de sumas aritméticas.",
+        "de": "Kant verbietet das Aufrechnen von Menschenleben. Der Einzelne darf nie bloß als Mittel zum Zweck benutzt werden."
+      },
+      "tip": {
+        "es": "Usa este dilema para contrastar de forma brillante el consecuencialismo (utilitarismo) y la deontología (kantismo) en tu examen examen oral.",
+        "de": "Perfektes Beispiel, um Deontologie (Kant) und Utilitarismus (Mill) im Vortrag gegenüberzustellen."
+      }
+    },
+    {
+      "id": "ph_012",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Filosofía Política — Montesquieu",
+      "question": {
+        "es": "¿Cuál es el objetivo principal del principio de división de poderes propuesto por Montesquieu?",
+        "de": "Was ist das Hauptziel von Montesquieus Gewaltenteilung?"
+      },
+      "options": [
+        {
+          "es": "Acelerar los procesos de aprobación de leyes del soberano.",
+          "de": "Die Verabschiedung von Gesetzen durch den Souverän zu beschleunigen."
+        },
+        {
+          "es": "Evitar la concentración tiránica del poder del Estado y proteger la libertad política de los ciudadanos mediante un sistema de contrapesos.",
+          "de": "Die Konzentration von Macht in einer Hand (Tyrannei) zu verhindern und die Freiheit durch gegenseitige Kontrolle zu schützen."
+        },
+        {
+          "es": "Reducir los gastos administrativos y de personal del gobierno.",
+          "de": "Die Verwaltungskosten des Staates zu senken."
+        },
+        {
+          "es": "Dar mayor relevancia política a la aristocracia judicial.",
+          "de": "Dem Adel in der Justiz mehr Einfluss zu geben."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Montesquieu sostiene que todo hombre que tiene poder tiende a abusar de él. Para frenarlo, el poder debe detener al poder dividiéndose en Ejecutivo, Legislativo y Judicial, garantizando la independencia recíproca.",
+        "de": "Gewaltenteilung dient der Machtsicherung der Bürger. Macht muss Macht bremsen (checks and balances)."
+      },
+      "tip": {
+        "es": "Relaciona este concepto con la definición constitucional de democracia frente a autocracia en tu bloque de filosofía política.",
+        "de": "Ein Kernkonzept moderner Demokratien. Nutze es bei Fragen zu Rechtsstaatlichkeit."
+      }
+    },
+    {
+      "id": "ph_013",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Epistemología — Hume y la causalidad",
+      "question": {
+        "es": "David Hume argumenta que nuestra creencia en la ley de la causalidad (que la causa produce necesariamente el efecto) se basa en:",
+        "de": "David Hume argumentiert, dass unser Glaube an das Kausalitätsgesetz auf Folgendem beruht:"
+      },
+      "options": [
+        {
+          "es": "Una demostración lógica a priori de las matemáticas puras.",
+          "de": "Einer logischen Demonstration a priori."
+        },
+        {
+          "es": "El hábito, la costumbre y la asociación constante de eventos observada repetidamente en el pasado, no en una conexión real verificable.",
+          "de": "Gewohnheit (habit/custom) und der wiederholten Assoziation von Ereignissen, nicht auf einer nachweisbaren Verbindung in den Dingen selbst."
+        },
+        {
+          "es": "Una revelación divina grabada en el alma de los seres humanos.",
+          "de": "Einer göttlichen Eingebung."
+        },
+        {
+          "es": "Una ley física que se puede observar directamente con un microscopio.",
+          "de": "Einem physikalischen Gesetz, das man direkt unter dem Mikroskop sehen kann."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Hume examina la colisión de dos bolas de billar. Vemos la bola A moverse, tocar a B, y a B moverse. Pero nunca vemos la 'fuerza de conexión necesaria'. Nuestra mente presupone que volverá a ocurrir en el futuro únicamente debido al hábito o costumbre (custom).",
+        "de": "Kausalität ist kein Faktum in den Dingen, sondern eine psychologische Erwartung, die durch Gewohnheit entsteht."
+      },
+      "tip": {
+        "es": "Esta crítica de la causalidad despertó a Kant de su 'sueño dogmático' y le obligó a replantearse los fundamentos de la metafísica.",
+        "de": "Kants berühmter Ausspruch: Humes Kausalitätskritik weckte ihn aus dem 'dogmatischen Schlummer'."
+      }
+    },
+    {
+      "id": "ph_014",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Antropología — Rousseau",
+      "question": {
+        "es": "¿Cuál es la idea central de Jean-Jacques Rousseau sobre la relación entre el ser humano y la sociedad?",
+        "de": "Wie sieht Jean-Jacques Rousseau das Verhältnis von Mensch und Gesellschaft?"
+      },
+      "options": [
+        {
+          "es": "Que el hombre es egoísta y malvado por naturaleza, y solo el control estricto de las leyes del Estado impide la violencia.",
+          "de": "Der Mensch ist von Natur aus egoistisch und böse; nur der Staat verhindert Gewalt."
+        },
+        {
+          "es": "Que el ser humano es bueno y libre en su estado de naturaleza ('buen salvaje'), y es la sociedad basada en la propiedad privada la que lo corrompe y encadena.",
+          "de": "Der Mensch ist von Natur aus gut und frei ('Edler Wilder'); die Gesellschaft und das Privateigentum verderben und fesseln ihn."
+        },
+        {
+          "es": "Que los seres humanos son idénticos a los animales y carecen de cualquier dimensión moral.",
+          "de": "Menschen sind den Tieren gleichgestellt und haben keine moralische Dimension."
+        },
+        {
+          "es": "Que el Estado debe disolverse para dar paso a un anarquismo de libre mercado.",
+          "de": "Der Staat sollte sich auflösen, um Platz für freien Markt-Anarchismus zu machen."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Rousseau abre su obra 'El contrato social' diciendo: 'El hombre nace libre, pero en todas partes se encuentra encadenado.' Propone un nuevo contrato que disuelva el egoísmo individual en favor de la 'Voluntad General' (Gemeinwille).",
+        "de": "Rousseau: 'Der Mensch ist frei geboren, und überall liegt er in Ketten.' Die Gesellschaft deformiert den Naturzustand des Menschen."
+      },
+      "tip": {
+        "es": "Contrasta siempre a Rousseau ('el hombre es bueno por naturaleza') con Hobbes ('el hombre es un lobo para el hombre' - homo homini lupus).",
+        "de": "Stelle Rousseau ('Mensch von Natur aus gut') Hobbes ('Der Mensch ist dem Menschen ein Wolf') gegenüber."
+      }
+    },
+    {
+      "id": "ph_015",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Filosofía de la mente — Descartes",
+      "question": {
+        "es": "En la antropología dualista de René Descartes, ¿cuáles son las dos sustancias que componen al ser humano?",
+        "de": "Aus welchen zwei Substanzen besteht der Mensch nach René Descartes?"
+      },
+      "options": [
+        {
+          "es": "Sustancia divina (res divina) y Sustancia animal (res animalis).",
+          "de": "Göttliche Substanz (res divina) und tierische Substanz (res animalis)."
+        },
+        {
+          "es": "Sustancia pensante (res cogitans - mente/alma) y Sustancia extensa (res extensa - materia/cuerpo).",
+          "de": "Denkende Substanz (res cogitans - Geist) und ausgedehnte Substanz (res extensa - Körper)."
+        },
+        {
+          "es": "Sustancia lógica (res logica) y Sustancia histórica (res historica).",
+          "de": "Logische Substanz (res logica) und historische Substanz (res historica)."
+        },
+        {
+          "es": "Sustancia atómica (res atomica) y Sustancia espiritual (res spiritualis).",
+          "de": "Atomare Substanz (res atomica) und spirituelle Substanz (res spiritualis)."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El dualismo cartesiano separa de forma radical la mente (que no ocupa espacio y es libre) del cuerpo (que sigue las leyes mecánicas y físicas del movimiento). Su gran problema fue explicar cómo interactúan ambas (el problema mente-cuerpo).",
+        "de": "Körper und Geist sind getrennt. Die res extensa folgt mechanischen Gesetzen, die res cogitans ist immateriell und frei."
+      },
+      "tip": {
+        "es": "Para Descartes, los animales al carecer de 'res cogitans' son simples autómatas o máquinas biológicas (teoría del animal-máquina).",
+        "de": "Descartes sah Tiere als bloße Automaten (Maschinen ohne Seele), da ihnen die res cogitans fehlt."
+      }
+    },
+    {
+      "id": "ph_016",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Ética — Friedrich Nietzsche",
+      "question": {
+        "es": "¿En qué consiste la crítica de Nietzsche a la moral tradicional judeocristiana en su obra 'La genealogía de la moral'?",
+        "de": "Worin besteht Nietzsches Kritik an der traditionellen Moral in 'Zur Genealogie der Moral'?"
+      },
+      "options": [
+        {
+          "es": "Considera que no es lo suficientemente estricta con los pecadores.",
+          "de": "Er meint, sie sei nicht streng genug zu Sündern."
+        },
+        {
+          "es": "Afirma que es una 'moral de esclavos' basada en el resentimiento contra la vida, que debilita al ser humano, frente a la 'moral de señores' que celebra la vitalidad y la fuerza.",
+          "de": "Er kritisiert sie als 'Sklavenmoral', die auf Ressentiment beruht und das Leben schwächt, im Gegensatz zur lebensbejahenden 'Herrenmoral'."
+        },
+        {
+          "es": "Propone sustituir la Biblia por los textos lógicos de Aristóteles.",
+          "de": "Er will die Bibel durch aristotelische Logik ersetzen."
+        },
+        {
+          "es": "Defiende que la moral debe ser dictada exclusivamente por los científicos.",
+          "de": "Er meint, Moral solle von Naturwissenschaftlern diktiert werden."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Nietzsche realiza un análisis histórico (genealogía) de los términos morales (bueno/malo). Argumenta que la moral judeocristiana invirtió los valores originales griegos: lo débil y enfermo pasó a llamarse 'bueno', y la fuerza, salud e instinto vital pasaron a llamarse 'pecaminosos'. Propone una transmutación de los valores.",
+        "de": "Nietzsche fordert eine 'Umwertung aller Werte'. Die christliche Moral unterdrückt vitale Lebensinstinkte aus Neid auf die Starken."
+      },
+      "tip": {
+        "es": "Relaciona esta crítica con su concepto del 'Superhombre' (Übermensch), aquel capaz de crear sus propios valores morales más allá del bien y del mal.",
+        "de": "Der Übermensch überwindet die Sklavenmoral und schafft autonom eigene Werte aus der Lebensfülle heraus."
+      }
+    },
+    {
+      "id": "ph_017",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Lógica y Argumentación",
+      "question": {
+        "es": "¿Qué es una falacia 'ad hominem' en un debate filosófico o político?",
+        "de": "Was ist ein Argumentum ad hominem in einer Debatte?"
+      },
+      "options": [
+        {
+          "es": "Un argumento lógico irrefutable basado en pruebas empíricas.",
+          "de": "Ein unwiderlegbares Argument gestützt auf Daten."
+        },
+        {
+          "es": "Atacar a la persona que formula el argumento (su carácter, procedencia, etc.) en lugar de rebatir la verdad lógica de su afirmación.",
+          "de": "Der Angriff auf die Person, die eine These vertritt, anstatt ihre These sachlich zu prüfen oder zu widerlegen."
+        },
+        {
+          "es": "Apelar al miedo o a la fuerza de la autoridad del Estado.",
+          "de": "Die Berufung auf Angst oder staatliche Gewalt."
+        },
+        {
+          "es": "Un razonamiento deductivo correcto compuesto por dos premisas y una conclusión.",
+          "de": "Ein korrekter Syllogismus."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La falacia 'ad hominem' desvía la atención del argumento real. Por ejemplo: 'No podemos creer lo que dice este autor sobre economía porque en su juventud fue un rebelde irresponsable'. Las cualidades personales del autor no invalidan matemáticamente sus teorías económicas.",
+        "de": "Ein Scheinargument, das auf die Schwächen des Sprechers zielt, um dessen sachlich korrekte Argumente abzuwerten."
+      },
+      "tip": {
+        "es": "Aprende a identificar falacias típicas (como 'ad populum' o 'hombre de paja') al redactar tus comentarios argumentativos para el examen escrito del DIA.",
+        "de": "Lerne logische Fehlschlüsse (Straw Man, Ad populum) zu erkennen, um Gegenargumente im Essay präzise zu entkräften."
+      }
+    },
+    {
+      "id": "ph_018",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Ética — Aristóteles",
+      "question": {
+        "es": "En la ética a Nicómaco de Aristóteles, ¿cómo se determina la 'virtud' (areté) moral?",
+        "de": "Wie wird die Tugend (Areté) in Aristoteles' Ethik bestimmt?"
+      },
+      "options": [
+        {
+          "es": "Como el cumplimiento estricto de las leyes universales escritas.",
+          "de": "Als strikte Befolgung geschriebener Gesetze."
+        },
+        {
+          "es": "Como el término medio entre dos extremos viciosos, uno por exceso y otro por defecto, determinado por la razón práctica (prudencia).",
+          "de": "Als die goldene Mitte (Mesotes) zwischen zwei Extremen (Mangel und Übermaß), bestimmt durch die Klugheit (Phronesis)."
+        },
+        {
+          "es": "Como la acumulación de la mayor cantidad de bienes materiales posibles.",
+          "de": "Als Anhäufung materieller Güter."
+        },
+        {
+          "es": "Como una cualidad que no se puede entrenar ni adquirir, sino que es puramente genética.",
+          "de": "Als rein genetisches Erbe."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Aristóteles pone como ejemplo el valor (Tapferkeit). El valor es el punto medio virtuoso entre la cobardía (Feigheit - defecto de valor) y la temeridad (Tollkühnheit - exceso irresponsable de valor). Se adquiere mediante el hábito y la práctica.",
+        "de": "Tugend liegt in der Mitte (Mesotes). Beispiel: Tapferkeit ist die Mitte zwischen Feigheit (Mangel) und Tollkühnheit (Übermaß)."
+      },
+      "tip": {
+        "es": "Para Aristóteles, el fin último del hombre es la felicidad (Eudaimonía), y esta consiste en una vida dedicada a la actividad intelectual guiada por la virtud.",
+        "de": "Das höchste Gut ist die Eudaimonie. Sie wird durch ein tugendhaftes, vernunftgeleitetes Leben erreicht."
+      }
+    },
+    {
+      "id": "ph_019",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Filosofía de la ciencia",
+      "question": {
+        "es": "El filósofo de la ciencia Karl Popper propone el principio de 'falsabilidad' (Falsifizierbarkeit) como criterio de demarcación científica. Esto significa que:",
+        "de": "Karl Popper schlägt das Kriterium der Falsifizierbarkeit vor. Was bedeutet das?"
+      },
+      "options": [
+        {
+          "es": "Una teoría solo es científica si se ha demostrado que es completamente falsa.",
+          "de": "Eine Theorie ist nur wissenschaftlich, wenn sie widerlegt wurde."
+        },
+        {
+          "es": "Una teoría solo es científica si es formulada de tal manera que sus afirmaciones puedan ser refutadas o puestas a prueba mediante la experiencia sensible, en lugar de buscar solo confirmaciones.",
+          "de": "Eine Theorie ist nur wissenschaftlich, wenn sie prinzipiell empirisch widerlegbar (falsifizierbar) ist, statt nur nach Bestätigung zu suchen."
+        },
+        {
+          "es": "La ciencia debe basarse en la invención de datos falsos para acelerar el desarrollo.",
+          "de": "Die Wissenschaft gefälschte Daten nutzen darf, um schneller voranzukommen."
+        },
+        {
+          "es": "Toda teoría científica es una verdad absoluta que nunca puede ser cuestionada.",
+          "de": "Wissenschaftliche Theorien absolute Wahrheiten sind, die nie hinterfragt werden dürfen."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Popper critica el inductivismo. Aunque veamos mil cisnes blancos, no podemos afirmar con certeza absoluta 'todos los cisnes son blancos'. Sin embargo, basta con ver un solo cisne negro para refutar la hipótesis. Si una teoría no puede ser sometida a esa prueba de refutación (como el horóscopo), no es científica.",
+        "de": "Popper: Induktion beweist nie Wahrheit. Eine Theorie muss riskante Vorhersagen machen, die sich empirisch überprüfen und eventuell widerlegen lassen."
+      },
+      "tip": {
+        "es": "El psicoanálisis y el materialismo histórico fueron catalogados por Popper como pseudociencias porque sus hipótesis se adaptaban a cualquier hecho, impidiendo ser falsadas.",
+        "de": "Beispiele für Popper: Ein Horoskop oder Theorien, die alles erklären, sind nicht falsifizierbar und somit nicht wissenschaftlich."
+      }
+    },
+    {
+      "id": "ph_020",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Antropología — Libertad",
+      "question": {
+        "es": "En el debate sobre el libre albedrío, ¿qué sostiene la posición del 'compatibilismo'?",
+        "de": "Was besagt die Position des Kompatibilismus in der Willensfreiheitsdebatte?"
+      },
+      "options": [
+        {
+          "es": "Que la física cuántica y las leyes del Estado son incompatibles.",
+          "de": "Dass Quantenphysik und staatliche Gesetze unvereinbar sind."
+        },
+        {
+          "es": "Que el determinismo causal del universo físico es perfectamente compatible con la libertad de elección humana y la responsabilidad moral.",
+          "de": "Dass der kausale Determinismus der Welt und der freie Wille (und somit moralische Verantwortung) miteinander vereinbar sind."
+        },
+        {
+          "es": "Que el libre albedrío solo existe si la física clásica clásica está equivocada.",
+          "de": "Dass freier Wille nur existiert, wenn die klassische Physik falsch ist."
+        },
+        {
+          "es": "Que la libertad de los ciudadanos depende únicamente del sistema económico capitalista.",
+          "de": "Dass die Freiheit der Bürger ausschließlich vom kapitalistischen Wirtschaftssystem abhängt."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Los compatibilistas argumentan que, aunque nuestras decisiones internas tengan causas físicas previas en el cerebro, seguimos siendo libres si podemos actuar según nuestros deseos internos sin impedimentos externos o coacción (libertad de acción).",
+        "de": "Kompatibilismus: Auch wenn unsere Wünsche determiniert sind, handeln wir frei, solange wir tun können, was wir wollen (Handlungsfreiheit)."
+      },
+      "tip": {
+        "es": "Esta posición es defendida por filósofos contemporáneos y de la Ilustración (como Locke) para salvar el concepto de responsabilidad legal y penal.",
+        "de": "Wichtige Argumentationslinie in der modernen Philosophie, um das Rechtssystem und Schuldfragen ethisch zu begründen."
+      }
     }
   ],
   "official_exams_archive": [

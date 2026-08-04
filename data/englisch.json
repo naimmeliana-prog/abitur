@@ -455,6 +455,652 @@
         "es": "Mediation mantra: ¿Quién es el receptor? ¿Qué necesita saber? ¿Qué registro le corresponde? Responde estas 3 preguntas ANTES de escribir.",
         "de": "Mediation-Mantra: Wer ist der Empfänger? Was muss er wissen? Welches Register passt? Diese 3 Fragen VOR dem Schreiben beantworten."
       }
+    },
+    {
+      "id": "en_004",
+      "year": "DIA Type",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Grammar — Tenses",
+      "question": {
+        "es": "Complete the sentence: 'By the time the government finally passed the environmental law, the local ecosystem _______ significantly.'",
+        "de": "Vervollständige den Satz: 'By the time the government finally passed the environmental law, the local ecosystem _______ significantly.'"
+      },
+      "options": [
+        {
+          "es": "already suffered",
+          "de": "already suffered"
+        },
+        {
+          "es": "had already suffered",
+          "de": "had already suffered"
+        },
+        {
+          "es": "has already suffered",
+          "de": "has already suffered"
+        },
+        {
+          "es": "is already suffering",
+          "de": "is already suffering"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Usamos el Past Perfect ('had suffered') porque la acción de sufrir ocurrió ANTES que otra acción en el pasado ('passed'). La estructura 'By the time + Simple Past' exige el Past Perfect en la cláusula principal.",
+        "de": "Das Past Perfect ('had suffered') drückt aus, dass ein Ereignis vor einem anderen Zeitpunkt in der Vergangenheit stattfand. 'By the time + Simple Past' signalisiert diesen Tempusgebrauch."
+      },
+      "tip": {
+        "es": "Identifica las acciones del pasado. La más antigua de todas lleva siempre 'had + participio' (Past Perfect).",
+        "de": "Finde die zeitliche Abfolge. Das zeitlich weiter zurückliegende Ereignis steht immer im Past Perfect."
+      }
+    },
+    {
+      "id": "en_005",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Reading Comprehension — Connectors",
+      "question": {
+        "es": "Which connector is best to introduce a contrasting argument that contradicts a previous point?",
+        "de": "Welches Bindewort eignet sich am besten, um ein gegensätzliches Argument einzuleiten, das den vorherigen punto widerlegt?"
+      },
+      "options": [
+        {
+          "es": "Furthermore",
+          "de": "Furthermore"
+        },
+        {
+          "es": "Consequently",
+          "de": "Consequently"
+        },
+        {
+          "es": "On the other hand / However",
+          "de": "On the other hand / However"
+        },
+        {
+          "es": "In addition to",
+          "de": "In addition to"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "es": "'On the other hand' y 'However' introducen contraste o antítesis. 'Furthermore' y 'In addition to' añaden información del mismo tipo. 'Consequently' indica una relación de causa-efecto.",
+        "de": "'On the other hand' und 'However' leiten einen Gegensatz ein. 'Furthermore' und 'In addition to' reihen Argumente an. 'Consequently' zeigt eine Folge auf."
+      },
+      "tip": {
+        "es": "Para obtener buena nota en estilo, utiliza conectores variados y evita repetir constantemente 'but' o 'and'.",
+        "de": "Nutze abwechslungsreiche Konnektoren statt ständig 'but' oder 'and' zu wiederholen."
+      }
+    },
+    {
+      "id": "en_006",
+      "year": "DIA Type",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Style & Registers",
+      "question": {
+        "es": "Which phrase is the most appropriate for a formal letter or formal email to a university admissions office?",
+        "de": "Welche Formulierung eignet sich am besten für einen formalen Brief/E-Mail an ein Universitätsbüro?"
+      },
+      "options": [
+        {
+          "es": "'Hey guys, I wanna ask about my application status.'",
+          "de": "'Hey guys, I wanna ask about my application status.'"
+        },
+        {
+          "es": "'I am writing to inquire about the current status of my application.'",
+          "de": "'I am writing to inquire about the current status of my application.'"
+        },
+        {
+          "es": "'Can you tell me if I'm in or not? Cheers!'",
+          "de": "'Can you tell me if I'm in or not? Cheers!'"
+        },
+        {
+          "es": "'Please reply ASAP because I'm waiting. Thanks.'",
+          "de": "'Please reply ASAP because I'm waiting. Thanks.'"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La opción B usa un registro formal ('inquire', sin contracciones como 'wanna' o 'ASAP', y tono cortés). El resto de opciones son informales, lo que restaría puntos en el examen DIA por inadecuación estilística.",
+        "de": "Option B nutzt formelle Sprache ('inquire', keine Abkürzungen/Umgangssprache). Die anderen Optionen sind zu informell für akademischen Schriftverkehr."
+      },
+      "tip": {
+        "es": "En redacciones formales de inglés: NUNCA utilices contracciones (escribe 'do not' en lugar de 'don't', 'cannot' en lugar de 'can't').",
+        "de": "In formellen Essays: NIE Kurzformen verwenden (schreibe 'do not' statt 'don't')."
+      }
+    },
+    {
+      "id": "en_007",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Shakespeare",
+      "question": {
+        "es": "In Shakespeare's plays, what is a 'soliloquy'?",
+        "de": "Was versteht man unter einem 'soliloquy' in Shakespeares Dramen?"
+      },
+      "options": [
+        {
+          "es": "A song sung by the main character to entertain the audience",
+          "de": "Ein Lied der Hauptfigur zur Unterhaltung"
+        },
+        {
+          "es": "A speech delivered by a character alone on stage, revealing their inner thoughts and conflicts to the audience",
+          "de": "Eine Rede einer Figur, die allein auf der Bühne steht und ihre innersten Gedanken und Konflikte offenbart"
+        },
+        {
+          "es": "A dialogue between two characters with contrasting viewpoints",
+          "de": "Ein dialogue between two characters with contrasting viewpoints"
+        },
+        {
+          "es": "An introduction spoken by the chorus at the beginning of the play",
+          "de": "Eine Einleitung des Chors zu Beginn des Stücks"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Un soliloquio (soliloquy) es una técnica dramática donde el personaje habla para sí mismo en el escenario, permitiendo que la audiencia escuche sus planes y sentimientos reales (ej: el 'To be or not to be' de Hamlet).",
+        "de": "Ein Soliloquy (Selbstgespräch) offenbart dem Publikum die wahren Absichten und Gefühle einer Figur, wenn diese allein auf der Bühne agiert."
+      },
+      "tip": {
+        "es": "No lo confundas con un 'monologue', que puede dirigirse a otros personajes. El soliloquio es estrictamente privado y a solas.",
+        "de": "Nicht mit einem Monolog verwechseln. Ein Soliloquy findet ohne andere Figuren auf der Bühne statt."
+      }
+    },
+    {
+      "id": "en_008",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Vocabulary — Environmental Issues",
+      "question": {
+        "es": "Choose the correct term: 'The gradual increase in the Earth's average temperature due to greenhouse gases trapping heat is known as _______.'",
+        "de": "Wähle den richtigen Begriff: 'The gradual increase in the Earth's average temperature due to greenhouse gases trapping heat is known as _______.'"
+      },
+      "options": [
+        {
+          "es": "biodiversity loss",
+          "de": "biodiversity loss"
+        },
+        {
+          "es": "global warming / climate change",
+          "de": "global warming / climate change"
+        },
+        {
+          "es": "renewable energy transition",
+          "de": "renewable energy transition"
+        },
+        {
+          "es": "deforestation",
+          "de": "deforestation"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El calentamiento global (global warming) o cambio climático describe el aumento de temperaturas debido al efecto invernadero. Biodiversity loss es pérdida de biodiversidad. Deforestation es la tala de bosques.",
+        "de": "Global warming oder climate change beschreibt den Anstieg der Erdtemperatur durch Treibhausgase. Deforestation steht für Waldrodung."
+      },
+      "tip": {
+        "es": "El tema del medio ambiente es un clásico recurrente en los exámenes DIA de inglés. Memoriza bien este vocabulario técnico.",
+        "de": "Das Umweltthema kommt im Abitur extrem häufig vor. Lerne das Fachvokabular gründlich."
+      }
+    },
+    {
+      "id": "en_009",
+      "year": "DIA Type",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literary Terms — Narrative Perspective",
+      "question": {
+        "es": "A narrator who stands outside the story, knows the thoughts and feelings of all characters, and has access to all events is called an:",
+        "de": "Ein Erzähler, der außerhalb der Geschichte steht und die Gedanken und Gefühle aller Figuren kennt, heißt:"
+      },
+      "options": [
+        {
+          "es": "first-person narrator",
+          "de": "first-person narrator"
+        },
+        {
+          "es": "omniscient third-person narrator",
+          "de": "omniscient third-person narrator"
+        },
+        {
+          "es": "limited third-person narrator",
+          "de": "limited third-person narrator"
+        },
+        {
+          "es": "unreliable narrator",
+          "de": "unreliable narrator"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El narrador omnisciente (omniscient) lo sabe todo y no se limita a la perspectiva de un solo personaje. El narrador en primera persona (first-person) usa el 'I' y está sesgado. El narrador de tercera persona limitada solo sigue la mente de un personaje.",
+        "de": "Der allwissende Erzähler (omniscient narrator) blickt in alle Figuren hinein. Der limitierte Erzähler folgt nur den Eindrücken einer einzigen Figur."
+      },
+      "tip": {
+        "es": "Analiza siempre la fiabilidad del narrador (reliability) al redactar tus comentarios literarios en el examen.",
+        "de": "Achte bei der Analyse immer auf die Zuverlässigkeit (reliability) des Erzählers."
+      }
+    },
+    {
+      "id": "en_010",
+      "year": "DIA Type",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Grammar — Modals",
+      "question": {
+        "es": "Select the correct modal verb: 'Students _______ submit their essays by Friday afternoon, or they will lose 10% of their grade.'",
+        "de": "Wähle das richtige Modalverb: 'Students _______ submit their essays by Friday afternoon, or they will lose 10% of their grade.'"
+      },
+      "options": [
+        {
+          "es": "might",
+          "de": "might"
+        },
+        {
+          "es": "must / have to",
+          "de": "must / have to"
+        },
+        {
+          "es": "may",
+          "de": "may"
+        },
+        {
+          "es": "could",
+          "de": "could"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "'Must' o 'have to' expresan una obligación fuerte o regla estricta. 'Might' indica posibilidad débil. 'May' indica permiso o posibilidad formal. 'Could' habilidad pasada o posibilidad.",
+        "de": "'Must' oder 'have to' drücken eine feste Pflicht aus. 'Might' steht für eine vage Möglichkeit."
+      },
+      "tip": {
+        "es": "Usa 'must' cuando la obligación proviene del emisor y 'have to' cuando proviene de reglas externas, aunque a veces son intercambiables.",
+        "de": "Must = persönliche Pflicht. Have to = externe Regeln. Beide zeigen starke Verpflichtung."
+      }
+    },
+    {
+      "id": "en_011",
+      "year": "DIA Type",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Rhetorical Devices",
+      "question": {
+        "es": "What rhetorical device is used in the phrase: 'In education, we are building a golden bridge to the future'?",
+        "de": "Welches rhetorische Mittel liegt in der Phrase vor: 'In education, we are building a golden bridge to the future'?"
+      },
+      "options": [
+        {
+          "es": "Simile (Símil)",
+          "de": "Simile"
+        },
+        {
+          "es": "Metaphor (Metáfora)",
+          "de": "Metaphor"
+        },
+        {
+          "es": "Oxymoron (Oxímoron)",
+          "de": "Oxymoron"
+        },
+        {
+          "es": "Personification (Personificación)",
+          "de": "Personification"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Es una metáfora (metaphor) porque compara la educación con un puente de oro directamente, sin usar conectores comparativos. Si dijera 'education is LIKE a bridge', sería un símil (simile).",
+        "de": "Es ist eine Metapher, da der Vergleich direkt erfolgt. Bei 'like a bridge' (wie eine Brücke) wäre es ein Simile."
+      },
+      "tip": {
+        "es": "Diferencia siempre: Metaphor (identificación directa) vs Simile (usa 'like' o 'as'). Es un fallo típico del Abitur.",
+        "de": "Merke: Metaphor = ohne Vergleichswort. Simile = mit 'like' oder 'as'."
+      }
+    },
+    {
+      "id": "en_012",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Grammar — Conditionals",
+      "question": {
+        "es": "Which conditional sentence is grammatically correct to express a hypothetical situation in the past?",
+        "de": "Welcher Konditionalsatz drückt eine hypothetische Situation in der Vergangenheit korrekt aus?"
+      },
+      "options": [
+        {
+          "es": "If we would have started earlier, we would finish the project.",
+          "de": "If we would have started earlier, we would finish the project."
+        },
+        {
+          "es": "If we had started earlier, we would have finished the project on time.",
+          "de": "If we had started earlier, we would have finished the project on time."
+        },
+        {
+          "es": "If we started earlier, we will finish the project.",
+          "de": "If we started earlier, we will finish the project."
+        },
+        {
+          "es": "If we had started earlier, we will have finished the project.",
+          "de": "If we had started earlier, we will have finished the project."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El Tercer Condicional (Conditional III) describe el pasado hipotético. Estructura: 'If + Past Perfect (had started)' en la condición, y 'would have + past participle (would have finished)' en el resultado.",
+        "de": "Das Conditional III beschreibt Unmögliches in der Vergangenheit. Struktur: If + Past Perfect, Hauptsatz mit would + have + Past Participle."
+      },
+      "tip": {
+        "es": "NUNCA pongas 'would' dentro de la cláusula con 'if'. Ej: 'If I would have...' es un error grave de gramática.",
+        "de": "Kein 'would' im If-Satz! Das ist einer der häufigsten Fehler in englischen Aufsätzen."
+      }
+    },
+    {
+      "id": "en_013",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Vocabulary — Globalization",
+      "question": {
+        "es": "What term describes the outsourcing of business processes to another country to reduce costs?",
+        "de": "Welcher Begriff beschreibt die Auslagerung von Geschäftsprozessen in ein anderes Land zur Kostensenkung?"
+      },
+      "options": [
+        {
+          "es": "integration",
+          "de": "integration"
+        },
+        {
+          "es": "offshoring / outsourcing",
+          "de": "offshoring / outsourcing"
+        },
+        {
+          "es": "urbanization",
+          "de": "urbanization"
+        },
+        {
+          "es": "sustainability",
+          "de": "sustainability"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Offshoring u outsourcing es trasladar actividades comerciales o fábricas al extranjero para abaratar la mano de obra. Integration es integración. Urbanization es el crecimiento de las ciudades.",
+        "de": "Offshoring/Outsourcing bezeichnet die Verlagerung von Unternehmensaktivitäten ins Ausland. Ein wichtiges Globalisierungsthema im DIA."
+      },
+      "tip": {
+        "es": "En temas de globalización, contrasta las ventajas económicas (efficiency, cost reduction) con los problemas sociales (exploitation, job loss).",
+        "de": "Wäge bei Globalisierungsfragen wirtschaftliche Vorteile gegen soziale Nachteile ab."
+      }
+    },
+    {
+      "id": "en_014",
+      "year": "DIA Type",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Style & Writing — Thesis Statement",
+      "question": {
+        "es": "What is the primary function of a 'thesis statement' in an academic essay?",
+        "de": "Was ist die Hauptfunktion eines 'thesis statement' in einem akademischen Essay?"
+      },
+      "options": [
+        {
+          "es": "To summarize all the body paragraphs in the introduction",
+          "de": "Alle Hauptteile in der Einleitung zusammenzufassen"
+        },
+        {
+          "es": "To clearly state the central argument or claim of the essay in one or two sentences at the end of the introduction",
+          "de": "Das Hauptargument oder die zentrale These des Essays in ein oder zwei Sätzen am Ende der Einleitung klar zu formulieren"
+        },
+        {
+          "es": "To ask a rhetorical question that makes the reader think",
+          "de": "Eine rhetorische Frage zu stellen, die den Leser anregt"
+        },
+        {
+          "es": "To list the references and bibliography used in the essay",
+          "de": "Die verwendeten Quellen und die Bibliographie aufzulisten"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La asignación de una tesis (thesis statement) es la columna vertebral del ensayo. Indica al lector exactamente qué vas a defender. Sin ella, el ensayo carece de dirección y rigor académico.",
+        "de": "Das Thesis Statement ist das Kernstück der Einleitung. Es formuliert deine Hauptbehauptung, die du im Hauptteil mit Argumenten belegst."
+      },
+      "tip": {
+        "es": "Asegúrate de que tu thesis statement sea debatible. No puede ser un simple hecho aceptado; debe requerir demostración.",
+        "de": "Ein Thesis Statement darf keine bloße Tatsache sein, sondern muss eine diskutierbare Behauptung aufstellen."
+      }
+    },
+    {
+      "id": "en_015",
+      "year": "DIA Type",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Grammar — Passive Voice",
+      "question": {
+        "es": "Change the sentence to the passive voice: 'The committee is reviewing the climate action plan.'",
+        "de": "Setze den Satz ins Passiv: 'The committee is reviewing the climate action plan.'"
+      },
+      "options": [
+        {
+          "es": "The climate action plan was reviewed by the committee.",
+          "de": "The climate action plan was reviewed by the committee."
+        },
+        {
+          "es": "The climate action plan is being reviewed by the committee.",
+          "de": "The climate action plan is being reviewed by the committee."
+        },
+        {
+          "es": "The climate action plan has been reviewed by the committee.",
+          "de": "The climate action plan has been reviewed by the committee."
+        },
+        {
+          "es": "The climate action plan is reviewing by the committee.",
+          "de": "The climate action plan is reviewing by the committee."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Como el original está en Present Continuous ('is reviewing'), el pasivo debe mantener el mismo aspecto temporal usando 'is/are + being + participio' ('is being reviewed').",
+        "de": "Da der Ausgangssatz im Present Progressive steht, muss das Passiv die Form 'is/are + being + Past Participle' annehmen."
+      },
+      "tip": {
+        "es": "En inglés formal, el pasivo se prefiere para describir procesos objetivos donde el sujeto agente no es el foco de interés.",
+        "de": "Das Passiv eignet sich im formellen Schreiben, um den Fokus auf die Handlung statt auf den Akteur zu legen."
+      }
+    },
+    {
+      "id": "en_016",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Rhetorical Devices — Contrast",
+      "question": {
+        "es": "What rhetorical device is used when two opposite ideas are put together in a sentence for achieving a contrasting effect (e.g., 'Speech is silver, but silence is gold')?",
+        "de": "Welches rhetorische Mittel stellt zwei gegensätzliche Ideen in einem Satz gegenüber, um einen Kontrasteffekt zu erzielen?"
+      },
+      "options": [
+        {
+          "es": "Alliteration",
+          "de": "Alliteration"
+        },
+        {
+          "es": "Antithesis (Antítesis)",
+          "de": "Antithesis"
+        },
+        {
+          "es": "Hyperbole",
+          "de": "Hyperbole"
+        },
+        {
+          "es": "Euphemism",
+          "de": "Euphemism"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La antítesis (antithesis) contrapone términos paralelos pero con significados opuestos en la misma frase para destacar la diferencia de forma lírica o persuasiva.",
+        "de": "Die Antithese (antithesis) stellt gegensätzliche Begriffe oder Gedanken einander gegenüber, um die Aussagekraft zu verstärken."
+      },
+      "tip": {
+        "es": "Muy común en discursos políticos y essays persuasivos. Señalarla en el análisis retórico da muchos puntos.",
+        "de": "Häufig in Reden zu finden. Das Erkennen und Erklären der Antithese bringt Punkte in der Analyse."
+      }
+    },
+    {
+      "id": "en_017",
+      "year": "DIA Type",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Vocabulary — Science & Ethics",
+      "question": {
+        "es": "Which term describes the ethical implications of biological research and applications, especially in medicine and genetics?",
+        "de": "Welcher Begriff beschreibt die ethischen Implikationen biologischer Forschung, insbesondere in Medizin und Genetik?"
+      },
+      "options": [
+        {
+          "es": "biotechnology",
+          "de": "biotechnology"
+        },
+        {
+          "es": "bioethics (Bioética)",
+          "de": "bioethics"
+        },
+        {
+          "es": "biodegradability",
+          "de": "biodegradability"
+        },
+        {
+          "es": "biometrics",
+          "de": "biometrics"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La bioética (bioethics) estudia las cuestiones morales derivadas de avances científicos como la clonación, edición genética (CRISPR) y terapias médicas invasivas.",
+        "de": "Bioethics (Bioethik) befasst sich mit den moralischen Grenzen moderner Lebenswissenschaften (z.B. Klonen, Geneditierung)."
+      },
+      "tip": {
+        "es": "En essays de ciencia (science and technology), usa 'bioethics' al cuestionar los límites éticos del progreso genético.",
+        "de": "Verwende 'bioethics' bei Diskussionen über die Grenzen des medizinischen Fortschritts."
+      }
+    },
+    {
+      "id": "en_018",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Grammar — Reported Speech",
+      "question": {
+        "es": "Convert this direct speech to reported speech: 'I will call you tomorrow,' she told me.",
+        "de": "Setze die wörtliche Rede in die indirekte Rede: 'I will call you tomorrow,' she told me."
+      },
+      "options": [
+        {
+          "es": "She told me that she will call me tomorrow.",
+          "de": "She told me that she will call me tomorrow."
+        },
+        {
+          "es": "She told me that she would call me the following day.",
+          "de": "She told me that she would call me the following day."
+        },
+        {
+          "es": "She told me that I would call her tomorrow.",
+          "de": "She told me that I would call her tomorrow."
+        },
+        {
+          "es": "She told me that she had called me yesterday.",
+          "de": "She told me that she had called me yesterday."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Al pasar a reported speech tras un verbo introductorio en pasado ('told me'), hacemos un 'backshift' de tiempos verbales: 'will' cambia a 'would', y las referencias temporales cambian ('tomorrow' a 'the following day' / 'the next day').",
+        "de": "Bei der indirekten Rede im Präteritum verschieben sich die Zeiten (Backshift). 'Will' wird zu 'would', 'tomorrow' wird zu 'the following day'."
+      },
+      "tip": {
+        "es": "No olvides cambiar los pronombres y los adverbios de tiempo además del verbo principal.",
+        "de": "Vergiss nicht, neben den Verben auch Pronomen und Zeitangaben anzupassen."
+      }
+    },
+    {
+      "id": "en_019",
+      "year": "DIA Type",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Rhetorical Devices — Understatement",
+      "question": {
+        "es": "What is the definition of 'litotes' as a rhetorical device?",
+        "de": "Wie wird das rhetorische Mittel 'Litotes' definiert?"
+      },
+      "options": [
+        {
+          "es": "An extreme exaggeration to prove a point",
+          "de": "Eine extreme Übertreibung zur Veranschaulichung"
+        },
+        {
+          "es": "A deliberate understatement using a double negative to express an affirmative (e.g., 'She is not unlike her mother' or 'It's not bad')",
+          "de": "Eine bewusste Untertreibung durch doppelte Verneinung zur Bejahung (z.B. 'He is not a bad teacher')"
+        },
+        {
+          "es": "The repetition of vowel sounds inside words in a line of poetry",
+          "de": "Die Wiederholung von Vokalen innerhalb einer Gedichtzeile"
+        },
+        {
+          "es": "A sudden break in a sentence where the speaker stops abruptly",
+          "de": "Ein plötzlicher Abbruch mitten im Satz"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La lítote (litotes) consiste en afirmar algo negando lo contrario mediante una doble negación (ej. 'no es tonto' en lugar de 'es inteligente'). Su efecto es suavizar o atenuar la declaración con tono irónico o educado.",
+        "de": "Die Litotes drückt eine positive Aussage durch die Verneinung des Gegenteils aus (z.B. 'nicht unklug'). Dies wirkt oft zurückhaltend oder ironisch."
+      },
+      "tip": {
+        "es": "Es muy común en la cultura y literatura anglosajona, caracterizada por el 'understatement' (atenuación o moderación).",
+        "de": "Typisch für den englischen Sprachraum ('understatement'). Benenne es in der Analyse für Extra-Stilpunkte."
+      }
+    },
+    {
+      "id": "en_020",
+      "year": "DIA Type",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Vocabulary — Politics & Civil Rights",
+      "question": {
+        "es": "Which term refers to the unfair treatment of different categories of people, especially on the grounds of race, age, or sex?",
+        "de": "Welcher Begriff beschreibt die ungerechte Behandlung von Menschengruppen aufgrund von Rasse, Alter oder Geschlecht?"
+      },
+      "options": [
+        {
+          "es": "prejudice (Prejuicio)",
+          "de": "prejudice"
+        },
+        {
+          "es": "discrimination (Discriminación)",
+          "de": "discrimination"
+        },
+        {
+          "es": "integration",
+          "de": "integration"
+        },
+        {
+          "es": "segregation",
+          "de": "segregation"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La discriminación (discrimination) es el acto físico/comportamiento de tratar de forma desigual a un grupo. El prejuicio (prejudice) es la actitud o pensamiento cognitivo previo (sin justificación).",
+        "de": "Discrimination bezeichnet die ungleiche Behandlung von Personen. Prejudice steht für das Vorurteil (die innere Einstellung)."
+      },
+      "tip": {
+        "es": "Al analizar textos del Movimiento de Derechos Civiles (Civil Rights Movement) o de Martin Luther King, diferencia bien entre 'prejudice' (actitud) y 'discrimination' (acción).",
+        "de": "Unterscheide bei Analysen historischer Bürgerrechtstexte präzise zwischen 'prejudice' (Denken) und 'discrimination' (Handeln)."
+      }
     }
   ],
   "official_exams_archive": [

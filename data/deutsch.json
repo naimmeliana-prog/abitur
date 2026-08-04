@@ -580,6 +580,576 @@
         "es": "Memoriza los términos por género: Lyrik (Metrum, Reim, Kadenz) vs Drama (Figurenkonstellation, Akt, Szene) vs Prosa (Erzählperspektive, Erzählhaltung, Zeitraffung).",
         "de": "Begriffe nach Gattung merken: Lyrik vs Drama vs Prosa."
       }
+    },
+    {
+      "id": "de_006",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Literaturgeschichte — Epochen",
+      "question": {
+        "es": "¿A qué época literaria pertenece el concepto de 'Schöne Seele' y la búsqueda de armonía formal y equilibrio moral?",
+        "de": "Welcher Literaturepoche lässt sich der Begriff der 'Schöne Seele' sowie das Streben nach formaler Harmonie zuordnen?"
+      },
+      "options": [
+        {
+          "es": "Sturm und Drang",
+          "de": "Sturm und Drang"
+        },
+        {
+          "es": "Weimarer Klassik",
+          "de": "Weimarer Klassik"
+        },
+        {
+          "es": "Romantik",
+          "de": "Romantik"
+        },
+        {
+          "es": "Naturalismus",
+          "de": "Naturalismus"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La época de Weimarer Klassik (Goethe, Schiller) persigue el ideal humano armónico en el que coinciden el deber (Pflicht) y la inclinación personal (Neigung). La 'Schöne Seele' encarna este equilibrio de manera perfecta.",
+        "de": "Die Weimarer Klassik (Goethe, Schiller) strebt nach dem idealen Menschen, in dem Pflicht und Neigung im Einklang stehen. Die 'Schöne Seele' verkörpert diesen Zustand der moralischen Harmonie."
+      },
+      "tip": {
+        "es": "Recuerda el contraste: Sturm und Drang = pasión y rebelión irracional. Weimarer Klassik = armonía, contención y equilibrio racional.",
+        "de": "Merke den Kontrast: Sturm und Drang = Leidenschaft und Rebellion. Weimarer Klassik = Harmonie, Maß und Vernunft."
+      }
+    },
+    {
+      "id": "de_007",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Drama — Woyzeck",
+      "question": {
+        "es": "¿Qué elemento formal caracteriza la estructura de la obra 'Woyzeck' de Georg Büchner?",
+        "de": "Welches formale Merkmal charakterisiert den Aufbau von Georg Büchners Drama 'Woyzeck'?"
+      },
+      "options": [
+        {
+          "es": "La estructura clásica en 5 actos con unidades de tiempo y lugar strictly respetadas",
+          "de": "Der klassische Fünf-Akt-Aufbau unter Einhaltung der drei Einheiten von Ort, Zeit und Handlung"
+        },
+        {
+          "es": "Escenas abiertas y fragmentadas (Offenes Drama) sin un orden definitivo establecido por el autor",
+          "de": "Ein offenes Drama mit losen, fragmentarischen Szenen ohne vom Autor festgelegte endgültige Reihenfolge"
+        },
+        {
+          "es": "Uso exclusivo del monólogo interior de Marie",
+          "de": "Ausschließliche Verwendung des inneren Monologs von Marie"
+        },
+        {
+          "es": "Un coro que comenta las acciones trágicas al final de cada escena",
+          "de": "Ein Chor, der die tragischen Handlungen am Ende jeder Szene kommentiert"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "'Woyzeck' es el ejemplo primordial de 'offenes Drama' (drama abierto). Büchner murió antes de terminar la obra, dejando manuscritos fragmentados. La acción avanza por estampas sueltas y no hay una división lineal de actos.",
+        "de": "'Woyzeck' ist das Paradebeispiel für ein offenes Drama. Büchner verstarb vor der Fertigstellung und hinterließ ungeordnete Szenenentwürfe. Das Drama verläuft in collageartigen Stationen."
+      },
+      "tip": {
+        "es": "En el examen, destaca que la fragmentación formal refleja la desintegración psíquica y social del propio Woyzeck.",
+        "de": "Hebe in der Klausur hervor, dass die fragmentierte Form Woyzecks geistige und soziale Desintegration widerspiegelt."
+      }
+    },
+    {
+      "id": "de_008",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Stilmittel — Rhetorik",
+      "question": {
+        "es": "¿Qué figura retórica consiste en la repetición de palabras idénticas al final de frases o versos consecutivos?",
+        "de": "Welches Stilmittel beschreibt die Wiederholung gleicher Wörter am Ende aufeinanderfolgender Sätze oder Verse?"
+      },
+      "options": [
+        {
+          "es": "Anapher (Anáfora)",
+          "de": "Anapher"
+        },
+        {
+          "es": "Epipher (Epífora)",
+          "de": "Epipher"
+        },
+        {
+          "es": "Alliteration (Aliteración)",
+          "de": "Alliteration"
+        },
+        {
+          "es": "Chiasmus (Quiasmo)",
+          "de": "Chiasmus"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La epífora (Epipher) repite palabras al final de frases contiguas (ej: 'Mir geht es gut, dir geht es gut.'). La anáfora (Anapher) hace exactamente lo contrario, repitiendo palabras al principio.",
+        "de": "Die Epipher wiederholt Wörter am Satzende (z.B. 'Mir geht es gut, dir geht es gut.'). Die Anapher tut das Gegenteil und wiederholt Wörter am Satzanfang."
+      },
+      "tip": {
+        "es": "Anapher = Principio. Epipher = Final. Memoriza esta regla para no confundirlos.",
+        "de": "Anapher = Anfang. Epipher = Ende. Merk dir das für die Analyse."
+      }
+    },
+    {
+      "id": "de_009",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literaturgeschichte — Epochen",
+      "question": {
+        "es": "¿Cuál es el núcleo ideológico de la época literaria de la Ilustración (Aufklärung) en Alemania?",
+        "de": "Was ist der ideologische Kern der Literaturepoche der Aufklärung in Deutschland?"
+      },
+      "options": [
+        {
+          "es": "La sumisión a la providencia divina y el desprecio por la ciencia experimental",
+          "de": "Die Unterwerfung unter Gottes Vorsehung und die Ablehnung empirischer Wissenschaft"
+        },
+        {
+          "es": "La emancipación humana mediante el uso racional y crítico del intelecto",
+          "de": "Die Emanzipation des Menschen durch den kritischen und selbstständigen Gebrauch der Vernunft"
+        },
+        {
+          "es": "La exaltación mística del sentimiento nacionalista y los cuentos medievales",
+          "de": "Die mystische Verherrlichung des Nationalgefühls und mittelalterliche Sagen"
+        },
+        {
+          "es": "El retorno a la vida agraria y la huida de la vida urbana moderna",
+          "de": "Die Rückkehr zum Agrarleben und die Flucht vor der modernen Stadt"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Kant definió la Ilustración como la salida del hombre de su minoría de edad autoculpable, bajo el lema de 'Sapere aude' (atrévete a saber/pensar por ti mismo). La razón (Vernunft) es la máxima instancia evaluadora de la verdad y el orden moral.",
+        "de": "Kant definiert Aufklärung als den Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit unter dem Leitspruch 'Sapere aude' (Habe Mut, dich deines eigenen Verstandes zu bedienen!)."
+      },
+      "tip": {
+        "es": "El autor fundamental de la Aufklärung para el Abitur es Lessing con su obra 'Nathan der Weise' y la parábola del anillo.",
+        "de": "Wichtigster Autor für das Abitur ist Lessing mit 'Nathan der Weise' und der Ringparabel."
+      }
+    },
+    {
+      "id": "de_010",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Textanalyse — Sachtext",
+      "question": {
+        "es": "En la introducción (Einleitung) de un análisis de texto pragmático, ¿cuál de las siguientes opciones NO es parte obligatoria del enunciado de introducción (TATT-Satz)?",
+        "de": "Welche der folgenden Angaben gehört NICHT zwingend in den Einleitungssatz (TATT-Satz) einer Sachtextanalyse?"
+      },
+      "options": [
+        {
+          "es": "El tipo de texto (Textsorte)",
+          "de": "Die Textsorte"
+        },
+        {
+          "es": "La biografía completa del autor (Biographie des Autors)",
+          "de": "Die vollständige Biographie des Autors"
+        },
+        {
+          "es": "El tema central del texto (Thema des Textes)",
+          "de": "Das Hauptthema des Textes"
+        },
+        {
+          "es": "La tesis principal del autor (Kernthese des Autors)",
+          "de": "Die Kernthese des Autors"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El TATT-Satz (Titel, Autor, Textsorte, Thema) debe ser muy condensado y breve (3-5 frases). La biografía completa del autor no tiene cabida en esta fase e introduce ruido innecesario.",
+        "de": "Der TATT-Satz muss extrem dicht und präzise sein. Die Lebensgeschichte des Autors lenkt nur ab und kostet wertvolle Punkte in der Strukturwertung."
+      },
+      "tip": {
+        "es": "Ahorra tiempo: formula el TATT-Satz en un único párrafo estructurado de forma fluida.",
+        "de": "Formuliere den TATT-Satz in einem einzigen, flüssig geschriebenen Einleitungssatz."
+      }
+    },
+    {
+      "id": "de_011",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Lyrik — Metrum",
+      "question": {
+        "es": "¿Qué metraje poético presenta una sucesión regular de una sílaba átona seguida de una tónica (x á)?",
+        "de": "Welches Versmaß beschreibt eine regelmäßige Folge aus einer unbetonten und einer betonten Silbe (x á)?"
+      },
+      "options": [
+        {
+          "es": "Trochäus (Troqueo)",
+          "de": "Trochäus"
+        },
+        {
+          "es": "Jambus (Yambo)",
+          "de": "Jambus"
+        },
+        {
+          "es": "Daktylus (Dáctilo)",
+          "de": "Daktylus"
+        },
+        {
+          "es": "Anapäst (Anapesto)",
+          "de": "Anapäst"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El yambo (Jambus) consiste en la métrica átona-tónica (x á), creando un ritmo fluido ideal para narrar. El troqueo (Trochäus) es lo opuesto (á x).",
+        "de": "Der Jambus steigt auf: unbetont - betont (x á). Der Trochäus fällt ab: betont - unbetont (á x)."
+      },
+      "tip": {
+        "es": "Memoriza: 'Jambus steigt, Trochäus fällt.' Te servirá para identificar el metrum en segundos.",
+        "de": "Merkhilfe: 'Jambus steigt, Trochäus fällt.' Hilft dir sofort in der Klausur."
+      }
+    },
+    {
+      "id": "de_012",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literaturgeschichte — Romantik",
+      "question": {
+        "es": "¿Qué concepto clave de la época del Romanticismo (Romantik) describe el anhelo irrefrenable de infinito, evasión de la realidad burguesa y melancolía nostálgica?",
+        "de": "Welcher Schlüsselbegriff der Romantik beschreibt das unstillbare Verlangen nach dem Unendlichen, die Flucht aus dem bürgerlichen Alltag und melancholische Sehnsucht?"
+      },
+      "options": [
+        {
+          "es": "Weltschmerz",
+          "de": "Weltschmerz"
+        },
+        {
+          "es": "Progressive Universalpoesie",
+          "de": "Progressive Universalpoesie"
+        },
+        {
+          "es": "Blaue Blume (Flor azul)",
+          "de": "Blaue Blume"
+        },
+        {
+          "es": "Waldeinsamkeit",
+          "de": "Waldeinsamkeit"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "es": "La 'Blaue Blume' (introducida por Novalis en su novela Heinrich von Ofterdingen) simboliza el anhelo de amor, naturaleza divina y fusión del alma con el infinito cósmico, núcleo puro de la Romantik.",
+        "de": "Die 'Blaue Blume' steht als zentrales Motiv der Romantik für Sehnsucht, Liebe und das Streben nach dem Unendlichen, das im irdischen Leben unerreichbar bleibt."
+      },
+      "tip": {
+        "es": "La ventana abierta (Fenster) en Eichendorff es el elemento arquitectónico que desata este anhelo de evasión.",
+        "de": "Das offene Fenster bei Eichendorff is der visuelle Auslöser für diese Sehnsucht."
+      }
+    },
+    {
+      "id": "de_013",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Grammatik — Konjunktiv I",
+      "question": {
+        "es": "¿En qué parte del examen escrito de alemán se debe emplear estrictamente el 'Konjunktiv I'?",
+        "de": "In welchem Prüfungsteil im Deutsch-Abitur muss zwingend der Konjunktiv I verwendet werden?"
+      },
+      "options": [
+        {
+          "es": "Al redactar la conclusión personal (Stellungnahme/Fazit)",
+          "de": "Beim Formulieren der eigenen Stellungnahme (Fazit)"
+        },
+        {
+          "es": "Al reproducir de forma objetiva las tesis de un texto ajeno (Inhaltswiedergabe)",
+          "de": "Bei der objektiven Wiedergabe fremder Textaussagen (Inhaltsangabe)"
+        },
+        {
+          "es": "Al enumerar las figuras retóricas de un poema",
+          "de": "Bei der Aufzählung von Stilmitteln eines Gedichts"
+        },
+        {
+          "es": "Al realizar la dedicatoria del examen",
+          "de": "Beim Schreiben des Deckblatts"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El Konjunktiv I sirve para marcar el discurso indirecto (indirekte Rede), distanciándose objetivamente de lo afirmado por el autor en la Inhaltsangabe. Si coincide formalmente con el indicativo, se usa el Konjunktiv II.",
+        "de": "Der Konjunktiv I wird für die indirekte Rede verwendet, um Sachlichkeit und Distanz zu wahren. Stimmt er mit dem Indikativ überein, weicht man auf den Konjunktiv II aus."
+      },
+      "tip": {
+        "es": "El uso del indicativo para referirse a ideas del autor denota un estilo informal y resta puntos en el apartado lingüístico del DIA.",
+        "de": "Indikativ bei der Textwiedergabe gilt als stilistischer Fehler und führt zu Punktabzug."
+      }
+    },
+    {
+      "id": "de_014",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literaturgeschichte — Vormärz",
+      "question": {
+        "es": "¿Cuál es la característica principal de la literatura del Vormärz y la Joven Alemania (Junges Deutschland)?",
+        "de": "Was ist das Hauptmerkmal der Vormärz-Literatur und des Jungen Deutschlands?"
+      },
+      "options": [
+        {
+          "es": "Evasión estética y sumisión ciega a la restauración aristocrática de Metternich",
+          "de": "Ästhetischer Rückzug und Unterwerfung unter die Politik Metternichs"
+        },
+        {
+          "es": "Compromiso político-social activo para denunciar la miseria de las clases bajas y exigir democracia",
+          "de": "Aktives politisches Engagement, Kritik an Zensur und soziales Eintreten für die Unterschicht"
+        },
+        {
+          "es": "Búsqueda de la belleza formal y equilibrio absoluto mediante el uso de la mitología griega",
+          "de": "Streben nach reiner Schönheit und Gleichgewicht unter Nutzung griechischer Mythen"
+        },
+        {
+          "es": "La apología de la revolución industrial y el capitalismo financiero",
+          "de": "Befürwortung der industriellen Revolution und des Finanzkapitalismus"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El Vormärz es una literatura de combate e inconformismo político previa a la revolución de 1848. Büchner con su lema 'Paz a las cabañas, guerra a los palacios' (Der Hessische Landbote) ilustra esta militancia social.",
+        "de": "Der Vormärz (ca. 1830-1848) steht für politisch engagierte Kunst, die das absolutistische System kritisiert und für soziale Gerechtigkeit kämpft."
+      },
+      "tip": {
+        "es": "'Woyzeck' ilustra el determinismo social: la pobreza física y mental impide al individuo actuar de forma libre y ética.",
+        "de": "'Woyzeck' zeigt den sozialen Determinismus: Armut beraubt den Menschen der moralischen Freiheit."
+      }
+    },
+    {
+      "id": "de_015",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Gedichtvergleich — Epochen",
+      "question": {
+        "es": "Al comparar la ciudad en Georg Heym ('Der Gott der Stadt') con el Romanticismo, ¿cómo percibe el Expresionismo el espacio urbano?",
+        "de": "Wie wird die Großstadt im Expressionismus (z.B. Georg Heyms 'Der Gott der Stadt') im Vergleich zur Romantik wahrgenommen?"
+      },
+      "options": [
+        {
+          "es": "Como un espacio pacífico y de comunión mística con la divinidad creadora",
+          "de": "Als Ort des Friedens und der harmonischen Verbindung zu Gott"
+        },
+        {
+          "es": "Como un monstruo deshumanizador, ruidoso y alienante dominado por fuerzas apocalípticas",
+          "de": "Als entmenschlichender, lauter und entfremdender Raum voller apokalyptischer Gefahren"
+        },
+        {
+          "es": "Como el destino final soñado al que aspira el caminante romántico en su viaje",
+          "de": "Als ersehntes Reiseziel des romantischen Wanderers"
+        },
+        {
+          "es": "No hay diferencias: ambas épocas idealizan la urbanización y la modernidad",
+          "de": "Kein Unterschied: beide Epochen idealisieren das Stadtleben"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Para el expresionista la ciudad es el infierno artificial de hormigón que destruye la individualidad del sujeto lírico (Weltende). En Heym, la ciudad adora a Baal, una deidad destructora que consume vidas humanas en su chimenea industrial.",
+        "de": "Im Expressionismus ist die Stadt ein dämonischer, anonymer Raum, der den Menschen entfremdet und vernichtet (Simultanstil/Reihungsstil)."
+      },
+      "tip": {
+        "es": "Usa el término 'Großstadtlyrik' para categorizar estos poemas expresionistas en tu comparación.",
+        "de": "Verwende den Begriff 'Großstadtlyrik', um diese Gedichte in deiner Klausur einzuordnen."
+      }
+    },
+    {
+      "id": "de_016",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Drama — Woyzeck",
+      "question": {
+        "es": "¿Qué teoría médica y filosófica del siglo XIX caricaturiza Georg Büchner a través del personaje del Doctor en 'Woyzeck'?",
+        "de": "Welche wissenschaftliche Denkrichtung des 19. Jahrhunderts karikiert Georg Büchner durch die Figur des Doktors in 'Woyzeck'?"
+      },
+      "options": [
+        {
+          "es": "El psicoanálisis temprano sobre la histeria femenina",
+          "de": "Die frühe Psychoanalyse über die Hysterie"
+        },
+        {
+          "es": "El positivismo científico extremo y el materialismo que reduce al ser humano a un mero objeto fisiológico",
+          "de": "Den radikalen wissenschaftlichen Positivismus und den Materialismus, die den Menschen zum bloßen Versuchsobjekt degradieren"
+        },
+        {
+          "es": "La homeopatía y la medicina naturista romántica del alma",
+          "de": "Die Homöopathie und die Naturheilkunde der Romantik"
+        },
+        {
+          "es": "El conductismo moderno sobre el condicionamiento clásico",
+          "de": "Den Behaviorismus über die klassische Konditionierung"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El Doctor representa la ciencia sin ética ni empatía del siglo XIX. Ve a Woyzeck como un espécimen ('Subjekt') para su dieta de guisantes, celebrando sus aberraciones mentales como éxitos de su hipótesis de laboratorio.",
+        "de": "Der Doktor steht für die kalte, ethikfreie Wissenschaft. Woyzeck ist für ihn kein fühlendes Wesen, sondern ein biochemisches Versuchsobjekt ('Subjekt')."
+      },
+      "tip": {
+        "es": "El latín del Doctor contrasta con el balbuceo fragmentado de Woyzeck, marcando la enorme asimetría de poder social.",
+        "de": "Das pseudowissenschaftliche Latein des Doktors verdeutlicht Woyzecks sprachliche Machtlosigkeit."
+      }
+    },
+    {
+      "id": "de_017",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Epochen — Sturm und Drang",
+      "question": {
+        "es": "¿Qué obra dramática fundamental de Friedrich Schiller es el máximo exponente del Sturm und Drang?",
+        "de": "Welches berühmte Drama von Friedrich Schiller ist ein Hauptwerk des Sturm und Drang?"
+      },
+      "options": [
+        {
+          "es": "Don Karlos",
+          "de": "Don Karlos"
+        },
+        {
+          "es": "Die Räuber (Los Bandidos)",
+          "de": "Die Räuber"
+        },
+        {
+          "es": "Maria Stuart",
+          "de": "Maria Stuart"
+        },
+        {
+          "es": "Wilhelm Tell",
+          "de": "Wilhelm Tell"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "'Die Räuber' (1781) plantea el grito de libertad contra la tiranía feudal y las normas paternales. Karl Moor encarna el genio rebelde individualista (Geniebegriff) característico del Sturm und Drang.",
+        "de": "'Die Räuber' (1781) ist das Inbegriff des Geniekults und Protests gegen feudale Tyrannei, typisch für die Sturm-und-Drang-Epoche."
+      },
+      "tip": {
+        "es": "En el Sturm und Drang prima el 'Gefühl' (sentimiento) sobre la 'Vernunft' (razón) ilustrada.",
+        "de": "Im Sturm und Drang steht das Gefühl weit über der aufklärerischen Vernunft."
+      }
+    },
+    {
+      "id": "de_018",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Erörterung — Struktur",
+      "question": {
+        "es": "Al estructurar una Erörterung dialectal con el método de la 'clepsidra' (Sanduhr-Prinzip), ¿cuál es el orden de argumentación idóneo?",
+        "de": "Welche Argumentationsreihenfolge ist bei einer dialektischen Erörterung nach dem Sanduhr-Prinzip korrekt?"
+      },
+      "options": [
+        {
+          "es": "Tus argumentos fuertes → Tus argumentos débiles → Los del oponente",
+          "de": "Eigene starke Argumente → Eigene schwache Argumente → Argumente der Gegenseite"
+        },
+        {
+          "es": "Argumentos de la contraparte ordenados de mayor a menor fuerza → Punto de inflexión → Tus propios argumentos ordenados de menor a mayor fuerza",
+          "de": "Gegenargumente (absteigende Stärke) → Drehpunkt (Umschwung) → Eigene Argumente (aufsteigende Stärke)"
+        },
+        {
+          "es": "El orden es aleatorio y no influye en la persuasión de la lectura",
+          "de": "Die Reihenfolge ist beliebig und hat keinen Einfluss auf die Überzeugungskraft"
+        },
+        {
+          "es": "Se colocan solo los argumentos favorables a tu propia opinión personal",
+          "de": "Es werden nur Argumente genannt, die die eigene Position stützen"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El Sanduhr-Prinzip empieza con la tesis contraria a ti (de más fuerte a más débil) para minimizar su impacto, cruza por el Drehpunkt (punto de giro) y desarrolla tus propios argumentos (de menor a mayor fuerza) para dejar al lector convencido al final.",
+        "de": "Das Sanduhrprinzip ordnet Argumente so, dass die stärksten eigenen Argumente am Ende des Hauptteils stehen und somit am stärksten im Gedächtnis bleiben."
+      },
+      "tip": {
+        "es": "El 'Drehpunkt' requiere una frase de transición clara y bien estructurada (ej: 'Trotz dieser Argumente darf nicht übersehen werden, dass...').",
+        "de": "Der Umschwung (Drehpunkt) muss durch eine klare Überleitungssatz eingeleitet werden."
+      }
+    },
+    {
+      "id": "de_019",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Stilmittel — Rhetorik",
+      "question": {
+        "es": "¿Qué figura estilística representa la enumeración de palabras de forma que el sentido se vaya intensificando o escalando en fuerza?",
+        "de": "Welches Stilmittel beschreibt die stufenweise Steigerung von Begriffen in ihrer Bedeutung oder Wirkung?"
+      },
+      "options": [
+        {
+          "es": "Klimax (Clímax)",
+          "de": "Klimax"
+        },
+        {
+          "es": "Antiklimax (Anticlímax)",
+          "de": "Antiklimax"
+        },
+        {
+          "es": "Synästhesie (Sinestesia)",
+          "de": "Synästhesie"
+        },
+        {
+          "es": "Hyperbel (Hipérbole)",
+          "de": "Hyperbel"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La Klimax acumula palabras en orden ascendente (ej. 'veni, vidi, vici' o 'er weint, er kreischt, er wütet'). Su opuesto es la Antiklimax (de mayor a menor importancia).",
+        "de": "Die Klimax ist eine dreistufige Steigerung (z.B. 'Ich kam, sah und siegte'). Ihr Gegenteil ist die Antiklimax."
+      },
+      "tip": {
+        "es": "La Klimax sirve para dramatizar y enfatizar emocionalmente una progresión en la argumentación.",
+        "de": "Die Klimax verstärkt die emotionale oder logische Wirkung eines Arguments."
+      }
+    },
+    {
+      "id": "de_020",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Epochen — Expressionismus",
+      "question": {
+        "es": "¿Qué recurso estilístico y estructural caracteriza la poesía del Expresionismo temprano al yuxtaponer imágenes inconexas de forma simultánea?",
+        "de": "Welches formaler Stilmittel prägt die Lyrik des Frühexpressionismus durch die unzusammenhängende Aneinanderreihung von Bildern?"
+      },
+      "options": [
+        {
+          "es": "Volksliedton (Tono de canción popular)",
+          "de": "Volksliedton"
+        },
+        {
+          "es": "Simultanstil / Reihungsstil (Estilo simultáneo)",
+          "de": "Simultanstil / Reihungsstil"
+        },
+        {
+          "es": "Blankvers (Verso blanco formal)",
+          "de": "Blankvers"
+        },
+        {
+          "es": "Ghasel (Estructura de gacela oriental)",
+          "de": "Ghasel"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El Reihungsstil (estilo de hilera) yuxtapone ideas y catástrofes cotidianas sin nexo causal (como en 'Weltende' de Hoddis). Refleja el bombardeo de estímulos de la metrópolis moderna y la fragmentación existencial del individuo del siglo XX.",
+        "de": "Der Reihungsstil (oder Simultanstil) reiht unzusammenhängende Eindrücke aneinander. Er spiegelt die Reizüberflutung der modernen Welt wider."
+      },
+      "tip": {
+        "es": "Al contrastar con el Romanticismo, contrapón el orden formal regular romántico con la disociación caótica del Reihungsstil expresionista.",
+        "de": "Stelle in der Klausur den geordneten Volksliedton der Romantik dem expressionistischen Reihungsstil gegenüber."
+      }
     }
   ],
   "official_exams_archive": [

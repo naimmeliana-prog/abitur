@@ -725,6 +725,500 @@
         "es": "Haz un diagrama de árbol rápido. Ayuda a visualizar la probabilidad condicional y a no confundir numerador y denominador.",
         "de": "Erstelle ein Baumdiagramm. Es hilft, bedingte Wahrscheinlichkeiten ohne Verwechslung zu berechnen."
       }
+    },
+    {
+      "id": "ma_008",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Analysis — Extrempunkte",
+      "question": {
+        "es": "Dada la función f(x) = x³ - 3x. ¿En qué puntos se encuentran sus extremos relativos?",
+        "de": "Gegeben ist die Funktion f(x) = x³ - 3x. An welchen Stellen liegen die relativen Extrema?"
+      },
+      "options": [
+        {
+          "es": "Máximo en x = -1, Mínimo en x = 1",
+          "de": "Maximum bei x = -1, Minimum bei x = 1"
+        },
+        {
+          "es": "Mínimo en x = -1, Máximo en x = 1",
+          "de": "Minimum bei x = -1, Maximum bei x = 1"
+        },
+        {
+          "es": "Punto de inflexión en x = 0, sin extremos",
+          "de": "Wendepunkt bei x = 0, keine Extrema"
+        },
+        {
+          "es": "Máximo en x = -√3, Mínimo en x = √3",
+          "de": "Maximum bei x = -√3, Minimum bei x = √3"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "1) Primera derivada: f'(x) = 3x² - 3. Puntos críticos: f'(x) = 0 → 3x² = 3 → x = ±1. 2) Segunda derivada: f''(x) = 6x. f''(-1) = -6 < 0 (Máximo). f''(1) = 6 > 0 (Mínimo).",
+        "de": "1) Erste Ableitung: f'(x) = 3x² - 3 = 0 → x = ±1. 2) Zweite Ableitung: f''(x) = 6x. f''(-1) = -6 < 0 (Hochpunkt). f''(1) = 6 > 0 (Tiefpunkt)."
+      },
+      "tip": {
+        "es": "Usa la segunda derivada f''(x) para clasificar rápidamente los puntos críticos como máximos, mínimos o puntos de inflexión.",
+        "de": "Nutze die zweite Ableitung f''(x) zur schnellen Bestimmung der Art eines Extrempunkts."
+      }
+    },
+    {
+      "id": "ma_009",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Geometrie — Vektorlänge",
+      "question": {
+        "es": "¿Cuál es la longitud (módulo) del vector v⃗ = (3, -4, 12)?",
+        "de": "Wie groß ist die Länge (Betrag) des Vektors v⃗ = (3, -4, 12)?"
+      },
+      "options": [
+        {
+          "es": "|v⃗| = 11",
+          "de": "|v⃗| = 11"
+        },
+        {
+          "es": "|v⃗| = 13",
+          "de": "|v⃗| = 13"
+        },
+        {
+          "es": "|v⃗| = √169",
+          "de": "|v⃗| = √169"
+        },
+        {
+          "es": "|v⃗| = 15",
+          "de": "|v⃗| = 15"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El módulo se calcula mediante la fórmula tridimensional de Pitágoras: |v⃗| = √(3² + (-4)² + 12²) = √(9 + 16 + 144) = √169 = 13.",
+        "de": "Der Betrag berechnet sich über die dreidimensionale Pythagorasformel: |v⃗| = √(3² + (-4)² + 12²) = √169 = 13."
+      },
+      "tip": {
+        "es": "(3, 4, 5) y (5, 12, 13) son ternas pitagóricas famosas que aparecen constantemente en exámenes para facilitar los cálculos sin calculadora.",
+        "de": "Die Zahlen (3, 4, 5) und (5, 12, 13) bilden pythagoreische Tripel, die oft glatte Ergebnisse liefern."
+      }
+    },
+    {
+      "id": "ma_010",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Stochastik — Erwartungswert",
+      "question": {
+        "es": "Se lanza un dado equilibrado de 6 caras. Si sale un número par, se ganan tantos euros como indica la cara. Si sale impar, se pierden 2 €. ¿Cuál es el valor esperado (Erwartungswert) del juego?",
+        "de": "Ein 6-seitiger Würfel wird geworfen. Bei einer geraden Zahl gewinnt man den entsprechenden Betrag in €. Bei ungerade verliert man 2 €. Wie hoch ist der Erwartungswert?"
+      },
+      "options": [
+        {
+          "es": "E(X) = 0.5 €",
+          "de": "E(X) = 0.5 €"
+        },
+        {
+          "es": "E(X) = 1.0 €",
+          "de": "E(X) = 1.0 €"
+        },
+        {
+          "es": "E(X) = 2.0 €",
+          "de": "E(X) = 2.0 €"
+        },
+        {
+          "es": "E(X) = 0 € (Juego justo)",
+          "de": "E(X) = 0 € (Faires Spiel)"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Resultados posibles y ganancias: 1, 3, 5 → -2 €. 2 → 2 €. 4 → 4 €. 6 → 6 €. P(cada cara) = 1/6. E(X) = 3·(-2)·(1/6) + 2·(1/6) + 4·(1/6) + 6·(1/6) = (-6 + 2 + 4 + 6)/6 = 6/6 = 1.0 €.",
+        "de": "Mögliche Ergebnisse: 1,3,5 -> -2 €. 2 -> 2 €. 4 -> 4 €. 6 -> 6 €. Wahrscheinlichkeit je 1/6. E(X) = [3·(-2) + 2 + 4 + 6] / 6 = 6/6 = 1.0 €."
+      },
+      "tip": {
+        "es": "Un juego es 'justo' (fair) únicamente si su valor esperado E(X) es exactamente igual a 0.",
+        "de": "Ein Spiel heißt fair, wenn der Erwartungswert E(X) = 0 ist."
+      }
+    },
+    {
+      "id": "ma_011",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Analysis — Integralrechnung",
+      "question": {
+        "es": "¿Cuál es el valor del área limitada por la función f(x) = -x² + 4 y el eje x?",
+        "de": "Wie groß ist die Fläche, die die Funktion f(x) = -x² + 4 mit der x-Achse einschließt?"
+      },
+      "options": [
+        {
+          "es": "A = 16/3 unidades de área",
+          "de": "A = 16/3 Flächeneinheiten"
+        },
+        {
+          "es": "A = 32/3 unidades de área",
+          "de": "A = 32/3 Flächeneinheiten"
+        },
+        {
+          "es": "A = 8 unidades de área",
+          "de": "A = 8 Flächeneinheiten"
+        },
+        {
+          "es": "A = 12 unidades de área",
+          "de": "A = 12 Flächeneinheiten"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "1) Puntos de corte: -x² + 4 = 0 → x = ±2. 2) Integral definida de -2 a 2: ∫_{-2}^{2} (-x² + 4) dx = [-x³/3 + 4x]_{-2}^{2} = (-8/3 + 8) - (8/3 - 8) = 16/3 - (-16/3) = 32/3 ≈ 10.67.",
+        "de": "1) Nullstellen: -x² + 4 = 0 → x = ±2. 2) Integral von -2 bis 2: ∫ (-x² + 4) dx = [-x³/3 + 4x] = (-8/3 + 8) - (8/3 - 8) = 32/3."
+      },
+      "tip": {
+        "es": "Por simetría de una función par f(x) = f(-x), puedes integrar de 0 a 2 y multiplicar el resultado por 2. Ahorra tiempo en los cálculos.",
+        "de": "Aufgrund der Symmetrie der Parabel kannst du das Integral von 0 bis 2 berechnen und verdoppeln."
+      }
+    },
+    {
+      "id": "ma_012",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Geometrie — Ebenengleichung",
+      "question": {
+        "es": "Una plano E tiene la ecuación normal 2x - y + 3z = 6. ¿Cuál de los siguientes puntos pertenece a E?",
+        "de": "Eine Ebene E hat die Koordinatengleichung 2x - y + 3z = 6. Welcher der folgenden Punkte liegt auf E?"
+      },
+      "options": [
+        {
+          "es": "P(1, 2, 3)",
+          "de": "P(1, 2, 3)"
+        },
+        {
+          "es": "Q(2, 1, 1)",
+          "de": "Q(2, 1, 1)"
+        },
+        {
+          "es": "R(3, 0, 0)",
+          "de": "R(3, 0, 0)"
+        },
+        {
+          "es": "S(0, -6, 0)",
+          "de": "S(0, -6, 0)"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "es": "Sustituimos las coordenadas de R(3, 0, 0) en la ecuación: 2·(3) - 0 + 3·(0) = 6 - 0 + 0 = 6. Se cumple la igualdad, por lo que R pertenece al plano. Para el resto de puntos no se cumple.",
+        "de": "Setze die Koordinaten von R(3, 0, 0) in die Gleichung ein: 2·3 - 0 + 3·0 = 6. Die Gleichung ist erfüllt, also liegt R in der Ebene."
+      },
+      "tip": {
+        "es": "Los coeficientes de x, y, z en la ecuación implícita (2, -1, 3) corresponden directamente al vector normal de la plano (ortogonal al plano).",
+        "de": "Die Koeffizienten (2, -1, 3) entsprechen dem Normalenvektor n⃗ der Ebene."
+      }
+    },
+    {
+      "id": "ma_013",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Stochastik — Kombinatorik",
+      "question": {
+        "es": "¿De cuántas formas distintas se pueden sentar 5 personas en una fila de 5 sillas?",
+        "de": "Wie viele verschiedene Möglichkeiten gibt es, 5 Personen auf 5 Stühle in einer Reihe zu setzen?"
+      },
+      "options": [
+        {
+          "es": "25 formas",
+          "de": "25 Möglichkeiten"
+        },
+        {
+          "es": "120 formas (5!)",
+          "de": "120 Möglichkeiten (5!)"
+        },
+        {
+          "es": "24 formas",
+          "de": "24 Möglichkeiten"
+        },
+        {
+          "es": "60 formas",
+          "de": "60 Möglichkeiten"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Se trata de permutaciones simples sin repetición de 5 elementos. La fórmula es P_5 = 5! = 5 · 4 · 3 · 2 · 1 = 120 formas.",
+        "de": "Es handelt sich um Permutationen ohne Wiederholung. Die Anzahl ist P_5 = 5! = 120."
+      },
+      "tip": {
+        "es": "Identifica si importa el orden. En filas o listas siempre importa el orden (Permutación o Variación). En comités o grupos no (Combinación).",
+        "de": "Überlege immer, ob die Reihenfolge eine Rolle spielt. Wenn ja, handelt es sich um Permutationen oder Variationen."
+      }
+    },
+    {
+      "id": "ma_014",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Analysis — Wendepunkt",
+      "question": {
+        "es": "¿En qué valor de x presenta la función f(x) = x³ - 6x² + 9x un punto de inflexión (Wendepunkt)?",
+        "de": "An welcher Stelle x besitzt die Funktion f(x) = x³ - 6x² + 9x einen Wendepunkt?"
+      },
+      "options": [
+        {
+          "es": "x = 1",
+          "de": "x = 1"
+        },
+        {
+          "es": "x = 2",
+          "de": "x = 2"
+        },
+        {
+          "es": "x = 3",
+          "de": "x = 3"
+        },
+        {
+          "es": "x = 0",
+          "de": "x = 0"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "1) f'(x) = 3x² - 12x + 9. 2) f''(x) = 6x - 12. 3) Condición necesaria: f''(x) = 0 → 6x - 12 = 0 → x = 2. 4) Condición suficiente: f'''(x) = 6 ≠ 0. Por tanto, hay un punto de inflexión en x = 2.",
+        "de": "1) f'(x) = 3x² - 12x + 9. 2) f''(x) = 6x - 12 = 0 → x = 2. 3) Da f'''(2) = 6 ≠ 0 ist, liegt bei x = 2 ein Wendepunkt vor."
+      },
+      "tip": {
+        "es": "El punto de inflexión es la coordenada donde la función cambia su curvatura (de cóncava a convexa o viceversa) y donde la pendiente es máxima o mínima.",
+        "de": "Ein Wendepunkt ist die Stelle des stärksten Steigens oder Fallens des Graphen."
+      }
+    },
+    {
+      "id": "ma_015",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Geometrie — Parallelität",
+      "question": {
+        "es": "Dadas la recta g: x⃗ = (1,0,2) + t·(2, -1, 4) y la recta h: x⃗ = (0,2,1) + s·(a, 2, -8). ¿Para qué valor del parámetro 'a' son las rectas paralelas?",
+        "de": "Gegeben sind die Geraden g: x⃗=(1,0,2)+t·(2,-1,4) und h: x⃗=(0,2,1)+s·(a,2,-8). Für welchen Wert von 'a' sind sie parallel?"
+      },
+      "options": [
+        {
+          "es": "a = -4",
+          "de": "a = -4"
+        },
+        {
+          "es": "a = 4",
+          "de": "a = 4"
+        },
+        {
+          "es": "a = -2",
+          "de": "a = -2"
+        },
+        {
+          "es": "a = 2",
+          "de": "a = 2"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Dos rectas son paralelas si sus vectores directores son colineales: k·(2, -1, 4) = (a, 2, -8). Al comparar la segunda componente: k·(-1) = 2 → k = -2. Entonces para la primera componente: a = k·2 = -2·2 = -4.",
+        "de": "Die Richtungsvektoren müssen kollinear sein: k·(2, -1, 4) = (a, 2, -8). Aus der y-Komponente folgt k = -2. Damit ist a = -2·2 = -4."
+      },
+      "tip": {
+        "es": "Si además de colineales los vectores directores, el punto de una recta cumple la ecuación de la otra, las rectas no solo son paralelas sino coincidentes (identisch).",
+        "de": "Unterscheide: parallel (keine gemeinsamen Punkte) und identisch (unendlich viele gemeinsame Punkte)."
+      }
+    },
+    {
+      "id": "ma_016",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Stochastik — Binomialverteilung",
+      "question": {
+        "es": "Un arquero tiene una probabilidad de acierto del 80% en cada tiro. Si dispara 4 flechas de forma independiente, ¿cuál es la probabilidad de que acierte exactamente 3 veces?",
+        "de": "Ein Bogenschütze trifft mit einer Wahrscheinlichkeit von 80%. Er schießt 4-mal. Mit welcher Wahrscheinlichkeit trifft er genau 3-mal?"
+      },
+      "options": [
+        {
+          "es": "P ≈ 40.96%",
+          "de": "P ≈ 40.96%"
+        },
+        {
+          "es": "P ≈ 51.20%",
+          "de": "P ≈ 51.20%"
+        },
+        {
+          "es": "P ≈ 32.00%",
+          "de": "P ≈ 32.00%"
+        },
+        {
+          "es": "P ≈ 24.58%",
+          "de": "P ≈ 24.58%"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es un experimento de Bernoulli con n=4, k=3, p=0.8, q=0.2. P(X=3) = (4 sobre 3) · 0.8³ · 0.2¹ = 4 · 0.512 · 0.2 = 0.4096 = 40.96%.",
+        "de": "Bernoulli-Kette mit n=4, k=3, p=0.8. P(X=3) = (4 über 3) · 0.8³ · 0.2¹ = 4 · 0.512 · 0.2 = 0.4096 = 40.96%."
+      },
+      "tip": {
+        "es": "El coeficiente binomial (n sobre k) cuenta el número de caminos exitosos en el árbol de probabilidades. Para n sobre 1 o n sobre (n-1) siempre da n.",
+        "de": "Der Binomialkoeffizient (n über n-1) ist immer n. Das spart Rechenzeit."
+      }
+    },
+    {
+      "id": "ma_017",
+      "year": "Tipo DIA",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Analysis — Grenzwert",
+      "question": {
+        "es": "¿Cuál es el límite cuando x tiende a infinito de la función f(x) = (2x² - 3x) / (5 - 3x²)?",
+        "de": "Wie lautet der Grenzwert für x gegen unendlich der Funktion f(x) = (2x² - 3x) / (5 - 3x²)?"
+      },
+      "options": [
+        {
+          "es": "Límite = 2/5",
+          "de": "Grenzwert = 2/5"
+        },
+        {
+          "es": "Límite = -2/3",
+          "de": "Grenzwert = -2/3"
+        },
+        {
+          "es": "Límite = 0",
+          "de": "Grenzwert = 0"
+        },
+        {
+          "es": "Límite = ∞",
+          "de": "Grenzwert = ∞"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Al tener a infinito, el límite de una fracción de polinomios del mismo grado (grado 2) es igual al cociente de sus coeficientes principales: lim (2x²) / (-3x²) = 2 / (-3) = -2/3.",
+        "de": "Da Zähler und Nenner den gleichen Grad besitzen, teilen wir die Koeffizienten der höchsten Potenz: 2 / -3 = -2/3."
+      },
+      "tip": {
+        "es": "Regla rápida: Si grado(Zähler) > grado(Nenner) el límite es ±∞. Si grado(Zähler) < grado(Nenner) es 0.",
+        "de": "Schnellregel: Ist der Nennergrad höher, geht der Grenzwert gegen 0."
+      }
+    },
+    {
+      "id": "ma_018",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Geometrie — Abstand Punkt-Ebene",
+      "question": {
+        "es": "Calcula la distancia del punto P(2, -1, 4) al plano E: 2x - 2y + z = 1.",
+        "de": "Berechne den Abstand des Punktes P(2, -1, 4) zur Ebene E: 2x - 2y + z = 1."
+      },
+      "options": [
+        {
+          "es": "d = 3 unidades",
+          "de": "d = 3 Längeneinheiten"
+        },
+        {
+          "es": "d = 4 unidades",
+          "de": "d = 4 Längeneinheiten"
+        },
+        {
+          "es": "d = 9 unidades",
+          "de": "d = 9 Längeneinheiten"
+        },
+        {
+          "es": "d = 1 unidad",
+          "de": "d = 1 Längeneinheit"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Usamos la fórmula de la distancia en forma normal (Hessesche Normalenform): d = |2·(2) - 2·(-1) + 1·(4) - 1| / √(2² + (-2)² + 1²) = |4 + 2 + 4 - 1| / √(4+4+1) = |9| / √9 = 9/3 = 3.",
+        "de": "Abstandsformel (Hesse-Form): d = |2·2 - 2·(-1) + 4 - 1| / √(4+4+1) = |9| / 3 = 3."
+      },
+      "tip": {
+        "es": "No olvides pasar el término independiente al lado izquierdo de la ecuación (en este caso el 1 pasa como -1) antes de aplicar la fórmula.",
+        "de": "Vergiss nicht, die Ebenengleichung zuerst auf die Form Ax + By + Cz - D = 0 zu bringen."
+      }
+    },
+    {
+      "id": "ma_019",
+      "year": "Tipo DIA",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Analysis — Kettenregel",
+      "question": {
+        "es": "¿Cuál es la derivada de la función compuesta f(x) = ln(x² + 1)?",
+        "de": "Wie lautet die Ableitung der verketteten Funktion f(x) = ln(x² + 1)?"
+      },
+      "options": [
+        {
+          "es": "f'(x) = 1 / (x² + 1)",
+          "de": "f'(x) = 1 / (x² + 1)"
+        },
+        {
+          "es": "f'(x) = 2x / (x² + 1)",
+          "de": "f'(x) = 2x / (x² + 1)"
+        },
+        {
+          "es": "f'(x) = 2x · ln(x² + 1)",
+          "de": "f'(x) = 2x · ln(x² + 1)"
+        },
+        {
+          "es": "f'(x) = x / (x² + 1)",
+          "de": "f'(x) = x / (x² + 1)"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Aplicamos la regla de la cadena (Kettenregel): f'(x) = [derivada externa] · [derivada interna]. Derivada externa: 1 / (x² + 1). Derivada interna: 2x. Por tanto, f'(x) = 2x / (x² + 1).",
+        "de": "Kettenregel: f'(x) = u'(v(x)) · v'(x). Äußere Ableitung ist 1/g(x), innere Ableitung des Arguments ist 2x. Ergebnis: 2x / (x² + 1)."
+      },
+      "tip": {
+        "es": "Regla nemotécnica: La derivada de ln(u) es siempre u' / u. Aparece continuamente en problemas de integrales logarítmicas.",
+        "de": "Merke: Die Ableitung von ln(u) ist immer u'/u."
+      }
+    },
+    {
+      "id": "ma_020",
+      "year": "Tipo DIA",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Stochastik — Normalverteilung",
+      "question": {
+        "es": "El peso de los paquetes de café sigue una distribución normal con media μ = 500g y desviación σ = 10g. ¿Cuál es el porcentaje esperado de paquetes que pesan menos de 490g?",
+        "de": "Das Gewicht von Kaffeepackungen ist normalverteilt mit μ=500g und σ=10g. Wie viel Prozent der Packungen wiegen weniger als 490g?"
+      },
+      "options": [
+        {
+          "es": "Aproximadamente 15.9%",
+          "de": "Ca. 15.9%"
+        },
+        {
+          "es": "Aproximadamente 34.1%",
+          "de": "Ca. 34.1%"
+        },
+        {
+          "es": "Aproximadamente 2.5%",
+          "de": "Ca. 2.5%"
+        },
+        {
+          "es": "Aproximadamente 50.0%",
+          "de": "Ca. 50.0%"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "1) Estandarización: Z = (490 - 500) / 10 = -1. 2) P(X < 490) = P(Z < -1) = Φ(-1) = 1 - Φ(1). 3) En la tabla o regla del sigmas: Φ(1) ≈ 0.8413. Por tanto, P(Z < -1) ≈ 1 - 0.8413 = 0.1587 ≈ 15.9%.",
+        "de": "1) Standardisierung: Z = (490 - 500)/10 = -1. 2) P(X < 490) = P(Z < -1) = 1 - Φ(1) ≈ 1 - 0.8413 = 15.87% ≈ 15.9%."
+      },
+      "tip": {
+        "es": "Memoriza los valores de la regla empírica (regla de los sigmas): P(μ-σ < X < μ+σ) ≈ 68.3%. Por tanto, fuera de ese rango queda el 31.7% restante, dividido a la mitad en cada extremo (15.9%).",
+        "de": "Merke die Sigma-Regeln: Ca. 68% liegen im Intervall [μ-σ; μ+σ]. Die verbleibenden 32% teilen sich gleichmäßig auf beide Ränder auf."
+      }
     }
   ],
   "official_exams": [

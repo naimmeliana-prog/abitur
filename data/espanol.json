@@ -480,6 +480,652 @@
         "es": "Un buen contraargumento REFUTADO vale más que 3 argumentos sin desarrollar. El examinador valora la capacidad de rebatir con lógica.",
         "de": "Ein gutes widerlegtes Gegenargument ist mehr wert als 3 unentwickelte Argumente. Der Prüfer schätzt logisches Widerlegen."
       }
+    },
+    {
+      "id": "es_004",
+      "year": "Tipo DIA España",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Gramática — Conectores",
+      "question": {
+        "es": "¿Qué conector argumentativo introduce una consecuencia directa de lo expuesto anteriormente?",
+        "de": "Welcher Konnektor leitet eine direkte Folge des zuvor Dargelegten ein?"
+      },
+      "options": [
+        {
+          "es": "Por consiguiente / Por lo tanto",
+          "de": "Por consiguiente / Por lo tanto"
+        },
+        {
+          "es": "No obstante",
+          "de": "No obstante"
+        },
+        {
+          "es": "En primer lugar",
+          "de": "En primer lugar"
+        },
+        {
+          "es": "A pesar de que",
+          "de": "A pesar de que"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'Por consiguiente' y 'Por lo tanto' son conectores consecutivos (causa-efecto). 'No obstante' indica concesión/oposición. 'En primer lugar' sirve para ordenar el texto.",
+        "de": "'Por consiguiente' und 'Por lo tanto' zeigen eine logische Folge an. 'No obstante' drückt einen Widerspruch aus."
+      },
+      "tip": {
+        "es": "Usa una variedad de conectores consecutivos en tu comentario crítico para dotarlo de coherencia.",
+        "de": "Nutze verschiedene konsekutive Konnektoren, um deinen Text logisch zu strukturieren."
+      }
+    },
+    {
+      "id": "es_005",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Literatura — Temas de Lorca",
+      "question": {
+        "es": "En las obras de Federico García Lorca (como 'Bodas de Sangre' o 'La casa de Bernarda Alba'), ¿qué simboliza recurrentemente el agua estancada (pozo)?",
+        "de": "Welche Bedeutung hat das stehende Wasser (Brunnen/Pozo) in Lorcas Dramen?"
+      },
+      "options": [
+        {
+          "es": "Libertad erótica y vitalidad desbordante",
+          "de": "Erotische Freiheit und Vitalität"
+        },
+        {
+          "es": "Muerte, represión social, esterilidad y destino trágico",
+          "de": "Tod, gesellschaftliche Unterdrückung, Unfruchtbarkeit und tragisches Schicksal"
+        },
+        {
+          "es": "Sabiduría y purificación espiritual",
+          "de": "Weisheit und spirituelle Reinigung"
+        },
+        {
+          "es": "Riqueza material de las familias terratenientes",
+          "de": "Materieller Wohlstand der Familien"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "En Lorca, el agua corriente (río) representa la vida, pasión y erotismo. Por el contrario, el agua estancada o de pozo representa la muerte, la falta de libertad, la esterilidad y la tragedia inevitable.",
+        "de": "Fließendes Wasser (río) symbolisiert Leben und Leidenschaft. Stehendes Wasser (pozo/Brunnen) steht für Tod und Unterdrückung."
+      },
+      "tip": {
+        "es": "Contraste clave: agua corriente = vida y deseo. Agua estancada = muerte y represión. Clave para el análisis de símbolos.",
+        "de": "Merke: fließendes Wasser = Leben. Stehendes Wasser = Tod. Wichtig für die Symbolanalyse."
+      }
+    },
+    {
+      "id": "es_006",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Comentario de texto — Registros",
+      "question": {
+        "es": "¿Qué rasgo lingüístico es típico del registro periodístico formal empleado en los editoriales de prensa escrita?",
+        "de": "Welches sprachliche Merkmal ist typisch für den formellen journalistischen Stil in Leitartikeln?"
+      },
+      "options": [
+        {
+          "es": "Uso abundante de coloquialismos, vulgarismos y exclamaciones emotivas",
+          "de": "Häufige Verwendung von Umgangssprache und emotionalen Ausrufen"
+        },
+        {
+          "es": "Léxico preciso y culto, oraciones subordinadas complejas y tono predominantemente objetivo u objetivado",
+          "de": "Präzises und gehobenes Vokabular, komplexe Satzstrukturen und sachlicher Ton"
+        },
+        {
+          "es": "Uso constante de la primera persona del singular ('yo opino...')",
+          "de": "Ständige Verwendung der ersten Person Singular ('yo opino...')"
+        },
+        {
+          "es": "Ausencia absoluta de conectores lógicos",
+          "de": "Vollständiges Fehlen von logischen Konnektoren"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El editorial representa la opinión institucional del medio. Para ganar credibilidad (logos), emplea un tono formal, argumentación lógica fundamentada, sustantivos abstractos y evita el 'yo' personal del redactor.",
+        "de": "Der Leitartikel nutzt einen sachlichen, argumentativen Ton mit gehobener Sprache, um die institutionelle Meinung der Zeitung zu vertreten."
+      },
+      "tip": {
+        "es": "Al analizar el registro, menciona la presencia de oraciones impersonales y pasivas reflejas que buscan dar sensación de objetividad.",
+        "de": "Achte auf unpersönliche Ausdrücke, die dem Text eine scheinbare Objektivität verleihen."
+      }
+    },
+    {
+      "id": "es_007",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Literatura — La casa de Bernarda Alba",
+      "question": {
+        "es": "En la tragedia 'La casa de Bernarda Alba', ¿cómo se manifiesta físicamente el conflicto entre represión moral y libertad de las hijas?",
+        "de": "Wie äußert sich der Konflikt zwischen Repression und Freiheit in 'La casa de Bernarda Alba' physisch?"
+      },
+      "options": [
+        {
+          "es": "A través del vestido verde de Adela y el bastón de mando de Bernarda",
+          "de": "Durch Adelas grünes Kleid und Bernardas Spazierstock"
+        },
+        {
+          "es": "Mediante los constantes viajes de las hijas al extranjero",
+          "de": "Durch die häufigen Auslandsreisen der Töchter"
+        },
+        {
+          "es": "A través de las cartas de amor que Pepe el Romano escribe a todas las hermanas",
+          "de": "Durch Liebesbriefe von Pepe el Romano an alle Schwestern"
+        },
+        {
+          "es": "No hay conflicto físico, solo discusiones teóricas",
+          "de": "Es gibt keinen physischen Konflikt, nur theoretische Debatten"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El vestido verde que usa Adela representa su rebeldía erótica frente al luto impuesto (negro). El bastón de Bernarda representa su poder autoritario y tiránico. Cuando Adela rompe el bastón, rompe simbólicamente esa tiranía.",
+        "de": "Das grüne Kleid steht für Adelas Aufbegehren. Der Stock symbolisiert Bernardas Tyrannei. Das Zerbrechen ist der Höhepunkt der Rebellion."
+      },
+      "tip": {
+        "es": "En el Abitur, analiza el contraste cromático: el color verde de la vida/rebeldía frente al blanco de las paredes y el negro del luto.",
+        "de": "Analysiere den Farbkontrast: Grün (Leben) vs. Schwarz (Trauer) und Weiß (Reinheit/Hauswände)."
+      }
+    },
+    {
+      "id": "es_008",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Figuras retóricas — Literatura",
+      "question": {
+        "es": "¿Qué figura retórica consiste en atribuir cualidades humanas a objetos inanimados o conceptos abstractos (ej: 'El viento gime de dolor')?",
+        "de": "Welches Stilmittel schreibt leblosen Dingen oder abstrakten Begriffen menschliche Eigenschaften zu (z.B. 'Der Wind weint')?"
+      },
+      "options": [
+        {
+          "es": "Hipérbaton",
+          "de": "Hyperbaton"
+        },
+        {
+          "es": "Personificación o Prosopopeya",
+          "de": "Personifikation"
+        },
+        {
+          "es": "Metáfora pura",
+          "de": "Reine Metapher"
+        },
+        {
+          "es": "Antítesis",
+          "de": "Antithese"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La personificación (personification) otorga rasgos humanos a elementos naturales u objetos. El viento no puede sentir dolor ni gemir física o emocionalmente.",
+        "de": "Die Personifikation vermenschlicht Dinge. Sehr häufig in Naturdarstellungen der Romantik und bei Lorca."
+      },
+      "tip": {
+        "es": "Lorca personifica constantemente la luna (como bailarina o portadora de muerte) y los cuchillos. Explica siempre su función.",
+        "de": "Lorca vermenschlicht oft den Mond und Messer. Erkläre in der Klausur die jeweilige Todesmetaphorik."
+      }
+    },
+    {
+      "id": "es_009",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Gramática — Vocabulario",
+      "question": {
+        "es": "¿Cuál es el significado del término 'anacronismo' en un análisis de texto literario o histórico?",
+        "de": "Was bedeutet der Begriff 'Anachronismus' in einer literarischen oder historischen Analyse?"
+      },
+      "options": [
+        {
+          "es": "Un error de concordancia gramatical entre sujeto y verbo",
+          "de": "Ein Fehler in der grammatikalischen Kongruenz"
+        },
+        {
+          "es": "La colocación de un objeto, personaje o hecho fuera de su época histórica correspondiente",
+          "de": "Die zeitliche Einordnung von Dingen oder Ereignissen außerhalb ihrer Epoche"
+        },
+        {
+          "es": "El análisis detallado de la métrica de un romance",
+          "de": "Die detaillierte Analyse des Versmaßes"
+        },
+        {
+          "es": "El uso de palabras extranjeras en el texto",
+          "de": "Die Verwendung von Fremdwörtern"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Un anacronismo (anachronism) sitúa algo fuera de su tiempo. Por ejemplo, si en 'La casa de Bernarda Alba' (ambientada a principios del siglo XX) Bernarda usara un teléfono móvil de última generación.",
+        "de": "Ein Anachronismus ist ein Fehler in der zeitlichen Zuordnung (z.B. ein Smartphone in einem Drama über das frühe 20. Jahrhundert)."
+      },
+      "tip": {
+        "es": "Evita los anacronismos en tu argumentación. Contextualiza siempre los autores en su marco histórico exacto.",
+        "de": "Achte bei historischen Argumenten darauf, keine modernen Konzepte anachronistisch auf die Vergangenheit zu übertragen."
+      }
+    },
+    {
+      "id": "es_010",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literatura — Lorca y la luna",
+      "question": {
+        "es": "En la simbología lírica de Federico García Lorca (como en 'Romance de la Luna, Luna'), ¿cuál es el significado principal asociado a la luna?",
+        "de": "Welche Hauptbedeutung hat der Mond in Lorcas Lyrik?"
+      },
+      "options": [
+        {
+          "es": "Esperanza de un futuro mejor y prosperidad agraria",
+          "de": "Hoffnung auf eine bessere Zukunft"
+        },
+        {
+          "es": "La muerte inevitable, el peligro helado y el destino trágico",
+          "de": "Der unvermeidliche Tod und das tragische Schicksal"
+        },
+        {
+          "es": "El progreso tecnológico y científico de las ciudades",
+          "de": "Der technologische Fortschritt der Städte"
+        },
+        {
+          "es": "La amistad sincera entre los pueblos gitanos",
+          "de": "Die aufrichtige Freundschaft unter Gitanos"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La luna lorquiana representa la frialdad metálica de la muerte, la fatalidad y la amenaza. En el Romance de la Luna, Luna, esta actúa como bailarina que se lleva el alma del niño gitano.",
+        "de": "Der Mond ist bei Lorca oft tödlich, kalt und unheilvoll. Er kündigt das tragische Ende der Figuren an."
+      },
+      "tip": {
+        "es": "Conecta la luna con otros símbolos de muerte como los metales (cuchillo, navaja) y el caballo desbocado.",
+        "de": "Bringe den Mond mit anderen Todessymbolen wie Messern und Metallen in Verbindung."
+      }
+    },
+    {
+      "id": "es_011",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Gramática — Registros",
+      "question": {
+        "es": "Al redactar un texto formal, ¿cuál de las siguientes opciones representa un registro vulgar o inadecuado para el Abitur?",
+        "de": "Welcher Ausdruck entspricht nicht dem gehobenen Niveau des Abiturs?"
+      },
+      "options": [
+        {
+          "es": "El autor aborda la problemática desde una perspectiva crítica.",
+          "de": "Der Autor setzt sich kritisch mit der Problematik auseinander."
+        },
+        {
+          "es": "El autor se enrolla hablando de cosas que no vienen al caso.",
+          "de": "Der Autor redet um den heißen Brei herum und schweift ab."
+        },
+        {
+          "es": "La tesis central sostiene que el cambio tecnológico es irreversible.",
+          "de": "Die zentrale These besagt, dass der technologische Wandel unumkehrbar ist."
+        },
+        {
+          "es": "Se infiere del texto que las relaciones sociales se han precarizado.",
+          "de": "Aus dem Text lässt sich schließen, dass soziale Beziehungen prekärer geworden sind."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La opción B usa jerga coloquial ('se enrolla', 'cosas que no vienen al caso'), inaceptable en una redacción formal del Abitur DIA. Las opciones A, C y D usan un léxico académico adecuado.",
+        "de": "Option B verwendet umgangssprachliche Formulierungen, die in einer schriftlichen Prüfung Punktabzug zur Folge haben."
+      },
+      "tip": {
+        "es": "Revisa siempre tu borrador para sustituir giros del habla cotidiana por verbos más precisos y sustantivos abstractos.",
+        "de": "Ersetze alltagssprachliche Wendungen in deinen Entwürfen konsequent durch Fachbegriffe."
+      }
+    },
+    {
+      "id": "es_012",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literatura — Neopopularismo",
+      "question": {
+        "es": "¿Qué corriente estética literaria define la combinación de la métrica tradicional española (romance, coplas) con imágenes de vanguardia surrealista en la obra de Lorca?",
+        "de": "Welche literarische Strömung verbindet traditionelle spanische Formen mit surrealistischer Avantgarde in Lorcas Werk?"
+      },
+      "options": [
+        {
+          "es": "Neoclasicismo ilustrado",
+          "de": "Aufklärungsklassizismus"
+        },
+        {
+          "es": "Neopopularismo (o tradición y vanguardia)",
+          "de": "Neopopularismus"
+        },
+        {
+          "es": "Realismo sucio",
+          "de": "Dirty Realism"
+        },
+        {
+          "es": "Romanticismo tardío y sentimental",
+          "de": "Spätromantik"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El neopopularismo (característico de la Generación del 27) rescata formas líricas del folclore andaluz y la tradición del Siglo de Oro (octosílabos, asonancia) y las renueva con la metáfora libre y audaz del surrealismo.",
+        "de": "Der Neopopularismus verbindet traditionelle Volkslieder (Romancen) mit den freien Metaphern des Surrealismus."
+      },
+      "tip": {
+        "es": "El Romancero Gitano (1928) es la obra cumbre neopopularista de Lorca. Úsalo como ejemplo clave en tu examen.",
+        "de": "Das 'Romancero Gitano' (1928) ist das wichtigste Werk dieser Richtung."
+      }
+    },
+    {
+      "id": "es_013",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Comentario de texto — Estructura",
+      "question": {
+        "es": "En la introducción (Einleitung) del comentario de un artículo de opinión, ¿qué es la 'tesis'?",
+        "de": "Was ist die 'These' in der Einleitung eines Textkommentars?"
+      },
+      "options": [
+        {
+          "es": "El resumen de los datos biográficos de la autora",
+          "de": "Die Zusammenfassung der Biographie der Autorin"
+        },
+        {
+          "es": "La postura central o idea fundamental que defiende el autor a lo largo del texto",
+          "de": "Die zentrale Behauptung oder Haltung, die der Autor im Text verteidigt"
+        },
+        {
+          "es": "El listado de los recursos estilísticos que aparecen en el primer párrafo",
+          "de": "Die Liste der Stilmittel im ersten Absatz"
+        },
+        {
+          "es": "La conclusión a la que llega el alumno tras leer la columna",
+          "de": "Das Fazit des Schülers nach der Lektüre"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La tesis (thesis) es la posición ideológica del autor sobre el tema tratado. Identificarla correctamente en la introducción es crucial, ya que toda la estructura argumentativa gira en torno a ella.",
+        "de": "Die These ist die Kernbotschaft des Autors. Sie zu identifizieren, bildet das Fundament für die gesamte Analyse."
+      },
+      "tip": {
+        "es": "No confundas el 'tema' (de qué habla el texto, ej: las redes sociales) con la 'tesis' (qué opina sobre el tema, ej: las redes destruyen la empatía).",
+        "de": "Unterscheide Thema (wovon der Text handelt) und These (welche Haltung der Autor dazu einnimmt)."
+      }
+    },
+    {
+      "id": "es_014",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Figuras retóricas — Hipérbaton",
+      "question": {
+        "es": "¿Qué figura retórica consiste en la alteración del orden lógico o habitual de las palabras en la oración?",
+        "de": "Welches Stilmittel beschreibt die Umstellung des üblichen Satzbaus?"
+      },
+      "options": [
+        {
+          "es": "Anáfora",
+          "de": "Anapher"
+        },
+        {
+          "es": "Hipérbaton (Hyperbaton)",
+          "de": "Hipérbaton"
+        },
+        {
+          "es": "Sinestesia",
+          "de": "Synästhesie"
+        },
+        {
+          "es": "Metáfora",
+          "de": "Metapher"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El hipérbaton (hyperbaton) cambia el orden regular (Sujeto + Verbo + Objeto) para dar énfasis poético o imitar la sintaxis clásica latinizante (ej: 'Pasos de un peregrino son, errante...').",
+        "de": "Das Hyperbaton stellt die übliche Grammatikstruktur auf den Kopf, um den Rhythmus oder die poetische Wirkung zu steigern."
+      },
+      "tip": {
+        "es": "Es una figura clave de la poesía barroca de Góngora que la Generación del 27 admiraba y emulaba.",
+        "de": "Besonders typisch für die Barocklyrik (Góngora), die die Generación des 27 stark beeinflusste."
+      }
+    },
+    {
+      "id": "es_015",
+      "year": "Tipo DIA España",
+      "difficulty": "easy",
+      "type": "multiple_choice",
+      "topic": "Grammática — Ortografía",
+      "question": {
+        "es": "Indica cuál de las siguientes palabras está escrita correctamente (con tilde correspondiente):",
+        "de": "Welches Wort ist orthografisch korrekt geschrieben (mit Akzent)?"
+      },
+      "options": [
+        {
+          "es": "Exámen",
+          "de": "Exámen"
+        },
+        {
+          "es": "Examen (sin tilde)",
+          "de": "Examen"
+        },
+        {
+          "es": "Examinár",
+          "de": "Examinár"
+        },
+        {
+          "es": "Examenes",
+          "de": "Examenes"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "'Examen' es palabra llana terminada en 'n', por lo que no lleva tilde. El plural 'exámenes' sí lleva tilde por ser palabra esdrújula (siempre llevan tilde). Escribir 'exámen' es uno de los errores ortográficos más frecuentes en bachillerato.",
+        "de": "'Examen' ist ein zweisilbiges Wort auf 'n' und wird auf der vorletzten Silbe betont -> kein Akzent. Der Plural 'exámenes' ist ein Wort mit Betonung auf der drittletzten Silbe -> braucht Akzent."
+      },
+      "tip": {
+        "es": "Regla de oro: llanas terminadas en vocal, -n o -s no llevan tilde. Agudas sí. Esdrújulas siempre.",
+        "de": "Merke die Akzentregeln für die schriftliche Spanischklausur: Esdrújulas (Betonung auf 3. Silbe von hinten) haben IMMER einen Akzent."
+      }
+    },
+    {
+      "id": "es_016",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Literatura — Bernarda y María Josefa",
+      "question": {
+        "es": "En 'La casa de Bernarda Alba', ¿qué papel dramático cumple María Josefa, la madre de Bernarda?",
+        "de": "Welche dramatische Rolle hat María Josefa, Bernardas Mutter, im Stück?"
+      },
+      "options": [
+        {
+          "es": "Representa el control absoluto de las finanzas familiares",
+          "de": "Sie repräsentiert die finanzielle Kontrolle der Familie"
+        },
+        {
+          "es": "Expresa líricamente los deseos de libertad, amor y maternidad reprimidos de las nietas a través de su locura",
+          "de": "Sie drückt die unterdrückten Wünsche nach Freiheit und Mutterschaft der Enkelinnen durch ihre scheinbare Verrücktheit aus"
+        },
+        {
+          "es": "Es la criada que limpia la casa junto a Poncia",
+          "de": "Sie ist die Magd, die das Haus putzt"
+        },
+        {
+          "es": "Representa la alianza política con Pepe el Romano",
+          "de": "Sie steht für die politische Allianz mit Pepe"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "María Josefa es la anciana encerrada que, bajo una aparente locura, canta la verdad de las hijas: quiere casarse a la orilla del mar e irse de ese encierro. Su locura es un catalizador poético de la verdad reprimida.",
+        "de": "Die Großmutter spricht trotz ihrer Demenz die verbotene Wahrheit aus. Ihre Lieder symbolisieren die Sehnsüchte der Töchter nach Ehe und Freiheit."
+      },
+      "tip": {
+        "es": "En la escena con la oveja en sus brazos, María Josefa prefigura la tragedia de Adela. Explica este paralelismo lírico en tu comentario.",
+        "de": "Ihr Auftritt mit dem Lamm im Arm deutet die bevorstehende Tragödie voraus."
+      }
+    },
+    {
+      "id": "es_017",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Figuras retóricas — Sinestesia",
+      "question": {
+        "es": "¿Qué figura estilística combina sensaciones de sentidos corporales distintos en una misma imagen (ej: 'El sonido azul del piano' o 'Mirada agria')?",
+        "de": "Welches Stilmittel verbindet verschiedene Sinneswahrnehmungen in einem Bild (z.B. 'Der süße Klang')?"
+      },
+      "options": [
+        {
+          "es": "Paradoja",
+          "de": "Paradoxon"
+        },
+        {
+          "es": "Sinestesia (Synästhesie)",
+          "de": "Sinestesia"
+        },
+        {
+          "es": "Metáfora pura",
+          "de": "Metapher"
+        },
+        {
+          "es": "Hipérbole",
+          "de": "Hyperbel"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La sinestesia (synesthesia) fusiona sentidos (vista, oído, gusto, tacto, olfato). Por ejemplo, un sonido (oído) no tiene color azul (vista), y una mirada (vista) no tiene sabor agrio (gusto).",
+        "de": "Die Synästhesie vermischt Sinnesbereiche. Sehr beliebt bei Symbolisten und Modernisten."
+      },
+      "tip": {
+        "es": "Muy utilizada por Lorca para dotar de plasticidad y sensualidad a su poesía. Indica los dos sentidos cruzados al analizarla.",
+        "de": "Benenne bei einer Synästhesie immer die zwei vermischten Sinneskanäle."
+      }
+    },
+    {
+      "id": "es_018",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Comentario de texto — Estructura",
+      "question": {
+        "es": "En la estructura de un comentario de texto crítico, ¿qué debe contener la conclusión (Schluss)?",
+        "de": "Was sollte das Fazit eines Textkommentars beinhalten?"
+      },
+      "options": [
+        {
+          "es": "Nuevos argumentos y figuras estilísticas no analizados en el cuerpo del texto",
+          "de": "Neue Argumente, die zuvor nicht genannt wurden"
+        },
+        {
+          "es": "Un balance final que sintetice la postura analizada, valore la efectividad de los recursos del autor y reafirme la posición del alumno",
+          "de": "Eine Synthese der Analyseergebnisse, die Bewertung der Wirkung und ein abschließendes Urteil"
+        },
+        {
+          "es": "Una traducción completa del artículo de opinión",
+          "de": "Eine vollständige Übersetzung des Artikels"
+        },
+        {
+          "es": "La biografía detallada del autor",
+          "de": "Die Biographie des Autors"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "La conclusión no debe añadir información nueva (eso confundiría la estructura). Debe resumir los hallazgos principales del Hauptteil y dar un juicio de valor sobre la fuerza persuasiva del texto original de forma coherente.",
+        "de": "Das Fazit rundet den Aufsatz ab. Es fasst die wesentlichen Erkenntnisse zusammen, ohne neue Gedanken einzuführen."
+      },
+      "tip": {
+        "es": "Termina tu conclusión con una reflexión abierta o pregunta retórica que invite al lector a seguir pensando sobre el tema.",
+        "de": "Ein starker Schlusssatz (z.B. ein Ausblick) hinterlässt einen guten Eindruck beim Prüfer."
+      }
+    },
+    {
+      "id": "es_019",
+      "year": "Tipo DIA España",
+      "difficulty": "hard",
+      "type": "multiple_choice",
+      "topic": "Literatura — Generación del 27",
+      "question": {
+        "es": "¿Qué acontecimiento cultural dio origen al nombre del grupo poético de la Generación del 27?",
+        "de": "Welches kulturelle Ereignis gab der Dichtergruppe Generación del 27 ihren Namen?"
+      },
+      "options": [
+        {
+          "es": "El inicio de la Guerra Civil Española en 1927",
+          "de": "Der Beginn des spanischen Bürgerkriegs 1927"
+        },
+        {
+          "es": "El homenaje al poeta barroco Luis de Góngora en el Ateneo de Sevilla en 1927 por el tercer centenario de su muerte",
+          "de": "Die Hommage an den Barockdichter Luis de Góngora im Atheneo von Sevilla 1927 anlässlich seines 300. Todestages"
+        },
+        {
+          "es": "La publicación de la primera novela del realismo mágico en 1927",
+          "de": "Die Veröffentlichung des ersten magisch-realistischen Romans 1927"
+        },
+        {
+          "es": "La fundación del Teatro Universitario 'La Barraca' en 1927",
+          "de": "Die Gründung des Universitätstheaters 'La Barraca' 1927"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "El grupo de jóvenes poetas (Lorca, Alberti, Cernuda, Salinas) se reunió en Sevilla en diciembre de 1927 para conmemorar a Góngora, reivindicando la metáfora compleja frente a la poesía decimonónica. Esto unificó al grupo estéticamente.",
+        "de": "Das Treffen der jungen Dichter in Sevilla 1927 zur Góngora-Ehrung gilt als Gründungsakt der Generation."
+      },
+      "tip": {
+        "es": "Menciona que este grupo poético concilia la vanguardia europea (surrealismo) con la tradición clásica del Siglo de Oro.",
+        "de": "Die Gruppe steht für die Synthese aus Tradition (Klassik/Barock) und Moderne (Avantgarde)."
+      }
+    },
+    {
+      "id": "es_020",
+      "year": "Tipo DIA España",
+      "difficulty": "medium",
+      "type": "multiple_choice",
+      "topic": "Gramática — Vocabulario",
+      "question": {
+        "es": "En un texto académico, ¿qué término es sinónimo de 'elucubrar' o 'conjeturar' basándose en indicios?",
+        "de": "Welcher Begriff ist im akademischen Spanisch ein Synonym für vermuten oder mutmaßen?"
+      },
+      "options": [
+        {
+          "es": "Hipotetizar o plantear una hipótesis",
+          "de": "Hipotetizar / eine Hypothese aufstellen"
+        },
+        {
+          "es": "Verificar empíricamente",
+          "de": "Empirisch verifizieren"
+        },
+        {
+          "es": "Plagiar",
+          "de": "Plagiieren"
+        },
+        {
+          "es": "Parapetarse",
+          "de": "Sich verschanzen"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'Hipotetizar' o plantear hipótesis consiste en suponer o conjeturar explicaciones provisionales a partir de indicios. 'Verificar empíricamente' es demostrar experimentalmente la verdad de un hecho.",
+        "de": "Hipotetizar bedeutet, eine wissenschaftliche Vermutung aufzustellen, die es im Folgenden zu überprüfen gilt."
+      },
+      "tip": {
+        "es": "Usa estos verbos precisos al analizar la argumentación del autor. Enriquecerá el apartado de léxico formal del examen.",
+        "de": "Nutze präzise akademische Verben für eine bessere Stilnote."
+      }
     }
   ],
   "official_exams_archive": [
