@@ -84,7 +84,7 @@ const ExamEngine = {
       if (!data || !data.questions) return;
 
       let questions = data.questions.filter(q => {
-        const diffMatch = !difficulty || difficulty === 'all' || q.difficulty === difficulty;
+        const diffMatch = !difficulty || difficulty === 'all' || q.difficulty === difficulty || q.isAI;
         return diffMatch;
       });
 
@@ -92,9 +92,11 @@ const ExamEngine = {
       allQuestions.push(...questions.map(q => ({ ...q, subjectId })));
     });
 
-    // Shuffle
-    const shuffled = allQuestions.sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, questionCount || Math.min(10, shuffled.length));
+    // Separate and shuffle AI questions first so newly generated AI questions are included
+    const aiQs = allQuestions.filter(q => q.isAI).sort(() => Math.random() - 0.5);
+    const nonAiQs = allQuestions.filter(q => !q.isAI).sort(() => Math.random() - 0.5);
+    const combined = [...aiQs, ...nonAiQs];
+    const selected = combined.slice(0, questionCount || Math.min(10, combined.length));
 
     const exam = {
       id: Date.now(),

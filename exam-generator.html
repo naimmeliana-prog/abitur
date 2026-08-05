@@ -303,7 +303,7 @@
           </div>
           <div class="flex items-center gap-md">
             <div class="exam-timer hidden" id="examTimerDisplay">--:--</div>
-            <button onclick="confirmSubmit()" class="btn btn-secondary btn-sm" style="font-size:12px;padding:6px 14px;" data-i18n="exam.submit">📥 Entregar Examen</button>
+            <button onclick="confirmSubmit()" class="btn btn-secondary btn-sm" id="topSubmitBtn" style="font-size:12px;padding:6px 14px;">📥 Entregar examen temprano</button>
           </div>
         </div>
 
@@ -631,11 +631,19 @@ function renderQuestion(idx) {
   document.getElementById('examProgress').style.width = `${(idx / total) * 100}%`;
   document.getElementById('examProgressText').textContent = `${idx + 1}/${total}`;
   document.getElementById('prevBtn').disabled = idx === 0;
-  
+
+  const nextBtn = document.getElementById('nextBtn');
   if (idx === total - 1) {
-    document.getElementById('nextBtn').textContent = lang === 'de' ? '📤 Finalisieren & Abgeben' : '📤 Finalizar y Entregar';
+    nextBtn.textContent = lang === 'de' ? '📤 Finalisieren & Abgeben' : '📤 Finalizar y Entregar Examen';
+    nextBtn.className = 'btn btn-success';
   } else {
-    document.getElementById('nextBtn').textContent = lang === 'de' ? 'Weiter →' : 'Siguiente →';
+    nextBtn.textContent = lang === 'de' ? 'Weiter →' : 'Siguiente →';
+    nextBtn.className = 'btn btn-primary';
+  }
+
+  const topSubmitBtn = document.getElementById('topSubmitBtn');
+  if (topSubmitBtn) {
+    topSubmitBtn.textContent = lang === 'de' ? '📥 Vorzeitig abgeben' : '📥 Entregar examen temprano';
   }
 
   const topicBadge = q.topic ? `<span class="badge badge-blue" style="margin-bottom:var(--space-sm);">${q.topic}</span>` : '';
