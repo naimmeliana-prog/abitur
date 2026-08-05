@@ -31,6 +31,53 @@
       white-space: normal;
     }
     #op-tooltip.visible { opacity: 1; }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      margin: var(--space-md) 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--glass-border);
+      background: rgba(15, 23, 42, 0.6);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .grid-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .grid-table th {
+      background: rgba(245, 200, 66, 0.12);
+      color: var(--color-gold);
+      font-weight: 700;
+      padding: 12px 16px;
+      border-bottom: 2px solid rgba(245, 200, 66, 0.3);
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    .grid-table th:last-child {
+      border-right: none;
+    }
+    .grid-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-family: var(--font-mono);
+    }
+    .grid-table td:last-child {
+      border-right: none;
+    }
+    .grid-table tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.025);
+    }
+    .grid-table tbody tr:hover {
+      background: rgba(59, 130, 246, 0.12);
+    }
   </style>
 </head>
 <body>
@@ -663,6 +710,80 @@ function renderResourcesTab(data, lang) {
   </div>`;
 }
 
+// ── Markdown Table & Formula Parser ─────────────────────────────
+function parseMarkdownTable(tableText) {
+  const lines = tableText.trim().split('\n').map(l => l.trim()).filter(l => l.startsWith('|'));
+  if (lines.length < 2) return tableText;
+
+  function parseRow(line) {
+    let str = line.trim();
+    if (str.startsWith('|')) str = str.substring(1);
+    if (str.endsWith('|')) str = str.substring(0, str.length - 1);
+    return str.split('|').map(c => c.trim().replace(/\\\|/g, '|'));
+  }
+
+  const headerCells = parseRow(lines[0]);
+  const numCols = headerCells.length;
+
+  const bodyLines = lines.slice(1).filter(l => !l.includes('---'));
+
+  const rows = bodyLines.map(line => {
+    let cells = parseRow(line);
+    if (cells.length > numCols) {
+      const fixedCells = cells.slice(0, numCols - 1);
+      const rest = cells.slice(numCols - 1).join('|');
+      fixedCells.push(rest);
+      cells = fixedCells;
+    }
+    return cells;
+  });
+
+  const headerHtml = `<thead><tr>${headerCells.map(c => `<th>${c}</th>`).join('')}</tr></thead>`;
+  const bodyHtml = `<tbody>${rows.map(row => `<tr>${row.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody>`;
+
+  return `<div class="table-responsive"><table class="grid-table">${headerHtml}${bodyHtml}</table></div>`;
+}
+
+function formatFormulaItemContent(rawText) {
+  if (!rawText) return '';
+  if (rawText.includes('|') && rawText.includes('---')) {
+    const lines = rawText.split('\n');
+    let output = [];
+    let tableBuffer = [];
+    let inTable = false;
+
+    for (let line of lines) {
+      if (line.trim().startsWith('|')) {
+        inTable = true;
+        tableBuffer.push(line);
+      } else {
+        if (inTable) {
+          output.push(parseMarkdownTable(tableBuffer.join('\n')));
+          inTable = false;
+          tableBuffer = [];
+        }
+        if (line.trim().startsWith('- ')) {
+          output.push(`<div style="margin-left:12px;margin-bottom:6px;">• ${line.trim().substring(2)}</div>`);
+        } else if (line.trim()) {
+          output.push(`<p style="margin-bottom:8px;line-height:1.6;">${line.trim()}</p>`);
+        }
+      }
+    }
+    if (inTable && tableBuffer.length > 0) {
+      output.push(parseMarkdownTable(tableBuffer.join('\n')));
+    }
+    return output.join('');
+  }
+
+  return rawText.split('\n').map(line => {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('- ')) {
+      return `<div style="margin-left:12px;margin-bottom:6px;">• ${trimmed.substring(2)}</div>`;
+    }
+    return trimmed ? `<p style="margin-bottom:8px;line-height:1.6;">${trimmed}</p>` : '';
+  }).join('');
+}
+
 function renderFormulasTab(data, lang) {
   const formulas = data.formulas || [];
   if (formulas.length === 0) {
@@ -673,15 +794,19 @@ function renderFormulasTab(data, lang) {
     ${formulas.map(cat => `
       <div class="card mb-lg">
         <h3 style="font-size:18px;font-weight:800;color:var(--color-gold);margin-bottom:var(--space-md);border-bottom:1px solid var(--glass-border);padding-bottom:var(--space-xs);text-transform:uppercase;">
-          ${cat.category[lang] || cat.category.es}
+          ${cat.category[lang] || cat.category.es || cat.category.de}
         </h3>
-        <div class="grid-2 gap-md">
-          ${cat.items.map(item => `
-            <div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
-              <h4 style="font-size:14px;font-weight:700;margin-bottom:var(--space-sm);color:var(--text-primary);border-left:2px solid var(--color-gold);padding-left:8px;">${item.title[lang] || item.title.es}</h4>
-              <pre style="font-family:inherit;font-size:13px;color:var(--text-secondary);white-space:pre-wrap;line-height:1.6;margin:0;">${item.content[lang] || item.content.es}</pre>
-            </div>
-          `).join('')}
+        <div class="flex-col gap-md">
+          ${cat.items.map(item => {
+            const rawContent = item.content[lang] || item.content.es || item.content.de || '';
+            const contentHtml = formatFormulaItemContent(rawContent);
+            return `
+              <div style="padding:var(--space-md);background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                <h4 style="font-size:15px;font-weight:700;margin-bottom:var(--space-sm);color:var(--color-gold);border-left:3px solid var(--color-gold);padding-left:10px;">${item.title[lang] || item.title.es || item.title.de}</h4>
+                <div style="font-size:13px;color:var(--text-secondary);">${contentHtml}</div>
+              </div>
+            `;
+          }).join('')}
         </div>
       </div>
     `).join('')}
