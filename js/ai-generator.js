@@ -253,15 +253,6 @@ Genera exactamente ${count} preguntas. SOLO el array JSON, nada más.`;
     return data?.choices?.[0]?.message?.content || '';
   },
 
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `Nvidia API error ${res.status}`);
-    }
-
-    const data = await res.json();
-    return data?.choices?.[0]?.message?.content || '';
-  },
-
   // ── Parse AI response ─────────────────────────────────────────
   parseResponse(text, subjectId) {
     // Try to extract JSON array from response
