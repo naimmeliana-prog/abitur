@@ -62,6 +62,9 @@
           <button class="lang-btn" id="btnFontSizeDecrease" title="Disminuir texto" style="font-weight:bold; font-size:11px; padding:4px 10px;">A-</button>
           <button class="lang-btn" id="btnFontSizeIncrease" title="Aumentar texto" style="font-weight:bold; font-size:14px; padding:4px 10px;">A+</button>
         </div>
+        <button onclick="openAISettings()" class="btn btn-sm" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:var(--radius-md);padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;margin-right:8px;" title="Configuración de IA">
+          ✨ IA
+        </button>
         <div class="lang-switcher">
           <button class="lang-btn" data-lang="es">ES</button>
           <button class="lang-btn" data-lang="de">DE</button>
@@ -197,6 +200,90 @@
           Empieza con Práctica para aprender los patrones, luego cambia a Simulacro para simular condiciones reales (sin calculadora en Parte A).
         </div>
 
+        <!-- AI Generate Panel -->
+        <div class="card" id="aiGeneratePanel" style="margin-top:var(--space-xl);background:linear-gradient(135deg,rgba(102,126,234,0.08),rgba(118,75,162,0.08));border:1px solid rgba(102,126,234,0.25);">
+          <div class="flex items-center justify-between" style="flex-wrap:wrap;gap:var(--space-md);">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+                <span style="font-size:24px;">✨</span>
+                <div>
+                  <div style="font-size:15px;font-weight:700;color:var(--text-primary);">Generar Preguntas con IA</div>
+                  <div style="font-size:12px;color:var(--text-muted);">La IA crea preguntas nuevas basadas en el temario. Se añaden automáticamente al banco de preguntas.</div>
+                </div>
+              </div>
+              <div id="aiStatsBar" style="font-size:12px;color:var(--text-muted);display:flex;gap:16px;flex-wrap:wrap;"></div>
+            </div>
+            <div class="flex gap-sm" style="flex-wrap:wrap;">
+              <button onclick="openAISettings()" class="btn btn-sm btn-secondary" style="font-size:12px;">⚙️ Configurar</button>
+              <select id="aiCountSelect" class="form-select" style="width:110px;font-size:13px;padding:6px 10px;">
+                <option value="5">5 preguntas</option>
+                <option value="10" selected>10 preguntas</option>
+                <option value="15">15 preguntas</option>
+                <option value="20">20 preguntas</option>
+              </select>
+              <button onclick="runAIGenerate()" id="aiGenerateBtn" class="btn btn-sm" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;font-size:13px;font-weight:600;padding:8px 16px;">
+                ✨ Generar con IA
+              </button>
+            </div>
+          </div>
+          <!-- Progress bar -->
+          <div id="aiProgressWrap" style="margin-top:var(--space-md);display:none;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+              <div class="spinner" style="width:16px;height:16px;border-width:2px;"></div>
+              <span id="aiProgressMsg" style="font-size:13px;color:var(--text-secondary);">Iniciando...</span>
+            </div>
+            <div class="progress-bar" style="height:6px;">
+              <div id="aiProgressFill" class="progress-fill" style="width:0%;background:linear-gradient(90deg,#667eea,#764ba2);transition:width 0.4s ease;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ AI SETTINGS MODAL ══════════════════════════════════ -->
+      <div id="aiSettingsModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;" onclick="closeAISettings(event)">
+        <div style="background:var(--surface);border:1px solid var(--glass-border);border-radius:var(--radius-xl);padding:var(--space-xl);max-width:520px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,0.4);position:relative;max-height:90vh;overflow-y:auto;" onclick="event.stopPropagation()">
+          <button onclick="closeAISettings()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text-muted);font-size:20px;cursor:pointer;line-height:1;">✕</button>
+
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:var(--space-lg);">
+            <span style="font-size:32px;">✨</span>
+            <div>
+              <div style="font-size:18px;font-weight:700;">Configuración de IA</div>
+              <div style="font-size:13px;color:var(--text-muted);">Configura tu proveedor de IA gratuito</div>
+            </div>
+          </div>
+
+          <!-- Provider tabs -->
+          <div style="display:flex;gap:8px;margin-bottom:var(--space-lg);flex-wrap:wrap;" id="aiProviderTabs"></div>
+
+          <!-- Provider config -->
+          <div id="aiProviderConfig"></div>
+
+          <!-- Model select -->
+          <div style="margin-bottom:var(--space-lg);">
+            <label style="font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Modelo</label>
+            <select id="aiModelSelect" class="form-select" style="width:100%;"></select>
+          </div>
+
+          <!-- API Key input -->
+          <div style="margin-bottom:var(--space-lg);">
+            <label style="font-size:13px;font-weight:600;display:block;margin-bottom:6px;">API Key</label>
+            <div style="display:flex;gap:8px;">
+              <input type="password" id="aiApiKeyInput" class="form-input" style="flex:1;font-family:monospace;font-size:13px;" placeholder="Tu API key...">
+              <button onclick="toggleApiKeyVisibility()" id="aiKeyToggleBtn" style="padding:8px 12px;background:var(--surface-2);border:1px solid var(--glass-border);border-radius:var(--radius-md);cursor:pointer;">👁️</button>
+            </div>
+            <div id="aiKeyHint" style="font-size:12px;color:var(--text-muted);margin-top:6px;"></div>
+          </div>
+
+          <!-- Stats -->
+          <div id="aiModalStats" style="background:rgba(102,126,234,0.08);border-radius:var(--radius-md);padding:var(--space-md);margin-bottom:var(--space-lg);font-size:13px;"></div>
+
+          <!-- Buttons -->
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button onclick="saveAISettings()" class="btn btn-primary" style="flex:1;">💾 Guardar</button>
+            <button onclick="clearAllAIQuestions()" class="btn btn-secondary" style="font-size:12px;">🗑️ Limpiar caché IA</button>
+          </div>
+        </div>
       </div>
 
       <!-- ═══ EXAM IN PROGRESS ═════════════════════════════════ -->
@@ -261,6 +348,7 @@
 <script src="js/progress.js"></script>
 <script src="js/exam-engine.js"></script>
 <script src="js/pdf-generator.js"></script>
+<script src="js/ai-generator.js"></script>
 <script>
 // ── State ─────────────────────────────────────────────────────
 let selectedSubjects = [];
@@ -447,6 +535,17 @@ async function startExam() {
   } else {
     buildParams.difficulty = selectedDifficulty;
     buildParams.questionCount = selectedCount;
+  }
+
+  // Enrich question pool with AI-generated questions
+  if (typeof AIGenerator !== 'undefined') {
+    selectedSubjects.forEach(subId => {
+      const data = ExamEngine.getSubjectData(subId);
+      if (data) {
+        const enriched = AIGenerator.getEnrichedQuestions(subId, data.questions);
+        data.questions = enriched; // temporarily enrich in-memory
+      }
+    });
   }
 
   const exam = ExamEngine.buildExam(buildParams);
@@ -1074,6 +1173,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   App.init();
   renderSubjectSelector();
   updateSummary();
+  refreshAIStats();
 
   // Check URL params for pre-selected subject
   const params = new URLSearchParams(window.location.search);
@@ -1085,6 +1185,195 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateSummary();
   }
 });
+
+// ── AI Settings Modal ─────────────────────────────────────────
+
+let currentAIProvider = 'gemini';
+
+function openAISettings() {
+  currentAIProvider = AIGenerator.getSelectedProvider();
+  const modal = document.getElementById('aiSettingsModal');
+  modal.style.display = 'flex';
+  renderAIProviderTabs();
+  renderAIProviderConfig(currentAIProvider);
+  renderAIModalStats();
+}
+
+function closeAISettings(e) {
+  if (e && e.target !== document.getElementById('aiSettingsModal')) return;
+  document.getElementById('aiSettingsModal').style.display = 'none';
+}
+
+function renderAIProviderTabs() {
+  const tabs = document.getElementById('aiProviderTabs');
+  tabs.innerHTML = Object.entries(AIGenerator.providers).map(([key, p]) => `
+    <button onclick="switchAIProvider('${key}')" id="aiTab_${key}"
+      style="padding:8px 14px;border-radius:var(--radius-md);border:2px solid ${currentAIProvider===key?'#667eea':'var(--glass-border)'};background:${currentAIProvider===key?'rgba(102,126,234,0.15)':'var(--surface-2)'};color:var(--text-primary);font-size:13px;font-weight:${currentAIProvider===key?'700':'400'};cursor:pointer;">
+      ${p.icon} ${p.name}${p.free?' <span style="font-size:10px;color:#4ade80;">FREE</span>':''}
+    </button>`).join('');
+}
+
+function switchAIProvider(key) {
+  currentAIProvider = key;
+  renderAIProviderTabs();
+  renderAIProviderConfig(key);
+}
+
+function renderAIProviderConfig(key) {
+  const p = AIGenerator.providers[key];
+  const savedKey = AIGenerator.getApiKey(key);
+  const savedModel = AIGenerator.getSelectedModel(key);
+
+  // Update model select
+  const modelSelect = document.getElementById('aiModelSelect');
+  modelSelect.innerHTML = p.models.map(m =>
+    `<option value="${m}" ${m===savedModel?'selected':''}>${m}</option>`).join('');
+
+  // Update API key
+  document.getElementById('aiApiKeyInput').value = savedKey;
+  document.getElementById('aiApiKeyInput').placeholder = p.placeholder || 'Tu API key...';
+
+  // Hint
+  document.getElementById('aiKeyHint').innerHTML =
+    `${p.rateLimit} · <a href="${p.getKeyUrl}" target="_blank" style="color:#667eea;">Obtener API key gratis →</a>`;
+}
+
+function renderAIModalStats() {
+  const stats = AIGenerator.getStats();
+  const subjectNames = { deutsch:'Alemán', englisch:'Inglés', mathe:'Matemáticas', espanol:'Español', philosophie:'Filosofía' };
+  const lines = Object.entries(subjectNames).map(([k,n]) =>
+    `<span style="display:inline-flex;align-items:center;gap:4px;"><strong>${stats[k]||0}</strong> ${n}</span>`).join(' · ');
+  document.getElementById('aiModalStats').innerHTML =
+    `<div style="font-weight:600;margin-bottom:8px;">📊 Preguntas IA generadas</div>` +
+    `<div style="display:flex;flex-wrap:wrap;gap:8px;">${lines}</div>` +
+    `<div style="margin-top:8px;color:#667eea;font-weight:700;">Total: ${stats.total} preguntas IA</div>`;
+}
+
+function toggleApiKeyVisibility() {
+  const input = document.getElementById('aiApiKeyInput');
+  const btn = document.getElementById('aiKeyToggleBtn');
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.textContent = '🙈';
+  } else {
+    input.type = 'password';
+    btn.textContent = '👁️';
+  }
+}
+
+function saveAISettings() {
+  const settings = AIGenerator.getSettings();
+  settings.provider = currentAIProvider;
+  settings[`${currentAIProvider}_key`] = document.getElementById('aiApiKeyInput').value.trim();
+  settings[`${currentAIProvider}_model`] = document.getElementById('aiModelSelect').value;
+  AIGenerator.saveSettings(settings);
+  App.showToast('✅ Configuración de IA guardada', 'success');
+  closeAISettings();
+  refreshAIStats();
+}
+
+function clearAllAIQuestions() {
+  if (!confirm('¿Eliminar todas las preguntas generadas por IA? Esta acción no se puede deshacer.')) return;
+  ['deutsch','englisch','mathe','espanol','philosophie'].forEach(s => AIGenerator.clearAiQuestions(s));
+  App.showToast('🗑️ Caché de preguntas IA eliminada', 'info');
+  renderAIModalStats();
+  refreshAIStats();
+}
+
+// ── AI Generate ───────────────────────────────────────────────
+
+async function runAIGenerate() {
+  const apiKey = AIGenerator.getApiKey(AIGenerator.getSelectedProvider());
+  if (!apiKey) {
+    App.showToast('⚙️ Primero configura tu API key en ✨ IA → Configurar', 'warning');
+    openAISettings();
+    return;
+  }
+
+  const targetSubjects = selectedSubjects.length > 0
+    ? selectedSubjects
+    : ['deutsch','englisch','mathe','espanol','philosophie'];
+
+  const count = parseInt(document.getElementById('aiCountSelect').value) || 10;
+
+  const btn = document.getElementById('aiGenerateBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner" style="width:14px;height:14px;border-width:2px;display:inline-block;"></div> Generando...';
+
+  const progressWrap = document.getElementById('aiProgressWrap');
+  const progressMsg = document.getElementById('aiProgressMsg');
+  const progressFill = document.getElementById('aiProgressFill');
+  progressWrap.style.display = 'block';
+
+  let totalAdded = 0;
+  let errors = [];
+
+  for (let i = 0; i < targetSubjects.length; i++) {
+    const subId = targetSubjects[i];
+    const subName = subjects.find(s => s.id === subId)?.name || subId;
+
+    try {
+      progressMsg.textContent = `[${i+1}/${targetSubjects.length}] Generando para ${subName}...`;
+      progressFill.style.width = `${Math.round((i / targetSubjects.length) * 80)}%`;
+
+      await ExamEngine.loadSubjectData(subId);
+      const subjectData = ExamEngine.getSubjectData(subId);
+
+      const result = await AIGenerator.generate({
+        subjectId: subId,
+        subjectData,
+        count,
+        onProgress: (msg, pct) => {
+          progressMsg.textContent = `[${subName}] ${msg}`;
+        },
+      });
+
+      totalAdded += result.added;
+    } catch (err) {
+      console.error(`AI error for ${subId}:`, err);
+      errors.push(`${subName}: ${err.message}`);
+    }
+  }
+
+  progressFill.style.width = '100%';
+
+  if (totalAdded > 0) {
+    progressMsg.textContent = `✅ ¡${totalAdded} preguntas nuevas generadas y guardadas!`;
+    App.showToast(`✨ ${totalAdded} preguntas IA generadas correctamente`, 'success');
+  }
+
+  if (errors.length > 0) {
+    const errMsg = errors.slice(0,2).join(' | ');
+    progressMsg.textContent = `⚠️ Errores: ${errMsg}`;
+    App.showToast(`⚠️ ${errors.length} error(es): ${errors[0]}`, 'error');
+  }
+
+  setTimeout(() => {
+    progressWrap.style.display = 'none';
+    progressFill.style.width = '0%';
+  }, 4000);
+
+  btn.disabled = false;
+  btn.innerHTML = '✨ Generar con IA';
+  refreshAIStats();
+}
+
+function refreshAIStats() {
+  if (typeof AIGenerator === 'undefined') return;
+  const stats = AIGenerator.getStats();
+  const bar = document.getElementById('aiStatsBar');
+  if (!bar) return;
+  if (stats.total === 0) {
+    bar.innerHTML = '<span>Sin preguntas IA todavía — pulsa "Generar con IA"</span>';
+    return;
+  }
+  const subjectNames = { deutsch:'Alemán', englisch:'Inglés', mathe:'Mates', espanol:'Español', philosophie:'Filosofía' };
+  bar.innerHTML = Object.entries(subjectNames)
+    .filter(([k]) => stats[k] > 0)
+    .map(([k,n]) => `<span>✨ <strong>${stats[k]}</strong> ${n}</span>`)
+    .join(' · ') + ` · <strong>Total: ${stats.total}</strong>`;
+}
+
 </script>
 </body>
 </html>
