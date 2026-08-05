@@ -70,12 +70,16 @@ const AIGenerator = {
   },
 
   getSelectedProvider() {
-    return this.getSettings().provider || 'gemini';
+    const p = this.getSettings().provider;
+    if (p && this.providers[p]) return p;
+    return 'gemini';
   },
 
   getSelectedModel(provider) {
-    const p = provider || this.getSelectedProvider();
-    return this.getSettings()[`${p}_model`] || this.providers[p]?.defaultModel || '';
+    const p = (provider && this.providers[provider]) ? provider : this.getSelectedProvider();
+    const saved = this.getSettings()[`${p}_model`];
+    if (saved && this.providers[p]?.models.includes(saved)) return saved;
+    return this.providers[p]?.defaultModel || '';
   },
 
   // ── AI-generated question cache (localStorage) ───────────────

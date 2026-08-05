@@ -1221,13 +1221,18 @@ function switchAIProvider(key) {
 }
 
 function renderAIProviderConfig(key) {
-  const p = AIGenerator.providers[key];
+  let p = AIGenerator.providers[key];
+  if (!p) {
+    key = 'gemini';
+    currentAIProvider = 'gemini';
+    p = AIGenerator.providers.gemini;
+  }
   const savedKey = AIGenerator.getApiKey(key);
   const savedModel = AIGenerator.getSelectedModel(key);
 
   // Update model select
   const modelSelect = document.getElementById('aiModelSelect');
-  modelSelect.innerHTML = p.models.map(m =>
+  modelSelect.innerHTML = (p.models || []).map(m =>
     `<option value="${m}" ${m===savedModel?'selected':''}>${m}</option>`).join('');
 
   // Update API key
