@@ -14,41 +14,43 @@ const AIGenerator = {
     gemini: {
       name: 'Gemini (Google)',
       icon: '✨',
-      models: ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-2.0-flash-lite'],
+      models: ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-2.5-flash', 'gemini-1.5-pro'],
       defaultModel: 'gemini-2.0-flash',
       free: true,
-      rateLimit: '1500 req/día',
+      rateLimit: '1.500 req/día gratis',
       getKeyUrl: 'https://aistudio.google.com/app/apikey',
       placeholder: 'AIza...',
+    },
+    groq: {
+      name: 'Groq (Ultra-Rápido)',
+      icon: '⚡',
+      models: [
+        'llama-3.3-70b-versatile',
+        'llama-3.1-8b-instant',
+        'mixtral-8x7b-32768',
+        'gemma2-9b-it',
+      ],
+      defaultModel: 'llama-3.3-70b-versatile',
+      free: true,
+      rateLimit: '14.400 req/día gratis',
+      getKeyUrl: 'https://console.groq.com/keys',
+      placeholder: 'gsk_...',
     },
     openrouter: {
       name: 'OpenRouter',
       icon: '🔀',
       models: [
+        'google/gemini-2.0-flash-exp:free',
         'meta-llama/llama-3.3-70b-instruct:free',
         'deepseek/deepseek-r1:free',
-        'mistralai/mistral-7b-instruct:free',
-        'google/gemma-3-27b-it:free',
+        'qwen/qwen-2.5-72b-instruct:free',
+        'mistralai/mistral-small-24b-instruct-2501:free',
       ],
-      defaultModel: 'meta-llama/llama-3.3-70b-instruct:free',
+      defaultModel: 'google/gemini-2.0-flash-exp:free',
       free: true,
-      rateLimit: '~200 req/día (gratuito)',
+      rateLimit: 'Modelos 100% gratuitos',
       getKeyUrl: 'https://openrouter.ai/keys',
       placeholder: 'sk-or-...',
-    },
-    nvidia: {
-      name: 'Nvidia NIM',
-      icon: '🖥️',
-      models: [
-        'meta/llama-3.1-70b-instruct',
-        'mistralai/mistral-7b-instruct-v0.3',
-        'microsoft/phi-3-medium-128k-instruct',
-      ],
-      defaultModel: 'meta/llama-3.1-70b-instruct',
-      free: true,
-      rateLimit: '1000 req/mes',
-      getKeyUrl: 'https://build.nvidia.com/',
-      placeholder: 'nvapi-...',
     },
   },
 
@@ -89,7 +91,6 @@ const AIGenerator = {
 
   appendAiQuestions(subjectId, newQuestions) {
     const existing = this.getAiQuestions(subjectId);
-    // Deduplicate by question text
     const existingTexts = new Set(existing.map(q => q.question?.es || q.question));
     const unique = newQuestions.filter(q => {
       const text = q.question?.es || q.question;
@@ -114,7 +115,6 @@ const AIGenerator = {
       philosophie: 'Filosofía (Philosophie) — Historia de la Filosofía y Ética',
     };
 
-    // Extract formula summaries for context
     let contextSummary = '';
     if (subjectData?.formulas?.length) {
       const topics = subjectData.formulas.map(f => {
@@ -155,32 +155,71 @@ Valores para "difficulty": "easy", "medium", "hard".
 Genera exactamente ${count} preguntas. SOLO el array JSON, nada más.`;
   },
 
-  // ── Call Gemini API ───────────────────────────────────────────
+  // ── Call Gemini API with Fallbacks ────────────────────────────
   async callGemini(apiKey, model, prompt) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-    const body = {
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 8192,
-        responseMimeType: 'application/json',
-      },
-    };
+    const modelsToTry = [model, 'gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-2.5-flash'];
+    const uniqueModels = [...new Set(modelsToTry)];
+    let lastError = null;
 
-    const res = await fetch(url, {
+    for (const m of uniqueModels) {
+      try {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${apiKey}`;
+        const body = {
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: {
+            temperature: 0.7,
+            maxOutputTokens: 8192,
+          },
+        };
+
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err?.error?.message || `Error HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        if (text) return text;
+      } catch (err) {
+        console.warn(`Gemini model ${m} failed:`, err.message);
+        lastError = err;
+      }
+    }
+    throw lastError || new Error('No se pudo comunicar con ningún modelo de Gemini');
+  },
+
+  // ── Call Groq API ─────────────────────────────────────────────
+  async callGroq(apiKey, model, prompt) {
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: model || 'llama-3.3-70b-versatile',
+        messages: [
+          { role: 'system', content: 'Eres un generador de preguntas de examen. Responde SIEMPRE únicamente con un array JSON válido.' },
+          { role: 'user', content: prompt },
+        ],
+        temperature: 0.7,
+        max_tokens: 8192,
+      }),
     });
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `Gemini API error ${res.status}`);
+      throw new Error(err?.error?.message || `Groq API error ${res.status}`);
     }
 
     const data = await res.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
-    return text;
+    return data?.choices?.[0]?.message?.content || '';
   },
 
   // ── Call OpenRouter API ───────────────────────────────────────
@@ -190,15 +229,14 @@ Genera exactamente ${count} preguntas. SOLO el array JSON, nada más.`;
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': window.location.origin,
+        'HTTP-Referer': window.location.href,
         'X-Title': 'AbiturDSV',
       },
       body: JSON.stringify({
-        model,
+        model: model || 'google/gemini-2.0-flash-exp:free',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.7,
         max_tokens: 8192,
-        response_format: { type: 'json_object' },
       }),
     });
 
@@ -210,25 +248,6 @@ Genera exactamente ${count} preguntas. SOLO el array JSON, nada más.`;
     const data = await res.json();
     return data?.choices?.[0]?.message?.content || '';
   },
-
-  // ── Call Nvidia NIM API ───────────────────────────────────────
-  async callNvidia(apiKey, model, prompt) {
-    const res = await fetch('https://integrate.api.nvidia.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model,
-        messages: [
-          { role: 'system', content: 'You are a helpful exam question generator. Always respond with valid JSON only.' },
-          { role: 'user', content: prompt },
-        ],
-        temperature: 0.7,
-        max_tokens: 8192,
-      }),
-    });
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
@@ -307,8 +326,8 @@ Genera exactamente ${count} preguntas. SOLO el array JSON, nada más.`;
         rawText = await this.callGemini(apiKey, model, prompt);
       } else if (provider === 'openrouter') {
         rawText = await this.callOpenRouter(apiKey, model, prompt);
-      } else if (provider === 'nvidia') {
-        rawText = await this.callNvidia(apiKey, model, prompt);
+      } else if (provider === 'groq') {
+        rawText = await this.callGroq(apiKey, model, prompt);
       } else {
         throw new Error(`Proveedor desconocido: ${provider}`);
       }

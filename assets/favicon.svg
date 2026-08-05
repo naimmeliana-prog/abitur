@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#6366f1" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Large Graduation Cap on 100% Transparent Background -->
+  <g filter="url(#glow)">
+    <!-- Skull Cap Base -->
+    <path d="M 160 270 Q 256 340 352 270 L 352 330 Q 256 400 160 330 Z" fill="url(#capGrad)" opacity="0.95"/>
+    <path d="M 176 340 L 176 370 Q 256 430 336 370 L 336 340 Q 256 400 176 340 Z" fill="#4338ca"/>
+
+    <!-- Mortarboard Top (Diamond) -->
+    <polygon points="256,96 480,208 256,320 32,208" fill="url(#capGrad)"/>
+    <polygon points="256,112 456,208 256,304 56,208" fill="#4f46e5" opacity="0.6"/>
+
+    <!-- Center Button -->
+    <ellipse cx="256" cy="208" rx="14" ry="10" fill="url(#goldGrad)"/>
+
+    <!-- Tassel String -->
+    <path d="M 256 210 Q 370 230 400 310" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" fill="none"/>
+
+    <!-- Tassel Fringe -->
+    <polygon points="390,305 410,305 418,380 382,380" fill="url(#goldGrad)"/>
+    <circle cx="400" cy="310" r="10" fill="#f59e0b"/>
+  </g>
+</svg>
