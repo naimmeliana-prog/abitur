@@ -2610,6 +2610,134 @@
           }
         }
       ]
+    },
+    {
+      "category": { "es": "Derivación — Tabla Completa y Reglas", "de": "Ableitungen — vollständige Tabelle & Regeln" },
+      "items": [
+        {
+          "title": { "es": "Tabla de Derivadas Básicas", "de": "Tabelle der Grundableitungen" },
+          "content": {
+            "es": "| f(x)       | f'(x)          |\n|------------|----------------|\n| xⁿ         | n·xⁿ⁻¹         |\n| eˣ         | eˣ             |\n| e^(ax)     | a·e^(ax)       |\n| ln(x)      | 1/x            |\n| sin(x)     | cos(x)         |\n| cos(x)     | -sin(x)        |\n| tan(x)     | 1/cos²(x)      |\n| √x = x^½  | 1/(2√x)        |\n| aˣ         | aˣ·ln(a)       |\n| 1/x        | -1/x²          |",
+            "de": "| f(x)       | f'(x)          |\n|------------|----------------|\n| xⁿ         | n·xⁿ⁻¹         |\n| eˣ         | eˣ             |\n| e^(ax)     | a·e^(ax)       |\n| ln(x)      | 1/x            |\n| sin(x)     | cos(x)         |\n| cos(x)     | -sin(x)        |\n| tan(x)     | 1/cos²(x)      |\n| √x = x^½  | 1/(2√x)        |\n| aˣ         | aˣ·ln(a)       |\n| 1/x        | -1/x²          |"
+          }
+        },
+        {
+          "title": { "es": "Reglas de Derivación", "de": "Ableitungsregeln" },
+          "content": {
+            "es": "- Suma: (f ± g)' = f' ± g'\n- Factor constante: (c·f)' = c·f'\n- Producto (Produktregel): (u·v)' = u'·v + u·v'\n  Ejemplo: f(x)=x²·eˣ → f'(x)=2x·eˣ+x²·eˣ=eˣ(2x+x²)\n- Cociente (Quotientenregel): (u/v)' = (u'·v - u·v') / v²\n- Cadena (Kettenregel): [f(g(x))]' = f'(g(x))·g'(x)\n  Ejemplo: f(x)=sin(3x²) → f'(x)=cos(3x²)·6x",
+            "de": "- Summe: (f ± g)' = f' ± g'\n- Faktor: (c·f)' = c·f'\n- Produktregel: (u·v)' = u'·v + u·v'\n  Beispiel: f(x)=x²·eˣ → f'(x)=2x·eˣ+x²·eˣ=eˣ(2x+x²)\n- Quotientenregel: (u/v)' = (u'·v - u·v') / v²\n- Kettenregel: [f(g(x))]' = f'(g(x))·g'(x)\n  Beispiel: f(x)=sin(3x²) → f'(x)=cos(3x²)·6x"
+          }
+        },
+        {
+          "title": { "es": "Análisis Completo de Funciones", "de": "Vollständige Kurvenuntersuchung" },
+          "content": {
+            "es": "1. Dominio D_f: excluir ceros del denominador, radicandos negativos, ln(x≤0)\n2. Simetría: f(-x)=f(x) → par (Achsensymmetrie); f(-x)=-f(x) → impar (Punktsymmetrie)\n3. Cortes: f(x)=0 → corte eje x; f(0) → corte eje y\n4. Asíntotas:\n   - Vertical: x→a±∞ cuando a∉D_f\n   - Horizontal: límite x→±∞\n   - Oblicua: división polinomial si grad(p)=grad(q)+1\n5. Extremos: f'(x₀)=0 → f''(x₀)<0 máximo; f''(x₀)>0 mínimo\n   Si f''(x₀)=0: hacer tabla de signos de f'\n6. Inflexión: f''(x₀)=0 con cambio de signo → WP\n7. Monotonía: f'>0 creciente; f'<0 decreciente\n8. Convexidad: f''>0 convexa (Linkskurve); f''<0 cóncava (Rechtskurve)",
+            "de": "1. Definitionsmenge D_f: Nullstellen des Nenners, neg. Radikand, ln(x≤0) ausschließen\n2. Symmetrie: f(-x)=f(x) → gerade; f(-x)=-f(x) → ungerade\n3. Schnittpunkte: f(x)=0 → x-Achse; f(0) → y-Achse\n4. Asymptoten:\n   - Senkrecht: x→a±∞ für a∉D_f\n   - Waagerecht: Grenzwert x→±∞\n   - Schräg: Polynomdivision wenn grad(p)=grad(q)+1\n5. Extrema: f'(x₀)=0 → f''(x₀)<0 HP; f''(x₀)>0 TP\n   Falls f''(x₀)=0: Vorzeichentabelle von f'\n6. Wendepunkte: f''(x₀)=0 mit VZW → WP\n7. Monotonie: f'>0 steigend; f'<0 fallend\n8. Krümmung: f''>0 Linkskurve; f''<0 Rechtskurve"
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Integralrechnung y Cálculo de Áreas", "de": "Integralrechnung & Flächenberechnung" },
+      "items": [
+        {
+          "title": { "es": "Tabla de Primitivas (Stammfunktionen)", "de": "Tabelle der Stammfunktionen" },
+          "content": {
+            "es": "| f(x)       | F(x) = ∫f(x)dx         |\n|------------|------------------------|\n| xⁿ (n≠-1) | xⁿ⁺¹/(n+1) + C         |\n| 1/x        | ln|x| + C              |\n| eˣ         | eˣ + C                 |\n| e^(ax)     | (1/a)·e^(ax) + C       |\n| sin(x)     | -cos(x) + C            |\n| cos(x)     | sin(x) + C             |\n| 1/cos²(x)  | tan(x) + C             |\n| √x         | (2/3)·x^(3/2) + C      |\n| ln(x)      | x·ln(x) - x + C        |",
+            "de": "| f(x)       | F(x) = ∫f(x)dx         |\n|------------|------------------------|\n| xⁿ (n≠-1) | xⁿ⁺¹/(n+1) + C         |\n| 1/x        | ln|x| + C              |\n| eˣ         | eˣ + C                 |\n| e^(ax)     | (1/a)·e^(ax) + C       |\n| sin(x)     | -cos(x) + C            |\n| cos(x)     | sin(x) + C             |\n| 1/cos²(x)  | tan(x) + C             |\n| √x         | (2/3)·x^(3/2) + C      |\n| ln(x)      | x·ln(x) - x + C        |"
+          }
+        },
+        {
+          "title": { "es": "Integral Definida, Áreas e Integración por Partes", "de": "Bestimmtes Integral, Flächen & partielle Integration" },
+          "content": {
+            "es": "Integral definida: ∫[a,b] f(x)dx = F(b) - F(a)\n\nÁrea entre f y eje x:\n- f(x) >= 0 en [a,b]: A = ∫[a,b] f(x)dx\n- Con cambio de signo: dividir intervalo y sumar valores absolutos!\n\nÁrea entre f y g (con f >= g en [a,b]):\nA = ∫[a,b] [f(x) - g(x)] dx\n\nIntegración por partes (Produktintegration):\n∫u·v' dx = u·v - ∫u'·v dx\nElección: u = ln(x), arcsin(x)...; v' = resto\n\nVolumen de rotación (eje x):\nV = π · ∫[a,b] [f(x)]² dx",
+            "de": "Bestimmtes Integral: ∫[a,b] f(x)dx = F(b) - F(a)\n\nFlächeninhalt zwischen f und x-Achse:\n- f(x) >= 0 auf [a,b]: A = ∫[a,b] f(x)dx\n- VZW: Intervall aufteilen, Beträge addieren!\n\nFläche zwischen f und g (f >= g auf [a,b]):\nA = ∫[a,b] [f(x) - g(x)] dx\n\nPartielle Integration:\n∫u·v' dx = u·v - ∫u'·v dx\nWahl: u = ln(x), arcsin(x)...; v' = den Rest\n\nRotationsvolumen (um x-Achse):\nV = π · ∫[a,b] [f(x)]² dx"
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Optimización y Modelización", "de": "Optimierung & Modellierung" },
+      "items": [
+        {
+          "title": { "es": "Procedimiento para Optimización", "de": "Vorgehen bei Optimierungsaufgaben" },
+          "content": {
+            "es": "1. Definir función objetivo (Zielfunktion): ¿qué maximizar/minimizar?\n2. Restricciones (Nebenbedingungen): p.ej. volumen fijo, área fija, presupuesto.\n3. Sustituir la restricción → función de una variable.\n4. f'(x)=0 → candidatos a extremo.\n5. Verificar con f''(x): f''<0 → máximo; f''>0 → mínimo.\n6. Responder con unidades y en contexto del problema.\n\nTipos típicos del Abitur:\n- Caja de volumen máximo (cortar esquinas de cuadrado)\n- Cilindro de superficie mínima con volumen dado: V=πr²h=const → minimizar O=2πr²+2πrh\n- Beneficio máximo: G(x)=E(x)-K(x), máximo cuando E'(x)=K'(x)\n- Tiempo mínimo combinando terreno y agua (snell/refracción)",
+            "de": "1. Zielfunktion aufstellen (was wird optimiert?)\n2. Nebenbedingungen aufstellen (z.B. festes Volumen, Umfang, Budget)\n3. Nebenbedingung einsetzen → Funktion einer Variablen\n4. f'(x)=0 setzen → Kandidaten\n5. Mit f''(x) prüfen: f''<0 → Max; f''>0 → Min\n6. Mit Einheit und im Sachkontext antworten\n\nHäufige Typen im Abitur:\n- Schachtel mit max. Volumen (Ecken ausschneiden)\n- Zylinder mit min. Oberfläche bei gegebenem Volumen: V=πr²h=const → min O=2πr²+2πrh\n- Gewinnmaximierung: G(x)=E(x)-K(x), max wenn E'(x)=K'(x)\n- Minimale Zeit (kombinierte Wege Gelände+Wasser)"
+          }
+        },
+        {
+          "title": { "es": "Matemáticas Económicas", "de": "Wirtschaftsmathematik" },
+          "content": {
+            "es": "- Coste total: K(x) = K_fijo + K_variable(x)\n- Coste medio: k(x) = K(x)/x\n  Mínimo de k(x) cuando K'(x) = k(x) (Grenzkosten = Stückkosten)\n- Ingresos: E(x) = p(x)·x donde p(x) es función de precio-demanda\n- Beneficio: G(x) = E(x) - K(x)\n- Máximo beneficio: G'(x)=0 ↔ E'(x)=K'(x) (Grenzerlös=Grenzkosten)\n- Punto equilibrio (break-even): E(x) = K(x)\n- Función demanda: x = D(p) → cantidad en función del precio\n- Excedente del consumidor: área entre curva demanda y precio de mercado",
+            "de": "- Gesamtkosten: K(x) = K_fix + K_var(x)\n- Stückkosten: k(x) = K(x)/x\n  Minimum wenn K'(x) = k(x) (Grenzkosten = Stückkosten)\n- Erlös: E(x) = p(x)·x mit Preis-Absatz-Funktion p(x)\n- Gewinn: G(x) = E(x) - K(x)\n- Gewinnmaximum: G'(x)=0 ↔ E'(x)=K'(x) (Grenzerlös=Grenzkosten)\n- Gewinnschwelle (Break-even): E(x) = K(x)\n- Nachfragefunktion: x = D(p) → nachgefragte Menge in Abhängigkeit vom Preis\n- Konsumentenrente: Fläche zwischen Nachfragekurve und Marktpreis"
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Geometría Analítica — Vectores y Posición Relativa", "de": "Analytische Geometrie — Vektoren & Lagebeziehungen" },
+      "items": [
+        {
+          "title": { "es": "Vectores — Operaciones Fundamentales", "de": "Vektoren — Grundoperationen" },
+          "content": {
+            "es": "Dado a=(a1,a2,a3) y b=(b1,b2,b3):\n- Módulo: |a| = sqrt(a1²+a2²+a3²)\n- Producto escalar: a·b = a1·b1+a2·b2+a3·b3\n- Ángulo: cos(α) = (a·b)/(|a|·|b|) → α=arccos(...)\n- Perpendicular: a perp b <=> a·b = 0\n- Producto vectorial: a x b = (a2·b3-a3·b2, a3·b1-a1·b3, a1·b2-a2·b1)\n  Resultado perp. a ambos; |a x b| = área del paralelogramo\n- Vector unitario: a/|a|",
+            "de": "Gegeben a=(a1|a2|a3) und b=(b1|b2|b3):\n- Betrag: |a| = sqrt(a1²+a2²+a3²)\n- Skalarprodukt: a·b = a1·b1+a2·b2+a3·b3\n- Winkel: cos(α) = (a·b)/(|a|·|b|) → α=arccos(...)\n- Senkrecht: a perp b <=> a·b = 0\n- Kreuzprodukt: a x b = (a2·b3-a3·b2|a3·b1-a1·b3|a1·b2-a2·b1)\n  Ergebnis steht senkrecht auf beiden; |a x b| = Flächeninhalt Parallelogramm\n- Einheitsvektor: a/|a|"
+          }
+        },
+        {
+          "title": { "es": "Ecuaciones de Recta y Plano", "de": "Geraden- und Ebenengleichungen" },
+          "content": {
+            "es": "Recta g: x = p + t·u (Parameterform)\n\nPlano E:\n- Koordinatenform: ax+by+cz=d, n=(a,b,c) es el vector normal\n- Parameterform: x = p + r·u + s·v\n- Normalenform: (x-p)·n = 0\n\nPosición recta-plano:\n- u·n=0 y P no en E: paralela\n- u·n=0 y P en E: contenida\n- u·n ≠ 0: corta → sustituir recta en plano, hallar t\n\nPosición recta-recta:\n- Paralelas: u=λ·v\n- Idénticas: paralelas + punto común\n- Se cortan: resolver sistema → t y s únicos\n- Alabeadas: no paralelas y sin intersección\n\nDistancia punto S a recta g: d=|AS x u|/|u|",
+            "de": "Gerade g: x = p + t·u (Parameterform)\n\nEbene E:\n- Koordinatenform: ax+by+cz=d, n=(a|b|c) Normalenvektor\n- Parameterform: x = p + r·u + s·v\n- Normalenform: (x-p)·n = 0\n\nLage Gerade-Ebene:\n- u·n=0 und P nicht in E: parallel\n- u·n=0 und P in E: enthalten\n- u·n ≠ 0: schneidend → Gerade in Ebene einsetzen, t berechnen\n\nLage Gerade-Gerade:\n- Parallel: u=λ·v\n- Identisch: parallel + gem. Punkt\n- Schneidend: Gleichungssystem → t und s eindeutig\n- Windschief: nicht parallel, kein Schnittpunkt\n\nAbstand Punkt S zu Gerade g: d=|AS x u|/|u|"
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Stochastik Avanzada — Hipótesis y Normal", "de": "Stochastik Vertiefung — Hypothesen & Normalverteilung" },
+      "items": [
+        {
+          "title": { "es": "Distribución Normal — Reglas Sigma", "de": "Normalverteilung — Sigma-Regeln" },
+          "content": {
+            "es": "Distribución normal N(mu, sigma):\n- P(mu-sigma < X < mu+sigma) aprox 68,3%  (1-sigma-Umgebung)\n- P(mu-2sigma < X < mu+2sigma) aprox 95,4%  (2-sigma-Umgebung)\n- P(mu-3sigma < X < mu+3sigma) aprox 99,7%  (3-sigma-Umgebung)\n\nEstandarización: Z = (X-mu)/sigma ~ N(0,1)\nPhi(z) = P(Z <= z) se lee de la tabla de la distribución normal estándar\n\nAprox. Binomial -> Normal (cuando n·p >= 5 y n·(1-p) >= 5):\nmu = n·p; sigma = sqrt(n·p·(1-p))\nCorrección de continuidad: P(X<=k) aprox P(Z<=(k+0,5-mu)/sigma)",
+            "de": "Normalverteilung N(mu, sigma):\n- P(mu-sigma < X < mu+sigma) ca. 68,3%  (1-sigma-Umgebung)\n- P(mu-2sigma < X < mu+2sigma) ca. 95,4%  (2-sigma-Umgebung)\n- P(mu-3sigma < X < mu+3sigma) ca. 99,7%  (3-sigma-Umgebung)\n\nStandardisierung: Z = (X-mu)/sigma ~ N(0,1)\nPhi(z) = P(Z <= z) aus Standardnormalverteilungstabelle\n\nAnpassung Binom. -> Normal (wenn n·p >= 5 und n·(1-p) >= 5):\nmu = n·p; sigma = sqrt(n·p·(1-p))\nStetigkeitskorrektur: P(X<=k) ca. P(Z<=(k+0,5-mu)/sigma)"
+          }
+        },
+        {
+          "title": { "es": "Test de Hipótesis — Procedimiento Completo", "de": "Signifikanztest — vollständiges Vorgehen" },
+          "content": {
+            "es": "1. Hipótesis:\n   H0: p = p0 (hipótesis nula)\n   H1: p > p0 (unilateral der.) / p < p0 (unilat. izq.) / p ≠ p0 (bilateral)\n2. Elegir nivel de significación alfa (normalmente 0,05 o 0,01)\n3. Región crítica K mediante B(n; p0):\n   - Unilateral derecha: K={k2,...,n} con P(X>=k2)<=alfa\n   - Unilateral izquierda: K={0,...,k1} con P(X<=k1)<=alfa\n   - Bilateral: K={0,...,k1} U {k2,...,n} con alfa/2 por lado\n4. Observar el valor x y decidir:\n   x en K → rechazar H0 con nivel alfa\n   x no en K → no rechazar H0 (¡no confirma H0!)\n\nError tipo I (alfa-Fehler): rechazar H0 siendo verdadera → P <= alfa\nError tipo II (beta-Fehler): no rechazar H0 siendo falsa\n\nPotencia del test: 1-beta = P(rechazar H0 cuando H1 es verdadera)",
+            "de": "1. Hypothesen:\n   H0: p = p0 (Nullhypothese)\n   H1: p > p0 (rechts) / p < p0 (links) / p ≠ p0 (zweiseitig)\n2. Signifikanzniveau alfa wählen (meistens 0,05 oder 0,01)\n3. Ablehnungsbereich K über B(n; p0):\n   - Rechtsseitig: K={k2,...,n} mit P(X>=k2)<=alfa\n   - Linksseitig: K={0,...,k1} mit P(X<=k1)<=alfa\n   - Zweiseitig: K={0,...,k1} U {k2,...,n} mit alfa/2 pro Seite\n4. Beobachteten Wert x einsetzen:\n   x in K → H0 ablehnen zum Niveau alfa\n   x nicht in K → H0 nicht ablehnen (≠ bestätigen!)\n\nFehler 1. Art (alfa-Fehler): H0 ablehnen obwohl wahr → P <= alfa\nFehler 2. Art (beta-Fehler): H0 nicht ablehnen obwohl falsch\n\nTeststärke: 1-beta = P(H0 ablehnen wenn H1 wahr)"
+          }
+        },
+        {
+          "title": { "es": "Combinatoria — Resumen de Fórmulas", "de": "Kombinatorik — Formelübersicht" },
+          "content": {
+            "es": "- Permutaciones sin repetición: n!\n- Variaciones sin repetición: V(n,k) = n!/(n-k)!\n- Combinaciones sin repetición: C(n,k) = n!/(k!*(n-k)!) = binomial(n,k)\n- Combinaciones con repetición: C'(n,k) = binomial(n+k-1, k)\n\nBinomio de Newton: (a+b)^n = sum_{k=0}^{n} binomial(n,k)*a^k*b^(n-k)\n\nEjemplo rápido:\n  P(X=3) con n=10, p=0,4:\n  = binomial(10,3) * 0,4^3 * 0,6^7 = 120 * 0,064 * 0,0279... aprox 0,2150",
+            "de": "- Permutationen ohne WH: n!\n- Variationen ohne WH: V(n,k) = n!/(n-k)!\n- Kombinationen ohne WH: C(n,k) = n!/(k!*(n-k)!) = Binomialkoeff.\n- Kombinationen mit WH: C'(n,k) = binom(n+k-1, k)\n\nBinomischer Lehrsatz: (a+b)^n = sum_{k=0}^{n} binom(n,k)*a^k*b^(n-k)\n\nSchnellbeispiel:\n  P(X=3) mit n=10, p=0,4:\n  = binom(10,3) * 0,4^3 * 0,6^7 = 120 * 0,064 * 0,0279... ca. 0,2150"
+          }
+        }
+      ]
+    },
+    {
+      "category": { "es": "Referencia Rápida — Álgebra y Trigonometría", "de": "Schnell-Referenz — Algebra & Trigonometrie" },
+      "items": [
+        {
+          "title": { "es": "Álgebra Esencial", "de": "Algebra — Wichtigstes" },
+          "content": {
+            "es": "Binomios notables:\n(a+b)² = a²+2ab+b²; (a-b)² = a²-2ab+b²; (a+b)(a-b) = a²-b²\n\nFórmulas para resolver cuadráticas:\n  ax²+bx+c=0 → x = (-b ± sqrt(b²-4ac)) / 2a\n  x²+px+q=0 → x = -p/2 ± sqrt((p/2)²-q)\n\nDiscriminante D = b²-4ac:\n  D>0: dos soluciones reales distintas\n  D=0: una solución doble\n  D<0: sin soluciones reales\n\nLogaritmos:\n  log_a(x) = ln(x)/ln(a)\n  ln(x*y) = ln(x)+ln(y); ln(x^n) = n*ln(x); ln(x/y) = ln(x)-ln(y)",
+            "de": "Binomische Formeln:\n(a+b)² = a²+2ab+b²; (a-b)² = a²-2ab+b²; (a+b)(a-b) = a²-b²\n\nLösungsformeln für Quadratische:\n  ax²+bx+c=0 → x = (-b ± sqrt(b²-4ac)) / 2a\n  x²+px+q=0 → x = -p/2 ± sqrt((p/2)²-q)\n\nDiskriminante D = b²-4ac:\n  D>0: zwei verschiedene reelle Lösungen\n  D=0: eine doppelte Lösung\n  D<0: keine reellen Lösungen\n\nLogarithmen:\n  log_a(x) = ln(x)/ln(a)\n  ln(x*y) = ln(x)+ln(y); ln(x^n) = n*ln(x); ln(x/y) = ln(x)-ln(y)"
+          }
+        },
+        {
+          "title": { "es": "Trigonometría — Fórmulas del Abitur", "de": "Trigonometrie — Abitur-Formeln" },
+          "content": {
+            "es": "Valores exactos:\n  sin(0°)=0, sin(30°)=1/2, sin(45°)=sqrt(2)/2, sin(60°)=sqrt(3)/2, sin(90°)=1\n  cos(0°)=1, cos(30°)=sqrt(3)/2, cos(45°)=sqrt(2)/2, cos(60°)=1/2, cos(90°)=0\n  tan(0°)=0, tan(30°)=1/sqrt(3), tan(45°)=1, tan(60°)=sqrt(3)\n\nTeorema del seno: a/sin(alpha) = b/sin(beta) = c/sin(gamma)\nTeorema del coseno: c² = a²+b²-2ab*cos(gamma)\nÁrea del triángulo: A = (1/2)*a*b*sin(gamma)\n\nIdentidades:\n  sin²(x)+cos²(x)=1; sin(2x)=2*sin(x)*cos(x); cos(2x)=cos²(x)-sin²(x)",
+            "de": "Exakte Werte:\n  sin(0°)=0, sin(30°)=1/2, sin(45°)=sqrt(2)/2, sin(60°)=sqrt(3)/2, sin(90°)=1\n  cos(0°)=1, cos(30°)=sqrt(3)/2, cos(45°)=sqrt(2)/2, cos(60°)=1/2, cos(90°)=0\n  tan(0°)=0, tan(30°)=1/sqrt(3), tan(45°)=1, tan(60°)=sqrt(3)\n\nSinussatz: a/sin(alpha) = b/sin(beta) = c/sin(gamma)\nKosinussatz: c² = a²+b²-2ab*cos(gamma)\nFlächeninhalt: A = (1/2)*a*b*sin(gamma)\n\nIdentitäten:\n  sin²(x)+cos²(x)=1; sin(2x)=2*sin(x)*cos(x); cos(2x)=cos²(x)-sin²(x)"
+          }
+        }
+      ]
     }
   ]
 }
