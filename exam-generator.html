@@ -303,7 +303,7 @@
           </div>
           <div class="flex items-center gap-md">
             <div class="exam-timer hidden" id="examTimerDisplay">--:--</div>
-            <button onclick="confirmSubmit()" class="btn btn-primary" data-i18n="exam.submit">Entregar</button>
+            <button onclick="confirmSubmit()" class="btn btn-secondary btn-sm" style="font-size:12px;padding:6px 14px;" data-i18n="exam.submit">📥 Entregar Examen</button>
           </div>
         </div>
 
@@ -633,7 +633,7 @@ function renderQuestion(idx) {
   document.getElementById('prevBtn').disabled = idx === 0;
   
   if (idx === total - 1) {
-    document.getElementById('nextBtn').textContent = lang === 'de' ? '📤 Abgeben' : '📤 Entregar';
+    document.getElementById('nextBtn').textContent = lang === 'de' ? '📤 Finalisieren & Abgeben' : '📤 Finalizar y Entregar';
   } else {
     document.getElementById('nextBtn').textContent = lang === 'de' ? 'Weiter →' : 'Siguiente →';
   }
@@ -650,10 +650,10 @@ function renderQuestion(idx) {
   // ── ORAL simulation question ──────────────────────────────────────
   const isOralSubject = q.subjectId === 'espanol' || q.subjectId === 'philosophie';
   if (isOralSubject && (exam.isOfficial || selectedGenType === 'official' || q.isEssay)) {
-    const qText        = q.question?.[lang] || q.question?.es || '';
-    const solutionText = q.solution?.[lang] || q.solution?.es || '';
-    const criteriaText = q.criteria?.[lang] || q.criteria?.es || '';
-    const recoText     = q.recommendation?.[lang] || q.recommendation?.es || '';
+    const qText        = typeof q.question === 'object' ? (q.question[lang] || q.question.es || '') : (q.question || '');
+    const solutionText = typeof q.solution === 'object' ? (q.solution[lang] || q.solution.es || '') : (q.solution || '');
+    const criteriaText = typeof q.criteria === 'object' ? (q.criteria[lang] || q.criteria.es || '') : (q.criteria || '');
+    const recoText     = typeof q.recommendation === 'object' ? (q.recommendation[lang] || q.recommendation.es || '') : (q.recommendation || '');
     const maxPts       = q.points || 50;
     const savedScore   = ExamEngine.essayScores?.[idx];
     const uid          = `oral_sol_${idx}`;
@@ -726,10 +726,10 @@ function renderQuestion(idx) {
 
   // ── ESSAY question ────────────────────────────────────────────────
   if (q.isEssay) {
-    const qText        = q.question?.[lang] || q.question?.es || '';
-    const solutionText = q.solution?.[lang] || q.solution?.es || '';
-    const criteriaText = q.criteria?.[lang] || q.criteria?.es || '';
-    const recoText     = q.recommendation?.[lang] || q.recommendation?.es || '';
+    const qText        = typeof q.question === 'object' ? (q.question[lang] || q.question.es || '') : (q.question || '');
+    const solutionText = typeof q.solution === 'object' ? (q.solution[lang] || q.solution.es || '') : (q.solution || '');
+    const criteriaText = typeof q.criteria === 'object' ? (q.criteria[lang] || q.criteria.es || '') : (q.criteria || '');
+    const recoText     = typeof q.recommendation === 'object' ? (q.recommendation[lang] || q.recommendation.es || '') : (q.recommendation || '');
     const maxPts       = q.points || 0;
     const savedScore   = ExamEngine.essayScores?.[idx];
     const uid          = `essay_sol_${idx}`;
@@ -789,12 +789,12 @@ function renderQuestion(idx) {
   }
 
   // ── MULTIPLE-CHOICE question ──────────────────────────────────────
-  const qText = q.question?.[lang] || q.question?.es || '';
+  const qText = typeof q.question === 'object' ? (q.question[lang] || q.question.es || '') : (q.question || '');
   const isAnswered = ExamEngine.answers[idx] !== undefined;
   const isPractice = exam.mode === 'practice';
 
   const optionsHTML = (q.options || []).map((opt, oi) => {
-    const optText = typeof opt === 'object' ? (opt[lang] || opt.es) : opt;
+    const optText = typeof opt === 'object' ? (opt[lang] || opt.es || '') : opt;
     const letter = String.fromCharCode(65 + oi);
     let cls = '';
     if (isAnswered) {
@@ -810,8 +810,8 @@ function renderQuestion(idx) {
   let feedbackHTML = '';
   if (isAnswered && isPractice) {
     const isCorrect = ExamEngine.isCorrect(idx);
-    const explanation = q.explanation?.[lang] || q.explanation?.es || '';
-    const tip = q.tip?.[lang] || q.tip?.es || '';
+    const explanation = typeof q.explanation === 'object' ? (q.explanation[lang] || q.explanation.es || '') : (q.explanation || '');
+    const tip = typeof q.tip === 'object' ? (q.tip[lang] || q.tip.es || '') : (q.tip || '');
     feedbackHTML = `
       <div class="answer-feedback show ${isCorrect ? 'correct-feedback' : 'wrong-feedback'}">
         ${isCorrect ? '✅ <strong>¡Correcto!</strong>' : '❌ <strong>Incorrecto.</strong>'}
@@ -840,10 +840,6 @@ function selectAnswer(qIdx, optIdx, el) {
   if (exam.mode === 'practice') {
     // In practice mode, show feedback immediately
     renderQuestion(qIdx);
-    // Auto advance after 2s if correct
-    if (ExamEngine.isCorrect(qIdx) && qIdx < exam.totalQuestions - 1) {
-      setTimeout(() => nextQuestion(), 1800);
-    }
   } else {
     // In simulacro, just mark selected
     document.querySelectorAll('.answer-option').forEach((opt, i) => {
