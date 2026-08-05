@@ -28,33 +28,46 @@
       margin: var(--space-md) 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--glass-border);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      background: rgba(15, 23, 42, 0.6);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     .grid-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 13px;
+      font-size: 13.5px;
       text-align: left;
     }
     .grid-table th {
-      background: rgba(102, 126, 234, 0.25);
+      background: rgba(245, 200, 66, 0.12);
       color: var(--color-gold);
       font-weight: 700;
-      padding: 10px 14px;
-      border-bottom: 2px solid var(--glass-border);
+      padding: 12px 16px;
+      border-bottom: 2px solid rgba(245, 200, 66, 0.3);
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
       white-space: nowrap;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    .grid-table th:last-child {
+      border-right: none;
     }
     .grid-table td {
-      padding: 10px 14px;
+      padding: 11px 16px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-secondary);
-      line-height: 1.5;
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-family: var(--font-mono);
+    }
+    .grid-table td:last-child {
+      border-right: none;
     }
     .grid-table tbody tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.025);
     }
     .grid-table tbody tr:hover {
-      background: rgba(102, 126, 234, 0.1);
+      background: rgba(59, 130, 246, 0.12);
     }
     .matrix-display {
       display: inline-flex;
@@ -215,15 +228,34 @@ function selectSubject(id) {
   App.applyFontSize(localStorage.getItem('abitur_font_size') || 'normal');
 }
 
-// ── Markdown Table & Formula Parser ─────────────────────────────
 function parseMarkdownTable(tableText) {
   const lines = tableText.trim().split('\n').map(l => l.trim()).filter(l => l.startsWith('|'));
   if (lines.length < 2) return tableText;
 
-  const headerCells = lines[0].split('|').slice(1, -1).map(c => c.trim());
-  const bodyLines = lines.slice(2);
+  function parseRow(line) {
+    let str = line.trim();
+    if (str.startsWith('|')) str = str.substring(1);
+    if (str.endsWith('|')) str = str.substring(0, str.length - 1);
+    return str.split('|').map(c => c.trim().replace(/\\\|/g, '|'));
+  }
 
-  const rows = bodyLines.map(line => line.split('|').slice(1, -1).map(c => c.trim()));
+  const headerCells = parseRow(lines[0]);
+  const numCols = headerCells.length;
+
+  // Filter out separator line |---|---|
+  const bodyLines = lines.slice(1).filter(l => !l.includes('---'));
+
+  const rows = bodyLines.map(line => {
+    let cells = parseRow(line);
+    if (cells.length > numCols) {
+      // Intelligently merge extra split cells caused by inner math pipes like ln|x|
+      const fixedCells = cells.slice(0, numCols - 1);
+      const rest = cells.slice(numCols - 1).join('|');
+      fixedCells.push(rest);
+      cells = fixedCells;
+    }
+    return cells;
+  });
 
   const headerHtml = `<thead><tr>${headerCells.map(c => `<th>${c}</th>`).join('')}</tr></thead>`;
   const bodyHtml = `<tbody>${rows.map(row => `<tr>${row.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody>`;
